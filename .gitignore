@@ -1,6 +1,37 @@
-.claude/
-PROMPT_INIZIALE.md
-demo_map_reference.html
-node_modules/
+# Cache HTML scaricati dagli scraper (100MB+, non vanno in git)
+raw_data/
+raw_data_direct/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Checkpoint files degli scraper
+*checkpoint*.txt
+
+# OS
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# Editor / Claude
+.claude/
+.idea/
+.vscode/
+
+# Node
+node_modules/
+.next/
+
+# Secrets
+.env
+.env.local
+
+# File temporanei di sviluppo
+PROMPT_INIZIALE.md
+demo_map_reference.html
+_probe_apis.py
+_test_parse.py

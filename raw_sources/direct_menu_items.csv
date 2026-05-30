@@ -1,0 +1,22 @@
+﻿source_platform,source_venue_id,venue_name,venue_url,menu_section,item_name,item_description,raw_price,normalized_price_eur,currency,price_type,item_type,normalized_product,confidence,allergens,retrieved_at,source_url
+direct_website,osm_408781426,Woodstock,https://www.qodeup.com/woodstock,Menu,Calice,,"5,00 €",5.0,EUR,menu,drink,wine_glass,high,,2026-05-30T20:45:17.808836+00:00,https://www.qodeup.com/woodstock
+direct_website,osm_408781426,Woodstock,https://www.qodeup.com/woodstock,Menu,Calice,,"6,00 €",6.0,EUR,menu,drink,wine_glass,high,,2026-05-30T20:45:17.808836+00:00,https://www.qodeup.com/woodstock
+direct_website,osm_408781426,Woodstock,https://www.qodeup.com/woodstock,Menu,Calice,,"7,00 €",7.0,EUR,menu,drink,wine_glass,high,,2026-05-30T20:45:17.808836+00:00,https://www.qodeup.com/woodstock
+direct_website,osm_408781426,Woodstock,https://www.qodeup.com/woodstock,Menu,Calice,,"8,00 €",8.0,EUR,menu,drink,wine_glass,high,,2026-05-30T20:45:17.808836+00:00,https://www.qodeup.com/woodstock
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,CAFFE',,€ 1.5,1.5,EUR,menu,drink,espresso,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,CAFFE' CORRETTO,,€ 3,3.0,EUR,menu,drink,espresso,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,Acqua 50cl,,€ 2.50,2.5,EUR,menu,drink,water,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,Coca-Cola Lattina 33cl,,"€ 3,50",3.5,EUR,menu,drink,soft_drink,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,Coca-Cola ZERO Lattina 33cl,,"€ 3,50",3.5,EUR,menu,drink,soft_drink,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,Fanta Lattina 33cl,,"€ 3,50",3.5,EUR,menu,drink,soft_drink,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,Acqua Tonica bottiglia 20cl,,"€ 3,50",3.5,EUR,menu,drink,water,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,SPRITZ,,€ 7.50,7.5,EUR,menu,drink,spritz,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,NEGRONI,,€ 7.50,7.5,EUR,menu,drink,negroni,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,NEGRONI SBAGLIATO,,€ 7.50,7.5,EUR,menu,drink,negroni,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,AMERICANO,,€ 7.50,7.5,EUR,menu,drink,americano,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,GIN TONIC / LEMON,,€ 7.50,7.5,EUR,menu,drink,gin_tonic,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,MARGARITA,,€ 7.50,7.5,EUR,menu,drink,margarita,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,DAIQUIRI,,€ 7.50,7.5,EUR,menu,drink,daiquiri,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,HUGO SPRITZ,,€ 7.50,7.5,EUR,menu,drink,spritz,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,MOSCOW MULE,,€ 7.50,7.5,EUR,menu,drink,moscow_mule,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
+direct_website,osm_9759681918,Rhop,https://www.rhop.it/menu/,Menu,MANHATTAN,,€ 7.50,7.5,EUR,menu,drink,manhattan,high,,2026-05-30T20:54:09.877713+00:00,https://www.rhop.it/menu/
