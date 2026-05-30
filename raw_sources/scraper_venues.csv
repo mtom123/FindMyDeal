@@ -1,0 +1,851 @@
+﻿source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,categories,price_tier,rating,rating_count,phone,website,opening_hours,has_menu,menu_url,extraction_status,retrieved_at
+direct_website,bar_e_direzione_oratorio_454405355_91488237,Bar e Direzione Oratorio,,,Milano,45.4405355,9.1488237,,,,,+39 02 816793,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pogue_mahone_s_454508118_92038694,Pogue Mahone's,,,Milano,45.4508118,9.2038694,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,scott_duff_454799222_91832687,Scott Duff,https://scottduff.it/,Via Alessandro Volta 13 20121.0,Milano,45.4799222,9.1832687,,,,,+39 02 29002574,https://scottduff.it/,"Mo-Sa 16:30-02:00, Su 15:00-01:00",True,https://scottduff.it/,ok,2026-05-30T22:25:39Z
+direct_website,the_old_fox_pub_454588109_91707677,The Old Fox Pub,,Via Cesare da Sesto 21 20123.0,Milano,45.4588109,9.1707677,,,,,+39 02 8940 2622,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,il_gatto_e_la_volpe_454949167_9198145,Il gatto e la volpe,,,Milano,45.4949167,9.198145,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nordest_454892417_91888269,Nordest,,Via Pietro Borsieri 35 20159.0,Milano,45.4892417,9.1888269,,,,,+39 02 6900 1910,,08:00 - 01:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tempi_moderni_455141993_9208342,Tempi moderni,,Via Nicol√≤ Fortiguerra 12,Milano,45.5141993,9.208342,,,,,,,Mo-Sa 06:00-20:00; Su 07:30-13:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_nilo_454887935_91943986,Bar Nilo,http://www.barnilo.it/,Via Ippolito Rosellini 20124.0,Milano,45.4887935,9.1943986,,,,,,http://www.barnilo.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,starbucks_454882021_91953454,Starbucks,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,Viale Francesco Restelli 5 20124.0,Milano,45.4882021,9.1953454,,,,,,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,Mo-Fr 07:30-18:30; Sa-Su 08:00-19:00,True,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,ok,2026-05-30T22:25:39Z
+direct_website,il_tombino_454609976_91528367,Il Tombino,,,Milano,45.4609976,9.1528367,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_da_vinci_454809461_92252976,Bar Da Vinci,,,Milano,45.4809461,9.2252976,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sun_strac_454650897_92645554,Sun Strac,https://sunstrac.it/,,Milano,45.4650897,9.2645554,,,,,,https://sunstrac.it/,,True,https://sunstrac.it/,ok,2026-05-30T22:25:39Z
+direct_website,hop_454595392_92063699,Hop,,Viale Regina Margherita 16,Milano,45.4595392,9.2063699,,,,,+39 02 39439821,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,wizard_454504343_91692493,Wizard,https://thewizardpub.wordpress.com/,Ripa di Porta Ticinese 69 20143.0,Milano,45.4504343,9.1692493,,,,,,https://thewizardpub.wordpress.com/,,True,https://thewizardpub.wordpress.com/,ok,2026-05-30T22:25:39Z
+direct_website,la_fontanella_454518037_91776743,La Fontanella,,Alzaia Naviglio Pavese 4n02 20143.0,Milano,45.4518037,9.1776743,,,,,,,Su-Tu 20:30-02:00; Fr-Sa 20:30-03:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,colorado_455002839_91299778,Colorado,,,Milano,45.5002839,9.1299778,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,matricola_454757092_92233689,Matricola,,,Milano,45.4757092,9.2233689,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sohos_454801747_92015922,Sohos,,,Milano,45.4801747,9.2015922,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,outback_caf__454803007_92016606,Outback caf√©,,,Milano,45.4803007,9.2016606,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_baldassarre_45481866_9203625,Bar Baldassarre,,Via Ruggero Boscovich 22 20124.0,Milano,45.481866,9.203625,,,,,,,Mo-Su 07:00-01:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,camarillo_brillo_454446001_91418269,Camarillo Brillo,https://camarillobrillo.business.site/,Via Lodovico il Moro 83 20143.0,Milano,45.4446001,9.1418269,,,,,,https://camarillobrillo.business.site/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tin_whistle_454451996_91446995,Tin Whistle,https://www.facebook.com/tinwhistlemilano/,Via Lodovico il Moro 55 20143.0,Milano,45.4451996,9.1446995,,,,,,https://www.facebook.com/tinwhistlemilano/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,murphy_s_pub_454696964_92280645,Murphy's Pub,,,Milano,45.4696964,9.2280645,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,le_coq_45470509_92268801,Le Coq,,Piazza Francesco Guardi 13 20133.0,Milano,45.470509,9.2268801,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cascina_martesana_455034198_92292443,Cascina Martesana,https://www.cascinamartesana.com/,,Milano,45.5034198,9.2292443,,,,,+39 389 5820695,https://www.cascinamartesana.com/,"Aug: Mo-Fr 18:00-01:00, Aug: Sa,Su 11:00-01:00",True,https://www.cascinamartesana.com/,ok,2026-05-30T22:25:39Z
+direct_website,mom_454587087_92061643,Mom,,,Milano,45.4587087,9.2061643,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,roxy_bar_454489424_91623861,Roxy Bar,,Ripa di Porta Ticinese 103 20143.0,Milano,45.4489424,9.1623861,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_manhattan_454790873_91841339,The Manhattan,,Via Alessandro Volta 4 20121.0,Milano,45.4790873,9.1841339,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mulligan_s_454894039_91677301,Mulligan's,https://mulliganspub.it/,Via Giuseppe Govone 28 20155.0,Milano,45.4894039,9.1677301,,,,,+39 02 09974886,https://mulliganspub.it/,Mo-Sa 18:00-24:00; Tu-Su 24:00-01:00,True,https://mulliganspub.it/,ok,2026-05-30T22:25:39Z
+direct_website,the_saints_and_the_scholars_454890802_91675217,The Saints and the Scholars,https://www.thesaintspub.it/,,Milano,45.4890802,9.1675217,,,,,,https://www.thesaintspub.it/,,True,https://www.thesaintspub.it/,ok,2026-05-30T22:25:39Z
+direct_website,woodstock_454474586_91553746,Woodstock,https://www.qodeup.com/woodstock,Via Lodovico il Moro 3 20143.0,Milano,45.4474586,9.1553746,,,,,,https://www.qodeup.com/woodstock,"Mo-Fr 12:00-15:00,18:00-01:30, Sa 18:00-02:00, Su 18:00-01:30",True,https://www.qodeup.com/woodstock,ok,2026-05-30T22:25:39Z
+direct_website,la_chiesetta_454816985_91728365,La Chiesetta,https://www.lachiesetta.it/,,Milano,45.4816985,9.1728365,,,,,+39 339 7969095,https://www.lachiesetta.it/,Mo-Sa 18:00-02:00,True,https://www.lachiesetta.it/,ok,2026-05-30T22:25:39Z
+direct_website,rt_holl_454802593_91286846,RT HOLL,,,Milano,45.4802593,9.1286846,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blues_bikers_pub_45446919_91805453,Blues Bikers Pub,https://www.bluesbikerspub.com/,Via Francesco Brioschi 7 20136.0,Milano,45.446919,9.1805453,,,,,,https://www.bluesbikerspub.com/,Tu-Su 19:00-02:00; Mo off,True,https://www.bluesbikerspub.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_plaza_454727692_92295732,Bar Plaza,,Via Moretto Da Brescia 31 20133.0,Milano,45.4727692,9.2295732,,,,,+39 02 70002900,,Mo-Su 06:30-22:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_da_vinci_454486383_92030362,Bar da Vinci,,,Milano,45.4486383,9.2030362,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_2_ruote_454392393_91553198,Bar 2 Ruote,,Via Modica 1 20143.0,Milano,45.4392393,9.1553198,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pezzotti_bar_454423151_91832738,Pezzotti Bar,,Via Giovanni Pezzotti 11 20141.0,Milano,45.4423151,9.1832738,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_pezzotti_454393731_9183085,Bar Pezzotti,,Via Giovanni Pezzotti 46 20141.0,Milano,45.4393731,9.183085,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lord_byron_454388678_91836034,Bar Lord Byron,,Via Giovanni Pezzotti 55 20141.0,Milano,45.4388678,9.1836034,,,,,390236582100,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,niky_bar_454429313_91790582,Niky Bar,,Via Giuseppe Meda 25 20136.0,Milano,45.4429313,9.1790582,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,maravea_454512102_91895458,Maravea,,,Milano,45.4512102,9.1895458,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_baffo_454663111_91282704,Bar Baffo,,,Milano,45.4663111,9.1282704,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_plaza_454660495_9127817,Bar Plaza,,,Milano,45.4660495,9.127817,,,,,390236530238,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,al_confine_454564846_91707023,Al Confine,,Viale Coni Zugna 59 20144.0,Milano,45.4564846,9.1707023,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,au_vieux_strasbourg_454736675_92342317,Au Vieux Strasbourg,,Via Gaetano Strambio 29 20133.0,Milano,45.4736675,9.2342317,,,,,+39 02 70630062,,Mo-Sa 07:00-02:00; Su 18:00-00:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bricks_454489995_917756,Bricks,,,Milano,45.4489995,9.17756,,,,,+39 02 84080172,,"Mo-Fr 12:00-14:30, 17:00-02:00, Sa-Su 17:00-03:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,stalingrado_454867785_91602382,Stalingrado,,,Milano,45.4867785,9.1602382,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,osteria_delle_erbe_455146215_92111879,Osteria delle Erbe,,,Milano,45.5146215,9.2111879,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mister_bar_454808006_91613999,Mister Bar,,Via Domodossola 21 20145.0,Milano,45.4808006,9.1613999,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,flash_bar_454825026_91667512,Flash Bar,,,Milano,45.4825026,9.1667512,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_castelli_45499159_91504076,Bar Castelli,,,Milano,45.499159,9.1504076,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,malt_454871573_91671499,Malt,,Via Cenisio 37 20154.0,Milano,45.4871573,9.1671499,,,,,390233602855,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,whisky_bar_454831171_91640946,Whisky Bar,,,Milano,45.4831171,9.1640946,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mauri_454836238_91657835,Bar Mauri,,,Milano,45.4836238,9.1657835,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_boschetti_455122972_91275499,Bar Boschetti,,,Milano,45.5122972,9.1275499,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,frizzi_lazzi_454455769_9178355,Frizzi & Lazzi,,Via Evangelista Torricelli 5 20136.0,Milano,45.4455769,9.178355,,,,,39028378228,,Mo-Su 18:30-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,largo_s_caffe_454807579_92364606,Largo's caffe,,Via Valvassori Peroni 61,Milano,45.4807579,9.2364606,,,,,+39 02 8417 5116,,"Tu-Fr 07:00-02:00; Sa 06:00-15:00, 19:00-02:00; Su 08:00-23:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tiffany_454516696_91868555,Bar Tiffany,,,Milano,45.4516696,9.1868555,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bocconi_4545074_91906166,Bar Bocconi,,,Milano,45.45074,9.1906166,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,jj_s_corner_454811424_92352962,JJ's Corner,,,Milano,45.4811424,9.2352962,,,,,+39 02 70600004,,"Su-Th 17:30-01:00, Fr,Sa 17:30-02:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,barbarian_s_45470696_92282944,Barbarian's,,Via Giovanni Briosi 9 20133.0,Milano,45.470696,9.2282944,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_one_454592793_91924013,Bar One,,Via Pantano 19 20122.0,Milano,45.4592793,9.1924013,,,,,390258304472,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,drinkasi_454507082_91779486,DrinKasi,https://drinkasi.webnode.it,Via Ascanio Sforza 9 20136.0,Milano,45.4507082,9.1779486,,,,,,https://drinkasi.webnode.it,Mo-Su 18:00-02:00,True,https://drinkasi.webnode.it,ok,2026-05-30T22:25:39Z
+direct_website,la_belle_alliance_454462528_91792204,La Belle Alliance,https://www.labellealliance.it,Via Evangelista Torricelli 1 20136.0,Milano,45.4462528,9.1792204,,,,,+39 02 9924 6410,https://www.labellealliance.it,Su-Th 18:00-01:00; Fr-Sa 17:00-02:00,True,https://www.labellealliance.it,ok,2026-05-30T22:25:39Z
+direct_website,bhangrabar_454762187_91713186,Bhangrabar,https://bhangrabar.it/,Corso Sempione 1 20145.0,Milano,45.4762187,9.1713186,,,,,+39 02 34934469,https://bhangrabar.it/,"Mo-Su 18:00-02:00; Dec 24,25,31 off",True,https://bhangrabar.it/,ok,2026-05-30T22:25:39Z
+direct_website,deseo_454765344_91716956,Deseo,https://www.deseomilano.com/,Piazza Sempione 8 20145.0,Milano,45.4765344,9.1716956,,,,,+39 02 315164,https://www.deseomilano.com/,,True,https://www.deseomilano.com/,ok,2026-05-30T22:25:39Z
+direct_website,carpe_diem_bar_454772324_91745466,Carpe Diem Bar,,,Milano,45.4772324,9.1745466,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,living_454763635_9173164,Living,https://www.livingmilano.com/,Piazza Sempione 2 20154.0,Milano,45.4763635,9.173164,,,,,,https://www.livingmilano.com/,,True,https://www.livingmilano.com/,ok,2026-05-30T22:25:39Z
+direct_website,breezy_bar_455008453_91336806,Breezy Bar,,,Milano,45.5008453,9.1336806,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,la_bottega_del_caffe_marinella__454575857_91730117,La bottega del caffe' (Marinella),,Via Cesare da Sesto 14 20123.0,Milano,45.4575857,9.1730117,,,,,390249531425,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,la_rocchetta_caffe_bistrot_äã_454675119_9176518,La Rocchetta Caffe Bistrot‚Äã,https://www.larocchettacaffe.it/,Via Giosu√® Carducci 2 20123.0,Milano,45.4675119,9.176518,,,,,390278623287,https://www.larocchettacaffe.it/,,True,https://www.larocchettacaffe.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_valdagno_454608183_91117495,Bar Valdagno,,Via delle Forze Armate 212 20152.0,Milano,45.4608183,9.1117495,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tabaccheria_amico_bar_alex_454639035_90924912,Tabaccheria Amico Bar Alex,,Via Francesco Rismondo 56 20153.0,Milano,45.4639035,9.0924912,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,j_m_bar_454604615_91170718,J & M bar,,Via delle Forze Armate 179 20152.0,Milano,45.4604615,9.1170718,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dada_bar_454613624_90903421,Dada Bar,https://www.facebook.com/dadabaggio/,Via delle Forze Armate 410 20152.0,Milano,45.4613624,9.0903421,,,,,,https://www.facebook.com/dadabaggio/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_siena_454657404_91365998,Bar Siena,,Piazzale Siena 2 20146.0,Milano,45.4657404,9.1365998,,,,,,,"Mo-Sa 06:30-20:30, Su 07:30-13:30",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,happy_bar_454602383_91121259,happy bar,,,Milano,45.4602383,9.1121259,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cris_bar_454629009_90872921,Cris Bar,,,Milano,45.4629009,9.0872921,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,famil_bar_454625096_90870024,Famil Bar,,,Milano,45.4625096,9.0870024,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sorriso_454625474_9133686,Bar Sorriso,,,Milano,45.4625474,9.133686,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_torrefazione_454626175_91333419,Bar Torrefazione,,,Milano,45.4626175,9.1333419,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_max_454649689_90913924,Bar Max,,,Milano,45.4649689,9.0913924,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,my_coffee_bar_454609803_90942818,My Coffee Bar,,Via Francesco Rismondo 2 20152.0,Milano,45.4609803,9.0942818,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,shatar_pub_454726581_91429735,Shatar Pub,http://www.shatarpub.com,Via Daniele Ricciarelli 8 20148.0,Milano,45.4726581,9.1429735,,,,,393662528078,http://www.shatarpub.com,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dolomiti_455025497_92244785,Bar Dolomiti,,Via Policarpo Petrocchi 34 20127.0,Milano,45.5025497,9.2244785,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,snoopy_bar_2_455033336_9224111,Snoopy Bar 2,,Via Dolomiti 11 20127.0,Milano,45.5033336,9.224111,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,totap_bar_454604309_91574839,ToTap Bar,,,Milano,45.4604309,9.1574839,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,flute_bar_milano_454916738_91887287,Flute bar Milano,,,Milano,45.4916738,9.1887287,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dei_bossi_454677603_91870275,Bar Dei Bossi,,Piazzetta Maurilio Bossi 4,Milano,45.4677603,9.1870275,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_2_454507477_91970381,Bar 2,,,Milano,45.4507477,9.1970381,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_chicco_454434837_91390721,Bar Chicco,,,Milano,45.4434837,9.1390721,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,new_york_lounge_454864207_92014242,New York Lounge,,,Milano,45.4864207,9.2014242,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nuova_milano_454380288_92436236,Nuova Milano,,Via Bruno Cassinari 25 20138.0,Milano,45.4380288,9.2436236,,,,,+39 02 5162 1588,,"Tu-Th 11:00-14:30,18:00-01:00, Fr 11:00-14:30,18:00-02:00, Sa 11:00-14:30,17:00-02:00, Su 11:00-14:30,17:00-01:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,3d_bar_45519989_91689718,3D Bar,,,Milano,45.519989,9.1689718,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,petit_bar_455207014_91709253,Petit bar,,Via Vincenzo da Seregno,Milano,45.5207014,9.1709253,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mal_π_bar_454392043_92162831,Mal√π Bar,,,Milano,45.4392043,9.2162831,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lisi_454387658_92161785,Bar Lisi,,,Milano,45.4387658,9.2161785,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_454389314_92161303,Bar Tabacchi,,,Milano,45.4389314,9.2161303,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_william_45446176_91243435,Bar William,,Via Lorenteggio 238 20147.0,Milano,45.446176,9.1243435,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,al_mio_bar_455286878_91631096,Al Mio Bar,,,Milano,45.5286878,9.1631096,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,birreria_stella_454685247_92262905,Birreria Stella,,,Milano,45.4685247,9.2262905,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_basso_454767746_92175792,Bar Basso,http://www.barbasso.com/,Via Plinio 39 20129.0,Milano,45.4767746,9.2175792,,,,,+39 02 29400580,http://www.barbasso.com/,,True,http://www.barbasso.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_dei_sogni_45477967_92232547,Bar dei Sogni,,,Milano,45.477967,9.2232547,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sand_45469638_92299117,Bar Sand,,Via Gaspare Aselli 7,Milano,45.469638,9.2299117,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_skuisito_454815406_92278238,Bar Skuisito,,,Milano,45.4815406,9.2278238,,,,,+39 02 7063 8397,,"Mo-Fr 12:00-15:00,19:00-23:00; Sa 19:00-24:00; Su off",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,harp_pub_guinness_454772546_92255218,Harp Pub Guinness,https://harppubguinness.eatbu.com,Piazza Leonardo da Vinci 10 20133.0,Milano,45.4772546,9.2255218,,,,,+39 02 36686194,https://harppubguinness.eatbu.com,"Mo-Fr 11:00-24:00; Sa 00:00-01:00, 18:00-24:00; Su 00:00-01:00",True,https://harppubguinness.eatbu.com,ok,2026-05-30T22:25:39Z
+direct_website,bar_4_strade_455112697_92152238,Bar 4 Strade,,Via Bernardo Rucellai 50 20126.0,Milano,45.5112697,9.2152238,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,queen_s_bar_tabacchi_454624886_91735413,Queen's Bar Tabacchi,https://www.queensbartabacchi.com/,Via Giosu√® Carducci 36 20123.0,Milano,45.4624886,9.1735413,,,,,390289013944,https://www.queensbartabacchi.com/,Mo-Sa 06:00-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_brera_454723487_91874481,Bar Brera,,Via Brera 23 20121.0,Milano,45.4723487,9.1874481,,,,,+39 02 877091,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,o_connell_country_pub_454696795_91879449,O' Connell Country Pub,https://www.oconnellirishpubmilanobrera.it,Via Brera 3 20121.0,Milano,45.4696795,9.1879449,,,,,+39 02 72094888,https://www.oconnellirishpubmilanobrera.it,"Mo-Fr 17:00-02:00, Sa-Su 12:00-02:00",True,https://www.oconnellirishpubmilanobrera.it,ok,2026-05-30T22:25:39Z
+direct_website,new_york_bar_454818073_92321779,New York Bar,,,Milano,45.4818073,9.2321779,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,east_end_454883457_9254188,East End,,,Milano,45.4883457,9.254188,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,rita_s_tikiroom_454504917_91695248,Rita's Tikiroom,https://www.ritastikiroom.com/it/,Ripa di Porta Ticinese 69 20143.0,Milano,45.4504917,9.1695248,,,,,390283555017,https://www.ritastikiroom.com/it/,Tu-Su 18:00-02:00; Mo off,True,https://www.ritastikiroom.com/it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_durante_454897478_92237285,Bar Durante,,,Milano,45.4897478,9.2237285,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_leoncavallo_45490367_92247833,Bar Leoncavallo,,,Milano,45.490367,9.2247833,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gran_bar_tunisia_454796918_91998148,Gran Bar Tunisia,,Viale Tunisia 41 20124.0,Milano,45.4796918,9.1998148,,,,,+39 02 6555254,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blender_454686909_92235692,Blender,,Piazzale Susa 7,Milano,45.4686909,9.2235692,,,,,+39 02 7490200,,Mo-Su 16:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,brasserie_bruxelles_454787442_92167302,Brasserie Bruxelles,https://www.brasseriebruxelles.eu,Viale Abruzzi 33 20131.0,Milano,45.4787442,9.2167302,,,,,,https://www.brasseriebruxelles.eu,Mo-Su 17:00-02:00,True,https://www.brasseriebruxelles.eu,ok,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_jackpot_454601325_90968349,Bar tabacchi Jackpot,,Via delle Forze Armate 395 20152.0,Milano,45.4601325,9.0968349,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_zurigo_454573809_91220797,Bar Zurigo,,Via Angelo Inganni 103 20147.0,Milano,45.4573809,9.1220797,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_duomo_454646084_91884203,Bar Duomo,,Piazza del Duomo 17 20121.0,Milano,45.4646084,9.1884203,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,la_belle_aurore_454719252_92145132,La Belle Aurore,,,Milano,45.4719252,9.2145132,,,,,,,"Mo-Tu,Th 10:00-22:30; Fr-Sa 10:00-23:30; Su 10:00-22:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_five_454847626_92301415,Bar Five,,,Milano,45.4847626,9.2301415,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tavola_calda_lilly_454848721_92293464,Bar Tavola Calda Lilly,,,Milano,45.4848721,9.2293464,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gypsian_club_45479303_924691,Gypsian Club,,Piazza Vigili del Fuoco 7 20134.0,Milano,45.479303,9.24691,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_flaminio_454801331_92425863,Bar Flaminio,,,Milano,45.4801331,9.2425863,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_pino_454826606_9242114,Bar Pino,,,Milano,45.4826606,9.242114,,,,,,,Mo-Sa 09:00-19:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,hernest_caf__454850744_92315908,Hernest Caf√©,,Via Vallazze 107 20131.0,Milano,45.4850744,9.2315908,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,solar_bar_454588929_91729422,Solar Bar,,Via Ariberto 19 20123.0,Milano,45.4588929,9.1729422,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_della_crocetta_454564618_91953886,Bar della Crocetta,,Largo della Crocetta 1 20122.0,Milano,45.4564618,9.1953886,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,justcaf__454819393_92278879,JustCaf√©,,,Milano,45.4819393,9.2278879,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dream_s_bar_45507717_92033775,Dream's Bar,,Via Salvatore Pianell 45 20125.0,Milano,45.507717,9.2033775,,,,,,,Mo-Su 06:00-22:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,spiller_454911256_91859892,Spiller,https://spillerbirrerie.it,,Milano,45.4911256,9.1859892,,,,,,https://spillerbirrerie.it,,True,https://spillerbirrerie.it,ok,2026-05-30T22:25:39Z
+direct_website,bar_lucia_455138687_91735052,Bar Lucia,,,Milano,45.5138687,9.1735052,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,isola_della_birra_454897114_91853194,Isola Della Birra,https://www.isoladellabirra.com/,Via Medardo Rosso 18 20159.0,Milano,45.4897114,9.1853194,,,,,,https://www.isoladellabirra.com/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,one_love_bar_45476313_92058479,One Love Bar,,,Milano,45.476313,9.2058479,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,luca_s_bar_454575138_91811174,Luca's Bar,,Corso di Porta Ticinese 51b 20123.0,Milano,45.4575138,9.1811174,,,,,390258100409,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,machan_pub_454452943_92131972,Machan Pub,,,Milano,45.4452943,9.2131972,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_girasole_tabacchi_454443722_92146724,Bar Girasole Tabacchi,,,Milano,45.4443722,9.2146724,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucky_bar_paninoteca_454439582_92155414,Lucky Bar Paninoteca,,,Milano,45.4439582,9.2155414,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_morgagni_454788621_92134931,Bar Morgagni,,,Milano,45.4788621,9.2134931,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giardino_454303202_92036656,Bar Giardino,,Via Val di Sole 22 20141.0,Milano,45.4303202,9.2036656,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bijoux_454955503_92197492,Bar Bijoux,,Viale Monza,Milano,45.4955503,9.2197492,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dito_divino_454652176_91840313,Dito Divino,https://www.ditodivino.com/,Via Gaetano Negri 8 20123.0,Milano,45.4652176,9.1840313,,,,,+39 02 89096532,https://www.ditodivino.com/,,True,https://www.ditodivino.com/,ok,2026-05-30T22:25:39Z
+direct_website,happy_bar_454960869_92075908,Happy Bar,,,Milano,45.4960869,9.2075908,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cambridge_454676716_92230517,Cambridge,,,Milano,45.4676716,9.2230517,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pico_brew_station_454451963_91766917,Pico Brew Station,https://www.picobrew.it/,Via Ascanio Sforza 63 20136.0,Milano,45.4451963,9.1766917,,,,,,https://www.picobrew.it/,"Su-Th 17:30-01:00, Fr,Sa 17:30-02:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,locanda_da_vinci_454455537_91763043,Locanda da Vinci,,Alzaia Naviglio Pavese 52 20143.0,Milano,45.4455537,9.1763043,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_si_ga_di_lupini_graziella_454489991_91771151,Bar Tabacchi SI & GA di Lupini Graziella,,Alzaia Naviglio Pavese 24 20143.0,Milano,45.4489991,9.1771151,,,,,+39 02 36514963,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ponte_vecchio_pub_454491641_91771374,Ponte Vecchio Pub,,Alzaia Naviglio Pavese 24 20143.0,Milano,45.4491641,9.1771374,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,maga_furla_455095876_92118674,Maga Furla,,Via Roberto Cozzi 50 20125.0,Milano,45.5095876,9.2118674,,,,,,,"Su-Th 20:00-02:00, Fr,Sa 20:00-03:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,spritz_454519849_91765944,Spritz,https://www.leggimenu.it/menu/spritznaviglimilano,Ripa di Porta Ticinese 9 20143.0,Milano,45.4519849,9.1765944,,,,,390283390192,https://www.leggimenu.it/menu/spritznaviglimilano,Mo-Su 18:00-02:00,True,https://www.leggimenu.it/menu/spritznaviglimilano,ok,2026-05-30T22:25:39Z
+direct_website,bar_loreto_uno_tabacchi_454878678_92169986,Bar Loreto Uno Tabacchi,,,Milano,45.4878678,9.2169986,,,,,,,Mo-Su 06:00-00:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,diana_pub_454536701_9215598,Diana Pub,,Viale Umbria 58,Milano,45.4536701,9.215598,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_girasole_455109651_92028142,Bar Girasole,,Viale Fulvio Testi,Milano,45.5109651,9.2028142,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_latteria_454913481_92301084,Bar latteria,,,Milano,45.4913481,9.2301084,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lux_bar_454845614_92053064,Lux Bar,,Piazza Luigi di Savoia 2 20124.0,Milano,45.4845614,9.2053064,,,,,+39 02 6692288,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gb_bar_454659808_91919867,GB Bar,,,Milano,45.4659808,9.1919867,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_punto_di_ristoro_454891994_92322816,Bar Punto di ristoro,,,Milano,45.4891994,9.2322816,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_nadia_454893604_92316138,Bar Nadia,,,Milano,45.4893604,9.2316138,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,easy_bar_454892212_92301115,Easy Bar,,,Milano,45.4892212,9.2301115,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blue_bar_454884538_92301118,Blue bar,,,Milano,45.4884538,9.2301118,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,spiller_454621982_91929566,Spiller,https://www.spillerbirrerie.it/,Via Larga 8 20122.0,Milano,45.4621982,9.1929566,,,,,390238299987,https://www.spillerbirrerie.it/,,True,https://www.spillerbirrerie.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_mercurio_454629383_91886235,Bar Mercurio,http://www.barmercurio.it/,Via Dogana 3 20123.0,Milano,45.4629383,9.1886235,,,,,+39 02 8056153,http://www.barmercurio.it/,Mo-Sa 05:30-20:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,murphy_s_law_454550132_91665851,Murphy's Law,,Via Montevideo 3 20144.0,Milano,45.4550132,9.1665851,,,,,+39 02 8324 2151,,Mo-Fr 12:00-02:00; Sa-Su 13:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_settembrini_454832415_92073336,Bar Settembrini,,,Milano,45.4832415,9.2073336,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ps_cocktail_beer_454507816_91775522,PS Cocktail & Beer,,,Milano,45.4507816,9.1775522,,,,,+39 348 3148001,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_vitaminas_455029642_92273187,Bar Vitaminas,,Via Policarpo Petrocchi 20127.0,Milano,45.5029642,9.2273187,,,,,+39 02 678908,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,emy_bar_454982259_91844257,Emy bar,,,Milano,45.4982259,9.1844257,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,al_panino_pub_454805218_91852205,Al Panino Pub,,Viale Francesco Crispi 5 20121.0,Milano,45.4805218,9.1852205,,,,,,,"Tu-Th 09:00-03:00; Fr, Sa 09:00-04:00; Su 15:00-03:00; Mo 09:00-16:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_della_stazione_454871063_92032484,Bar della Stazione,,Via Giovanni Battista Sammartini 1,Milano,45.4871063,9.2032484,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_liberty_454916617_91956374,Bar Liberty,,,Milano,45.4916617,9.1956374,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_memory_454910779_91955866,Bar Memory,,Via Ippolito Rosellini 26 20124.0,Milano,45.4910779,9.1955866,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bukowski_pub_454565505_91894413,Bukowski Pub,,,Milano,45.4565505,9.1894413,,,,,+39 02 58305955,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blu_bar_454745644_91401621,Blu Bar,,,Milano,45.4745644,9.1401621,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_principe_454606665_91864151,Bar Principe,,,Milano,45.4606665,9.1864151,,,,,+39 02 8692513,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,my_chef_briciole_bar_454582382_91879179,My Chef Briciole Bar,,,Milano,45.4582382,9.1879179,,,,,+39 02 89093943,,Mo-Sa 07:00-21:00; Su 08:00-21:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_isola_454866123_91904905,Bar Isola,,Via Federico Confalonieri 9 20124.0,Milano,45.4866123,9.1904905,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,paperoga_454648651_92300155,Paperoga,,,Milano,45.4648651,9.2300155,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_david_454505732_92123682,Bar David,,,Milano,45.4505732,9.2123682,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,navigli_craft_beer_454513467_9172043,Navigli Craft Beer,,Alzaia Naviglio Grande 44 20144.0,Milano,45.4513467,9.172043,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sassetti_454864645_91938834,Bar Sassetti,,Via Filippo Sassetti 15 20124.0,Milano,45.4864645,9.1938834,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gatto_454846091_92147361,Bar Gatto,,,Milano,45.4846091,9.2147361,,,,,,,Mo-Sa 07:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_brianza_454867118_92153348,Bar Brianza,,,Milano,45.4867118,9.2153348,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,meneghino_birreria_454697214_92265316,Meneghino Birreria,,Via Pietro da Cortona 13 20133.0,Milano,45.4697214,9.2265316,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,american_bar_454700746_92299154,American Bar,,,Milano,45.4700746,9.2299154,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,niki_bar_454724531_92304599,Niki Bar,,,Milano,45.4724531,9.2304599,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fratelli_guido_455046684_91059824,Bar Fratelli Guido,https://www.facebook.com/barfratelli.guido,Via Gallarate,Milano,45.5046684,9.1059824,,,,,+39 02 3810 1762,https://www.facebook.com/barfratelli.guido,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_millennio_454870094_92136181,Bar Millennio,,,Milano,45.4870094,9.2136181,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arcobaleno_454843894_92166941,Bar Arcobaleno,,,Milano,45.4843894,9.2166941,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lomellina_454671118_92303948,Bar Lomellina,,,Milano,45.4671118,9.2303948,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_caffe_45512584_91579586,Bar Caffe,,,Milano,45.512584,9.1579586,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_metro_454662155_91492585,Bar Metro,,,Milano,45.4662155,9.1492585,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_david_454920914_92160681,Bar David,,,Milano,45.4920914,9.2160681,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giada_454925602_91923021,Bar Giada,,,Milano,45.4925602,9.1923021,,,,,,,Mo-Sa 06:00-21:00; Su 07:00-21:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,music_viga_bar_454819975_91897703,Music Viga Bar,,Via Francesco Vigan√≤ 4 20124.0,Milano,45.4819975,9.1897703,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,corso_como_5_lounge_bar_454815283_91870113,Corso Como 5 Lounge Bar,,Corso Como 5 20154.0,Milano,45.4815283,9.1870113,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,abbracci_bistrot_454512603_91711883,Abbracci Bistrot,https://abbraccibistrot.com/,Via Casale 7 20144.0,Milano,45.4512603,9.1711883,,,,,+39 02 84244310,https://abbraccibistrot.com/,,True,https://abbraccibistrot.com/,ok,2026-05-30T22:25:39Z
+direct_website,concordia_enoteca_454507535_91707484,Concordia Enoteca,https://www.cantinaconcordia.it/,Ripa di Porta Ticinese 61 20143.0,Milano,45.4507535,9.1707484,,,,,,https://www.cantinaconcordia.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_affori_455171978_91712504,Bar Affori,,,Milano,45.5171978,9.1712504,,,,,,,Mo-Sa 07:30-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,straripa_bar_454517526_91755278,Straripa Bar,,Ripa di Porta Ticinese 19 20143.0,Milano,45.4517526,9.1755278,,,,,+39 02 58118146,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_ego_454710817_92308856,Bar Ego,,,Milano,45.4710817,9.2308856,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arcobaleno_455102792_91760295,Bar Arcobaleno,,Via privata Don Bartolomeo Grazioli 2 20161.0,Milano,45.5102792,9.1760295,,,,,,,Mo-Su 06:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,amico_bar_tabacchi_454903674_92300709,Amico Bar Tabacchi,,,Milano,45.4903674,9.2300709,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,green_bar_454641755_91612932,Green Bar,,Via Giovanni Cantoni 12 20144.0,Milano,45.4641755,9.1612932,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,moscow_mule_bar_454868595_92301145,Moscow Mule Bar,https://www.moscow-mule.it,"Via Teodosio, 60 60 20131.0",Milano,45.4868595,9.2301145,,,,,393519057229,https://www.moscow-mule.it,Tu-Sa 18:00-02:00,True,https://www.moscow-mule.it,ok,2026-05-30T22:25:39Z
+direct_website,casa_giuditta_454694554_92220441,Casa Giuditta,https://www.casagiudittamilano.it/,Via Carlo Goldoni 86 20133.0,Milano,45.4694554,9.2220441,,,,,,https://www.casagiudittamilano.it/,,True,https://www.casagiudittamilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_bah_45489007_91872235,Bar Bah,,Via Luigi Porro Lambertenghi 20159.0,Milano,45.489007,9.1872235,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,chiringuito_454803853_91278585,Chiringuito,,,Milano,45.4803853,9.1278585,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_del_106_454994863_92209167,Bar del 106,,Viale Monza 106 20127.0,Milano,45.4994863,9.2209167,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,je_suis_jambon_455148441_92122769,Je suis Jambon,,Piazza della Trivulziana 4a,Milano,45.5148441,9.2122769,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,straf_bar_454652698_91912385,Straf Bar,,Via San Raffaele 3 20121.0,Milano,45.4652698,9.1912385,,,,,+39 02 805081,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_madonnina_454647809_9193507,Bar Madonnina,,Piazzetta Pattari 1,Milano,45.4647809,9.193507,,,,,+39 02 86464947,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,max_bar_454668754_9199203,Max Bar,,Corso Monforte 13 20122.0,Milano,45.4668754,9.199203,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_durini_454636504_91976183,Bar Durini,,,Milano,45.4636504,9.1976183,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_si_454635413_91979385,Bar SI,,,Milano,45.4635413,9.1979385,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_beltrade_454630385_91866809,Bar Beltrade,,,Milano,45.4630385,9.1866809,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_freetime_454663848_91886832,Bar Freetime,,Via Santa Margherita 7 20121.0,Milano,45.4663848,9.1886832,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,biffi_454835535_91811925,Biffi,,Via Ceresio 4 20154.0,Milano,45.4835535,9.1811925,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,vinyl_454877272_91875031,Vinyl,,,Milano,45.4877272,9.1875031,,,,,+39 348 808 4916,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_belfanti_454440179_91732442,Bar Belfanti,,Piazza Serafino Belfanti 2 20143.0,Milano,45.4440179,9.1732442,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,marco_polo_bar_454807066_91934987,Marco Polo Bar,,Via Marco Polo 6 20124.0,Milano,45.4807066,9.1934987,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tipota_pub_454452431_91806654,Tipota Pub,https://www.tipota.net/,Via Francesco Brioschi 32,Milano,45.4452431,9.1806654,,,,,+39 02 835 7777,https://www.tipota.net/,18:00-02:00,True,https://www.tipota.net/,ok,2026-05-30T22:25:39Z
+direct_website,bar_stella_454880355_91577588,Bar Stella,https://www.facebook.com/people/Tabacchi-Bar-Stella/100063135375150/,Piazza Firenze 4 20154.0,Milano,45.4880355,9.1577588,,,,,393319991650,https://www.facebook.com/people/Tabacchi-Bar-Stella/100063135375150/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,crystal_bar_454650409_91420418,Crystal Bar,,,Milano,45.4650409,9.1420418,,,,,,,Mo-Su 06:30-18:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_454829191_91896391,Bar Atlantic,,Viale Luigi Sturzo 13,Milano,45.4829191,9.1896391,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tom_jerry_restaurant_bar_454997293_91387861,Tom & Jerry Restaurant Bar,,Via Ludovico di Breme 54n02,Milano,45.4997293,9.1387861,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_pit_stop_455024214_91384362,Bar Pit Stop,,Viale Carlo Espinasse 137 20121.0,Milano,45.5024214,9.1384362,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_la_colonna_454868193_91887817,Bar La Colonna,,Via Pietro Borsieri 14 20159.0,Milano,45.4868193,9.1887817,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,al_bar_454873334_91958412,Al Bar,,,Milano,45.4873334,9.1958412,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nidaba_theatre_454489777_91756484,Nidaba Theatre,http://www.nidaba.it/,Via Emilio Gola 12 20143.0,Milano,45.4489777,9.1756484,,,,,+39 339 3477512,http://www.nidaba.it/,20:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bilancia_454943279_91463187,Bar Bilancia,,Via Dario Niccodemi 6,Milano,45.4943279,9.1463187,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mondo_bar_454982761_91441836,Mondo Bar,,Via Pier Francesco Mola 3,Milano,45.4982761,9.1441836,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_arena_45455126_91788437,Bar tabacchi Arena,,Via Arena 20123.0,Milano,45.455126,9.1788437,,,,,390258101077,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,rock_n_roll_milano_454925338_92075644,Rock'n'Roll Milano,,Via Giuseppe Bruschetti 11 20125.0,Milano,45.4925338,9.2075644,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_white_454799586_91885403,Bar White,,Bastioni di Porta Nuova 15n06 20121.0,Milano,45.4799586,9.1885403,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_garden_454621239_92028326,Bar Garden,,Corso di Porta Vittoria 28 20122.0,Milano,45.4621239,9.2028326,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_granny_454782695_9182678,Bar Granny,,Via della Moscova 66,Milano,45.4782695,9.182678,,,,,+39 02 29006558,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_capolinea_2_454292859_92565687,Bar Capolinea 2,,,Milano,45.4292859,9.2565687,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sandy_bar_45466781_91489245,Sandy Bar,,,Milano,45.466781,9.1489245,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_maciachini_454984047_91867872,Bar Tabacchi Maciachini,,,Milano,45.4984047,9.1867872,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pinch_454507272_91706503,Pinch,https://www.pinchmilano.com/,Ripa di Porta Ticinese 63 20143.0,Milano,45.4507272,9.1706503,,,,,,https://www.pinchmilano.com/,,True,https://www.pinchmilano.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_hiwinet_454768538_92050301,Bar Hiwinet,,,Milano,45.4768538,9.2050301,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,new_bar_454561236_9237879,New Bar,,,Milano,45.4561236,9.237879,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,city_bar_454456737_92469389,City Bar,,,Milano,45.4456737,9.2469389,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,marvin_bar_454456245_92455044,Marvin Bar,,,Milano,45.4456245,9.2455044,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,florida_bar_454520299_92226039,Florida Bar,,,Milano,45.4520299,9.2226039,,,,,,,Mo-Su 07:00-21:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mind_the_step_454742999_92234256,Mind the Step,,,Milano,45.4742999,9.2234256,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_good_life_454892647_91831976,The Good Life,,Via Carlo Farini 30 20159.0,Milano,45.4892647,9.1831976,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,brother_s_bar_454941529_92061316,Brother's bar,,Via Melchiorre Gioia 133 20125.0,Milano,45.4941529,9.2061316,,,,,39026706025,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,happy_bar_454658211_91775475,Happy Bar,,Corso Magenta 25 20123.0,Milano,45.4658211,9.1775475,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mezca_454772035_91699589,MEZCA,https://www.mezca.it/,Corso Sempione 7 20145.0,Milano,45.4772035,9.1699589,,,,,,https://www.mezca.it/,Mo-Su 18:00-02:00,True,https://www.mezca.it/,ok,2026-05-30T22:25:39Z
+direct_website,banco_454512939_91718079,Banco,,Alzaia Naviglio Grande 46 20144.0,Milano,45.4512939,9.1718079,,,,,390289415868,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fusina_di_crescente_nicola_454689413_92299208,Bar Fusina Di Crescente Nicola,https://www.barfusina.it/,Piazza Andrea Fusina 1 20133.0,Milano,45.4689413,9.2299208,,,,,,https://www.barfusina.it/,,True,https://www.barfusina.it/,ok,2026-05-30T22:25:39Z
+direct_website,altro_bar_454409249_91814693,Altro Bar,,Via Ruggero Bonghi 17 20141.0,Milano,45.4409249,9.1814693,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blackout_lounge_bar_454801964_92178457,Blackout Lounge Bar,,,Milano,45.4801964,9.2178457,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,fashion_bar_454803279_92026274,Fashion Bar,,,Milano,45.4803279,9.2026274,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_voltri_454355955_91543597,Bar Voltri,,,Milano,45.4355955,9.1543597,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabaccheria_filangieri_454606082_91674321,Bar Tabaccheria Filangieri,,Via degli Olivetani 21 20123.0,Milano,45.4606082,9.1674321,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dogana_454906489_91815249,Bar Dogana,,Via Arnaldo da Brescia 10 20159.0,Milano,45.4906489,9.1815249,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sorriso_454949693_91428703,Bar Sorriso,,Via Gian Battista Casella 43 20156.0,Milano,45.4949693,9.1428703,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_barbara_454821864_91812527,Bar Barbara,,Piazzale Antonio Baiamonti 1 20154.0,Milano,45.4821864,9.1812527,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,drago_verde_454823676_91811537,Drago Verde,,Piazzale Antonio Baiamonti 3 20154.0,Milano,45.4823676,9.1811537,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,jolly_bar_45481737_91793747,Jolly Bar,,Via Paolo Sarpi 12 20154.0,Milano,45.481737,9.1793747,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_udine_454911975_92364298,Bar Tabacchi Udine,,Piazzale Udine 20132.0,Milano,45.4911975,9.2364298,,,,,+39 02 26414577,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mida_454733055_92281378,Bar Mida,http://www.barmida.com/,Via Sandro Botticelli 22 20133.0,Milano,45.4733055,9.2281378,,,,,+39 02 714428,http://www.barmida.com/,7:00-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pink_bar_454791472_91845374,Pink Bar,,Via Varese 6 20121.0,Milano,45.4791472,9.1845374,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tardis_455238074_91925759,Tardis,https://tardispubmilano.it,Via Luigi Ornato 134 20162.0,Milano,45.5238074,9.1925759,,,,,,https://tardispubmilano.it,,True,https://tardispubmilano.it,ok,2026-05-30T22:25:39Z
+direct_website,bar_mondino_1994_454805209_91772716,Bar Mondino 1994,,Via Giovanni Battista Niccolini 20154.0,Milano,45.4805209,9.1772716,,,,,+39 02 89052595,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sesto_454735677_92180605,Bar Sesto,,,Milano,45.4735677,9.2180605,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_monte_san_gabriele_455049099_92233175,Bar Monte San Gabriele,,Via Monte San Gabriele 6 20127.0,Milano,45.5049099,9.2233175,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_piazza_455058972_92243822,Bar Piazza,,Via Aristotele 13 20128.0,Milano,45.5058972,9.2243822,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lambiczoon_454541198_92133409,Lambiczoon,https://www.lambiczoon.com,Via Friuli 46 20135.0,Milano,45.4541198,9.2133409,,,,,+39 02 3653 4840,https://www.lambiczoon.com,Mo-Th 18:00-01:00; Fr-Sa 18:00-02:00,True,https://www.lambiczoon.com,ok,2026-05-30T22:25:39Z
+direct_website,bar_golf_45487374_91971057,Bar Golf,,Via Luigi Galvani 21 20124.0,Milano,45.487374,9.1971057,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,feel_bar_454838239_9198747,Feel Bar,,Via Giovanni Battista Pirelli 19 20124.0,Milano,45.4838239,9.198747,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fara_454824097_91979259,Bar Fara,,Via Gustavo Fara 8 20124.0,Milano,45.4824097,9.1979259,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_alfa_454850057_9209195,Bar Alfa,,Viale Andrea Doria 14 20124.0,Milano,45.4850057,9.209195,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mogamo_454850484_92088175,Mogamo,https://www.mogamo.it/,Viale Andrea Doria 12 20124.0,Milano,45.4850484,9.2088175,,,,,+39 02 36528389,https://www.mogamo.it/,Mo-Fr 07:00-02:00; Sa 18:00-02:00,True,https://www.mogamo.it/,ok,2026-05-30T22:25:39Z
+direct_website,waiting_bar_454857384_92093866,Waiting Bar,,Piazza Caiazzo 1 20124.0,Milano,45.4857384,9.2093866,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_la_compagnia_455018878_92125059,Bar La Compagnia,,Piazza Greco 10 20125.0,Milano,45.5018878,9.2125059,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,greco_bar_455022878_92102872,Greco Bar,,Via Pigello Portinari 1 20125.0,Milano,45.5022878,9.2102872,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bonfadini_454448053_92462564,Bar Bonfadini,,,Milano,45.4448053,9.2462564,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ice_cream_bar_454305012_91789147,Ice Cream bar,,,Milano,45.4305012,9.1789147,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_capriccio_454114035_91722724,Bar Capriccio,,Via Costantino Baroni 11 20142.0,Milano,45.4114035,9.1722724,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_happy_454260975_92514483,Bar Happy,,Via Rogoredo 20138.0,Milano,45.4260975,9.2514483,,,,,+39 351 7464833,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cantiere_454786894_91856855,Cantiere,,Corso Giuseppe Garibaldi 108 20121.0,Milano,45.4786894,9.1856855,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_espresso_454830356_92052446,Bar Espresso,,Via Vitruvio 43 20124.0,Milano,45.4830356,9.2052446,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nice_caf__454823746_92035057,Nice Caf√®,https://nicecafe.eatbu.com/,Via Roberto Lepetit 3 20124.0,Milano,45.4823746,9.2035057,,,,,393279736359,https://nicecafe.eatbu.com/,Mo-Su 07:00-02:00,True,https://nicecafe.eatbu.com/,ok,2026-05-30T22:25:39Z
+direct_website,the_street_bar_454835505_9203914,The Street Bar,,Via Antonio da Recanate 2 20124.0,Milano,45.4835505,9.203914,,,,,+39 328 6619443,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giada_454889166_92133017,Bar Giada,,,Milano,45.4889166,9.2133017,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,c_c_bar_454909355_92074306,C&C Bar,,,Milano,45.4909355,9.2074306,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_al_posto_giusto_454757111_92211456,Bar al posto giusto,,,Milano,45.4757111,9.2211456,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_vega_455012221_91986867,Bar Vega,,Piazzale Istria 4,Milano,45.5012221,9.1986867,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,zhizun_pub_454914095_91847285,Zhizun Pub,,Via Alserio 3 20159.0,Milano,45.4914095,9.1847285,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_velasca_454601431_91911925,Bar Velasca,,Via Pantano 2 20122.0,Milano,45.4601431,9.1911925,,,,,39028052327,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,peter_bar_454606839_91916054,Peter Bar,,Via Larga 31 20122.0,Milano,45.4606839,9.1916054,,,,,390258303846,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,prog_454577567_92079204,Prog,,Via Andrea Maffei 12 20135.0,Milano,45.4577567,9.2079204,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mind_the_gap_45456646_92024271,Mind the GAP,,,Milano,45.456646,9.2024271,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,afterline_454889658_92055739,Afterline,http://www.afterline.it/,Via Giovanni Battista Sammartini 25 20125.0,Milano,45.4889658,9.2055739,,,,,,http://www.afterline.it/,,True,http://www.afterline.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_fiamingo_454959235_92100769,Bar Fiamingo,,Via Gianfranco Zuretti 57 20125.0,Milano,45.4959235,9.2100769,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gluck_454909946_92073114,Bar Gluck,,Via Cristoforo Gluck 2 20125.0,Milano,45.4909946,9.2073114,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,queen_bar_454879552_9204146,Queen Bar,,Via Giovanni Battista Sammartini 15 20125.0,Milano,45.4879552,9.204146,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ginger_cocktail_lab_454496651_91777067,Ginger Cocktail Lab,https://www.gingercocktailab.it/,Via Ascanio Sforza 21 20136.0,Milano,45.4496651,9.1777067,,,,,,https://www.gingercocktailab.it/,Tu-Su 17:30-02:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,peter_bar_454776378_9193344,Peter Bar,,,Milano,45.4776378,9.193344,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_brambilla_454777102_91922349,Bar Brambilla,,,Milano,45.4777102,9.1922349,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tiffany_455125477_92218154,Bar Tiffany,,Via Bernardo Rucellai 12 20126.0,Milano,45.5125477,9.2218154,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lucania_454414918_92237729,Bar Lucania,,,Milano,45.4414918,9.2237729,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ralph_s_454578194_91807356,Ralph's,,Via Edmondo De Amicis 4 20123.0,Milano,45.4578194,9.1807356,,,,,390287250438,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_del_punt_454330365_91742941,Bar del punt,,,Milano,45.4330365,9.1742941,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lisa_bar_454338467_91779979,Lisa bar,,,Milano,45.4338467,9.1779979,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_caffetteria_club_davide_454360368_91814263,Bar Caffetteria Club Davide,,Via Francesco De Sanctis 50 20141.0,Milano,45.4360368,9.1814263,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_cupido_454489_91437494,Bar Cupido,,Via Giambellino 79 20146.0,Milano,45.4489,9.1437494,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_jessica_4544975_91364153,Bar Jessica,,Via Lorenteggio 163 20146.0,Milano,45.44975,9.1364153,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sincero_45448456_91392303,Bar Sincero,,Via dei Biancospini 1 20146.0,Milano,45.448456,9.1392303,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lina_s_bar_454490599_91397575,Lina's Bar,,,Milano,45.4490599,9.1397575,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,eleven_bar_454494612_91415724,Eleven Bar,,Via Curio Dentato 11 20146.0,Milano,45.4494612,9.1415724,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,astro_bar_tabacchi_454514486_91416356,Astro Bar - Tabacchi,,Via Lorenteggio 137 20146.0,Milano,45.4514486,9.1416356,,,,,39024238881,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,va_a_ciap_il_bar_454525632_91450887,Va a ciap√† il bar,,Via Lorenteggio 57 20146.0,Milano,45.4525632,9.1450887,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lory_454512556_91354818,Bar Lory,,Via Francesco Primaticcio 34 20146.0,Milano,45.4512556,9.1354818,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cris_bar_454971131_91310742,Cris Bar,,,Milano,45.4971131,9.1310742,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_azzurra_454922563_91841894,Bar Azzurra,,Via Carlo Farini 55 20159.0,Milano,45.4922563,9.1841894,,,,,,,Mo-Su 07:30-24:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,waiting_bar_454920241_91844035,Waiting Bar,,Via Carlo Farini 52 20159.0,Milano,45.4920241,9.1844035,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fortuna_455086066_92014342,Bar fortuna,,,Milano,45.5086066,9.2014342,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mono_bar_454763822_92039648,Mono Bar,,Via Lecco 6b 20124.0,Milano,45.4763822,9.2039648,,,,,,,Mo off; Tu 18:30-01:00; We-Th 18:30-01:30; Fr-Sa 18:30-02:00; Su 18:30-01:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_delle_ore_454629769_91934813,Bar delle Ore,,Via delle Ore 4 20122.0,Milano,45.4629769,9.1934813,,,,,+39 02 860377,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_duomo_454638617_91932848,Bar Duomo,,Via Carlo Maria Martini 1 20122.0,Milano,45.4638617,9.1932848,,,,,39028057461,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sole_454619255_91908573,Bar Sole,,Via Paolo da Cannobio 4 20122.0,Milano,45.4619255,9.1908573,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_turati_45473912_91950498,Bar Turati,,Via Filippo Turati 8 20121.0,Milano,45.473912,9.1950498,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_armony_454873912_91688561,Bar Armony,,Via Fratelli Induno 28 20154.0,Milano,45.4873912,9.1688561,,,,,3902314346,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,barbisa_1920_454521021_92054417,Barbisa 1920,https://barbisa-1920.eatbu.com,Via Lodovico Muratori 11 20135.0,Milano,45.4521021,9.2054417,,,,,+39 025516935,https://barbisa-1920.eatbu.com,,True,https://barbisa-1920.eatbu.com,ok,2026-05-30T22:25:39Z
+direct_website,bar_porta_romana_454512375_92042816,Bar Porta Romana,,,Milano,45.4512375,9.2042816,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_luce_454438095_92052904,Bar Luce,,,Milano,45.4438095,9.2052904,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,clarissa_bar_454558218_92109286,Clarissa bar,,,Milano,45.4558218,9.2109286,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,il_secco_454502902_91697096,Il Secco,https://www.ilsecco.com/it/,Via Angelo Fumagalli 2 20143.0,Milano,45.4502902,9.1697096,,,,,,https://www.ilsecco.com/it/,,True,https://www.ilsecco.com/it/,ok,2026-05-30T22:25:39Z
+direct_website,the_white_flag_454446317_92105485,The White Flag,https://www.thewhiteflag.it/,Via Brembo 7 20139.0,Milano,45.4446317,9.2105485,,,,,+39 340 176 7631,https://www.thewhiteflag.it/,Mo-Su 17:30-02:00,True,https://www.thewhiteflag.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_primavera_454446634_92112247,Bar Primavera,,,Milano,45.4446634,9.2112247,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_salvini_45471981_92034672,Bar Salvini,,,Milano,45.471981,9.2034672,,,,,,,Mo-Sa 06:30-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tropical_bar_454516424_91750226,Tropical Bar,,Ripa di Porta Ticinese 27 20143.0,Milano,45.4516424,9.1750226,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ideal_bar_454954972_91890881,Ideal Bar,,,Milano,45.4954972,9.1890881,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sbagliato_454888609_92100648,Bar Sbagliato,,Viale Brianza 33,Milano,45.4888609,9.2100648,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,giglio_bar_454883293_92100846,Giglio Bar,,Via Soperga 22,Milano,45.4883293,9.2100846,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_l_angolo_454891041_9210579,Bar L'Angolo,,,Milano,45.4891041,9.210579,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mai_dire_bar_454873755_92098072,Mai dire bar,https://mai-dire-bar.eatbu.com/,Via Giovanni Pierluigi da Palestrina 32,Milano,45.4873755,9.2098072,,,,,+39 02 8287 5469,https://mai-dire-bar.eatbu.com/,Mo-Fr 07:30-20:00 Sa 07:30 - 15:30 18:00 - 20:00,True,https://mai-dire-bar.eatbu.com/,ok,2026-05-30T22:25:39Z
+direct_website,the_english_football_pub_454620417_91853897,The English Football Pub,,Via Valpetrosa 5 20123.0,Milano,45.4620417,9.1853897,,,,,+39 02 864464,,"Mo-Fr 12:00-15:00,17:00-02:00; Sa 13:00-02:00; Su 15:00-00:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,la_rocchetta_454688345_91763077,La Rocchetta,https://www.larocchettacaffe.it/,Via Pietro Paleocapa 1 20121.0,Milano,45.4688345,9.1763077,,,,,+39 02 8056710,https://www.larocchettacaffe.it/,,True,https://www.larocchettacaffe.it/,ok,2026-05-30T22:25:39Z
+direct_website,cambusa_2_0_454585878_9149288,Cambusa 2.0,,Piazzale Tripoli 7 20146.0,Milano,45.4585878,9.149288,,,,,+39 02 48951361,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,snoopy_bar_455205189_92254582,Snoopy Bar,,Via privata Alfredo Soffredini 77,Milano,45.5205189,9.2254582,,,,,+39 02 27006433,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sweet_coffee_bar_454715009_91944372,Sweet Coffee Bar,,Via Alessandro Manzoni 42 20121.0,Milano,45.4715009,9.1944372,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_abruzzi_454796676_92173713,Bar Abruzzi,,,Milano,45.4796676,9.2173713,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_castello_454690339_91817914,Bar Castello,https://www.gelateriabarcastello.com/,Piazza Castello 2 20121.0,Milano,45.4690339,9.1817914,,,,,+39 02 864038,https://www.gelateriabarcastello.com/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucas_bar_455005226_92243735,Lucas Bar,,,Milano,45.5005226,9.2243735,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,99_bar_454816018_9179417,99 Bar,,Via Paolo Sarpi 11 20154.0,Milano,45.4816018,9.179417,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dru_bar_caffetteria_455007779_92224763,Dru Bar Caffetteria,,,Milano,45.5007779,9.2224763,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_1970_45491051_92129322,Bar 1970,,,Milano,45.491051,9.2129322,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_ch_ri_454653971_91893489,Bar Ch√®ri,,Via Silvio Pellico 6n01 20121.0,Milano,45.4653971,9.1893489,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,green_bar_454370641_9164605,Green bar,,Viale Famagosta 50 20142.0,Milano,45.4370641,9.164605,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cream_lounge_454765597_91708611,Cream Lounge,,Via Giuseppe Francesco Piermarini 2,Milano,45.4765597,9.1708611,,,,,+39 02 45470355,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_martini_454576339_92200564,Bar Tabacchi Martini,,,Milano,45.4576339,9.2200564,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_454559712_92192031,Bar Tabacchi,,Via Gaetano Strigelli,Milano,45.4559712,9.2192031,,,,,,,Mo-Sa 06:00-21:00; Su 07:00-19:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,il_bar_di_marco_454799023_92086168,il Bar di Marco,,,Milano,45.4799023,9.2086168,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tucano_45471528_92136005,Bar Tucano,,Via Gustavo Modena 7 20129.0,Milano,45.471528,9.2136005,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,milionaire_lounge_bar_454800297_91998458,Milionaire lounge bar,,,Milano,45.4800297,9.1998458,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,impronta_birraia_454706518_92460207,Impronta Birraia,https://www.improntabirraia.it,Via Tucidide 56 20134.0,Milano,45.4706518,9.2460207,,,,,+39 02 37072071,https://www.improntabirraia.it,"Mo-Fr 12:00-15:00,18:00-24:00; Sa 18:00-02:00; Su 12:00-24:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dell_angolo_454757638_92152363,Bar dell'Angolo,,,Milano,45.4757638,9.2152363,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tucano_454708953_9213608,Bar Tucano,,,Milano,45.4708953,9.213608,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ai_tre_morsi_454657555_91764585,Ai Tre Morsi,,Via Terraggio 1 20123.0,Milano,45.4657555,9.1764585,,,,,3902804758,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,green_bar_454994457_91508254,Green Bar,,,Milano,45.4994457,9.1508254,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,black_bull_454935031_91434607,Black Bull,,Viale Certosa 89,Milano,45.4935031,9.1434607,,,,,+39 02 33003073,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_le_betulle_455082116_92025574,Bar Le Betulle,,Via Salvatore Pianell 52,Milano,45.5082116,9.2025574,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giardinetto_454998362_92117228,Bar Giardinetto,,,Milano,45.4998362,9.2117228,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_augusto_45495421_91763226,Bar Augusto,,,Milano,45.495421,9.1763226,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_monica_454951389_91869008,Bar Monica,,,Milano,45.4951389,9.1869008,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,il_bar_milano_454649015_9191829,Il bar Milano,http://www.ilbarmilano.it/,,Milano,45.4649015,9.191829,,,,,+39 02 8852454,http://www.ilbarmilano.it/,,True,http://www.ilbarmilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,spago_bar_455023791_91537897,Spago Bar,,Via Raffaele Lambruschini 29 20156.0,Milano,45.5023791,9.1537897,,,,,+39 02 87396181,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,caf_etniko_454777017_91776717,Caf√© Etniko,,,Milano,45.4777017,9.1776717,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bim_bum_bar_454397875_9199735,Bim Bum Bar,,,Milano,45.4397875,9.199735,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,birrificio_artigianale_la_buttiga_454810185_9170259,Birrificio artigianale La Buttiga,,Via Paolo Sarpi 64 20154.0,Milano,45.4810185,9.170259,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ripamonti_130_454382422_92000786,Ripamonti 130,https://www.ripamonti130.com,,Milano,45.4382422,9.2000786,,,,,,https://www.ripamonti130.com,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ricos_bar_tabacchi_454915527_91477684,Ricos Bar Tabacchi,,,Milano,45.4915527,9.1477684,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,livraghi_bar_455162569_92241313,Livraghi Bar,,,Milano,45.5162569,9.2241313,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,n_ombra_de_vin_454734593_91879937,n'ombra de vin,https://www.nombradevin.it/,Via San Marco 2 20121.0,Milano,45.4734593,9.1879937,,,,,+39 02 6599650,https://www.nombradevin.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_ricos_454915144_91478175,Bar tabacchi ricos,,Via Grosotto 1 20149.0,Milano,45.4915144,9.1478175,,,,,390284191749,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_454431132_91971647,Bar Atlantic,,,Milano,45.4431132,9.1971647,,,,,,,Mo-Sa 07:30-20:00; Su 08:30-18:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nik_s_co_454903659_92037822,Nik's & Co,https://niksandco.it/,Via Giovanni Schiaparelli 14 20125.0,Milano,45.4903659,9.2037822,,,,,,https://niksandco.it/,Mo-Sa 07:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,niro_meet_bar_454649211_91780286,Niro Meet Bar,,Giardino Aristide Calderini 3 20143.0,Milano,45.4649211,9.1780286,,,,,+39 02 8909 2743,,Mo-Fr 07:00-22:00; Sa-Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_al_chiossetto_454629526_92011653,Bar al Chiossetto,,,Milano,45.4629526,9.2011653,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_conservatorio_454656822_92047708,Bar Conservatorio,,,Milano,45.4656822,9.2047708,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_debby_454571913_91637018,Bar Debby,,Via Valparaiso 7 20144.0,Milano,45.4571913,9.1637018,,,,,3902435042,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_il_cenacolo_454675185_91703071,Bar Il Cenacolo,,Via Giovanni Boccaccio 33 20123.0,Milano,45.4675185,9.1703071,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,l_alter_bar_454673026_91736899,L'Alter Bar,,Via Vincenzo Monti 15 20123.0,Milano,45.4673026,9.1736899,,,,,39024983916,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,shed_bar_454687869_91717602,Shed Bar,,Via Vincenzo Monti 27 20123.0,Milano,45.4687869,9.1717602,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cape_town_cafe_454527054_91756724,Cape Town Cafe,http://capetowncafe.it,Via Vigevano 3 20144.0,Milano,45.4527054,9.1756724,,,,,+39 02 89403053,http://capetowncafe.it,Mo-Su 18:00-02:00,True,http://capetowncafe.it,ok,2026-05-30T22:25:39Z
+direct_website,bar_lilla_454838562_91660949,Bar Lilla,,Via Poliziano 16 20154.0,Milano,45.4838562,9.1660949,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_simpatia_454874111_91678626,Bar Simpatia,,Via Cenisio 25 20154.0,Milano,45.4874111,9.1678626,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,milano_coffee_bar_454869125_91668643,Milano Coffee Bar,,,Milano,45.4869125,9.1668643,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_linea_84_454868874_91681684,Bar Linea 84,,,Milano,45.4868874,9.1681684,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mascagni_454424887_92196507,Bar Mascagni,,,Milano,45.4424887,9.2196507,,,,,+39 0236748025,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,baja_lounge_cafe_454613116_91416649,Baja Lounge Cafe,,,Milano,45.4613116,9.1416649,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dolly_bar_454378687_91930012,Dolly Bar,,,Milano,45.4378687,9.1930012,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mirabello_454751859_91903347,Bar Mirabello,,Piazza Carlo Mirabello 5 20121.0,Milano,45.4751859,9.1903347,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_flash_455206828_92248364,Bar Flash,,,Milano,45.5206828,9.2248364,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gran_bar_455199378_92232173,Gran bar,,,Milano,45.5199378,9.2232173,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_el_canton_454640587_91803646,Bar El Canton,,Via Morigi 15 20123.0,Milano,45.4640587,9.1803646,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ral8022_454523462_91734918,Ral8022,https://www.ralmilano.it/ral-cocktail-bar/,Via Corsico 3 20144.0,Milano,45.4523462,9.1734918,,,,,,https://www.ralmilano.it/ral-cocktail-bar/,,True,https://www.ralmilano.it/ral-cocktail-bar/,ok,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_nazionali_e_esteri_45498007_91954207,Bar Tabacchi Nazionali e Esteri,,Via Budua 20159.0,Milano,45.498007,9.1954207,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,hernry_s_caf__454520877_91819995,Hernry's Caf√®,,Viale Col di Lana 4 20136.0,Milano,45.4520877,9.1819995,,,,,+39 02 837 3335,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,family_bar_455174641_92450264,Family Bar,,Via Emilio Lussu 6 20128.0,Milano,45.5174641,9.2450264,,,,,390226309333,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nottingham_forest_454687208_92067074,Nottingham Forest,http://www.nottingham-forest.com,Viale Piave 1 20129.0,Milano,45.4687208,9.2067074,,,,,+39 02 798311,http://www.nottingham-forest.com,Mo off; Tu-Sa 18:30-02:00; Su 18:00-01:00,True,http://www.nottingham-forest.com,ok,2026-05-30T22:25:39Z
+direct_website,bar_tavola_fredda_454985265_9194473,Bar Tavola fredda,,,Milano,45.4985265,9.194473,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,birreria_okey_454984325_91935316,Birreria Okey,,Largo Vulci 5 20159.0,Milano,45.4984325,9.1935316,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_murat_454970685_91919679,Bar Murat,,,Milano,45.4970685,9.1919679,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_m40_454960269_91935343,Bar M40,,Viale Marche 40 20159.0,Milano,45.4960269,9.1935343,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dani_454840773_92411083,Bar Dani,,,Milano,45.4840773,9.2411083,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_santa_marta_4546236_91836315,Bar Santa Marta,,,Milano,45.46236,9.1836315,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,viky_bar_454642035_91829489,Viky Bar,,,Milano,45.4642035,9.1829489,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_454857972_91643009,Bar Atlantic,,,Milano,45.4857972,9.1643009,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sporting_pub_455111924_92006239,Sporting Pub,,,Milano,45.5111924,9.2006239,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gioia_454898936_92010685,Bar Gioia,,Viale Sondrio 2 20124.0,Milano,45.4898936,9.2010685,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_olimpico_454774549_92090803,Bar Olimpico,,Via Giovanni Omboni 3 20129.0,Milano,45.4774549,9.2090803,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bere_buona_birra_454480409_92052687,Bere Buona Birra,https://www.berebuonabirra.com/,,Milano,45.4480409,9.2052687,,,,,+39 02 8739 4371,https://www.berebuonabirra.com/,"We-Fr,Su,Mo 17:00-23:00; Sa 13:00-23:00; Tu off",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_biancamano_454782031_91804879,Bar Biancamano,,,Milano,45.4782031,9.1804879,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_pontevecchio_455088422_92466015,Bar Pontevecchio,,Via Padova 20132.0,Milano,45.5088422,9.2466015,,,,,+39 338 5489510,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arcobaleno_455076601_92449935,Bar Arcobaleno,,Via Padova 20132.0,Milano,45.5076601,9.2449935,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_atai_455054307_92429346,Bar Atai,,,Milano,45.5054307,9.2429346,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tigullio_454541728_91490289,Bar Tigullio,,Via Lorenteggio 22 20146.0,Milano,45.4541728,9.1490289,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_cristal_454828937_91692046,Bar Cristal,,Via Giulio Cesare Procaccini 44,Milano,45.4828937,9.1692046,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_ghirlandaio_454670636_91466554,Bar Tabacchi - Ghirlandaio,,Piazza Domenico Ghirlandaio 20146.0,Milano,45.4670636,9.1466554,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sforza_454611738_91966544,Bar Sforza,,Via Francesco Sforza 14 20122.0,Milano,45.4611738,9.1966544,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lido_bar_454941966_9219608,Lido Bar,,,Milano,45.4941966,9.219608,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_anny_454639364_91731119,Bar Anny,,Via Aristide De Togni 15 20123.0,Milano,45.4639364,9.1731119,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_oasi_455005387_91978097,Bar Oasi,,Viale Zara 132,Milano,45.5005387,9.1978097,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_gallery_bar_454522582_91602112,The Gallery Bar,https://thegallerybarmilano.com/,Via Enrico Stendhal 30 20144.0,Milano,45.4522582,9.1602112,,,,,+39 02 84345136,https://thegallerybarmilano.com/,Mo-Sa 18:00-01:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,monkey_cocktail_bar_454808111_92035409,Monkey Cocktail Bar,,Via Napo Torriani 5,Milano,45.4808111,9.2035409,,,,,+39 3202973647,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,chip_s_bar_454581458_91718835,Chip's bar,,Via Cesare da Sesto 15 20123.0,Milano,45.4581458,9.1718835,,,,,+390289409115;+390284230646,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,brew_pub_yankee_4545509_91553057,Brew Pub Yankee,,,Milano,45.45509,9.1553057,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_rond__454948096_92169499,Bar Rond√≤,,,Milano,45.4948096,9.2169499,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_pettirosso_454960037_92174511,Bar Tabacchi Pettirosso,,,Milano,45.4960037,9.2174511,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bianco_454420209_9226381,Bar Bianco,,,Milano,45.4420209,9.226381,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_rubin_454656614_91848654,Bar Rubin,,,Milano,45.4656614,9.1848654,,,,,,,Mo-Sa 07:00-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fortuna_454937454_92192164,Bar Fortuna,,,Milano,45.4937454,9.2192164,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,angolo_bar_454931776_92214024,Angolo Bar,,,Milano,45.4931776,9.2214024,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,derby_bar_454527389_91701916,Derby Bar,,Via Vigevano 45 20144.0,Milano,45.4527389,9.1701916,,,,,390258101887,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_articoli_454996019_91249552,Bar Articoli,,,Milano,45.4996019,9.1249552,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,barba_454809398_92017671,Barba,https://barbamilano.it/,Via San Gregorio 20124.0,Milano,45.4809398,9.2017671,,,,,+39 02 36515846,https://barbamilano.it/,,True,https://barbamilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_cinque_stelle_454718483_91841364,Bar Cinque Stelle,,Via Pontaccio 23 20121.0,Milano,45.4718483,9.1841364,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,kitsch_bar_454768004_91705397,Kitsch Bar,,,Milano,45.4768004,9.1705397,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,brewfist_pub_454463549_91777191,Brewfist pub,https://www.brewfistpub.it/,Via Ettore Troilo 14 20136.0,Milano,45.4463549,9.1777191,,,,,,https://www.brewfistpub.it/,"Tu-Th,Su 17:00-00:30, Fr,Sa 17:00-02:00; Mo off",True,https://www.brewfistpub.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_oratorio_san_carlo_45469884_92368999,Bar Oratorio San Carlo,,,Milano,45.469884,9.2368999,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucky_bar_455233304_9206935,Lucky Bar,,,Milano,45.5233304,9.206935,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,wave_cocktail_bar_454592132_91774385,Wave Cocktail Bar,http://www.wavecocktailbar.it/,Via Edmondo De Amicis 28 20123.0,Milano,45.4592132,9.1774385,,,,,393803714058,http://www.wavecocktailbar.it/,Su-Mo 18:00-00:00; Tu-Th 18:00-01:00; Fr-Sa 18:00-02:00,True,http://www.wavecocktailbar.it/,ok,2026-05-30T22:25:39Z
+direct_website,radio_rooftop_bar_454795681_91957242,Radio Rooftop Bar,,Via Marco Polo 18,Milano,45.4795681,9.1957242,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,happy_bar_454507045_92514516,Happy Bar,,Via Mecenate 99 20138.0,Milano,45.4507045,9.2514516,,,,,393277075535,,"Mo-Fr 06:00-20:00, Sa 06:00-19:30",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_zanoli_455157059_91714912,Bar Zanoli,,,Milano,45.5157059,9.1714912,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_de_l_oeuc_455158735_91724436,Bar de l'Oeuc,,Via Alessandro Astesani 2 20161.0,Milano,45.5158735,9.1724436,,,,,390266220526,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pav_birra_454791943_92028058,Pav√® - Birra,https://www.pavemilano.com/en/birra/,,Milano,45.4791943,9.2028058,,,,,,https://www.pavemilano.com/en/birra/,Mo-Su 17:30-01:30,True,https://www.pavemilano.com/en/birra/,ok,2026-05-30T22:25:39Z
+direct_website,bar_morbegno_454927263_92165422,Bar Morbegno,,,Milano,45.4927263,9.2165422,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tender_454927959_92162579,Bar Tender,,,Milano,45.4927959,9.2162579,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,wine_bar_lidia_454910867_92160058,Wine Bar Lidia,,,Milano,45.4910867,9.2160058,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giulia_454911018_9216671,Bar Giulia,,,Milano,45.4911018,9.216671,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_i_pupari_454924537_9218393,Bar I Pupari,,,Milano,45.4924537,9.218393,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,hug_milano_454943979_92163609,Hug Milano,https://hugmilano.com/,Via Giulio e Corrado Venini 83 20125.0,Milano,45.4943979,9.2163609,,,,,+39 389 8485296,https://hugmilano.com/,,True,https://hugmilano.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_cialdini_455152749_91692933,Bar Cialdini,,,Milano,45.5152749,9.1692933,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,roxy_bar_455135975_91701407,Roxy Bar,,,Milano,45.5135975,9.1701407,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_chopin_45425222_92045445,Bar Chopin,,,Milano,45.425222,9.2045445,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,barbruto_45450733_91932558,Barbruto,,,Milano,45.450733,9.1932558,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dammi_un_nome_bar_454505135_91939118,Dammi un nome Bar,,,Milano,45.4505135,9.1939118,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_luna_455089184_91998589,Bar Luna,,,Milano,45.5089184,9.1998589,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_da_giorgia_455007291_91988002,Bar da Giorgia,,,Milano,45.5007291,9.1988002,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sotto_torchio_454604871_91806047,Bar Sotto Torchio,,Via del Torchio 8 20123.0,Milano,45.4604871,9.1806047,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,juice_bar_454335148_92385531,Juice Bar,,,Milano,45.4335148,9.2385531,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lucio_454391649_92287624,Bar Lucio,,,Milano,45.4391649,9.2287624,,,,,,,Mo-Sa 08:00-16:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_kollo_45436771_92141126,Bar Kollo,,,Milano,45.436771,9.2141126,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,champions_bar_454807442_91439885,Champions Bar,,,Milano,45.4807442,9.1439885,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_cenisio_45487863_91654511,Bar tabacchi Cenisio,https://www.facebook.com/people/Bar-Tabacchi-Cenisio/100027689996195/,Via Cenisio 40 20154.0,Milano,45.487863,9.1654511,,,,,39023451163,https://www.facebook.com/people/Bar-Tabacchi-Cenisio/100027689996195/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,fuori_corso_spritz_bar_454606742_91938711,Fuori Corso Spritz Bar,,,Milano,45.4606742,9.1938711,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_felice_454783686_91754962,Bar Felice,,,Milano,45.4783686,9.1754962,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pandenus_454776948_92062302,Pandenus,https://www.pandenus.it/it/store/pandenus-via-tadino-15/,Via Alessandro Tadino 15 20124.0,Milano,45.4776948,9.2062302,,,,,+39 02 29528016,https://www.pandenus.it/it/store/pandenus-via-tadino-15/,"Mo 07:30-14:00; Tu,We 07:30-22:00; Th,Fr 07:30-23:00; Sa 08:00-23:00; Su 08:00-22:00",True,https://www.pandenus.it/it/store/pandenus-via-tadino-15/,ok,2026-05-30T22:25:39Z
+direct_website,bar_stellina_454683081_91757769,Bar Stellina,,Piazzale Luigi Cadorna 16 20123.0,Milano,45.4683081,9.1757769,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arici_455037049_92397658,Bar Arici,,Via Padova 205 20127.0,Milano,45.5037049,9.2397658,,,,,+39 02 27207031,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_addis_abeba_45476966_92044808,Bar Addis Abeba,,,Milano,45.476966,9.2044808,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,stranobar_45453058_92124913,Stranobar,,,Milano,45.453058,9.2124913,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_all_angolo_454820463_9220953,Bar All'Angolo,,Viale Gran Sasso 27 20131.0,Milano,45.4820463,9.220953,,,,,+39 02 4548 8808,,"Tu-Th 07:30-21:00; Fr,Sa 07:30-22:00; Su 08:00-21:00; Mo off",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gioia_454467083_91982487,Bar Gioia,,,Milano,45.4467083,9.1982487,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,rufus_bar_454678764_91643102,Rufus Bar,,,Milano,45.4678764,9.1643102,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ittolittos_454405374_91460934,Ittolittos,https://www.ittolittos.it/,,Milano,45.4405374,9.1460934,,,,,+39 02 8138061,https://www.ittolittos.it/,Mo-Su 18:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_degli_amici_454368018_92125303,Bar degli Amici,,,Milano,45.4368018,9.2125303,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,golden_bar_454852757_92358578,Golden Bar,,Piazza Enrico Bottini 5 20133.0,Milano,45.4852757,9.2358578,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_italia_454473755_92109148,Bar Italia,,,Milano,45.4473755,9.2109148,,,,,,,Mo-Sa 06:30-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_il_liceo_454799826_91751558,Bar Il Liceo,,,Milano,45.4799826,9.1751558,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,euro_jolly_454540456_91710753,Euro Jolly,https://jollybiliardi.it/,Corso Cristoforo Colombo 13 20145.0,Milano,45.4540456,9.1710753,,,,,+39 02 58105075,https://jollybiliardi.it/,Mo-Th 10:00-03:00; Fr-Sa 10:00-04:00; Su 14:00-02:00,True,https://jollybiliardi.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_454369781_91673842,Bar Atlantic,,,Milano,45.4369781,9.1673842,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_messina_454816704_91757016,Bar Messina,,,Milano,45.4816704,9.1757016,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_capricci_45489983_92334858,Bar Capricci,,,Milano,45.489983,9.2334858,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arcobaleno_454902434_92341872,Bar Arcobaleno,,,Milano,45.4902434,9.2341872,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_san_barnaba_4545957_91984159,Bar San Barnaba,,,Milano,45.45957,9.1984159,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tavola_fredda_bar_455061242_92643339,Tavola Fredda Bar,,,Milano,45.5061242,9.2643339,,,,,,,"Mo-Su,PH 12:00-14:00,18:00-20:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_emgma_455272658_92090962,Bar Emgma,,Viale Giovanni Suzzani 283 20162.0,Milano,45.5272658,9.2090962,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gerry_454619743_92031044,Bar Gerry,,Corso di Porta Vittoria 32 20122.0,Milano,45.4619743,9.2031044,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_vittoria_45461615_92024848,Bar Vittoria,,,Milano,45.461615,9.2024848,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,moments_bar_454661524_91389593,Moments Bar,,,Milano,45.4661524,9.1389593,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_derby_454664684_91394502,Bar Derby,,,Milano,45.4664684,9.1394502,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bob_milano_454892502_9189215,Bob Milano,https://www.bobmilano.it/,,Milano,45.4892502,9.189215,,,,,,https://www.bobmilano.it/,,True,https://www.bobmilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,alibi_music_spirits_455062384_92246976,Alibi Music & Spirits,,Via Aristotele 14 20128.0,Milano,45.5062384,9.2246976,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gusto_454623136_92235532,Bar Gusto,,,Milano,45.4623136,9.2235532,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,caf_gorille_454856032_91916064,Caf√® Gorille,https://www.cafegorille.it/,Via Gaetano De Castillia 20 20124.0,Milano,45.4856032,9.1916064,,,,,+39 02 6887627,https://www.cafegorille.it/,,True,https://www.cafegorille.it/,ok,2026-05-30T22:25:39Z
+direct_website,morgante_cocktail_soul_454522005_91749661,Morgante cocktail & soul,https://www.morgantecocktail.com/,Vicolo Lavandai 2a 20144.0,Milano,45.4522005,9.1749661,,,,,390235940879,https://www.morgantecocktail.com/,Mo-Th 19:00-01:00; Fr-Sa 19:00-02:00; Su off,True,https://www.morgantecocktail.com/,ok,2026-05-30T22:25:39Z
+direct_website,brooklyn_pub_454784141_9154891,Brooklyn Pub,,,Milano,45.4784141,9.154891,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lisa_45433287_9201303,Bar Lisa,,,Milano,45.433287,9.201303,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dell_angolo_454508312_91990256,Bar dell'angolo,,,Milano,45.4508312,9.1990256,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,web_bar_454909772_92186132,Web Bar,,,Milano,45.4909772,9.2186132,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,octopus_454440109_91521662,Octopus,,Via Giacomo Watt 18 20143.0,Milano,45.4440109,9.1521662,,,,,+39 02 8912 6068,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sui_generis_454763158_92040763,Sui Generis,https://suigeneris.bar/,Via Panfilo Castaldi 31 20124.0,Milano,45.4763158,9.2040763,,,,,+39 02 49767551,https://suigeneris.bar/,Mo-Su 17:00-02:00,True,https://suigeneris.bar/,ok,2026-05-30T22:25:39Z
+direct_website,lucky_bar_454890164_91873667,Lucky bar,,Via Luigi Porro Lambertenghi,Milano,45.4890164,9.1873667,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,2026_04_03_00_00_00_454889694_91873664,2026-04-03 00:00:00,,Via Antonio Pollaiuolo,Milano,45.4889694,9.1873664,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,barrique_enoteca_e_degustazione_454897386_91888848,Barrique Enoteca e Degustazione,,,Milano,45.4897386,9.1888848,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,coa_cocktail_bar_454760797_92033751,Coa cocktail bar,,Via Lecco 3 20124.0,Milano,45.4760797,9.2033751,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_torrefezione_454725859_9142876,Bar Torrefezione,,Via Daniele Ricciarelli 8 20148.0,Milano,45.4725859,9.142876,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,stoica_bar_454624311_9187147,Stoica Bar,https://www.stoicabar.it/,Via dell'Unione 1 20122.0,Milano,45.4624311,9.187147,,,,,,https://www.stoicabar.it/,,True,https://www.stoicabar.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_milano_454615491_91878211,Bar Milano,,,Milano,45.4615491,9.1878211,,,,,,,Mo-Sa 07:00-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,colibr__454615176_91958152,Colibr√¨,https://www.colibrimilano.it/,Via Laghetto 2026-11-09 00:00:00 20122.0,Milano,45.4615176,9.1958152,,,,,393494016961,https://www.colibrimilano.it/,Mo 09:00-22:00; Tu-Fr 09:00-24:00; Sa 16:00-24:00; Su off,True,https://www.colibrimilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,pop_454763444_92050817,PoP,http://www.pop-milano.it,Via Alessandro Tadino 5 20124.0,Milano,45.4763444,9.2050817,,,,,+39 02 82873274,http://www.pop-milano.it,We-Su 18:00+,True,http://www.pop-milano.it,ok,2026-05-30T22:25:39Z
+direct_website,ricky_bar_454822675_91754428,Ricky Bar,,,Milano,45.4822675,9.1754428,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_terzo_tempo_454581169_91544724,Bar Terzo Tempo,,Via Giorgio Washington 82 20146.0,Milano,45.4581169,9.1544724,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dei_grimani_454564412_9155249,Bar dei Grimani,,Via dei Grimani 1 20144.0,Milano,45.4564412,9.155249,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_pegasus_454562018_91598972,Bar Pegasus,,Via Cola di Rienzo 10 20144.0,Milano,45.4562018,9.1598972,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_arcobaleno_454467675_91652551,Bar Arcobaleno,,,Milano,45.4467675,9.1652551,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_cosmo_454633778_916385,Bar Cosmo,https://bar-cosmo.business.site/,Viale San Michele del Carso 20 20144.0,Milano,45.4633778,9.16385,,,,,39024989640,https://bar-cosmo.business.site/,Mo-Fr 06:45-20:15; Sa 06:45-18:00; Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ugo_454517532_91735891,UGO,https://www.ugobar.it/,Via Corsico 12,Milano,45.4517532,9.1735891,,,,,,https://www.ugobar.it/,,True,https://www.ugobar.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_van_gogh_454673538_91429893,Bar Van Gogh,,,Milano,45.4673538,9.1429893,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,franci_s_bar_454652439_9164432,Franci's Bar,https://www.facebook.com/FrancisbarMilano/,Viale San Michele del Carso 6 20144.0,Milano,45.4652439,9.164432,,,,,39024890512,https://www.facebook.com/FrancisbarMilano/,Mo-Sa 07:00-20:00; Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mr_tea_bar_454567564_916803,Mr. Tea Bar,,Via Andrea Solari 3 20144.0,Milano,45.4567564,9.16803,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_dell_universit__454623694_91932946,Bar dell'Universit√†,,,Milano,45.4623694,9.1932946,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_calipso_454706161_91514558,Bar Calipso,,,Milano,45.4706161,9.1514558,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_ravizza_454689721_91502675,Bar Tabacchi Ravizza,https://www.facebook.com/people/Bar-tabacchi-Ravizza/100063953506209/,Via Carlo Ravizza 21 20149.0,Milano,45.4689721,9.1502675,,,,,39024817909,https://www.facebook.com/people/Bar-tabacchi-Ravizza/100063953506209/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sara_455054896_91756246,bar sara,,,Milano,45.5054896,9.1756246,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,rebelot_45498934_91814861,rebelot,,,Milano,45.498934,9.1814861,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sun_garden_bar_455038656_91764007,Sun Garden Bar,,,Milano,45.5038656,9.1764007,,,,,,,Mo-Su 06:30-21:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_felice_455046779_91758646,Bar Felice,,,Milano,45.5046779,9.1758646,,,,,,,Mo-Su 06:00-22:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,klondike_bar_454890635_92134657,Klondike Bar,,,Milano,45.4890635,9.2134657,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,skandalo_lounge_bar_454891406_92135274,Skandalo Lounge Bar,,Via Giulio e Corrado Venini 31,Milano,45.4891406,9.2135274,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabaccheria_da_sario_454491641_92185753,Bar Tabaccheria Da Sario,,Via Tertulliano 35 20137.0,Milano,45.4491641,9.2185753,,,,,+39 02 6206 8053,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,camperio_lounge_bar_454665945_91830736,Camperio Lounge Bar,,,Milano,45.4665945,9.1830736,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_magic_games_454861813_91292021,Bar Magic Games,,Via Carlo Osma 5 20151.0,Milano,45.4861813,9.1292021,,,,,39023087535,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,beeb_bar_454520863_9153596,Beeb Bar,,Piazza Napoli 31 20146.0,Milano,45.4520863,9.153596,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,art_cafe_4545592_916546,Art Cafe,https://art-cafe-bar-milano.eatbu.com/?lang=it#,Via Andrea Solari 19 20144.0,Milano,45.45592,9.16546,,,,,393348673956,https://art-cafe-bar-milano.eatbu.com/?lang=it#,Mo-Sa 09:00-18:00; Su off,True,https://art-cafe-bar-milano.eatbu.com/?lang=it#,ok,2026-05-30T22:25:39Z
+direct_website,sant_ambrogio_caf__454645075_91754709,Sant'Ambrogio Caf√®,http://www.barsantambrogio.it/,Via Terraggio 25 20123.0,Milano,45.4645075,9.1754709,,,,,390272010424,http://www.barsantambrogio.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,kubik_454571064_92051219,Kubik,,Viale Monte Nero 39 20135.0,Milano,45.4571064,9.2051219,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_famoso_45468576_91144907,Bar Famoso,,Via Pio II 3 20153.0,Milano,45.468576,9.1144907,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nuovo_bar_centrale_by_cova_454859279_92043257,Nuovo Bar Centrale by Cova,,Piazza Duca d'Aosta 1 20124.0,Milano,45.4859279,9.2043257,,,,,,,Mo-Su 05:00-22:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,city_bar_45481661_91464668,City Bar,,,Milano,45.481661,9.1464668,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_oscar_454861509_92421445,Bar Oscar,,Via Rombon 40 20132.0,Milano,45.4861509,9.2421445,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sangiorgio_454759917_91666076,Bar Sangiorgio,,,Milano,45.4759917,9.1666076,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_money_45472198_91497928,Bar Money,,,Milano,45.472198,9.1497928,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,caffetteria_2000_454956869_91471326,Caffetteria 2000,,,Milano,45.4956869,9.1471326,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,monterosa_bar_454740563_9150179,Monterosa Bar,,,Milano,45.4740563,9.150179,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,caffetteria_etros_lounge_bar_454502754_92121623,Caffetteria Etros Lounge bar,,Viale Umbria 27,Milano,45.4502754,9.2121623,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,terrazza_duomo_21_454649047_9189589,Terrazza Duomo 21,https://terrazzaduomo21.it,Piazza del Duomo 21 20121.0,Milano,45.4649047,9.189589,,,,,+39 02 4776 2548,https://terrazzaduomo21.it,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_454904599_92217552,bar,,,Milano,45.4904599,9.2217552,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_damiano_chiesa_454836533_9155846,Bar Tabacchi Damiano Chiesa,,,Milano,45.4836533,9.155846,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cartoon_s_pub_454847912_91571958,Cartoon's Pub,,,Milano,45.4847912,9.1571958,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gran_bar_454256061_91551443,Gran Bar,,Via Cascina Bianca 24 20142.0,Milano,45.4256061,9.1551443,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,simpaty_bar_454678286_9145481,Simpaty Bar,,,Milano,45.4678286,9.145481,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_solerico_454841476_92368902,Bar Solerico,,,Milano,45.4841476,9.2368902,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bottini_45484115_92367268,Bar Bottini,,,Milano,45.484115,9.2367268,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_la_perla_bianca_454783693_92042763,bar la perla bianca,,Via Felice Casati 15,Milano,45.4783693,9.2042763,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,juice_bar_454855232_92051408,Juice Bar,,,Milano,45.4855232,9.2051408,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_ros_454711281_91562621,Bar Ros,,Via Tiziano 5,Milano,45.4711281,9.1562621,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,winelivery_bar_navigli_454520536_91704266,Winelivery Bar Navigli,https://www.winelivery.com/it,Via Casale 3a 20144.0,Milano,45.4520536,9.1704266,,,,,+39 02 3858 3592,https://www.winelivery.com/it,,True,https://www.winelivery.com/it,ok,2026-05-30T22:25:39Z
+direct_website,crazy_patrick_äôs_454584656_92460886,Crazy Patrick‚Äôs,,,Milano,45.4584656,9.2460886,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,christian_äôs_bar_454569933_92428955,Christian‚Äôs Bar,,,Milano,45.4569933,9.2428955,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,suenos_de_cocktail_454888376_92200721,Suenos de Cocktail,,,Milano,45.4888376,9.2200721,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,peter_bar_455100433_92490345,Peter bar,,Via Padova 306 20132.0,Milano,45.5100433,9.2490345,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pick_n_roll_sport_pub_454963756_91408983,Pick 'N Roll Sport Pub,,Via Pier Francesco Mola 39 20156.0,Milano,45.4963756,9.1408983,,,,,390236571399,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,queen_s_bar_455073154_92366727,Queen's bar,,Via Asiago 116 20128.0,Milano,45.5073154,9.2366727,,,,,+39 02 27208056,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_caff_ottolina_455056286_92374539,Bar Caff√© Ottolina,,Via Ponte Nuovo 20128.0,Milano,45.5056286,9.2374539,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tri_malnatt_455079601_92458057,Tri Malnatt,,Via Padova 276 20132.0,Milano,45.5079601,9.2458057,,,,,+39 02 43419602,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_luca_455040137_92431414,Bar Luca,,Via Angelo Emo 20132.0,Milano,45.5040137,9.2431414,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mora_45504492_92388644,Bar Mora,,Via Cesare Arici 20127.0,Milano,45.504492,9.2388644,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_caraibi_455041958_92404236,Bar Caraibi,,Via Padova 20127.0,Milano,45.5041958,9.2404236,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_living_45505806_92425737,Bar Living,,Via Melchiorre Cesarotti 2 20127.0,Milano,45.505806,9.2425737,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,nuovo_bar_45505985_92427907,Nuovo bar,,Via Padova 20127.0,Milano,45.505985,9.2427907,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_palmanova_455038995_92456541,Bar Palmanova,,Via Palmanova 20132.0,Milano,45.5038995,9.2456541,,,,,+39 02 27202313,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bellini_455030616_92411352,Bar Bellini,,Via San Giovanni Battista de la Salle 20132.0,Milano,45.5030616,9.2411352,,,,,+39 02 26308296,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_celentano_455010486_92408377,Bar Celentano,,Via Madre Anna Eugenia Picco 20132.0,Milano,45.5010486,9.2408377,,,,,+39 327 8547066,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,luca_s_bar_455023244_92401658,Luca's Bar,,Via Padre Placido Riccardi 20132.0,Milano,45.5023244,9.2401658,,,,,+39 339 8863189,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_saro_455033725_92415363,Bar Saro,,Via privata Mondov√¨ 20132.0,Milano,45.5033725,9.2415363,,,,,+39 351 5102393,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_verde_455027802_92385593,Bar Verde,,Via Padova 2 20127.0,Milano,45.5027802,9.2385593,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,triple_craft_beer_milano_birreria_artigianale_454867669_91645321,Triple Craft Beer Milano - Birreria Artigianale,,Via Losanna 29 20154.0,Milano,45.4867669,9.1645321,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giulia_455015397_92369255,Bar Giulia,,Via Padova 173 20127.0,Milano,45.5015397,9.2369255,,,,,,,Mo-Su 06:00-20:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_manu_454865243_92237745,Bar Manu,,Viale Lombardia 20131.0,Milano,45.4865243,9.2237745,,,,,+39 02 26829615,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_banana_mama_454550719_91483541,Bar Banana Mama,,Via Raffaello Bertieri 2 20146.0,Milano,45.4550719,9.1483541,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,jessica_bar_454987837_92207527,Jessica Bar,,,Milano,45.4987837,9.2207527,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sandy_bar_454637052_92076607,Sandy Bar,,,Milano,45.4637052,9.2076607,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giada_454901383_92181333,Bar Giada,,,Milano,45.4901383,9.2181333,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,fantastico_bar_454928967_92159408,Fantastico Bar,,,Milano,45.4928967,9.2159408,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,queen_bar_454855057_91582937,Queen Bar,,,Milano,45.4855057,9.1582937,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,triv_time_marghera_454665471_9151518,Triv√® Time Marghera,https://trivetime.it/,Via Marghera 47 20149.0,Milano,45.4665471,9.151518,,,,,,https://trivetime.it/,"Su-Th 08:00-24:00, Fr-Sa 08:00-02:00",True,https://trivetime.it/,ok,2026-05-30T22:25:39Z
+direct_website,miao_miao_bar_455055549_92333159,Miao Miao Bar,,Via privata Iglesias 20128.0,Milano,45.5055549,9.2333159,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,babila_bistro_454641289_92033678,Babila Bistro,https://www.babilahostel.it,Via Conservatorio 2a 20122.0,Milano,45.4641289,9.2033678,,,,,,https://www.babilahostel.it,,True,https://www.babilahostel.it,ok,2026-05-30T22:25:39Z
+direct_website,bar_la_sosta_70_454912479_92444753,Bar La Sosta 70,,Via Feltre 70 20134.0,Milano,45.4912479,9.2444753,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,vapore_1928_454851363_9174442,Vapore 1928,https://www.vapore1928.com/,Via Messina 26 20154.0,Milano,45.4851363,9.174442,,,,,+39 02 33100772,https://www.vapore1928.com/,,True,https://www.vapore1928.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_mondo_455069436_92298428,Bar Mondo,,,Milano,45.5069436,9.2298428,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_derna_454994575_92361647,Bar Derna,,Via Benadir 13 20132.0,Milano,45.4994575,9.2361647,,,,,+39 02 45391980,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bestia_45483053_9230167,Bestia,,,Milano,45.483053,9.230167,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pretty_pub_454985086_9235129,Pretty Pub,,20132.0,Milano,45.4985086,9.235129,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fortuna_454980686_92349337,Bar Fortuna,,Largo Tel Aviv 20132.0,Milano,45.4980686,9.2349337,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucky_bar_454974835_92349251,Lucky bar,,Via Bruno Cesana 20132.0,Milano,45.4974835,9.2349251,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,starbucks_454857164_92057912,Starbucks,https://www.starbucks.co.uk/store-locator/59234-293480/starbucks-centrale,Piazza Luigi di Savoia 1 20125.0,Milano,45.4857164,9.2057912,,,,,+39 02 66712764,https://www.starbucks.co.uk/store-locator/59234-293480/starbucks-centrale,,True,https://www.starbucks.co.uk/store-locator/59234-293480/starbucks-centrale,ok,2026-05-30T22:25:39Z
+direct_website,pretty_bar_454983036_92318623,Pretty bar,,Via privata Scipione Piattoli 20127.0,Milano,45.4983036,9.2318623,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,metro_bar_amendola_454733937_91517893,Metro Bar Amendola,,Piazza Giovanni Amendola 4 20149.0,Milano,45.4733937,9.1517893,,,,,,,Mo-Sa 07:00-21:00; Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,swami_caf__454535306_92037025,Swami Caf√©,,,Milano,45.4535306,9.2037025,,,,,,,"Mo-Fr 07:00-14:30,18:00-02:00, Sa,Su 18:00-02:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bodio_454975294_91688194,Bar Bodio,,Viale Luigi Bodio 20158.0,Milano,45.4975294,9.1688194,,,,,+39 02 39310790,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pub_the_drouthy_duck_454373057_91520344,Pub The Drouthy Duck,,Viale Faenza 18 20142.0,Milano,45.4373057,9.1520344,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fortuna_454444299_91548498,Bar Fortuna,,Via Giacomo Watt 1 20143.0,Milano,45.4444299,9.1548498,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,10gradinord_454439583_91543603,10gradinord,https://www.10gradinord.com/,Via Giacomo Watt 5 20143.0,Milano,45.4439583,9.1543603,,,,,+39 3519088121,https://www.10gradinord.com/,Tu-Su 18:00-24:00,True,https://www.10gradinord.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_rotatoria_454910806_92234199,Bar Rotatoria,,,Milano,45.4910806,9.2234199,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,christian_bar_454921684_92248402,Christian Bar,,,Milano,45.4921684,9.2248402,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,merlino_e_mag__454485442_91731,Merlino e Mag√≤,,Via Emilio Gola 31 20143.0,Milano,45.4485442,9.1731,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_paradiso_454523507_92089029,bar paradiso,,,Milano,45.4523507,9.2089029,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,golden_bar_455034496_91766658,Golden Bar,,,Milano,45.5034496,9.1766658,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_del_muretto_454741002_92240712,Bar del Muretto,,,Milano,45.4741002,9.2240712,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,spiller_454560565_91648287,Spiller,https://www.spillerbirrerie.it/it/,Via Andrea Solari 6 20144.0,Milano,45.4560565,9.1648287,,,,,390209960506,https://www.spillerbirrerie.it/it/,,True,https://www.spillerbirrerie.it/it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_45444472_91630461,Bar Atlantic,,,Milano,45.444472,9.1630461,,,,,,,Mo-Sa 07:30-20:30; Su 08:00-20:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,rock_bar_454973703_911394,Rock Bar,,,Milano,45.4973703,9.11394,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,billy_bar_454978737_91129203,Billy Bar,,,Milano,45.4978737,9.1129203,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,biscottino_officina_dei_sapori_454425634_91724303,Biscottino Officina dei Sapori,https://biscottino-officina-dei-sapori.menu-world.com/,Via Spezia 2 20142.0,Milano,45.4425634,9.1724303,,,,,,https://biscottino-officina-dei-sapori.menu-world.com/,,True,https://biscottino-officina-dei-sapori.menu-world.com/,ok,2026-05-30T22:25:39Z
+direct_website,pulp_454560121_92110845,Pulp,,Via Cadore 48,Milano,45.4560121,9.2110845,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,let_äôs_feel_good_454620378_9148954,Let‚Äôs Feel Good,https://www.letsfeelgood.it/,,Milano,45.4620378,9.148954,,,,,,https://www.letsfeelgood.it/,,True,https://www.letsfeelgood.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_amici_455091549_92234422,Bar Amici,,Viale Monza 20126.0,Milano,45.5091549,9.2234422,,,,,,,Mo-Su 06:00-24:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_peter_pan_45467478_9166424,Bar Peter Pan,,Piazza della Conciliazione 20123.0,Milano,45.467478,9.166424,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,carico_454561022_91701578,Carico,https://www.carico.io/,Via Savona 1 20144.0,Milano,45.4561022,9.1701578,,,,,,https://www.carico.io/,Mo 19:00-02:00; Tu off; We-Sa 19:00-02:00; Su 18:00-01:00,True,https://www.carico.io/,ok,2026-05-30T22:25:39Z
+direct_website,green_bar_45474081_91092615,Green Bar,,,Milano,45.474081,9.1092615,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,terzo_tempo_454423769_91453878,Terzo Tempo,,Via San Giuseppe Cottolengo,Milano,45.4423769,9.1453878,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_simpaty_454539082_91547824,Bar Simpaty,,Piazza Napoli 9 20146.0,Milano,45.4539082,9.1547824,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,frau_454471707_91273921,Frau,https://barlorenfrau.eatbu.com/,,Milano,45.4471707,9.1273921,,,,,,https://barlorenfrau.eatbu.com/,,True,https://barlorenfrau.eatbu.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_giggia_454477459_91302037,Bar Giggia,,Via Lorenteggio 183 20147.0,Milano,45.4477459,9.1302037,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mae_bar_454498679_91367653,Mae Bar,,Via Lorenteggio 163 20146.0,Milano,45.4498679,9.1367653,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_miani_454378989_91546378,Bar Miani,,Piazza Guglielmo Miani 2 20143.0,Milano,45.4378989,9.1546378,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,capitano_454491737_91775863,Capitano,,,Milano,45.4491737,9.1775863,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,diapa5on_454494327_91776456,Diapa5on,,,Milano,45.4494327,9.1776456,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,alambique_454506128_91779208,Alambique,,,Milano,45.4506128,9.1779208,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cob__454484211_91773978,Cob√†,https://cobamilano.it/,,Milano,45.4484211,9.1773978,,,,,,https://cobamilano.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_rodari_454618996_92348617,Bar Rodari,,Largo Gianni Rodari 2 20133.0,Milano,45.4618996,9.2348617,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,arena_piola_454799325_92210772,Arena Piola,,Via Filippino Lippi 7,Milano,45.4799325,9.2210772,,,,,+39 02 2701 6731,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_d_este_45452185_91944058,Bar d'Este,,,Milano,45.452185,9.1944058,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,square_bar_454674101_9154967,Square Bar,,Via Michelangelo Buonarroti 5 20149.0,Milano,45.4674101,9.154967,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,j_blend_45453522_92248601,J. Blend,,,Milano,45.453522,9.2248601,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,happy_bar_454560629_92236552,Happy Bar,,,Milano,45.4560629,9.2236552,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_art_45455013_92236622,Bar Art,,,Milano,45.455013,9.2236622,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_alba_45461751_92073457,Bar Alba,,,Milano,45.461751,9.2073457,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pib_ñ_454627811_92116365,PIB√Ñ,,,Milano,45.4627811,9.2116365,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,birrificio_di_ringhiera_454257998_92517736,Birrificio di Ringhiera,https://birrificiodiringhiera.com/,Via Rogoredo 20138.0,Milano,45.4257998,9.2517736,,,,,+39 02 80898575,https://birrificiodiringhiera.com/,,True,https://birrificiodiringhiera.com/,ok,2026-05-30T22:25:39Z
+direct_website,golden_bar_45426457_92510581,Golden Bar,,Via Rogoredo 20138.0,Milano,45.426457,9.2510581,,,,,+39 02 514381,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_argento_454906015_92040248,Bar argento,,,Milano,45.4906015,9.2040248,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_elena_454577066_91708412,Bar Elena,,Viale Papiniano 47 20123.0,Milano,45.4577066,9.1708412,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ooops_454406747_92131987,Ooops,,Piazza Geremia Bonomelli 9,Milano,45.4406747,9.2131987,,,,,,,Mo-Su 08:30-01:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_degli_amici_454446957_91549788,Bar degli Amici,,Via Giacomo Watt 2 20143.0,Milano,45.4446957,9.1549788,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,andy_bar_caf__454945809_92357,Andy Bar Caf√®,,Via Carnia 31 20132.0,Milano,45.4945809,9.2357,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_biella_45438313_9155012,Bar Biella,,Via Biella 26 20143.0,Milano,45.438313,9.155012,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,atmosphere_454753421_92145439,Atmosphere,,,Milano,45.4753421,9.2145439,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_luce_454577257_91683216,Bar Tabacchi Luce,,Viale Coni Zugna 44 20144.0,Milano,45.4577257,9.1683216,,,,,,,Mo-Sa 07:00-20:00; Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,terrazza_martini_454618633_91899962,Terrazza Martini,https://www.martini.com/terrazza-martini/,Piazza Armando Diaz 7 20123.0,Milano,45.4618633,9.1899962,,,,,,https://www.martini.com/terrazza-martini/,,True,https://www.martini.com/terrazza-martini/,ok,2026-05-30T22:25:39Z
+direct_website,cin_cin_bar_454811852_91742377,cin cin bar,,Via Paolo Sarpi 39,Milano,45.4811852,9.1742377,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bobino_454536005_91698498,Bobino,https://bobino.it/,Piazzale Stazione Genova 4 20144.0,Milano,45.4536005,9.1698498,,,,,393714085303,https://bobino.it/,Mo off; Tu-Su 18:00-03:00,True,https://bobino.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_il_moro_454443428_91406298,Bar Tabacchi Il Moro,,Via Lodovico il Moro 93 20143.0,Milano,45.4443428,9.1406298,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_new_deal_454637589_92047137,Bar New Deal,,,Milano,45.4637589,9.2047137,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,brother_s_bar_454443419_91666297,Brother's Bar,,Viale Cassala 61 20143.0,Milano,45.4443419,9.1666297,,,,,+39 02 89420937,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tibaldi_454452075_91865424,Bar Tibaldi,,,Milano,45.4452075,9.1865424,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,mathilda_cafe_45488006_9170636,Mathilda Cafe,https://mathildacafe.eatbu.com,Via Cenisio 10 20154.0,Milano,45.488006,9.170636,,,,,+39 02 3310 5683,https://mathildacafe.eatbu.com,,True,https://mathildacafe.eatbu.com,ok,2026-05-30T22:25:39Z
+direct_website,sicilian_454702646_91865609,Sicilian,https://www.sicilianbrera.com,Via del Carmine 7 20121.0,Milano,45.4702646,9.1865609,,,,,+39 02 7200449,https://www.sicilianbrera.com,Tu-Th 10:30-18:30; Fr-Sa 11:00-21:00; Su 11:00-18:30; Mo off,True,https://www.sicilianbrera.com,ok,2026-05-30T22:25:39Z
+direct_website,ugo_cocktail_bar_454519214_91735202,Ugo Cocktail Bar,https://www.ugobar.it/,Via Corsico 12 20144.0,Milano,45.4519214,9.1735202,,,,,+39 02 39811557,https://www.ugobar.it/,,True,https://www.ugobar.it/,ok,2026-05-30T22:25:39Z
+direct_website,starbucks_454625343_91870272,Starbucks,https://www.starbucks.co.uk/store-locator/69306-304368/milano-via-torino-21,Via Torino 21 20123.0,Milano,45.4625343,9.1870272,,,,,,https://www.starbucks.co.uk/store-locator/69306-304368/milano-via-torino-21,Mo-Su 07:30-20:00,True,https://www.starbucks.co.uk/store-locator/69306-304368/milano-via-torino-21,ok,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_molino_delle_armi_454566899_91834244,Bar Tabacchi Molino delle Armi,,Via Santa Croce 2 20131.0,Milano,45.4566899,9.1834244,,,,,393338571815,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_coff_mokarabia_454898502_92053955,Bar Coff√© Mokarabia,,Via Ponte Seveso 36 20125.0,Milano,45.4898502,9.2053955,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ci_birretta_45454885_9173003,Ci√†... Birretta,,Viale Gorizia 1 20144.0,Milano,45.454885,9.173003,,,,,,,Mo-Su 17:00-01:30,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sally_bar_454560493_91868039,Sally bar,,Via Molino delle Armi 3 20123.0,Milano,45.4560493,9.1868039,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,unplug_454505401_92043575,Unplug,,,Milano,45.4505401,9.2043575,,,,,,,Mo-Su 18:00-01:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bones_pub_454510526_91916567,Bones Pub,,,Milano,45.4510526,9.1916567,,,,,+39 02 45397940,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,explosion_caf_pub_bar_454570019_91725606,Explosion caf√® pub & bar,,Via Fabio Mangone 3 20123.0,Milano,45.4570019,9.1725606,,,,,390258112089,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_al_57_454567934_91724045,Bar al 57,,Viale Papiniano 57 20123.0,Milano,45.4567934,9.1724045,,,,,390258114908,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,enoteca_naturale_454533988_91819841,Enoteca naturale,https://enotecanaturale.it/,Via Santa Croce 19 20122.0,Milano,45.4533988,9.1819841,,,,,+39 335 8020382,https://enotecanaturale.it/,Mo-Fr 17:30-23:00; Sa-Su 12:30-23:00,True,https://enotecanaturale.it/,ok,2026-05-30T22:25:39Z
+direct_website,scott_joplin_455160674_91886642,Scott Joplin,http://scottjoplin.it/,Via Val di Ledro 11 20162.0,Milano,45.5160674,9.1886642,,,,,+39 339 3769284,http://scottjoplin.it/,,True,http://scottjoplin.it/,ok,2026-05-30T22:25:39Z
+direct_website,selfie_bar_454388629_92269303,Selfie Bar,,,Milano,45.4388629,9.2269303,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,garden_bar_454395428_92255777,Garden Bar,,,Milano,45.4395428,9.2255777,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_g_tecle_455093185_91986246,Bar G. Tecle,,,Milano,45.5093185,9.1986246,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_laura_454916551_92185526,Bar Laura,,,Milano,45.4916551,9.2185526,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_nievo_4549397_91446337,Bar Nievo,,,Milano,45.49397,9.1446337,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_italia_455058396_91791077,Bar Italia,,,Milano,45.5058396,9.1791077,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,tommy_s_bar_454784584_91924105,Tommy's Bar,,,Milano,45.4784584,9.1924105,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,i_beerbanti_454537331_9157693,I Beerbanti,,Via Andrea Solari 52 20144.0,Milano,45.4537331,9.157693,,,,,390242297612,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,sun_strac_455252851_9190482,Sun Strac,https://sunstrac.it/,Via Luigi Ornato 20162.0,Milano,45.5252851,9.190482,,,,,,https://sunstrac.it/,,True,https://sunstrac.it/,ok,2026-05-30T22:25:39Z
+direct_website,frankie_s_454556077_91807627,Frankie's,https://frankiesitalia.it/,Corso di Porta Ticinese 89 20123.0,Milano,45.4556077,9.1807627,,,,,390291943289,https://frankiesitalia.it/,,True,https://frankiesitalia.it/,ok,2026-05-30T22:25:39Z
+direct_website,the_dome_454634964_91883863,The Dome,https://www.thedomemilano.com/,Via Giuseppe Mazzini 2 20123.0,Milano,45.4634964,9.1883863,,,,,,https://www.thedomemilano.com/,,True,https://www.thedomemilano.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_snoopy_454496905_91377745,Bar Snoopy,,Via dei Tulipani 16 20146.0,Milano,45.4496905,9.1377745,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sporting_454675304_9085028,Bar Sporting,,Via Quinto Romano 70,Milano,45.4675304,9.085028,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,vertigo_osteria_contemporanea_e_bar_454813325_91885154,Vertigo Osteria contemporanea e bar,,,Milano,45.4813325,9.1885154,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_30_e_lode_454807451_92250841,Bar 30 E Lode,,Piazzale Gabrio Piola 20131.0,Milano,45.4807451,9.2250841,,,,,393389964167,,Mo-Sa 06:00-21:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_alessandro_455010687_91899184,Bar Alessandro,,,Milano,45.5010687,9.1899184,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pub24_454882628_91891046,Pub24,,,Milano,45.4882628,9.1891046,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_queen_45469583_9224132,Bar Queen,,,Milano,45.469583,9.224132,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_del_104_455036515_91644809,Bar del 104,,Via Giuseppe Candiani 104 20158.0,Milano,45.5036515,9.1644809,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_meeting_45497015_91815943,Bar Tabacchi Meeting,,Viale Edoardo Jenner 23 20159.0,Milano,45.497015,9.1815943,,,,,+39 02 608 0058,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_taita_454729189_92351923,Bar Taita,https://bartaita.eatbu.com/,Largo Oreste Murani 2 20133.0,Milano,45.4729189,9.2351923,,,,,+39 338 692 3799,https://bartaita.eatbu.com/,Mo-Fr 06:00-19:30; Sa 06:00-14:30,True,https://bartaita.eatbu.com/,ok,2026-05-30T22:25:39Z
+direct_website,headbangers_454505975_92199534,Headbangers,https://headbangerspub.com,Via Tito Livio 33a,Milano,45.4505975,9.2199534,,,,,,https://headbangerspub.com,Mo 20:00-01:00; Tu off; We-Th 20:00-02:00; Fr-Su 20:00-04:00; Su 20:00-01:00,True,https://headbangerspub.com,ok,2026-05-30T22:25:39Z
+direct_website,una_cosa_454546263_91789354,Una cosa,https://www.unacosabistrot.it/,Via Scaldasole 7 20123.0,Milano,45.4546263,9.1789354,,,,,,https://www.unacosabistrot.it/,"Mo off; Tu-Fr 08:30-15:00,18:00-00:00; Sa 08:30-00:00; Su 10:00-00:00",True,https://www.unacosabistrot.it/,ok,2026-05-30T22:25:39Z
+direct_website,simon_s_bar_455080146_91949266,Simon's Bar,,,Milano,45.5080146,9.1949266,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_sesto_454668629_9145756,Bar Sesto,,,Milano,45.4668629,9.145756,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,love_bar_454728292_92097254,Love Bar,,,Milano,45.4728292,9.2097254,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,castle_rock_caf__455145719_91156161,Castle Rock Caf√®,,Via privata Venezia Giulia 16 20157.0,Milano,45.5145719,9.1156161,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ligera_454982575_923255,Ligera,https://www.ligeramilano.it/,,Milano,45.4982575,9.23255,,,,,,https://www.ligeramilano.it/,,True,https://www.ligeramilano.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_cuore_454589261_91805832,Bar Cuore,,,Milano,45.4589261,9.1805832,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,food_bar_454644201_92071111,Food & bar,,,Milano,45.4644201,9.2071111,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_mauro_454727362_92241462,Bar Mauro,,,Milano,45.4727362,9.2241462,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_azzurra_454911061_92055596,Bar Azzurra,,,Milano,45.4911061,9.2055596,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,blu_bar_454551029_91367998,Blu Bar,,,Milano,45.4551029,9.1367998,,,,,+39 02 415 8385,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pangu_cocktail_enoteca_musica_454895357_91892595,PANGU cocktail enoteca& musica,,Via Pietro Borsieri 32 20159.0,Milano,45.4895357,9.1892595,,,,,,,24/7 17:30-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,vogue_bar_45456966_91836339,Vogue bar,,Via Fernanda Wittgens 12 20131.0,Milano,45.456966,9.1836339,,,,,390258313037,,Mo-We 07:00-20:00; Th-Fr 07:00-02:00; Sa 21:00-03:00; Su off,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bierfabrik_454802582_92125233,Bierfabrik,http://www.bierfabrik.it/,,Milano,45.4802582,9.2125233,,,,,,http://www.bierfabrik.it/,"Mo-Th 17:30-01:00; Fr, Sa 17:30-02:00; Su 17:30-00:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_crisa_454593214_9146577,Bar Crisa,,Viale Caterina da Forl√¨ 7 20146.0,Milano,45.4593214,9.146577,,,,,+39 02 4895 8509,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_fratelli_455021464_9210805,Bar Fratelli,,,Milano,45.5021464,9.210805,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_cinzia_4548594_91537203,Bar Cinzia,,,Milano,45.48594,9.1537203,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,all_beer_454735826_91262369,All Beer,,Via Alfonso Capecelatro 75 20148.0,Milano,45.4735826,9.1262369,,,,,,,Mo-Sa 17:00-02:00; Su 17:00-00:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bootleg_pub_454639121_91604671,Bootleg Pub,,Via Coluccio Salutati 2 20144.0,Milano,45.4639121,9.1604671,,,,,+39 02 99247780,,Mo-Su 18:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_abreu_454638382_90870602,Bar Abreu,,,Milano,45.4638382,9.0870602,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,backi_bar_caffetteria_454879052_91625547,Backi Bar Caffetteria,,,Milano,45.4879052,9.1625547,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,orange_spritz_bar_454756322_92046415,Orange Spritz Bar,,,Milano,45.4756322,9.2046415,,,,,,,Tu-Sa 18:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,teddy_bar_45476994_92047593,Teddy bar,,,Milano,45.476994,9.2047593,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,larga_8_454424407_91790624,Larga 8,https://www.larga8.com/,Via Giuseppe Meda 29 20141.0,Milano,45.4424407,9.1790624,,,,,,https://www.larga8.com/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucy_bar_454405086_91787361,Lucy Bar,,Via Giuseppe Meda 43 20141.0,Milano,45.4405086,9.1787361,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,41_wine_bar_454881445_91909717,41 Wine Bar,,Via Volturno 41 20124.0,Milano,45.4881445,9.1909717,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lambrate_454824417_92367215,Bar Lambrate,,,Milano,45.4824417,9.2367215,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_piceno_454651823_92175976,Bar Piceno,,,Milano,45.4651823,9.2175976,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_family_455161327_91553239,Bar Family,,,Milano,45.5161327,9.1553239,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dolcevita_bistrot_454904079_91880093,Dolcevita Bistrot,https://dolcevitabistrot.it/,Via Alserio 28 20159.0,Milano,45.4904079,9.1880093,,,,,+39 02 39525210,https://dolcevitabistrot.it/,Tu-Su 07:00-23:00; Mo 07:00-18:00,True,https://dolcevitabistrot.it/,ok,2026-05-30T22:25:39Z
+direct_website,isola_bar_45489217_91872077,Isola Bar,,,Milano,45.489217,9.1872077,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,baltic_bar_454645122_91812353,Baltic bar,,,Milano,45.4645122,9.1812353,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,villa_occupata_455225712_9157401,Villa Occupata,https://puntello.org/place/Villa%20Vegan%20Occupata,Via Alessandro Litta Modignani 66 20161.0,Milano,45.5225712,9.157401,,,,,,https://puntello.org/place/Villa%20Vegan%20Occupata,Tu 14:00-19:00; We 21:00-00:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lido_liquor_bar_454565347_91732402,Lido Liquor Bar,https://lidoliquorbar.it/,Piazzale Antonio Cantore 4n06 20123.0,Milano,45.4565347,9.1732402,,,,,,https://lidoliquorbar.it/,Mo-Th 17:00-01:00; Fr-Sa 17:00-03:00; Su 17:00-00:00,True,https://lidoliquorbar.it/,ok,2026-05-30T22:25:39Z
+direct_website,noma29_45483612_91642225,Noma29,https://www.noma29.it,Via Piero della Francesca 29 20154.0,Milano,45.483612,9.1642225,,,,,+39 02 49457316,https://www.noma29.it,"Mo off; Tu-Fr 12:00-15:00, 19:00-24:00; Sa 19:00-24:00; Su off;",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,saloon_of_the_artists_454819652_91772746,Saloon of the Artists,,Via Giovanni Battista Niccolini 24,Milano,45.4819652,9.1772746,,,,,+39 02 33600311,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,peter_bar_454902453_92350475,Peter Bar,,,Milano,45.4902453,9.2350475,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_giada_454959978_92379034,Bar Giada,,,Milano,45.4959978,9.2379034,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pizza_and_food_454952099_92375734,Pizza And Food,https://www.pizzaandfoodmilano.it/menu,Via Monfalcone 32,Milano,45.4952099,9.2375734,,,,,390228900440,https://www.pizzaandfoodmilano.it/,,True,https://www.pizzaandfoodmilano.it/menu,ok,2026-05-30T22:25:39Z
+direct_website,la_conca_social_bar_454561559_91768937,La Conca social bar,https://www.laconca.eu/,Via Galeazzo Alessi 1 20123.0,Milano,45.4561559,9.1768937,,,,,,https://www.laconca.eu/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_ghost_pub_454984974_91863419,The Ghost Pub,https://ghostpub.it/,Piazzale Carlo Maciachini 10 20159.0,Milano,45.4984974,9.1863419,,,,,+39 02 6887874,https://ghostpub.it/,"Mo-Th 12:00-15:00,18:00-25:30; 12:00-15:00,18:00-26:00; Sa 19:00-26:00; Su 19:00-25:00",True,https://ghostpub.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_capriccio_454409727_92129653,Bar Capriccio,,,Milano,45.4409727,9.2129653,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dea_bar_caff__45465778_9150126,Dea Bar Caff√®,,,Milano,45.465778,9.150126,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_friends_45514112_91762165,Bar Friends,,Via Chianciano 10,Milano,45.514112,9.1762165,,,,,,,"Mo-Su 09:00-13:00, 15:00-19:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_coffiamo_454542524_91985845,Bar Coffiamo,,,Milano,45.4542524,9.1985845,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_bollicine_455019119_921041,Bar Bollicine,,,Milano,45.5019119,9.21041,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,funky_454515584_91745153,Funky,https://funky.eatbu.com/,Ripa di Porta Ticinese 33 20143.0,Milano,45.4515584,9.1745153,,,,,,https://funky.eatbu.com/,,True,https://funky.eatbu.com/,ok,2026-05-30T22:25:39Z
+direct_website,bar_arca_454410993_91690891,Bar Arca,https://www.arcamilano.eu/,Via Rimini 38 20142.0,Milano,45.4410993,9.1690891,,,,,,https://www.arcamilano.eu/,"Mo-Fr 08:00-15:00, Sa 18:00-24:00, Su 16:00-24:00",True,https://www.arcamilano.eu/,ok,2026-05-30T22:25:39Z
+direct_website,bar_del_corso_454602829_91890194,Bar del Corso,,Corso di Porta Romana 1 20122.0,Milano,45.4602829,9.1890194,,,,,+39 02 86451245,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,glitter_bar_454632019_91343339,Glitter Bar,,Via delle Forze Armate 32 20147.0,Milano,45.4632019,9.1343339,,,,,390240076621,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,armadi_silos_caff__454516572_91646428,Armadi Silos Caff√®,https://www.armanisilos.com/plan-your-visit/cafe/,,Milano,45.4516572,9.1646428,,,,,,https://www.armanisilos.com/plan-your-visit/cafe/,"We, Fr, Su 11:00-19:00; Th, Sa 12:00-20:00;Mo,Tu ogf",True,https://www.armanisilos.com/plan-your-visit/cafe/,ok,2026-05-30T22:25:39Z
+direct_website,piano_zero_455135756_92031693,Piano Zero,https://www.piano-zero.com/,Viale Giovanni Suzzani 96/98 20126.0,Milano,45.5135756,9.2031693,,,,,,https://www.piano-zero.com/,,True,https://www.piano-zero.com/,ok,2026-05-30T22:25:39Z
+direct_website,was_coffee_lab_454856503_92043405,Was coffee lab,https://www.milanocentrale.it/bar-e-ristoranti/was-coffee-lab,Piazza Duca d'Aosta 1 20124.0,Milano,45.4856503,9.2043405,,,,,,https://www.milanocentrale.it/bar-e-ristoranti/was-coffee-lab,Mo-Su 11:00-22:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,8_malpighi_454745918_92076341,8 Malpighi,https://malpighi8.it/,Via Marcello Malpighi 8,Milano,45.4745918,9.2076341,,,,,+39 338 437 2574,https://malpighi8.it/,"Fr 00:00-03:00,07:00-17:00,18:00-24:00; Sa 00:00-01:00,07:00-24:00; Su 00:00-03:00,09:00-24:00; Mo 00:00-01:00,07:00-24:00; Tu-Th 00:00-03:00,07:00-24:00",True,https://malpighi8.it/,ok,2026-05-30T22:25:39Z
+direct_website,equo_caff__454856882_91922173,Equo caff√®,https://www.cafegorille.it/,Via Gaetano De Castillia 24 20124.0,Milano,45.4856882,9.1922173,,,,,+39 02 6887627,https://www.cafegorille.it/,,True,https://www.cafegorille.it/,ok,2026-05-30T22:25:39Z
+direct_website,sandi_bar_454609792_92079462,Sandi bar,,,Milano,45.4609792,9.2079462,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,camparino_in_galleria_454649201_91898776,Camparino in Galleria,https://www.camparino.com/,Galleria Vittorio Emanuele Secondo 1n02 20121.0,Milano,45.4649201,9.1898776,,,,,+39 02 86464435,https://www.camparino.com/,,True,https://www.camparino.com/,ok,2026-05-30T22:25:39Z
+direct_website,steven_s_bar_454194922_9178775,Steven's Bar,,Via Nicola Romeo 3 20142.0,Milano,45.4194922,9.178775,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_internazionale_2_454607934_91327525,Bar Internazionale 2,,Viale Legioni Romane 24 20147.0,Milano,45.4607934,9.1327525,,,,,+39 02 4009 8328,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,black_bar_454609995_91327531,Black Bar,,Via Ludovico Cavaleri 1 20147.0,Milano,45.4609995,9.1327531,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_vittorio_454739732_91605436,Bar Vittorio,,,Milano,45.4739732,9.1605436,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bibo_s_bar_454667019_92069112,Bibo's Bar,,,Milano,45.4667019,9.2069112,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_california_454585358_9160918,Bar California,,Via California 9 20144.0,Milano,45.4585358,9.160918,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucky_bar_454990403_91969723,Lucky Bar,,,Milano,45.4990403,9.1969723,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_orsini_454617415_91356567,Bar Tabacchi Orsini,,Piazzale Giovanni delle Bande Nere 9 20146.0,Milano,45.4617415,9.1356567,,,,,+39 02 5251 6181,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,first_caf_bar_tabacchi_454916788_91896505,First Caf√® Bar Tabacchi,,,Milano,45.4916788,9.1896505,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_graniteria_dal_siciliano_454884202_91913211,Bar Graniteria Dal Siciliano,,,Milano,45.4884202,9.1913211,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_menabrea_454968594_91857005,Bar Menabrea,,,Milano,45.4968594,9.1857005,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_farenheit_455013553_91888326,Bar Farenheit,,,Milano,45.5013553,9.1888326,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cups_ceramica_bar_454813328_91766659,Cups Ceramica & Bar,,,Milano,45.4813328,9.1766659,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_al_78_454575861_921616,Bar Al 78,,,Milano,45.4575861,9.21616,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_murillo_454752508_91431891,Bar Murillo,,,Milano,45.4752508,9.1431891,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lounge_bar_45462171_91873952,Lounge Bar,,,Milano,45.462171,9.1873952,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lounge_bar_454621709_91873951,Lounge Bar,,,Milano,45.4621709,9.1873951,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_murat_45499596_91909184,Bar Murat,,,Milano,45.499596,9.1909184,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_barber_cocktail_bar_454764462_9205173,The Barber cocktail bar,,Via Alessandro Tadino 5,Milano,45.4764462,9.205173,,,,,,,Th-Su 18:00-03:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bicchierino_bar_454506254_91490715,Bicchierino bar,,Via Giambellino 39 20146.0,Milano,45.4506254,9.1490715,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_al_brivido_45463136_91292632,Bar Al Brivido,,Via delle Forze Armate 70 20147.0,Milano,45.463136,9.1292632,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_gulli_454654722_91308649,Bar tabacchi Gulli,,Via Tommaso Gulli 54 20147.0,Milano,45.4654722,9.1308649,,,,,390248750443,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,smokeone_454809209_91854295,SmokeONE,https://somi.bar/,Viale Francesco Crispi 4 20121.0,Milano,45.4809209,9.1854295,,,,,,https://somi.bar/,,True,https://somi.bar/,ok,2026-05-30T22:25:39Z
+direct_website,da_boris_il_bar_di_trenno_454925849_91011668,Da Boris il bar di Trenno,,Via Fratelli Rizzardi 12 20151.0,Milano,45.4925849,9.1011668,,,,,390236561038,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,dream_s_bar_454510148_91492637,Dream's Bar,,Via Giambellino 34 20146.0,Milano,45.4510148,9.1492637,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_157_454504295_91385206,Bar 157,,Via Lorenteggio 155 20146.0,Milano,45.4504295,9.1385206,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ada_cocktail_to_go_454514067_91738907,ADA Cocktail to go,,,Milano,45.4514067,9.1738907,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,legends_bar_45449348_9164425,Legends Bar,,Via Elia Lombardini 1 20143.0,Milano,45.449348,9.164425,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,ciko_s_bar_454450384_91634967,Ciko's Bar,,Via Carlo Torre 45 20143.0,Milano,45.4450384,9.1634967,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,gran_bar_454337478_91835828,Gran Bar,,,Milano,45.4337478,9.1835828,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_caffetteria_mini_market_454422591_91335594,Bar Caffetteria Mini Market,,Via Lodovico il Moro 135 20142.0,Milano,45.4422591,9.1335594,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,quadrifoglio_454451415_91284707,Quadrifoglio,,,Milano,45.4451415,9.1284707,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_daniel_s_454960246_9202655,Bar Daniel's,,,Milano,45.4960246,9.202655,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_ospedale_fatebenefratelli_454791729_91917435,Bar Ospedale Fatebenefratelli,,,Milano,45.4791729,9.1917435,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,wave_cocktail_bar_454593337_91772421,Wave Cocktail Bar,http://wavecocktailbar.it/,Via Edmondo De Amicis 28 20123.0,Milano,45.4593337,9.1772421,,,,,393803714058,http://wavecocktailbar.it/,,True,http://wavecocktailbar.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_degli_amici_454368022_91583342,Bar degli amici,,Viale Famagosta 20 20142.0,Milano,45.4368022,9.1583342,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_gelateria_455029216_9188557,Bar Gelateria,,,Milano,45.5029216,9.188557,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,the_walrus_pub_454529821_91721249,The Walrus Pub,https://thewalruspub.it/,Via Vigevano 33 20144.0,Milano,45.4529821,9.1721249,,,,,,https://thewalruspub.it/,,True,https://thewalruspub.it/,ok,2026-05-30T22:25:39Z
+direct_website,bar_chicken_ravioli_454871129_92031838,Bar Chicken Ravioli,,Piazza Quattro Novembre 2,Milano,45.4871129,9.2031838,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,jack_the_brewer_454550129_91616612,Jack the brewer,,Via Andrea Solari 26 20144.0,Milano,45.4550129,9.1616612,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_la_darsena_454526661_91761039,Bar tabacchi la darsena,,Via Vigevano 1 20144.0,Milano,45.4526661,9.1761039,,,,,39028321293,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_da_selina_454517426_91543595,Bar Da Selina,,Viale Carlo Troya 8 20144.0,Milano,45.4517426,9.1543595,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,roxy_bar_454521456_91541234,Roxy Bar,,Viale Carlo Troya 2 20144.0,Milano,45.4521456,9.1541234,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,birra_di_quartiere_454508085_91483606,Birra di Quartiere,,Via Giambellino 42 20146.0,Milano,45.4508085,9.1483606,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,il_beerla_45451244_91865812,Il Beerla,,,Milano,45.451244,9.1865812,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,miliardario_bar_454839664_92160739,Miliardario bar,,,Milano,45.4839664,9.2160739,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_luna_454708764_92127028,Bar luna,,,Milano,45.4708764,9.2127028,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,starking_bar_454482211_91373344,Starking Bar,,Largo dei Gelsomini 2 20146.0,Milano,45.4482211,9.1373344,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_chez_yvonne_454510189_92004148,Bar Chez Yvonne,,,Milano,45.4510189,9.2004148,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_il_girasole_454374459_92201914,Bar il girasole,,,Milano,45.4374459,9.2201914,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_why_45437431_92232614,Bar tabacchi why,,,Milano,45.437431,9.2232614,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_washington_454586936_91508911,Bar Washington,,Via Roncaglia 35 20146.0,Milano,45.4586936,9.1508911,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,offside_sports_pub_454871547_91658013,Offside Sports Pub,https://www.offsidesportspub.it/,Via Losanna 46 20154.0,Milano,45.4871547,9.1658013,,,,,,https://www.offsidesportspub.it/,18:00-02:00,True,https://www.offsidesportspub.it/,ok,2026-05-30T22:25:39Z
+direct_website,attimi_bar_gelateria_454688791_91563263,Attimi Bar & Gelateria,https://www.cooperativaisemprevivi.it/,Piazza Riccardo Wagner 2 20145.0,Milano,45.4688791,9.1563263,,,,,393292183263,https://www.cooperativaisemprevivi.it/,"Mo-Fr 08:00-21:00; Sa 09:00-13:00, 15:00-21:00; Su 09:00-21:00",False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_cosenz_54_455071079_91615376,Bar Tabacchi Cosenz 54,,Via Enrico Cosenz 54 20158.0,Milano,45.5071079,9.1615376,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_la_creta_454549594_91221563,Bar La Creta,https://barlacreta.it/,Via del Passero 20147.0,Milano,45.4549594,9.1221563,,,,,,https://barlacreta.it/,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,pinta_e_basta_454497502_92024211,Pinta e Basta,,,Milano,45.4497502,9.2024211,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_peter_pan_454492714_92040905,Bar Peter Pan,,,Milano,45.4492714,9.2040905,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_atlantic_455183652_92036892,Bar Atlantic,,Viale Giovanni Suzzani 221 20162.0,Milano,45.5183652,9.2036892,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_999_454442481_91789933,Bar 999,,Via Giuseppe Meda 18 20136.0,Milano,45.4442481,9.1789933,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,max_bar_454511254_92128328,Max Bar,,,Milano,45.4511254,9.2128328,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_aspass_454489546_92059759,Bar Aspass,,,Milano,45.4489546,9.2059759,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_young_454699113_92149673,Bar Young,,,Milano,45.4699113,9.2149673,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,myst_454839246_92345802,Myst,https://www.mystmilano.it/menu,,Milano,45.4839246,9.2345802,,,,,,https://www.mystmilano.it/,"Fr,Sa 17:00-01:00, Mo-Th 17:00-01:00; Su off",True,https://www.mystmilano.it/menu,ok,2026-05-30T22:25:39Z
+direct_website,bar_britannia_454858846_9218653,Bar Britannia,,,Milano,45.4858846,9.218653,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_oasi_454433199_91794081,Bar Oasi,,,Milano,45.4433199,9.1794081,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,church81_454286006_91712448,Church81,https://www.church81.it/,Via della Chiesa Rossa 81 20142.0,Milano,45.4286006,9.1712448,,,,,,https://www.church81.it/,,True,https://www.church81.it/,ok,2026-05-30T22:25:39Z
+direct_website,city_bar_454401667_92221431,City Bar,,,Milano,45.4401667,9.2221431,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,astare_454443149_92142946,AStare,,,Milano,45.4443149,9.2142946,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_tabacchi_454993625_9236238,bar tabacchi,,,Milano,45.4993625,9.236238,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_firenze_454737171_92168903,Bar Firenze,,,Milano,45.4737171,9.2168903,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,meet_bar_454742522_92109295,Meet Bar,,,Milano,45.4742522,9.2109295,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,magutt_454743441_92096768,Magutt,,,Milano,45.4743441,9.2096768,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,3d_bar_455200289_91689594,3D Bar,,,Milano,45.5200289,9.1689594,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,b42_urban_bistrot_lounge_454443948_91823948,B42 Urban Bistrot Lounge,,,Milano,45.4443948,9.1823948,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_plaza_454405481_92238394,Bar Plaza,,,Milano,45.4405481,9.2238394,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_cascina_gobba_455112535_92604137,Bar Cascina Gobba,,,Milano,45.5112535,9.2604137,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,fox_bar_454476584_92090889,Fox Bar,,,Milano,45.4476584,9.2090889,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,kape_bar_454877298_92301203,Kape Bar,,,Milano,45.4877298,9.2301203,,,,,,,Mo-Fr 07:00-23:00; Sa 08:00-23:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_italico_455131593_92143951,Bar Italico,,,Milano,45.5131593,9.2143951,,,,,,,Mo-Fr 06:30-19:00; Sa 07:00-15:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,happy_bar_454803735_916861,Happy Bar,,,Milano,45.4803735,9.16861,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_del_dipartimento_di_fisica_45476523_92310229,Bar del Dipartimento di Fisica,,Via Giovanni Celoria 16,Milano,45.476523,9.2310229,,,,,,,Mo-Fr 08:00-17:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_piccolo_454719747_91824413,Bar Piccolo,,,Milano,45.4719747,9.1824413,,,,,,,10:00-22:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cacciamani_454523777_92432249,Cacciamani,,,Milano,45.4523777,9.2432249,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,cheers_pub_454886807_92254331,Cheers Pub,,,Milano,45.4886807,9.2254331,,,,,,,Mo-Su 18:00-02:00,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,lucky_bar_454842777_92159575,Lucky Bar,,,Milano,45.4842777,9.2159575,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_stop_45485009_92107979,Bar Stop,,,Milano,45.485009,9.2107979,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z
+direct_website,bar_lucy_s_tabaccheria_454626607_92077748,Bar Lucy's Tabaccheria,,,Milano,45.4626607,9.2077748,,,,,,,,False,,no_menu,2026-05-30T22:25:39Z

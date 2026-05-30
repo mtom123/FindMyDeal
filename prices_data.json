@@ -2,7 +2,7 @@
   "spritz": {
     "code": "spritz",
     "label": "Spritz",
-    "count": 30,
+    "count": 34,
     "venues": [
       {
         "venue_name": "BAR PICCHIO",
@@ -22,6 +22,44 @@
           }
         ],
         "min_price": 3.5
+      },
+      {
+        "venue_name": "Sicilian",
+        "address": "Via del Carmine 7 20121.0",
+        "lat": 45.4702646,
+        "lng": 9.1865609,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Spritz",
+            "section": "",
+            "price": 4.0
+          }
+        ],
+        "min_price": 4.0
+      },
+      {
+        "venue_name": "Headbangers",
+        "address": "Via Tito Livio 33a",
+        "lat": 45.4505975,
+        "lng": 9.2199534,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Spritz",
+            "section": "",
+            "price": 4.0
+          }
+        ],
+        "min_price": 4.0
       },
       {
         "venue_name": "EMPORIUM SMOKE & COFFEE",
@@ -357,6 +395,30 @@
         "min_price": 8.0
       },
       {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Aperol spritz: Aperol, prosecco, soda",
+            "section": "",
+            "price": 8.0
+          },
+          {
+            "name": "Ugo Spritz: Vodka e tonica al limone",
+            "section": "",
+            "price": 10.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
         "venue_name": "Chinese Box",
         "address": "Corso Garibaldi, 104, Milan, Metropolitan City of Milan, Italy",
         "lat": 45.47854,
@@ -566,6 +628,25 @@
         "min_price": 12.0
       },
       {
+        "venue_name": "Morgante cocktail & soul",
+        "address": "Vicolo Lavandai 2a",
+        "lat": 45.4522005,
+        "lng": 9.1749661,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Spritz",
+            "section": "",
+            "price": 14.0
+          }
+        ],
+        "min_price": 14.0
+      },
+      {
         "venue_name": "Terrazza Duomo 21",
         "address": "Piazza Duomo, Milano, MI, Italia",
         "lat": 45.4636991,
@@ -589,7 +670,7 @@
   "negroni": {
     "code": "negroni",
     "label": "Negroni",
-    "count": 30,
+    "count": 31,
     "venues": [
       {
         "venue_name": "BAR PICCHIO",
@@ -1115,6 +1196,25 @@
         "min_price": 10.0
       },
       {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Negroni: Campari, martini rosso, gin",
+            "section": "",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
         "venue_name": "Banco Cocktailbar e Bistrot",
         "address": "Alzaia Naviglio Grande, 46, Milan, Metropolitan City of Milan, Italy",
         "lat": 45.4517923,
@@ -1176,7 +1276,7 @@
   "americano": {
     "code": "americano",
     "label": "Americano",
-    "count": 31,
+    "count": 33,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -1220,6 +1320,25 @@
           }
         ],
         "min_price": 1.2
+      },
+      {
+        "venue_name": "Funky",
+        "address": "Ripa di Porta Ticinese 33",
+        "lat": 45.4515584,
+        "lng": 9.1745153,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Caffè Americano",
+            "section": "CAFFETTERIA / COFFEE & CO.",
+            "price": 2.5
+          }
+        ],
+        "min_price": 2.5
       },
       {
         "venue_name": "Hotel Ibis Milano Fiera",
@@ -1721,6 +1840,25 @@
         "min_price": 10.0
       },
       {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Americano: Vodka e tonica",
+            "section": "",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
         "venue_name": "Classico Trattoria & Cocktail",
         "address": "Via Alessio di Tocqueville, 9, Milano, MI, Italia",
         "lat": 45.4826666,
@@ -1782,7 +1920,7 @@
   "gin_tonic": {
     "code": "gin_tonic",
     "label": "Gin Tonic",
-    "count": 3,
+    "count": 4,
     "venues": [
       {
         "venue_name": "CARPE DIEM CAFE' listino validita dalle ore 17",
@@ -1840,6 +1978,30 @@
           }
         ],
         "min_price": 8.0
+      },
+      {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Gin tonic: Gin e tonica",
+            "section": "",
+            "price": 10.0
+          },
+          {
+            "name": "Gin tonic premium: gin e tonica al limone",
+            "section": "",
+            "price": 12.0
+          }
+        ],
+        "min_price": 10.0
       }
     ]
   },
@@ -1872,7 +2034,7 @@
   "moscow_mule": {
     "code": "moscow_mule",
     "label": "Moscow Mule",
-    "count": 2,
+    "count": 3,
     "venues": [
       {
         "venue_name": "EMPORIUM SMOKE & COFFEE",
@@ -1911,13 +2073,32 @@
           }
         ],
         "min_price": 7.5
+      },
+      {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Moscow Mule: Rum e coca cola",
+            "section": "",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
       }
     ]
   },
   "margarita": {
     "code": "margarita",
     "label": "Margarita",
-    "count": 4,
+    "count": 5,
     "venues": [
       {
         "venue_name": "Rhop",
@@ -1994,13 +2175,32 @@
           }
         ],
         "min_price": 10.0
+      },
+      {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Margarita: Vodka e tonica al limone",
+            "section": "",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
       }
     ]
   },
   "daiquiri": {
     "code": "daiquiri",
     "label": "Daiquiri",
-    "count": 3,
+    "count": 4,
     "venues": [
       {
         "venue_name": "Rhop",
@@ -2035,6 +2235,25 @@
           {
             "name": "Daiquiri",
             "section": "CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Daikiri: Vodka e tonica al limone",
+            "section": "",
             "price": 10.0
           }
         ],
@@ -2113,10 +2332,79 @@
       }
     ]
   },
+  "beer_moretti": {
+    "code": "beer_moretti",
+    "label": "Birra Moretti",
+    "count": 3,
+    "venues": [
+      {
+        "venue_name": "Pizza And Food",
+        "address": "Via Monfalcone 32",
+        "lat": 45.4952099,
+        "lng": 9.2375734,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Moretti",
+            "section": "",
+            "price": 1.5
+          }
+        ],
+        "min_price": 1.5
+      },
+      {
+        "venue_name": "Sui Generis",
+        "address": "Via Panfilo Castaldi 31 20124.0",
+        "lat": 45.4763158,
+        "lng": 9.2040763,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Moretti",
+            "section": "",
+            "price": 3.0
+          }
+        ],
+        "min_price": 3.0
+      },
+      {
+        "venue_name": "Funky",
+        "address": "Ripa di Porta Ticinese 33",
+        "lat": 45.4515584,
+        "lng": 9.1745153,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Moretti IPA € 6,00 € 7,00 (piccola)",
+            "section": "BIRRA ALLA SPINA",
+            "price": 6.0
+          },
+          {
+            "name": "Moretti IPA € 6,00 € 7,00 (media)",
+            "section": "BIRRA ALLA SPINA",
+            "price": 7.0
+          }
+        ],
+        "min_price": 6.0
+      }
+    ]
+  },
   "wine_glass": {
     "code": "wine_glass",
     "label": "Vino al Calice",
-    "count": 3,
+    "count": 4,
     "venues": [
       {
         "venue_name": "Lo Stacco Disco & Restaurant",
@@ -2172,6 +2460,40 @@
         "min_price": 5.0
       },
       {
+        "venue_name": "Funky",
+        "address": "Ripa di Porta Ticinese 33",
+        "lat": 45.4515584,
+        "lng": 9.1745153,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "SPUMANTE EXTRA DRY ROSÈ Corte dei Rovi € 6,00",
+            "section": "BOLLICINE",
+            "price": 6.0
+          },
+          {
+            "name": "PROSECCO DOCG EXTRA DRY Bepin De Eto € 7,00",
+            "section": "BOLLICINE",
+            "price": 7.0
+          },
+          {
+            "name": "VALPOLICELLA RIPASSO DOC Murari € 8,00",
+            "section": "ROSSI",
+            "price": 8.0
+          },
+          {
+            "name": "FRANCIACORTA BRUT DOCG Barone di Erbusco € 9,00",
+            "section": "BOLLICINE",
+            "price": 9.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
         "venue_name": "FloWine",
         "address": "Piazza Borromeo, 5, Milano, MI, Italia",
         "lat": 45.4631787,
@@ -2192,10 +2514,36 @@
       }
     ]
   },
+  "prosecco_glass": {
+    "code": "prosecco_glass",
+    "label": "Prosecco Calice",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "Casa Giuditta",
+        "address": "Via Carlo Goldoni 86",
+        "lat": 45.4694554,
+        "lng": 9.2220441,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Campari spriz: Campari, prosecco, soda",
+            "section": "",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      }
+    ]
+  },
   "espresso": {
     "code": "espresso",
     "label": "Caffe",
-    "count": 14,
+    "count": 16,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -2399,6 +2747,25 @@
         "min_price": 2.5
       },
       {
+        "venue_name": "Funky",
+        "address": "Ripa di Porta Ticinese 33",
+        "lat": 45.4515584,
+        "lng": 9.1745153,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Caffè Decaffèinato",
+            "section": "CAFFETTERIA / COFFEE & CO.",
+            "price": 2.5
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
         "venue_name": "Bice Milano",
         "address": "Via Borgospesso, 12, 20121 Milano MI, Italia",
         "lat": 45.4700642,
@@ -2440,6 +2807,25 @@
           }
         ],
         "min_price": 3.0
+      },
+      {
+        "venue_name": "Deseo",
+        "address": "Corso Sempione, 2, Milano, MI, Italia",
+        "lat": 45.4781512,
+        "lng": 9.1698403,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Caffè doppio",
+            "section": "ROSSI",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
       },
       {
         "venue_name": "Ceresio 7",
@@ -2500,6 +2886,32 @@
       }
     ]
   },
+  "cappuccino": {
+    "code": "cappuccino",
+    "label": "Cappuccino",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "Funky",
+        "address": "Ripa di Porta Ticinese 33",
+        "lat": 45.4515584,
+        "lng": 9.1745153,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Cappuccio",
+            "section": "CAFFETTERIA / COFFEE & CO.",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
+      }
+    ]
+  },
   "soft_drink": {
     "code": "soft_drink",
     "label": "Bibita",
@@ -2529,7 +2941,7 @@
   "water": {
     "code": "water",
     "label": "Acqua",
-    "count": 7,
+    "count": 8,
     "venues": [
       {
         "venue_name": "La Vineria 1",
@@ -2608,6 +3020,25 @@
             "name": "Acqua Tonica bottiglia 20cl",
             "section": "Menu",
             "price": 3.5
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
+        "venue_name": "Deseo",
+        "address": "Corso Sempione, 2, Milano, MI, Italia",
+        "lat": 45.4781512,
+        "lng": 9.1698403,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Acqua 0.25 ml",
+            "section": "ROSSI",
+            "price": 2.5
           }
         ],
         "min_price": 2.5

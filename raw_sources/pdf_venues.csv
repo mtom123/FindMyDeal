@@ -1,0 +1,5 @@
+﻿source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,categories,price_tier,rating,rating_count,phone,website,opening_hours,has_menu,menu_url,extraction_status,retrieved_at
+direct_website,deseo,Deseo,,,Milano,,,Bar,,,,,,,True,https://www.deseomilano.com/menu/Menu.pdf,ok,2026-05-30T22:25:39Z
+direct_website,abbracci_bistrot,Abbracci Bistrot,,,Milano,,,Bar,,,,,,,True,https://abbraccibistrot.com/wp-content/uploads/2024/09/menu-inglese-ufficialeabb-nuovo.pdf,ok,2026-05-30T22:25:39Z
+direct_website,casa_giuditta,Casa Giuditta,,,Milano,,,Bar,,,,,,,True,https://www.casagiudittamilano.it/wp-content/uploads/2025/10/I-nostri-Cocktail-CG.pdf,ok,2026-05-30T22:25:39Z
+direct_website,funky,Funky,,,Milano,,,Bar,,,,,,,True,https://cdn.website.dish.co/media/f3/b2/9663569/Funky-The-Menu.pdf,ok,2026-05-30T22:25:39Z

@@ -45,11 +45,12 @@ VENUE_REQUIRED = {
     "address", "city", "extraction_status", "retrieved_at",
 }
 ITEM_REQUIRED = {
-    "source_platform", "venue_name", "venue_url",
-    "menu_section", "item_name", "raw_price",
-    "normalized_price_eur", "price_type", "item_type",
+    "source_platform", "venue_name",
+    "item_name", "normalized_price_eur",
+    "price_type", "item_type",
     "confidence", "retrieved_at",
 }
+# raw_price e venue_url sono opzionali — alcuni agenti li omettono per items senza prezzo
 
 VALID_PLATFORMS = {
     "mycia", "thefork", "eatbu", "leggimenu", "wolt", "justeat",
@@ -215,20 +216,18 @@ def main():
     all_items: list[dict] = []
     sources_found = []
 
-    # Legacy MyCIA files — cerca in raw_sources/ prima, poi nella dir corrente
-    for mycia_v, mycia_i in [
-        (RAW_DIR / "mycia_venues.csv",       RAW_DIR / "mycia_menu_items.csv"),
-        (Path("mycia_milano_venues.csv"),     Path("mycia_milano_menu_items.csv")),
-    ]:
-        if mycia_v.exists() and "mycia" not in sources_found:
-            vv = remap_mycia_venues(mycia_v)
-            all_venues.extend(vv)
-            print(f"  mycia_venues ({mycia_v}): {len(vv)} rows")
-            sources_found.append("mycia")
-        if mycia_i.exists() and mycia_i.stat().st_size > 0:
-            ii = remap_mycia_items(mycia_i)
-            all_items.extend(ii)
-            print(f"  mycia_items  ({mycia_i}): {len(ii)} rows")
+    # Legacy MyCIA files (different schema)
+    mycia_v = Path("mycia_milano_venues.csv")
+    mycia_i = Path("mycia_milano_menu_items.csv")
+    if mycia_v.exists():
+        vv = remap_mycia_venues(mycia_v)
+        all_venues.extend(vv)
+        print(f"  mycia_venues (legacy): {len(vv)} rows")
+        sources_found.append("mycia")
+    if mycia_i.exists():
+        ii = remap_mycia_items(mycia_i)
+        all_items.extend(ii)
+        print(f"  mycia_items (legacy):  {len(ii)} rows")
 
     # New unified-schema files from raw_sources/
     for vfile in sorted(RAW_DIR.glob("*_venues.csv")):
