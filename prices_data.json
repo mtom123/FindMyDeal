@@ -1,0 +1,2674 @@
+{
+  "spritz": {
+    "code": "spritz",
+    "label": "Spritz",
+    "count": 30,
+    "venues": [
+      {
+        "venue_name": "BAR PICCHIO",
+        "address": "Via Melzo, 11, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4735028,
+        "lng": 9.2093181,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "APERITIVI",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
+      },
+      {
+        "venue_name": "EMPORIUM SMOKE & COFFEE",
+        "address": "Viale Monte Grappa, 2, Milano, MI, Italia",
+        "lat": 45.4806915,
+        "lng": 9.1920596,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "APERITIVI",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Lucky Bar",
+        "address": "Via Antonio Pollaiuolo, 5, Milano, MI, Italia",
+        "lat": 45.4889465,
+        "lng": 9.1872656,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "SPRITZ",
+            "price": 5.0
+          },
+          {
+            "name": "Campari Spritz",
+            "section": "SPRITZ",
+            "price": 6.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "MiVàLà - Ordini",
+        "address": "Viale Piero e Alberto Pirelli, Milano, MI, Italia",
+        "lat": 45.5154539,
+        "lng": 9.2111493,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari spritz",
+            "section": "I NOSTRI SPRITZ",
+            "price": 5.0
+          },
+          {
+            "name": "Raspberry spritz",
+            "section": "I NOSTRI SPRITZ",
+            "price": 6.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Dabass",
+        "address": "Via Piacenza, 13, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4494508,
+        "lng": 9.2051315,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "FìGod Save The Food Duomo",
+        "address": "Piazza del Duomo, 20122 Milano MI, Italia",
+        "lat": 45.4646927,
+        "lng": 9.1889986,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "God Save The Food Brera",
+        "address": "Piazza del Carmine, 1, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4700469,
+        "lng": 9.1853616,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "God Save The Food Piave",
+        "address": "Viale Piave, 18, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4705707,
+        "lng": 9.2070789,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "God Save The Food Tortona",
+        "address": "Via Tortona, 34, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4527427,
+        "lng": 9.1654003,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "Tuttaltrosuono e il Vino",
+        "address": "Via Conte Rosso, 23, 20134 Milano, Milano MI, Italia",
+        "lat": 45.4836682,
+        "lng": 9.242052,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Spritz Campari",
+            "section": "COCKTAILS",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "Barz'8 Coffee drink e food",
+        "address": "Via Casale, 3a, Milano, MI, Italia",
+        "lat": 45.4520751,
+        "lng": 9.1704579,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "PRE - DINNER DRINK",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "The Saints and the Scholars",
+        "address": "Via Giuseppe Govone, 23, Milano, MI, Italia",
+        "lat": 45.4890912,
+        "lng": 9.167452,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "CAMPARI SPRITZ",
+            "section": "CLASSIC COCKTAIL",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Tutto bene grazie",
+        "address": "Corso Magenta, 30, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4661431,
+        "lng": 9.1774351,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "SPRITZ",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "Bar Gluck",
+        "address": "Via Cristoforo Gluck, 3, Milano, MI, Italia",
+        "lat": 45.4910449,
+        "lng": 9.2071548,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "DOM STATION",
+        "address": "Via Casale, 3, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4525573,
+        "lng": 9.1702271,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Pesa Pubblica",
+        "address": "Via Melzo, 19, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4750947,
+        "lng": 9.2077947,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "William's Cafè",
+        "address": "Via Teodosio, 14, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4838578,
+        "lng": 9.2300984,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Chinese Box",
+        "address": "Corso Garibaldi, 104, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.47854,
+        "lng": 9.1856288,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Movida Ristorante Milano",
+        "address": "Via Ascanio Sforza, 41, Milano, MI, Italia",
+        "lat": 45.4480668,
+        "lng": 9.1773913,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "That's Wine",
+        "address": "Piazza Velasca, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4599542,
+        "lng": 9.1906238,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Banco Cocktailbar e Bistrot",
+        "address": "Alzaia Naviglio Grande, 46, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4517923,
+        "lng": 9.1714348,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Bistrot Pattari",
+        "address": "Via Pattari, 2, Milano, MI, Italia",
+        "lat": 45.4644683,
+        "lng": 9.1937932,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperol Spritz",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Elettrauto Cadore",
+        "address": "Via Cadore, 17, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4584786,
+        "lng": 9.2137359,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Flow Milano",
+        "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.463152,
+        "lng": 9.1828192,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Milord Milano",
+        "address": "Piazza Gian Lorenzo Bernini, Milano, MI, Italia",
+        "lat": 45.4790347,
+        "lng": 9.2216867,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Suzy",
+        "address": "Via Solferino, 28, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4766945,
+        "lng": 9.1877835,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Antonino Il Banco di Cannavacciuolo",
+        "address": "Piazza Città di Lombardia, 1, 20124 Milano, MI, Italia",
+        "lat": 45.4866993,
+        "lng": 9.1962354,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Sarti Rosa Spritz",
+            "section": "APERITIVI",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      },
+      {
+        "venue_name": "Monkey Cocktail Bar Milano",
+        "address": "Via Napo Torriani, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4808062,
+        "lng": 9.2034775,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "LIMONCELLO SPRITZ",
+            "section": "APERITIVI",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      },
+      {
+        "venue_name": "Terrazza Duomo 21",
+        "address": "Piazza Duomo, Milano, MI, Italia",
+        "lat": 45.4636991,
+        "lng": 9.1907068,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Campari Spritz",
+            "section": "GRANDI CLASSICI",
+            "price": 15.0
+          }
+        ],
+        "min_price": 15.0
+      }
+    ]
+  },
+  "negroni": {
+    "code": "negroni",
+    "label": "Negroni",
+    "count": 30,
+    "venues": [
+      {
+        "venue_name": "BAR PICCHIO",
+        "address": "Via Melzo, 11, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4735028,
+        "lng": 9.2093181,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "NEGRONI",
+            "section": "COCKTAIL",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
+      },
+      {
+        "venue_name": "Barz'8 Coffee drink e food",
+        "address": "Via Casale, 3a, Milano, MI, Italia",
+        "lat": 45.4520751,
+        "lng": 9.1704579,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "PRE - DINNER DRINK",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Lucky Bar",
+        "address": "Via Antonio Pollaiuolo, 5, Milano, MI, Italia",
+        "lat": 45.4889465,
+        "lng": 9.1872656,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "COCKTAIL",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "The Saints and the Scholars",
+        "address": "Via Giuseppe Govone, 23, Milano, MI, Italia",
+        "lat": 45.4890912,
+        "lng": 9.167452,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "NEGRONI",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "Bar Gluck",
+        "address": "Via Cristoforo Gluck, 3, Milano, MI, Italia",
+        "lat": 45.4910449,
+        "lng": 9.2071548,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "NEGRONI",
+            "section": "COCKTAILS",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Classico Trattoria & Cocktail",
+        "address": "Via Alessio di Tocqueville, 9, Milano, MI, Italia",
+        "lat": 45.4826666,
+        "lng": 9.1865755,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "LOBO NEGRONI",
+            "section": "CLASSICO CONTEMPORANEO",
+            "price": 8.0
+          },
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 12.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "FìGod Save The Food Duomo",
+        "address": "Piazza del Duomo, 20122 Milano MI, Italia",
+        "lat": 45.4646927,
+        "lng": 9.1889986,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "MEZCAL NEGRONI",
+            "section": "COKTAIL CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Fred",
+        "address": "Via Francesco Ingegnoli, 2, Milano, MI, Italia",
+        "lat": 45.4863002,
+        "lng": 9.2317916,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Brera",
+        "address": "Piazza del Carmine, 1, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4700469,
+        "lng": 9.1853616,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "MEZCAL NEGRONI",
+            "section": "COKTAIL CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Piave",
+        "address": "Viale Piave, 18, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4705707,
+        "lng": 9.2070789,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "MEZCAL NEGRONI",
+            "section": "COKTAIL CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Tortona",
+        "address": "Via Tortona, 34, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4527427,
+        "lng": 9.1654003,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "MEZCAL NEGRONI",
+            "section": "COKTAIL CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Pesa Pubblica",
+        "address": "Via Melzo, 19, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4750947,
+        "lng": 9.2077947,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Spirit de Milan",
+        "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
+        "lat": 45.5065286,
+        "lng": 9.1589179,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Tutto bene grazie",
+        "address": "Corso Magenta, 30, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4661431,
+        "lng": 9.1774351,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "William's Cafè",
+        "address": "Via Teodosio, 14, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4838578,
+        "lng": 9.2300984,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          },
+          {
+            "name": "Negroni di Lambrate",
+            "section": "COCKTAIL WILLIAMS",
+            "price": 9.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Chinese Box",
+        "address": "Corso Garibaldi, 104, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.47854,
+        "lng": 9.1856288,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Dabass",
+        "address": "Via Piacenza, 13, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4494508,
+        "lng": 9.2051315,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "That's Wine",
+        "address": "Piazza Velasca, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4599542,
+        "lng": 9.1906238,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Deseo",
+        "address": "Corso Sempione, 2, Milano, MI, Italia",
+        "lat": 45.4781512,
+        "lng": 9.1698403,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Elettrauto Cadore",
+        "address": "Via Cadore, 17, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4584786,
+        "lng": 9.2137359,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Flow Milano",
+        "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.463152,
+        "lng": 9.1828192,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Madison",
+        "address": "Viale Sabotino, 12, 20135 Milano, MI, Italia",
+        "lat": 45.4507784,
+        "lng": 9.1995724,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "CLASSIC cocktail",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Metropolis Lounge & Restaurant",
+        "address": "Via Vittor Pisani, 5, Milano, MI, Italia",
+        "lat": 45.4813624,
+        "lng": 9.1992126,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "NEGRONI SBAGLIATO",
+            "section": "LE NOSTRE PROPOSTE (18.00-21.30 + 2 €)",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Milord Milano",
+        "address": "Piazza Gian Lorenzo Bernini, Milano, MI, Italia",
+        "lat": 45.4790347,
+        "lng": 9.2216867,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Movida Ristorante Milano",
+        "address": "Via Ascanio Sforza, 41, Milano, MI, Italia",
+        "lat": 45.4480668,
+        "lng": 9.1773913,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Suzy",
+        "address": "Via Solferino, 28, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4766945,
+        "lng": 9.1877835,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Banco Cocktailbar e Bistrot",
+        "address": "Alzaia Naviglio Grande, 46, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4517923,
+        "lng": 9.1714348,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      },
+      {
+        "venue_name": "Antonino Il Banco di Cannavacciuolo",
+        "address": "Piazza Città di Lombardia, 1, 20124 Milano, MI, Italia",
+        "lat": 45.4866993,
+        "lng": 9.1962354,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "APERITIVI",
+            "price": 15.0
+          }
+        ],
+        "min_price": 15.0
+      },
+      {
+        "venue_name": "Terrazza Duomo 21",
+        "address": "Piazza Duomo, Milano, MI, Italia",
+        "lat": 45.4636991,
+        "lng": 9.1907068,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Negroni",
+            "section": "GRANDI CLASSICI",
+            "price": 15.0
+          }
+        ],
+        "min_price": 15.0
+      }
+    ]
+  },
+  "americano": {
+    "code": "americano",
+    "label": "Americano",
+    "count": 31,
+    "venues": [
+      {
+        "venue_name": "Barz'8 Coffee drink e food",
+        "address": "Via Casale, 3a, Milano, MI, Italia",
+        "lat": 45.4520751,
+        "lng": 9.1704579,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè Americano",
+            "section": "CAFFETTERIA",
+            "price": 1.0
+          },
+          {
+            "name": "Americano",
+            "section": "PRE - DINNER DRINK",
+            "price": 7.0
+          }
+        ],
+        "min_price": 1.0
+      },
+      {
+        "venue_name": "Mi Casa Toasteria",
+        "address": "Via Leone Tolstoi, 1, 20146 Milano, MI, Italia",
+        "lat": 45.4492546,
+        "lng": 9.1518545,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè americano",
+            "section": "CAFFETTERIA",
+            "price": 1.2
+          }
+        ],
+        "min_price": 1.2
+      },
+      {
+        "venue_name": "Hotel Ibis Milano Fiera",
+        "address": "Via Lucio Giunio Columella, 36, 20128 Milano, MI, Italia",
+        "lat": 45.5157384,
+        "lng": 9.2269324,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè/Americano",
+            "section": "Caffetteria",
+            "price": 3.0
+          }
+        ],
+        "min_price": 3.0
+      },
+      {
+        "venue_name": "Bar Magenta",
+        "address": "Largo Paolo D'Ancona, Milan, Metropolitan City of Milan, Italia",
+        "lat": 45.4655541,
+        "lng": 9.1758584,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "Lucky Bar",
+        "address": "Via Antonio Pollaiuolo, 5, Milano, MI, Italia",
+        "lat": 45.4889465,
+        "lng": 9.1872656,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "COCKTAIL",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "The Saints and the Scholars",
+        "address": "Via Giuseppe Govone, 23, Milano, MI, Italia",
+        "lat": 45.4890912,
+        "lng": 9.167452,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "CLASSIC cocktail",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "AMERICANO",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "DOM STATION",
+        "address": "Via Casale, 3, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4525573,
+        "lng": 9.1702271,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "FìGod Save The Food Duomo",
+        "address": "Piazza del Duomo, 20122 Milano MI, Italia",
+        "lat": 45.4646927,
+        "lng": 9.1889986,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Brera",
+        "address": "Piazza del Carmine, 1, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4700469,
+        "lng": 9.1853616,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Piave",
+        "address": "Viale Piave, 18, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4705707,
+        "lng": 9.2070789,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "God Save The Food Tortona",
+        "address": "Via Tortona, 34, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4527427,
+        "lng": 9.1654003,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Hotel Ibis Milano Centro - LineaUno Bar",
+        "address": "Via Camillo Finocchiaro Aprile, 2, 20124 Milano, MI, Italia",
+        "lat": 45.4783542,
+        "lng": 9.2016813,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "COCKTAIL  - SERVITE DALLE ORE 11.00 ALLE 23.30",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Pesa Pubblica",
+        "address": "Via Melzo, 19, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4750947,
+        "lng": 9.2077947,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Spirit de Milan",
+        "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
+        "lat": 45.5065286,
+        "lng": 9.1589179,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "CLASSIC cocktail",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Tutto bene grazie",
+        "address": "Corso Magenta, 30, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4661431,
+        "lng": 9.1774351,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "William's Cafè",
+        "address": "Via Teodosio, 14, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4838578,
+        "lng": 9.2300984,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
+        "venue_name": "Chinese Box",
+        "address": "Corso Garibaldi, 104, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.47854,
+        "lng": 9.1856288,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Dabass",
+        "address": "Via Piacenza, 13, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4494508,
+        "lng": 9.2051315,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Movida Ristorante Milano",
+        "address": "Via Ascanio Sforza, 41, Milano, MI, Italia",
+        "lat": 45.4480668,
+        "lng": 9.1773913,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "That's Wine",
+        "address": "Piazza Velasca, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4599542,
+        "lng": 9.1906238,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Banco Cocktailbar e Bistrot",
+        "address": "Alzaia Naviglio Grande, 46, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4517923,
+        "lng": 9.1714348,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 10.0
+          },
+          {
+            "name": "ITALO AMERICANO",
+            "section": "SIGNATURE COCKTAILS",
+            "price": 12.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Elettrauto Cadore",
+        "address": "Via Cadore, 17, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4584786,
+        "lng": 9.2137359,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Flow Milano",
+        "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.463152,
+        "lng": 9.1828192,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Madison",
+        "address": "Viale Sabotino, 12, 20135 Milano, MI, Italia",
+        "lat": 45.4507784,
+        "lng": 9.1995724,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "CLASSIC cocktail",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Milord Milano",
+        "address": "Piazza Gian Lorenzo Bernini, Milano, MI, Italia",
+        "lat": 45.4790347,
+        "lng": 9.2216867,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Monkey Cocktail Bar Milano",
+        "address": "Via Napo Torriani, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4808062,
+        "lng": 9.2034775,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "AMERICANO",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Suzy",
+        "address": "Via Solferino, 28, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4766945,
+        "lng": 9.1877835,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Classico Trattoria & Cocktail",
+        "address": "Via Alessio di Tocqueville, 9, Milano, MI, Italia",
+        "lat": 45.4826666,
+        "lng": 9.1865755,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "CLASSIC cocktail",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      },
+      {
+        "venue_name": "Oysteroom",
+        "address": "Corso Garibaldi, 105, 20121 Milano, MI, Italia",
+        "lat": 45.4785043,
+        "lng": 9.1848669,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperitivi - Americano",
+            "section": "COCKTAIL",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      },
+      {
+        "venue_name": "Terrazza Duomo 21",
+        "address": "Piazza Duomo, Milano, MI, Italia",
+        "lat": 45.4636991,
+        "lng": 9.1907068,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "GRANDI CLASSICI",
+            "price": 15.0
+          }
+        ],
+        "min_price": 15.0
+      }
+    ]
+  },
+  "gin_tonic": {
+    "code": "gin_tonic",
+    "label": "Gin Tonic",
+    "count": 3,
+    "venues": [
+      {
+        "venue_name": "CARPE DIEM CAFE' listino validita dalle ore 17",
+        "address": "Via Bruno Cassinari, 1, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4359684,
+        "lng": 9.2403472,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "GIN TONIC",
+            "section": "LONG DRINK",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "GIN TONIC / LEMON",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "boccascenacafé",
+        "address": "Corso Magenta, 24, 20123 Milano, MI, Italia",
+        "lat": 45.4661789,
+        "lng": 9.1767294,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Gin Tonic/Lemon",
+            "section": "COCKTAIL - I NOSTRI CLASSICI",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      }
+    ]
+  },
+  "mojito": {
+    "code": "mojito",
+    "label": "Mojito",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "CARPE DIEM CAFE' listino validita dalle ore 17",
+        "address": "Via Bruno Cassinari, 1, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4359684,
+        "lng": 9.2403472,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Virgin Mojito",
+            "section": "analcolici",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
+      }
+    ]
+  },
+  "moscow_mule": {
+    "code": "moscow_mule",
+    "label": "Moscow Mule",
+    "count": 2,
+    "venues": [
+      {
+        "venue_name": "EMPORIUM SMOKE & COFFEE",
+        "address": "Viale Monte Grappa, 2, Milano, MI, Italia",
+        "lat": 45.4806915,
+        "lng": 9.1920596,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "MOSCOW MULE",
+            "section": "APERITIVI PRE DINNER",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "MOSCOW MULE",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      }
+    ]
+  },
+  "margarita": {
+    "code": "margarita",
+    "label": "Margarita",
+    "count": 4,
+    "venues": [
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "MARGARITA",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "Chihuahua Tacos",
+        "address": "Viale Col di Lana, 1, Milano, Italia",
+        "lat": 45.4523334,
+        "lng": 9.181953,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Margarita Diablita",
+            "section": "COCTELES",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Deseo",
+        "address": "Corso Sempione, 2, Milano, MI, Italia",
+        "lat": 45.4781512,
+        "lng": 9.1698403,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "TOMMY'S MARGARITA",
+            "section": "I GRANDI CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Il Nemico",
+        "address": "Via Piacenza, 20, Milano, MI, Italia",
+        "lat": 45.4491148,
+        "lng": 9.2050112,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "BLU MARGARITA",
+            "section": "ESPOLON DRINK",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      }
+    ]
+  },
+  "daiquiri": {
+    "code": "daiquiri",
+    "label": "Daiquiri",
+    "count": 3,
+    "venues": [
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "DAIQUIRI",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      },
+      {
+        "venue_name": "Milord Milano",
+        "address": "Piazza Gian Lorenzo Bernini, Milano, MI, Italia",
+        "lat": 45.4790347,
+        "lng": 9.2216867,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Daiquiri",
+            "section": "CLASSICI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Oysteroom",
+        "address": "Corso Garibaldi, 105, 20121 Milano, MI, Italia",
+        "lat": 45.4785043,
+        "lng": 9.1848669,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Aperitivi - daiquiri",
+            "section": "COCKTAIL",
+            "price": 12.0
+          }
+        ],
+        "min_price": 12.0
+      }
+    ]
+  },
+  "manhattan": {
+    "code": "manhattan",
+    "label": "Manhattan",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "MANHATTAN",
+            "section": "Menu",
+            "price": 7.5
+          }
+        ],
+        "min_price": 7.5
+      }
+    ]
+  },
+  "beer_bottle": {
+    "code": "beer_bottle",
+    "label": "Birra Bottiglia",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "Lo Stacco Disco & Restaurant",
+        "address": "Via Noto, 10, Milano, MI, Italia",
+        "lat": 45.4307149,
+        "lng": 9.2004893,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Birra bottiglia cena",
+            "section": "BIBITE",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      }
+    ]
+  },
+  "wine_glass": {
+    "code": "wine_glass",
+    "label": "Vino al Calice",
+    "count": 3,
+    "venues": [
+      {
+        "venue_name": "Lo Stacco Disco & Restaurant",
+        "address": "Via Noto, 10, Milano, MI, Italia",
+        "lat": 45.4307149,
+        "lng": 9.2004893,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Calice vino pranzo",
+            "section": "BIBITE",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
+      },
+      {
+        "venue_name": "Woodstock",
+        "address": "Via Lodovico il Moro 3",
+        "lat": 45.4474586,
+        "lng": 9.1553746,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Calice",
+            "section": "Menu",
+            "price": 5.0
+          },
+          {
+            "name": "Calice",
+            "section": "Menu",
+            "price": 6.0
+          },
+          {
+            "name": "Calice",
+            "section": "Menu",
+            "price": 7.0
+          },
+          {
+            "name": "Calice",
+            "section": "Menu",
+            "price": 8.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "FloWine",
+        "address": "Piazza Borromeo, 5, Milano, MI, Italia",
+        "lat": 45.4631787,
+        "lng": 9.1827878,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Calice di Gavi",
+            "section": "VINI BIANCHI AL CALICE",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      }
+    ]
+  },
+  "espresso": {
+    "code": "espresso",
+    "label": "Caffe",
+    "count": 14,
+    "venues": [
+      {
+        "venue_name": "Barz'8 Coffee drink e food",
+        "address": "Via Casale, 3a, Milano, MI, Italia",
+        "lat": 45.4520751,
+        "lng": 9.1704579,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "CAFFETTERIA",
+            "price": 1.0
+          },
+          {
+            "name": "Caffè Decaffeinato",
+            "section": "CAFFETTERIA",
+            "price": 1.2
+          }
+        ],
+        "min_price": 1.0
+      },
+      {
+        "venue_name": "Lo Stacco Disco & Restaurant",
+        "address": "Via Noto, 10, Milano, MI, Italia",
+        "lat": 45.4307149,
+        "lng": 9.2004893,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "CAFFETTERIA",
+            "price": 1.0
+          },
+          {
+            "name": "Caffè con panna",
+            "section": "CAFFETTERIA",
+            "price": 1.4
+          },
+          {
+            "name": "Caffè corretto",
+            "section": "CAFFETTERIA",
+            "price": 1.5
+          }
+        ],
+        "min_price": 1.0
+      },
+      {
+        "venue_name": "Mi Casa Toasteria",
+        "address": "Via Leone Tolstoi, 1, 20146 Milano, MI, Italia",
+        "lat": 45.4492546,
+        "lng": 9.1518545,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè espresso",
+            "section": "CAFFETTERIA",
+            "price": 1.1
+          },
+          {
+            "name": "Caffè decaffeinato",
+            "section": "CAFFETTERIA",
+            "price": 1.2
+          }
+        ],
+        "min_price": 1.1
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "CAFFE'",
+            "section": "Menu",
+            "price": 1.5
+          },
+          {
+            "name": "CAFFE' CORRETTO",
+            "section": "Menu",
+            "price": 3.0
+          }
+        ],
+        "min_price": 1.5
+      },
+      {
+        "venue_name": "Antonino Il Banco di Cannavacciuolo",
+        "address": "Piazza Città di Lombardia, 1, 20124 Milano, MI, Italia",
+        "lat": 45.4866993,
+        "lng": 9.1962354,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Espresso",
+            "section": "CAFFÈ",
+            "price": 1.8
+          }
+        ],
+        "min_price": 1.8
+      },
+      {
+        "venue_name": "Monkey Cocktail Bar Milano",
+        "address": "Via Napo Torriani, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4808062,
+        "lng": 9.2034775,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè Nespresso",
+            "section": "caffetteria",
+            "price": 2.0
+          }
+        ],
+        "min_price": 2.0
+      },
+      {
+        "venue_name": "That's Wine",
+        "address": "Piazza Velasca, 5, Milan, Metropolitan City of Milan, Italy",
+        "lat": 45.4599542,
+        "lng": 9.1906238,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "CAFFE'",
+            "section": "BIBITE",
+            "price": 2.0
+          }
+        ],
+        "min_price": 2.0
+      },
+      {
+        "venue_name": "La Società Milano",
+        "address": "Via Panfilo Castaldi, 19, 20124 Milano, MI, Italia",
+        "lat": 45.4772645,
+        "lng": 9.2020793,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "BEVANDE",
+            "price": 2.5
+          },
+          {
+            "name": "Tronchetto di cervo con terra autunnale al caffè e cioccolato amaro, funghi, fondo bruno",
+            "section": "SECONDI PIATTI",
+            "price": 36.0
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
+        "venue_name": "Taverna della Trisa",
+        "address": "Via Francesco Ferrucci, 1, 20145 Milano MI, Italia",
+        "lat": 45.4793609,
+        "lng": 9.1644608,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "Bevande",
+            "price": 2.5
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
+        "venue_name": "Bice Milano",
+        "address": "Via Borgospesso, 12, 20121 Milano MI, Italia",
+        "lat": 45.4700642,
+        "lng": 9.1942058,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "Bevande",
+            "price": 3.0
+          }
+        ],
+        "min_price": 3.0
+      },
+      {
+        "venue_name": "Oysteroom",
+        "address": "Corso Garibaldi, 105, 20121 Milano, MI, Italia",
+        "lat": 45.4785043,
+        "lng": 9.1848669,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "CAFFETTERIA",
+            "price": 3.0
+          },
+          {
+            "name": "Caffè e latte",
+            "section": "CAFFETTERIA",
+            "price": 4.0
+          }
+        ],
+        "min_price": 3.0
+      },
+      {
+        "venue_name": "Ceresio 7",
+        "address": "Via Ceresio, 7, 20154 Milano, MI, Italia",
+        "lat": 45.4834509,
+        "lng": 9.18038,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè",
+            "section": "Bevande",
+            "price": 4.0
+          }
+        ],
+        "min_price": 4.0
+      },
+      {
+        "venue_name": "Illy - Milano Montenapoleone",
+        "address": "Via Monte Napoleone, 19, 20121 Milano, MI, Italia",
+        "lat": 45.4685852,
+        "lng": 9.1944774,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Espresso illy Classico",
+            "section": "CAFFETTERIA /-/ CAFFÈ IN PUREZZA",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Hotel Ibis Milano Fiera",
+        "address": "Via Lucio Giunio Columella, 36, 20128 Milano, MI, Italia",
+        "lat": 45.5157384,
+        "lng": 9.2269324,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Caffè mixed iced",
+            "section": "Caffetteria",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      }
+    ]
+  },
+  "soft_drink": {
+    "code": "soft_drink",
+    "label": "Bibita",
+    "count": 1,
+    "venues": [
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Coca-Cola Lattina 33cl",
+            "section": "Menu",
+            "price": 3.5
+          }
+        ],
+        "min_price": 3.5
+      }
+    ]
+  },
+  "water": {
+    "code": "water",
+    "label": "Acqua",
+    "count": 7,
+    "venues": [
+      {
+        "venue_name": "La Vineria 1",
+        "address": "Via Casale, 4, Milano, MI, Italia",
+        "lat": 45.4518706,
+        "lng": 9.1703245,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua",
+            "section": "BEVERAGE",
+            "price": 1.0
+          }
+        ],
+        "min_price": 1.0
+      },
+      {
+        "venue_name": "La Società Milano",
+        "address": "Via Panfilo Castaldi, 19, 20124 Milano, MI, Italia",
+        "lat": 45.4772645,
+        "lng": 9.2020793,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua in bottiglia",
+            "section": "BEVANDE",
+            "price": 2.0
+          }
+        ],
+        "min_price": 2.0
+      },
+      {
+        "venue_name": "Lo Stacco Disco & Restaurant",
+        "address": "Via Noto, 10, Milano, MI, Italia",
+        "lat": 45.4307149,
+        "lng": 9.2004893,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua 1 Lt",
+            "section": "BEVANDE",
+            "price": 2.5
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
+        "venue_name": "Rhop",
+        "address": "Corso Europa 142",
+        "lat": 45.5282176,
+        "lng": 9.0466645,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Acqua 50cl",
+            "section": "Menu",
+            "price": 2.5
+          },
+          {
+            "name": "Acqua Tonica bottiglia 20cl",
+            "section": "Menu",
+            "price": 3.5
+          }
+        ],
+        "min_price": 2.5
+      },
+      {
+        "venue_name": "Hotel Ibis Milano Fiera",
+        "address": "Via Lucio Giunio Columella, 36, 20128 Milano, MI, Italia",
+        "lat": 45.5157384,
+        "lng": 9.2269324,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua minerale",
+            "section": "Soft drinks",
+            "price": 3.0
+          }
+        ],
+        "min_price": 3.0
+      },
+      {
+        "venue_name": "Bice Milano",
+        "address": "Via Borgospesso, 12, 20121 Milano MI, Italia",
+        "lat": 45.4700642,
+        "lng": 9.1942058,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua in bottiglia",
+            "section": "Bevande",
+            "price": 4.0
+          }
+        ],
+        "min_price": 4.0
+      },
+      {
+        "venue_name": "Ceresio 7",
+        "address": "Via Ceresio, 7, 20154 Milano, MI, Italia",
+        "lat": 45.4834509,
+        "lng": 9.18038,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Acqua in bottiglia",
+            "section": "Bevande",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      }
+    ]
+  }
+}

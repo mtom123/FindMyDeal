@@ -1,0 +1,6 @@
+.claude/
+PROMPT_INIZIALE.md
+demo_map_reference.html
+node_modules/
+.DS_Store
+Thumbs.db
