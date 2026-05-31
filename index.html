@@ -3,51 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>PriceLens — Milan</title>
+  <title>Surprice — Find My Deal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
 /* ═══════════════════════════════════════════════════════════
-   TOKENS
+   TOKENS — architectural light palette
 ═══════════════════════════════════════════════════════════ */
 :root {
-  --bg:  #080808;
-  --s1:  #0d0d0d;
-  --s2:  #141414;
-  --s3:  #1c1c1c;
-  --s4:  #242424;
+  --bg:  #f0efe9;
+  --s1:  #ffffff;
+  --s2:  #f8f7f4;
+  --s3:  #efefeb;
+  --s4:  #e6e5df;
 
-  --b0:  rgba(255,255,255,0.035);
-  --b1:  rgba(255,255,255,0.07);
-  --b2:  rgba(255,255,255,0.13);
+  --b0:  rgba(0,0,0,0.04);
+  --b1:  rgba(0,0,0,0.08);
+  --b2:  rgba(0,0,0,0.15);
 
-  --t1:  #d8d8cc;   /* warm off-white */
-  --t2:  #686860;   /* muted */
-  --t3:  #343430;   /* very muted */
+  --t1:  #0a0a08;
+  --t2:  #3a3a36;
+  --t3:  #888880;
 
-  --ochre:    #c89b3c;
-  --ochre-d:  rgba(200,155,60,0.07);
-  --ochre-b:  rgba(200,155,60,0.22);
+  --ochre:    #8a6000;
+  --ochre-d:  rgba(138,96,0,0.07);
+  --ochre-b:  rgba(138,96,0,0.30);
 
-  /* price tiers */
-  --deal-t:  #4ea870;
-  --deal-b:  rgba(78,168,112,0.30);
-  --deal-bg: rgba(78,168,112,0.08);
+  --deal-t:  #1e6639;
+  --deal-b:  rgba(30,102,57,0.35);
+  --deal-bg: rgba(30,102,57,0.07);
 
-  --avg-t:   #9a8650;
-  --avg-b:   rgba(154,134,80,0.30);
-  --avg-bg:  rgba(154,134,80,0.08);
+  --avg-t:   #7a5a00;
+  --avg-b:   rgba(122,90,0,0.35);
+  --avg-bg:  rgba(122,90,0,0.07);
 
-  --exp-t:   #a04848;
-  --exp-b:   rgba(160,72,72,0.30);
-  --exp-bg:  rgba(160,72,72,0.08);
+  --exp-t:   #8b1a1a;
+  --exp-b:   rgba(139,26,26,0.35);
+  --exp-bg:  rgba(139,26,26,0.07);
 
-  --sb-w:     244px;
-  --det-w:    308px;
+  --sb-w:     290px;
   --topbar-h: 44px;
-  --fbar-h:   36px;
+  --fbar-h:   33px;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -72,27 +70,28 @@ a { color: inherit; text-decoration: none; }
    LOADER
 ═══════════════════════════════════════════════════════════ */
 #loader {
-  position: fixed; inset: 0; z-index: 9999; background: var(--bg);
+  position: fixed; inset: 0; z-index: 9999; background: var(--s1);
   display: flex; flex-direction: column; align-items: center;
-  justify-content: center; gap: 20px; transition: opacity .4s;
+  justify-content: center; gap: 18px; transition: opacity .35s;
 }
 .ld-wordmark {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.72rem; font-weight: 700;
-  letter-spacing: .28em; text-transform: uppercase; color: var(--t3);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase; color: var(--t1);
 }
 .ld-bar {
-  width: 100px; height: 1px; background: var(--b2); overflow: hidden;
+  width: 80px; height: 1px; background: var(--b1); overflow: hidden;
 }
 .ld-bar::after {
   content: ''; display: block; height: 100%;
-  width: 50%; background: var(--ochre);
-  animation: sweep 1.1s ease-in-out infinite;
+  width: 50%; background: var(--t1);
+  animation: sweep 1s ease-in-out infinite;
 }
 @keyframes sweep { 0%{transform:translateX(-100%)} 100%{transform:translateX(250%)} }
 .ld-city {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.55rem; letter-spacing: .14em; color: var(--t3);
+  font-size: 0.54rem; letter-spacing: .16em; color: var(--t3);
+  text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -111,37 +110,37 @@ a { color: inherit; text-decoration: none; }
 
 /* Logo block */
 .tb-logo {
-  padding: 0 18px; display: flex; flex-direction: column;
+  padding: 0 22px; display: flex; flex-direction: column;
   justify-content: center; border-right: 1px solid var(--b1);
-  flex-shrink: 0; gap: 1px;
+  flex-shrink: 0; gap: 3px;
 }
 .tb-logo-main {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.78rem; font-weight: 700;
-  letter-spacing: .16em; text-transform: uppercase; color: var(--t1);
+  font-size: 0.86rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--t1);
   line-height: 1;
 }
-.tb-logo-main span { color: var(--ochre); }
+.tb-logo-main span { color: var(--t1); }
 .tb-logo-sub {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.52rem; color: var(--t3); letter-spacing: .06em;
-  line-height: 1;
+  font-size: 0.48rem; color: var(--t3); letter-spacing: .14em;
+  line-height: 1; text-transform: uppercase;
 }
 
 /* Search */
 .tb-search {
-  flex: 1; display: flex; align-items: center; gap: 9px;
-  padding: 0 16px; border-right: 1px solid var(--b1);
+  flex: 1; display: flex; align-items: center; gap: 10px;
+  padding: 0 18px; border-right: 1px solid var(--b1);
   transition: background .15s;
 }
-.tb-search:focus-within { background: rgba(255,255,255,0.015); }
-.tb-search-icon { color: var(--t3); font-size: 0.75rem; flex-shrink: 0; }
+.tb-search:focus-within { background: var(--s2); }
+.tb-search-icon { color: var(--t3); font-size: 0.8rem; flex-shrink: 0; }
 .tb-search-inp {
   flex: 1; background: none; border: none; color: var(--t1);
-  font-size: 0.76rem; font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.8rem; font-family: 'IBM Plex Sans', sans-serif;
   min-width: 0;
 }
-.tb-search-inp::placeholder { color: var(--t3); }
+.tb-search-inp::placeholder { color: var(--t3); font-weight: 300; }
 .tb-search-clear {
   color: var(--t3); font-size: 0.65rem; padding: 2px 4px;
   opacity: 0; transition: opacity .15s;
@@ -152,12 +151,12 @@ a { color: inherit; text-decoration: none; }
 /* Topbar actions */
 .tb-actions {
   display: flex; align-items: center;
-  padding: 0 10px; gap: 2px; flex-shrink: 0;
+  padding: 0 12px; gap: 2px; flex-shrink: 0;
 }
 .tb-action {
-  width: 30px; height: 30px;
+  width: 32px; height: 32px;
   display: flex; align-items: center; justify-content: center;
-  color: var(--t3); font-size: 0.78rem; letter-spacing: 0;
+  color: var(--t3); font-size: 0.82rem; letter-spacing: 0;
   border: 1px solid transparent; transition: all .15s;
 }
 .tb-action:hover { color: var(--t1); background: var(--s3); border-color: var(--b1); }
@@ -177,26 +176,24 @@ a { color: inherit; text-decoration: none; }
 
 .ftab {
   display: flex; align-items: center; gap: 5px;
-  padding: 0 15px; flex-shrink: 0;
-  font-size: 0.7rem; font-weight: 500; color: var(--t2);
-  border-bottom: 2px solid transparent;
-  border-right: 1px solid var(--b0);
+  padding: 0 14px; flex-shrink: 0;
+  font-size: 0.68rem; font-weight: 500; color: var(--t3);
+  border-bottom: 1.5px solid transparent;
   cursor: pointer; white-space: nowrap;
-  transition: color .15s, border-color .15s, background .15s;
-  letter-spacing: .01em;
+  transition: color .12s, border-color .12s;
+  letter-spacing: .02em; text-transform: uppercase;
 }
-.ftab:hover { color: var(--t1); background: rgba(255,255,255,0.02); }
+.ftab:hover { color: var(--t2); }
 .ftab.active {
-  color: var(--ochre);
-  border-bottom-color: var(--ochre);
-  background: rgba(200,155,60,0.04);
+  color: var(--t1);
+  border-bottom-color: var(--t1);
 }
 .ftab-n {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; color: var(--t3);
-  transition: color .15s;
+  font-size: 0.56rem; color: var(--t3);
+  transition: color .12s;
 }
-.ftab.active .ftab-n { color: rgba(200,155,60,0.55); }
+.ftab.active .ftab-n { color: var(--t2); }
 
 /* ═══════════════════════════════════════════════════════════
    BODY
@@ -208,87 +205,239 @@ a { color: inherit; text-decoration: none; }
 ═══════════════════════════════════════════════════════════ */
 #sidebar {
   width: var(--sb-w); flex-shrink: 0;
-  background: var(--s1); border-right: 1px solid var(--b1);
+  background: #f5f4f1;
+  border-right: 1px solid var(--b1);
   display: flex; flex-direction: column; overflow: hidden;
   transition: width .2s cubic-bezier(.4,0,.2,1);
   position: relative;
 }
 #sidebar.closed { width: 0; }
 
+/* ── Header ── */
 .sb-head {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 13px 8px;
+  padding: 22px 20px 18px;
   border-bottom: 1px solid var(--b0);
   flex-shrink: 0;
 }
-.sb-head-lbl {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.55rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--t3);
+.sb-head-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.62rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--t1);
+  line-height: 1; margin-bottom: 4px;
 }
-.sb-head-cnt {
+.sb-head-sub {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; color: var(--t3);
+  font-size: 0.56rem; color: var(--t3);
+  letter-spacing: .08em; text-transform: uppercase;
 }
 
+/* ── Section header ── */
+.sb-section-hdr {
+  padding: 16px 20px 10px;
+  border-bottom: 1px solid var(--b0);
+  flex-shrink: 0;
+}
+.sb-section-hdr-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.58rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .16em; color: var(--t1);
+  line-height: 1; margin-bottom: 3px;
+}
+.sb-section-hdr-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t3);
+  letter-spacing: .08em; text-transform: uppercase;
+}
+
+/* ── Venue list ── */
 .sb-list { flex: 1; overflow-y: auto; }
 
-/* Venue row */
 .sv {
-  display: flex; align-items: center; gap: 9px;
-  padding: 8px 13px;
+  display: flex; align-items: flex-start; gap: 0;
+  padding: 12px 20px;
   border-bottom: 1px solid var(--b0);
   cursor: pointer; position: relative;
   transition: background .1s;
 }
-.sv:hover { background: var(--s2); }
-.sv.active { background: var(--s2); }
+.sv:hover { background: rgba(0,0,0,0.025); }
+.sv.active { background: rgba(0,0,0,0.04); }
 .sv.active::before {
   content: ''; position: absolute;
   left: 0; top: 0; bottom: 0; width: 2px;
-  background: var(--ochre);
+  background: var(--t1);
 }
 .sv-rank {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.55rem; color: var(--t3);
-  width: 14px; text-align: right; flex-shrink: 0;
+  font-size: 0.54rem; color: var(--t3);
+  width: 24px; flex-shrink: 0; padding-top: 2px;
 }
+.sv-body { flex: 1; min-width: 0; }
 .sv-name {
-  flex: 1; font-size: 0.74rem; font-weight: 500; color: var(--t1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.70rem; font-weight: 600; color: var(--t1);
+  letter-spacing: .04em; text-transform: uppercase;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  min-width: 0;
+  line-height: 1.2; margin-bottom: 3px;
+}
+.sv-addr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.53rem; color: var(--t3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  letter-spacing: .02em; line-height: 1;
 }
 .sv-price {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.74rem; font-weight: 500; flex-shrink: 0;
+  font-size: 0.72rem; font-weight: 600; flex-shrink: 0;
+  padding-top: 2px; padding-left: 10px;
 }
 .sv-price.deal  { color: var(--deal-t); }
 .sv-price.avg   { color: var(--avg-t); }
 .sv-price.pricey{ color: var(--exp-t); }
 
+/* ── Empty state ── */
 .sb-empty {
-  flex: 1; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 24px; text-align: center;
+  padding: 32px 20px; text-align: center;
+  display: none; flex-direction: column; align-items: center; justify-content: center;
 }
 .sb-empty-mark {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; color: var(--t3);
-  letter-spacing: .1em; margin-bottom: 8px;
+  font-size: 0.54rem; color: var(--t3);
+  letter-spacing: .14em; margin-bottom: 8px; text-transform: uppercase;
 }
-.sb-empty-txt { font-size: 0.7rem; color: var(--t3); line-height: 1.6; }
+.sb-empty-txt { font-size: 0.70rem; color: var(--t3); line-height: 1.65; }
 
-/* Sidebar edge toggle handle */
-.sb-edge {
-  position: absolute; right: -1px; top: 50%;
-  transform: translateY(-50%);
-  width: 14px; height: 40px; z-index: 10;
-  background: var(--s2); border: 1px solid var(--b1);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; color: var(--t3); font-size: 0.55rem;
-  transition: background .15s, color .15s;
+/* ── Filters ── */
+.sb-filters {
+  border-top: 1px solid var(--b1);
+  flex-shrink: 0;
+  background: #f5f4f1;
 }
-.sb-edge:hover { background: var(--s3); color: var(--t1); }
+.sb-filter-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px 10px;
+  border-bottom: 1px solid var(--b0);
+}
+.sb-filter-hdr-lbl {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.58rem; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--t1);
+}
+.sb-filter-reset {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem; color: var(--t3); letter-spacing: .08em;
+  text-transform: uppercase; cursor: pointer; transition: color .12s;
+}
+.sb-filter-reset:hover { color: var(--t1); }
+
+.sb-filter-row {
+  padding: 11px 20px;
+  border-bottom: 1px solid var(--b0);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.sb-filter-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t3);
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.sb-filter-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.60rem; color: var(--t2); letter-spacing: .04em;
+}
+
+/* Price range slider */
+.sb-slider-wrap { display: flex; align-items: center; gap: 8px; }
+.sb-slider-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t2); letter-spacing: .02em;
+  flex-shrink: 0;
+}
+input[type=range].sb-range {
+  -webkit-appearance: none; flex: 1; height: 1px;
+  background: var(--b2); outline: none; cursor: pointer;
+}
+input[type=range].sb-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 10px; height: 10px;
+  background: var(--t1); border-radius: 50%; cursor: pointer;
+}
+input[type=range].sb-range::-moz-range-thumb {
+  width: 10px; height: 10px; background: var(--t1);
+  border-radius: 50%; cursor: pointer; border: none;
+}
+
+/* Toggle switch */
+.sb-toggle-row {
+  padding: 11px 20px;
+  border-bottom: 1px solid var(--b0);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sb-toggle-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t2);
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.sb-toggle {
+  width: 32px; height: 18px; background: var(--b2);
+  border-radius: 0; position: relative; cursor: pointer;
+  transition: background .15s; flex-shrink: 0;
+  border: 1px solid var(--b2);
+}
+.sb-toggle.on { background: var(--t1); border-color: var(--t1); }
+.sb-toggle::after {
+  content: ''; position: absolute;
+  top: 2px; left: 2px; width: 12px; height: 12px;
+  background: #fff; transition: left .15s;
+}
+.sb-toggle.on::after { left: 16px; }
+
+/* Hide filters button */
+.sb-hide-btn {
+  margin: 12px 20px; padding: 10px;
+  background: var(--t1); color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase;
+  text-align: center; cursor: pointer;
+  transition: background .12s;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sb-hide-btn:hover { background: #2a2a28; }
+
+/* Footer */
+.sb-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--b0);
+  flex-shrink: 0;
+}
+.sb-footer-v {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem; color: var(--t3);
+  letter-spacing: .08em; text-transform: uppercase;
+  margin-bottom: 1px;
+}
+.sb-footer-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem; color: var(--t3);
+  letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* Sidebar edge toggle handle — always fixed on left */
+.sb-edge {
+  display: none;
+}
+
+/* Persistent left toggle tab (shown when sidebar closed) */
+#sb-open-tab {
+  position: fixed;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 20px; height: 48px;
+  background: var(--s1); border: 1px solid var(--b1);
+  border-left: none;
+  display: none; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--t2); font-size: 0.55rem;
+  z-index: 550; transition: background .12s, color .12s;
+}
+#sb-open-tab:hover { background: var(--s3); color: var(--t1); }
 
 /* ═══════════════════════════════════════════════════════════
    MAP
@@ -296,23 +445,30 @@ a { color: inherit; text-decoration: none; }
 #map-wrap { flex: 1; position: relative; overflow: hidden; }
 #map { width: 100%; height: 100%; }
 
+/* Map tile filter — architectural paper feel */
+.leaflet-tile-pane {
+  filter: saturate(0.88) brightness(1.01) contrast(0.97);
+}
+
 /* Leaflet overrides */
 .leaflet-control-attribution {
-  background: rgba(8,8,8,0.75) !important; color: var(--t3) !important;
-  font-size: 9px !important; padding: 2px 6px !important;
+  background: rgba(255,255,255,0.88) !important; color: var(--t3) !important;
+  font-size: 9px !important; padding: 2px 7px !important;
   border-radius: 0 !important; border: none !important;
+  border-top: 1px solid var(--b1) !important;
 }
 .leaflet-control-attribution a { color: var(--t2) !important; }
 
 .leaflet-control-zoom {
   border: 1px solid var(--b2) !important;
-  box-shadow: none !important; border-radius: 0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important;
+  border-radius: 0 !important;
 }
 .leaflet-control-zoom a {
   background: var(--s1) !important; color: var(--t2) !important;
   border-color: var(--b1) !important;
-  width: 26px !important; height: 26px !important;
-  line-height: 26px !important; font-size: 14px !important;
+  width: 28px !important; height: 28px !important;
+  line-height: 28px !important; font-size: 15px !important;
   border-radius: 0 !important;
 }
 .leaflet-control-zoom a:hover { background: var(--s3) !important; color: var(--t1) !important; }
@@ -320,8 +476,9 @@ a { color: inherit; text-decoration: none; }
 /* Legend */
 #legend {
   position: absolute; bottom: 28px; left: 12px; z-index: 400;
-  background: rgba(8,8,8,0.82); border: 1px solid var(--b1);
-  padding: 8px 10px; display: none;
+  background: rgba(255,255,255,0.92); border: 1px solid var(--b1);
+  padding: 8px 11px; display: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .leg-row { display: flex; align-items: center; gap: 7px; margin-bottom: 4px; }
 .leg-row:last-child { margin-bottom: 0; }
@@ -334,156 +491,191 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.57rem; color: var(--t2); letter-spacing: .04em;
 }
 
-/* Popup */
-.leaflet-popup-content-wrapper {
-  background: var(--s2) !important; color: var(--t1) !important;
-  border: 1px solid var(--b2) !important;
-  border-radius: 0 !important;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.75) !important;
-  padding: 0 !important;
-}
-.leaflet-popup-tip-container { display: none; }
-.leaflet-popup-content { margin: 0 !important; padding: 0 !important; width: auto !important; }
-.leaflet-popup-close-button {
-  color: var(--t3) !important; font-size: 14px !important;
-  top: 5px !important; right: 7px !important;
-}
-.leaflet-popup-close-button:hover { color: var(--t1) !important; }
-
-.pop {
-  padding: 11px 13px; min-width: 175px; max-width: 230px;
-}
-.pop-name {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.78rem; font-weight: 600; color: var(--t1);
-  line-height: 1.3; margin-bottom: 2px;
-  padding-right: 14px;
-}
-.pop-cat { font-size: 0.62rem; color: var(--t3); margin-bottom: 9px; }
-.pop-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 3px 0; border-top: 1px solid var(--b0);
-  font-size: 0.69rem;
-}
-.pop-row:first-of-type { border-top: none; }
-.pop-row-name { color: var(--t2); }
-.pop-row-price { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: var(--t1); }
-.pop-cta {
-  display: block; margin-top: 9px; padding: 5px 0;
-  text-align: center; font-size: 0.62rem; font-weight: 600;
-  color: var(--ochre); border: 1px solid var(--ochre-b);
-  letter-spacing: .08em; text-transform: uppercase;
-  transition: background .15s; cursor: pointer; background: none;
-  width: 100%;
-}
-.pop-cta:hover { background: var(--ochre-d); }
-
 /* ═══════════════════════════════════════════════════════════
    PRICE MARKERS
 ═══════════════════════════════════════════════════════════ */
 .pm {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; font-weight: 500;
+  font-size: 10px; font-weight: 600;
   padding: 3px 6px; line-height: 1;
-  border: 1px solid; white-space: nowrap;
-  cursor: pointer; letter-spacing: .01em;
-  transition: transform .12s, filter .12s;
+  border: none; white-space: nowrap;
+  cursor: pointer; letter-spacing: .03em;
+  transition: transform .10s, box-shadow .10s;
   display: inline-block;
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+  position: relative;
 }
-.pm:hover  { transform: scale(1.14); }
-.pm.sel    { transform: scale(1.18); filter: brightness(1.25); }
+/* dot anchor below marker */
+.pm::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px;
+  background: #111; border-radius: 50%;
+}
+.pm:hover  { transform: scale(1.10) translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.28); }
+.pm.sel    { transform: scale(1.14) translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.32); }
 
-.pm-deal  { color: var(--deal-t); background: var(--deal-bg); border-color: var(--deal-b); }
-.pm-avg   { color: var(--avg-t);  background: var(--avg-bg);  border-color: var(--avg-b); }
-.pm-pricey{ color: var(--exp-t);  background: var(--exp-bg);  border-color: var(--exp-b); }
-
-.pm-deal.sel  { box-shadow: 0 0 8px rgba(78,168,112,0.3); }
-.pm-avg.sel   { box-shadow: 0 0 8px rgba(154,134,80,0.3); }
-.pm-pricey.sel{ box-shadow: 0 0 8px rgba(160,72,72,0.3); }
+.pm-deal  { background: #1e6639; }
+.pm-avg   { background: #8a6400; }
+.pm-pricey{ background: #8b1a1a; }
 
 /* ═══════════════════════════════════════════════════════════
-   DETAIL PANEL
+   RADIUS BAR
 ═══════════════════════════════════════════════════════════ */
-#detail {
-  width: var(--det-w); flex-shrink: 0;
-  background: var(--s1); border-left: 1px solid var(--b1);
-  display: flex; flex-direction: column; overflow: hidden;
-  transform: translateX(100%);
-  transition: transform .22s cubic-bezier(.4,0,.2,1);
+#rbar {
+  height: 30px; flex-shrink: 0;
+  background: var(--s2); border-bottom: 1px solid var(--b1);
+  display: flex; align-items: center; gap: 0;
+  padding: 0 14px; z-index: 400; overflow-x: auto;
+  scrollbar-width: none;
 }
-#detail.open { transform: translateX(0); }
+#rbar::-webkit-scrollbar { display: none; }
+
+.rb-geo {
+  display: flex; align-items: center; gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.57rem; color: var(--t2); letter-spacing: .07em;
+  padding: 2px 8px; border: 1px solid var(--b1);
+  background: var(--s1);
+  cursor: pointer; transition: all .15s; flex-shrink: 0;
+  margin-right: 10px; text-transform: uppercase;
+}
+.rb-geo:hover { color: var(--t1); border-color: var(--b2); }
+.rb-geo.active { color: var(--t1); border-color: var(--t1); background: var(--t1); color: var(--s1); }
+.rb-geo.loading { color: var(--t3); animation: pulse .9s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+
+.rb-divider { width: 1px; height: 12px; background: var(--b1); margin: 0 8px; flex-shrink: 0; }
+
+.rb-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.57rem; color: var(--t3); letter-spacing: .05em;
+  padding: 2px 8px; border: 1px solid transparent;
+  cursor: pointer; transition: all .15s; flex-shrink: 0;
+}
+.rb-btn:hover { color: var(--t1); background: var(--s3); }
+.rb-btn.active { color: var(--t1); border-color: var(--b2); background: var(--s1); font-weight: 600; }
+.rb-radii { display: none; align-items: center; gap: 1px; }
+.rb-radii.visible { display: flex; }
+
+/* ═══════════════════════════════════════════════════════════
+   VENUE CARD (floating modal — dynamic position)
+═══════════════════════════════════════════════════════════ */
+#venue-card {
+  position: fixed;
+  width: 310px; max-height: 72vh;
+  background: var(--s1); border: 1px solid var(--b2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+  display: flex; flex-direction: column;
+  z-index: 600;
+  opacity: 0; transform: scale(0.97) translateY(4px);
+  transition: opacity .18s, transform .18s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+#venue-card.open {
+  opacity: 1; transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+/* card text sizing */
+#venue-card .det-name    { font-size: 1.08rem; color: var(--t1); }
+#venue-card .det-cat     { font-size: 0.76rem; }
+#venue-card .det-addr    { font-size: 0.76rem; }
+#venue-card .det-sec-lbl { font-size: 0.58rem; }
+#venue-card .det-item-n  { font-size: 0.84rem; }
+#venue-card .det-item-s  { font-size: 0.68rem; }
+#venue-card .det-item-p  { font-size: 0.92rem; font-weight: 600; }
+#venue-card .det-warn    { font-size: 0.70rem; }
+#venue-card .det-act     { font-size: 0.76rem; }
+#venue-card .det-meta    { font-size: 0.60rem; }
+#venue-card .det-close   { font-size: 0.66rem; }
+
+@media (max-width: 768px) {
+  #venue-card {
+    bottom: 0 !important; top: auto !important;
+    left: 0 !important; right: 0 !important;
+    width: 100% !important;
+    max-height: 55vh;
+    border-left: none; border-right: none; border-bottom: none;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
+    transform: translateY(10px);
+  }
+  #venue-card.open { transform: translateY(0); }
+}
 
 .det-head {
-  padding: 13px 13px 11px;
-  border-bottom: 1px solid var(--b1); flex-shrink: 0;
+  padding: 16px 16px 14px;
+  border-bottom: 1px solid var(--b0); flex-shrink: 0;
 }
 .det-toprow {
-  display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px;
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
 }
 .det-meta {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.56rem; color: var(--t3); letter-spacing: .07em;
+  font-size: 0.54rem; color: var(--t3); letter-spacing: .12em; text-transform: uppercase;
 }
 .det-close {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; color: var(--t3); letter-spacing: .04em;
-  padding: 3px 7px; border: 1px solid var(--b1);
-  transition: all .15s;
+  font-size: 0.56rem; color: var(--t3); letter-spacing: .04em;
+  padding: 3px 9px; border: 1px solid var(--b1);
+  transition: all .12s;
 }
 .det-close:hover { background: var(--s3); color: var(--t1); }
 
 .det-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.98rem; font-weight: 600; color: var(--t1);
-  letter-spacing: -.02em; line-height: 1.2; margin-bottom: 4px;
+  font-size: 1.1rem; font-weight: 700; color: var(--t1);
+  letter-spacing: -.02em; line-height: 1.15; margin-bottom: 5px;
 }
-.det-cat  { font-size: 0.65rem; color: var(--t3); margin-bottom: 6px; }
-.det-addr { font-size: 0.67rem; color: var(--t2); display: flex; gap: 5px; align-items: flex-start; line-height: 1.4; }
+.det-cat  { font-size: 0.66rem; color: var(--t3); margin-bottom: 8px; letter-spacing: .02em; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; }
+.det-addr { font-size: 0.73rem; color: var(--t2); display: flex; gap: 5px; align-items: flex-start; line-height: 1.45; }
 
 .det-body { flex: 1; overflow-y: auto; }
 
-.det-sec { padding: 10px 13px; border-bottom: 1px solid var(--b0); }
+.det-sec { padding: 13px 16px; border-bottom: 1px solid var(--b0); }
 .det-sec-lbl {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.52rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--t3); margin-bottom: 8px;
+  font-size: 0.50rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--t3); margin-bottom: 10px;
 }
 .det-item {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  padding: 6px 0; border-bottom: 1px solid var(--b0); gap: 10px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px solid var(--b0); gap: 12px;
 }
 .det-item:last-child { border-bottom: none; }
-.det-item-n { font-size: 0.74rem; color: var(--t1); line-height: 1.3; font-weight: 500; }
-.det-item-s { font-size: 0.6rem; color: var(--t3); margin-top: 1px; }
+.det-item-n { font-size: 0.80rem; color: var(--t1); line-height: 1.3; font-weight: 400; }
+.det-item-s { font-size: 0.60rem; color: var(--t3); margin-top: 2px; font-family: 'IBM Plex Mono', monospace; letter-spacing: .04em; }
 .det-item-p {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.8rem; font-weight: 500; color: var(--t1); flex-shrink: 0;
+  font-size: 0.88rem; font-weight: 600; color: var(--t1); flex-shrink: 0;
 }
 
 .det-warn {
-  padding: 9px 13px; border-bottom: 1px solid var(--b0);
-  font-size: 0.64rem; color: var(--t3); line-height: 1.65;
-  background: rgba(200,155,60,0.03);
+  padding: 11px 16px; border-bottom: 1px solid var(--b0);
+  font-size: 0.66rem; color: var(--t3); line-height: 1.65;
+  background: var(--s2);
 }
-.det-warn b { color: var(--ochre); font-weight: 500; }
+.det-warn b { color: var(--t2); font-weight: 600; }
 
-.det-actions { padding: 9px 13px; border-bottom: 1px solid var(--b0); display: flex; flex-direction: column; gap: 4px; }
+.det-actions { padding: 11px 16px; border-bottom: 1px solid var(--b0); display: flex; flex-direction: column; gap: 4px; }
 .det-act {
-  padding: 7px 11px; font-size: 0.68rem; font-weight: 500;
-  border: 1px solid var(--b1); color: var(--t2); text-align: left;
-  letter-spacing: .01em; transition: all .15s;
-  display: flex; align-items: center; gap: 7px;
+  padding: 8px 12px; font-size: 0.70rem; font-weight: 400;
+  border: 1px solid var(--b0); color: var(--t2); text-align: left;
+  letter-spacing: .02em; transition: all .12s;
+  display: flex; align-items: center; gap: 8px;
 }
-.det-act:hover { background: var(--s2); color: var(--t1); border-color: var(--b2); }
-.det-act.primary { color: var(--ochre); border-color: var(--ochre-b); }
-.det-act.primary:hover { background: var(--ochre-d); }
+.det-act:hover { background: var(--s2); color: var(--t1); border-color: var(--b1); }
+.det-act.primary { color: var(--t1); border-color: var(--b1); font-weight: 500; }
+.det-act.primary:hover { background: var(--s3); }
 
 .det-src {
-  padding: 8px 13px;
+  padding: 10px 16px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; color: var(--t3);
+  font-size: 0.56rem; color: var(--t3);
 }
-.det-src a { color: var(--t2); text-underline-offset: 2px; text-decoration: underline; }
+.det-src a { color: var(--t2); text-underline-offset: 3px; text-decoration: underline; }
 .det-src a:hover { color: var(--t1); }
 
 /* ═══════════════════════════════════════════════════════════
@@ -491,7 +683,7 @@ a { color: inherit; text-decoration: none; }
 ═══════════════════════════════════════════════════════════ */
 #info-ov {
   position: fixed; inset: 0; z-index: 800;
-  background: rgba(0,0,0,0.55);
+  background: rgba(20,20,18,0.35);
   opacity: 0; pointer-events: none;
   transition: opacity .2s;
 }
@@ -585,42 +777,26 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   :root { --topbar-h: 46px; --fbar-h: 38px; }
 
-  #sidebar, #detail { display: none; }
+  #sidebar { display: none; }
 
   /* Mobile bottom sheet */
   .mob-sheet {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 600;
     background: var(--s1); border-top: 1px solid var(--b1);
     display: flex; flex-direction: column; max-height: 70vh;
-    transform: translateY(calc(100% - 86px));
-    transition: transform .24s cubic-bezier(.4,0,.2,1);
+    transform: translateY(calc(100% - 82px));
+    transition: transform .22s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
   }
   .mob-sheet.up { transform: translateY(0); }
 
-  .ms-handle { width: 32px; height: 3px; background: var(--b2); margin: 9px auto 0; cursor: pointer; }
+  .ms-handle { width: 28px; height: 2px; background: var(--b2); margin: 8px auto 0; cursor: pointer; }
   .ms-peek { padding: 7px 14px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-  .ms-peek-l .ms-title { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; font-weight: 500; color: var(--t1); }
-  .ms-peek-l .ms-sub   { font-size: 0.62rem; color: var(--t3); margin-top: 1px; }
+  .ms-peek-l .ms-title { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 600; color: var(--t1); letter-spacing: .04em; text-transform: uppercase; }
+  .ms-peek-l .ms-sub   { font-size: 0.64rem; color: var(--t3); margin-top: 2px; }
   .ms-chevron { font-size: 0.65rem; color: var(--t3); font-family: 'IBM Plex Mono', monospace; }
   .ms-list { overflow-y: auto; flex: 1; }
 
-  /* Mobile detail fullscreen */
-  .mob-det-ov {
-    position: fixed; inset: 0; z-index: 700;
-    background: var(--s1); overflow-y: auto;
-    transform: translateY(100%);
-    transition: transform .24s cubic-bezier(.4,0,.2,1);
-    display: none;
-  }
-  .mob-det-ov.open { transform: translateY(0); }
-
-  .mob-det-back {
-    padding: 12px 14px; border-bottom: 1px solid var(--b1);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.65rem; color: var(--t2); letter-spacing: .04em;
-    cursor: pointer;
-    display: flex; align-items: center; gap: 8px;
-  }
 }
 
 @media (min-width: 769px) {
@@ -634,9 +810,9 @@ a { color: inherit; text-decoration: none; }
      LOADER
 ──────────────────────────────────────────────────────── -->
 <div id="loader">
-  <div class="ld-wordmark">PriceLens</div>
+  <div class="ld-wordmark">SURPRICE!</div>
   <div class="ld-bar"></div>
-  <div class="ld-city">MILAN · PRICE TRANSPARENCY</div>
+  <div class="ld-city">MILAN · FIND MY DEAL</div>
 </div>
 
 <!-- ───────────────────────────────────────────────────────
@@ -647,8 +823,8 @@ a { color: inherit; text-decoration: none; }
   <!-- TOP BAR -->
   <header id="topbar">
     <div class="tb-logo">
-      <div class="tb-logo-main"><span>◈</span> PRICELENS</div>
-      <div class="tb-logo-sub">MILAN PRICE MAP</div>
+      <div class="tb-logo-main"><span>◈</span> SURPRICE!</div>
+      <div class="tb-logo-sub">FIND MY DEAL</div>
     </div>
     <div class="tb-search">
       <span class="tb-search-icon">⌕</span>
@@ -656,7 +832,7 @@ a { color: inherit; text-decoration: none; }
       <button class="tb-search-clear" id="srch-clear" onclick="clearSearch()">✕</button>
     </div>
     <div class="tb-actions">
-      <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()">≡</button>
+      <button class="rb-geo" id="rb-geo-btn" onclick="activateGeo()" style="margin:0;border:none;padding:0 14px;height:100%;font-size:0.57rem;">📍 Use location</button>
       <button class="tb-action" id="info-btn" title="About · Data · Stack" onclick="toggleInfo()">ⓘ</button>
     </div>
   </header>
@@ -664,20 +840,69 @@ a { color: inherit; text-decoration: none; }
   <!-- FILTER BAR -->
   <nav id="fbar" role="tablist" aria-label="Product filter"></nav>
 
+  <!-- RADIUS BAR -->
+  <div id="rbar">
+    <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:6px;">≡</button>
+    <div class="rb-divider"></div>
+    <div class="rb-radii" id="rb-radii">
+      <button class="rb-btn" onclick="setRadius(300)">300m</button>
+      <button class="rb-btn" onclick="setRadius(500)">500m</button>
+      <button class="rb-btn" onclick="setRadius(1000)">1km</button>
+      <button class="rb-btn" onclick="setRadius(2000)">2km</button>
+      <button class="rb-btn" onclick="setRadius(5000)">5km</button>
+      <button class="rb-btn active" onclick="setRadius(null)">Tutti</button>
+    </div>
+  </div>
+
   <!-- BODY -->
   <div id="body">
 
     <!-- SIDEBAR -->
     <aside id="sidebar">
       <div class="sb-head">
-        <span class="sb-head-lbl">ranked by price</span>
-        <span class="sb-head-cnt" id="sb-cnt">—</span>
+        <div class="sb-head-title">Nearby</div>
+        <div class="sb-head-sub" id="sb-cnt">— places</div>
+      </div>
+      <div class="sb-section-hdr">
+        <div class="sb-section-hdr-title">Best Deals</div>
+        <div class="sb-section-hdr-sub">Good prices near you</div>
       </div>
       <div class="sb-list" id="sb-list"></div>
-      <div class="sb-empty" id="sb-empty" style="display:none;">
+      <div class="sb-empty" id="sb-empty">
         <div class="sb-empty-mark">— no results —</div>
         <div class="sb-empty-txt">No venues match<br>your search.</div>
       </div>
+
+      <!-- FILTERS -->
+      <div class="sb-filters">
+        <div class="sb-filter-hdr">
+          <span class="sb-filter-hdr-lbl">Filters</span>
+          <span class="sb-filter-reset" onclick="resetFilters()">Reset</span>
+        </div>
+        <div class="sb-filter-row">
+          <span class="sb-filter-lbl">Price Range</span>
+          <div class="sb-slider-wrap">
+            <span class="sb-slider-lbl" id="pr-min">€0</span>
+            <input type="range" class="sb-range" id="pr-slider" min="0" max="30" value="30" step="1" oninput="onPriceSlider(this.value)">
+            <span class="sb-slider-lbl" id="pr-max">€30+</span>
+          </div>
+        </div>
+        <div class="sb-toggle-row">
+          <span class="sb-toggle-lbl">Show only deals</span>
+          <div class="sb-toggle" id="deals-toggle" onclick="toggleDeals()"></div>
+        </div>
+        <div class="sb-hide-btn" onclick="toggleSidebar()">
+          <span>Hide panel</span>
+          <span>‹</span>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="sb-footer">
+        <div class="sb-footer-v">Surprice! v0.1</div>
+        <div class="sb-footer-tag">Drink prices. Compared. Nearby.</div>
+      </div>
+
       <!-- Edge collapse handle -->
       <div class="sb-edge" id="sb-edge" onclick="toggleSidebar()">‹</div>
     </aside>
@@ -685,20 +910,17 @@ a { color: inherit; text-decoration: none; }
     <!-- MAP -->
     <div id="map-wrap">
       <div id="map"></div>
-      <!-- Legend -->
-      <div id="legend">
-        <div class="leg-row"><div class="leg-sw lc"></div><span class="leg-label">cheapest</span></div>
-        <div class="leg-row"><div class="leg-sw la"></div><span class="leg-label">average</span></div>
-        <div class="leg-row"><div class="leg-sw le"></div><span class="leg-label">expensive</span></div>
-      </div>
     </div>
-
-    <!-- DETAIL PANEL -->
-    <aside id="detail"></aside>
 
   </div><!-- /body -->
 
 </div><!-- /app -->
+
+<!-- VENUE CARD (floating modal) -->
+<div id="venue-card"></div>
+
+<!-- SIDEBAR REOPEN TAB (left edge, shown when sidebar closed) -->
+<div id="sb-open-tab" onclick="toggleSidebar()">›</div>
 
 <!-- ───────────────────────────────────────────────────────
      INFO OVERLAY (right drawer)
@@ -707,7 +929,7 @@ a { color: inherit; text-decoration: none; }
   <div id="info-panel">
 
     <div class="inf-hdr">
-      <span class="inf-hdr-title">PriceLens</span>
+      <span class="inf-hdr-title">Surprice</span>
       <button class="inf-hdr-close" onclick="toggleInfo()">close ✕</button>
     </div>
 
@@ -785,12 +1007,6 @@ a { color: inherit; text-decoration: none; }
   <div class="ms-list" id="ms-list"></div>
 </div>
 
-<!-- MOBILE: DETAIL OVERLAY (outside app to avoid stacking context) -->
-<div class="mob-det-ov" id="mob-det" style="display:none;">
-  <div class="mob-det-back" onclick="closeMobDet()">← back</div>
-  <div id="mob-det-body"></div>
-</div>
-
 <!-- LEAFLET -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -801,13 +1017,19 @@ a { color: inherit; text-decoration: none; }
 const S = {
   data:        null,
   product:     null,
-  allVenues:   [],   // full list for current product
-  venues:      [],   // filtered (search)
+  allVenues:   [],
+  venues:      [],
   selIdx:      null,
   markers:     [],
   map:         null,
   sbOpen:      true,
   mobSheetUp:  false,
+  geo: {
+    lat:    null,
+    lng:    null,
+    radius: null,   // metres, null = tutti
+    marker: null,
+  },
 };
 
 /* ──────────────────────────────────────────
@@ -862,6 +1084,7 @@ async function init() {
   buildFilterBar();
   setupSearch();
   setupKeyboard();
+  setupGeo();
 
   // Fade out loader, show app
   const ld = document.getElementById('loader');
@@ -879,10 +1102,10 @@ async function init() {
 ─────────────────────────────────────────── */
 function initMap() {
   S.map = L.map('map', {
-    center: [45.464, 9.190], zoom: 13,
+    center: [45.464, 9.190], zoom: 14,
     zoomControl: false, attributionControl: true,
   });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap &copy; CARTO',
     subdomains: 'abcd', maxZoom: 19,
   }).addTo(S.map);
@@ -929,7 +1152,20 @@ function selectProduct(code) {
   // Update search placeholder
   srch.placeholder = `filter ${m.label.toLowerCase()} venues by name…`;
 
-  document.getElementById('legend').style.display = 'block';
+
+  // reset price slider range to current product prices
+  const prices = S.allVenues.map(v => v.min_price);
+  const minP = Math.floor(Math.min(...prices));
+  const maxP = Math.ceil(Math.max(...prices));
+  const slider = document.getElementById('pr-slider');
+  if (slider) {
+    slider.min = minP; slider.max = maxP + 2; slider.value = maxP + 2;
+    document.getElementById('pr-min').textContent = `€${minP}`;
+    document.getElementById('pr-max').textContent = `€${maxP}+`;
+  }
+  F.maxPrice = 999; F.dealsOnly = false;
+  document.getElementById('deals-toggle')?.classList.remove('on');
+
   closeDetail();
   render(S.venues);
 }
@@ -971,7 +1207,6 @@ function render(venues) {
       className: '', iconSize: null, iconAnchor: [0, 0], popupAnchor: [0, -6],
     });
     const marker = L.marker([v.lat, v.lng], { icon, zIndexOffset: i });
-    marker.bindPopup(mkPopup(v, i), { maxWidth: 240 });
     marker.on('click', () => openDetail(i));
     marker.addTo(S.map);
     S.markers.push(marker);
@@ -985,7 +1220,8 @@ function render(venues) {
     .map((v, i) => ({ v, i }))
     .sort((a, b) => a.v.min_price - b.v.min_price);
 
-  document.getElementById('sb-cnt').textContent = venues.length;
+  const n = venues.length;
+  document.getElementById('sb-cnt').textContent = `${n} ${n === 1 ? 'place' : 'places'}`;
 
   const listEl  = document.getElementById('sb-list');
   const emptyEl = document.getElementById('sb-empty');
@@ -997,18 +1233,23 @@ function render(venues) {
     emptyEl.style.display = 'none';
     listEl.innerHTML = sorted.map(({ v, i }, rank) => {
       const c = cls(v.min_price, S.allVenues);
+      const num = String(rank + 1).padStart(2, '0');
+      const addr = (v.address || '').replace(', Milano', '').replace(', Milan', '').replace(', Metropolitan City of Milan, Italy', '');
       return `<div class="sv" id="sv-${i}" onclick="openDetail(${i})">
-        <span class="sv-rank">${rank + 1}</span>
-        <span class="sv-name">${esc(v.venue_name)}</span>
+        <span class="sv-rank">${num}</span>
+        <div class="sv-body">
+          <div class="sv-name">${num} — ${esc(v.venue_name)}</div>
+          <div class="sv-addr">${esc(addr)}</div>
+        </div>
         <span class="sv-price ${c}">${fmt(v.min_price)}</span>
       </div>`;
     }).join('');
   }
 
   // Mobile sheet list
-  document.getElementById('ms-list').innerHTML = sorted.slice(0, 15).map(({ v, i }, rank) => {
+  document.getElementById('ms-list').innerHTML = sorted.map(({ v, i }, rank) => {
     const c = cls(v.min_price, S.allVenues);
-    return `<div class="sv" onclick="openMobDet(${i})">
+    return `<div class="sv" onclick="openDetail(${i})">
       <span class="sv-rank">${rank + 1}</span>
       <span class="sv-name">${esc(v.venue_name)}</span>
       <span class="sv-price ${c}">${fmt(v.min_price)}</span>
@@ -1017,49 +1258,65 @@ function render(venues) {
 }
 
 /* ──────────────────────────────────────────
-   POPUP
-─────────────────────────────────────────── */
-function mkPopup(v, idx) {
-  const rows = v.items.slice(0, 4).map(it =>
-    `<div class="pop-row">
-      <span class="pop-row-name">${esc(it.name)}</span>
-      <span class="pop-row-price">${fmt(it.price)}</span>
-    </div>`).join('');
-  return `<div class="pop">
-    <div class="pop-name">${esc(v.venue_name)}</div>
-    <div class="pop-cat">${esc(v.categories || '')}</div>
-    ${rows}
-    <button class="pop-cta" onclick="openDetail(${idx})">open venue →</button>
-  </div>`;
-}
-
-/* ──────────────────────────────────────────
-   DETAIL PANEL
+   VENUE CARD (floating modal)
 ─────────────────────────────────────────── */
 function openDetail(idx) {
-  if (window.innerWidth <= 768) { openMobDet(idx); return; }
-
   const v = window.__V[idx];
   if (!v) return;
   S.selIdx = idx;
 
   if (S.map) S.map.setView([v.lat, v.lng], 15, { animate: true });
 
-  // Highlight marker
   document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
   document.getElementById('mk-' + idx)?.classList.add('sel');
 
-  // Highlight sidebar row
   document.querySelectorAll('.sv').forEach(el => el.classList.remove('active'));
   const row = document.getElementById('sv-' + idx);
   if (row) { row.classList.add('active'); row.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
 
-  const pLabel = META[S.product]?.label || '';
+  const pLabel  = META[S.product]?.label || '';
   const tierStr = v.price_tier ? `${v.price_tier} · ` : '';
   const catStr  = (v.categories || '').split(',')[0].trim();
 
-  document.getElementById('detail').innerHTML = buildDetHtml(v, pLabel, tierStr, catStr);
-  document.getElementById('detail').classList.add('open');
+  const card = document.getElementById('venue-card');
+  card.classList.remove('open');
+  card.innerHTML = buildDetHtml(v, pLabel, tierStr, catStr);
+
+  if (window.innerWidth > 768) {
+    card.style.visibility = 'hidden';
+    requestAnimationFrame(() => {
+      positionCard(card, v.lat, v.lng);
+      card.style.visibility = '';
+      card.classList.add('open');
+    });
+  } else {
+    card.style.cssText = '';
+    requestAnimationFrame(() => card.classList.add('open'));
+  }
+}
+
+function positionCard(card, lat, lng) {
+  const CARD_W = 300, CARD_H = 380, GAP = 14;
+  const pt = S.map.latLngToContainerPoint([lat, lng]);
+  const mapWrap = document.getElementById('map-wrap');
+  const rect = mapWrap.getBoundingClientRect();
+
+  // absolute position within viewport
+  const ax = rect.left + pt.x;
+  const ay = rect.top  + pt.y;
+
+  let left = ax + GAP;
+  let top  = ay - CARD_H / 2;
+
+  // flip left if card goes off right edge
+  if (left + CARD_W > window.innerWidth - 12) left = ax - CARD_W - GAP;
+  // clamp vertically
+  top = Math.max(60, Math.min(top, window.innerHeight - CARD_H - 12));
+
+  card.style.left = left + 'px';
+  card.style.top  = top  + 'px';
+  card.style.bottom = 'auto';
+  card.style.right  = 'auto';
 }
 
 function buildDetHtml(v, pLabel, tierStr, catStr) {
@@ -1111,67 +1368,138 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
 }
 
 function closeDetail() {
-  const det = document.getElementById('detail');
-  det.classList.remove('open');
-  det.innerHTML = '';
+  const card = document.getElementById('venue-card');
+  card.classList.remove('open');
   document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
   document.querySelectorAll('.sv').forEach(el => el.classList.remove('active'));
   S.selIdx = null;
 }
 
 /* ──────────────────────────────────────────
-   MOBILE DETAIL
+   PRICE FILTER + DEALS TOGGLE
 ─────────────────────────────────────────── */
-function openMobDet(idx) {
-  const v = window.__V[idx];
-  if (!v) return;
-  if (S.map) S.map.setView([v.lat, v.lng], 15, { animate: true });
+const F = { maxPrice: 999, dealsOnly: false };
 
-  const pLabel  = META[S.product]?.label || '';
-  const tierStr = v.price_tier ? `${v.price_tier} · ` : '';
-  const catStr  = (v.categories || '').split(',')[0].trim();
-
-  const items = v.items.map(it => `
-    <div class="det-item">
-      <div>
-        <div class="det-item-n">${esc(it.name)}</div>
-        ${it.section ? `<div class="det-item-s">${esc(it.section)}</div>` : ''}
-      </div>
-      <div class="det-item-p">${fmt(it.price)}</div>
-    </div>`).join('');
-
-  const src = v.source_url
-    ? `<a href="${v.source_url}" target="_blank">source menu ↗</a>` : 'no source url';
-
-  document.getElementById('mob-det-body').innerHTML = `
-    <div style="padding:13px 14px 0;">
-      <div class="det-meta" style="margin-bottom:5px;">${esc(tierStr + catStr)}</div>
-      <div class="det-name">${esc(v.venue_name)}</div>
-      <div class="det-cat" style="margin-bottom:6px;">${esc(v.categories || '')}</div>
-      <div class="det-addr">📍 ${esc(v.address || '—')}</div>
-    </div>
-    <div class="det-sec" style="margin-top:10px;">
-      <div class="det-sec-lbl">${pLabel} — menu items</div>
-      ${items}
-    </div>
-    <div class="det-warn">
-      <b>Experimental data.</b> Verify at the bar before ordering.
-    </div>
-    <div class="det-actions">
-      <button class="det-act primary" onclick="soon('Report price')">↑ Report updated price</button>
-      <button class="det-act" onclick="soon('Upload photo')">◉ Upload menu photo</button>
-    </div>
-    <div class="det-src">${src}</div>`;
-
-  const el = document.getElementById('mob-det');
-  el.style.display = 'block';
-  requestAnimationFrame(() => el.classList.add('open'));
+function onPriceSlider(val) {
+  const v = parseInt(val);
+  F.maxPrice = v >= 30 ? 999 : v;
+  document.getElementById('pr-max').textContent = v >= 30 ? '€30+' : `€${v}`;
+  applyFilters();
 }
 
-function closeMobDet() {
-  const el = document.getElementById('mob-det');
-  el.classList.remove('open');
-  setTimeout(() => { el.style.display = 'none'; }, 250);
+function toggleDeals() {
+  F.dealsOnly = !F.dealsOnly;
+  document.getElementById('deals-toggle').classList.toggle('on', F.dealsOnly);
+  applyFilters();
+}
+
+function resetFilters() {
+  F.maxPrice = 999; F.dealsOnly = false;
+  document.getElementById('pr-slider').value = 30;
+  document.getElementById('pr-max').textContent = '€30+';
+  document.getElementById('deals-toggle').classList.remove('on');
+  applyFilters();
+}
+
+/* ──────────────────────────────────────────
+   GEO + RADIUS
+─────────────────────────────────────────── */
+function setupGeo() {
+  if (!navigator.geolocation) {
+    document.getElementById('rb-geo-btn').style.display = 'none';
+  }
+}
+
+function activateGeo() {
+  const btn = document.getElementById('rb-geo-btn');
+  if (S.geo.lat !== null) {
+    // already located — toggle off
+    S.geo.lat = null; S.geo.lng = null; S.geo.radius = null;
+    if (S.geo.marker) { S.geo.marker.remove(); S.geo.marker = null; }
+    btn.classList.remove('active');
+    document.getElementById('rb-radii').classList.remove('visible');
+    document.querySelectorAll('.rb-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.rb-btn[onclick="setRadius(null)"]').classList.add('active');
+    applyFilters();
+    return;
+  }
+  btn.classList.add('loading');
+  btn.textContent = '⏳ Locating…';
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      S.geo.lat = pos.coords.latitude;
+      S.geo.lng = pos.coords.longitude;
+      S.geo.radius = 1000;
+      btn.classList.remove('loading');
+      btn.classList.add('active');
+      btn.textContent = '📍 Location active';
+
+      if (S.geo.marker) S.geo.marker.remove();
+      S.geo.marker = L.circleMarker([S.geo.lat, S.geo.lng], {
+        radius: 7, color: '#1e6639', fillColor: '#1e6639',
+        fillOpacity: 0.9, weight: 2,
+      }).addTo(S.map).bindPopup('You are here');
+
+      document.getElementById('rb-radii').classList.add('visible');
+      document.querySelectorAll('.rb-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('.rb-btn[onclick="setRadius(1000)"]').classList.add('active');
+
+      applyFilters();
+      S.map.setView([S.geo.lat, S.geo.lng], 14, { animate: true });
+    },
+    err => {
+      btn.classList.remove('loading');
+      btn.textContent = '📍 Use location';
+      alert('Could not get your location. Check browser permissions.');
+    },
+    { timeout: 8000 }
+  );
+}
+
+function setRadius(r) {
+  S.geo.radius = r;
+  document.querySelectorAll('.rb-btn').forEach(b => b.classList.remove('active'));
+  const sel = r === null
+    ? document.querySelector('.rb-btn[onclick="setRadius(null)"]')
+    : document.querySelector(`.rb-btn[onclick="setRadius(${r})"]`);
+  if (sel) sel.classList.add('active');
+  applyFilters();
+}
+
+function haversineM(lat1, lng1, lat2, lng2) {
+  const R = 6371000;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function applyFilters() {
+  let venues = S.allVenues;
+
+  // search
+  const q = document.getElementById('srch').value.toLowerCase().trim();
+  if (q) venues = venues.filter(v =>
+    v.venue_name.toLowerCase().includes(q) ||
+    (v.address || '').toLowerCase().includes(q) ||
+    (v.categories || '').toLowerCase().includes(q));
+
+  // radius
+  if (S.geo.lat !== null && S.geo.radius !== null) {
+    venues = venues.filter(v =>
+      haversineM(S.geo.lat, S.geo.lng, v.lat, v.lng) <= S.geo.radius);
+  }
+
+  // price cap
+  if (F.maxPrice < 999) venues = venues.filter(v => v.min_price <= F.maxPrice);
+
+  // deals only
+  if (F.dealsOnly) venues = venues.filter(v => cls(v.min_price, S.allVenues) === 'deal');
+
+  S.venues = venues;
+  closeDetail();
+  render(S.venues);
 }
 
 /* ──────────────────────────────────────────
@@ -1184,17 +1512,7 @@ function setupSearch() {
   inp.addEventListener('input', () => {
     clearTimeout(timer);
     updateSearchClear();
-    timer = setTimeout(() => {
-      const q = inp.value.toLowerCase().trim();
-      S.venues = q
-        ? S.allVenues.filter(v =>
-            v.venue_name.toLowerCase().includes(q) ||
-            (v.address || '').toLowerCase().includes(q) ||
-            (v.categories || '').toLowerCase().includes(q))
-        : S.allVenues;
-      closeDetail();
-      render(S.venues);
-    }, 180);
+    timer = setTimeout(() => applyFilters(), 180);
   });
 }
 
@@ -1202,8 +1520,7 @@ function clearSearch() {
   const inp = document.getElementById('srch');
   inp.value = '';
   updateSearchClear();
-  S.venues = S.allVenues;
-  render(S.venues);
+  applyFilters();
 }
 
 function updateSearchClear() {
@@ -1217,12 +1534,10 @@ function updateSearchClear() {
 ─────────────────────────────────────────── */
 function toggleSidebar() {
   S.sbOpen = !S.sbOpen;
-  const sb   = document.getElementById('sidebar');
-  const edge = document.getElementById('sb-edge');
-  const btn  = document.getElementById('sb-toggle');
-  sb.classList.toggle('closed', !S.sbOpen);
-  edge.textContent = S.sbOpen ? '‹' : '›';
-  btn.classList.toggle('on', !S.sbOpen);
+  document.getElementById('sidebar').classList.toggle('closed', !S.sbOpen);
+  document.getElementById('sb-toggle')?.classList.toggle('on', !S.sbOpen);
+  const tab = document.getElementById('sb-open-tab');
+  if (tab) tab.style.display = S.sbOpen ? 'none' : 'flex';
   if (S.map) setTimeout(() => S.map.invalidateSize(), 230);
 }
 
@@ -1253,7 +1568,7 @@ function toggleMobSheet() {
 function setupKeyboard() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      closeDetail(); closeMobDet();
+      closeDetail();
       if (document.getElementById('info-ov').classList.contains('show')) toggleInfo();
       clearSearch();
     }
