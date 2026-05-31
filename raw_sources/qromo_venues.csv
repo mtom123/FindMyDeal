@@ -1,0 +1,26 @@
+source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,categories,price_tier,rating,rating_count,phone,website,opening_hours,has_menu,menu_url,extraction_status,retrieved_at
+qromo,valtellina.qromo.it,Osteria Valtellina,https://valtellina.qromo.it/,,Milano,,,,,,,,,,True,https://valtellina.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,testamistreet.qromo.it,Testami,https://testamistreet.qromo.it/,,Milano,,,,,,,,,,True,https://testamistreet.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,pizzeriapositanomilano.qromo.it,Positano Milano,https://pizzeriapositanomilano.qromo.it/,,Milano,,,,,,,,,,True,https://pizzeriapositanomilano.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,warsa.qromo.it,Warsa,https://warsa.qromo.it/,,Milano,,,,,,,,,,True,https://warsa.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,lebiciclettemilano.qromo.it,LE BICICLETTE MILANO,https://lebiciclettemilano.qromo.it/,,Milano,,,,,,,,,,True,https://lebiciclettemilano.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,magutt.qromo.it/menu,MAGUTT Milano - Menù - Qromo,https://magutt.qromo.it/menu,,Milano,,,,,,,,,,True,https://magutt.qromo.it/menu,no_menu,2026-05-30T23:40:28Z
+qromo,eastmarketmilano.qromo.it,EAST MARKET MILANO,https://eastmarketmilano.qromo.it/,,Milano,,,,,,,,,,True,https://eastmarketmilano.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,bistrobasemenu.qromo.it,Bistro BASE (menu),https://bistrobasemenu.qromo.it/,,Milano,,,,,,,,,,True,https://bistrobasemenu.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,officinesbiellate.qromo.it/12953,Officine Sbiellate - Birre & Cocktails,https://officinesbiellate.qromo.it/12953/,,Milano,,,,,,,,,,True,https://officinesbiellate.qromo.it/12953/,no_menu,2026-05-30T23:40:28Z
+qromo,bistrobase.qromo.it,Bistro BASE,https://bistrobase.qromo.it/,,Milano,,,,,,,,,,True,https://bistrobase.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,vivi.qromo.it/unavailable,VIVI Wine & Cocktail bar (unavailable),https://vivi.qromo.it/unavailable/,,,,,,,,,,,,True,https://vivi.qromo.it/unavailable/,no_menu,2026-05-30T23:40:28Z
+qromo,marinimenu.qromo.it,Marini,https://marinimenu.qromo.it/,,Milano,,,,,,,,,,True,https://marinimenu.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,karamare.qromo.it,Karamare Ristorante,https://karamare.qromo.it/,,Milano,,,,,,,,,,True,https://karamare.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,themodernist.qromo.it,The Modernist Bistro,https://themodernist.qromo.it/,,Milano,,,,,,,,,,True,https://themodernist.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,gustavo.qromo.it,Gustavo Bistrot,https://gustavo.qromo.it/,,Milano,,,,,,,,,,True,https://gustavo.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,tuttifritti.qromo.it,Tutti Fritti,https://tuttifritti.qromo.it/,,Milano,,,,,,,,,,True,https://tuttifritti.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,prosciutteria.qromo.it,La Prosciutteria,https://prosciutteria.qromo.it/,,,,,,,,,,,,True,https://prosciutteria.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,apebarexmacello.qromo.it,APE BAR X PIANO CITY MILANO @GAM,https://apebarexmacello.qromo.it/,,Milano,,,,,,,,,,True,https://apebarexmacello.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,ape.qromo.it,APE BAR,https://ape.qromo.it/,,Milano,,,,,,,,,,True,https://ape.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,bonsaicocktailbar.qromo.it,Bonsai Cocktail Bar,https://bonsaicocktailbar.qromo.it/,,Milano,,,,,,,,,,True,https://bonsaicocktailbar.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,tabuenoristorante.qromo.it,Ta' Bueno Navigli,https://tabuenoristorante.qromo.it/,,Milano,,,,,,,,,,True,https://tabuenoristorante.qromo.it/,no_menu,2026-05-30T23:40:28Z
+qromo,tabuenoristorante.qromo.it/public/menu/items,Ta' Bueno Navigli (items),https://tabuenoristorante.qromo.it/public/menu/items/,,Milano,,,,,,,,,,True,https://tabuenoristorante.qromo.it/public/menu/items/,no_menu,2026-05-30T23:40:28Z
+qromo,yogorino.qromo.it/tables,Yogorino Navigli (tables),https://yogorino.qromo.it/tables,,Milano,,,,,,,,,,True,https://yogorino.qromo.it/tables,no_menu,2026-05-30T23:40:28Z
+qromo,yogorino.qromo.it/update,Yogorino Navigli (update),https://yogorino.qromo.it/update/,,Milano,,,,,,,,,,True,https://yogorino.qromo.it/update/,no_menu,2026-05-30T23:40:28Z
+qromo,barlafonte.qromo.it,la fonte,https://barlafonte.qromo.it/,,Milano,,,,,,,,,,True,https://barlafonte.qromo.it/,no_menu,2026-05-30T23:40:28Z

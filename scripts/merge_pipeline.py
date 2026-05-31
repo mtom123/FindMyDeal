@@ -42,8 +42,9 @@ REPORT_FILE    = OUT_DIR / "merge_report.txt"
 
 VENUE_REQUIRED = {
     "source_platform", "venue_name", "venue_url",
-    "address", "city", "extraction_status", "retrieved_at",
+    "extraction_status", "retrieved_at",
 }
+# address/city non obbligatori — molti agenti non li hanno (geocodificati in seguito)
 ITEM_REQUIRED = {
     "source_platform", "venue_name",
     "item_name", "normalized_price_eur",
