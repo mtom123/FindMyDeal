@@ -34,6 +34,9 @@ Esempi:
 | `agent2_direct_website_*.csv` | Pietro | 2026-05-31 pomeriggio | ✅ completo | 46 venues, 92 items - smart rescan |
 | `agent2_eatbu_*.csv` | Pietro | 2026-05-31 pomeriggio | ✅ completo | 4 venues, 15 items |
 | `agent2_qodeup_*.csv` | Pietro | 2026-05-31 pomeriggio | ✅ completo | 1 venue (Woodstock), 12 items |
+| `comune_osm_venues.csv` | data-sourcing | 2026-05-31 sera | 📍 base geografica | 4.649 venue (open data Comune Milano × OSM). NO items. 1.380 con nome, ~505 nomi nuovi = target scraping. |
+| `pdf_googledork_*.csv` | data-sourcing | 2026-05-31 sera | 🟡 da review | 7 venue, 81 items da PDF sui siti dei locali. Parsing PDF grezzo → quality-gate prima del merge. |
+| `web_extracted_*.csv` | data-sourcing | 2026-05-31 sera | ✅ quality-gated | nome→Startpage→menu sui 505 nomi nuovi (`scripts/web_menu_extractor.py`). 505 processati, 34 con menu, **441 prezzi puliti** (215 normalizzati) su 31 venue. Hit ~6,7%. Già passato il quality-gate (vedi CHANGELOG). |
 
 ---
 

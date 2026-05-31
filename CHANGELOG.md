@@ -6,7 +6,49 @@
 
 ---
 
-## 2026-05-31 — Sera
+## 2026-05-31 — Sera (sessione data-sourcing)
+
+### Esplorazione fonti nuove + tecniche di estrazione
+- **Cosa**: sessione dedicata a trovare nuove fonti di prezzi/venue oltre a quelle già integrate.
+- **Output prodotti**: `comune_osm_venues.csv` (4.649 venue), `pdf_googledork_*.csv` (81 items), `web_extracted_*.csv` (in corso). Vedi `raw_sources/README.md`.
+
+### NUOVA FONTE: Open data Comune di Milano (CKAN)
+- **Cosa**: dataset "Attività commerciali: pubblici esercizi in piano" da `dati.comune.milano.it` → ~6.184 bar/pub geocodificati (lat/lng + indirizzo).
+- **Perché utile**: censimento completo dei locali autorizzati = base geografica enorme.
+- **Limite**: il campo `denominazione_pe` è la CATEGORIA licenza ("Bar caffè"), NON il nome commerciale.
+- **Soluzione (join Comune × OSM)**: match per prossimità coordinate (<35m) con i ~1.000 bar nominati da OSM Overpass → si attribuisce il nome. Risultato: `comune_osm_venues.csv`, 1.380 con nome, di cui **~505 nomi nuovi** non ancora nei dati prezzi = target di scraping.
+
+### NUOVA TECNICA: nome venue → sito ufficiale via Startpage
+- **Problema**: Google/Bing/DuckDuckGo HTML bloccano i risultati da script (pagine vuote o 403/429).
+- **Cosa funziona**: **Startpage** (proxy Google) e **Mojeek** rispondono. Parsing risultati → primo dominio non-aggregatore che contiene un token del nome o è `.it`. Es. "Cinc Food Drinks Milano" → `cincbrera.it`.
+- **Impatto**: pipeline `scripts/web_menu_extractor.py` automatizza nome→sito→menu sui 505 nomi nuovi.
+- **Risultato finale**: 505 processati, 34 con menu, **509 prezzi grezzi → 441 puliti** dopo quality-gate (215 normalizzati). Hit rate reale **~6,7%** (il 20-25% iniziale era un campione fortunato).
+
+### Quality-gate su web_extracted (prima della consegna)
+- **509 → 441 prezzi** (rimossi 68, corretti 8). Errori trovati = stessa famiglia dei tuoi quality gate:
+  - **14 e-commerce**: "Paradise Caffè" era un negozio di macchine/capsule caffè (raw_price tipo "Il prezzo originale era: 138,00€"), NON un bar. Rimosso.
+  - **49 nomi sporchi**: parsing PDF/€-scan multi-colonna → nome conteneva item successivo o piatto food. Rimossi (>42 char).
+  - **4 fuori range** (>€40) + **1 food**.
+  - **2 "Espresso Martini"** classificati `espresso` → corretti in `custom_cocktail` (è un cocktail).
+  - **7 "Caffè Americano"** classificati `americano` → label tolta (è caffè, NON il cocktail — falso positivo #3 del CEO).
+- **Nota per il merge**: alcuni `item_name` da €-scan contengono ancora il prezzo nel nome (es. "Negroni € 8,50") — cosmetico, il prezzo è estratto correttamente a parte.
+
+### NUOVA TECNICA: path-probing per siti JS-rendered
+- **Problema**: molti siti bar sono SPA (React/Wix) → l'HTML statico NON espone i link al menu (0 prezzi anche se il menu c'è).
+- **Fix**: dopo aver trovato il dominio, provare a mano i path comuni (`/menu /drinks /carta /cocktail /cocktail-list /beverage /listino`...). Es. `cincbrera.it/drinks/` esponeva il PDF → 21 prezzi.
+
+### NUOVA TECNICA: parsing PDF multi-colonna
+- **Problema**: menu PDF a 2 colonne → `pdfplumber` mette due drink sulla stessa riga (stesso tipo di bug del "Funky beer split").
+- **Fix**: estrarre TUTTE le coppie (nome, prezzo) per riga con `PRICE_RE.finditer`, non solo la prima.
+- **Resa "PDF dai siti"**: visitando i siti già noti in `direct_venues.csv` e cercando `<a href="*.pdf">` → 81 prezzi da 7 locali (Frida, Deseo, Harp Pub, Banshee...). File: `pdf_googledork_*.csv`.
+
+### VICOLI CIECHI verificati (NON ritentare)
+- **TripAdvisor**: DataDome CAPTCHA. Blocca `requests` (403) E Playwright headless (iframe `geo.captcha-delivery.com` prima del contenuto). Servirebbero CAPTCHA-solver a pagamento + proxy residenziali → ROI negativo. Script lasciato come riferimento ma da non usare.
+- **Google Maps scraping**: Cloudflare + JS challenge. E l'API Places NON dà prezzi singoli (solo fascia €/€€/€€€).
+- **Wikidata SPARQL**: solo ~4 bar famosi mappati a Milano.
+- **Wayback Machine (CDX)**: pochi snapshot di pagine menu, nessun prezzo strutturato → output rimosso (era vuoto).
+- **Glovo/JustEat/Deliveroo API**: endpoint mobile cambiati o 403 (conferma indipendente di quanto già noto).
+- **`gmaps_*`/`wayback_*`**: file esperimento rimossi perché a 0 prezzi.
 
 ### Sistema onboarding agenti (CEO)
 - **Cosa**: Creati `AGENTS.md`, `AGENTS_STATE.md`, `PROMPT_PIETRO_NOTTE.md`.
