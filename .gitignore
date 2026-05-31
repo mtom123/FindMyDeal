@@ -1,6 +1,6 @@
-# Cache HTML scaricati dagli scraper (100MB+, non vanno in git)
+# Cache HTML/PDF scaricati dagli scraper (100MB+, non vanno in git)
 raw_data/
-raw_data_direct/
+raw_data_*/
 
 # Python
 __pycache__/

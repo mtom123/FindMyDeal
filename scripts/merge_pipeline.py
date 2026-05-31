@@ -58,6 +58,8 @@ VALID_PLATFORMS = {
     "glovo", "deliveroo", "iamenu", "gromo", "one2menu",
     "menutiger", "ordable", "buonmenu", "dishcovery",
     "menudigitale", "direct_website", "other",
+    # Aggiunti session 31/05 sera
+    "web_extract", "pdf_googledork", "comune", "qodeup",
 }
 
 VALID_PRODUCTS = {
