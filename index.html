@@ -1124,6 +1124,10 @@ function initMap() {
   S.map = L.map('map', {
     center: [45.464, 9.190], zoom: 14,
     zoomControl: false, attributionControl: true,
+    minZoom: 10,
+    maxZoom: 19,
+    maxBounds: [[34, -25], [72, 45]],
+    maxBoundsViscosity: 1.0,
   });
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap &copy; CARTO',
