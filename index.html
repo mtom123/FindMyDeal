@@ -777,36 +777,47 @@ input[type=range].sb-range::-moz-range-thumb {
   :root { --topbar-h: 46px; --fbar-h: 36px; }
 
   #app { max-width: 100vw; overflow-x: hidden; }
-  #topbar { overflow: hidden; }
+  #topbar { overflow: hidden; min-width: 0; }
   .tb-logo-sub { display: none; }
-  .tb-logo { padding: 0 12px; }
-  .tb-search { padding: 0 10px; }
+  .tb-logo { padding: 0 12px; flex-shrink: 0; }
+  .tb-search { padding: 0 10px; min-width: 0; }
   #rbar { padding: 0 8px; }
 
-  #sidebar { display: none; }
+  /* Geo button: icon only */
+  #rb-geo-btn { font-size: 0 !important; padding: 0 10px; letter-spacing: 0; }
+  #rb-geo-btn::before { content: '📍'; font-size: 13px; }
 
-  /* Mobile bottom sheet */
-  .mob-sheet {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 600;
-    background: var(--s1); border-top: 1px solid var(--b1);
-    display: flex; flex-direction: column; max-height: 70vh;
-    transform: translateY(calc(100% - 82px));
+  /* Sidebar as left drawer */
+  #sidebar {
+    display: flex !important;
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: min(290px, 85vw);
+    z-index: 700;
+    transform: translateX(-100%);
     transition: transform .22s cubic-bezier(.4,0,.2,1);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
   }
-  .mob-sheet.up { transform: translateY(0); }
+  #sidebar.mob-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+  }
 
-  .ms-handle { width: 28px; height: 2px; background: var(--b2); margin: 8px auto 0; cursor: pointer; }
-  .ms-peek { padding: 7px 14px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-  .ms-peek-l .ms-title { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 600; color: var(--t1); letter-spacing: .04em; text-transform: uppercase; }
-  .ms-peek-l .ms-sub   { font-size: 0.64rem; color: var(--t3); margin-top: 2px; }
-  .ms-chevron { font-size: 0.65rem; color: var(--t3); font-family: 'IBM Plex Mono', monospace; }
-  .ms-list { overflow-y: auto; flex: 1; }
+  /* Dim overlay behind drawer */
+  #sb-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.28);
+    z-index: 699;
+  }
+  #sb-overlay.show { display: block; }
 
+  /* Hide bottom sheet */
+  .mob-sheet { display: none !important; }
 }
 
 @media (min-width: 769px) {
   .mob-sheet, .mob-det-ov { display: none !important; }
+  #sb-overlay { display: none !important; }
 }
   </style>
 </head>
@@ -927,6 +938,9 @@ input[type=range].sb-range::-moz-range-thumb {
 
 <!-- SIDEBAR REOPEN TAB (left edge, shown when sidebar closed) -->
 <div id="sb-open-tab" onclick="toggleSidebar()">›</div>
+
+<!-- MOBILE SIDEBAR OVERLAY -->
+<div id="sb-overlay" onclick="toggleSidebar()"></div>
 
 <!-- ───────────────────────────────────────────────────────
      INFO OVERLAY (right drawer)
@@ -1219,7 +1233,7 @@ function render(venues) {
     bounds.push([v.lat, v.lng]);
   });
 
-  if (bounds.length) S.map.fitBounds(bounds, { padding: [52, 52], maxZoom: 15 });
+  if (bounds.length) S.map.fitBounds(bounds, { padding: [52, 52], maxZoom: 15, minZoom: 13 });
 
   // Sidebar
   const sorted = [...venues]
@@ -1539,11 +1553,21 @@ function updateSearchClear() {
    SIDEBAR TOGGLE
 ─────────────────────────────────────────── */
 function toggleSidebar() {
+  const isMobile = window.innerWidth <= 768;
   S.sbOpen = !S.sbOpen;
-  document.getElementById('sidebar').classList.toggle('closed', !S.sbOpen);
-  document.getElementById('sb-toggle')?.classList.toggle('on', !S.sbOpen);
+  const sb = document.getElementById('sidebar');
+  const overlay = document.getElementById('sb-overlay');
   const tab = document.getElementById('sb-open-tab');
-  if (tab) tab.style.display = S.sbOpen ? 'none' : 'flex';
+  const btn = document.getElementById('sb-toggle');
+
+  if (isMobile) {
+    sb.classList.toggle('mob-open', S.sbOpen);
+    overlay?.classList.toggle('show', S.sbOpen);
+  } else {
+    sb.classList.toggle('closed', !S.sbOpen);
+    if (tab) tab.style.display = S.sbOpen ? 'none' : 'flex';
+  }
+  btn?.classList.toggle('on', !S.sbOpen);
   if (S.map) setTimeout(() => S.map.invalidateSize(), 230);
 }
 
