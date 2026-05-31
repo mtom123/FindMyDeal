@@ -1,0 +1,8 @@
+source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,categories,price_tier,rating,rating_count,phone,website,opening_hours,has_menu,menu_url,extraction_status,retrieved_at
+pdf_dork,be139d917c,Frida,https://www.fridaisola.it/documents/menu-sera-frida.pdf,,Milano,,,,,,,,,,True,https://www.fridaisola.it/documents/menu-sera-frida.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,232eb1df8f,Deseo,https://www.deseomilano.com/menu/Menu.pdf,,Milano,,,,,,,,,,True,https://www.deseomilano.com/menu/Menu.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,d64f8f24a8,Deseo,https://www.deseomilano.com/menu/DrinkList.pdf,,Milano,,,,,,,,,,True,https://www.deseomilano.com/menu/DrinkList.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,944d4f571f,Living,https://www.livingmilano.com/wp-content/uploads/2025/03/Living.pdf,,Milano,,,,,,,,,,True,https://www.livingmilano.com/wp-content/uploads/2025/03/Living.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,d56fa39e9c,Harp Pub,https://cdn.website.dish.co/media/78/d1/7737175/Menu-2024.pdf,,Milano,,,,,,,,,,True,https://cdn.website.dish.co/media/78/d1/7737175/Menu-2024.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,809dfe1dfd,Harp Pub Rhum,https://cdn.website.dish.co/media/5d/e2/4446578/Menu-Rhum.pdf,,Milano,,,,,,,,,,True,https://cdn.website.dish.co/media/5d/e2/4446578/Menu-Rhum.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
+pdf_dork,68eee20a96,Banshee Pub,http://www.banshee.pub/wp-content/uploads/2018/06/Banshee-RG-Pub-Menu.pdf,,Milano,,,,,,,,,,True,http://www.banshee.pub/wp-content/uploads/2018/06/Banshee-RG-Pub-Menu.pdf,ok_with_menu,2026-05-31T16:03:57.171636+00:00
