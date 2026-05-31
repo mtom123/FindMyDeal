@@ -23,10 +23,11 @@ Letti prima: `AGENTS_STATE.md`, `raw_sources/README.md`, `CLAUDE.md`.
 
 4 venue Milano restano senza geo (indirizzo malformato/assente): Frigo Milano (Piazza Borromeo 5), Al Chiosco Da Giacomo (P.le Corvetto), Laudano e Misture, UNAHOTELS Scandinavia → geocoding manuale rapido.
 
-### ⛔ STEP 1 — TheFork (BLOCCATO da Datadome)
+### ⛔ STEP 1 — TheFork (BLOCCATO da Datadome — tentato Playwright stealth)
 - `thefork.it` e `thefork.com/search` → **HTTP 403 + Datadome al primo request** (anche solo homepage).
-- Il prompt stesso impone "non bypassare il captcha, non insistere". Un bypass Datadome con Playwright-stealth da IP non residenziale ha probabilità molto basse.
-- **Non perseguito** in coerenza col prompt. Serve decisione CEO (proxy residenziale? accordo API TheFork?).
+- **Tentato Playwright stealth** (chromium headless, UA Chrome 124, viewport 1920x1080, locale it-IT, `playwright_stealth.Stealth` applicato): risultato **3/3 URL → HTTP 403 + Datadome**. Screenshot di blocco salvati durante il test.
+- Datadome rileva il browser headless da IP datacenter istantaneamente. Bypass impossibile senza proxy residenziale + browser headful + comportamento umano (o risoluzione captcha, **vietata dal prompt**).
+- **Stop** in coerenza col prompt. Serve decisione CEO: proxy residenziale, browser headful su macchina con display, o accordo API TheFork. Script tentativo: `scripts/thefork_probe.py`.
 
 ### ⏭️ STEP 3 — Discovery leggimenu/comune_osm (in gran parte SUPERATO)
 - `AGENTS_STATE` (31/05 sera) mostra che la sessione `web_extracted` ha **già** processato i ~505 nomi nuovi (inclusi quelli da `comune_osm`) → 34 hit, 441 prezzi. Il cross-ref nomi→menu è quindi già stato fatto dopo la stesura del prompt.
