@@ -2,6 +2,16 @@
 
 > **LEGGI QUESTO FILE PER PRIMO** se sei un nuovo agente Claude su questo repo.
 
+## 📚 Ordine di lettura per onboarding (5 minuti)
+
+1. **`AGENTS.md`** (questo) — ruoli, workflow, regole base
+2. **`AGENTS_STATE.md`** — cosa è già fatto, cosa serve. NON duplicare lavoro!
+3. **`CHANGELOG.md`** — STORIA decisioni e ragionamenti del progetto. Capisci il PERCHÉ.
+4. **`raw_sources/README.md`** — scheda d'identità di ogni file CSV
+5. **`scripts/SCHEMA_AGENTI.md`** — formato CSV obbligatorio (solo per scraper)
+
+Se sei frontend dev, leggi anche **`BRIEF_PEPPE.md`**.
+
 ---
 
 ## 🎯 Cos'è il progetto
@@ -132,6 +142,8 @@ FindMyDeal/
 - **Repo**: https://github.com/mtom123/FindMyDeal
 - **Schema CSV**: `scripts/SCHEMA_AGENTI.md`
 - **Stato dataset**: `AGENTS_STATE.md`
+- **Storico decisioni**: `CHANGELOG.md`
+- **Identità file raw_sources**: `raw_sources/README.md`
 - **Brief frontend**: `BRIEF_PEPPE.md`
 
 ---

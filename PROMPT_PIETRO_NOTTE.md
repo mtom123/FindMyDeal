@@ -26,13 +26,23 @@ Stanotte fai **deep scraping mirato** su 5 obiettivi concreti. Niente esplorazio
 cd D:\FindMyDeal
 git clone https://github.com/mtom123/FindMyDeal.git . 2>/dev/null || git pull origin main
 
-# Leggi questi file in ordine:
-cat AGENTS.md                    # Onboarding completo
+# Leggi questi file in ordine (5 minuti totali):
+cat AGENTS.md                    # Onboarding completo (ruoli, workflow, regole)
 cat AGENTS_STATE.md              # Cosa è già fatto (NON RIFARE!)
+cat CHANGELOG.md                 # Storia decisioni — capisci il PERCHÉ
+cat raw_sources/README.md        # Identità di ogni file CSV
 cat scripts/SCHEMA_AGENTI.md     # Formato CSV obbligatorio
 ```
 
 **IMPORTANTE:** Il file `AGENTS_STATE.md` dice esattamente cosa è già scrappato. NON rifare quei venues. Se trovi "Frida Isola", "Barbisa 1920", "Woodstock", "Casa Giuditta", "Funky", "Camparino" ecc → SKIP, sono già nel DB.
+
+**RITUALI sicurezza:**
+- ✅ `git pull origin main` prima di iniziare ogni step (qualcuno altro potrebbe aver pushato)
+- ✅ `git status` prima di committare (verifica cosa stai aggiungendo)
+- ✅ NON pushare a `main` se i quality gates falliscono — apri Issue invece
+- ❌ NON toccare `data/unified_*.csv` o `prices_data.json` (li rigenera il CEO)
+- ❌ NON toccare `index.html` o CSS (è territorio di Peppe)
+- ❌ NON cancellare file esistenti in `raw_sources/` (anche se ti sembrano duplicati — chiedi al CEO)
 
 ---
 
