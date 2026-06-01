@@ -1022,8 +1022,6 @@ input[type=range].sb-range::-moz-range-thumb {
   <!-- RADIUS BAR -->
   <div id="rbar">
     <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:4px;">≡</button>
-    <div class="rb-divider"></div>
-    <span style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);letter-spacing:.06em;" id="rbar-ctx">All Milan</span>
     <div class="rb-divider" id="reset-div" style="display:none;"></div>
     <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset view</button>
   </div>
@@ -1050,7 +1048,7 @@ input[type=range].sb-range::-moz-range-thumb {
       <!-- FILTERS -->
       <div class="sb-filters">
         <div class="sb-filter-hdr">
-          <span class="sb-filter-hdr-lbl">Filters</span>
+          <span class="sb-filter-hdr-lbl"></span>
           <span class="sb-filter-reset" onclick="resetFilters()">Reset</span>
         </div>
         <div class="sb-filter-row">
@@ -1062,13 +1060,14 @@ input[type=range].sb-range::-moz-range-thumb {
           </div>
         </div>
         <div class="sb-filter-row">
-          <span class="sb-filter-lbl">Search radius</span>
-          <div class="sb-radius-row">
-            <button class="sb-radius-btn active" onclick="setSidebarRadius(null)">Off</button>
-            <button class="sb-radius-btn" onclick="setSidebarRadius(500)">500m</button>
-            <button class="sb-radius-btn" onclick="setSidebarRadius(1000)">1km</button>
-            <button class="sb-radius-btn" onclick="setSidebarRadius(2000)">2km</button>
-            <button class="sb-radius-btn" onclick="setSidebarRadius(5000)">5km</button>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <span class="sb-filter-lbl">Search radius</span>
+            <span class="sb-slider-lbl" id="radius-val">Off</span>
+          </div>
+          <div class="sb-slider-wrap">
+            <span class="sb-slider-lbl">Off</span>
+            <input type="range" class="sb-range" id="radius-slider" min="0" max="10000" value="0" step="100" oninput="onRadiusSlider(this.value)">
+            <span class="sb-slider-lbl">10km</span>
           </div>
         </div>
         <div class="sb-toggle-row">
@@ -1250,11 +1249,30 @@ const MILAN_ZONES = {
 };
 
 function calcZoneCoverage() {
+  if (!S.data) return;
+
+  // Collect ALL unique venues across all products (deduplicated by lat+lng)
+  const allUnique = new Map();
+  Object.values(S.data).forEach(prod => {
+    (prod.venues || []).forEach(v => {
+      const key = `${v.lat.toFixed(4)},${v.lng.toFixed(4)}`;
+      if (!allUnique.has(key)) {
+        allUnique.set(key, { lat: v.lat, lng: v.lng, hasPrice: v.items && v.items.length > 0 });
+      } else if (v.items && v.items.length > 0) {
+        allUnique.get(key).hasPrice = true;
+      }
+    });
+  });
+  const allVenuesList = Array.from(allUnique.values());
+
   const result = {};
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
     const [[s,w],[n,e]] = zone.bounds;
-    const inZone = S.venues.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
-    result[key] = { name: zone.name, venues: inZone.length };
+    const inZone      = allVenuesList.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
+    const withPrice   = inZone.filter(v => v.hasPrice);
+    const total       = inZone.length;
+    const pct         = total > 0 ? Math.round((withPrice.length / total) * 100) : 0;
+    result[key] = { name: zone.name, total, withPrice: withPrice.length, pct };
   });
   S.zoneCoverage = result;
 }
@@ -1307,23 +1325,21 @@ function openZonePopup(key, zone, cov, rect) {
   _activeZoneKey = key;
   renderZones(); // re-render to update fill
 
-  const venues = cov?.venues || 0;
-  const totalInData = S.allVenues.length;
-  // Rough coverage: venues in zone / total venues * some scale
-  const pct = totalInData > 0 ? Math.round((venues / totalInData) * 100 * 3) : 0;
-  const displayPct = Math.min(pct, 100);
+  const total     = cov?.total     || 0;
+  const withPrice = cov?.withPrice || 0;
+  const pct       = cov?.pct       || 0;
 
   const [[s,w],[n,e]] = zone.bounds;
   const centerLat = (s + n) / 2;
   const centerLng = (w + e) / 2;
 
-  L.popup({ closeButton: true, offset: [0, -6], className: '' })
+  L.popup({ closeButton: true, offset: [0, 0], autoPan: false })
     .setLatLng([centerLat, centerLng])
     .setContent(`
       <div class="zone-popup">
         <div class="zone-popup-name">${zone.name}</div>
-        <div class="zone-popup-stat">${venues} venue${venues !== 1 ? 's' : ''} with price data</div>
-        <div class="zone-popup-cov">Coverage ~${displayPct}%</div>
+        <div class="zone-popup-stat">${withPrice} / ${total} venues with prices</div>
+        <div class="zone-popup-cov">Coverage ${pct}%</div>
       </div>`)
     .on('remove', () => { _activeZoneKey = null; renderZones(); })
     .openOn(S.map);
@@ -1451,7 +1467,7 @@ function selectProduct(code) {
 
   // Update search placeholder
   const m = META[code] || { label: code };
-  srch.placeholder = `filter ${m.label.toLowerCase()} venues by name…`;
+  srch.placeholder = 'Search venues, zones, streets…';
 
 
   // reset price slider range to current product prices
@@ -1713,7 +1729,7 @@ function resetMapView() {
   S._progMove = true;
   document.getElementById('reset-view-btn')?.classList.remove('visible');
   document.getElementById('reset-div').style.display = 'none';
-  document.getElementById('rbar-ctx').textContent = 'All Milan';
+  
   render(S.venues);
   setTimeout(() => { S._progMove = false; }, 800);
 }
@@ -1750,19 +1766,21 @@ async function fetchSrchSuggestions(q) {
     });
   }
 
-  // 3. Nominatim for streets/areas (only if no zone/venue match)
-  if (!zoneMatches.length && !vMatches.length && q.length > 3) {
+  // 3. Nominatim — always fetch for any query > 2 chars (streets, addresses, areas)
+  if (q.length > 2) {
     try {
-      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+' Milan Italy')}&format=json&limit=4&accept-language=en`;
+      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+', Milan')}&format=json&limit=5&addressdetails=1&accept-language=en&countrycodes=it`;
       const res = await fetch(url);
       const data = await res.json();
       if (data.length) {
-        sections.push(`<div class="srch-dd-section">Places</div>`);
+        sections.push(`<div class="srch-dd-section">Streets & places</div>`);
         data.forEach(r => {
-          const main = r.display_name.split(',')[0];
+          const parts = r.display_name.split(',');
+          const main = parts[0].trim();
+          const sub  = parts.slice(1,3).join(',').trim();
           sections.push(`<div class="srch-dd-item" onmousedown="selectGeoFromSearch(${r.lat},${r.lon},'${esc(main)}')">
-            <span>${esc(main)}</span>
-            <span class="srch-dd-tag">area</span>
+            <div>${esc(main)}</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);margin-top:1px;">${esc(sub)}</div>
           </div>`);
         });
       }
@@ -1786,7 +1804,7 @@ function selectZoneFromSearch(key) {
   hideSrchDropdown();
   S._progMove = true;
   S.map.fitBounds([[s,w],[n,e]], { padding: [20,20], maxZoom: 15, animate: true });
-  document.getElementById('rbar-ctx').textContent = zone.name;
+  
   setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
   applyFilters();
 }
@@ -1797,7 +1815,7 @@ function selectVenueFromSearch(lat, lng, name) {
   hideSrchDropdown();
   S._progMove = true;
   S.map.setView([lat, lng], 16, { animate: true });
-  document.getElementById('rbar-ctx').textContent = name;
+  
   setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
   applyFilters();
 }
@@ -1809,21 +1827,23 @@ function selectGeoFromSearch(lat, lng, label) {
   hideSrchDropdown();
   S._progMove = true;
   S.map.setView([parseFloat(lat), parseFloat(lng)], 15, { animate: true });
-  document.getElementById('rbar-ctx').textContent = label;
+  
   setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
   applyFilters();
 }
 
 /* ──────────────────────────────────────────
-   SIDEBAR RADIUS (Feature 3 — in sidebar)
+   RADIUS SLIDER
 ─────────────────────────────────────────── */
-function setSidebarRadius(r) {
-  S.geo.radius = r;
-  document.querySelectorAll('.sb-radius-btn').forEach(b => b.classList.remove('active'));
-  const sel = r === null
-    ? document.querySelector('.sb-radius-btn[onclick="setSidebarRadius(null)"]')
-    : document.querySelector(`.sb-radius-btn[onclick="setSidebarRadius(${r})"]`);
-  if (sel) sel.classList.add('active');
+function onRadiusSlider(val) {
+  const v = parseInt(val);
+  S.geo.radius = v === 0 ? null : v;
+  const lbl = document.getElementById('radius-val');
+  if (lbl) {
+    if (v === 0) lbl.textContent = 'Off';
+    else if (v < 1000) lbl.textContent = `${v}m`;
+    else lbl.textContent = `${(v/1000).toFixed(1).replace('.0','')}km`;
+  }
   applyFilters();
 }
 
@@ -1876,10 +1896,12 @@ function toggleDeals() {
 }
 
 function resetFilters() {
-  F.maxPrice = 999; F.dealsOnly = false;
+  F.maxPrice = 999; F.dealsOnly = false; S.geo.radius = null;
   document.getElementById('pr-slider').value = 30;
   document.getElementById('pr-max').textContent = '€30+';
   document.getElementById('deals-toggle').classList.remove('on');
+  const rs = document.getElementById('radius-slider'); if (rs) rs.value = 0;
+  const rv = document.getElementById('radius-val'); if (rv) rv.textContent = 'Off';
   applyFilters();
 }
 
@@ -2015,7 +2037,7 @@ function clearSearch() {
   updateSearchClear();
   hideSrchDropdown();
   S.searchCenter = null;
-  document.getElementById('rbar-ctx').textContent = 'All Milan';
+  
   applyFilters();
 }
 
