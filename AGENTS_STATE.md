@@ -55,17 +55,48 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ---
 
-## 🍹 VERTICAL DRINK (Milano) — post audit S5 + geocode fixes + shared lib
+## 🍹 VERTICAL DRINK (Milano) — post ricerca notturna CEO
 
 | Metrica | Valore |
 |---|---|
-| **Venues totali nel DB** | **1.601** |
-| **Venues uniche sulla mappa** | **153** (**144 precise** + 9 fallback Duomo legit) |
-| **Items menu totali** | 5.605 |
-| **Price points geo+normalizzati** | **964** (post-audit + MAXI filter) |
-| **Venue-product pairs** | 687 |
-| **Prodotti coperti** | 22 |
-| **Quality** | ~95% clean, 8 outliers residui = legit premium |
+| **Venues TOTALI sulla mappa Milano** | **4.277** (153 prezzati + 4.124 no-price) |
+| Venues prezzati (con price points) | 153 |
+| Venues no-price (NUOVO LAYER frontend) | 4.124 |
+| Venues totali nel DB unified | 1.601 |
+| Items menu totali | 5.605 |
+| Price points geo+normalizzati | 964 |
+| Venue-product pairs | 687 |
+| Prodotti coperti | 22 |
+| Quality price points | ~95% clean |
+
+### Nuovo layer: unified_venues_no_price.csv
+**4.124 venues** Milano senza prezzo pronti per il frontend come pin "Prezzo non disponibile — Contribuisci".
+
+Composizione:
+- 1.247 dal DB esistente (mycia, direct_website, web_extract, ecc — già scraped ma senza menu items estratti)
+- 2.867 da **CKAN Comune Milano** (NUOVA fonte autoritativa) cross-ref OSM Overpass per nomi commerciali (78% match)
+- 10 da eatbu metadata (Pietro S5 discovered)
+
+Distribuzione venue_type:
+- cafe: 2.003 (49%)
+- bar: 636 (15%)
+- pub: 214 (5%)
+- cocktail_bar: 14 (0.3%)
+
+Top quartieri (NIL): Duomo 222 · Buenos Aires-Porta Venezia 215 · Brera 142 · Sarpi 108 · XXII Marzo 100.
+
+### Nuove fonti integrate (sessione notturna CEO)
+- `raw_sources/ckan_milano_drink_venues_no_price.csv` — 3.804 venues CKAN enriched OSM
+- `raw_sources/osm_milano_drink_overpass.csv` — 5.229 OSM venues con nome commerciale (fonte base cross-ref)
+- `raw_sources/agent_ceo_eatbu_metadata.csv` — 11 venues eatbu Pietro S5 discovered
+
+### Build pipeline
+`scripts/build_no_price_map.py` produce `data/unified_venues_no_price.csv` per frontend.
+
+### Tecniche tecniche scoperte (CEO scraper night)
+1. **curl_cffi `safari17_2_ios`** = bypass TheFork Datadome 403 → HTTP 200 (menu però via JS lazy, no SSR). Riusabile per metadata bulk.
+2. **CKAN API ufficiale Comune Milano** = dataset autoritativo 13.143 esercizi commerciali. Filter drink-target = 3.840 venues nuove.
+3. **OSM Overpass amenity=bar/pub/cafe/nightclub** = 5.229 venues Milano con nome commerciale. Cross-ref geo ≤50m per arricchire CKAN.
 
 ### Pietro S5 contribs integrate
 - Geocoding fixes: 19 venues spostate dal fallback Duomo a coordinate Nominatim precise (Eatme&Go, Norin Caffè, Barcollando, Caffè Fernanda, Garden Caffè, Santeria Toscana, Caffè Inn, La Corte di Montenapoleone, Carico, The Growler, Victoriasclub, Tardispubmilano, Labirrofila, Floraetlabora, Lucaeandreabar, Armanisilos)
