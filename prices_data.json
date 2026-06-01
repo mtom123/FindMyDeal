@@ -274,8 +274,8 @@
       {
         "venue_name": "Caffè Inn",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.452162,
+        "lng": 9.203195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -355,8 +355,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -560,8 +560,8 @@
       {
         "venue_name": "Eatme&Go",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.460946,
+        "lng": 9.184686,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -809,17 +809,7 @@
             "price": 12.0
           },
           {
-            "name": "FIERO SPRITZ — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
-            "name": "CAMPARI SPRITZ — MAXI",
-            "section": "",
-            "price": 14.0
-          },
-          {
-            "name": "VENTURO SPRITZ — MAXI",
+            "name": "FIERO SPRITZ — REGULAR",
             "section": "",
             "price": 15.0
           },
@@ -832,16 +822,6 @@
             "name": "SPRITZ CLASSICI",
             "section": "",
             "price": 17.0
-          },
-          {
-            "name": "FIERO SPRITZ — MAXI",
-            "section": "",
-            "price": 18.0
-          },
-          {
-            "name": "CAMPARI SPRITZ — MAXI",
-            "section": "",
-            "price": 19.0
           },
           {
             "name": "SPRITZ CLASSICI",
@@ -1116,8 +1096,8 @@
       {
         "venue_name": "The Growler Milano",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457975,
+        "lng": 9.162193,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1140,8 +1120,8 @@
         "price_tier": "",
         "categories": "",
         "sources": [
-          "eatbu",
-          "direct_website"
+          "direct_website",
+          "eatbu"
         ],
         "items": [
           {
@@ -1574,8 +1554,8 @@
       {
         "venue_name": "Floraetlabora",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.44951,
+        "lng": 9.177219,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1593,8 +1573,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1612,8 +1592,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1712,8 +1692,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1807,8 +1787,8 @@
       {
         "venue_name": "La Corte di Montenapoleone",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469509,
+        "lng": 9.195025,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1888,8 +1868,8 @@
       {
         "venue_name": "Barcollando",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.460243,
+        "lng": 9.176799,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1914,8 +1894,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2105,19 +2085,9 @@
             "price": 10.0
           },
           {
-            "name": "NEGRONI — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "NEGRONI — REGULAR",
             "section": "",
             "price": 15.0
-          },
-          {
-            "name": "NEGRONI — MAXI",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 7.0
@@ -2535,8 +2505,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2787,8 +2757,8 @@
       {
         "venue_name": "The Growler Milano",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457975,
+        "lng": 9.162193,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2996,8 +2966,8 @@
       {
         "venue_name": "Floraetlabora",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.44951,
+        "lng": 9.177219,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3034,8 +3004,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3244,8 +3214,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3489,8 +3459,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3665,19 +3635,9 @@
             "price": 10.0
           },
           {
-            "name": "AMERICANO — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "AMERICANO — REGULAR",
             "section": "",
             "price": 15.0
-          },
-          {
-            "name": "AMERICANO — MAXI",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 7.0
@@ -4628,8 +4588,8 @@
       {
         "venue_name": "labirrofila.com",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.43821,
+        "lng": 9.184584,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4795,19 +4755,9 @@
             "price": 10.0
           },
           {
-            "name": "GIN TONIC — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "GIN TONIC — REGULAR",
             "section": "",
             "price": 15.0
-          },
-          {
-            "name": "GIN TONIC — MAXI",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 7.0
@@ -5011,8 +4961,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5207,8 +5157,8 @@
       {
         "venue_name": "The Growler Milano",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457975,
+        "lng": 9.162193,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5407,8 +5357,8 @@
       {
         "venue_name": "La Corte di Montenapoleone",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469509,
+        "lng": 9.195025,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5557,16 +5507,6 @@
             "price": 10.0
           },
           {
-            "name": "VIRGIN MOJITO — MAXI",
-            "section": "",
-            "price": 12.0
-          },
-          {
-            "name": "BLACK MOJITO — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "VIRGIN MOJITO — REGULAR",
             "section": "",
             "price": 15.0
@@ -5575,16 +5515,6 @@
             "name": "BLACK MOJITO — REGULAR",
             "section": "",
             "price": 16.0
-          },
-          {
-            "name": "VIRGIN MOJITO — MAXI",
-            "section": "",
-            "price": 18.0
-          },
-          {
-            "name": "BLACK MOJITO — MAXI",
-            "section": "",
-            "price": 19.0
           }
         ],
         "min_price": 7.0
@@ -6045,8 +5975,8 @@
       {
         "venue_name": "La Corte di Montenapoleone",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469509,
+        "lng": 9.195025,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6126,11 +6056,6 @@
             "name": "MOSCOW MULE — REGULAR",
             "section": "",
             "price": 10.0
-          },
-          {
-            "name": "MOSCOW MULE — MAXI",
-            "section": "",
-            "price": 13.0
           }
         ],
         "min_price": 7.0
@@ -6385,8 +6310,8 @@
       {
         "venue_name": "The Growler Milano",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457975,
+        "lng": 9.162193,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6563,19 +6488,9 @@
             "price": 10.0
           },
           {
-            "name": "MARGARITA* (Shakerato o Frozen) — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "MARGARITA* (Shakerato o Frozen) — REGULAR",
             "section": "",
             "price": 16.0
-          },
-          {
-            "name": "MARGARITA* (Shakerato o Frozen) — MAXI",
-            "section": "",
-            "price": 19.0
           }
         ],
         "min_price": 7.0
@@ -7092,8 +7007,8 @@
       {
         "venue_name": "La Corte di Montenapoleone",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469509,
+        "lng": 9.195025,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7175,19 +7090,9 @@
             "price": 10.0
           },
           {
-            "name": "DAIQUIRI* (Shakerato o Frozen) — MAXI",
-            "section": "",
-            "price": 13.0
-          },
-          {
             "name": "DAIQUIRI* (Shakerato o Frozen) — REGULAR",
             "section": "",
             "price": 16.0
-          },
-          {
-            "name": "DAIQUIRI* (Shakerato o Frozen) — MAXI",
-            "section": "",
-            "price": 19.0
           }
         ],
         "min_price": 7.0
@@ -7452,8 +7357,8 @@
       {
         "venue_name": "La Corte di Montenapoleone",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469509,
+        "lng": 9.195025,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7644,19 +7549,9 @@
             "price": 12.0
           },
           {
-            "name": "MANHATTAN — MAXI",
-            "section": "",
-            "price": 15.0
-          },
-          {
             "name": "MANHATTAN — REGULAR",
             "section": "",
             "price": 17.0
-          },
-          {
-            "name": "MANHATTAN — MAXI",
-            "section": "",
-            "price": 20.0
           }
         ],
         "min_price": 12.0
@@ -8252,8 +8147,8 @@
       {
         "venue_name": "labirrofila.com",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.43821,
+        "lng": 9.184584,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8702,8 +8597,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8879,8 +8774,8 @@
       {
         "venue_name": "Eatme&Go",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.460946,
+        "lng": 9.184686,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10153,8 +10048,8 @@
       {
         "venue_name": "labirrofila.com",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.43821,
+        "lng": 9.184584,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10316,8 +10211,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10561,8 +10456,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10713,8 +10608,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11376,8 +11271,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11405,8 +11300,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11624,8 +11519,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11653,8 +11548,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12262,8 +12157,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12286,8 +12181,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12310,8 +12205,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12386,8 +12281,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12770,8 +12665,8 @@
       {
         "venue_name": "labirrofila.com",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.43821,
+        "lng": 9.184584,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12870,8 +12765,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13178,8 +13073,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13197,8 +13092,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13311,8 +13206,8 @@
       {
         "venue_name": "Armanisilos",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451408,
+        "lng": 9.164975,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13504,8 +13399,8 @@
       {
         "venue_name": "labirrofila.com",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.43821,
+        "lng": 9.184584,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13848,8 +13743,8 @@
       {
         "venue_name": "Caffè Fernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -13905,8 +13800,8 @@
       {
         "venue_name": "Caffefernanda",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.4722,
+        "lng": 9.188287,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -14444,8 +14339,8 @@
       {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.485143,
+        "lng": 9.198722,
         "price_tier": "",
         "categories": "",
         "sources": [
