@@ -1,10 +1,10 @@
-# Stato corrente del dataset — aggiornato 02/06/2026 (beach S2+S2X merge)
+# Stato corrente del dataset — aggiornato 02/06/2026 (Pietro S4 + Peppe Phase3)
 
 > **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia).
 
 ---
 
-## 🏖️ VERTICAL BEACH (nuovo)
+## 🏖️ VERTICAL BEACH (Peppe Phase 3 chiusa)
 
 | Metrica | Valore |
 |---|---|
@@ -13,9 +13,32 @@
 | Con city/region popolati | ~6.700 (49%) |
 | Con `booking_provider` mappato | 6.203 (45% — spiagge.it via sitemap S2X) |
 | Con amenities normalizzate | 4.127 (30% — 15+ servizi vocabolario chiuso) |
-| Price items raccolti | 269 (S1: 214 + S2: 55) |
-| Venues prezzate | 37 |
+| **Price items raccolti** | **3.443** (S1 214 + S2 55 + Phase3 3.174) |
+| **Venues prezzate** | **1.731** (12.7% del master) |
+| **Confidence high** | **3.420 (99.3%)** |
 | Provider booking identificati | 8 (spiagge.it dominant 6.203 venues) |
+
+### Breakthrough tecnico Phase 3 (Peppe)
+- **Discovery critica**: spiagge.it espone prezzi via query string `?from=&to=` direttamente nel HTML SSR. NO Playwright necessario.
+- **Risparmio**: 70x più veloce di Playwright (25 min vs 25h stimate)
+- **Pattern**: `"price":N`, `"stagingItems":"1U_2B"`, `"bookingAvailable":true|false`
+- **Zero anti-bot**: requests puro funziona, no captcha
+
+### Breakdown items beach
+| Source | Items | Note |
+|---|---|---|
+| spiagge.it (Phase 3) | 3.174 | 2 slot/venue: peak Aug + mid Jun |
+| direct_website (S2) | 252 | Siti propri |
+| bibionemare (S1) | 17 | Consorzio |
+
+### Geographic spread items
+- Peak Aug median: €150/settimana (2 lettini + ombrellone)
+- Mid Jun median: €126/settimana (spread +19%)
+- Sud Italia: **524 venues prezzati** (era 5 in S2 = +10.380%)
+- Tutte 17 regioni costiere coperte
+
+### File beach raw_sources
+beach_master_venues.csv, beach_s1_*, beach_s2_*, beach_s2x_*, beach_phase3_*
 
 ### Composizione master beach
 - 9.252 venues OSM (S1, foundation geografica)
@@ -32,16 +55,25 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ---
 
-## 🍹 VERTICAL DRINK (Milano)
+## 🍹 VERTICAL DRINK (Milano) — post merge Pietro S4
 
 | Metrica | Valore |
 |---|---|
-| **Venues totali nel DB** | **1.601** (post ghost-merge) |
-| **Venues uniche sulla mappa** | **~159** |
-| **Items menu totali** | 5.576 |
-| **Price points geo+normalizzati** | **939** |
-| **Venue-product pairs** | 631 |
+| **Venues totali nel DB** | **1.601** |
+| **Venues uniche sulla mappa** | **161** (139 precise + 23 fallback) |
+| **Items menu totali** | 5.708 |
+| **Price points geo+normalizzati** | **1.080** |
+| **Venue-product pairs** | 723 |
 | **Prodotti coperti** | 22 |
+
+### Pietro S4 deep-scan (commit 733925e)
+- 88 venues re-processate dalla lista CEO (1-3 items DB pre-merge)
+- 66/88 venue con nuovi drink estratti (75% yield)
+- 236 items puliti dopo quality gate inline
+- Top yield: Caffè Fernanda +10, Norin Caffè Bistrot +10, Papeete +8, Refeel +8, Armanisilos +8
+- Distribuzione prodotti: spritz +35, negroni +34, americano +25, espresso +24, beer_bottle +20
+- Confidence: 100% medium (re-extraction, downgrade da high)
+- Quality gate 0 issues
 
 ### Cleanup CEO 02/06 (merge agent4 + audit completo)
 - Mergiato agent4 (TheFork via Wayback, eatbu, leggimenu, glovo) → 35 venues, 100 items consegnati

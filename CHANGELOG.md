@@ -6,6 +6,57 @@
 
 ---
 
+## 2026-06-02 — Pietro S4 deep-scan merge + Peppe Beach Phase 3 consegna
+
+### Pietro S4 (commit 733925e) — drink deep-scan
+- **Target**: re-scan 88 venues con estrazione parziale (1-3 items nel DB) dalla lista `PIETRO_S4_TARGETS.csv` preparata dal CEO
+- **Output**: 88 venues processate, 66 con nuovi drink (75% yield), **236 price points puliti**
+- **Tecnica**:
+  - mycia (43): ri-classificazione locale dei menu già scaricati con 22 pattern regex → recupera birre/brand non normalizzati
+  - direct_website/web_extract/eatbu (42): re-fetch + regex riga + PDF/path-probing
+  - leggimenu (3): pagine categoria server-side (.lmcart-add data-price)
+- **Quality gate inline**: scartati ~177 falsi positivi pre-emit (PRICE_TOO_HIGH_FOR_PRODUCT 36, MENU_NOTE, FOOD, COFFEE_NOT_COCKTAIL, NON_MILAN)
+- **Onestà**: target +500 pp, raggiunti 236. Scelta qualità: "Meglio 236 puliti che 413 con 40% rumore"
+- **Distribuzione**: spritz +35, negroni +34, americano +25, espresso +24, beer_bottle +20, soft_drink +16, water +14, cappuccino +12, wine_glass +10, beer_heineken +10, margarita +10
+- **Top yield venues**: Caffè Fernanda +10 items, Norin Caffè Bistrot +10, Papeete +8, Refeel +8, Armanisilos +8, Luca & Andrea +8
+- **Tutti confidence=medium** (corretto per re-extraction)
+
+### CEO merge Pietro S4
+- Sync agent4_deepscan_*.csv in workdir
+- Run merge_pipeline.py (filtri inline già attivi: CAP città, nav markers, parser noise, ghost merger)
+- **Delta drink**:
+  - Price points: 939 → **1.080** (+141 netti vs 236 estratti = 95 erano già coperti da altre fonti)
+  - Items totali: 5.576 → 5.708 (+132)
+  - Venue-product pairs: 631 → **723** (+92)
+  - Venues mappa: 159 → **161** (+2)
+  - Venues DB: invariato 1.601
+
+### Peppe Beach Phase 3 (commit ef0c593) — breakthrough tecnico
+- **Phase 3.0 (DOM discovery)**:
+  - Tentati 30+ endpoint REST `api.spiagge.it` → tutti 404
+  - Playwright sniffing: zero XHR fired su "Vedi disponibilità"
+  - **Scoperta**: prezzi esposti via query string `?from=&to=` direttamente nel HTML SSR
+  - Pattern: `"price":N`, `"stagingItems":"1U_2B"`, `"bookingAvailable":true|false`
+  - Risparmio: **70x più veloce** di Playwright (25 min vs 25h)
+  - Zero anti-bot rilevato anche su prezzi (conferma S2X)
+- **Phase 3.1 (mass extraction)**:
+  - 6.686 venues × 2 slot (peak ago 1-7 + mid giu 15-21) = 13.372 fetch
+  - 16 worker concurrent + Session pool = ~10 min totali
+  - 3.174 items / 1.696 venues con `bookingAvailable=true`
+  - **24% conversion rate** (75% venues spiagge.it senza booking online)
+  - Sud Italia: 524 venues prezzati (era 5 in S2, +10.380%)
+  - Peak Aug median €150/sett, mid Jun median €126/sett (spread +19%)
+- **Phase 3.6 (consolidation)**: merge S1 214 + S2 direct 39 + S2 PDF 16 + Phase 3.1 3.174 = **3.443 items / 1.731 venues prezzati**, 99.3% high confidence, 0 rejection in QG
+- **Schema invariato**: 16 normalized_product S1 + 8 price_type S1 sufficienti
+- **Output**: `raw_sources/beach_phase3_consolidated_items.csv` (3.443 rows)
+- **Phase 3.2-3.5 rinviate** (iBagnino, Beacharound, secondary, direct): 4-8h sessione futura per chiudere target 2.000 venues
+
+### Stato finale post-merge entrambi
+- Drink: 1.080 price points, 161 venues mappa, 22 prodotti
+- Beach: 3.443 items, 1.731 venues prezzati, 17 regioni coperte
+
+---
+
 ## 2026-06-02 — Merge agent4 (ultimo batch drink) + cleanup DB completo
 
 ### Input agent4 (consegna finale agent drink Milano)
