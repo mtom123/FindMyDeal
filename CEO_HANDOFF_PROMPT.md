@@ -81,13 +81,13 @@ Quando arrivano nuovi items, applica SEMPRE questi filtri prima del merge:
 9. PDF_MULTI_COL: items con "X,00 Y,00" nel raw_price → split in due righe
 10. PAGINE_GIALLE: url contains "paginegialle" → SCARTA (junk)
 
-NUMERI ATTUALI (fine 31/05/2026)
+NUMERI ATTUALI (01/06/2026)
 - Venues totali nel DB: 1.558
-- Venues uniche sulla mappa: 151
-- Price points geo+normalizzati: 888
-- Venue-product pairs: 592
+- Venues uniche sulla mappa: 146
+- Price points geo+normalizzati: 829
+- Venue-product pairs: 547
 - Prodotti coperti: 22
-- Items totali: 5.835
+- Items totali: 5.361
 
 TEAM
 - Pietro: agente scraper (TheFork, web extraction, PDF). Setup tecnico su disco D: per spazio
@@ -96,7 +96,7 @@ TEAM
 
 FONTI DATI INTEGRATE (NON RIFARE)
 - mycia (648 venues, 122 con menu = TUTTO l'estraibile)
-- leggimenu (41 venues, 4.832 items)
+- leggimenu (35 venues Milano, 4.214 items — 6 non-Milan rimossi il 01/06)
 - menudigitale (2 venues Milano confermate)
 - direct_website + agent2 + scraper (Pietro sessioni 1+2)
 - pdf (Funky, Casa Giuditta, Deseo, Abbracci)
@@ -107,7 +107,7 @@ FONTI DATI INTEGRATE (NON RIFARE)
 - comune_osm (Peppe — 4.649 venue base da open data Comune)
 
 FONTI BLOCCATE / NON FATTIBILI
-- TheFork: Datadome CAPTCHA, richiede Playwright stealth (Pietro ci sta lavorando)
+- TheFork: Datadome HTTP 403 anche con Playwright stealth headless (testato 3/3 il 01/06). Serve proxy residenziale o API ufficiale. NON è un TODO attivo.
 - Glovo/JustEat: Playwright + sessione reale, ROI basso per now
 - TripAdvisor: Cloudflare antibot pesante, lascia perdere
 - qromo /API: robots.txt vieta esplicitamente, NON scrappare
@@ -139,9 +139,9 @@ BUG NOTI / LESSON LEARNED
 - Branch merging: se un agente ha lavorato su branch più vecchio del main, fai checkout selettivo dei file solo per quelli che vuoi (dati raw e nuovi script). Tieni la versione main per onboarding files che hai aggiornato dopo.
 
 PROSSIMI STEP NOTI
-- Pietro sta facendo sessione notturna 31/05→01/06 con focus TheFork + geocoding leggimenu
-- I 39 venues leggimenu sono stackati su Milano centro (45.4642,9.1900) → geocoding preciso pending
-- README.md ha numeri da aggiornare dopo ogni merge significativo
+- Pietro in sessione S3 (01/06): slug brute-force leggimenu + OSM direct 79 venues + Wayback TheFork
+- 22 venues ancora su fallback Milano centro — alcune irrisolvibili (no indirizzo noto)
+- Dopo S3: merge CEO → update AGENTS_STATE.md → push sito
 
 PRIMO MESSAGGIO DA INVIARE
 Dopo aver letto i file di onboarding, mandami un riepilogo:
@@ -194,13 +194,13 @@ Se la nuova chat sembra non capire qualcosa:
 
 ## STATO ATTUALE AL HANDOFF
 
-- ✅ 888 price points
-- ✅ 151 venues sulla mappa  
+- ✅ 829 price points
+- ✅ 146 venues sulla mappa
 - ✅ 1.558 venues totali nel DB
-- ✅ Sito live aggiornato (commit `025e5de`)
+- ✅ Sito live aggiornato (commit `3eee77e`)
 - ✅ Tutti i merge committati e pushati
-- ✅ Branch `data/web-extract-milano` mergiato e cancellato
-- 🟡 Pietro in sessione notturna (TheFork + geocoding leggimenu)
-- 🟡 README pubblico potrebbe avere numeri da rinfrescare dopo prossimo merge
+- ✅ Repo pulito: file obsoleti rimossi, tutti i .md aggiornati
+- 🟡 Pietro in sessione S3 (slug brute-force leggimenu + OSM direct + Wayback)
+- 🟡 Dopo S3: merge CEO + push sito
 
-Buon lavoro al nuovo CEO. 🍹
+Buon lavoro al nuovo CEO.

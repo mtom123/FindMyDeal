@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-01 — CEO merge + pulizia repo
+
+### Merge sessione notturna Pietro (geocoding leggimenu) — CEO
+- **Cosa**: 29 venue leggimenu geocodate con precisione (Nominatim). 6 falsi positivi non-Milano rimossi.
+- **Venues rimosse**: Pub51 (PA), Coco Loco (LE), Bivacco (TN), Birra Bader (SI), Canaglie del Navigli (PR), SOLO APERITIVO popup (FE) — erano nel sitemap leggimenu ma non a Milano.
+- **618 items eliminati** (quelli di quelle 6 venues).
+- **Fix pipeline**: aggiunto `pdf_dork` a `VALID_PLATFORMS` (era il platform tag reale in pdf_googledork_menu_items.csv, mancava dalla lista — 81 items ora validati).
+- **Geocoding CEO**: Frigo Milano (45.4632, 9.1829), Al Chiosco Da Giacomo (45.4451, 9.2236), BRAMA Via Borromei (45.4641, 9.1820).
+- **Delta**: price points 888 → 829, items 5.835 → 5.361, venues mappa 151 → 146.
+- **Perché il calo**: le 6 venue non-Milano avevano molti price points validi come dati, ma fuori scope. Guadagno netto = qualità + 29 pin sbloccati dal Duomo.
+
+### Pulizia repo — CEO
+- **Eliminati**: `NIGHT_SESSION_PIETRO.md` (report eseguito, info in CHANGELOG), `PROMPT_PIETRO_NOTTE.md` (sessione S2 completata, superata da S3).
+- **Aggiornati**: README.md (numeri pubblici), BRIEF_PEPPE.md (numeri + tabella prodotti), AGENTS.md (struttura repo), COLLABORATORI.md (punta a PROMPT_PIETRO_S3), CEO_HANDOFF_PROMPT.md (numeri e stato), PIETRO_HANDOFF.md (pulizia stale notes).
+- **Creato**: `PROMPT_PIETRO_S3.md` — sessione multi-ore con slug brute-force leggimenu, OSM direct 79 venues, Wayback TheFork.
+
+### TheFork — stato definitivo attuale
+- Datadome blocca anche Playwright stealth headless (testato 3/3 URL, IP datacenter).
+- **Non più in pending**: serve proxy residenziale o accordo API. Non è un TODO attivo.
+
+---
+
 ## 2026-05-31 — Sera (sessione data-sourcing)
 
 ### Esplorazione fonti nuove + tecniche di estrazione

@@ -23,7 +23,7 @@ Ogni fonte → due file in `raw_sources/`: `<fonte>_venues.csv` e `<fonte>_menu_
 
 ## STATO DATI (cosa è GIÀ fatto — NON rifare; vedi AGENTS_STATE.md)
 - **mycia**: 648 venues / ~1.102 items — COMPLETO (sitemap `/menu/milano/`).
-- **leggimenu**: 41 venues / 4.832 items — COMPLETO. 31/41 geocodate; **6 venue sono FUORI Milano** (Pub51/Lercara, Coco Loco/Aradeo, Bivacco/Transacqua, Birra Bader/Siena, Canaglie del Navigli/Parma, SOLO APERITIVO/Ferrara) → da rimuovere.
+- **leggimenu**: 35 venues / 4.214 items — COMPLETO. 31/35 geocodate precisamente. Le 6 venue non-Milano (Pub51, Coco Loco, Bivacco, Birra Bader, Canaglie del Navigli, SOLO APERITIVO) sono state **già rimosse dal CEO il 01/06** insieme ai loro 618 items.
 - **menudigitale**: nel repo solo 2 Milano (Corner, Mulberry). In `~/Desktop/Find My Deal/raw_sources/` esiste una versione **tutta-Italia, 111 venues / 12.600 items / 97% prezzi** (fuori scope Milano → decidere col CEO se/come usarla).
 - **qromo**: 25 venues, 0 items — ⛔ robots.txt vieta `/API`. NON scrapare items.
 - Altri già nel DB: direct_website, eatbu, qodeup, PDF (dish.co), web_extracted, pdf_googledork, **comune_osm** (4.649 venue geolocalizzati, base GEO, no prezzi).
@@ -60,14 +60,14 @@ git push origin main                 # serve auth ucovichpietro (gh o token repo
 ```
 Poi avvisa mtom123 con un report sintetico per step. Il CEO fa merge + rigenera `data/unified_*` e `prices_data.json` (NON toccarli tu; NON toccare `index.html`/CSS = Peppe; NON cancellare file in raw_sources senza chiedere).
 
-## ULTIMA SESSIONE (notturna, 01/06)
-- ✅ Step 2 geocoding leggimenu: 29 venue geocodate (31/41 precise). Commit 5be21a3, 41011fc — **pushati su main**.
-- ⛔ Step 1 TheFork: bloccato Datadome (tentato Playwright).
-- ⏭️ Step 3/4 superati da sessioni precedenti; Step 5 (cache D:\) non disponibile su Mac.
-- 🧹 Flag: 6 venue leggimenu fuori Milano da rimuovere; 4 indirizzi malformati da geocodare a mano.
+## SESSIONI COMPLETATE
+- **S2 notturna (01/06)**: geocoding 29 venue leggimenu. TheFork bloccato Datadome.
+- **CEO 01/06**: rimosse 6 venue non-Milan + 618 items. Geocodate 3 venue aggiuntive (Frigo, Al Chiosco, BRAMA). Fix VALID_PLATFORMS (pdf_dork).
 
-## PROSSIMI PASSI SUGGERITI
-1. TheFork solo se arriva proxy residenziale/headful/API.
-2. Rimuovere i 6 venue non-Milano + geocodare i 4 indirizzi residui leggimenu.
-3. Decidere col CEO scope menudigitale (solo Milano vs tutta-Italia 12.6k items).
-4. Leggere sempre PRIMA: AGENTS.md → AGENTS_STATE.md → raw_sources/README.md → scripts/SCHEMA_AGENTI.md.
+## SESSIONE CORRENTE
+- **S3**: prompt in `PROMPT_PIETRO_S3.md`. Focus: slug brute-force leggimenu (PRIORITÀ MASSIMA), OSM direct 79 venues, Wayback TheFork.
+
+## PROSSIMI PASSI (per S3 e oltre)
+1. Esegui `PROMPT_PIETRO_S3.md` — tutto il codice è già lì.
+2. TheFork: solo via Wayback Machine (niente Datadome) o proxy residenziale.
+3. Leggere sempre PRIMA: AGENTS.md → AGENTS_STATE.md → raw_sources/README.md → scripts/SCHEMA_AGENTI.md.

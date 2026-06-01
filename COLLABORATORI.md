@@ -15,7 +15,7 @@ Poi leggi nell'ordine:
 2. **`AGENTS_STATE.md`** — cosa è già fatto
 3. **`CHANGELOG.md`** — perché è stato fatto così
 4. Il file specifico per il tuo ruolo:
-   - Scraper: `scripts/SCHEMA_AGENTI.md` + eventuale prompt (`PROMPT_PIETRO_NOTTE.md`)
+   - Scraper: `scripts/SCHEMA_AGENTI.md` + prompt attivo (`PROMPT_PIETRO_S3.md`)
    - Frontend: `BRIEF_PEPPE.md`
 
 ## Setup tecnico minimo

@@ -49,19 +49,19 @@ FindMyDeal/
 ├── README.md                   ← presentazione pubblica
 │
 ├── raw_sources/                ← INPUT degli scraper
-│   ├── mycia_*.csv             ← già completo
-│   ├── leggimenu_*.csv         ← già completo
-│   ├── menudigitale_*.csv      ← già completo  
-│   ├── qromo_*.csv             ← legale, no items
-│   ├── direct_*.csv            ← già completo
-│   ├── pdf_*.csv               ← già completo
-│   ├── scraper_*.csv           ← prima sessione Pietro
-│   └── agent2_*.csv            ← seconda sessione Pietro
+│   ├── mycia_*.csv             ← completo (648 venues)
+│   ├── leggimenu_*.csv         ← completo (35 venues Milano, 4.214 items)
+│   ├── menudigitale_*.csv      ← completo (2 venues Milano)
+│   ├── qromo_*.csv             ← solo venues, no items (robots.txt)
+│   ├── direct_*.csv / scraper_*.csv / agent2_*.csv  ← sessioni Pietro
+│   ├── pdf_*.csv / pdf_googledork_*.csv  ← menu PDF
+│   ├── web_extracted_*.csv     ← Startpage→sito→menu (Peppe)
+│   └── comune_osm_venues.csv   ← 4.649 venues geo base (Comune Milano)
 │
-├── data/                       ← OUTPUT unificato dal merge
-│   ├── unified_venues.csv      ← 1.059 venues deduplicate
-│   ├── unified_menu_items.csv  ← 5.473 items normalizzati
-│   └── unified_prices.csv      ← 738 price points geo+normalizzati
+├── data/                       ← OUTPUT unificato dal merge (NON modificare)
+│   ├── unified_venues.csv      ← 1.558 venues deduplicate
+│   ├── unified_menu_items.csv  ← 5.361 items normalizzati
+│   └── unified_prices.csv      ← 829 price points geo+normalizzati
 │
 └── scripts/                    ← TOOLS
     ├── SCHEMA_AGENTI.md        ← spec CSV OBBLIGATORIA
