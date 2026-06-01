@@ -32,8 +32,19 @@ PRODUCT_LABELS = {
     "beach_shower":                  "Doccia",
 }
 
+# Products surfaced in the UI category bar (order matters)
+UI_CATEGORIES = [
+    "beach_set_2lettini_ombrellone",
+    "beach_sunbed",
+    "beach_umbrella_standard",
+    "beach_umbrella_first_row",
+    "beach_cabin_day",
+    "beach_entry_fee",
+]
+
 # ── Load items ────────────────────────────────────────────────────
-items_by_venue = defaultdict(lambda: {"peak": [], "mid": [], "other": []})
+# Per venue: { product: { 'peak':[items], 'mid':[items], 'other':[items] } }
+items_by_venue_product = defaultdict(lambda: defaultdict(lambda: {"peak": [], "mid": [], "other": []}))
 
 with open(ITEMS_FILE, encoding="utf-8") as f:
     for r in csv.DictReader(f):
@@ -47,21 +58,15 @@ with open(ITEMS_FILE, encoding="utf-8") as f:
 
         item = {
             "price": round(price, 2),
-            "product": product,
             "label": PRODUCT_LABELS.get(product, product),
             "price_type": r.get("price_type", ""),
             "staging": r.get("staging_items", ""),
-            "spots": r.get("available_spots", ""),
             "source_url": r.get("source_url", ""),
         }
 
         slot = r.get("peak_or_mid", "")
-        if slot == "peak_aug":
-            items_by_venue[r["source_venue_id"]]["peak"].append(item)
-        elif slot == "mid_jun":
-            items_by_venue[r["source_venue_id"]]["mid"].append(item)
-        else:
-            items_by_venue[r["source_venue_id"]]["other"].append(item)
+        key = "peak" if slot == "peak_aug" else ("mid" if slot == "mid_jun" else "other")
+        items_by_venue_product[r["source_venue_id"]][product][key].append(item)
 
 # ── Load venues ───────────────────────────────────────────────────
 venues_out = []
@@ -73,12 +78,8 @@ region_stats = defaultdict(lambda: {
     "lng_min": 180, "lng_max": -180,
 })
 
-def headline_price(items):
-    """Min price of standard 2-lettini set, else min of all."""
-    std = [i for i in items if i["product"] == "beach_set_2lettini_ombrellone"]
-    pool = std if std else items
-    prices = [i["price"] for i in pool]
-    return min(prices) if prices else None
+def min_price(items):
+    return min((i["price"] for i in items), default=None)
 
 with open(VENUES_FILE, encoding="utf-8") as f:
     for r in csv.DictReader(f):
@@ -94,13 +95,35 @@ with open(VENUES_FILE, encoding="utf-8") as f:
         except ValueError:
             continue
 
-        vid    = r["source_venue_id"]
-        prices = items_by_venue.get(vid, {"peak": [], "mid": [], "other": []})
-        has_price = bool(prices["peak"] or prices["mid"] or prices["other"])
+        vid = r["source_venue_id"]
+        venue_products = items_by_venue_product.get(vid, {})
 
-        min_peak  = headline_price(prices["peak"])
-        min_mid   = headline_price(prices["mid"])
-        min_price = min_peak or min_mid or headline_price(prices["other"])
+        # Per-product compact price index
+        # prices = { product: { peak: 38.0, mid: 35.0, items_peak:[...], items_mid:[...] } }
+        prices_by_product = {}
+        for product, slots in venue_products.items():
+            entry = {}
+            mp = min_price(slots["peak"])
+            mm = min_price(slots["mid"])
+            mo = min_price(slots["other"])
+            if mp is not None: entry["peak"] = mp
+            if mm is not None: entry["mid"]  = mm
+            if mo is not None: entry["other"] = mo
+            entry["items_peak"] = sorted(slots["peak"], key=lambda x: x["price"])[:3]
+            entry["items_mid"]  = sorted(slots["mid"],  key=lambda x: x["price"])[:3]
+            if slots["other"]:
+                entry["items_other"] = sorted(slots["other"], key=lambda x: x["price"])[:3]
+            prices_by_product[product] = entry
+
+        has_price = bool(prices_by_product)
+
+        # Headline = min of beach_set_2lettini_ombrellone or first available
+        headline = prices_by_product.get("beach_set_2lettini_ombrellone") or \
+                   prices_by_product.get("beach_sunbed") or \
+                   (next(iter(prices_by_product.values())) if prices_by_product else None)
+        h_peak = headline.get("peak") if headline else None
+        h_mid  = headline.get("mid")  if headline else None
+        h_min  = h_peak or h_mid or (headline.get("other") if headline else None)
 
         amenities = []
         raw_amen = r.get("amenities", "") or ""
@@ -123,17 +146,10 @@ with open(VENUES_FILE, encoding="utf-8") as f:
 
         if has_price:
             priced_count += 1
-            if min_price is not None:
-                venue["min_price"] = round(min_price, 2)
-            if min_peak  is not None:
-                venue["min_peak"]  = round(min_peak, 2)
-            if min_mid   is not None:
-                venue["min_mid"]   = round(min_mid, 2)
-            # Top items for detail card (max 4 per slot)
-            venue["items_peak"]  = sorted(prices["peak"],  key=lambda x: x["price"])[:4]
-            venue["items_mid"]   = sorted(prices["mid"],   key=lambda x: x["price"])[:4]
-            if prices["other"]:
-                venue["items_other"] = sorted(prices["other"], key=lambda x: x["price"])[:4]
+            if h_min  is not None: venue["min_price"] = round(h_min, 2)
+            if h_peak is not None: venue["min_peak"]  = round(h_peak, 2)
+            if h_mid  is not None: venue["min_mid"]   = round(h_mid, 2)
+            venue["prices"] = prices_by_product
 
         region = r.get("region", "") or "Altra"
         rs = region_stats[region]
@@ -172,6 +188,10 @@ out = {
         "total_venues": len(venues_out),
         "total_priced": priced_count,
         "regions": regions_out,
+        "categories": [
+            {"code": c, "label": PRODUCT_LABELS.get(c, c)}
+            for c in UI_CATEGORIES
+        ],
     },
     "venues": venues_out,
 }
