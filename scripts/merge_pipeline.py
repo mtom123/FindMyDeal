@@ -60,6 +60,8 @@ VALID_PLATFORMS = {
     "menudigitale", "direct_website", "other",
     # Aggiunti session 31/05 sera
     "web_extract", "pdf_googledork", "comune", "qodeup",
+    # Aggiunti 01/06 — pdf_dork è il platform tag reale in pdf_googledork_menu_items.csv
+    "pdf_dork",
 }
 
 VALID_PRODUCTS = {

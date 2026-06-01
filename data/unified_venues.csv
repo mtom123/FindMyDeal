@@ -864,45 +864,39 @@ cb5782cceb19,Cascina Martesana,Cascina Martesana,direct_website,,Milano,45.50341
 20e3049cccfb,La Chiesetta,La Chiesetta,direct_website,,Milano,45.4816985,9.1728365,pub,,,,+39 339 7969095,https://www.lachiesetta.it/,Mo-Sa 18:00-02:00,False,https://www.lachiesetta.it/,2026-05-30T20:43:55.019300+00:00
 fb4b2b83544c,Old Fashion,Old Fashion,direct_website,Viale Luigi Camoens,Milano,45.4728525,9.1736435,nightclub,,,,,https://oldfashion.it/,,False,https://oldfashion.it/,2026-05-30T20:43:55.019300+00:00
 171184f74657,Il Bar del Centro Parco,Il Bar del Centro Parco,direct_website,Via San Rocco,Segrate,45.4903964,9.2875982,bar,,,,,https://ilbardelcentroparco.it/,,False,https://ilbardelcentroparco.it/menu/,2026-05-30T20:43:55.019300+00:00
-1ca1660aa8fb,Mealthie - Milano,Mealthie - Milano,leggimenu,Piazza del Duomo 21,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/mealthietortona,2026-05-31T09:14:42Z
-e6777622e2a2,Little Italy Milano,Little Italy Milano,leggimenu,"Via Giuseppe Ripamonti, 606, 20141 Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/85s4heij76,2026-05-31T09:14:42Z
-b6057009f6a1,Brama - Milano,Brama - Milano,leggimenu,"Ripa di Porta Ticinese, 11, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7ds4dd2l81p1,2026-05-31T09:14:42Z
-07f7060198f5,Los Locos,Los Locos,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/loslocosmilano,2026-05-31T09:14:42Z
-1ba4fa6c6a55,Cambiopizza - Milano,Cambiopizza - Milano,leggimenu,"Via Jan Palach, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/cambiopizza,2026-05-31T09:14:42Z
-a96757e10726,Chiosco Milano 3,Chiosco Milano 3,leggimenu,"Via Bassano Porrone, 8, 20121 Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/chioscomilano3,2026-05-31T09:14:42Z
-0fb370fe67e1,Frigo Milano,Frigo Milano,leggimenu,"Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/81p4hdai71,2026-05-31T09:14:42Z
-42daf4151001,LiQUIDO Rooftop Bar,LiQUIDO Rooftop Bar,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/liquido,2026-05-31T09:14:42Z
-7fac07718be2,FOD,FOD,leggimenu,"Via Paolo Sarpi, 53, Milano, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/barfod,2026-05-31T09:14:42Z
-5382385f4747,drink store,drink store,leggimenu,Via Ascanio Sforza 9,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/drinkstore,2026-05-31T09:14:42Z
+afc929de0714,Mealthie - Milano,Mealthie - Milano,leggimenu,Via Tortona 33 20144 Milano,Milano,45.451152,9.161217,,,,,,,,True,https://www.leggimenu.it/menu/mealthietortona,2026-05-31T09:14:42Z
+df593d84bd7c,Little Italy Milano,Little Italy Milano,leggimenu,"Via Giuseppe Ripamonti, 606, 20141 Milano MI, Italia",Milano,45.396932,9.210337,,,,,,,,True,https://www.leggimenu.it/menu/85s4heij76,2026-05-31T09:14:42Z
+def92c2ce9e3,Brama - Milano,Brama - Milano,leggimenu,"Ripa di Porta Ticinese, 11, Milano, MI, Italia",Milano,45.451973,9.176506,,,,,,,,True,https://www.leggimenu.it/menu/7ds4dd2l81p1,2026-05-31T09:14:42Z
+52debfcd377b,Los Locos,Los Locos,leggimenu,Via Novara 196 20153 Milano,Milano,45.486303,9.080195,,,,,,,,True,https://www.leggimenu.it/menu/loslocosmilano,2026-05-31T09:14:42Z
+462989999773,Cambiopizza - Milano,Cambiopizza - Milano,leggimenu,"Via Jan Palach, Milano, MI, Italia",Milano,45.427218,9.168563,,,,,,,,True,https://www.leggimenu.it/menu/cambiopizza,2026-05-31T09:14:42Z
+b58c0b8da2cf,Chiosco Milano 3,Chiosco Milano 3,leggimenu,"Via Bassano Porrone, 8, 20121 Milano MI, Italia",Milano,45.466125,9.186576,,,,,,,,True,https://www.leggimenu.it/menu/chioscomilano3,2026-05-31T09:14:42Z
+5307983f0a90,Frigo Milano,Frigo Milano,leggimenu,"Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",Milano,45.463199,9.182863,,,,,,,,True,https://www.leggimenu.it/menu/81p4hdai71,2026-05-31T09:14:42Z
+c16d10d179f8,LiQUIDO Rooftop Bar,LiQUIDO Rooftop Bar,leggimenu,Via Giovanni Battista Pirelli 5B 20124 Milano,Milano,45.484065,9.196656,,,,,,,,True,https://www.leggimenu.it/menu/liquido,2026-05-31T09:14:42Z
+0ab085070342,FOD,FOD,leggimenu,"Via Paolo Sarpi, 53, Milano, Italia",Milano,45.480983,9.173182,,,,,,,,True,https://www.leggimenu.it/menu/barfod,2026-05-31T09:14:42Z
+acbab776a2c9,drink store,drink store,leggimenu,Via Ascanio Sforza 9,Milano,45.450708,9.177949,,,,,,,,True,https://www.leggimenu.it/menu/drinkstore,2026-05-31T09:14:42Z
 505df9f1ba58,Laudano e Misture,Laudano e Misture,leggimenu,,Milano,45.4642,9.1900,,,,,,,,False,https://www.leggimenu.it/menu/laudanoemisture,2026-05-31T09:14:42Z
-e5d2e5a4b2f5,Pub51,Pub51,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/pub51,2026-05-31T09:14:42Z
-30691d57d900,Coco Loco,Coco Loco,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/cocoloco,2026-05-31T09:14:42Z
-23f6c4a7f051,Bivacco,Bivacco,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/bivacco,2026-05-31T09:14:42Z
-6d3751d1ebef,Dream Cocktail Bar,Dream Cocktail Bar,leggimenu,Via Edmondo De Amicis 28,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/dreamcocktailbar,2026-05-31T09:14:42Z
-4ce744bc4fe3,Al Chiosco Da Giacomo Birre Artigianali,Al Chiosco Da Giacomo Birre Artigianali,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/dagiacomocraftbeer,2026-05-31T09:14:42Z
-791ef2664b7f,LaStazioneDellaBirra,LaStazioneDellaBirra,leggimenu,Via Medardo Rosso 18,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7dp4bdqq7ps2,2026-05-31T09:14:42Z
-b554dda22e0e,Iris birra,Iris birra,leggimenu,"Via Angelo Secchi, 2, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/salvatore-oricchio,2026-05-31T09:14:42Z
+633cfd9243c8,Dream Cocktail Bar,Dream Cocktail Bar,leggimenu,Via Edmondo De Amicis 28,Milano,45.459283,9.177298,,,,,,,,True,https://www.leggimenu.it/menu/dreamcocktailbar,2026-05-31T09:14:42Z
+b0ccfb3f3b5b,Al Chiosco Da Giacomo Birre Artigianali,Al Chiosco Da Giacomo Birre Artigianali,leggimenu,,Milano,45.445095,9.223566,,,,,,,,True,https://www.leggimenu.it/menu/dagiacomocraftbeer,2026-05-31T09:14:42Z
+c36838109404,LaStazioneDellaBirra,LaStazioneDellaBirra,leggimenu,Via Medardo Rosso 18,Milano,45.489779,9.185159,,,,,,,,True,https://www.leggimenu.it/menu/7dp4bdqq7ps2,2026-05-31T09:14:42Z
+0dd62b4f7e7d,Iris birra,Iris birra,leggimenu,"Via Angelo Secchi, 2, Milano, MI, Italia",Milano,45.476668,9.207993,,,,,,,,True,https://www.leggimenu.it/menu/salvatore-oricchio,2026-05-31T09:14:42Z
 08b8284c0bb7,UNAHOTELS Scandinavia Milano,UNAHOTELS Scandinavia Milano,leggimenu,,Milano,45.4642,9.1900,,,,,,,,False,https://www.leggimenu.it/menu/scandinaviamilano,2026-05-31T09:14:42Z
-00bdc2e64f29,Birra Bader,Birra Bader,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/79rkbeal7ht1,2026-05-31T09:14:42Z
-ce9ad30fb909,SPRITZ NAVIGLI MILANO,SPRITZ NAVIGLI MILANO,leggimenu,"Via Bovisasca, 57/59, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/spritznaviglimilano,2026-05-31T09:14:42Z
-ee4e4cc18abf,Canaglie del Navigli,Canaglie del Navigli,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/canagliedelnaviglio,2026-05-31T09:14:42Z
-15e918fad1c1,La Vineria in Ripa,La Vineria in Ripa,leggimenu,"Via Casale, 4, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/lavineriainripa,2026-05-31T09:14:42Z
-77d139ae45bb,Osteria dal Cornuto,Osteria dal Cornuto,leggimenu,"Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/osteriadalcornuto,2026-05-31T09:14:42Z
-be150af6857f,Santo Taco,Santo Taco,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/santotaco,2026-05-31T09:14:42Z
-a424c0ade24e,BRAMA,BRAMA,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7ds4ddaq7ls1,2026-05-31T09:14:42Z
-0190a3a07669,bollani,bollani,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7dp4dfak7hq1,2026-05-31T09:14:42Z
-05008277533b,SWAMI - MILANO,SWAMI - MILANO,leggimenu,"Via Ponte Vetero, 14, 20121 Milano Milano, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7dpkdeah7ds1,2026-05-31T09:14:42Z
-67661f8a13e3,Mealthie,Mealthie,leggimenu,"Via Valtellina, 33, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7ds4hdij7lp2,2026-05-31T09:14:42Z
-04402091cc48,L'APERITIVO,L'APERITIVO,leggimenu,"Via Santa Tecla, 5, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/laperitivomenu,2026-05-31T09:14:42Z
-5c9e61ed1e9a,bachelite clab - Milano,bachelite clab - Milano,leggimenu,"Via Borgospesso, 12, 20121 Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/bacheliteclab,2026-05-31T09:14:42Z
-cd84b41e4e83,castrenze de vincenzi - Milano,castrenze de vincenzi - Milano,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/75q49daq7dp2,2026-05-31T09:14:42Z
-7e915006ab2b,SOLO APERITIVO popup,SOLO APERITIVO popup,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/soloaperitivopopup,2026-05-31T09:14:42Z
-516ec89a33fa,TYPE,TYPE,leggimenu,,Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/typeday,2026-05-31T09:14:42Z
-8e1ec586d1ec,L'Isola di Aurora,L'Isola di Aurora,leggimenu,"Via Ludovico da Viadana, 2, 20122 Milano, Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/lisoladiaurorait,2026-05-31T09:14:42Z
-d5a8d782c769,Maccheroni,Maccheroni,leggimenu,"Via Edmondo de Amicis, 7, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/7dqkbdap7tq2,2026-05-31T09:14:42Z
-c71dbdca7342,Moma Cafe - Milano,Moma Cafe - Milano,leggimenu,"Ripa di Porta Ticinese, 11, Milano, MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/moma46,2026-05-31T09:14:42Z
-9da6562f87b3,AI BASTIONI - Milano,AI BASTIONI - Milano,leggimenu,"Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/79r4fd2q7hs2,2026-05-31T09:14:42Z
-5cd728529938,Mezzo Restaurant Hotel Indigo - Milano,Mezzo Restaurant Hotel Indigo - Milano,leggimenu,"Viale Monte Grappa, 10, 20124 Milano, Milano MI, Italia",Milano,45.4642,9.1900,,,,,,,,True,https://www.leggimenu.it/menu/indigolunch,2026-05-31T09:14:42Z
+ee5bda0150cf,SPRITZ NAVIGLI MILANO,SPRITZ NAVIGLI MILANO,leggimenu,"Via Bovisasca, 57/59, Milano, MI, Italia",Milano,45.510502,9.15966,,,,,,,,True,https://www.leggimenu.it/menu/spritznaviglimilano,2026-05-31T09:14:42Z
+58283af20b88,La Vineria in Ripa,La Vineria in Ripa,leggimenu,"Via Casale, 4, Milano, MI, Italia",Milano,45.451869,9.170347,,,,,,,,True,https://www.leggimenu.it/menu/lavineriainripa,2026-05-31T09:14:42Z
+9009ee809705,Osteria dal Cornuto,Osteria dal Cornuto,leggimenu,"Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",Milano,45.475639,9.18367,,,,,,,,True,https://www.leggimenu.it/menu/osteriadalcornuto,2026-05-31T09:14:42Z
+bc222bf6566c,Santo Taco,Santo Taco,leggimenu,Via Luigi Sabatelli 1,Milano,45.481064,9.168365,,,,,,,,True,https://www.leggimenu.it/menu/santotaco,2026-05-31T09:14:42Z
+1b64b3ddc699,BRAMA,BRAMA,leggimenu,Via Borromei 13 20123 Milano,Milano,45.464067,9.18196,,,,,,,,True,https://www.leggimenu.it/menu/7ds4ddaq7ls1,2026-05-31T09:14:42Z
+a06d037b5fd0,bollani,bollani,leggimenu,Via Reggio Emilia 3 20057 Assago,Milano,45.401736,9.127403,,,,,,,,True,https://www.leggimenu.it/menu/7dp4dfak7hq1,2026-05-31T09:14:42Z
+00a9d5466874,SWAMI - MILANO,SWAMI - MILANO,leggimenu,"Via Ponte Vetero, 14, 20121 Milano Milano, Italia",Milano,45.469581,9.18529,,,,,,,,True,https://www.leggimenu.it/menu/7dpkdeah7ds1,2026-05-31T09:14:42Z
+fc58f28246d1,Mealthie,Mealthie,leggimenu,"Via Valtellina, 33, Milano, MI, Italia",Milano,45.495606,9.183176,,,,,,,,True,https://www.leggimenu.it/menu/7ds4hdij7lp2,2026-05-31T09:14:42Z
+b0c5e53b9e8a,L'APERITIVO,L'APERITIVO,leggimenu,"Via Santa Tecla, 5, Milano, MI, Italia",Milano,45.462766,9.193529,,,,,,,,True,https://www.leggimenu.it/menu/laperitivomenu,2026-05-31T09:14:42Z
+81ef614dba3d,bachelite clab - Milano,bachelite clab - Milano,leggimenu,"Via Borgospesso, 12, 20121 Milano MI, Italia",Milano,45.470075,9.194108,,,,,,,,True,https://www.leggimenu.it/menu/bacheliteclab,2026-05-31T09:14:42Z
+8f1124f6105f,castrenze de vincenzi - Milano,castrenze de vincenzi - Milano,leggimenu,Via Ezio Biondi 20154 Milano,Milano,45.487418,9.160906,,,,,,,,True,https://www.leggimenu.it/menu/75q49daq7dp2,2026-05-31T09:14:42Z
+89ad3a4dfdcb,TYPE,TYPE,leggimenu,Via Pietro Borsieri 34 20159 Milano,Milano,45.489743,9.189246,,,,,,,,True,https://www.leggimenu.it/menu/typeday,2026-05-31T09:14:42Z
+0a46be1367a6,L'Isola di Aurora,L'Isola di Aurora,leggimenu,"Via Ludovico da Viadana, 2, 20122 Milano, Milano MI, Italia",Milano,45.458804,9.190889,,,,,,,,True,https://www.leggimenu.it/menu/lisoladiaurorait,2026-05-31T09:14:42Z
+6b410d0c38c0,Maccheroni,Maccheroni,leggimenu,"Via Edmondo de Amicis, 7, Milano, MI, Italia",Milano,45.457333,9.180572,,,,,,,,True,https://www.leggimenu.it/menu/7dqkbdap7tq2,2026-05-31T09:14:42Z
+9cbcc58ecd1c,Moma Cafe - Milano,Moma Cafe - Milano,leggimenu,"Ripa di Porta Ticinese, 11, Milano, MI, Italia",Milano,45.451973,9.176506,,,,,,,,True,https://www.leggimenu.it/menu/moma46,2026-05-31T09:14:42Z
+9d3cec5927fb,AI BASTIONI - Milano,AI BASTIONI - Milano,leggimenu,"Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",Milano,45.431989,9.177528,,,,,,,,True,https://www.leggimenu.it/menu/79r4fd2q7hs2,2026-05-31T09:14:42Z
+ee54cb5749db,Mezzo Restaurant Hotel Indigo - Milano,Mezzo Restaurant Hotel Indigo - Milano,leggimenu,"Viale Monte Grappa, 10, 20124 Milano, Milano MI, Italia",Milano,45.480941,9.19041,,,,,,,,True,https://www.leggimenu.it/menu/indigolunch,2026-05-31T09:14:42Z
 0959d2a0ebf5,Mantra Milano,Mantra Milano,menudigitale,,,,,,,,,,,,True,https://www.menudigitale.io/dgffh/?lang=it,2026-05-31T09:36:33Z
 0281d75e4771,RISTORANTE MAMALIGA,RISTORANTE MAMALIGA,menudigitale,,,,,,,,,,,,True,https://www.menudigitale.io/ristorantemamaliga/?lang=it,2026-05-31T09:36:33Z
 c50f5817cea7,Da Totó Pizzeria,Da Totó Pizzeria,menudigitale,,,,,,,,,,,,True,https://www.menudigitale.io/pfhug/?lang=it,2026-05-31T09:36:33Z
@@ -1007,6 +1001,12 @@ b5c964dc46f4,Antico forno pizzeria osteria,Antico forno pizzeria osteria,menudig
 ec059e4f16e4,Osteria Tavernetta,Osteria Tavernetta,menudigitale,,,,,,,,,,,,True,https://www.menudigitale.io/nnnqq/?lang=it,2026-05-31T09:40:59Z
 d790a1fdf70d,In Piazzetta,In Piazzetta,menudigitale,,,,,,,,,,,,True,https://www.menudigitale.io/inpiazzetta-caff-osteria-pinseria/?lang=it,2026-05-31T09:40:59Z
 2c888b889e9b,Osteria Palmira Prati,Osteria Palmira Prati,menudigitale,"Via Augusto Riboty, 20, 00195 Roma RM, Italia",,,,,,,,,,,True,https://www.menudigitale.io/osteriapalmiraprati/?lang=it,2026-05-31T09:40:59Z
+a4089642436e,Frida,Frida,pdf_dork,,Milano,,,,,,,,,,True,https://www.fridaisola.it/documents/menu-sera-frida.pdf,2026-05-31T16:03:57.171636+00:00
+523f7bfe62a3,Deseo,Deseo,pdf_dork,,Milano,,,,,,,,,,True,https://www.deseomilano.com/menu/Menu.pdf,2026-05-31T16:03:57.171636+00:00
+3117c5ee43ac,Living,Living,pdf_dork,,Milano,,,,,,,,,,True,https://www.livingmilano.com/wp-content/uploads/2025/03/Living.pdf,2026-05-31T16:03:57.171636+00:00
+cb7f303c7a5b,Harp Pub,Harp Pub,pdf_dork,,Milano,,,,,,,,,,True,https://cdn.website.dish.co/media/78/d1/7737175/Menu-2024.pdf,2026-05-31T16:03:57.171636+00:00
+bc6fd564b27d,Harp Pub Rhum,Harp Pub Rhum,pdf_dork,,Milano,,,,,,,,,,True,https://cdn.website.dish.co/media/5d/e2/4446578/Menu-Rhum.pdf,2026-05-31T16:03:57.171636+00:00
+ec086f9d3555,Banshee Pub,Banshee Pub,pdf_dork,,Milano,,,,,,,,,,True,http://www.banshee.pub/wp-content/uploads/2018/06/Banshee-RG-Pub-Menu.pdf,2026-05-31T16:03:57.171636+00:00
 a3cf93a54c20,Bar Nilo,Bar Nilo,direct_website,Via Ippolito Rosellini 20124.0,Milano,45.4887935,9.1943986,,,,,,http://www.barnilo.it/,,False,,2026-05-30T22:25:39Z
 c984d8a0e3b2,Starbucks,Starbucks,direct_website,Viale Francesco Restelli 5 20124.0,Milano,45.4882021,9.1953454,,,,,,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,Mo-Fr 07:30-18:30; Sa-Su 08:00-19:00,True,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,2026-05-30T22:25:39Z
 ae07b312526d,La Belle Alliance,La Belle Alliance,direct_website,Via Evangelista Torricelli 1 20136.0,Milano,45.4462528,9.1792204,,,,,+39 02 9924 6410,https://www.labellealliance.it,Su-Th 18:00-01:00; Fr-Sa 17:00-02:00,True,https://www.labellealliance.it,2026-05-30T22:25:39Z

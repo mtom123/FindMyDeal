@@ -2,7 +2,7 @@
   "spritz": {
     "code": "spritz",
     "label": "Spritz",
-    "count": 89,
+    "count": 84,
     "venues": [
       {
         "venue_name": "Papeete",
@@ -24,30 +24,6 @@
         "min_price": 0.75
       },
       {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Spritz Bianco",
-            "section": "",
-            "price": 3.0
-          },
-          {
-            "name": "Spritz",
-            "section": "",
-            "price": 3.5
-          }
-        ],
-        "min_price": 3.0
-      },
-      {
         "venue_name": "BAR PICCHIO",
         "address": "Via Melzo, 11, Milan, Metropolitan City of Milan, Italy",
         "lat": 45.4735028,
@@ -65,54 +41,6 @@
           }
         ],
         "min_price": 3.5
-      },
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Select lo Spritz Veneziano",
-            "section": "",
-            "price": 4.0
-          },
-          {
-            "name": "P31 Green Spritz",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Spritz bianco (St-Germain)",
-            "section": "",
-            "price": 7.0
-          }
-        ],
-        "min_price": 4.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Spritz",
-            "section": "Cocktail",
-            "price": 4.0
-          }
-        ],
-        "min_price": 4.0
       },
       {
         "venue_name": "Sicilian",
@@ -521,9 +449,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -541,8 +469,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -558,29 +486,10 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "APEROL SPRITZ",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -713,8 +622,8 @@
       {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -732,8 +641,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -806,8 +715,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -824,9 +733,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1111,8 +1020,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1129,9 +1038,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1149,8 +1058,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1590,30 +1499,6 @@
         "min_price": 10.0
       },
       {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "SELECT bitter spritz [COL DE MEZ prosecco extra dry – BITTER SELECT]",
-            "section": "",
-            "price": 10.0
-          },
-          {
-            "name": "FRED JERBIS 34 bitter spritz [COL DE MEZ prosecco extra dry – FRED JERBIS BITTER]",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 10.0
-      },
-      {
         "venue_name": "Piccolo Bar",
         "address": "Via Venti Settembre 93",
         "lat": 45.532707,
@@ -1763,9 +1648,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1783,8 +1668,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1880,7 +1765,7 @@
   "negroni": {
     "code": "negroni",
     "label": "Negroni",
-    "count": 66,
+    "count": 62,
     "venues": [
       {
         "venue_name": "BAR PICCHIO",
@@ -1921,53 +1806,10 @@
         "min_price": 5.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "P31 Negroni Green",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Negroni",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Negroni",
-            "section": "Cocktail",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -1988,25 +1830,6 @@
             "name": "Negroni Fod Prestige",
             "section": "",
             "price": 9.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Negroni",
-            "section": "",
-            "price": 6.0
           }
         ],
         "min_price": 6.0
@@ -2089,9 +1912,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2109,8 +1932,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2146,29 +1969,10 @@
         "min_price": 7.0
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "NEGRONI",
-            "section": "",
-            "price": 7.0
-          }
-        ],
-        "min_price": 7.0
-      },
-      {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2515,8 +2319,8 @@
       {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2539,8 +2343,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2557,9 +2361,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2924,8 +2728,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -2942,9 +2746,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3199,9 +3003,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3231,7 +3035,7 @@
   "americano": {
     "code": "americano",
     "label": "Americano",
-    "count": 58,
+    "count": 53,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -3278,9 +3082,9 @@
       },
       {
         "venue_name": "TYPE",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Pietro Borsieri 34 20159 Milano",
+        "lat": 45.489743,
+        "lng": 9.189246,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3373,63 +3177,6 @@
         "min_price": 3.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Americano",
-            "section": "",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Americano",
-            "section": "Cocktail",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Americano",
-            "section": "",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
         "venue_name": "Bar Magenta",
         "address": "Largo Paolo D'Ancona, Milan, Metropolitan City of Milan, Italia",
         "lat": 45.4655541,
@@ -3451,8 +3198,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3474,9 +3221,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3532,8 +3279,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3551,8 +3298,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3588,29 +3335,10 @@
         "min_price": 7.0
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "AMERICANO",
-            "section": "",
-            "price": 7.0
-          }
-        ],
-        "min_price": 7.0
-      },
-      {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3628,8 +3356,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3856,8 +3584,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -3874,9 +3602,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4241,8 +3969,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4334,29 +4062,10 @@
         "min_price": 12.0
       },
       {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Americano [SA MAMA bitter - BOTTEGA Vermouth]",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 12.0
-      },
-      {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4395,7 +4104,7 @@
   "gin_tonic": {
     "code": "gin_tonic",
     "label": "Gin Tonic",
-    "count": 33,
+    "count": 31,
     "venues": [
       {
         "venue_name": "La Birrofila",
@@ -4419,8 +4128,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4456,9 +4165,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4476,8 +4185,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4533,8 +4242,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4572,8 +4281,8 @@
       {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4730,8 +4439,8 @@
       {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4747,29 +4456,10 @@
         "min_price": 8.0
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "GIN TONIC",
-            "section": "",
-            "price": 8.0
-          }
-        ],
-        "min_price": 8.0
-      },
-      {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4887,9 +4577,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4907,8 +4597,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -4926,8 +4616,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5025,9 +4715,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5036,25 +4726,6 @@
         "items": [
           {
             "name": "0.0 Gin & Tonic (ALCOHOL FREE)",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 12.0
-      },
-      {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Gin tonic [FEVER-TREE tonica]",
             "section": "",
             "price": 12.0
           }
@@ -5104,7 +4775,7 @@
   "mojito": {
     "code": "mojito",
     "label": "Mojito",
-    "count": 25,
+    "count": 23,
     "venues": [
       {
         "venue_name": "Luma",
@@ -5124,44 +4795,6 @@
           }
         ],
         "min_price": 2.0
-      },
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Xenta mojito",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Mojito cubano",
-            "section": "Cocktail",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
       },
       {
         "venue_name": "CARPE DIEM CAFE' listino validita dalle ore 17",
@@ -5204,8 +4837,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5263,8 +4896,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5282,8 +4915,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5396,9 +5029,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5416,8 +5049,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5434,9 +5067,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5656,7 +5289,7 @@
   "moscow_mule": {
     "code": "moscow_mule",
     "label": "Moscow Mule",
-    "count": 23,
+    "count": 20,
     "venues": [
       {
         "venue_name": "EMPORIUM SMOKE & COFFEE",
@@ -5697,48 +5330,10 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Moscow mule",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Moscow Mule",
-            "section": "Cocktail",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5764,25 +5359,6 @@
         "min_price": 7.0
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "MOSCOW MULE",
-            "section": "",
-            "price": 7.0
-          }
-        ],
-        "min_price": 7.0
-      },
-      {
         "venue_name": "Rhop",
         "address": "Corso Europa 142",
         "lat": 45.5282176,
@@ -5803,9 +5379,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5823,8 +5399,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5842,8 +5418,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -5860,9 +5436,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6110,7 +5686,7 @@
   "margarita": {
     "code": "margarita",
     "label": "Margarita",
-    "count": 25,
+    "count": 23,
     "venues": [
       {
         "venue_name": "Caffè Inn International Bistrot",
@@ -6132,29 +5708,10 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Margarita",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6172,8 +5729,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6211,8 +5768,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6266,29 +5823,10 @@
         "min_price": 7.5
       },
       {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "MARGARITA",
-            "section": "",
-            "price": 8.0
-          }
-        ],
-        "min_price": 8.0
-      },
-      {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6310,9 +5848,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6510,9 +6048,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6637,13 +6175,13 @@
   "daiquiri": {
     "code": "daiquiri",
     "label": "Daiquiri",
-    "count": 15,
+    "count": 14,
     "venues": [
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6659,29 +6197,10 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Daiquiri",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6719,8 +6238,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6761,9 +6280,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6918,9 +6437,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -6959,27 +6478,8 @@
   "manhattan": {
     "code": "manhattan",
     "label": "Manhattan",
-    "count": 5,
+    "count": 4,
     "venues": [
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Manhattan",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
       {
         "venue_name": "Rhop",
         "address": "Corso Europa 142",
@@ -7002,8 +6502,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7020,9 +6520,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7040,8 +6540,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7081,8 +6581,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7104,9 +6604,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7129,8 +6629,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7171,9 +6671,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7220,8 +6720,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7296,8 +6796,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7320,8 +6820,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7339,8 +6839,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7382,8 +6882,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7400,9 +6900,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7427,47 +6927,13 @@
   "beer_bottle": {
     "code": "beer_bottle",
     "label": "Birra Bottiglia",
-    "count": 24,
+    "count": 22,
     "venues": [
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "GINGER BEER",
-            "section": "",
-            "price": 3.0
-          },
-          {
-            "name": "Birra Rye River Ipa 7,1 %",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Shuttle di birra Veltins",
-            "section": "",
-            "price": 35.0
-          },
-          {
-            "name": "Shuttle di birra doppio malto Rossa Oberbräu 1605 - Thwaites gold extra",
-            "section": "",
-            "price": 40.0
-          }
-        ],
-        "min_price": 3.0
-      },
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7519,8 +6985,8 @@
       {
         "venue_name": "Frigo Milano",
         "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.463199,
+        "lng": 9.182863,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7538,8 +7004,8 @@
       {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7567,8 +7033,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7644,8 +7110,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7831,8 +7297,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7854,9 +7320,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7879,8 +7345,8 @@
       {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7903,8 +7369,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7931,9 +7397,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7955,9 +7421,9 @@
       },
       {
         "venue_name": "BRAMA",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Borromei 13 20123 Milano",
+        "lat": 45.464067,
+        "lng": 9.18196,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7980,8 +7446,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -7997,29 +7463,10 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "FREEDL - birra analcolica",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8041,9 +7488,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8060,9 +7507,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8085,8 +7532,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8119,8 +7566,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8140,7 +7587,7 @@
   "beer_moretti": {
     "code": "beer_moretti",
     "label": "Birra Moretti",
-    "count": 13,
+    "count": 12,
     "venues": [
       {
         "venue_name": "Pizza And Food",
@@ -8219,25 +7666,6 @@
         "min_price": 3.0
       },
       {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Moretti Bianca",
-            "section": "",
-            "price": 3.0
-          }
-        ],
-        "min_price": 3.0
-      },
-      {
         "venue_name": "Sui Generis",
         "address": "Via Panfilo Castaldi 31 20124.0",
         "lat": 45.4763158,
@@ -8263,9 +7691,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8287,9 +7715,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8312,8 +7740,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8393,8 +7821,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8424,8 +7852,8 @@
       {
         "venue_name": "L'Isola di Aurora",
         "address": "Via Ludovico da Viadana, 2, 20122 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.458804,
+        "lng": 9.190889,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8462,8 +7890,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8480,9 +7908,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8524,8 +7952,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8542,9 +7970,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8612,8 +8040,8 @@
       {
         "venue_name": "L'Isola di Aurora",
         "address": "Via Ludovico da Viadana, 2, 20122 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.458804,
+        "lng": 9.190889,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8655,8 +8083,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8698,8 +8126,8 @@
       {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8750,9 +8178,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8775,8 +8203,8 @@
       {
         "venue_name": "Cambiopizza - Milano",
         "address": "Via Jan Palach, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.427218,
+        "lng": 9.168563,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8817,9 +8245,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -8915,7 +8343,7 @@
   "wine_glass": {
     "code": "wine_glass",
     "label": "Vino al Calice",
-    "count": 15,
+    "count": 14,
     "venues": [
       {
         "venue_name": "Lo Stacco Disco & Restaurant",
@@ -8937,29 +8365,10 @@
         "min_price": 3.5
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Calice di Vino",
-            "section": "",
-            "price": 4.0
-          }
-        ],
-        "min_price": 4.0
-      },
-      {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9010,9 +8419,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9030,8 +8439,8 @@
       {
         "venue_name": "Frigo Milano",
         "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.463199,
+        "lng": 9.182863,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9068,8 +8477,8 @@
       {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9140,8 +8549,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9159,8 +8568,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9247,51 +8656,13 @@
   "prosecco_glass": {
     "code": "prosecco_glass",
     "label": "Prosecco Calice",
-    "count": 18,
+    "count": 16,
     "venues": [
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Calice prosecco",
-            "section": "Bevande",
-            "price": 3.0
-          }
-        ],
-        "min_price": 3.0
-      },
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Prosecco flute",
-            "section": "",
-            "price": 4.0
-          }
-        ],
-        "min_price": 4.0
-      },
       {
         "venue_name": "Cambiopizza - Milano",
         "address": "Via Jan Palach, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.427218,
+        "lng": 9.168563,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9309,8 +8680,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9328,8 +8699,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9346,9 +8717,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9423,8 +8794,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9441,9 +8812,9 @@
       },
       {
         "venue_name": "BRAMA",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Borromei 13 20123 Milano",
+        "lat": 45.464067,
+        "lng": 9.18196,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9596,7 +8967,7 @@
   "espresso": {
     "code": "espresso",
     "label": "Caffe",
-    "count": 48,
+    "count": 44,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -9654,8 +9025,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9673,8 +9044,8 @@
       {
         "venue_name": "Frigo Milano",
         "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.463199,
+        "lng": 9.182863,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9690,48 +9061,10 @@
         "min_price": 1.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "CAFFE'",
-            "section": "",
-            "price": 1.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Caffè Espresso",
-            "section": "Caffetteria",
-            "price": 1.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9802,8 +9135,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9820,9 +9153,9 @@
       },
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9838,29 +9171,10 @@
         "min_price": 1.2
       },
       {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Caffè",
-            "section": "",
-            "price": 1.2
-          }
-        ],
-        "min_price": 1.2
-      },
-      {
         "venue_name": "TYPE",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Pietro Borsieri 34 20159 Milano",
+        "lat": 45.489743,
+        "lng": 9.189246,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9960,9 +9274,9 @@
       },
       {
         "venue_name": "Mealthie - Milano",
-        "address": "Piazza del Duomo 21",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Tortona 33 20144 Milano",
+        "lat": 45.451152,
+        "lng": 9.161217,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10062,8 +9376,8 @@
       {
         "venue_name": "Cambiopizza - Milano",
         "address": "Via Jan Palach, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.427218,
+        "lng": 9.168563,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10200,8 +9514,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10218,9 +9532,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10238,8 +9552,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10409,9 +9723,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10518,25 +9832,6 @@
         "min_price": 3.0
       },
       {
-        "venue_name": "Deseo",
-        "address": "Corso Sempione, 2, Milano, MI, Italia",
-        "lat": 45.4781512,
-        "lng": 9.1698403,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Caffè doppio",
-            "section": "ROSSI",
-            "price": 3.5
-          }
-        ],
-        "min_price": 3.5
-      },
-      {
         "venue_name": "Piasù",
         "address": "Via ALBERTO DA GIUSSANO 1",
         "lat": 45.467253,
@@ -10615,8 +9910,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10634,8 +9929,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10655,13 +9950,13 @@
   "cappuccino": {
     "code": "cappuccino",
     "label": "Cappuccino",
-    "count": 20,
+    "count": 18,
     "venues": [
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10679,8 +9974,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10698,8 +9993,8 @@
       {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10737,25 +10032,6 @@
           }
         ],
         "min_price": 1.5
-      },
-      {
-        "venue_name": "Bivacco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Cappuccino",
-            "section": "",
-            "price": 1.6
-          }
-        ],
-        "min_price": 1.6
       },
       {
         "venue_name": "Vanilla",
@@ -10821,29 +10097,10 @@
         "min_price": 1.7
       },
       {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Cappuccino",
-            "section": "Caffetteria",
-            "price": 1.8
-          }
-        ],
-        "min_price": 1.8
-      },
-      {
         "venue_name": "TYPE",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Pietro Borsieri 34 20159 Milano",
+        "lat": 45.489743,
+        "lng": 9.189246,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10894,9 +10151,9 @@
       },
       {
         "venue_name": "Mealthie - Milano",
-        "address": "Piazza del Duomo 21",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Tortona 33 20144 Milano",
+        "lat": 45.451152,
+        "lng": 9.161217,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10938,8 +10195,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -10962,8 +10219,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11000,8 +10257,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11056,9 +10313,9 @@
       },
       {
         "venue_name": "LiQUIDO Rooftop Bar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Giovanni Battista Pirelli 5B 20124 Milano",
+        "lat": 45.484065,
+        "lng": 9.196656,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11097,13 +10354,13 @@
   "soft_drink": {
     "code": "soft_drink",
     "label": "Bibita",
-    "count": 28,
+    "count": 25,
     "venues": [
       {
         "venue_name": "TYPE",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Pietro Borsieri 34 20159 Milano",
+        "lat": 45.489743,
+        "lng": 9.189246,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11119,68 +10376,10 @@
         "min_price": 1.0
       },
       {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Coca Cola",
-            "section": "",
-            "price": 2.0
-          },
-          {
-            "name": "COCA COLA ALLA SPINA",
-            "section": "",
-            "price": 2.5
-          },
-          {
-            "name": "Pampero, coca",
-            "section": "",
-            "price": 4.0
-          },
-          {
-            "name": "Wisky, Coca",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Jack Honey, coca",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 2.0
-      },
-      {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Coca Cola",
-            "section": "Bevande",
-            "price": 2.0
-          }
-        ],
-        "min_price": 2.0
-      },
-      {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11203,8 +10402,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11221,9 +10420,9 @@
       },
       {
         "venue_name": "BRAMA",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Borromei 13 20123 Milano",
+        "lat": 45.464067,
+        "lng": 9.18196,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11264,9 +10463,9 @@
       },
       {
         "venue_name": "Mealthie - Milano",
-        "address": "Piazza del Duomo 21",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Tortona 33 20144 Milano",
+        "lat": 45.451152,
+        "lng": 9.161217,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11289,8 +10488,8 @@
       {
         "venue_name": "Frigo Milano",
         "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.463199,
+        "lng": 9.182863,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11313,8 +10512,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11332,8 +10531,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11369,9 +10568,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11389,8 +10588,8 @@
       {
         "venue_name": "bachelite clab - Milano",
         "address": "Via Borgospesso, 12, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.470075,
+        "lng": 9.194108,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11427,8 +10626,8 @@
       {
         "venue_name": "SPRITZ NAVIGLI MILANO",
         "address": "Via Bovisasca, 57/59, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.510502,
+        "lng": 9.15966,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11456,8 +10655,8 @@
       {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11479,9 +10678,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11499,8 +10698,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11580,8 +10779,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11748,8 +10947,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11765,34 +10964,10 @@
         "min_price": 5.0
       },
       {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Coca Cola",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Birra LIQUIDA lattina 33cl",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11810,8 +10985,8 @@
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.469581,
+        "lng": 9.18529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11831,13 +11006,13 @@
   "water": {
     "code": "water",
     "label": "Acqua",
-    "count": 47,
+    "count": 42,
     "venues": [
       {
         "venue_name": "Los Locos",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Novara 196 20153 Milano",
+        "lat": 45.486303,
+        "lng": 9.080195,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11917,8 +11092,8 @@
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.466125,
+        "lng": 9.186576,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11936,8 +11111,8 @@
       {
         "venue_name": "Frigo Milano",
         "address": "Piazza Borromeo, 5, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.463199,
+        "lng": 9.182863,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -11953,48 +11128,10 @@
         "min_price": 1.0
       },
       {
-        "venue_name": "Coco Loco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Acqua",
-            "section": "Bevande",
-            "price": 1.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
-        "venue_name": "Canaglie del Navigli",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "ACQUA NATURALE O FRIZZANTE",
-            "section": "",
-            "price": 1.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
         "venue_name": "La Vineria in Ripa",
         "address": "Via Casale, 4, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451869,
+        "lng": 9.170347,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12011,9 +11148,9 @@
       },
       {
         "venue_name": "BRAMA",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Borromei 13 20123 Milano",
+        "lat": 45.464067,
+        "lng": 9.18196,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12031,8 +11168,8 @@
       {
         "venue_name": "L'APERITIVO",
         "address": "Via Santa Tecla, 5, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.462766,
+        "lng": 9.193529,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12053,34 +11190,10 @@
         "min_price": 1.0
       },
       {
-        "venue_name": "SOLO APERITIVO popup",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Acqua 50cl",
-            "section": "",
-            "price": 1.0
-          },
-          {
-            "name": "Acqua tonica FEVER TREE",
-            "section": "",
-            "price": 4.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
         "venue_name": "Moma Cafe - Milano",
         "address": "Ripa di Porta Ticinese, 11, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.451973,
+        "lng": 9.176506,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12146,8 +11259,8 @@
       {
         "venue_name": "Al Chiosco Da Giacomo Birre Artigianali",
         "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.445095,
+        "lng": 9.223566,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12221,9 +11334,9 @@
       },
       {
         "venue_name": "Mealthie - Milano",
-        "address": "Piazza del Duomo 21",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Tortona 33 20144 Milano",
+        "lat": 45.451152,
+        "lng": 9.161217,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12241,8 +11354,8 @@
       {
         "venue_name": "Cambiopizza - Milano",
         "address": "Via Jan Palach, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.427218,
+        "lng": 9.168563,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12260,8 +11373,8 @@
       {
         "venue_name": "Osteria dal Cornuto",
         "address": "Corso Garibaldi, 75, 20121 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.475639,
+        "lng": 9.18367,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12283,9 +11396,9 @@
       },
       {
         "venue_name": "Santo Taco",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Luigi Sabatelli 1",
+        "lat": 45.481064,
+        "lng": 9.168365,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12308,8 +11421,8 @@
       {
         "venue_name": "AI BASTIONI - Milano",
         "address": "Via Lodovico Montegani, 68, 20141 Milano, Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.431989,
+        "lng": 9.177528,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12461,8 +11574,8 @@
       {
         "venue_name": "FOD",
         "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.480983,
+        "lng": 9.173182,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12478,25 +11591,6 @@
             "name": "Acqua Panna (still) San Pellegrino (sparkling)",
             "section": "",
             "price": 3.5
-          }
-        ],
-        "min_price": 2.5
-      },
-      {
-        "venue_name": "Deseo",
-        "address": "Corso Sempione, 2, Milano, MI, Italia",
-        "lat": 45.4781512,
-        "lng": 9.1698403,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Acqua 0.25 ml",
-            "section": "ROSSI",
-            "price": 2.5
           }
         ],
         "min_price": 2.5
@@ -12609,8 +11703,8 @@
       {
         "venue_name": "LaStazioneDellaBirra",
         "address": "Via Medardo Rosso 18",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.489779,
+        "lng": 9.185159,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12628,8 +11722,8 @@
       {
         "venue_name": "Maccheroni",
         "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.457333,
+        "lng": 9.180572,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12685,8 +11779,8 @@
       {
         "venue_name": "bachelite clab - Milano",
         "address": "Via Borgospesso, 12, 20121 Milano MI, Italia",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "lat": 45.470075,
+        "lng": 9.194108,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12741,9 +11835,9 @@
       },
       {
         "venue_name": "castrenze de vincenzi - Milano",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
+        "address": "Via Ezio Biondi 20154 Milano",
+        "lat": 45.487418,
+        "lng": 9.160906,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -12772,25 +11866,6 @@
           {
             "name": "Acqua in bottiglia",
             "section": "Bevande",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Pub51",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Acquarium",
-            "section": "",
             "price": 5.0
           }
         ],

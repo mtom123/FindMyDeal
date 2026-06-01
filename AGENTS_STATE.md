@@ -1,4 +1,4 @@
-# Stato corrente del dataset — aggiornato 31/05/2026 (sera)
+# Stato corrente del dataset — aggiornato 01/06/2026
 
 > Questo file dice **cosa è già fatto** e **cosa serve ancora**.
 > Aggiornare dopo ogni merge.
@@ -10,11 +10,13 @@
 | Metrica | Valore |
 |---|---|
 | **Venues totali nel DB** | **1.558** (+ 499 da open data Comune) |
-| **Venues uniche sulla mappa** (con prezzo + geo) | **151** |
-| **Items menu totali** | 5.835 |
-| **Price points geo+normalizzati** (sito) | **888** |
-| **Venue-product pairs** | 592 |
+| **Venues uniche sulla mappa** (con prezzo + geo) | **146** |
+| **Items menu totali** | 5.361 |
+| **Price points geo+normalizzati** (sito) | **829** |
+| **Venue-product pairs** | 547 |
 | **Prodotti coperti** | 22 |
+
+> **Nota 01/06**: -6 venue non-Milan rimosse (Pub51/PA, Coco Loco/LE, Bivacco/TN, Birra Bader/SI, Canaglie del Navigli/PR, SOLO APERITIVO popup/FE). +29 venue leggimenu geocodate con precisione (Pietro). Price points scesi da 888 a 829 per la pulizia non-Milan.
 
 ---
 
