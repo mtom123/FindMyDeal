@@ -34,7 +34,25 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ## 🍹 VERTICAL DRINK (Milano)
 
-# Stato dataset Milano — invariato vs 01/06 ultimo merge
+| Metrica | Valore |
+|---|---|
+| **Venues totali nel DB** | **1.601** (post ghost-merge) |
+| **Venues uniche sulla mappa** | **~159** |
+| **Items menu totali** | 5.576 |
+| **Price points geo+normalizzati** | **939** |
+| **Venue-product pairs** | 631 |
+| **Prodotti coperti** | 22 |
+
+### Cleanup CEO 02/06 (merge agent4 + audit completo)
+- Mergiato agent4 (TheFork via Wayback, eatbu, leggimenu, glovo) → 35 venues, 100 items consegnati
+- Quality fix agent4: rimossi 4 venues (BAR MILAN/San Colombano, Maki Poke dupe, Casa Fassona title, Officina recensioni) + 22 items (Don Vincè €6 FP, Refeel Piscolada FP, aperitivo bundle)
+- **Bug merge_pipeline fixato**: filtro CAP non-Milano inline → 22 venues legacy mycia fuori Milano scartate (es. Misano Adriatico, Roma, Cagliari, Palermo)
+- **Ghost canonical merger**: 56 canonical duplicate con stesso nome ma lat='' uniti al canonical principale con geo → +15 price points recuperati
+- Filtro inline `item_name` parser noise: items < 3 char clean o "menu prezzo fisso" descrittivi
+- Filtro inline beach files dal merge drink (vertical separation netta)
+
+### Pre-merge (riferimento)
+Pre-merge agent4: 924 → post-merge + cleanup: **939** (+15 netti).
 
 > Questo file dice **cosa è già fatto** e **cosa serve ancora**.
 > Aggiornare dopo ogni merge.

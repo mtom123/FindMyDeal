@@ -6,6 +6,63 @@
 
 ---
 
+## 2026-06-02 — Merge agent4 (ultimo batch drink) + cleanup DB completo
+
+### Input agent4 (consegna finale agent drink Milano)
+- agent4_leggimenu (2 venues, 9 items): brute-force slug + JSON-LD Milano verify
+- agent4_eatbu (5 venues, 18 items): PDF dish.co su 31K sitemap eatbu, filter postcode 20xxx
+- agent4_thefork (31 venues, 88 items): snapshot Wayback Machine (Datadome bypass) + addressLocality JSON-LD
+- agent4_glovo (1 venue, 7 items): tile/grid parser SSR Wayback su Maki Poke
+
+### Quality fix CEO pre-merge (22 items rimossi)
+- ✗ BAR MILAN: a San Colombano al Lambro (provincia LO), NON Milano → REMOVE venue
+- ✗ "Prenota i migliori ristoranti per ogni occasione": page title come venue (Casa Fassona) → REMOVE
+- ✗ "Recensioni - Officina Milano": estratto da pagina recensioni, non menu → REMOVE
+- ✗ Maki Poke (glovo): già presente nel DB → duplicato REMOVE
+- ✗ Don Vincè €6 FP × 4: parser ha matchato prezzo calice di vino invece del cocktail
+- ✗ Refeel Milano spritz €12 FP: description "Piscolada 12 €" → falso match
+- ✗ Aperitivo bundle × 3 (Papilla, 21 House, Benvenuto Family): item_name="Aperitivo" prezzo €15-16 = combo, non singolo prodotto
+- ✗ Maki Poke 7 items già nel DB drink
+
+### Product normalization fix
+- `beer_corona`, `beer_ichnusa` → `beer_bottle` (vocabolario chiuso)
+- `beer_draft` → `beer_draft_small` (taglia default)
+- `aperol` → `spritz`
+- `aperitivo` → vuoto (non è prodotto specifico)
+
+### Audit completo DB post-merge (db_audit.py)
+Trovati e fixati:
+1. **22 venues con CAP non-20xxx**: legacy mycia con CAP esplicito fuori Milano (Misano Adriatico, Roma, Cagliari, Palermo, Salerno, Bergamo, Pavia, ecc). Bug merge_pipeline: nessun filtro città inline.
+2. **6 items con HTML navigation markers**: "Vai alla Header Bar", "Salta al contenuto" come item_name.
+3. **2 items parser noise**: item_name = ":" o "X € con N portate" (osm_direct2 55 Milano).
+4. **56 ghost canonical**: stesso venue con lat='' vs lat=valore = 2 canonical entries diverse → bug fingerprint con lat/lng nel key.
+
+### Bug fix merge_pipeline.py (definitivi)
+1. **Filtro CAP città inline** (`is_milan_or_unknown`): venues con CAP non-20xxx vengono skippate. Si applica sia a mycia legacy che a raw_sources.
+2. **Filtro nav markers inline**: items con HTML navigation skipped.
+3. **Filtro item_name corti/noise**: <3 char clean o "X € con N portate" skipped.
+4. **Ghost canonical merger** (Phase 2bis): post-dedup, canonical con stesso nome (clean) ma uno senza lat viene mergiato nel canonical principale. Items ghost re-mappati.
+5. **Beach files filtro inline**: `beach_*`, `comune_osm_*` skippati dal merge drink (vertical separation).
+
+### Delta numeri drink
+- Pre-merge: 924 price points / 158 mappa / 1.610 DB
+- Post-merge + cleanup: **939 price points** (+15 netti) / **159 mappa** (+1) / **1.601 DB** (-9 netti per ghost merge + non-Milan cleanup)
+- Venue-product pairs: 613 → 631 (+18)
+
+### File raw_sources finalizzati (drink workdir)
+agent2_*, agent3_*, agent4_* (new), direct_*, glovo_*, leggimenu_*, leggimenu_s3_*,
+menudigitale_*, mycia_*, osm_direct2_*, pdf_*, pdf_googledork_*, qromo_*, scraper_*,
+web_extracted_*.
+
+beach_*, comune_osm_* esistono ma sono skippati dal merge drink (vertical=beach).
+
+### Cosa NON è stato fatto (per scelta)
+- ❌ Frontend integration (su esplicita richiesta utente: prima consolidamento DB completo)
+- ❌ Push del PROMPT_PEPPE_BEACH_PHASE3.md scritto da Peppe (out of scope di questo cleanup)
+- ❌ Touch al beach master (out of scope, è pulito al 100%)
+
+---
+
 ## 2026-06-02 — Beach S2 + S2X merge (Peppe) + master consolidato
 
 ### Input Peppe (3 sub-sessioni)

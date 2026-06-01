@@ -212,6 +212,23 @@ def remap_mycia_items(path: Path) -> list[dict]:
 # MAIN MERGE
 # ─────────────────────────────────────────────
 
+def is_milan_or_unknown(addr: str) -> bool:
+    """
+    Filtro città: True se address è plausibilmente Milano o se non c'è CAP.
+    False solo se address ha CAP NON-Milano esplicito (es. 47843 = Misano Adriatico).
+    """
+    if not addr:
+        return True  # senza addr = unknown = accetto, fingerprint farà il dedup
+    caps = re.findall(r'\b(\d{5})\b', addr)
+    if not caps:
+        return True
+    # Almeno un CAP deve essere 20xxx (Milano metro)
+    for cap in caps:
+        if 20000 <= int(cap) <= 20999:
+            return True
+    return False  # CAP esplicitamente fuori 20xxx
+
+
 def main():
     now = datetime.now(timezone.utc).isoformat()
     report_lines = [f"FoodPrice Merge Report — {now}", "=" * 60]
@@ -224,19 +241,40 @@ def main():
     # Legacy MyCIA files (different schema)
     mycia_v = Path("mycia_milano_venues.csv")
     mycia_i = Path("mycia_milano_menu_items.csv")
+    blocked_venue_ids = set()  # venues con CAP non-Milano → blocco anche i loro items
     if mycia_v.exists():
         vv = remap_mycia_venues(mycia_v)
-        all_venues.extend(vv)
-        print(f"  mycia_venues (legacy): {len(vv)} rows")
+        # Filtro città: scarta venues con CAP non-20xxx
+        filtered = []
+        for v in vv:
+            if is_milan_or_unknown(v.get("address","")):
+                filtered.append(v)
+            else:
+                blocked_venue_ids.add(v.get("source_venue_id",""))
+        all_venues.extend(filtered)
+        print(f"  mycia_venues (legacy): {len(filtered)} rows (skipped {len(vv)-len(filtered)} non-Milan CAP)")
         sources_found.append("mycia")
     if mycia_i.exists():
         ii = remap_mycia_items(mycia_i)
-        all_items.extend(ii)
-        print(f"  mycia_items (legacy):  {len(ii)} rows")
+        # Blocca items di venues scartate
+        ii_filtered = [i for i in ii if i.get("source_venue_id","") not in blocked_venue_ids]
+        all_items.extend(ii_filtered)
+        print(f"  mycia_items (legacy):  {len(ii_filtered)} rows (skipped {len(ii)-len(ii_filtered)} per non-Milan venue)")
 
     # New unified-schema files from raw_sources/
+    NAV_MARKERS = ['Vai alla Header Bar', 'Vai al Contentuo', 'Footer Bar',
+                   'Skip to content', 'Salta al contenuto']
+    nav_skipped = 0
+    city_skipped_venues = 0
+    city_blocked_ids = set()  # per skippare anche gli items
+    BEACH_FILES = ('beach_', 'comune_osm_')  # questi sono vertical=beach, skip dal merge drink
+
     for vfile in sorted(RAW_DIR.glob("*_venues.csv")):
         platform = vfile.stem.replace("_venues", "")
+        # Skip vertical beach files (gestiti separatamente)
+        if any(vfile.name.startswith(p) for p in BEACH_FILES):
+            print(f"  {vfile.name}: SKIP (vertical=beach)")
+            continue
         rows = load_csv(vfile)
         warn_count = 0
         valid_rows = []
@@ -244,14 +282,24 @@ def main():
             warns = validate_row(row, VENUE_REQUIRED, str(vfile))
             if warns:
                 warn_count += 1
-            else:
-                valid_rows.append(row)
+                continue
+            # Filtro città inline
+            if not is_milan_or_unknown(row.get("address","")):
+                city_blocked_ids.add(row.get("source_venue_id",""))
+                city_skipped_venues += 1
+                continue
+            valid_rows.append(row)
         all_venues.extend(valid_rows)
         sources_found.append(platform)
         print(f"  {vfile.name}: {len(valid_rows)} valid / {len(rows)} total ({warn_count} warnings)")
         report_lines.append(f"{vfile.name}: {len(valid_rows)} valid, {warn_count} warnings")
 
+    if city_skipped_venues:
+        print(f"  -> {city_skipped_venues} venues skipped (CAP non-Milano)")
+
     for ifile in sorted(RAW_DIR.glob("*_menu_items.csv")):
+        if any(ifile.name.startswith(p) for p in BEACH_FILES):
+            continue
         rows = load_csv(ifile)
         warn_count = 0
         valid_rows = []
@@ -259,11 +307,31 @@ def main():
             warns = validate_row(row, ITEM_REQUIRED, str(ifile))
             if warns:
                 warn_count += 1
-            else:
-                valid_rows.append(row)
+                continue
+            # Filtro: skippa items con HTML navigation in item_name
+            iname = row.get('item_name','')
+            if any(m in iname for m in NAV_MARKERS):
+                nav_skipped += 1
+                continue
+            # Filtro: item_name troppo corto o solo punteggiatura (parser noise)
+            iname_clean = re.sub(r'[^a-zA-Z0-9]', '', iname)
+            if len(iname_clean) < 3:
+                nav_skipped += 1
+                continue
+            # Filtro: item_name che descrive un menu prezzo fisso (€X con N portate)
+            if re.search(r'\d+\s*€?\s*con\s+\d+\s+portate', iname, re.I):
+                nav_skipped += 1
+                continue
+            # Filtro: skippa items di venues bloccate per CAP
+            if row.get('source_venue_id','') in city_blocked_ids:
+                continue
+            valid_rows.append(row)
         all_items.extend(valid_rows)
         print(f"  {ifile.name}: {len(valid_rows)} valid / {len(rows)} total ({warn_count} warnings)")
         report_lines.append(f"{ifile.name}: {len(valid_rows)} valid, {warn_count} warnings")
+
+    if nav_skipped:
+        print(f"  -> {nav_skipped} items skipped (HTML navigation markers)")
 
     print(f"\nTotale grezzo: {len(all_venues)} venues, {len(all_items)} items")
     print(f"Fonti: {set(sources_found)}\n")
@@ -310,6 +378,47 @@ def main():
 
     print(f"Venues dopo deduplicazione: {len(canonical)} (da {len(all_venues)} raw)")
     report_lines.append(f"\nVenues raw: {len(all_venues)} → canonical: {len(canonical)}")
+
+    # ── 2bis. GHOST MERGE: unisce canonical con stesso nome quando uno ha lat='' ──
+    # Bug noto: stesso venue scrapato 2 volte (una con lat, una senza) crea 2 canonical entries.
+    # Fix: per ogni nome ricorrente, se uno dei canonical ha lat='', mergialo nel canonical con lat.
+    name_to_fps = {}
+    for fp, v in canonical.items():
+        n = clean_name(v.get("venue_name",""))
+        if n and len(n) > 3:
+            name_to_fps.setdefault(n, []).append(fp)
+
+    ghost_merged = 0
+    fp_redirect = {}  # ghost_fp -> real_fp (per re-map items)
+    for n, fps in name_to_fps.items():
+        if len(fps) < 2:
+            continue
+        # Trova il canonical con lat (preferito) e quelli ghost (lat='')
+        with_lat = [fp for fp in fps if canonical[fp].get("latitude")]
+        without_lat = [fp for fp in fps if not canonical[fp].get("latitude")]
+        if not with_lat or not without_lat:
+            continue
+        # Scegli il canonical principale: quello con piu sources
+        primary = max(with_lat, key=lambda fp: len(canonical[fp]["_sources"]))
+        for ghost in without_lat:
+            # Merge ghost into primary
+            canonical[primary]["_sources"].extend(canonical[ghost]["_sources"])
+            canonical[primary]["_all_names"].extend(canonical[ghost]["_all_names"])
+            for field in ("phone","website","opening_hours","rating","menu_url"):
+                if not canonical[primary].get(field) and canonical[ghost].get(field):
+                    canonical[primary][field] = canonical[ghost][field]
+            fp_redirect[ghost] = primary
+            del canonical[ghost]
+            ghost_merged += 1
+
+    # Update venue_canonical_map per redirected ghosts
+    for pid, fp in list(venue_canonical_map.items()):
+        if fp in fp_redirect:
+            venue_canonical_map[pid] = fp_redirect[fp]
+
+    if ghost_merged:
+        print(f"Ghost canonical merged: {ghost_merged} (stesso nome, lat='' -> lat')")
+        report_lines.append(f"Ghost canonical merged: {ghost_merged}")
 
     # ── 3. Write unified_venues.csv ───────────────────
     VENUE_FIELDS = [
