@@ -1,4 +1,4 @@
-# Stato corrente del dataset — aggiornato 31/05/2026
+# Stato corrente del dataset — aggiornato 01/06/2026 (merge agent3)
 
 > Questo file dice **cosa è già fatto** e **cosa serve ancora**.
 > Aggiornare dopo ogni merge.
@@ -9,12 +9,14 @@
 
 | Metrica | Valore |
 |---|---|
-| **Venues totali nel DB** | 1.059 |
-| **Venues uniche sulla mappa** (con prezzo + geo) | 126 |
-| **Items menu totali** | 5.473 |
-| **Price points geo+normalizzati** (sito) | **738** |
-| **Venue-product pairs** | 487 |
+| **Venues totali nel DB** | **1.610** |
+| **Venues uniche sulla mappa** (con prezzo + geo) | **150** |
+| **Items menu totali** | 5.402 |
+| **Price points geo+normalizzati** (sito) | **846** |
+| **Venue-product pairs** | 554 |
 | **Prodotti coperti** | 22 |
+
+> **Nota 01/06 (merge agent3)**: +17 price points, +4 venues mappa, +41 items. Mergiati 12 CSV da agente "Drink Milano" (direct_website, eatbu, leggimenu, glovo, other). 22 items rimossi al quality gate (IMAGE_URL ×9, OAK/NON_MILAN/FOOD/NO_CONTEXT ×4, PAGINEGIALLE ×2, OTHER ×7). Fix merge_pipeline.py: geo-rich venue mapping non sovrascrivibile da versioni senza geo (bug causa -95 price points — risolto).
 
 ---
 
@@ -32,6 +34,9 @@
 | **qodeup** | 2 | 13 | ✅ COMPLETO | Woodstock + 1 altro |
 | **scraper (vecchi)** | 850 | 36 | ✅ PARZIALE | Coverage estesa ma pochi items - sostituito da agent2 |
 | **qromo** | 25 | 0 | ⛔ LEGALE BLOCK | robots.txt vieta `/API`. Non scrappare items |
+| **web_extracted** (Peppe sera) | 505 | 441 | ✅ COMPLETO | nome→Startpage→sito ufficiale→menu. Hit rate 6.7% (34/505) |
+| **pdf_googledork** (Peppe sera) | 7 | 81 | ✅ COMPLETO | PDF dai siti diretti già noti. Multi-colonna parsing |
+| **comune_osm** (Peppe sera) | 4.649 | 0 | ✅ BASE GEO | Open data Comune Milano × OSM. Solo venues+geo, NO prezzi. Usare per discovery |
 
 ---
 

@@ -12,12 +12,18 @@ Search a drink (spritz, negroni, beer…) and see every bar in Milan where it's 
 
 ## Data
 
-- **79 venues** across Milan, all with verified coordinates
-- **14 drink categories** — spritz, negroni, cocktail, wine, caffè…
-- **412+ price points** scraped from online menus (mycia.it)
-- Price range: **€1 – €28**
+- **146 venues** with at least one price on the map
+- **22 drink categories** — spritz, negroni, beer, cocktail, wine, caffè…
+- **829 price points** geo-normalized
+- **1.558 venues** total in the database
+- Sources: mycia.it, leggimenu.it, menudigitale.io, eatbu.com, qodeup.com, direct websites, comune Milano open data
+- Price range: **€1 – €25**
 
-> ⚠ **Experimental data.** Prices sourced from online menus, not live POS systems. Accuracy improves over time. Always confirm at the bar.
+> ⚠ **Experimental data.** Prices sourced from public online menus, not live POS systems. Accuracy improves over time. Always confirm at the bar.
+
+## For collaborators
+
+This repo is collaborative. If you're a new agent / contributor, read **[AGENTS.md](AGENTS.md)** first — it explains roles, workflow, file structure and conventions.
 
 ## Stack
 

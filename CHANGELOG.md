@@ -6,6 +6,66 @@
 
 ---
 
+## 2026-06-01 — Merge agent "Drink Milano" (sessione 3)
+
+### Nuove fonti integrate
+- **agent3_direct_website** (110 items, 45 venues): siti diretti + PDF dish.co. Barbisa 1920, Casa Giuditta, Frida, Funky, Birrificio La Ribalta, Morgante, Woodstock, e ~40 altri.
+- **agent3_eatbu** (27 items, 10 venues): 6 nuove venues eatbu (+39zerodue, Guzzo, Morna, PRESTIGE, Seoul Ristorante Coreano, Vesper Milano) oltre alle 4 già nel DB.
+- **agent3_leggimenu** (5 items, 1 venue): Spritz Navigli via Playwright JS render.
+- **glovo** (4 items, 1 venue): Maki Poke via Wayback Machine. price_type=delivery.
+- **agent3_other** (1 item): Rob de Matt negroni (confidence=low, estimated).
+
+### Quality gate applicato (rimossi 22 items prima del merge)
+- ×9 IMAGE_URL: source_url terminante .jpg/.png/.webp (Eatmeandgo favicon, Tardis icon, carico.io og-image)
+- ×1 OAK_FALSE_POS: Scott Duff "rovere americano" = legno botte (non cocktail)
+- ×1 NON_MILAN: Terrazza Martini = Casa Martini Pessione TO
+- ×1 FOOD_NOT_WINE: Sicilian "Ravioli alla Polpa di Granchio" classificato white_wine
+- ×1 NO_MENU_CONTEXT: Sun Strac homepage navigation text, nessun prezzo reale
+- ×2 PAGINEGIALLE: Divina Piadina (fonte junk)
+- ×7 SCARTATI COMPLETAMENTE: qodeup (duplicati Woodstock), other junk (Sakeya invalid product, Morgante 2016 blog, Woodstock dupe)
+
+### Product normalization corretta
+- `beer_draft` → `beer_draft_small`/`medium` (contesto taglia)
+- `beer_corona`, `beer_ichnusa` → `beer_bottle`
+- `aperol` → `spritz`
+- `white_wine` → `wine_glass`, `prosecco` → `prosecco_glass`
+
+### Bug fix critico merge_pipeline.py
+- **Problema**: `venue_canonical_map[pid]` sovrascrivibile da versione senza geo → agent3 (no lat/lon) sovrascriveva agent2 (con lat/lon) → 95 price points persi.
+- **Fix**: mapping preserva versione geo-rich. Non sovrascrivere se existing canonical ha lat/lon.
+- **Impatto**: 829 → 846 price points (recuperati e aggiunti 17 netti).
+
+### Delta numeri
+- Price points: 829 → 846 (+17)
+- Items: 5.361 → 5.402 (+41)
+- Venue-product pairs: 547 → 554 (+7)
+- Venues sulla mappa: 146 → 150 (+4)
+- Venues totali DB: 1.558 → 1.610 (+52)
+
+---
+
+## 2026-06-01 — CEO merge + pulizia repo
+
+### Merge sessione notturna Pietro (geocoding leggimenu) — CEO
+- **Cosa**: 29 venue leggimenu geocodate con precisione (Nominatim). 6 falsi positivi non-Milano rimossi.
+- **Venues rimosse**: Pub51 (PA), Coco Loco (LE), Bivacco (TN), Birra Bader (SI), Canaglie del Navigli (PR), SOLO APERITIVO popup (FE) — erano nel sitemap leggimenu ma non a Milano.
+- **618 items eliminati** (quelli di quelle 6 venues).
+- **Fix pipeline**: aggiunto `pdf_dork` a `VALID_PLATFORMS` (era il platform tag reale in pdf_googledork_menu_items.csv, mancava dalla lista — 81 items ora validati).
+- **Geocoding CEO**: Frigo Milano (45.4632, 9.1829), Al Chiosco Da Giacomo (45.4451, 9.2236), BRAMA Via Borromei (45.4641, 9.1820).
+- **Delta**: price points 888 → 829, items 5.835 → 5.361, venues mappa 151 → 146.
+- **Perché il calo**: le 6 venue non-Milano avevano molti price points validi come dati, ma fuori scope. Guadagno netto = qualità + 29 pin sbloccati dal Duomo.
+
+### Pulizia repo — CEO
+- **Eliminati**: `NIGHT_SESSION_PIETRO.md` (report eseguito, info in CHANGELOG), `PROMPT_PIETRO_NOTTE.md` (sessione S2 completata, superata da S3).
+- **Aggiornati**: README.md (numeri pubblici), BRIEF_PEPPE.md (numeri + tabella prodotti), AGENTS.md (struttura repo), COLLABORATORI.md (punta a PROMPT_PIETRO_S3), CEO_HANDOFF_PROMPT.md (numeri e stato), PIETRO_HANDOFF.md (pulizia stale notes).
+- **Creato**: `PROMPT_PIETRO_S3.md` — sessione multi-ore con slug brute-force leggimenu, OSM direct 79 venues, Wayback TheFork.
+
+### TheFork — stato definitivo attuale
+- Datadome blocca anche Playwright stealth headless (testato 3/3 URL, IP datacenter).
+- **Non più in pending**: serve proxy residenziale o accordo API. Non è un TODO attivo.
+
+---
+
 ## 2026-05-31 — Sera (sessione data-sourcing)
 
 ### Esplorazione fonti nuove + tecniche di estrazione

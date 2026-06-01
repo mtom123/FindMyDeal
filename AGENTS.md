@@ -2,6 +2,16 @@
 
 > **LEGGI QUESTO FILE PER PRIMO** se sei un nuovo agente Claude su questo repo.
 
+## 📚 Ordine di lettura per onboarding (5 minuti)
+
+1. **`AGENTS.md`** (questo) — ruoli, workflow, regole base
+2. **`AGENTS_STATE.md`** — cosa è già fatto, cosa serve. NON duplicare lavoro!
+3. **`CHANGELOG.md`** — STORIA decisioni e ragionamenti del progetto. Capisci il PERCHÉ.
+4. **`raw_sources/README.md`** — scheda d'identità di ogni file CSV
+5. **`scripts/SCHEMA_AGENTI.md`** — formato CSV obbligatorio (solo per scraper)
+
+Se sei frontend dev, leggi anche **`BRIEF_PEPPE.md`**.
+
 ---
 
 ## 🎯 Cos'è il progetto
@@ -39,19 +49,19 @@ FindMyDeal/
 ├── README.md                   ← presentazione pubblica
 │
 ├── raw_sources/                ← INPUT degli scraper
-│   ├── mycia_*.csv             ← già completo
-│   ├── leggimenu_*.csv         ← già completo
-│   ├── menudigitale_*.csv      ← già completo  
-│   ├── qromo_*.csv             ← legale, no items
-│   ├── direct_*.csv            ← già completo
-│   ├── pdf_*.csv               ← già completo
-│   ├── scraper_*.csv           ← prima sessione Pietro
-│   └── agent2_*.csv            ← seconda sessione Pietro
+│   ├── mycia_*.csv             ← completo (648 venues)
+│   ├── leggimenu_*.csv         ← completo (35 venues Milano, 4.214 items)
+│   ├── menudigitale_*.csv      ← completo (2 venues Milano)
+│   ├── qromo_*.csv             ← solo venues, no items (robots.txt)
+│   ├── direct_*.csv / scraper_*.csv / agent2_*.csv  ← sessioni Pietro
+│   ├── pdf_*.csv / pdf_googledork_*.csv  ← menu PDF
+│   ├── web_extracted_*.csv     ← Startpage→sito→menu (Peppe)
+│   └── comune_osm_venues.csv   ← 4.649 venues geo base (Comune Milano)
 │
-├── data/                       ← OUTPUT unificato dal merge
-│   ├── unified_venues.csv      ← 1.059 venues deduplicate
-│   ├── unified_menu_items.csv  ← 5.473 items normalizzati
-│   └── unified_prices.csv      ← 738 price points geo+normalizzati
+├── data/                       ← OUTPUT unificato dal merge (NON modificare)
+│   ├── unified_venues.csv      ← 1.558 venues deduplicate
+│   ├── unified_menu_items.csv  ← 5.361 items normalizzati
+│   └── unified_prices.csv      ← 829 price points geo+normalizzati
 │
 └── scripts/                    ← TOOLS
     ├── SCHEMA_AGENTI.md        ← spec CSV OBBLIGATORIA
@@ -132,6 +142,8 @@ FindMyDeal/
 - **Repo**: https://github.com/mtom123/FindMyDeal
 - **Schema CSV**: `scripts/SCHEMA_AGENTI.md`
 - **Stato dataset**: `AGENTS_STATE.md`
+- **Storico decisioni**: `CHANGELOG.md`
+- **Identità file raw_sources**: `raw_sources/README.md`
 - **Brief frontend**: `BRIEF_PEPPE.md`
 
 ---
