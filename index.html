@@ -1363,7 +1363,7 @@ const MILAN_ZONES = {
 
   // ─── CENTRE ROW  (lat 45.461–45.470) ─────────────────────────────────────
   sempione:     { name:'Sempione',     coords:[[45.461,9.152],[45.470,9.152],[45.470,9.164],[45.461,9.164]] },
-  brera_s:      { name:'Brera',        coords:[[45.461,9.165],[45.470,9.165],[45.470,9.182],[45.461,9.182]] },
+  brera_s:      { name:'Magenta',       coords:[[45.461,9.165],[45.470,9.165],[45.470,9.182],[45.461,9.182]] },
   duomo:        { name:'Duomo',        coords:[[45.461,9.183],[45.470,9.183],[45.470,9.204],[45.461,9.204]] },
   porta_venezia:{ name:'Porta Venezia',coords:[[45.461,9.205],[45.470,9.205],[45.470,9.221],[45.461,9.221]] },
   citta_studi:  { name:'Città Studi',  coords:[[45.461,9.222],[45.476,9.222],[45.476,9.241],[45.461,9.241]] },
@@ -1860,12 +1860,11 @@ function openDetail(idx) {
   if (!v) return;
   S.selIdx = idx;
 
-  // Pan only — never change zoom (prevents unwanted zoom-out)
   if (S.map) {
     S._progMove = true;
-    if (!S.map.getBounds().contains([v.lat, v.lng])) {
-      S.map.panTo([v.lat, v.lng], { animate: true });
-    }
+    const targetZoom = Math.max(S.map.getZoom(), 17);
+    S.map.setView([v.lat, v.lng], targetZoom, { animate: true });
+    showResetBtn();
     setTimeout(() => { S._progMove = false; }, 600);
   }
 
