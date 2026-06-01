@@ -131,9 +131,37 @@ a { color: inherit; text-decoration: none; }
 .tb-search {
   flex: 1; display: flex; align-items: center; gap: 10px;
   padding: 0 18px; border-right: 1px solid var(--b1);
-  transition: background .15s;
+  transition: background .15s; position: relative;
 }
 .tb-search:focus-within { background: var(--s2); }
+
+/* Unified search dropdown */
+#srch-dropdown {
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--s1); border: 1px solid var(--b1); border-top: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  z-index: 900; display: none; flex-direction: column;
+  max-height: 280px; overflow-y: auto;
+}
+#srch-dropdown.show { display: flex; }
+.srch-dd-section {
+  padding: 6px 14px 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem; letter-spacing: .14em; text-transform: uppercase; color: var(--t3);
+  border-bottom: 1px solid var(--b0);
+}
+.srch-dd-item {
+  padding: 9px 14px; font-size: 0.72rem; color: var(--t1);
+  cursor: pointer; border-bottom: 1px solid var(--b0); transition: background .1s;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.srch-dd-item:hover { background: var(--s2); }
+.srch-dd-item:last-child { border-bottom: none; }
+.srch-dd-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t3); padding: 1px 5px;
+  border: 1px solid var(--b1);
+}
 .tb-search-icon { color: var(--t3); font-size: 0.8rem; flex-shrink: 0; }
 .tb-search-inp {
   flex: 1; background: none; border: none; color: var(--t1);
@@ -630,6 +658,45 @@ input[type=range].sb-range::-moz-range-thumb {
 .rb-loc-item:hover { background: var(--s2); }
 .rb-loc-item-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; color: var(--t3); margin-top: 2px; }
 
+/* Sidebar radius buttons */
+.sb-radius-row {
+  display: flex; gap: 3px; flex-wrap: wrap;
+}
+.sb-radius-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t3); letter-spacing: .05em;
+  padding: 4px 8px; border: 1px solid var(--b1);
+  cursor: pointer; transition: all .12s;
+}
+.sb-radius-btn:hover { color: var(--t1); border-color: var(--b2); background: var(--s2); }
+.sb-radius-btn.active { color: var(--t1); border-color: var(--t1); background: var(--s3); font-weight: 600; }
+
+/* Zone popup override */
+.leaflet-popup-content-wrapper {
+  background: var(--s1) !important; border: 1px solid var(--b2) !important;
+  border-radius: 0 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
+  padding: 0 !important;
+}
+.leaflet-popup-tip-container { display: none !important; }
+.leaflet-popup-content { margin: 0 !important; padding: 0 !important; width: auto !important; }
+.leaflet-popup-close-button { color: var(--t3) !important; top: 6px !important; right: 8px !important; }
+.zone-popup {
+  padding: 12px 16px; min-width: 160px;
+}
+.zone-popup-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem; font-weight: 700; color: var(--t1);
+  letter-spacing: .02em; text-transform: uppercase; margin-bottom: 6px;
+}
+.zone-popup-stat {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.60rem; color: var(--t2); margin-bottom: 3px;
+}
+.zone-popup-cov {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.60rem; color: var(--deal-t); font-weight: 600;
+}
+
 /* Reset view button */
 .rb-reset {
   font-family: 'IBM Plex Mono', monospace;
@@ -926,8 +993,12 @@ input[type=range].sb-range::-moz-range-thumb {
     </div>
     <div class="tb-search">
       <span class="tb-search-icon">⌕</span>
-      <input type="text" id="srch" class="tb-search-inp" placeholder="filter venues by name or area…" autocomplete="off">
+      <input type="text" id="srch" class="tb-search-inp"
+        placeholder="Search venues, zones, streets…"
+        autocomplete="off"
+        onblur="setTimeout(hideSrchDropdown,160)">
       <button class="tb-search-clear" id="srch-clear" onclick="clearSearch()">✕</button>
+      <div id="srch-dropdown"></div>
     </div>
     <div class="tb-actions">
       <button class="rb-geo" id="rb-geo-btn" onclick="activateGeo()" style="margin:0;border:none;padding:0 14px;height:100%;font-size:0.57rem;">📍 Use location</button>
@@ -952,27 +1023,9 @@ input[type=range].sb-range::-moz-range-thumb {
   <div id="rbar">
     <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:4px;">≡</button>
     <div class="rb-divider"></div>
-    <!-- Location search -->
-    <div class="rb-loc-wrap">
-      <span class="rb-loc-icon">◎</span>
-      <input type="text" id="loc-inp" class="rb-loc-inp" placeholder="Search area, zone, street…" autocomplete="off"
-        oninput="onLocInput(this.value)"
-        onfocus="onLocFocus()"
-        onblur="setTimeout(hideLocDropdown,160)">
-      <button class="rb-loc-clear" id="loc-clear" onclick="clearLocation()">✕</button>
-      <div id="loc-dropdown" class="rb-loc-dropdown"></div>
-    </div>
-    <div class="rb-divider"></div>
-    <!-- Radius -->
-    <div class="rb-radii" id="rb-radii">
-      <button class="rb-btn" onclick="setRadius(500)">500m</button>
-      <button class="rb-btn" onclick="setRadius(1000)">1km</button>
-      <button class="rb-btn" onclick="setRadius(2000)">2km</button>
-      <button class="rb-btn" onclick="setRadius(5000)">5km</button>
-      <button class="rb-btn active" onclick="setRadius(null)">All</button>
-    </div>
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);letter-spacing:.06em;" id="rbar-ctx">All Milan</span>
     <div class="rb-divider" id="reset-div" style="display:none;"></div>
-    <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset</button>
+    <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset view</button>
   </div>
 
   <!-- BODY -->
@@ -1006,6 +1059,16 @@ input[type=range].sb-range::-moz-range-thumb {
             <span class="sb-slider-lbl" id="pr-min">€0</span>
             <input type="range" class="sb-range" id="pr-slider" min="0" max="30" value="30" step="1" oninput="onPriceSlider(this.value)">
             <span class="sb-slider-lbl" id="pr-max">€30+</span>
+          </div>
+        </div>
+        <div class="sb-filter-row">
+          <span class="sb-filter-lbl">Search radius</span>
+          <div class="sb-radius-row">
+            <button class="sb-radius-btn active" onclick="setSidebarRadius(null)">Off</button>
+            <button class="sb-radius-btn" onclick="setSidebarRadius(500)">500m</button>
+            <button class="sb-radius-btn" onclick="setSidebarRadius(1000)">1km</button>
+            <button class="sb-radius-btn" onclick="setSidebarRadius(2000)">2km</button>
+            <button class="sb-radius-btn" onclick="setSidebarRadius(5000)">5km</button>
           </div>
         </div>
         <div class="sb-toggle-row">
@@ -1198,6 +1261,8 @@ function calcZoneCoverage() {
 
 // Zone overlay layers
 let _zoneLayers = [];
+let _activeZoneKey = null;
+
 function renderZones() {
   _zoneLayers.forEach(l => l.remove());
   _zoneLayers = [];
@@ -1207,32 +1272,61 @@ function renderZones() {
     const [[s,w],[n,e]] = zone.bounds;
     const cov = S.zoneCoverage[key];
     const hasVenues = cov && cov.venues > 0;
+    const isActive = _activeZoneKey === key;
 
-    // Subtle dashed rectangle
     const rect = L.rectangle([[s,w],[n,e]], {
       color: hasVenues ? '#1e6639' : '#888880',
-      weight: 1,
-      dashArray: '3 4',
-      fill: hasVenues,
-      fillColor: '#1e6639',
-      fillOpacity: hasVenues ? 0.04 : 0,
-      interactive: false,
+      weight: 1.5,
+      dashArray: hasVenues ? '4 4' : '2 5',
+      fill: true,
+      fillColor: isActive ? '#1e6639' : '#888880',
+      fillOpacity: isActive ? 0.10 : 0,
+      interactive: true,
+      bubblingMouseEvents: false,
     }).addTo(S.map);
 
-    // Zone label
-    const centerLat = (s + n) / 2;
-    const centerLng = (w + e) / 2;
-    const label = L.marker([centerLat, centerLng], {
-      icon: L.divIcon({
-        html: `<div class="zone-label${hasVenues ? ' has-venues' : ''}">${zone.name}${hasVenues ? `<span>${cov.venues}</span>` : ''}</div>`,
-        className: '', iconSize: null, iconAnchor: [0, 0],
-      }),
-      interactive: false,
-      zIndexOffset: -100,
-    }).addTo(S.map);
+    rect.on('click', (e) => {
+      L.DomEvent.stopPropagation(e);
+      openZonePopup(key, zone, cov, rect);
+    });
+    rect.on('mouseover', () => { if (!isActive) rect.setStyle({ fillOpacity: 0.05 }); });
+    rect.on('mouseout',  () => { if (!isActive) rect.setStyle({ fillOpacity: 0 }); });
 
-    _zoneLayers.push(rect, label);
+    _zoneLayers.push(rect);
   });
+}
+
+function openZonePopup(key, zone, cov, rect) {
+  // Toggle off if same zone clicked again
+  if (_activeZoneKey === key) {
+    _activeZoneKey = null;
+    S.map.closePopup();
+    renderZones();
+    return;
+  }
+  _activeZoneKey = key;
+  renderZones(); // re-render to update fill
+
+  const venues = cov?.venues || 0;
+  const totalInData = S.allVenues.length;
+  // Rough coverage: venues in zone / total venues * some scale
+  const pct = totalInData > 0 ? Math.round((venues / totalInData) * 100 * 3) : 0;
+  const displayPct = Math.min(pct, 100);
+
+  const [[s,w],[n,e]] = zone.bounds;
+  const centerLat = (s + n) / 2;
+  const centerLng = (w + e) / 2;
+
+  L.popup({ closeButton: true, offset: [0, -6], className: '' })
+    .setLatLng([centerLat, centerLng])
+    .setContent(`
+      <div class="zone-popup">
+        <div class="zone-popup-name">${zone.name}</div>
+        <div class="zone-popup-stat">${venues} venue${venues !== 1 ? 's' : ''} with price data</div>
+        <div class="zone-popup-cov">Coverage ~${displayPct}%</div>
+      </div>`)
+    .on('remove', () => { _activeZoneKey = null; renderZones(); })
+    .openOn(S.map);
 }
 
 /* ──────────────────────────────────────────
@@ -1603,77 +1697,10 @@ function closeDetail() {
 }
 
 /* ──────────────────────────────────────────
-   LOCATION SEARCH (Feature 1)
+   UNIFIED SEARCH (venues + zones + Nominatim)
 ─────────────────────────────────────────── */
-let _locTimer;
-function onLocInput(val) {
-  clearTimeout(_locTimer);
-  const clearBtn = document.getElementById('loc-clear');
-  if (clearBtn) clearBtn.classList.toggle('visible', val.length > 0);
-  if (!val.trim()) { hideLocDropdown(); return; }
-  _locTimer = setTimeout(() => fetchLocSuggestions(val), 350);
-}
-
-function onLocFocus() {
-  const val = document.getElementById('loc-inp').value;
-  if (val.trim().length > 1) fetchLocSuggestions(val);
-}
-
-async function fetchLocSuggestions(q) {
-  try {
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q + ' Milan Italy')}&format=json&limit=5&addressdetails=1&accept-language=en`;
-    const r = await fetch(url, { headers: { 'Accept-Language': 'en' } });
-    const data = await r.json();
-    renderLocDropdown(data);
-  } catch(e) { hideLocDropdown(); }
-}
-
-function renderLocDropdown(results) {
-  const dd = document.getElementById('loc-dropdown');
-  if (!results.length) { hideLocDropdown(); return; }
-  dd.innerHTML = results.map((r, i) => {
-    const main = r.namedetails?.name || r.display_name.split(',')[0];
-    const sub  = r.display_name.split(',').slice(1, 3).join(',').trim();
-    return `<div class="rb-loc-item" onmousedown="selectLocation(${r.lat},${r.lon},'${esc(main)}')">
-      <div>${esc(main)}</div>
-      <div class="rb-loc-item-sub">${esc(sub)}</div>
-    </div>`;
-  }).join('');
-  dd.classList.add('show');
-}
-
-function selectLocation(lat, lng, label) {
-  S.searchCenter = { lat: parseFloat(lat), lng: parseFloat(lng), label };
-  document.getElementById('loc-inp').value = label;
-  document.getElementById('loc-clear').classList.add('visible');
-  hideLocDropdown();
-  document.getElementById('rb-radii').classList.add('visible');
-  // Default radius 1km, activate button
-  if (S.geo.radius === null) {
-    S.geo.radius = 1000;
-    document.querySelectorAll('.rb-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('.rb-btn[onclick="setRadius(1000)"]')?.classList.add('active');
-  }
-  S._progMove = true;
-  S.map.setView([parseFloat(lat), parseFloat(lng)], 15, { animate: true });
-  setTimeout(() => { S._progMove = false; }, 800);
-  applyFilters();
-}
-
-function clearLocation() {
-  S.searchCenter = null;
-  document.getElementById('loc-inp').value = '';
-  document.getElementById('loc-clear').classList.remove('visible');
-  hideLocDropdown();
-  if (S.geo.lat === null) {
-    document.getElementById('rb-radii').classList.remove('visible');
-    S.geo.radius = null;
-  }
-  applyFilters();
-}
-
-function hideLocDropdown() {
-  document.getElementById('loc-dropdown')?.classList.remove('show');
+function hideSrchDropdown() {
+  document.getElementById('srch-dropdown')?.classList.remove('show');
 }
 
 function showResetBtn() {
@@ -1686,8 +1713,118 @@ function resetMapView() {
   S._progMove = true;
   document.getElementById('reset-view-btn')?.classList.remove('visible');
   document.getElementById('reset-div').style.display = 'none';
+  document.getElementById('rbar-ctx').textContent = 'All Milan';
   render(S.venues);
   setTimeout(() => { S._progMove = false; }, 800);
+}
+
+async function fetchSrchSuggestions(q) {
+  const dd = document.getElementById('srch-dropdown');
+  const sections = [];
+
+  // 1. Zone matches
+  const zoneMatches = Object.entries(MILAN_ZONES).filter(([k, z]) =>
+    z.name.toLowerCase().includes(q.toLowerCase()));
+  if (zoneMatches.length) {
+    sections.push(`<div class="srch-dd-section">Zones</div>`);
+    zoneMatches.forEach(([k, z]) => {
+      const cov = S.zoneCoverage[k];
+      sections.push(`<div class="srch-dd-item" onmousedown="selectZoneFromSearch('${k}')">
+        <span>${z.name}</span>
+        <span class="srch-dd-tag">${cov?.venues || 0} venues</span>
+      </div>`);
+    });
+  }
+
+  // 2. Venue name matches (show top 5)
+  const vMatches = S.allVenues
+    .filter(v => v.venue_name.toLowerCase().includes(q.toLowerCase()))
+    .slice(0, 5);
+  if (vMatches.length) {
+    sections.push(`<div class="srch-dd-section">Venues</div>`);
+    vMatches.forEach(v => {
+      sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.venue_name)}')">
+        <span>${esc(v.venue_name)}</span>
+        <span class="srch-dd-tag">${fmt(v.min_price)}</span>
+      </div>`);
+    });
+  }
+
+  // 3. Nominatim for streets/areas (only if no zone/venue match)
+  if (!zoneMatches.length && !vMatches.length && q.length > 3) {
+    try {
+      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+' Milan Italy')}&format=json&limit=4&accept-language=en`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data.length) {
+        sections.push(`<div class="srch-dd-section">Places</div>`);
+        data.forEach(r => {
+          const main = r.display_name.split(',')[0];
+          sections.push(`<div class="srch-dd-item" onmousedown="selectGeoFromSearch(${r.lat},${r.lon},'${esc(main)}')">
+            <span>${esc(main)}</span>
+            <span class="srch-dd-tag">area</span>
+          </div>`);
+        });
+      }
+    } catch(e) {}
+  }
+
+  if (sections.length) {
+    dd.innerHTML = sections.join('');
+    dd.classList.add('show');
+  } else {
+    hideSrchDropdown();
+  }
+}
+
+function selectZoneFromSearch(key) {
+  const zone = MILAN_ZONES[key];
+  if (!zone) return;
+  const [[s,w],[n,e]] = zone.bounds;
+  document.getElementById('srch').value = zone.name;
+  updateSearchClear();
+  hideSrchDropdown();
+  S._progMove = true;
+  S.map.fitBounds([[s,w],[n,e]], { padding: [20,20], maxZoom: 15, animate: true });
+  document.getElementById('rbar-ctx').textContent = zone.name;
+  setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
+  applyFilters();
+}
+
+function selectVenueFromSearch(lat, lng, name) {
+  document.getElementById('srch').value = name;
+  updateSearchClear();
+  hideSrchDropdown();
+  S._progMove = true;
+  S.map.setView([lat, lng], 16, { animate: true });
+  document.getElementById('rbar-ctx').textContent = name;
+  setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
+  applyFilters();
+}
+
+function selectGeoFromSearch(lat, lng, label) {
+  S.searchCenter = { lat: parseFloat(lat), lng: parseFloat(lng), label };
+  document.getElementById('srch').value = label;
+  updateSearchClear();
+  hideSrchDropdown();
+  S._progMove = true;
+  S.map.setView([parseFloat(lat), parseFloat(lng)], 15, { animate: true });
+  document.getElementById('rbar-ctx').textContent = label;
+  setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
+  applyFilters();
+}
+
+/* ──────────────────────────────────────────
+   SIDEBAR RADIUS (Feature 3 — in sidebar)
+─────────────────────────────────────────── */
+function setSidebarRadius(r) {
+  S.geo.radius = r;
+  document.querySelectorAll('.sb-radius-btn').forEach(b => b.classList.remove('active'));
+  const sel = r === null
+    ? document.querySelector('.sb-radius-btn[onclick="setSidebarRadius(null)"]')
+    : document.querySelector(`.sb-radius-btn[onclick="setSidebarRadius(${r})"]`);
+  if (sel) sel.classList.add('active');
+  applyFilters();
 }
 
 /* ──────────────────────────────────────────
@@ -1859,20 +1996,16 @@ function setupSearch() {
   inp.addEventListener('input', () => {
     clearTimeout(timer);
     updateSearchClear();
+    const q = inp.value.trim();
+    if (!q) { hideSrchDropdown(); applyFilters(); return; }
     timer = setTimeout(() => {
-      const q = inp.value.toLowerCase().trim();
-      // Check if query matches a Milan zone name → pan map there
-      const matchedZone = Object.values(MILAN_ZONES).find(z =>
-        z.name.toLowerCase().includes(q) || q.includes(z.name.toLowerCase())
-      );
-      if (matchedZone && q.length > 2) {
-        const [[s,w],[n,e]] = matchedZone.bounds;
-        S._progMove = true;
-        S.map.fitBounds([[s,w],[n,e]], { padding: [20,20], maxZoom: 15, animate: true });
-        setTimeout(() => { S._progMove = false; }, 800);
-      }
+      fetchSrchSuggestions(q);
       applyFilters();
     }, 220);
+  });
+  inp.addEventListener('focus', () => {
+    const q = inp.value.trim();
+    if (q.length > 1) fetchSrchSuggestions(q);
   });
 }
 
@@ -1880,6 +2013,9 @@ function clearSearch() {
   const inp = document.getElementById('srch');
   inp.value = '';
   updateSearchClear();
+  hideSrchDropdown();
+  S.searchCenter = null;
+  document.getElementById('rbar-ctx').textContent = 'All Milan';
   applyFilters();
 }
 
