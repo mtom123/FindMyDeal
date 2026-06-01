@@ -44,7 +44,54 @@ raw_sources/
 
 beach_s2_REPORT.md                     # metriche, gap, raccomandazioni S3
 beach_s2_PROVIDERS_UPDATE.md           # aggiornamento mappa provider con dati reali raccolti
+beach_s2_spiagge_SMOKETEST.md          # verdetto GO/NO-GO Playwright (vedi Step 4.0)
+beach_s2_WIREFRAME.md                  # 3 schermate mockup + user journey (vedi Phase 7)
 ```
+
+---
+
+## PHASE 0 — BACKFILL BOOKING PROVIDER (priorità: 0 — BLOCKER)
+
+> Senza questo, Phase 4 (spiagge.it Playwright) non sa su quali venue lanciare. Prima cosa da fare.
+
+Pool input: i **568 venue con website già in `beach_s1_venues.csv`** (campo `website` non vuoto).
+
+```python
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+
+PROVIDER_DOMAINS = {
+    "spiagge.it": "spiagge.it",
+    "widget.spiagge.it": "spiagge.it",
+    "ibagnino.com": "ibagnino",
+    "beachup.sintur.com": "beachup",
+    "summerbooking.it": "summerbooking",
+    "beacharound.com": "summerbooking",  # redirect to summerbooking
+    "ibeach.it": "ibeach",
+    "cocobuk.com": "cocobuk",
+    "stabilimenti.bibionemare.com": "bibionemare",
+    "mondobalneare.com": "mondobalneare",
+}
+
+for venue in venues_with_website:
+    html = fetch(venue["website"])
+    soup = BeautifulSoup(html, "lxml")
+    for a in soup.find_all("a", href=True):
+        text = (a.get_text() or "").lower()
+        if any(kw in text for kw in ["prenota","prenotazione","book","riserva","reservation","acquista"]):
+            domain = urlparse(a["href"]).netloc.lower()
+            for known, label in PROVIDER_DOMAINS.items():
+                if known in domain:
+                    venue["booking_provider"] = label
+                    break
+```
+
+**Output**: `beach_s2_venues_enriched.csv` con `booking_provider` popolato sui venue dove identificato.
+
+**Target Phase 0**: ≥ 250 venue con `booking_provider` mappato (~44% dei 568).
+
+Rate: 2s tra GET. Skip 403/429.
 
 ---
 
@@ -94,13 +141,9 @@ Lista comuni costieri da iterare: estrai da Step 1.1 tutti i comuni unici con �
 
 Rate: 2s tra request a spiagge.it. Max 500 query/sessione, poi pausa.
 
-### Step 1.3 — Provider mapping per venue con website
+### Step 1.3 — Provider mapping extension (sui nuovi website da Step 1.2)
 
-Per ogni venue con `website` popolato (~2.500 attesi dopo Step 1.2):
-1. Fetch homepage
-2. Cerca link "Prenota"/"Booking"/"Riserva"
-3. Estrai dominio destinazione → match contro lista 8 provider
-4. Popola `booking_provider`
+Riusa la stessa logica di Phase 0, ma applicata ai ~2.000 venue **nuovi** con website appena scoperti in Step 1.2. Phase 0 ha già coperto i 568 di S1.
 
 Rate: 2s tra GET. Skip 403/429.
 
@@ -155,7 +198,28 @@ Rate: 2s tra GET.
 
 Spiagge.it espone prezzi solo dopo selezione date. Usa Playwright headless.
 
-### Setup
+### Step 4.0 — SMOKE TEST OBBLIGATORIO (PRIMA di scalare)
+
+> Non lanciare 200 venue alla cieca. Spiagge.it ha SaaS gestionale con €€€ ARR — investono in anti-bot.
+
+Fai 5 venue di test in modalità "visible" (`headless=False`) e annota:
+
+| Check | Cosa verificare | Decisione se KO |
+|---|---|---|
+| **Anti-bot WAF** | Datadome / Cloudflare / PerimeterX nel response header o nel JS challenge | STOP — serve undetected-chromium o residential proxy |
+| **DOM selectors** | `.umbrella-price` (o equivalente) presente e stabile dopo 5 reload | STOP — il selettore non vale, serve discovery DOM dedicata |
+| **Captcha trigger** | Dopo 5 venue consecutivi appare reCAPTCHA / hCaptcha? | STOP — serve solver o rotate IP |
+| **Rate-limit silenzioso** | Il widget restituisce "non disponibile" su tutto invece di prezzi reali dopo N call? | Pausa 30min, riprova; se persiste, STOP |
+| **Date selector reactivity** | Cambiando date riceve prezzi diversi (non cache statica)? | OK = procedi; se sempre stesso payload → backend rest API più semplice di Playwright |
+
+**Output smoke test**: `beach_s2_spiagge_SMOKETEST.md` con verdetto GO/NO-GO + screenshot.
+
+- **GO** → procedi con Step 4.1 (scale)
+- **NO-GO** → ferma Phase 4, documenta blockers, raccomanda S2.6 (con stack diverso: residential proxies, undetected-chromedriver, captcha solver).
+
+Tempo smoke test: 30-45 minuti. **Investimento minimo per evitare 6h sprecate**.
+
+### Step 4.1 — Setup
 
 ```python
 from playwright.async_api import async_playwright
@@ -231,6 +295,32 @@ Quality gate: prezzo €0-5.000, conferma con contesto testuale prima di scriver
 
 ---
 
+## PHASE 7 — WIREFRAME BEACH MAP VIEW (priorità: 2 — hook a S3)
+
+> S3 sarà frontend integration. S2 deve consegnare insieme ai dati anche **come immagini il display**, altrimenti il CEO non sa decidere taglio UI.
+
+Output: `beach_s2_WIREFRAME.md` con:
+
+1. **User journey** (3-4 step): "Voglio l'ombrellone più economico a Rimini per la settimana del 1 agosto" → cosa vede in pagina, cosa filtra, cosa confronta.
+2. **3 schermate chiave** disegnate (anche solo ASCII art, screenshot Excalidraw, o mockup `<img>` placeholder):
+   - **Mappa Italia con cluster regionali**: numero venue per regione, hover → media prezzo
+   - **Detail venue**: nome, mappa singola, tariffe per fila × periodo (tabella tipo C.A.P.LI.)
+   - **Compare**: confronto fino a 3 venue affiancati, filtro per `normalized_product` (es. solo `beach_set_2lettini_ombrellone per_day`)
+3. **Differenza dichiarata vs drink frontend** (`index.html` attuale): 
+   - Geografia molto più ampia (Italia intera vs Milano)
+   - Stagionalità dichiarata (filtri data)
+   - Dimensione prezzo molto più variabile (€5 lettino → €6.400 stagionale)
+4. **Mapping `normalized_product` → UI label user-facing** (vocabolario marketing, non tecnico):
+   - `beach_set_2lettini_ombrellone` → "Ombrellone + 2 lettini"
+   - `beach_subscription_season` → "Abbonamento stagionale"
+   - ecc.
+
+**Investimento Phase 7**: 1-2h. Output: anche solo un .md con ASCII art + 3 paragrafi è valido. Non serve Figma.
+
+**Perché qui e non in S3**: i dati raccolti in S2 cambiano se sai cosa devi visualizzare. Se la UI vuole "prezzo medio settimanale per città", devi pre-aggregare; se vuole "tariffario per fila", devi tenerlo granulare. Decidere dopo aver scrappato = doppio lavoro.
+
+---
+
 ## PHASE 6 — DIRECT WEBSITE EXTRACTION (priorità: 4 — coda lunga)
 
 Per ogni venue con `website` ma `booking_provider` vuoto (∼1.000 dopo Phase 1):
@@ -260,6 +350,13 @@ Per ogni ITEM:
 5. ✅ `item_name` < 200 char
 6. ✅ No duplicati interni: dedup su `(source_venue_id, normalized_product, raw_price, price_type)`
 7. ✅ `season="summer_2026"`, `validity_start/end` compilati
+8. ✅ **ANTI-LISTINI STANTII** (nuovo S2):
+   - Se il source PDF/pagina contiene "Listino 2024", "Tariffe 2023", "Stagione 2022", "PREZZI 2025" → `confidence` MAX = `low`
+   - Se è 2024 o precedente → MEGLIO skip del tutto (non scrivere riga)
+   - Solo "2025" e "2026" → `confidence` può salire a `medium`/`high`
+   - Estrai l'anno dal source con regex: `\b(20\d{2})\b` → se min(anni) < 2025, marca come stantio
+   - Annota in `item_description`: aggiungi suffix `(listino YYYY)` quando l'anno è ≠ 2026
+   - Stiamo raccogliendo dati per **estate 2026**, non archivio storico. Un PDF 2023 nel dataset di confronto inquina la media.
 
 **Confidence assignment**:
 - PDF strutturato → `high`
@@ -312,11 +409,13 @@ Avvisa CEO con report sintetico: scostamento vs target per ogni Phase, gap rimas
 
 ## CHE COSA NON FARE IN S2
 
-- ❌ Frontend / UI (è S3)
+- ❌ Frontend / UI prod (è S3) — ma SÌ wireframe markdown/ASCII (Phase 7)
 - ❌ Toccare file drink (data/, prices_data.json, index.html)
 - ❌ Aggiungere codici al vocabolario `normalized_product` senza approvazione
 - ❌ Re-scrappare OSM (già fatto S1)
 - ❌ Scrappare TUTTI i venue (la coda lunga è S3+, S2 punta a 500 venue prezzate, non 9.000)
+- ❌ Lanciare Playwright su 200 venue senza smoke test (Phase 4 Step 4.0)
+- ❌ Mettere prezzi da PDF 2023/2024 con `confidence=high` (vedi quality gate #8)
 
 ---
 
@@ -324,16 +423,21 @@ Avvisa CEO con report sintetico: scostamento vs target per ogni Phase, gap rimas
 
 | Phase | Ore stimate |
 |---|---|
+| Phase 0 (backfill booking_provider su 568 venue S1) | 1-2 |
 | Phase 1 (geocoding + website enrichment) | 4-6 |
 | Phase 2 (consorzi) | 3-4 |
 | Phase 3 (Summer Booking) | 2-3 |
-| Phase 4 (Spiagge.it Playwright) | 6-8 |
+| Phase 4 (Spiagge.it Playwright: smoke test + scale) | 0.75 smoke + 6-8 scale (skip se NO-GO) |
 | Phase 5 (PDF dorks) | 3-5 |
 | Phase 6 (direct website coda lunga) | 2-3 |
+| Phase 7 (wireframe S3 hook) | 1-2 |
 | Reporting | 1 |
-| **Totale** | **21-30 ore** |
+| **Totale** | **24-35 ore** |
 
-Se i tempi stringono: Phase 1 + Phase 2 + Phase 5 sono il **MVP S2**. Phase 3-4-6 possono slittare a S2.5.
+Se i tempi stringono: **Phase 0 + Phase 1 + Phase 2 + Phase 5 + Phase 7 = MVP S2**. Phase 3-4-6 slittano a S2.5.
+
+⚠️ Phase 0 è **prerequisite** per Phase 4 (senza non sai quali venue interrogare). Non skippabile.
+⚠️ Phase 4 Step 4.0 (smoke test) è **gate**: NO-GO → tutto Phase 4 slitta, niente sforzo sprecato sullo scale.
 
 ---
 
