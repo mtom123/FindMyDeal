@@ -473,6 +473,110 @@ input[type=range].sb-range::-moz-range-thumb {
 #map-wrap { flex: 1; position: relative; overflow: hidden; }
 #map { width: 100%; height: 100%; }
 
+/* ── Zone card ── */
+#zone-card {
+  position: fixed;
+  width: 280px;
+  background: var(--s1); border: 1px solid var(--b2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 610;
+  opacity: 0; transform: scale(0.97) translateY(4px);
+  transition: opacity .18s, transform .18s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+#zone-card.open { opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; }
+
+.zc-head {
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid var(--b0);
+}
+.zc-toprow {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+}
+.zc-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 700; color: var(--t1);
+  letter-spacing: -.01em; line-height: 1;
+}
+.zc-close {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem; color: var(--t3); padding: 2px 7px;
+  border: 1px solid var(--b1); cursor: pointer; transition: all .12s;
+}
+.zc-close:hover { background: var(--s3); color: var(--t1); }
+.zc-stats {
+  display: flex; gap: 14px;
+}
+.zc-stat {
+  display: flex; flex-direction: column; gap: 1px;
+}
+.zc-stat-v {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.76rem; font-weight: 600; color: var(--t1);
+}
+.zc-stat-l {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t3); letter-spacing: .08em; text-transform: uppercase;
+}
+.zc-avg {
+  padding: 8px 14px; border-bottom: 1px solid var(--b0);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.zc-avg-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t3); letter-spacing: .08em; text-transform: uppercase;
+}
+.zc-avg-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.80rem; font-weight: 600; color: var(--t1);
+}
+
+/* Collapsible venue list */
+.zc-toggle {
+  padding: 9px 14px;
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; border-bottom: 1px solid var(--b0);
+  transition: background .1s;
+}
+.zc-toggle:hover { background: var(--s2); }
+.zc-toggle-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem; color: var(--t2); letter-spacing: .06em; text-transform: uppercase;
+}
+.zc-toggle-icon {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem; color: var(--t3); transition: transform .18s;
+}
+.zc-toggle.open .zc-toggle-icon { transform: rotate(180deg); }
+
+.zc-list {
+  max-height: 0; overflow: hidden;
+  transition: max-height .22s cubic-bezier(.4,0,.2,1);
+}
+.zc-list.open { max-height: 220px; overflow-y: auto; }
+
+.zc-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-bottom: 1px solid var(--b0);
+  cursor: pointer; transition: background .1s;
+}
+.zc-row:last-child { border-bottom: none; }
+.zc-row:hover { background: var(--s2); }
+.zc-row-rank { font-family: 'IBM Plex Mono', monospace; font-size: 0.52rem; color: var(--t3); width: 16px; flex-shrink: 0; }
+.zc-row-name { flex: 1; font-size: 0.70rem; font-weight: 600; color: var(--t1); text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.zc-row-price { font-family: 'IBM Plex Mono', monospace; font-size: 0.70rem; font-weight: 600; flex-shrink: 0; }
+.zc-row-price.deal  { color: var(--deal-t); }
+.zc-row-price.avg   { color: var(--avg-t); }
+.zc-row-price.pricey{ color: var(--exp-t); }
+
+@media (max-width: 768px) {
+  #zone-card {
+    bottom: 16px !important; top: auto !important;
+    left: 12px !important; right: 12px !important;
+    width: auto !important;
+  }
+}
+
 /* Zone labels */
 .zone-label {
   font-family: 'IBM Plex Mono', monospace;
@@ -1104,6 +1208,9 @@ input[type=range].sb-range::-moz-range-thumb {
 <!-- VENUE CARD (floating modal) -->
 <div id="venue-card"></div>
 
+<!-- ZONE CARD -->
+<div id="zone-card"></div>
+
 <!-- SIDEBAR REOPEN TAB (left edge, shown when sidebar closed) -->
 <div id="sb-open-tab" onclick="toggleSidebar()">›</div>
 
@@ -1355,31 +1462,121 @@ function openZonePopup(key, zone, cov, rect) {
   // Toggle off if same zone clicked again
   if (_activeZoneKey === key) {
     _activeZoneKey = null;
-    S.map.closePopup();
     renderZones();
+    closeZoneCard();
     return;
   }
   _activeZoneKey = key;
-  renderZones(); // re-render to update fill
+  renderZones();
 
   const total     = cov?.total     || 0;
   const withPrice = cov?.withPrice || 0;
   const pct       = cov?.pct       || 0;
 
   const [[s,w],[n,e]] = zone.bounds;
-  const centerLat = (s + n) / 2;
-  const centerLng = (w + e) / 2;
 
-  L.popup({ closeButton: true, offset: [0, 0], autoPan: false })
-    .setLatLng([centerLat, centerLng])
-    .setContent(`
-      <div class="zone-popup">
-        <div class="zone-popup-name">${zone.name}</div>
-        <div class="zone-popup-stat">${withPrice} / ${total} venues with prices</div>
-        <div class="zone-popup-cov">Coverage ${pct}%</div>
-      </div>`)
-    .on('remove', () => { _activeZoneKey = null; renderZones(); })
-    .openOn(S.map);
+  // Venues in zone for current product
+  const zoneVenues = S.venues.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
+  const sortedVenues = [...zoneVenues].sort((a,b) => a.min_price - b.min_price);
+  const avgPrice = zoneVenues.length > 0
+    ? zoneVenues.reduce((sum,v) => sum + v.min_price, 0) / zoneVenues.length
+    : null;
+
+  const pLabel = META[S.product]?.label || S.product || '';
+
+  const venueRows = sortedVenues.map((v, rank) => {
+    const i = window.__V.indexOf(v);
+    const c = cls(v.min_price, S.allVenues);
+    return `<div class="zc-row" onclick="openDetail(${i}); closeZoneCard();">
+      <span class="zc-row-rank">${String(rank+1).padStart(2,'0')}</span>
+      <span class="zc-row-name">${esc(v.venue_name)}</span>
+      <span class="zc-row-price ${c}">${fmt(v.min_price)}</span>
+    </div>`;
+  }).join('');
+
+  const card = document.getElementById('zone-card');
+  card.classList.remove('open');
+  card.innerHTML = `
+    <div class="zc-head">
+      <div class="zc-toprow">
+        <span class="zc-name">${zone.name}</span>
+        <button class="zc-close" onclick="closeZoneCard()">✕</button>
+      </div>
+      <div class="zc-stats">
+        <div class="zc-stat">
+          <span class="zc-stat-v">${withPrice}/${total}</span>
+          <span class="zc-stat-l">Coverage</span>
+        </div>
+        <div class="zc-stat">
+          <span class="zc-stat-v" style="color:var(--deal-t)">${pct}%</span>
+          <span class="zc-stat-l">Complete</span>
+        </div>
+        <div class="zc-stat">
+          <span class="zc-stat-v">${zoneVenues.length}</span>
+          <span class="zc-stat-l">${pLabel} venues</span>
+        </div>
+      </div>
+    </div>
+    ${avgPrice !== null ? `
+    <div class="zc-avg">
+      <span class="zc-avg-lbl">Avg ${pLabel} price</span>
+      <span class="zc-avg-val">${fmt(avgPrice)}</span>
+    </div>` : ''}
+    ${venueRows.length ? `
+    <div class="zc-toggle" id="zc-toggle-${key}" onclick="toggleZcList('${key}')">
+      <span class="zc-toggle-lbl">${sortedVenues.length} venues in zone</span>
+      <span class="zc-toggle-icon">↓</span>
+    </div>
+    <div class="zc-list" id="zc-list-${key}">${venueRows}</div>
+    ` : `<div style="padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--t3);">No venues for current product</div>`}
+  `;
+
+  if (window.innerWidth > 768) {
+    card.style.visibility = 'hidden';
+    requestAnimationFrame(() => {
+      positionZoneCard(card, s, w, n, e);
+      card.style.visibility = '';
+      card.classList.add('open');
+    });
+  } else {
+    card.style.cssText = '';
+    requestAnimationFrame(() => card.classList.add('open'));
+  }
+}
+
+function closeZoneCard() {
+  const card = document.getElementById('zone-card');
+  card.classList.remove('open');
+  _activeZoneKey = null;
+  renderZones();
+}
+
+function toggleZcList(key) {
+  const list   = document.getElementById('zc-list-' + key);
+  const toggle = document.getElementById('zc-toggle-' + key);
+  if (!list) return;
+  const open = list.classList.toggle('open');
+  toggle?.classList.toggle('open', open);
+}
+
+function positionZoneCard(card, s, w, n, e) {
+  const CARD_W = 280, CARD_H = 180, GAP = 12;
+  const sw = S.map.latLngToContainerPoint([s, w]);
+  const ne = S.map.latLngToContainerPoint([n, e]);
+  const mapWrap = document.getElementById('map-wrap');
+  const rect = mapWrap.getBoundingClientRect();
+
+  // Try to place to the right of zone
+  let left = rect.left + ne.x + GAP;
+  let top  = rect.top  + Math.min(sw.y, ne.y) + 10;
+
+  if (left + CARD_W > window.innerWidth - 12) left = rect.left + sw.x - CARD_W - GAP;
+  top = Math.max(60, Math.min(top, window.innerHeight - CARD_H - 12));
+
+  card.style.left   = left + 'px';
+  card.style.top    = top  + 'px';
+  card.style.bottom = 'auto';
+  card.style.right  = 'auto';
 }
 
 /* ──────────────────────────────────────────
@@ -2134,7 +2331,7 @@ function toggleMobSheet() {
 function setupKeyboard() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      closeDetail();
+      closeDetail(); closeZoneCard();
       if (document.getElementById('info-ov').classList.contains('show')) toggleInfo();
       clearSearch();
     }
