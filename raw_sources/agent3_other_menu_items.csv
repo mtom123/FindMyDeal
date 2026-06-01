@@ -1,0 +1,2 @@
+﻿source_platform,source_venue_id,venue_name,venue_url,menu_section,item_name,item_description,raw_price,normalized_price_eur,currency,price_type,item_type,normalized_product,confidence,allergens,retrieved_at,source_url
+other,rob_de_matt,Rob de Matt,https://web.archive.org/web/2024/tripadvisor.it/,,Negroni,Rob de Matt cocktail bar Milano,€ 9.00,9.0,EUR,estimated,drink,negroni,low,,2026-06-01T09:31:51Z,https://web.archive.org/

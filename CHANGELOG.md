@@ -6,6 +6,44 @@
 
 ---
 
+## 2026-06-01 — Merge agent "Drink Milano" (sessione 3)
+
+### Nuove fonti integrate
+- **agent3_direct_website** (110 items, 45 venues): siti diretti + PDF dish.co. Barbisa 1920, Casa Giuditta, Frida, Funky, Birrificio La Ribalta, Morgante, Woodstock, e ~40 altri.
+- **agent3_eatbu** (27 items, 10 venues): 6 nuove venues eatbu (+39zerodue, Guzzo, Morna, PRESTIGE, Seoul Ristorante Coreano, Vesper Milano) oltre alle 4 già nel DB.
+- **agent3_leggimenu** (5 items, 1 venue): Spritz Navigli via Playwright JS render.
+- **glovo** (4 items, 1 venue): Maki Poke via Wayback Machine. price_type=delivery.
+- **agent3_other** (1 item): Rob de Matt negroni (confidence=low, estimated).
+
+### Quality gate applicato (rimossi 22 items prima del merge)
+- ×9 IMAGE_URL: source_url terminante .jpg/.png/.webp (Eatmeandgo favicon, Tardis icon, carico.io og-image)
+- ×1 OAK_FALSE_POS: Scott Duff "rovere americano" = legno botte (non cocktail)
+- ×1 NON_MILAN: Terrazza Martini = Casa Martini Pessione TO
+- ×1 FOOD_NOT_WINE: Sicilian "Ravioli alla Polpa di Granchio" classificato white_wine
+- ×1 NO_MENU_CONTEXT: Sun Strac homepage navigation text, nessun prezzo reale
+- ×2 PAGINEGIALLE: Divina Piadina (fonte junk)
+- ×7 SCARTATI COMPLETAMENTE: qodeup (duplicati Woodstock), other junk (Sakeya invalid product, Morgante 2016 blog, Woodstock dupe)
+
+### Product normalization corretta
+- `beer_draft` → `beer_draft_small`/`medium` (contesto taglia)
+- `beer_corona`, `beer_ichnusa` → `beer_bottle`
+- `aperol` → `spritz`
+- `white_wine` → `wine_glass`, `prosecco` → `prosecco_glass`
+
+### Bug fix critico merge_pipeline.py
+- **Problema**: `venue_canonical_map[pid]` sovrascrivibile da versione senza geo → agent3 (no lat/lon) sovrascriveva agent2 (con lat/lon) → 95 price points persi.
+- **Fix**: mapping preserva versione geo-rich. Non sovrascrivere se existing canonical ha lat/lon.
+- **Impatto**: 829 → 846 price points (recuperati e aggiunti 17 netti).
+
+### Delta numeri
+- Price points: 829 → 846 (+17)
+- Items: 5.361 → 5.402 (+41)
+- Venue-product pairs: 547 → 554 (+7)
+- Venues sulla mappa: 146 → 150 (+4)
+- Venues totali DB: 1.558 → 1.610 (+52)
+
+---
+
 ## 2026-06-01 — CEO merge + pulizia repo
 
 ### Merge sessione notturna Pietro (geocoding leggimenu) — CEO

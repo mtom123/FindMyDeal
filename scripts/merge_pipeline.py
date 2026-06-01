@@ -280,7 +280,14 @@ def main():
 
         fp = venue_fingerprint(name, lat, lng)
         pid = f"{v.get('source_platform','')}::{v.get('source_venue_id', v.get('venue_url',''))}"
-        venue_canonical_map[pid] = fp
+        # Prefer geo-rich mapping: only overwrite if current mapping has no geo
+        existing_fp = venue_canonical_map.get(pid)
+        if existing_fp is None:
+            venue_canonical_map[pid] = fp
+        elif lat and not canonical.get(existing_fp, {}).get("latitude"):
+            # Upgrade: new entry has geo, existing canonical doesn't → update map
+            venue_canonical_map[pid] = fp
+        # else: keep existing (it already has geo, don't downgrade)
 
         if fp not in canonical:
             canonical[fp] = {**v, "_sources": [], "_all_names": []}

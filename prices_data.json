@@ -2,7 +2,7 @@
   "spritz": {
     "code": "spritz",
     "label": "Spritz",
-    "count": 84,
+    "count": 87,
     "venues": [
       {
         "venue_name": "Papeete",
@@ -41,6 +41,65 @@
           }
         ],
         "min_price": 3.5
+      },
+      {
+        "venue_name": "Spritz",
+        "address": "Ripa di Porta Ticinese 9",
+        "lat": 45.4519849,
+        "lng": 9.1765944,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "BIBITE - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla ",
+            "section": "",
+            "price": 4.0
+          },
+          {
+            "name": "VINI ROSSI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai a",
+            "section": "",
+            "price": 6.0
+          },
+          {
+            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
+            "section": "",
+            "price": 7.0
+          },
+          {
+            "name": "BOLLICINE e CHAMPAGNE - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Dig",
+            "section": "",
+            "price": 8.0
+          },
+          {
+            "name": "COCKTAILS - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai al",
+            "section": "",
+            "price": 10.0
+          },
+          {
+            "name": "GIN - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla Hea",
+            "section": "",
+            "price": 12.0
+          },
+          {
+            "name": "RUM - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla Hea",
+            "section": "",
+            "price": 13.0
+          },
+          {
+            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
+            "section": "",
+            "price": 15.0
+          },
+          {
+            "name": "WHISKY - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla ",
+            "section": "",
+            "price": 18.0
+          }
+        ],
+        "min_price": 4.0
       },
       {
         "venue_name": "Sicilian",
@@ -246,6 +305,25 @@
         "items": [
           {
             "name": "#SPRITZETTINO ? RINFORZA L&#8217",
+            "section": "",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Caffefernanda",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Soft Drinks Coca Cola 0,33 l €5,00 Coca Cola Zero 0,33 l €5,00 Fanta 0,33 l €5,0",
             "section": "",
             "price": 5.0
           }
@@ -1013,6 +1091,11 @@
             "name": "9€18€12€Sangria 1LMoscow MuleAperol Spritz9€9€9€MojitoGin tónicoPorto tónicoSINC",
             "section": "",
             "price": 9.0
+          },
+          {
+            "name": "9€18€12€Sangria 1LMoscow MuleAperol Spritz9€9€9€MojitoGin tónicoPorto tónicoSINC",
+            "section": "",
+            "price": 18.0
           }
         ],
         "min_price": 8.0
@@ -1759,13 +1842,32 @@
           }
         ],
         "min_price": 18.0
+      },
+      {
+        "venue_name": "Barcollando",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Barcollando – Milano – Your best alternative Via Francesco Novati, 6, 20123 Mila",
+            "section": "",
+            "price": 20.0
+          }
+        ],
+        "min_price": 20.0
       }
     ]
   },
   "negroni": {
     "code": "negroni",
     "label": "Negroni",
-    "count": 62,
+    "count": 63,
     "venues": [
       {
         "venue_name": "BAR PICCHIO",
@@ -1799,6 +1901,25 @@
         "items": [
           {
             "name": "Menu – Tardis Pub Milano Home Menù Menu Chupiti English Menu NERDWORLD Giochi da",
+            "section": "",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
+      },
+      {
+        "venue_name": "Caffefernanda",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Soft Drinks Coca Cola 0,33 l €5,00 Coca Cola Zero 0,33 l €5,00 Fanta 0,33 l €5,0",
             "section": "",
             "price": 5.0
           }
@@ -3035,7 +3156,7 @@
   "americano": {
     "code": "americano",
     "label": "Americano",
-    "count": 53,
+    "count": 54,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -3175,6 +3296,25 @@
           }
         ],
         "min_price": 3.0
+      },
+      {
+        "venue_name": "Scott Joplin",
+        "address": "Via Val di Ledro 11",
+        "lat": 45.5160674,
+        "lng": 9.1886642,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "non si fa il caffè macchiato, non si fanno caffè speciali, etc etc I dolci posso",
+            "section": "",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
       },
       {
         "venue_name": "Bar Magenta",
@@ -4159,6 +4299,11 @@
             "name": "Extra Dry CALICE BOTTIGLIA 6,00 € 20,00 € Vino bianco chiedi allo staff CALICE B",
             "section": "",
             "price": 6.0
+          },
+          {
+            "name": "Bottiglia 12,00 € Birre in lattina LA Lucida (Baby IPA) 4,00 € Prima (Pils) 4,00",
+            "section": "",
+            "price": 12.0
           }
         ],
         "min_price": 6.0
@@ -6576,8 +6721,27 @@
   "beer_draft_small": {
     "code": "beer_draft_small",
     "label": "Birra Spina Piccola",
-    "count": 7,
+    "count": 9,
     "venues": [
+      {
+        "venue_name": "Norin Caffè Bistrot",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Menù Ristorante - Norin Caffè e Bistrò Toggle navigation Menù Breakfast Ristoran",
+            "section": "",
+            "price": 2.5
+          }
+        ],
+        "min_price": 2.5
+      },
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
@@ -6785,6 +6949,25 @@
           }
         ],
         "min_price": 5.0
+      },
+      {
+        "venue_name": "Frida",
+        "address": "",
+        "lat": 45.4887512,
+        "lng": 9.187111,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "BIRRA ALLA SPINA",
+            "section": "",
+            "price": 5.5
+          }
+        ],
+        "min_price": 5.5
       }
     ]
   },
