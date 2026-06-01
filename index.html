@@ -445,6 +445,21 @@ input[type=range].sb-range::-moz-range-thumb {
 #map-wrap { flex: 1; position: relative; overflow: hidden; }
 #map { width: 100%; height: 100%; }
 
+/* Zone labels */
+.zone-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: .10em; text-transform: uppercase;
+  color: var(--t3); white-space: nowrap;
+  pointer-events: none; user-select: none;
+  display: flex; align-items: center; gap: 4px;
+}
+.zone-label.has-venues { color: var(--deal-t); }
+.zone-label span {
+  font-size: 8px; background: var(--deal-t); color: #fff;
+  padding: 0 3px; line-height: 1.4;
+}
+
 /* Map tile filter — architectural paper feel */
 .leaflet-tile-pane {
   filter: saturate(0.88) brightness(1.01) contrast(0.97);
@@ -1181,6 +1196,45 @@ function calcZoneCoverage() {
   S.zoneCoverage = result;
 }
 
+// Zone overlay layers
+let _zoneLayers = [];
+function renderZones() {
+  _zoneLayers.forEach(l => l.remove());
+  _zoneLayers = [];
+  if (!S.map) return;
+
+  Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
+    const [[s,w],[n,e]] = zone.bounds;
+    const cov = S.zoneCoverage[key];
+    const hasVenues = cov && cov.venues > 0;
+
+    // Subtle dashed rectangle
+    const rect = L.rectangle([[s,w],[n,e]], {
+      color: hasVenues ? '#1e6639' : '#888880',
+      weight: 1,
+      dashArray: '3 4',
+      fill: hasVenues,
+      fillColor: '#1e6639',
+      fillOpacity: hasVenues ? 0.04 : 0,
+      interactive: false,
+    }).addTo(S.map);
+
+    // Zone label
+    const centerLat = (s + n) / 2;
+    const centerLng = (w + e) / 2;
+    const label = L.marker([centerLat, centerLng], {
+      icon: L.divIcon({
+        html: `<div class="zone-label${hasVenues ? ' has-venues' : ''}">${zone.name}${hasVenues ? `<span>${cov.venues}</span>` : ''}</div>`,
+        className: '', iconSize: null, iconAnchor: [0, 0],
+      }),
+      interactive: false,
+      zIndexOffset: -100,
+    }).addTo(S.map);
+
+    _zoneLayers.push(rect, label);
+  });
+}
+
 /* ──────────────────────────────────────────
    PRODUCT META
 ─────────────────────────────────────────── */
@@ -1372,7 +1426,8 @@ function render(venues) {
     setTimeout(() => { S._progMove = false; }, 600);
   }
 
-  calcZoneCoverage(); // Feature 6
+  calcZoneCoverage();
+  renderZones();
 
   // Sidebar
   const sorted = [...venues]
@@ -1424,7 +1479,14 @@ function openDetail(idx) {
   if (!v) return;
   S.selIdx = idx;
 
-  if (S.map) S.map.setView([v.lat, v.lng], 15, { animate: true });
+  // Pan only — never change zoom (prevents unwanted zoom-out)
+  if (S.map) {
+    S._progMove = true;
+    if (!S.map.getBounds().contains([v.lat, v.lng])) {
+      S.map.panTo([v.lat, v.lng], { animate: true });
+    }
+    setTimeout(() => { S._progMove = false; }, 600);
+  }
 
   document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
   document.getElementById('mk-' + idx)?.classList.add('sel');
@@ -1797,7 +1859,20 @@ function setupSearch() {
   inp.addEventListener('input', () => {
     clearTimeout(timer);
     updateSearchClear();
-    timer = setTimeout(() => applyFilters(), 180);
+    timer = setTimeout(() => {
+      const q = inp.value.toLowerCase().trim();
+      // Check if query matches a Milan zone name → pan map there
+      const matchedZone = Object.values(MILAN_ZONES).find(z =>
+        z.name.toLowerCase().includes(q) || q.includes(z.name.toLowerCase())
+      );
+      if (matchedZone && q.length > 2) {
+        const [[s,w],[n,e]] = matchedZone.bounds;
+        S._progMove = true;
+        S.map.fitBounds([[s,w],[n,e]], { padding: [20,20], maxZoom: 15, animate: true });
+        setTimeout(() => { S._progMove = false; }, 800);
+      }
+      applyFilters();
+    }, 220);
   });
 }
 
