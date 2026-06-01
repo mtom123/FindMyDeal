@@ -1216,7 +1216,7 @@ const S = {
   searchCenter: null,
   zoneCoverage: {},
   activeCategory: null,
-  zonesVisible: false,
+  zoneBorders: false,   // false = hover only; true = permanent borders
   geo: {
     lat:    null,
     lng:    null,
@@ -1265,13 +1265,21 @@ const MILAN_ZONES = {
 function calcZoneCoverage() {
   if (!S.data) return;
 
-  // Collect ALL unique venues across all products (deduplicated by lat+lng)
+  // Collect ALL unique venues across all products
+  // Dedup by venue_name + rough coords (toFixed(3) = ~110m tolerance)
   const allUnique = new Map();
   Object.values(S.data).forEach(prod => {
     (prod.venues || []).forEach(v => {
-      const key = `${v.lat.toFixed(4)},${v.lng.toFixed(4)}`;
+      // Primary key: normalised name
+      const nameKey = (v.venue_name || '').toLowerCase().trim().replace(/\s+/g,'');
+      // Secondary key: rounded coords
+      const coordKey = `${v.lat.toFixed(3)},${v.lng.toFixed(3)}`;
+      const key = nameKey || coordKey;
       if (!allUnique.has(key)) {
-        allUnique.set(key, { lat: v.lat, lng: v.lng, hasPrice: v.items && v.items.length > 0 });
+        allUnique.set(key, {
+          lat: v.lat, lng: v.lng,
+          hasPrice: !!(v.items && v.items.length > 0)
+        });
       } else if (v.items && v.items.length > 0) {
         allUnique.get(key).hasPrice = true;
       }
@@ -1296,36 +1304,34 @@ let _zoneLayers = [];
 let _activeZoneKey = null;
 
 function toggleZones() {
-  S.zonesVisible = !S.zonesVisible;
+  S.zoneBorders = !S.zoneBorders;
   const btn = document.getElementById('zones-btn');
-  if (btn) btn.textContent = S.zonesVisible ? '◼ Hide zones' : '◻ Show zones';
-  if (!S.zonesVisible) {
-    _zoneLayers.forEach(l => l.remove());
-    _zoneLayers = [];
-    _activeZoneKey = null;
-    S.map?.closePopup();
-  } else {
-    renderZones();
-  }
+  if (btn) btn.textContent = S.zoneBorders ? '◼ Hide borders' : '◻ Show zones';
+  renderZones();
 }
 
 function renderZones() {
   _zoneLayers.forEach(l => l.remove());
   _zoneLayers = [];
-  if (!S.map || !S.zonesVisible) return;
+  if (!S.map) return;
 
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
     const [[s,w],[n,e]] = zone.bounds;
     const cov = S.zoneCoverage[key];
     const isActive = _activeZoneKey === key;
+    const hasCov = cov && cov.total > 0;
+
+    const baseWeight = S.zoneBorders ? 1 : 0;
+    const baseOpacity = S.zoneBorders ? 0.03 : 0.001;
+    const color = hasCov ? '#1e6639' : '#888880';
 
     const rect = L.rectangle([[s,w],[n,e]], {
-      color: '#1e6639',
-      weight: isActive ? 1.5 : 0,       // no border by default
+      color,
+      weight: isActive ? 1.5 : baseWeight,
       dashArray: '4 4',
       fill: true,
-      fillColor: '#1e6639',
-      fillOpacity: isActive ? 0.10 : 0.001, // nearly invisible but hover-detectable
+      fillColor: isActive ? '#1e6639' : color,
+      fillOpacity: isActive ? 0.10 : baseOpacity,
       interactive: true,
       bubblingMouseEvents: false,
     }).addTo(S.map);
@@ -1335,10 +1341,10 @@ function renderZones() {
       openZonePopup(key, zone, cov, rect);
     });
     rect.on('mouseover', () => {
-      if (!isActive) rect.setStyle({ weight: 1, fillOpacity: 0.06, color: '#1e6639' });
+      if (!isActive) rect.setStyle({ weight: Math.max(baseWeight, 1), fillOpacity: 0.07 });
     });
     rect.on('mouseout', () => {
-      if (!isActive) rect.setStyle({ weight: 0, fillOpacity: 0.001 });
+      if (!isActive) rect.setStyle({ weight: baseWeight, fillOpacity: baseOpacity });
     });
 
     _zoneLayers.push(rect);
@@ -1459,9 +1465,10 @@ function initMap() {
   }).addTo(S.map);
   L.control.zoom({ position: 'bottomright' }).addTo(S.map);
 
-  // Feature 2: lock map when user manually interacts
   S.map.on('dragstart', () => { S.mapLocked = true; showResetBtn(); });
   S.map.on('zoomstart', () => { if (!S._progMove) { S.mapLocked = true; showResetBtn(); } });
+  // Zones always visible on load (hover-only mode)
+  renderZones();
 }
 
 /* ──────────────────────────────────────────
