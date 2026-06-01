@@ -1344,63 +1344,72 @@ const CATEGORIES = {
 };
 
 /* ──────────────────────────────────────────
-   MILAN ZONES (Feature 6)
+   MILAN ZONES — geographic polygons
 ─────────────────────────────────────────── */
 const MILAN_ZONES = {
-  duomo:         { name: 'Duomo',          bounds: [[45.459, 9.183], [45.470, 9.202]] },
-  brera:         { name: 'Brera',          bounds: [[45.470, 9.183], [45.480, 9.197]] },
-  garibaldi:     { name: 'Garibaldi',      bounds: [[45.476, 9.183], [45.485, 9.202]] },
-  isola:         { name: 'Isola',          bounds: [[45.482, 9.183], [45.493, 9.202]] },
-  navigli:       { name: 'Navigli',        bounds: [[45.444, 9.157], [45.460, 9.182]] },
-  ticinese:      { name: 'Ticinese',       bounds: [[45.453, 9.176], [45.464, 9.193]] },
-  tortona:       { name: 'Tortona',        bounds: [[45.453, 9.152], [45.466, 9.174]] },
-  sempione:      { name: 'Sempione',       bounds: [[45.468, 9.152], [45.480, 9.178]] },
-  citylife:      { name: 'CityLife',       bounds: [[45.475, 9.136], [45.482, 9.150]] },
-  porta_venezia: { name: 'Porta Venezia',  bounds: [[45.463, 9.200], [45.478, 9.222]] },
-  nolo:          { name: 'NoLo',           bounds: [[45.479, 9.197], [45.493, 9.220]] },
-  loreto:        { name: 'Loreto',         bounds: [[45.474, 9.205], [45.484, 9.226]] },
-  porta_romana:  { name: 'Porta Romana',   bounds: [[45.447, 9.188], [45.462, 9.212]] },
-  citta_studi:   { name: 'Città Studi',    bounds: [[45.464, 9.218], [45.477, 9.242]] },
-  lambrate:      { name: 'Lambrate',       bounds: [[45.470, 9.228], [45.487, 9.258]] },
-  turro:         { name: 'Turro',          bounds: [[45.484, 9.206], [45.497, 9.228]] },
-  sarpi:         { name: 'Sarpi',          bounds: [[45.476, 9.170], [45.485, 9.188]] },
-  vigentino:     { name: 'Vigentino',      bounds: [[45.430, 9.174], [45.450, 9.200]] },
-  bovisa:        { name: 'Bovisa',         bounds: [[45.500, 9.152], [45.514, 9.182]] },
-  affori:        { name: 'Affori',         bounds: [[45.508, 9.164], [45.522, 9.194]] },
+  duomo:         { name: 'Duomo',         coords: [[45.469,9.183],[45.471,9.200],[45.466,9.208],[45.459,9.205],[45.458,9.188],[45.463,9.181]] },
+  brera:         { name: 'Brera',         coords: [[45.469,9.183],[45.479,9.181],[45.481,9.189],[45.479,9.198],[45.471,9.200]] },
+  garibaldi:     { name: 'Garibaldi',     coords: [[45.479,9.181],[45.487,9.181],[45.488,9.197],[45.483,9.203],[45.479,9.198],[45.481,9.189]] },
+  isola:         { name: 'Isola',         coords: [[45.483,9.185],[45.493,9.185],[45.493,9.202],[45.485,9.204],[45.483,9.197]] },
+  sarpi:         { name: 'Sarpi',         coords: [[45.476,9.170],[45.479,9.170],[45.485,9.175],[45.485,9.188],[45.476,9.188]] },
+  sempione:      { name: 'Sempione',      coords: [[45.467,9.152],[45.476,9.152],[45.480,9.162],[45.480,9.180],[45.473,9.184],[45.467,9.180],[45.464,9.168]] },
+  citylife:      { name: 'CityLife',      coords: [[45.476,9.136],[45.480,9.136],[45.482,9.143],[45.481,9.152],[45.476,9.152]] },
+  tortona:       { name: 'Tortona',       coords: [[45.452,9.153],[45.459,9.152],[45.466,9.161],[45.465,9.175],[45.457,9.180],[45.451,9.172],[45.451,9.162]] },
+  navigli:       { name: 'Navigli',       coords: [[45.463,9.168],[45.465,9.181],[45.457,9.185],[45.449,9.183],[45.444,9.172],[45.445,9.158],[45.453,9.156],[45.460,9.163]] },
+  ticinese:      { name: 'Ticinese',      coords: [[45.457,9.179],[45.463,9.181],[45.465,9.192],[45.461,9.199],[45.454,9.195],[45.451,9.186],[45.455,9.179]] },
+  porta_venezia: { name: 'Porta Venezia', coords: [[45.462,9.200],[45.467,9.197],[45.472,9.197],[45.480,9.203],[45.480,9.226],[45.471,9.228],[45.461,9.224]] },
+  porta_romana:  { name: 'Porta Romana',  coords: [[45.449,9.189],[45.459,9.186],[45.463,9.191],[45.463,9.213],[45.455,9.217],[45.447,9.210],[45.448,9.196]] },
+  nolo:          { name: 'NoLo',          coords: [[45.483,9.199],[45.494,9.199],[45.495,9.220],[45.485,9.222],[45.483,9.212]] },
+  loreto:        { name: 'Loreto',        coords: [[45.472,9.200],[45.478,9.200],[45.483,9.199],[45.483,9.212],[45.485,9.222],[45.478,9.227],[45.471,9.222],[45.471,9.208]] },
+  citta_studi:   { name: 'Città Studi',   coords: [[45.464,9.218],[45.476,9.218],[45.477,9.242],[45.464,9.240]] },
+  lambrate:      { name: 'Lambrate',      coords: [[45.470,9.228],[45.477,9.226],[45.485,9.238],[45.487,9.256],[45.479,9.260],[45.470,9.250]] },
+  turro:         { name: 'Turro',         coords: [[45.484,9.205],[45.494,9.205],[45.498,9.224],[45.493,9.229],[45.484,9.222]] },
+  vigentino:     { name: 'Vigentino',     coords: [[45.431,9.175],[45.451,9.175],[45.451,9.202],[45.431,9.202]] },
+  bovisa:        { name: 'Bovisa',        coords: [[45.500,9.151],[45.514,9.153],[45.515,9.180],[45.504,9.182],[45.500,9.172]] },
+  affori:        { name: 'Affori',        coords: [[45.508,9.164],[45.522,9.165],[45.522,9.193],[45.510,9.195],[45.507,9.181]] },
 };
+
+/* Point-in-polygon (ray casting) */
+function pip(lat, lng, coords) {
+  let inside = false;
+  for (let i = 0, j = coords.length - 1; i < coords.length; j = i++) {
+    const [yi, xi] = coords[i], [yj, xj] = coords[j];
+    if (((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi))
+      inside = !inside;
+  }
+  return inside;
+}
+
+/* Centroid of a polygon */
+function polyCentroid(coords) {
+  return [
+    coords.reduce((s,c) => s+c[0], 0) / coords.length,
+    coords.reduce((s,c) => s+c[1], 0) / coords.length,
+  ];
+}
 
 function calcZoneCoverage() {
   if (!S.data) return;
-
-  // Collect ALL unique venues across all products
-  // Dedup by venue_name + rough coords (toFixed(3) = ~110m tolerance)
   const allUnique = new Map();
   Object.values(S.data).forEach(prod => {
     (prod.venues || []).forEach(v => {
-      // Primary key: normalised name
       const nameKey = (v.venue_name || '').toLowerCase().trim().replace(/\s+/g,'');
-      // Secondary key: rounded coords
       const coordKey = `${v.lat.toFixed(3)},${v.lng.toFixed(3)}`;
       const key = nameKey || coordKey;
       if (!allUnique.has(key)) {
-        allUnique.set(key, {
-          lat: v.lat, lng: v.lng,
-          hasPrice: !!(v.items && v.items.length > 0)
-        });
+        allUnique.set(key, { lat: v.lat, lng: v.lng, hasPrice: !!(v.items && v.items.length > 0) });
       } else if (v.items && v.items.length > 0) {
         allUnique.get(key).hasPrice = true;
       }
     });
   });
   const allVenuesList = Array.from(allUnique.values());
-
   const result = {};
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
-    const [[s,w],[n,e]] = zone.bounds;
-    const inZone      = allVenuesList.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
-    const withPrice   = inZone.filter(v => v.hasPrice);
-    const total       = inZone.length;
-    const pct         = total > 0 ? Math.round((withPrice.length / total) * 100) : 0;
+    const inZone    = allVenuesList.filter(v => pip(v.lat, v.lng, zone.coords));
+    const withPrice = inZone.filter(v => v.hasPrice);
+    const total     = inZone.length;
+    const pct       = total > 0 ? Math.round((withPrice.length / total) * 100) : 0;
     result[key] = { name: zone.name, total, withPrice: withPrice.length, pct };
   });
   S.zoneCoverage = result;
@@ -1434,38 +1443,37 @@ function renderZones() {
   if (!S.map || S.zoneMode === 'off') return;
 
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
-    const [[s,w],[n,e]] = zone.bounds;
     const cov = S.zoneCoverage[key];
     const isActive = _activeZoneKey === key;
     const hasCov = cov && cov.total > 0;
 
     const baseWeight  = S.zoneMode === 'show' ? 1 : 0;
-    const baseOpacity = S.zoneMode === 'show' ? 0.03 : 0.001;
+    const baseOpacity = S.zoneMode === 'show' ? 0.04 : 0.001;
     const color = hasCov ? '#1e6639' : '#888880';
 
-    const rect = L.rectangle([[s,w],[n,e]], {
+    const poly = L.polygon(zone.coords, {
       color,
       weight: isActive ? 1.5 : baseWeight,
-      dashArray: '4 4',
+      dashArray: '5 5',
       fill: true,
       fillColor: isActive ? '#1e6639' : color,
-      fillOpacity: isActive ? 0.10 : baseOpacity,
+      fillOpacity: isActive ? 0.12 : baseOpacity,
       interactive: true,
       bubblingMouseEvents: false,
     }).addTo(S.map);
 
-    rect.on('click', (e) => {
+    poly.on('click', (e) => {
       L.DomEvent.stopPropagation(e);
-      openZonePopup(key, zone, cov, rect);
+      openZonePopup(key, zone, cov, poly);
     });
-    rect.on('mouseover', () => {
-      if (!isActive) rect.setStyle({ weight: Math.max(baseWeight, 1), fillOpacity: 0.07 });
+    poly.on('mouseover', () => {
+      if (!isActive) poly.setStyle({ weight: Math.max(baseWeight, 1), fillOpacity: 0.08 });
     });
-    rect.on('mouseout', () => {
-      if (!isActive) rect.setStyle({ weight: baseWeight, fillOpacity: baseOpacity });
+    poly.on('mouseout', () => {
+      if (!isActive) poly.setStyle({ weight: baseWeight, fillOpacity: baseOpacity });
     });
 
-    _zoneLayers.push(rect);
+    _zoneLayers.push(poly);
   });
 }
 
@@ -1484,10 +1492,8 @@ function openZonePopup(key, zone, cov, rect) {
   const withPrice = cov?.withPrice || 0;
   const pct       = cov?.pct       || 0;
 
-  const [[s,w],[n,e]] = zone.bounds;
-
   // Venues in zone for current product
-  const zoneVenues = S.venues.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
+  const zoneVenues = S.venues.filter(v => pip(v.lat, v.lng, zone.coords));
   const sortedVenues = [...zoneVenues].sort((a,b) => a.min_price - b.min_price);
   const avgPrice = zoneVenues.length > 0
     ? zoneVenues.reduce((sum,v) => sum + v.min_price, 0) / zoneVenues.length
@@ -1545,7 +1551,7 @@ function openZonePopup(key, zone, cov, rect) {
   if (window.innerWidth > 768) {
     card.style.visibility = 'hidden';
     requestAnimationFrame(() => {
-      positionZoneCard(card, s, w, n, e);
+      positionZoneCard(card, zone.coords);
       card.style.visibility = '';
       card.classList.add('open');
     });
@@ -1570,18 +1576,17 @@ function toggleZcList(key) {
   toggle?.classList.toggle('open', open);
 }
 
-function positionZoneCard(card, s, w, n, e) {
-  const CARD_W = 280, CARD_H = 180, GAP = 12;
-  const sw = S.map.latLngToContainerPoint([s, w]);
-  const ne = S.map.latLngToContainerPoint([n, e]);
+function positionZoneCard(card, coords) {
+  const CARD_W = 280, CARD_H = 200, GAP = 16;
+  const [clat, clng] = polyCentroid(coords);
+  const pt = S.map.latLngToContainerPoint([clat, clng]);
   const mapWrap = document.getElementById('map-wrap');
   const rect = mapWrap.getBoundingClientRect();
 
-  // Try to place to the right of zone
-  let left = rect.left + ne.x + GAP;
-  let top  = rect.top  + Math.min(sw.y, ne.y) + 10;
+  let left = rect.left + pt.x + GAP;
+  let top  = rect.top  + pt.y - CARD_H / 2;
 
-  if (left + CARD_W > window.innerWidth - 12) left = rect.left + sw.x - CARD_W - GAP;
+  if (left + CARD_W > window.innerWidth - 12) left = rect.left + pt.x - CARD_W - GAP;
   top = Math.max(60, Math.min(top, window.innerHeight - CARD_H - 12));
 
   card.style.left   = left + 'px';
@@ -2044,7 +2049,8 @@ async function fetchSrchSuggestions(q) {
 function selectZoneFromSearch(key) {
   const zone = MILAN_ZONES[key];
   if (!zone) return;
-  const [[s,w],[n,e]] = zone.bounds;
+  const lats = zone.coords.map(c=>c[0]), lngs = zone.coords.map(c=>c[1]);
+  const s=Math.min(...lats),n=Math.max(...lats),w=Math.min(...lngs),e=Math.max(...lngs);
   document.getElementById('srch').value = zone.name;
   updateSearchClear();
   hideSrchDropdown();
