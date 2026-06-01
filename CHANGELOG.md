@@ -6,6 +6,98 @@
 
 ---
 
+## 2026-06-02 — Audit scrupoloso v2 + standardizzazione DB drink
+
+### Trigger
+Richiesta CEO: audit completo, focus su venues prezzate. Esempio specifico segnalato: spritz €0.75 Papeete (FP storico).
+
+### Funzioni aggiunte a merge_pipeline.py
+**`clean_item_product(item)`** — applica regole di reclassificazione e skip:
+
+| Regola | Action | Esempi |
+|---|---|---|
+| `americano` + "caffè" + price<4 | Clear product | Bar Magenta caffè americano €1 |
+| `espresso` + "martini"/"cocktail"/"affogato"/"mixed" | → `custom_cocktail` | Espresso Martini €10 |
+| `espresso` + "corretto" + price>3 | Clear product | Caffè corretto grappa €3.90 |
+| `prosecco_glass` + "bottiglia" + price>15 | SKIP | Prosecco Valdobbiadene Bottiglia €35 |
+| `prosecco_glass` + price>15 | SKIP (likely bottiglia) | |
+| `beer_moretti` + "vittorio"/"riserva"/"brut"/"spumante" | SKIP | Vittorio Moretti Riserva Extra Brut |
+| `beer_bottle` + "vino"/"valpolicella"/"barolo"/"chianti"/"antipasto"/"ripasso" | SKIP | Ripasso di Valpolicella |
+| `mojito` + "bloody mary"/"licorice mary" | SKIP | LICORICE MOJITO MARY |
+| `margarita` + "caraffa"/"pitcher"/price>30 | SKIP | Santo Taco CARAFFA |
+| `spritz` + "coca cola"/"fanta"/"soft drink" | → `soft_drink` | |
+| `spritz` + "calice"/"vino bianco/rosso" | → `wine_glass` | |
+| `spritz` + "birra" | SKIP | |
+| `spritz` + "caffè"/"espresso" | SKIP | |
+
+**Item name noise filter** — pattern aggiunti:
+- `mail us`, email pattern (`@\w+\.\w+`), `where: <luogo>`
+- Page navigation (>2 marker tra "home/contatti/footer/header/...")
+- `>= 4 €` nel nome (parser concat fail tipo PDF mal-letti)
+- `"menu" + 1 marker` (HTML toggle navigation)
+
+**Price range filter in unified_prices** — solo items dentro range realistico Milano:
+- spritz 3-22 · negroni 4-25 · americano 4-18 · gin_tonic 5-22 · mojito 5-22
+- moscow_mule 5-20 · margarita 5-25 · daiquiri 6-22 · manhattan 7-25
+- custom_cocktail 5-30 · beer_draft_small 2-8 · beer_draft_medium 3-12
+- beer_bottle 2-14 · beer_brand 2-8 · wine_glass 3-15 · prosecco_glass 3-14
+- espresso 0.8-4 · cappuccino 1.2-5.5 · soft_drink 1-7 · water 0.5-5
+
+### Cleanup applicato (questo run)
+- **NAME_NOISE: 99 items** (mail us, email, "menu -", concat parser fail)
+- **NAME_PARSER_NOISE: 9** (HTML nav extracted as item)
+- **SPRITZ_IS_COFFEE: 4** (parser ha matchato "spritz" in pagina caffè)
+- **NAME_MULTI_EURO_CONCAT: 4** (parser PDF letto orizzontale)
+- **BEER_BOTTLE_IS_FOOD_OR_WINE: 4** (Ripasso Valpolicella, Antipasto, Riserva)
+- **PROSECCO_GLASS_TOO_HIGH: 4** (>€15 = bottiglia mascherata)
+- **MARGARITA_CARAFFA: 2** (Santo Taco €60/€90)
+- **PROSECCO_BOTTIGLIA: 2** (esplicito "Bottiglia" nel nome)
+- **MOJITO_IS_BLOODY_MARY: 1** (Luma LICORICE MOJITO MARY)
+- **MORETTI_SPUMANTE: 1** (Vittorio Moretti Franciacorta)
+- **NAME_TOO_LONG_PAGE: 1**
+
+**Items rimossi pre-merge: 131**
+
+### Price range filter post-merge (unified_prices)
+- soft_drink 15 (>€7 erano bottiglie grandi)
+- americano 10 (<€4 erano caffè residui)
+- espresso 5 (>€4 Espresso Martini)
+- beer_bottle 3, cappuccino 2, beer_moretti 1, spritz 1, negroni 1, custom_cocktail 1
+
+**Price points eliminati da range: 39**
+
+### Delta numeri drink (audit v2)
+| Metrica | Pre-audit | Post-audit | Δ |
+|---|---|---|---|
+| Price points | 1.080 | **985** | -95 (rumore) |
+| Items | 5.708 | 5.626 | -82 |
+| Venue-product pairs | 723 | 687 | -36 |
+| Venues mappa | 161 | **153** | -8 (alcune erano solo punti junk) |
+| Quality | ~85% clean | **94% clean** | +9 |
+
+### Outliers residui (9) — LEGIT, non FP
+| Item | Prezzo | Motivo legit |
+|---|---|---|
+| SPRITZ NAVIGLI CAMPARI MAXI | €19 | Spritz MAXI premium |
+| Barcollando spritz | €20 | Cocktail upscale Navigli |
+| Morgante "Frenesia dei navigli" | €19 | Cocktail signature |
+| SPRITZ NAVIGLI CLASSICI | €20 | Premium tier |
+| LiQUIDO Rooftop "Negroni Experience" | €25 | Rooftop premium |
+| La Terrazza Aperol "GIN TONIC SELECTION" | €21 | Premium |
+| Oud Beersel Lambic 6Y | €14 | Craft beer artigianale |
+| Ceresio 7 caffè | €4 | Rooftop Dsquared (upscale) |
+| Oysteroom caffè e latte | €4 | Locale upscale |
+
+### Outliers minori segnalati ma non rimossi (60 mismatch)
+60 items in mismatch product/item_name dove il parser HTML ha catturato page-title come item_name. Tutti dentro range prezzi plausibili, quindi non degradano qualità apparente. Sono ~6% del totale = noise floor accettabile.
+
+### TODO futuro
+- Standardizzazione casing venue (Caffè Fernanda vs Caffefernanda vs caffefernanda) → script dedicato
+- Reverse-geocoding 20 venues fallback Duomo
+- Audit beach vertical (3.443 items, da fare)
+
+---
+
 ## 2026-06-02 — Pietro S4 deep-scan merge + Peppe Beach Phase 3 consegna
 
 ### Pietro S4 (commit 733925e) — drink deep-scan

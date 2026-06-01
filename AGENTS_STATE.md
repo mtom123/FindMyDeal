@@ -55,16 +55,17 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ---
 
-## 🍹 VERTICAL DRINK (Milano) — post merge Pietro S4
+## 🍹 VERTICAL DRINK (Milano) — post audit scrupoloso v2
 
 | Metrica | Valore |
 |---|---|
 | **Venues totali nel DB** | **1.601** |
-| **Venues uniche sulla mappa** | **161** (139 precise + 23 fallback) |
-| **Items menu totali** | 5.708 |
-| **Price points geo+normalizzati** | **1.080** |
-| **Venue-product pairs** | 723 |
+| **Venues uniche sulla mappa** | **153** (133 precise + 20 fallback) |
+| **Items menu totali** | 5.626 |
+| **Price points geo+normalizzati** | **985** (post-audit cleanup) |
+| **Venue-product pairs** | 687 |
 | **Prodotti coperti** | 22 |
+| **Quality** | 94% clean, 9 outliers residui = legit premium venues |
 
 ### Pietro S4 deep-scan (commit 733925e)
 - 88 venues re-processate dalla lista CEO (1-3 items DB pre-merge)

@@ -2,33 +2,8 @@
   "spritz": {
     "code": "spritz",
     "label": "Spritz",
-    "count": 96,
+    "count": 91,
     "venues": [
-      {
-        "venue_name": "Papeete",
-        "address": "",
-        "lat": 45.443517,
-        "lng": 9.175323,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website",
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "Chandon Garden Spritz •",
-            "section": "Bollicine",
-            "price": 0.75
-          },
-          {
-            "name": "Chandon Garden Spritz • 0,75 l 6 € 30 €",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 0.75
-      },
       {
         "venue_name": "BAR PICCHIO",
         "address": "Via Melzo, 11, Milan, Metropolitan City of Milan, Italy",
@@ -47,65 +22,6 @@
           }
         ],
         "min_price": 3.5
-      },
-      {
-        "venue_name": "Spritz",
-        "address": "Ripa di Porta Ticinese 9",
-        "lat": 45.4519849,
-        "lng": 9.1765944,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "BIBITE - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla ",
-            "section": "",
-            "price": 4.0
-          },
-          {
-            "name": "VINI ROSSI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai a",
-            "section": "",
-            "price": 6.0
-          },
-          {
-            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
-            "section": "",
-            "price": 7.0
-          },
-          {
-            "name": "BOLLICINE e CHAMPAGNE - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Dig",
-            "section": "",
-            "price": 8.0
-          },
-          {
-            "name": "COCKTAILS - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai al",
-            "section": "",
-            "price": 10.0
-          },
-          {
-            "name": "GIN - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla Hea",
-            "section": "",
-            "price": 12.0
-          },
-          {
-            "name": "RUM - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla Hea",
-            "section": "",
-            "price": 13.0
-          },
-          {
-            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
-            "section": "",
-            "price": 15.0
-          },
-          {
-            "name": "WHISKY - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digitale Vai alla ",
-            "section": "",
-            "price": 18.0
-          }
-        ],
-        "min_price": 4.0
       },
       {
         "venue_name": "Sicilian",
@@ -213,30 +129,6 @@
         "min_price": 5.0
       },
       {
-        "venue_name": "La Birrofila",
-        "address": "Via privata Sant'Ampellio 14",
-        "lat": 45.4382102,
-        "lng": 9.1845842,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menu - La Birrofila Chi siamo Shop Il birrificio News Menù Pranzo Sera Contatti ",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "💥 Spritz aperol o campari",
-            "section": "",
-            "price": 8.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
         "venue_name": "Myst",
         "address": "",
         "lat": 45.4839246,
@@ -259,49 +151,6 @@
           },
           {
             "name": "Spritz",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Victoriasclub",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "#SPRITZETTINO ? RINFORZA L&#8217",
-            "section": "",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Caffefernanda",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Soft Drinks Coca Cola 0,33 l €5,00 Coca Cola Zero 0,33 l €5,00 Fanta 0,33 l €5,0",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Campari Spritz",
             "section": "",
             "price": 10.0
           }
@@ -442,30 +291,6 @@
         "min_price": 6.0
       },
       {
-        "venue_name": "labirrofila.com",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Extra Dry CALICE BOTTIGLIA 6,00 € 20,00 € Vino bianco chiedi allo staff CALICE B",
-            "section": "",
-            "price": 6.0
-          },
-          {
-            "name": "💥 Spritz aperol o campari",
-            "section": "",
-            "price": 8.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
         "venue_name": "Caffè Inn International Bistrot",
         "address": "",
         "lat": 45.4642,
@@ -509,6 +334,25 @@
         "min_price": 6.0
       },
       {
+        "venue_name": "Papeete",
+        "address": "",
+        "lat": 45.443517,
+        "lng": 9.175323,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Chandon Garden Spritz • 0,75 l 6 € 30 €",
+            "section": "",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
         "lat": 45.4642,
@@ -523,11 +367,6 @@
             "name": "Aperol Spritz",
             "section": "",
             "price": 6.0
-          },
-          {
-            "name": "Menù Aperitivi - Norin Caffè e Bistrò Toggle navigation Menù Breakfast Ristorant",
-            "section": "",
-            "price": 8.0
           }
         ],
         "min_price": 6.0
@@ -733,16 +572,6 @@
             "name": "SPRITZ",
             "section": "",
             "price": 6.9
-          },
-          {
-            "name": "EATME&GO – Street food lovers Mail us: info@eatmeandgo.it Where: DUOMO Via Torin",
-            "section": "",
-            "price": 9.0
-          },
-          {
-            "name": "APERITIVO – EATME&GO Mail us: info@eatmeandgo.it Where: DUOMO Via Torino, 49 | S",
-            "section": "",
-            "price": 9.9
           }
         ],
         "min_price": 6.9
@@ -858,6 +687,35 @@
             "name": "SPRITZ ALLA ROSA 8€",
             "section": "",
             "price": 8.0
+          }
+        ],
+        "min_price": 7.0
+      },
+      {
+        "venue_name": "Spritz",
+        "address": "Ripa di Porta Ticinese 9",
+        "lat": 45.4519849,
+        "lng": 9.1765944,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
+            "section": "",
+            "price": 7.0
+          },
+          {
+            "name": "BOLLICINE e CHAMPAGNE - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Dig",
+            "section": "",
+            "price": 8.0
+          },
+          {
+            "name": "SPRITZ PARTICOLARI - Pub / Birreria SPRITZ NAVIGLI MILANO - Milano - Menu Digita",
+            "section": "",
+            "price": 15.0
           }
         ],
         "min_price": 7.0
@@ -1282,7 +1140,8 @@
         "price_tier": "",
         "categories": "",
         "sources": [
-          "eatbu"
+          "eatbu",
+          "direct_website"
         ],
         "items": [
           {
@@ -1291,14 +1150,9 @@
             "price": 8.0
           },
           {
-            "name": "9€18€12€Sangria 1LMoscow MuleAperol Spritz9€9€9€MojitoGin tónicoPorto tónicoSINC",
+            "name": "Aperol Spritz 9€",
             "section": "",
             "price": 9.0
-          },
-          {
-            "name": "9€18€12€Sangria 1LMoscow MuleAperol Spritz9€9€9€MojitoGin tónicoPorto tónicoSINC",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 8.0
@@ -1561,25 +1415,6 @@
         "min_price": 9.0
       },
       {
-        "venue_name": "Lucaeandreabar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "#milanodabere l'aperitivo Gli spritz APEROL &#8211",
-            "section": "",
-            "price": 9.0
-          }
-        ],
-        "min_price": 9.0
-      },
-      {
         "venue_name": "Refeel",
         "address": "",
         "lat": 45.450765,
@@ -1737,25 +1572,6 @@
         "min_price": 10.0
       },
       {
-        "venue_name": "I Mas!",
-        "address": "Ripa di Porta Ticinese 11",
-        "lat": 45.4519575,
-        "lng": 9.176461,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "menu • Mas Milano - Specialità Spagnole Home Chi siamo Team News Menu Contatti H",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 10.0
-      },
-      {
         "venue_name": "Floraetlabora",
         "address": "",
         "lat": 45.4642,
@@ -1789,11 +1605,25 @@
             "name": "Campari Spritz",
             "section": "",
             "price": 10.0
-          },
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Caffefernanda",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
           {
-            "name": "Menu - Caffè Fernanda Vai al contenuto Close Trigger Home About Chef Home About ",
+            "name": "Campari Spritz",
             "section": "",
-            "price": 12.0
+            "price": 10.0
           }
         ],
         "min_price": 10.0
@@ -2079,51 +1909,8 @@
   "negroni": {
     "code": "negroni",
     "label": "Negroni",
-    "count": 77,
+    "count": 75,
     "venues": [
-      {
-        "venue_name": "BAR PICCHIO",
-        "address": "Via Melzo, 11, Milan, Metropolitan City of Milan, Italy",
-        "lat": 45.4735028,
-        "lng": 9.2093181,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "mycia"
-        ],
-        "items": [
-          {
-            "name": "NEGRONI",
-            "section": "COCKTAIL",
-            "price": 3.5
-          }
-        ],
-        "min_price": 3.5
-      },
-      {
-        "venue_name": "Tardis",
-        "address": "Via Luigi Ornato 134 20162.0",
-        "lat": 45.5238074,
-        "lng": 9.1925759,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menu – Tardis Pub Milano Home Menù Menu Chupiti English Menu NERDWORLD Giochi da",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "OMEGA NEGRONI",
-            "section": "",
-            "price": 9.0
-          }
-        ],
-        "min_price": 5.0
-      },
       {
         "venue_name": "Caffefernanda",
         "address": "",
@@ -2727,35 +2514,6 @@
         "min_price": 8.0
       },
       {
-        "venue_name": "Lucaeandreabar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "€8,00 rossi amari NEGRONI DELLA CASA &#8211",
-            "section": "",
-            "price": 8.0
-          },
-          {
-            "name": "€10,00 NEGRONI SBAGLIATO &#8211",
-            "section": "",
-            "price": 10.0
-          },
-          {
-            "name": "€12,00 NEGRONI &#8211",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 8.0
-      },
-      {
         "venue_name": "Morna",
         "address": "Via Tortona 30/A",
         "lat": 45.4527629,
@@ -3027,30 +2785,6 @@
         "min_price": 9.0
       },
       {
-        "venue_name": "Floraetlabora",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "0 — sambuco, gin (anche analcolico), lime, soda', price: '9€' }, { name: 'Basil ",
-            "section": "",
-            "price": 9.0
-          },
-          {
-            "name": "Germain', price: '10€' } ]}, { cat: '🥤 Analcolici · 7€', items: [ { name: 'Camom",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 9.0
-      },
-      {
         "venue_name": "The Growler Milano",
         "address": "",
         "lat": 45.4642,
@@ -3083,6 +2817,25 @@
           {
             "name": "Negroni",
             "section": "COCKTAILS APERITIVO (12)",
+            "price": 9.0
+          }
+        ],
+        "min_price": 9.0
+      },
+      {
+        "venue_name": "Tardis",
+        "address": "Via Luigi Ornato 134 20162.0",
+        "lat": 45.5238074,
+        "lng": 9.1925759,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "OMEGA NEGRONI",
+            "section": "",
             "price": 9.0
           }
         ],
@@ -3235,6 +2988,25 @@
           {
             "name": "Negroni",
             "section": "APERITIVI",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
+        "venue_name": "Floraetlabora",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Germain', price: '10€' } ]}, { cat: '🥤 Analcolici · 7€', items: [ { name: 'Camom",
+            "section": "",
             "price": 10.0
           }
         ],
@@ -3674,190 +3446,8 @@
   "americano": {
     "code": "americano",
     "label": "Americano",
-    "count": 64,
+    "count": 59,
     "venues": [
-      {
-        "venue_name": "Barz'8 Coffee drink e food",
-        "address": "Via Casale, 3a, Milano, MI, Italia",
-        "lat": 45.4520751,
-        "lng": 9.1704579,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "mycia"
-        ],
-        "items": [
-          {
-            "name": "Caffè Americano",
-            "section": "CAFFETTERIA",
-            "price": 1.0
-          },
-          {
-            "name": "Americano",
-            "section": "PRE - DINNER DRINK",
-            "price": 7.0
-          }
-        ],
-        "min_price": 1.0
-      },
-      {
-        "venue_name": "Mi Casa Toasteria",
-        "address": "Via Leone Tolstoi, 1, 20146 Milano, MI, Italia",
-        "lat": 45.4492546,
-        "lng": 9.1518545,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "mycia"
-        ],
-        "items": [
-          {
-            "name": "Caffè americano",
-            "section": "CAFFETTERIA",
-            "price": 1.2
-          }
-        ],
-        "min_price": 1.2
-      },
-      {
-        "venue_name": "TYPE",
-        "address": "Via Pietro Borsieri 34 20159 Milano",
-        "lat": 45.489743,
-        "lng": 9.189246,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Americano",
-            "section": "",
-            "price": 1.7
-          },
-          {
-            "name": "Americano Deca",
-            "section": "",
-            "price": 1.9
-          },
-          {
-            "name": "Americano Vegan",
-            "section": "",
-            "price": 2.1
-          },
-          {
-            "name": "Americano deca Vegan",
-            "section": "",
-            "price": 2.4
-          }
-        ],
-        "min_price": 1.7
-      },
-      {
-        "venue_name": "Papeete",
-        "address": "",
-        "lat": 45.443517,
-        "lng": 9.175323,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Cafè Americano 2 €",
-            "section": "",
-            "price": 2.0
-          }
-        ],
-        "min_price": 2.0
-      },
-      {
-        "venue_name": "Refeel",
-        "address": "",
-        "lat": 45.450765,
-        "lng": 9.200957,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "AMERICANO",
-            "section": "",
-            "price": 2.0
-          },
-          {
-            "name": "AMERICANO M ARTINI — 10€",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 2.0
-      },
-      {
-        "venue_name": "Mulberry st, San Donato",
-        "address": "Via Alfonsine 40 a San Donato Milanese",
-        "lat": 45.4008,
-        "lng": 9.2669,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "menudigitale"
-        ],
-        "items": [
-          {
-            "name": "Americano",
-            "section": "Decaffeinato",
-            "price": 2.5
-          },
-          {
-            "name": "Americano",
-            "section": "Negroni",
-            "price": 8.0
-          }
-        ],
-        "min_price": 2.5
-      },
-      {
-        "venue_name": "Funky",
-        "address": "Ripa di Porta Ticinese 33",
-        "lat": 45.4515584,
-        "lng": 9.1745153,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Caffè Americano",
-            "section": "CAFFETTERIA / COFFEE & CO.",
-            "price": 2.5
-          }
-        ],
-        "min_price": 2.5
-      },
-      {
-        "venue_name": "Hotel Ibis Milano Fiera",
-        "address": "Via Lucio Giunio Columella, 36, 20128 Milano, MI, Italia",
-        "lat": 45.5157384,
-        "lng": 9.2269324,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "mycia"
-        ],
-        "items": [
-          {
-            "name": "Caffè/Americano",
-            "section": "Caffetteria",
-            "price": 3.0
-          }
-        ],
-        "min_price": 3.0
-      },
       {
         "venue_name": "Scott Joplin",
         "address": "Via Val di Ledro 11",
@@ -3957,6 +3547,25 @@
           }
         ],
         "min_price": 6.5
+      },
+      {
+        "venue_name": "Barz'8 Coffee drink e food",
+        "address": "Via Casale, 3a, Milano, MI, Italia",
+        "lat": 45.4520751,
+        "lng": 9.1704579,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "mycia"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "PRE - DINNER DRINK",
+            "price": 7.0
+          }
+        ],
+        "min_price": 7.0
       },
       {
         "venue_name": "Lucky Bar",
@@ -4454,6 +4063,25 @@
         "min_price": 8.0
       },
       {
+        "venue_name": "Mulberry st, San Donato",
+        "address": "Via Alfonsine 40 a San Donato Milanese",
+        "lat": 45.4008,
+        "lng": 9.2669,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "menudigitale"
+        ],
+        "items": [
+          {
+            "name": "Americano",
+            "section": "Negroni",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
         "venue_name": "Rapsody",
         "address": "Via Gaetano Salvemini 7",
         "lat": 45.418814,
@@ -4801,6 +4429,25 @@
         "min_price": 10.0
       },
       {
+        "venue_name": "Refeel",
+        "address": "",
+        "lat": 45.450765,
+        "lng": 9.200957,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "AMERICANO M ARTINI — 10€",
+            "section": "",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
+      },
+      {
         "venue_name": "Luca & Andrea",
         "address": "Alzaia Naviglio Grande 34",
         "lat": 45.4515191,
@@ -4959,30 +4606,6 @@
     "label": "Gin Tonic",
     "count": 39,
     "venues": [
-      {
-        "venue_name": "La Birrofila",
-        "address": "Via privata Sant'Ampellio 14",
-        "lat": 45.4382102,
-        "lng": 9.1845842,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menu pranzo - La Birrofila Chi siamo Shop Il birrificio News Menù Pranzo Sera Co",
-            "section": "",
-            "price": 5.0
-          },
-          {
-            "name": "Gin tonic",
-            "section": "",
-            "price": 8.0
-          }
-        ],
-        "min_price": 5.0
-      },
       {
         "venue_name": "SWAMI - MILANO",
         "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
@@ -5367,6 +4990,25 @@
         "min_price": 8.0
       },
       {
+        "venue_name": "La Birrofila",
+        "address": "Via privata Sant'Ampellio 14",
+        "lat": 45.4382102,
+        "lng": 9.1845842,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Gin tonic",
+            "section": "",
+            "price": 8.0
+          }
+        ],
+        "min_price": 8.0
+      },
+      {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
         "lat": 45.4642,
@@ -5736,7 +5378,7 @@
         ],
         "items": [
           {
-            "name": "0.0 Gin & Tonic (ALCOHOL FREE)",
+            "name": "Gin & Tonic Analcolico (ALCOHOL FREE)",
             "section": "",
             "price": 12.0
           }
@@ -5805,27 +5447,8 @@
   "mojito": {
     "code": "mojito",
     "label": "Mojito",
-    "count": 30,
+    "count": 28,
     "venues": [
-      {
-        "venue_name": "Luma",
-        "address": "Via Pietro Borsieri 39",
-        "lat": 45.48957,
-        "lng": 9.188891,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "LICORICE MOJITO MARY",
-            "section": "Cocktail",
-            "price": 2.0
-          }
-        ],
-        "min_price": 2.0
-      },
       {
         "venue_name": "Bar Golf Milano",
         "address": "Via Galvani 21, 20135, Milano",
@@ -6344,25 +5967,6 @@
         "min_price": 10.0
       },
       {
-        "venue_name": "Lucaeandreabar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "€10,00 Evergreen MOJITO &#8211",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 10.0
-      },
-      {
         "venue_name": "Luca & Andrea",
         "address": "Alzaia Naviglio Grande 34",
         "lat": 45.4515191,
@@ -6462,7 +6066,7 @@
   "moscow_mule": {
     "code": "moscow_mule",
     "label": "Moscow Mule",
-    "count": 25,
+    "count": 22,
     "venues": [
       {
         "venue_name": "EMPORIUM SMOKE & COFFEE",
@@ -6779,25 +6383,6 @@
         "min_price": 9.0
       },
       {
-        "venue_name": "Floraetlabora",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "0 — sambuco, gin (anche analcolico), lime, soda', price: '9€' }, { name: 'Basil ",
-            "section": "",
-            "price": 9.0
-          }
-        ],
-        "min_price": 9.0
-      },
-      {
         "venue_name": "The Growler Milano",
         "address": "",
         "lat": 45.4642,
@@ -6834,25 +6419,6 @@
           }
         ],
         "min_price": 9.0
-      },
-      {
-        "venue_name": "Lucaeandreabar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "€10,00 il dopo cena Nelle Tazze MOSCOW MULE &#8211",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 10.0
       },
       {
         "venue_name": "Luca & Andrea",
@@ -6929,32 +6495,13 @@
           }
         ],
         "min_price": 12.0
-      },
-      {
-        "venue_name": "Moscow Mule Bar",
-        "address": "Via Teodosio, 60 60 20131.0",
-        "lat": 45.4868595,
-        "lng": 9.2301145,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Moscow Mule | Milano cocktail Bar Home Seleziona una pagina MOSCOW MULE… dal 201",
-            "section": "",
-            "price": 18.0
-          }
-        ],
-        "min_price": 18.0
       }
     ]
   },
   "margarita": {
     "code": "margarita",
     "label": "Margarita",
-    "count": 33,
+    "count": 31,
     "venues": [
       {
         "venue_name": "Caffè Inn International Bistrot",
@@ -7277,25 +6824,6 @@
         "min_price": 9.0
       },
       {
-        "venue_name": "Floraetlabora",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "0 — sambuco, gin (anche analcolico), lime, soda', price: '9€' }, { name: 'Basil ",
-            "section": "",
-            "price": 9.0
-          }
-        ],
-        "min_price": 9.0
-      },
-      {
         "venue_name": "Woodstock",
         "address": "Via Lodovico il Moro 3",
         "lat": 45.4474586,
@@ -7366,25 +6894,6 @@
           {
             "name": "BLU MARGARITA",
             "section": "ESPOLON DRINK",
-            "price": 10.0
-          }
-        ],
-        "min_price": 10.0
-      },
-      {
-        "venue_name": "Lucaeandreabar",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "€10,00 MARGARITA &#8211",
-            "section": "",
             "price": 10.0
           }
         ],
@@ -7500,16 +7009,6 @@
             "name": "Margarita",
             "section": "",
             "price": 10.0
-          },
-          {
-            "name": "CARAFFA DI MARGARITA",
-            "section": "",
-            "price": 60.0
-          },
-          {
-            "name": "CARAFFA DI MARGARITA",
-            "section": "",
-            "price": 90.0
           }
         ],
         "min_price": 10.0
@@ -8167,27 +7666,8 @@
   "beer_draft_small": {
     "code": "beer_draft_small",
     "label": "Birra Spina Piccola",
-    "count": 10,
+    "count": 9,
     "venues": [
-      {
-        "venue_name": "Norin Caffè Bistrot",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menù Ristorante - Norin Caffè e Bistrò Toggle navigation Menù Breakfast Ristoran",
-            "section": "",
-            "price": 2.5
-          }
-        ],
-        "min_price": 2.5
-      },
       {
         "venue_name": "Chiosco Milano 3",
         "address": "Via Bassano Porrone, 8, 20121 Milano MI, Italia",
@@ -8575,7 +8055,7 @@
   "beer_bottle": {
     "code": "beer_bottle",
     "label": "Birra Bottiglia",
-    "count": 41,
+    "count": 38,
     "venues": [
       {
         "venue_name": "L'Isola di Aurora",
@@ -8827,16 +8307,6 @@
             "name": "Birra Raffo",
             "section": "",
             "price": 4.0
-          },
-          {
-            "name": "Ripasso di Valpolicella Cantina di Soave — calice",
-            "section": "",
-            "price": 6.0
-          },
-          {
-            "name": "Ripasso di Valpolicella Cantina di Soave — bottiglia",
-            "section": "",
-            "price": 25.0
           }
         ],
         "min_price": 4.0
@@ -9058,7 +8528,7 @@
             "price": 7.8
           },
           {
-            "name": "2Late Imperial Ipa 8.5% [50 cl]",
+            "name": "This is Riwaka Ipa 6.2% [44 cl]",
             "section": "IPA alta fermentazione",
             "price": 8.0
           },
@@ -9115,30 +8585,6 @@
             "name": "Birra bottiglia cena",
             "section": "BIBITE",
             "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Harp Pub Guinness",
-        "address": "",
-        "lat": 45.4772546,
-        "lng": 9.2255218,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "33cl | 4.5% | chiara | habanero mango gose",
-            "section": "BIRRE BOTTIGLIA",
-            "price": 5.0
-          },
-          {
-            "name": "33 cl | 6.0% | Mele e lamponi",
-            "section": "BIRRE BOTTIGLIA",
-            "price": 6.0
           }
         ],
         "min_price": 5.0
@@ -9536,11 +8982,6 @@
             "name": "Stella Artois - PREMIUM LAGER 5% vol.",
             "section": "",
             "price": 7.0
-          },
-          {
-            "name": "Fravort Freshbeer - BLONDE BIRRIFICIO F.LLI PERRELLA",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 7.0
@@ -9565,16 +9006,6 @@
             "name": "SPANISH BEER — MAXI",
             "section": "",
             "price": 11.0
-          },
-          {
-            "name": "SPANISH BEER — REGULAR",
-            "section": "",
-            "price": 15.0
-          },
-          {
-            "name": "SPANISH BEER — MAXI",
-            "section": "",
-            "price": 18.0
           }
         ],
         "min_price": 8.0
@@ -9597,57 +9028,19 @@
           }
         ],
         "min_price": 12.0
-      },
-      {
-        "venue_name": "Bar Tender",
-        "address": "",
-        "lat": 45.4928025,
-        "lng": 9.216125,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Buffet + Birra/Vino/Bibite",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 12.0
-      },
-      {
-        "venue_name": "Maccheroni",
-        "address": "Via Edmondo de Amicis, 7, Milano, MI, Italia",
-        "lat": 45.457333,
-        "lng": 9.180572,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "ANTIPASTO DELLA CASA",
-            "section": "",
-            "price": 19.0
-          }
-        ],
-        "min_price": 19.0
       }
     ]
   },
   "beer_moretti": {
     "code": "beer_moretti",
     "label": "Birra Moretti",
-    "count": 16,
+    "count": 13,
     "venues": [
       {
-        "venue_name": "Pizza And Food",
-        "address": "",
-        "lat": 45.4952099,
-        "lng": 9.2375734,
+        "venue_name": "Sui Generis",
+        "address": "Via Panfilo Castaldi 31 20124.0",
+        "lat": 45.4763158,
+        "lng": 9.2040763,
         "price_tier": "",
         "categories": "",
         "sources": [
@@ -9655,45 +9048,7 @@
         ],
         "items": [
           {
-            "name": "Moretti",
-            "section": "",
-            "price": 1.5
-          }
-        ],
-        "min_price": 1.5
-      },
-      {
-        "venue_name": "Da Giacomo",
-        "address": "",
-        "lat": 45.439601,
-        "lng": 9.223839,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "Vittorio Moretti Riserva Extra Brut",
-            "section": "Spumanti E Champagne",
-            "price": 1.5
-          }
-        ],
-        "min_price": 1.5
-      },
-      {
-        "venue_name": "Garden Caffè",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "BIRRE - Bar / Caffetteria Garden Caffè - Milano - Menu Digitale Vai alla Header ",
+            "name": "MORETTI",
             "section": "",
             "price": 3.0
           }
@@ -9712,33 +9067,9 @@
         ],
         "items": [
           {
-            "name": "SAPONE IN BOTTIGLIA HEINEKEN 3€ BECKS 3€ MESSINA 3,5€ CORONA 3,5€ MORETTI 3€ MEN",
-            "section": "",
-            "price": 3.0
-          }
-        ],
-        "min_price": 3.0
-      },
-      {
-        "venue_name": "Sui Generis",
-        "address": "Via Panfilo Castaldi 31 20124.0",
-        "lat": 45.4763158,
-        "lng": 9.2040763,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
             "name": "MORETTI",
             "section": "",
             "price": 3.0
-          },
-          {
-            "name": "Drink Menu - Sui Generis Street&Cocktail Bar Milano Home Menu il nostro Staff Co",
-            "section": "",
-            "price": 3.5
           }
         ],
         "min_price": 3.0
@@ -10004,7 +9335,7 @@
         "min_price": 2.0
       },
       {
-        "venue_name": "suigeneris.bar",
+        "venue_name": "Sui Generis",
         "address": "Via Panfilo Castaldi 31 20124.0",
         "lat": 45.4763158,
         "lng": 9.2040763,
@@ -10015,7 +9346,7 @@
         ],
         "items": [
           {
-            "name": "SAPONE IN BOTTIGLIA HEINEKEN 3€ BECKS 3€ MESSINA 3,5€ CORONA 3,5€ MORETTI 3€ MEN",
+            "name": "HEINEKEN",
             "section": "",
             "price": 3.0
           }
@@ -10023,7 +9354,7 @@
         "min_price": 3.0
       },
       {
-        "venue_name": "Sui Generis",
+        "venue_name": "suigeneris.bar",
         "address": "Via Panfilo Castaldi 31 20124.0",
         "lat": 45.4763158,
         "lng": 9.2040763,
@@ -10304,7 +9635,7 @@
   "beer_peroni": {
     "code": "beer_peroni",
     "label": "Peroni/Nastro Azzurro",
-    "count": 15,
+    "count": 13,
     "venues": [
       {
         "venue_name": "L'Isola di Aurora",
@@ -10372,25 +9703,6 @@
           }
         ],
         "min_price": 3.0
-      },
-      {
-        "venue_name": "B Cafè",
-        "address": "Via San Maurilio 20",
-        "lat": 45.4626154,
-        "lng": 9.1834537,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menu Food | Cafe | B Family Group B Cafe About Cocktail Bar Menu Food contatti B",
-            "section": "",
-            "price": 3.5
-          }
-        ],
-        "min_price": 3.5
       },
       {
         "venue_name": "La Vineria in Ripa",
@@ -10492,25 +9804,6 @@
           }
         ],
         "min_price": 4.0
-      },
-      {
-        "venue_name": "The Saints and the Scholars",
-        "address": "Via Giuseppe Govone, 23, Milano, MI, Italia",
-        "lat": 45.4890912,
-        "lng": 9.167452,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Menu - The Saints and the Scholars Home Menu Contatti Menu Home / Menu Menu Snac",
-            "section": "",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
       },
       {
         "venue_name": "Santo Taco",
@@ -10631,7 +9924,7 @@
   "wine_glass": {
     "code": "wine_glass",
     "label": "Vino al Calice",
-    "count": 23,
+    "count": 24,
     "venues": [
       {
         "venue_name": "Lo Stacco Disco & Restaurant",
@@ -10856,6 +10149,25 @@
           }
         ],
         "min_price": 5.0
+      },
+      {
+        "venue_name": "labirrofila.com",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Extra Dry CALICE BOTTIGLIA 6,00 € 20,00 € Vino bianco chiedi allo staff CALICE B",
+            "section": "",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
       },
       {
         "venue_name": "Refeel",
@@ -11130,7 +10442,7 @@
   "prosecco_glass": {
     "code": "prosecco_glass",
     "label": "Prosecco Calice",
-    "count": 22,
+    "count": 16,
     "venues": [
       {
         "venue_name": "Bar Taita",
@@ -11435,127 +10747,13 @@
           }
         ],
         "min_price": 12.0
-      },
-      {
-        "venue_name": "Pollicino",
-        "address": "",
-        "lat": 45.542507,
-        "lng": 9.187448,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "Prosecco Gran Cuvée",
-            "section": "Alta Fermentazione",
-            "price": 22.0
-          }
-        ],
-        "min_price": 22.0
-      },
-      {
-        "venue_name": "La Cantinetta",
-        "address": "VIALE MONZA 58",
-        "lat": 45.493632,
-        "lng": 9.219177,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "Prosecco di Valdobbiadene Varaschin",
-            "section": "Menu",
-            "price": 25.0
-          }
-        ],
-        "min_price": 25.0
-      },
-      {
-        "venue_name": "Barghilè",
-        "address": "Via DE MARCHI EMILIO 3",
-        "lat": 45.497862,
-        "lng": 9.20799,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "PROSECCO",
-            "section": "Menu",
-            "price": 25.0
-          }
-        ],
-        "min_price": 25.0
-      },
-      {
-        "venue_name": "Officina della Birra",
-        "address": "",
-        "lat": 45.536514,
-        "lng": 9.198098,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "PROSECCO BOTTIGLIA",
-            "section": "Bollicine",
-            "price": 25.0
-          }
-        ],
-        "min_price": 25.0
-      },
-      {
-        "venue_name": "Piccolo Bar",
-        "address": "Via Venti Settembre 93",
-        "lat": 45.532707,
-        "lng": 9.22493,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "PROSECCO D.O.C.G.",
-            "section": "Menu",
-            "price": 26.0
-          }
-        ],
-        "min_price": 26.0
-      },
-      {
-        "venue_name": "Luma",
-        "address": "Via Pietro Borsieri 39",
-        "lat": 45.48957,
-        "lng": 9.188891,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "PROSECCO VALDOBBIADENE DOCG Bottiglia",
-            "section": "Bollicine",
-            "price": 35.0
-          }
-        ],
-        "min_price": 35.0
       }
     ]
   },
   "espresso": {
     "code": "espresso",
     "label": "Caffe",
-    "count": 54,
+    "count": 50,
     "venues": [
       {
         "venue_name": "Barz'8 Coffee drink e food",
@@ -11932,11 +11130,6 @@
             "name": "Espresso € 1,20",
             "section": "Menu",
             "price": 2.2
-          },
-          {
-            "name": "Espresso € 1,20",
-            "section": "Menu",
-            "price": 4.5
           }
         ],
         "min_price": 1.2
@@ -12329,35 +11522,6 @@
             "name": "Caffè",
             "section": "Menu",
             "price": 2.0
-          },
-          {
-            "name": "Caffè corretto",
-            "section": "Menu",
-            "price": 3.5
-          },
-          {
-            "name": "Affogato al caffè",
-            "section": "Menu",
-            "price": 6.5
-          }
-        ],
-        "min_price": 2.0
-      },
-      {
-        "venue_name": "BPIÚ 1986",
-        "address": "Via Aldo Moro 31",
-        "lat": 45.416325,
-        "lng": 9.124544,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "web_extract"
-        ],
-        "items": [
-          {
-            "name": "AFFOGATO CAFFE'",
-            "section": "Menu",
-            "price": 2.0
           }
         ],
         "min_price": 2.0
@@ -12415,11 +11579,6 @@
             "name": "Caffè macchiato Miscela d’oro (ME)",
             "section": "Caffetteria",
             "price": 2.2
-          },
-          {
-            "name": "Caffè corretto grappa morbida",
-            "section": "Caffetteria",
-            "price": 3.9
           }
         ],
         "min_price": 2.2
@@ -12439,11 +11598,6 @@
             "name": "Caffè",
             "section": "BEVANDE",
             "price": 2.5
-          },
-          {
-            "name": "Tronchetto di cervo con terra autunnale al caffè e cioccolato amaro, funghi, fondo bruno",
-            "section": "SECONDI PIATTI",
-            "price": 36.0
           }
         ],
         "min_price": 2.5
@@ -12583,11 +11737,6 @@
             "name": "Espresso doppio",
             "section": "Menu",
             "price": 3.0
-          },
-          {
-            "name": "caffe freddo",
-            "section": "Menu",
-            "price": 5.0
           }
         ],
         "min_price": 2.5
@@ -12650,11 +11799,6 @@
             "name": "Caffè/Americano",
             "section": "Caffetteria",
             "price": 3.0
-          },
-          {
-            "name": "Caffè mixed iced",
-            "section": "Caffetteria",
-            "price": 6.0
           }
         ],
         "min_price": 3.0
@@ -12715,63 +11859,6 @@
           }
         ],
         "min_price": 4.0
-      },
-      {
-        "venue_name": "Illy - Milano Montenapoleone",
-        "address": "Via Monte Napoleone, 19, 20121 Milano, MI, Italia",
-        "lat": 45.4685852,
-        "lng": 9.1944774,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "mycia"
-        ],
-        "items": [
-          {
-            "name": "Espresso illy Classico",
-            "section": "CAFFETTERIA /-/ CAFFÈ IN PUREZZA",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "FOD",
-        "address": "Via Paolo Sarpi, 53, Milano, Italia",
-        "lat": 45.480983,
-        "lng": 9.173182,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "ESPRESSO MARTINI",
-            "section": "",
-            "price": 6.0
-          }
-        ],
-        "min_price": 6.0
-      },
-      {
-        "venue_name": "SWAMI - MILANO",
-        "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.469581,
-        "lng": 9.18529,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Espresso Martini",
-            "section": "",
-            "price": 10.0
-          }
-        ],
-        "min_price": 10.0
       }
     ]
   },
@@ -12938,16 +12025,6 @@
             "name": "Oreo Ice Cappuccino (1,7)  € 6,50",
             "section": "Menu",
             "price": 1.7
-          },
-          {
-            "name": "Chocolate Ice Cappuccino (7) € 6,50",
-            "section": "Menu",
-            "price": 6.5
-          },
-          {
-            "name": "Pistacchio Ice Cappuccino (7,8) € 6,50",
-            "section": "Menu",
-            "price": 7.8
           }
         ],
         "min_price": 1.7
@@ -13397,7 +12474,7 @@
   "soft_drink": {
     "code": "soft_drink",
     "label": "Bibita",
-    "count": 43,
+    "count": 41,
     "venues": [
       {
         "venue_name": "TYPE",
@@ -13791,25 +12868,6 @@
         "min_price": 3.7
       },
       {
-        "venue_name": "Le Bistrot",
-        "address": "",
-        "lat": 45.419504,
-        "lng": 9.060674,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "• Coca Cola/ Fanta 33cl 4€",
-            "section": "",
-            "price": 4.0
-          }
-        ],
-        "min_price": 4.0
-      },
-      {
         "venue_name": "Norin Caffè Bistrot",
         "address": "",
         "lat": 45.4642,
@@ -13848,11 +12906,6 @@
             "name": "COCA COLA",
             "section": "",
             "price": 6.0
-          },
-          {
-            "name": "COCA COLA",
-            "section": "",
-            "price": 15.0
           }
         ],
         "min_price": 4.0
@@ -13872,11 +12925,6 @@
             "name": "Coca / Coca zero",
             "section": "",
             "price": 4.0
-          },
-          {
-            "name": "Whisky e Coca",
-            "section": "",
-            "price": 8.0
           }
         ],
         "min_price": 4.0
@@ -14123,69 +13171,28 @@
             "name": "TACO STAND - West Coast Pils 5.4% LATTINA 440 ml - Prod. ALDER [44 cl]",
             "section": "Lager | Pils | Keller Bassa Fermantazione",
             "price": 7.0
-          },
-          {
-            "name": "Manchester Bitter 50 Cl. (lattina) Prod: Marble Beers Paese: Inghilterra Stile: Bitter Gusto: Amaro Alcol: 4,20% Colore: Bionda [50 cl]",
-            "section": "Ale Birre Alta Fermentazione",
-            "price": 7.2
-          },
-          {
-            "name": "Ultima Cena 33 Cl. Tipologia: Lattina Birrificio: Birrificio War Paese: Italia Stile: Imperial-Double IPA Grado Alcolico: 9,90% Gusto: Amaro Colore: Bionda [33cl]",
-            "section": "IPA alta fermentazione",
-            "price": 7.4
-          },
-          {
-            "name": "Crazy Sister NEIPA 44 Cl. Tipologia: Lattina Birrificio: Reservoir Dogs Paese: Slovenia Stile: NEIPA Grado Alcolico: 6,50% Gusto: Amaro Colore: Ambrata [44CL]",
-            "section": "IPA alta fermentazione",
-            "price": 7.5
-          },
-          {
-            "name": "Time And Space 44 Cl. (lattina) Prod: Wild Raccoon Paese: Italia Stile: Imperial-Double IPA Gusto: Amaro Alcol: 8,00% Colore: Bionda [44 cl]",
-            "section": "IPA alta fermentazione",
-            "price": 7.8
-          },
-          {
-            "name": "Pumm DDH West Coast Double Ipa 8,0% Lattina 440 cl [44 cl]",
-            "section": "IPA alta fermentazione",
-            "price": 8.0
-          },
-          {
-            "name": "Cronos And the Infinite Hoppiness 44 Cl. Tipologia: Lattina Birrificio: Mogwai Beer Company Paese: Francia Stile: Imperial-Double IPA Grado Alcolico: 9,00% Gusto: Amaro Colore: Bionda [44cl]",
-            "section": "IPA alta fermentazione",
-            "price": 8.5
-          },
-          {
-            "name": "Pixel Art Is Not A Crime 44 Cl. Tipologia: Lattina Birrificio: Mogwai Beer Company Paese: Francia Stile: Imperial-Double IPA Grado Alcolico: 8,60% Gusto: Amaro Colore: Bionda [44cl]",
-            "section": "IPA alta fermentazione",
-            "price": 8.8
-          },
-          {
-            "name": "Purple Palms 44 Cl. (lattina) STILE : GOSE PROFUMO: FRUTTI SCURI INTENSI GUSTO: FRUTTA SUCCA E UN TOCCO DI SALE FINALE: PICCANTE ALC: 4,8% - 440 ml [44 cl]",
-            "section": "Blanche | Gose | Weiss I Berliner Weiss Bassa Fermentazione",
-            "price": 9.0
-          },
-          {
-            "name": "Konn DIPA 44 Cl. (lattina) Birrificio: Pohjala Paese: Estonia Stile: Imperial-Double IPA Grado Alcolico: 8,00% Gusto: Amaro Colore: Bionda 23/12/2026 [44 cl]",
-            "section": "IPA alta fermentazione",
-            "price": 9.5
-          },
-          {
-            "name": "Message In A Barrel 44 Cl. Tipologia: Lattina Birrificio: Mogwai Beer Company Paese: Francia Stile: Barley Wine Grado Alcolico: 11,90% Gusto: Dolce Colore: Scura [44cl]",
-            "section": "BARLEY WINE | IGA | Alta Fermentazione",
-            "price": 11.0
-          },
-          {
-            "name": "White Velvet 44 Cl. (lattina) Birrificio: Vault City Paese: Scozia Stile: Sour-Wild Ale Grado Alcolico: 6,00% Gusto: Acidulo Colore: Bianca [44 cl]",
-            "section": "LAMBIC GEUZE SOUR E WILD ALE",
-            "price": 12.5
-          },
-          {
-            "name": "BAR ALDER Breakfast Stout 9.2% LATTINA 440 ml [44 cl]",
-            "section": "MEDITAZIONE STOUT E PORTER | Alta Fermentazione",
-            "price": 14.0
           }
         ],
         "min_price": 4.7
+      },
+      {
+        "venue_name": "Caffefernanda",
+        "address": "",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "direct_website"
+        ],
+        "items": [
+          {
+            "name": "Soft Drinks Coca Cola 0,33 l €5,00 Coca Cola Zero 0,33 l €5,00 Fanta 0,33 l €5,0",
+            "section": "",
+            "price": 5.0
+          }
+        ],
+        "min_price": 5.0
       },
       {
         "venue_name": "Caffè Fernanda",
@@ -14257,25 +13264,6 @@
         "items": [
           {
             "name": "COCA COLA",
-            "section": "",
-            "price": 5.0
-          }
-        ],
-        "min_price": 5.0
-      },
-      {
-        "venue_name": "Caffefernanda",
-        "address": "",
-        "lat": 45.4642,
-        "lng": 9.19,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "direct_website"
-        ],
-        "items": [
-          {
-            "name": "Coca Cola 0,33 l",
             "section": "",
             "price": 5.0
           }
@@ -14376,25 +13364,6 @@
           }
         ],
         "min_price": 6.0
-      },
-      {
-        "venue_name": "SWAMI - MILANO",
-        "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
-        "lat": 45.469581,
-        "lng": 9.18529,
-        "price_tier": "",
-        "categories": "",
-        "sources": [
-          "leggimenu"
-        ],
-        "items": [
-          {
-            "name": "Amuerte Coca Nera",
-            "section": "",
-            "price": 12.0
-          }
-        ],
-        "min_price": 12.0
       }
     ]
   },
@@ -14483,7 +13452,6 @@
         "price_tier": "",
         "categories": "",
         "sources": [
-          "direct_website",
           "web_extract"
         ],
         "items": [
@@ -14491,11 +13459,6 @@
             "name": "• Acqua",
             "section": "Menu",
             "price": 0.75
-          },
-          {
-            "name": "• Acqua 0,75cl Pana/San Pelegrino 3€",
-            "section": "",
-            "price": 3.0
           }
         ],
         "min_price": 0.75
@@ -15597,7 +14560,7 @@
   "custom_cocktail": {
     "code": "custom_cocktail",
     "label": "Cocktail Custom",
-    "count": 4,
+    "count": 7,
     "venues": [
       {
         "venue_name": "Caffè Inn International Bistrot",
@@ -15617,6 +14580,63 @@
           }
         ],
         "min_price": 6.0
+      },
+      {
+        "venue_name": "FOD",
+        "address": "Via Paolo Sarpi, 53, Milano, Italia",
+        "lat": 45.480983,
+        "lng": 9.173182,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "leggimenu"
+        ],
+        "items": [
+          {
+            "name": "ESPRESSO MARTINI",
+            "section": "",
+            "price": 6.0
+          }
+        ],
+        "min_price": 6.0
+      },
+      {
+        "venue_name": "La Cantinetta",
+        "address": "VIALE MONZA 58",
+        "lat": 45.493632,
+        "lng": 9.219177,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "web_extract"
+        ],
+        "items": [
+          {
+            "name": "Affogato al caffè",
+            "section": "Menu",
+            "price": 6.5
+          }
+        ],
+        "min_price": 6.5
+      },
+      {
+        "venue_name": "SWAMI - MILANO",
+        "address": "Via Ponte Vetero, 14, 20121 Milano Milano, Italia",
+        "lat": 45.469581,
+        "lng": 9.18529,
+        "price_tier": "",
+        "categories": "",
+        "sources": [
+          "leggimenu"
+        ],
+        "items": [
+          {
+            "name": "Espresso Martini",
+            "section": "",
+            "price": 10.0
+          }
+        ],
+        "min_price": 10.0
       },
       {
         "venue_name": "Cinc Food & Drinks",

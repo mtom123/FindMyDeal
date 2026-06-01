@@ -212,6 +212,114 @@ def remap_mycia_items(path: Path) -> list[dict]:
 # MAIN MERGE
 # ─────────────────────────────────────────────
 
+def clean_item_product(item: dict) -> tuple[str, str]:
+    """
+    Audit/cleanup per item:
+    - Reclassifica/rimuove falsi positivi (coffee_americano, espresso_martini, prosecco_bottiglia, ecc)
+    - Filtra noise nei nomi
+    Returns: (corrected_product, reason_if_skipped) — se reason!=None, item DA SCARTARE
+    """
+    prod = (item.get("normalized_product","") or "").strip()
+    name = (item.get("item_name","") or "")
+    desc = (item.get("item_description","") or "")
+    try: price = float(item.get("normalized_price_eur", 0) or 0)
+    except: price = 0
+    text = (name + ' ' + desc).lower()
+    name_lower = name.lower()
+    name_upper = name.upper()
+
+    # 1. PRODUCT FIXES (modifica normalized_product)
+    # 1a. Coffee classificato come americano cocktail
+    if prod == 'americano':
+        if 'caff' in name_lower and price < 4:
+            return '', None  # clear product, but tieni item (sara' espresso)
+        if 'caff' in name_lower and price < 5:
+            # ambiguo - se "caffè americano" è esplicito, non è cocktail
+            if re.search(r'caff[eè]\s*americano', name_lower):
+                return '', None
+    # 1b. Espresso classificato male
+    if prod == 'espresso':
+        if re.search(r'\b(martini|cocktail|affogato|mixed)\b', name_lower):
+            return 'custom_cocktail', None
+        if 'corretto' in name_lower and price > 3:
+            return '', None  # caffè corretto è espresso ma sopra range
+    # 1c. Prosecco glass quando è bottiglia
+    if prod == 'prosecco_glass':
+        if re.search(r'\bbottiglia\b', name_lower) and price > 15:
+            return None, 'PROSECCO_BOTTIGLIA'  # SKIP item
+        if price > 15:
+            return None, 'PROSECCO_GLASS_TOO_HIGH'  # SKIP (likely bottiglia)
+    # 1d. Beer Moretti = Vittorio Moretti (Franciacorta)
+    if prod == 'beer_moretti':
+        if re.search(r'\bvittorio\b|\briserva\b|\bextra\s*brut\b|\bbrut\b|\bspumante\b', name_lower):
+            return None, 'MORETTI_SPUMANTE'
+    # 1e. Beer bottle ma è vino o food
+    if prod == 'beer_bottle':
+        if re.search(r'\b(vino|valpolicella|barolo|chianti|antipasto|ripasso|riserva)\b', name_lower):
+            return None, 'BEER_BOTTLE_IS_FOOD_OR_WINE'
+    # 1f. Mojito che è Bloody Mary
+    if prod == 'mojito':
+        if 'bloody mary' in name_lower or ('licorice' in name_lower and 'mary' in name_lower):
+            return None, 'MOJITO_IS_BLOODY_MARY'
+    # 1g. Margarita caraffa (pitcher) — fuori scope confronto singolo
+    if prod == 'margarita':
+        if 'caraffa' in name_lower or 'pitcher' in name_lower or price > 30:
+            return None, 'MARGARITA_CARAFFA'
+    # 1h. Spritz mismatch -> soft_drink/wine_glass
+    if prod == 'spritz':
+        # "Soft drinks coca cola..." → soft_drink
+        if re.search(r'\b(coca\s*cola|fanta|sprite|soft\s*drinks?)\b', name_lower) and 'spritz' not in name_lower:
+            return 'soft_drink', None
+        # "Calice bianco/rosso" / "vino bianco/rosso" → wine_glass
+        if re.search(r'\b(calice|vino\s+(?:bianco|rosso|al\s+calice))\b', name_lower) and 'spritz' not in name_lower:
+            return 'wine_glass', None
+        # "Birra alla spina" / "Birra X" → beer_*
+        if re.search(r'\bbirra\b', name_lower) and 'spritz' not in name_lower:
+            return None, 'SPRITZ_IS_BEER'
+        # "Caffè/Espresso/Cappuccino" → espresso
+        if re.search(r'\b(caff[eè]|espresso|cappuccino)\b', name_lower) and 'spritz' not in name_lower:
+            return None, 'SPRITZ_IS_COFFEE'
+
+    # 2. NAME NOISE FILTERS (skippa item)
+    NOISE_PATTERNS = [
+        r'menu\s*[-–]\s*',
+        r'salta\s+al\s+contenuto',
+        r'menu\s+digitale',
+        r'vai\s+alla\s+(header|footer)',
+        r'#8211|#8217|&nbsp;',
+        r'^\s*(home|contatti|chi\s+siamo|menu)\s*$',
+        r'\bmail\s+us\b',
+        r'@\w+\.\w+',  # email address
+        r'\bwhere:\s*\w+',  # "where: duomo via torino"
+        r'^\s*[\W\d]+\s*[A-Z]+[\W\d]+',  # "9€18€12€SANGRIA" parser concat
+    ]
+    for p in NOISE_PATTERNS:
+        if re.search(p, name_lower, re.I):
+            return None, 'NAME_NOISE'
+    # 5+ euro symbols nel nome = parser concat fail
+    if name.count('€') >= 4:
+        return None, 'NAME_MULTI_EURO_CONCAT'
+
+    # 3. ITEM_NAME parser noise: page-title HTML estratto come item
+    if len(name) > 50:
+        nav_kw = ['home', 'chi siamo', 'contatti', 'footer', 'header', 'navigation',
+                  'salta al contenuto', 'toggle navigation', 'mail us', 'team news',
+                  'about chef', 'seleziona una pagina', 'leggi il menu digitale',
+                  'menu prenotazioni', 'instagram facebook']
+        nav_hits = sum(1 for kw in nav_kw if kw in name_lower)
+        if nav_hits >= 2:
+            return None, 'NAME_PARSER_NOISE'
+        # 'menu' + altri 2 marker = page nav
+        if 'menu' in name_lower and nav_hits >= 1:
+            return None, 'NAME_PARSER_NOISE'
+
+    # 4. ITEM_NAME troppo lungo + page-like (single marker)
+    if len(name) > 100 and re.search(r'\b(home|menu|chi\s+siamo|contatti|footer|header)\b', name_lower):
+        return None, 'NAME_TOO_LONG_PAGE'
+
+    return prod, None  # OK, mantiene il prodotto (anche se invariato)
+
+
 def is_milan_or_unknown(addr: str) -> bool:
     """
     Filtro città: True se address è plausibilmente Milano o se non c'è CAP.
@@ -297,6 +405,7 @@ def main():
     if city_skipped_venues:
         print(f"  -> {city_skipped_venues} venues skipped (CAP non-Milano)")
 
+    cleanup_skipped = Counter()
     for ifile in sorted(RAW_DIR.glob("*_menu_items.csv")):
         if any(ifile.name.startswith(p) for p in BEACH_FILES):
             continue
@@ -325,6 +434,13 @@ def main():
             # Filtro: skippa items di venues bloccate per CAP
             if row.get('source_venue_id','') in city_blocked_ids:
                 continue
+            # AUDIT v2: clean product + skip noise
+            corrected_prod, skip_reason = clean_item_product(row)
+            if skip_reason:
+                cleanup_skipped[skip_reason] += 1
+                continue
+            if corrected_prod != row.get('normalized_product',''):
+                row['normalized_product'] = corrected_prod
             valid_rows.append(row)
         all_items.extend(valid_rows)
         print(f"  {ifile.name}: {len(valid_rows)} valid / {len(rows)} total ({warn_count} warnings)")
@@ -332,6 +448,8 @@ def main():
 
     if nav_skipped:
         print(f"  -> {nav_skipped} items skipped (HTML navigation markers)")
+    if cleanup_skipped:
+        print(f"  -> AUDIT cleanup skip: {dict(cleanup_skipped)}")
 
     print(f"\nTotale grezzo: {len(all_venues)} venues, {len(all_items)} items")
     print(f"Fonti: {set(sources_found)}\n")
@@ -534,13 +652,47 @@ def main():
         w.writerows(dedup_items)
 
     # ── 7. Build unified_prices.csv (product-centric) ──
-    # Only items with geo + normalized_product + price
-    price_rows = [
-        i for i in dedup_items
-        if i["normalized_product"]
-        and i["latitude"]
-        and i["price_eur"] > 0
-    ]
+    # Only items with geo + normalized_product + price + range plausibile
+    PRICE_RANGES = {
+        'spritz':            (3.0, 22.0),
+        'negroni':           (4.0, 25.0),
+        'americano':         (4.0, 18.0),
+        'gin_tonic':         (5.0, 22.0),
+        'mojito':            (5.0, 22.0),
+        'moscow_mule':       (5.0, 20.0),
+        'margarita':         (5.0, 25.0),
+        'daiquiri':          (6.0, 22.0),
+        'manhattan':         (7.0, 25.0),
+        'custom_cocktail':   (5.0, 30.0),
+        'beer_draft_small':  (2.0, 8.0),
+        'beer_draft_medium': (3.0, 12.0),
+        'beer_bottle':       (2.0, 14.0),
+        'beer_moretti':      (2.0, 8.0),
+        'beer_heineken':     (2.0, 8.0),
+        'beer_peroni':       (2.0, 8.0),
+        'wine_glass':        (3.0, 15.0),
+        'prosecco_glass':    (3.0, 14.0),
+        'espresso':          (0.8, 4.0),
+        'cappuccino':        (1.2, 5.5),
+        'soft_drink':        (1.0, 7.0),
+        'water':             (0.5, 5.0),
+    }
+    price_rows = []
+    range_skipped = Counter()
+    for i in dedup_items:
+        prod = i["normalized_product"]
+        if not prod or not i["latitude"] or i["price_eur"] <= 0:
+            continue
+        if prod in PRICE_RANGES:
+            lo, hi = PRICE_RANGES[prod]
+            if i["price_eur"] < lo or i["price_eur"] > hi:
+                range_skipped[prod] += 1
+                continue
+        price_rows.append(i)
+
+    if range_skipped:
+        print(f"Price points skipped per range: {dict(range_skipped)}")
+        report_lines.append(f"Price-range filter: {dict(range_skipped)}")
 
     def prod_order(p):
         try: return PRODUCT_ORDER.index(p)
