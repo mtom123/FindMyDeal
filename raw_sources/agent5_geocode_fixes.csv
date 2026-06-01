@@ -1,0 +1,20 @@
+﻿venue_name,old_lat,old_lng,new_lat,new_lng,matched,method
+Eatme&Go,45.4642,9.1900,45.460946,9.184686,"Eatme&Go, 49, Via Torino, Cinque Vie, Cerchia dei Navigli, M",nominatim_name
+Norin Caffè Bistrot,45.4642,9.1900,45.485143,9.198722,"Norin Caffè Bistrot, 33, Via Gustavo Fara, GARIBALDI REPUBBL",nominatim_name
+Barcollando,45.4642,9.1900,45.460243,9.176799,"Barcollando, 6, Via Francesco Novati, Circo, Cerchia dei Nav",nominatim_name
+Caffè Fernanda,45.4642,9.1900,45.4722,9.188287,"Caffè Fernanda, 28, Via Brera, Borgonuovo, Cerchia dei Navig",nominatim_name
+Garden Caffè,45.4642,9.1900,45.4593,9.168387,"Garden Caffè, 4, Via Servio Tullio, Magenta - San Vittore, M",nominatim_name
+Santeria Toscana 31,45.4642,9.1900,45.445641,9.18835,"Santeria Toscana 31, 31, Viale Toscana, Morivione, Vigentina",nominatim_name
+Caffè Inn,45.4642,9.1900,45.452162,9.203195,"Caffè Inn, 3, Piazzale Medaglie d'Oro, Porta Romana, Municip",nominatim_name
+La Corte di Montenapoleone,45.4642,9.1900,45.469509,9.195025,"La Corte di Montenapoleone, 10, Via Santo Spirito, Borgonuov",nominatim_name
+carico.io,45.4642,9.1900,45.456102,9.170158,"Carico, 1, Via Savona, Navigli, Municipio 6, Milano, Rodano,",nominatim_name
+The Growler Milano,45.4642,9.1900,45.457975,9.162193,"The Growler Milano, 12, Via del Caravaggio, Tortona, Municip",nominatim_name
+Victoriasclub,45.4642,,45.491086,9.239225,"Via Feltre 30, Milano",websearch_addr+nominatim
+tardispubmilano.it,45.4642,,45.523807,9.192576,"Via Ornato 134, Milano",websearch_addr+nominatim
+labirrofila.com,45.4642,,45.43821,9.184584,"Via Sant'Ampellio 14, Milano",websearch_addr+nominatim
+Floraetlabora,45.4642,,45.44951,9.177219,"Alzaia Naviglio Pavese 20, Milano",websearch_addr+nominatim
+Lucaeandreabar,45.4642,,45.451519,9.172851,"Alzaia Naviglio Grande 34, Milano",websearch_addr+nominatim
+Armanisilos,45.4642,,45.451408,9.164975,"Via Bergognone 40, Milano",websearch_addr+nominatim
+Eatmeandgo,45.4642,,45.460946,9.184686,= Eatme&Go,duplicate
+Caffefernanda,45.4642,,45.4722,9.188287,= Caffè Fernanda,duplicate
+Caffè Inn International Bi,45.4642,,45.452162,9.203195,= Caffè Inn,duplicate

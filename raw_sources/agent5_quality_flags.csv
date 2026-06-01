@@ -1,0 +1,14 @@
+﻿normalized_product,price_eur,band_min,band_max,flag,venue_name,item_name,source_platform,recommended_action,reason,source_url
+spritz,3.5,4,18,LOW,BAR PICCHIO,Aperol Spritz,mycia,REVIEW,prezzo sotto banda (possibile componente/altro formato),https://www.mycia.it/menu/milano/bar-picchio-sw4iKzwlv
+spritz,19.0,4,18,HIGH,Morgante cocktail & soul,"Frenesia dei navigli Lungo il Naviglo Grande, passato lo storico lavatoio del Vi",direct_website,REVIEW,prezzo sopra banda (premium o errore — verificare),https://www.morgantecocktail.com/
+spritz,19.0,4,18,HIGH,SPRITZ NAVIGLI MILANO,CAMPARI SPRITZ — MAXI,leggimenu,EXCLUDE,formato maxi/multi-porzione,https://www.leggimenu.it/menu/spritznaviglimilano/130993
+spritz,20.0,4,18,HIGH,Barcollando,"Barcollando – Milano – Your best alternative Via Francesco Novati, 6, 20123 Mila",direct_website,REVIEW,prezzo sopra banda (premium o errore — verificare),https://www.barcollandocafe.it/
+spritz,20.0,4,18,HIGH,SPRITZ NAVIGLI MILANO,SPRITZ CLASSICI,leggimenu,REVIEW,prezzo sopra banda (premium o errore — verificare),https://www.leggimenu.it/menu/spritznaviglimilano/141426
+negroni,5.0,6,22,LOW,Caffefernanda,"Soft Drinks Coca Cola 0,33 l €5,00 Coca Cola Zero 0,33 l €5,00 Fanta 0,33 l €5,0",direct_website,EXCLUDE,testo pagina/altro prodotto,https://www.caffefernanda.com/menu/
+negroni,25.0,6,22,HIGH,LiQUIDO Rooftop Bar,Negroni Experience,leggimenu,REVIEW,prezzo sopra banda (premium o errore — verificare),https://www.leggimenu.it/menu/liquido/177831
+gin_tonic,21.0,5,20,HIGH,La Terrazza Aperol,GIN TONIC SELECTION,direct_website,REVIEW,prezzo sopra banda (premium o errore — verificare),https://ilmercatodelduomo.it/wp-content/uploads/TerrazzaAperol_FOOD_DRINK_2025.pdf
+mojito,19.0,5,18,HIGH,SPRITZ NAVIGLI MILANO,BLACK MOJITO — MAXI,leggimenu,EXCLUDE,formato maxi/multi-porzione,https://www.leggimenu.it/menu/spritznaviglimilano/131002
+beer_bottle,2.0,2.5,15,LOW,L'Isola di Aurora,Ichnusa,leggimenu,REVIEW,prezzo sotto banda (possibile componente/altro formato),https://www.leggimenu.it/menu/lisoladiaurorait/87384
+espresso,4.0,0.8,3.5,HIGH,Ceresio 7,Caffè,mycia,REVIEW,prezzo sopra banda (premium o errore — verificare),https://www.mycia.it/menu/milano/ceresio-7-61a2d41c6
+espresso,4.0,0.8,3.5,HIGH,Oysteroom,Caffè e latte,mycia,EXCLUDE,"food/altro, non espresso",https://www.mycia.it/menu/milano/oysteroom-JQYXLx6r2
+soft_drink,1.0,1.5,10,LOW,TYPE,Acqua in lattina San Benedetto 33cl,leggimenu,REVIEW,prezzo sotto banda (possibile componente/altro formato),https://www.leggimenu.it/menu/typeday/168297

@@ -1,0 +1,12 @@
+﻿venue_name,eatbu_url,note,status
+Amami,https://amami.eatbu.com/,"cocktail bar, Arco della Pace",discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+NICE CAFE',https://nicecafe.eatbu.com/,aperitivo 18-21,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+Wave Cocktail Bar,https://wavecocktailbar.eatbu.com/,cocktail bar,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+MOSCOVA 22,https://moscova-22.eatbu.com/,cocktail bar,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+ALKEMIA,https://alkemia-milano.eatbu.com/,lounge bar aperitivo,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+BOND MILANO,https://bondmilano.eatbu.com/,bar,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+drinc. different.,https://drincdifferent.eatbu.com/,cocktail (verif. vs Drinc mycia),discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+Bar Miro,https://bar-miro-bistro.eatbu.com/,bar bistro,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+Bootleg Pub,https://bootlegpub.eatbu.com/,pub birra,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+ITTOLITTOS,https://ittolittos.eatbu.com/,pub craft beer,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
+UNPLUG,https://unplug.eatbu.com/,craft beer taproom Porta Romana,discovered_NOT_scraped (prezzi via XHR/JS — serve metodo eatbu)
