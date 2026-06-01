@@ -1022,6 +1022,8 @@ input[type=range].sb-range::-moz-range-thumb {
   <!-- RADIUS BAR -->
   <div id="rbar">
     <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:4px;">≡</button>
+    <div class="rb-divider"></div>
+    <button class="rb-reset" id="zones-btn" onclick="toggleZones()" style="display:block;">◻ Show zones</button>
     <div class="rb-divider" id="reset-div" style="display:none;"></div>
     <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset view</button>
   </div>
@@ -1210,10 +1212,11 @@ const S = {
   map:         null,
   sbOpen:      true,
   mobSheetUp:  false,
-  mapLocked:   false,          // Feature 2: lock map on manual move
-  searchCenter: null,          // Feature 1 & 3: { lat, lng, label }
-  zoneCoverage: {},            // Feature 6: Milan zone data
-  activeCategory: null,        // Feature 5
+  mapLocked:    false,
+  searchCenter: null,
+  zoneCoverage: {},
+  activeCategory: null,
+  zonesVisible: false,
   geo: {
     lat:    null,
     lng:    null,
@@ -1237,15 +1240,26 @@ const CATEGORIES = {
    MILAN ZONES (Feature 6)
 ─────────────────────────────────────────── */
 const MILAN_ZONES = {
-  navigli:       { name: 'Navigli',       bounds: [[45.444, 9.155], [45.458, 9.180]] },
-  isola:         { name: 'Isola',         bounds: [[45.481, 9.182], [45.492, 9.200]] },
-  porta_venezia: { name: 'Porta Venezia', bounds: [[45.464, 9.202], [45.477, 9.218]] },
-  brera:         { name: 'Brera',         bounds: [[45.468, 9.183], [45.478, 9.196]] },
-  duomo:         { name: 'Duomo',         bounds: [[45.460, 9.185], [45.468, 9.198]] },
-  citylife:      { name: 'CityLife',      bounds: [[45.472, 9.143], [45.484, 9.165]] },
-  nolo:          { name: 'NoLo',          bounds: [[45.480, 9.196], [45.492, 9.215]] },
-  porta_romana:  { name: 'Porta Romana',  bounds: [[45.447, 9.190], [45.462, 9.208]] },
-  citta_studi:   { name: 'Città Studi',   bounds: [[45.465, 9.218], [45.477, 9.240]] },
+  duomo:         { name: 'Duomo',          bounds: [[45.459, 9.183], [45.470, 9.202]] },
+  brera:         { name: 'Brera',          bounds: [[45.470, 9.183], [45.480, 9.197]] },
+  garibaldi:     { name: 'Garibaldi',      bounds: [[45.476, 9.183], [45.485, 9.202]] },
+  isola:         { name: 'Isola',          bounds: [[45.482, 9.183], [45.493, 9.202]] },
+  navigli:       { name: 'Navigli',        bounds: [[45.444, 9.157], [45.460, 9.182]] },
+  ticinese:      { name: 'Ticinese',       bounds: [[45.453, 9.176], [45.464, 9.193]] },
+  tortona:       { name: 'Tortona',        bounds: [[45.453, 9.152], [45.466, 9.174]] },
+  sempione:      { name: 'Sempione',       bounds: [[45.468, 9.152], [45.480, 9.178]] },
+  citylife:      { name: 'CityLife',       bounds: [[45.475, 9.136], [45.482, 9.150]] },
+  porta_venezia: { name: 'Porta Venezia',  bounds: [[45.463, 9.200], [45.478, 9.222]] },
+  nolo:          { name: 'NoLo',           bounds: [[45.479, 9.197], [45.493, 9.220]] },
+  loreto:        { name: 'Loreto',         bounds: [[45.474, 9.205], [45.484, 9.226]] },
+  porta_romana:  { name: 'Porta Romana',   bounds: [[45.447, 9.188], [45.462, 9.212]] },
+  citta_studi:   { name: 'Città Studi',    bounds: [[45.464, 9.218], [45.477, 9.242]] },
+  lambrate:      { name: 'Lambrate',       bounds: [[45.470, 9.228], [45.487, 9.258]] },
+  turro:         { name: 'Turro',          bounds: [[45.484, 9.206], [45.497, 9.228]] },
+  sarpi:         { name: 'Sarpi',          bounds: [[45.476, 9.170], [45.485, 9.188]] },
+  vigentino:     { name: 'Vigentino',      bounds: [[45.430, 9.174], [45.450, 9.200]] },
+  bovisa:        { name: 'Bovisa',         bounds: [[45.500, 9.152], [45.514, 9.182]] },
+  affori:        { name: 'Affori',         bounds: [[45.508, 9.164], [45.522, 9.194]] },
 };
 
 function calcZoneCoverage() {
@@ -1281,24 +1295,37 @@ function calcZoneCoverage() {
 let _zoneLayers = [];
 let _activeZoneKey = null;
 
+function toggleZones() {
+  S.zonesVisible = !S.zonesVisible;
+  const btn = document.getElementById('zones-btn');
+  if (btn) btn.textContent = S.zonesVisible ? '◼ Hide zones' : '◻ Show zones';
+  if (!S.zonesVisible) {
+    _zoneLayers.forEach(l => l.remove());
+    _zoneLayers = [];
+    _activeZoneKey = null;
+    S.map?.closePopup();
+  } else {
+    renderZones();
+  }
+}
+
 function renderZones() {
   _zoneLayers.forEach(l => l.remove());
   _zoneLayers = [];
-  if (!S.map) return;
+  if (!S.map || !S.zonesVisible) return;
 
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
     const [[s,w],[n,e]] = zone.bounds;
     const cov = S.zoneCoverage[key];
-    const hasVenues = cov && cov.venues > 0;
     const isActive = _activeZoneKey === key;
 
     const rect = L.rectangle([[s,w],[n,e]], {
-      color: hasVenues ? '#1e6639' : '#888880',
-      weight: 1.5,
-      dashArray: hasVenues ? '4 4' : '2 5',
+      color: '#1e6639',
+      weight: isActive ? 1.5 : 0,       // no border by default
+      dashArray: '4 4',
       fill: true,
-      fillColor: isActive ? '#1e6639' : '#888880',
-      fillOpacity: isActive ? 0.10 : 0,
+      fillColor: '#1e6639',
+      fillOpacity: isActive ? 0.10 : 0.001, // nearly invisible but hover-detectable
       interactive: true,
       bubblingMouseEvents: false,
     }).addTo(S.map);
@@ -1307,8 +1334,12 @@ function renderZones() {
       L.DomEvent.stopPropagation(e);
       openZonePopup(key, zone, cov, rect);
     });
-    rect.on('mouseover', () => { if (!isActive) rect.setStyle({ fillOpacity: 0.05 }); });
-    rect.on('mouseout',  () => { if (!isActive) rect.setStyle({ fillOpacity: 0 }); });
+    rect.on('mouseover', () => {
+      if (!isActive) rect.setStyle({ weight: 1, fillOpacity: 0.06, color: '#1e6639' });
+    });
+    rect.on('mouseout', () => {
+      if (!isActive) rect.setStyle({ weight: 0, fillOpacity: 0.001 });
+    });
 
     _zoneLayers.push(rect);
   });
