@@ -6,6 +6,62 @@
 
 ---
 
+## 2026-06-02 — Beach S2 + S2X merge (Peppe) + master consolidato
+
+### Input Peppe (3 sub-sessioni)
+- **S2 standard** (commit 315fc17): 8 venues nuovi, 56 items (39 direct + 16 PDF + 1 consortium), reverse geocoding parziale 300/2000
+- **S2X discovery** (562de36): sitemap spiagge.it → 6.693 URLs
+- **S2X mass extraction** (6b97a06): metadati SSR + JSON-LD su 6.686/6.693 venues (99.9% success), no Playwright richiesto
+
+### Tecniche-chiave validate
+- **spiagge.it sitemap pubblico**: 3 file XML in robots.txt → 6.693 URLs venue
+- **Next.js SSR + JSON-LD schema.org**: metadati completi nel HTML (no JS richiesto)
+- **Concurrency 16 worker + Session pool**: 25 req/s sostenuti, 8 minuti totali per 6.693 venue
+- **Zero anti-bot rilevato**: niente Datadome / Cloudflare / captcha
+- **Amenities normalizzate**: 15+ servizi vocabolario chiuso da schema.org (asset UX gold per S3)
+
+### Match algorithm S2X (consolidation)
+Per ogni venue spiagge.it match contro master S1 OSM:
+- 2.296 match geo ≤300m (stesso venue, link `master_source_venue_id`)
+- 3 match name+city fallback
+- 1.923 geo_only_name_diff (zona vicina ma venue diversi — tenuti separati)
+- **2.471 no_match completamente nuovi**
+- Totale nuovi venue prenotabili non in OSM: **4.394**
+
+### CEO action: master merge
+Eseguito `scripts/beach_master_merge.py`:
+- Base = beach_s1_venues.csv (9.252 OSM)
+- Applicati 10.223 update suggeriti (regola: popola solo campi vuoti, MAI sovrascrivere)
+  - 8.058 applicati, 2.165 skipped (campo già popolato)
+- Append 4.394 venues spiagge.it non-OSM
+- Output: `raw_sources/beach_master_venues.csv` con **13.646 venues**
+
+### Stats finali master beach
+| Metrica | S1 | S2X | Master |
+|---|---|---|---|
+| Venues | 9.252 | 6.693 | **13.646** |
+| Con geo | 9.252 | 6.682 | 13.635 (99%) |
+| Con city | 875 (9%) | 6.670 (99%) | 6.728 (49%) |
+| Con region | 0 | 6.663 | 6.173 (45%) |
+| Con booking_provider | 0 | 6.693 | 6.203 (45%) |
+| Con amenities | 0 | 6.330 | 4.127 (30%) |
+
+### Insights strategici da Peppe
+1. **OSM e spiagge.it sono complementari**, non sovrapposti (overlap solo 34%). Servono entrambi.
+2. **Le amenities** sono asset UX gold per S3 (filtri "pet-friendly + ristorante", "accessibile disabili" ecc).
+3. **Spiagge.it permissivo coi bot**: UA con contact + 25 req/s = nessun blocco. S2X.2 Playwright per prezzi sarà più sicuro (slower per natura).
+4. **Bottleneck rimasto**: solo il widget JS dei prezzi richiede browser engine. Tutto il resto = requests + JSON-LD.
+
+### Prossimi step beach (raccomandato Peppe + CEO)
+1. **S3 frontend bootstrap** — MVP mappa Italia + filtri amenities su 13.646 venues. Prezzi parziali (269 items) sufficienti per smoke product.
+2. **S2X.2 Playwright prezzi** — sniff XHR widget booking spiagge.it, scrape 2.299 venues prioritari × 2 date (peak agosto + giugno medio). Stima 5.000-10.000 price items.
+3. Decisione strategica: prodotto consumer vs B2B dataset (vedi discussione CEO).
+
+### File drink intatti
+`data/unified_*.csv`, `prices_data.json`, `index.html` non toccati. Vertical drink resta a 924 price points.
+
+---
+
 ## 2026-06-01 — Merge Pietro S3 (leggimenu brute-force + osm_direct2)
 
 ### Output Pietro S3

@@ -1,4 +1,40 @@
-# Stato corrente del dataset — aggiornato 01/06/2026 (merge Pietro S3)
+# Stato corrente del dataset — aggiornato 02/06/2026 (beach S2+S2X merge)
+
+> **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia).
+
+---
+
+## 🏖️ VERTICAL BEACH (nuovo)
+
+| Metrica | Valore |
+|---|---|
+| **Master venues consolidato** | **13.646** (file: `raw_sources/beach_master_venues.csv`) |
+| Coordinate geo precise | 13.635 (99%) |
+| Con city/region popolati | ~6.700 (49%) |
+| Con `booking_provider` mappato | 6.203 (45% — spiagge.it via sitemap S2X) |
+| Con amenities normalizzate | 4.127 (30% — 15+ servizi vocabolario chiuso) |
+| Price items raccolti | 269 (S1: 214 + S2: 55) |
+| Venues prezzate | 37 |
+| Provider booking identificati | 8 (spiagge.it dominant 6.203 venues) |
+
+### Composizione master beach
+- 9.252 venues OSM (S1, foundation geografica)
+- 4.394 venues spiagge.it NON in OSM (S2X, marketplace-only commerciali)
+- 6.682 venues spiagge.it overlap → arricchiti come master (city/region/provider/amenities)
+
+### Copertura geografica beach (top regioni)
+Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Puglia 511 | Marche 496 | Abruzzo 419 | Calabria 380 | Sicilia 279
+
+### Status vertical beach
+- ✅ Master list completata (acquisition)
+- ⚠️ Prezzi parziali: 37/13.646 venues = 0.3% coverage. **Phase D = Playwright spiagge.it** = next big push.
+- ❌ Frontend integration non ancora fatto (è S3 beach)
+
+---
+
+## 🍹 VERTICAL DRINK (Milano)
+
+# Stato dataset Milano — invariato vs 01/06 ultimo merge
 
 > Questo file dice **cosa è già fatto** e **cosa serve ancora**.
 > Aggiornare dopo ogni merge.
