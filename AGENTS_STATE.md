@@ -1,4 +1,4 @@
-# Stato corrente del dataset — aggiornato 01/06/2026 (merge agent3)
+# Stato corrente del dataset — aggiornato 01/06/2026 (merge Pietro S3)
 
 > Questo file dice **cosa è già fatto** e **cosa serve ancora**.
 > Aggiornare dopo ogni merge.
@@ -9,14 +9,14 @@
 
 | Metrica | Valore |
 |---|---|
-| **Venues totali nel DB** | **1.610** |
-| **Venues uniche sulla mappa** (con prezzo + geo) | **150** |
-| **Items menu totali** | 5.402 |
-| **Price points geo+normalizzati** (sito) | **846** |
-| **Venue-product pairs** | 554 |
+| **Venues totali nel DB** | **1.644** |
+| **Venues uniche sulla mappa** (con prezzo + geo) | **158** |
+| **Items menu totali** | 5.487 |
+| **Price points geo+normalizzati** (sito) | **924** |
+| **Venue-product pairs** | 613 |
 | **Prodotti coperti** | 22 |
 
-> **Nota 01/06 (merge agent3)**: +17 price points, +4 venues mappa, +41 items. Mergiati 12 CSV da agente "Drink Milano" (direct_website, eatbu, leggimenu, glovo, other). 22 items rimossi al quality gate (IMAGE_URL ×9, OAK/NON_MILAN/FOOD/NO_CONTEXT ×4, PAGINEGIALLE ×2, OTHER ×7). Fix merge_pipeline.py: geo-rich venue mapping non sovrascrivibile da versioni senza geo (bug causa -95 price points — risolto).
+> **Nota 01/06 (merge Pietro S3)**: +78 price points, +8 venues mappa, +85 items. Mergiato output Pietro S3 (leggimenu_s3 brute-force + osm_direct2). **WARNING**: leggimenu brute-force ha pescato 127 venues di tutta Italia, solo 15 sono effettivamente Milano (CAP 20xxx). Filtrati 112 venues non-Milan e 7932 items relativi. Tenuti 15 venues Milano + 703 items. osm_direct2: 86 venues (62 con geo precisa), 44 items. Bug double-letter Mulligan's items corretto (HHAARRPP→HARP).
 
 ---
 

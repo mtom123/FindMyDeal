@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-06-01 — Merge Pietro S3 (leggimenu brute-force + osm_direct2)
+
+### Output Pietro S3
+- **leggimenu_s3** (raw): 127 venues, 8635 items — brute-force slug su 850+ candidate names
+- **osm_direct2** (raw): 86 venues, 44 items — direct website scraping OSM list
+- Peppe in parallelo: zone polygons + zoom + venue card design (index.html)
+
+### Quality filter CEO — drastico ma necessario
+- **Problema leggimenu_s3**: brute-force ha pescato dal sitemap leggimenu **tutta Italia**, non solo Milano. Senza filtro città il dataset sarebbe stato compromesso.
+- **Filtro applicato**: CAP 20xxx (Milano metropolitana) o "milano" chiaro nell'indirizzo. Esclude "via milano" in altre città a meno di CAP 20xxx.
+- **Risultato**: 127 → 15 venues Milano (12% hit rate), 8635 → 703 items.
+- **112 venues scartate** sparse in tutta Italia: Calabria (San Ferdinando, Cosenza), Sicilia (Palermo, Foggia, Taranto), Toscana (Livorno), Veneto (Treviso, Susegana), Sardegna (Cagliari, Sardara), Liguria (La Spezia, Savona), Piemonte (Biella, Garessio), Emilia (Cremona, Collecchio), Lazio (Cori, lazio), Marche (Ancona, Urbania), Lombardia non-Milano (Assago).
+
+### Fix bug double-letter osm_direct2
+- PDF parser di Mulligan's leggeva "HHAARRPP", "GGUUIINNNNEESSSS" (lettere duplicate).
+- **Fix**: regex `([A-Z])\1` → `\1` applicato a parole all-CAPS con coppie ripetute.
+- 30 item_name corretti.
+
+### Delta numeri
+- Price points: 846 → **924** (+78)
+- Items: 5.402 → 5.487 (+85)
+- Venue-product pairs: 554 → **613** (+59)
+- Venues sulla mappa: 150 → **158** (+8, 134 precise + 24 fallback)
+- Venues totali DB: 1.610 → 1.644 (+34)
+
+### Outliers minori non bloccanti
+- Papeete spritz €0.75 (Chandon Garden Spritz — flag low ma plausibile per piccola taglia)
+- Santo Taco caraffe Margarita €60/€90 (item_name dice "CARAFFA" — legittimi non standard)
+
+---
+
 ## 2026-06-01 — Merge agent "Drink Milano" (sessione 3)
 
 ### Nuove fonti integrate
