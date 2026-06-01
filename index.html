@@ -817,18 +817,58 @@ input[type=range].sb-range::-moz-range-thumb {
 ═══════════════════════════════════════════════════════════ */
 #venue-card {
   position: fixed;
-  width: 310px; max-height: 72vh;
-  background: var(--s1); border: 1px solid var(--b2);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+  width: 300px; max-height: 72vh;
+  background: var(--s1);
+  border: 1px solid rgba(0,0,0,0.10);
+  border-top: 3px solid var(--b2);
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.06),
+    0 8px 20px rgba(0,0,0,0.13),
+    0 28px 52px rgba(0,0,0,0.11),
+    inset 0 1px 0 rgba(255,255,255,0.9);
   display: flex; flex-direction: column;
   z-index: 600;
-  opacity: 0; transform: scale(0.97) translateY(4px);
-  transition: opacity .18s, transform .18s cubic-bezier(.4,0,.2,1);
+  opacity: 0; transform: translateX(-8px);
+  transition: opacity .18s ease, transform .18s cubic-bezier(.25,0,.25,1);
   pointer-events: none;
 }
 #venue-card.open {
-  opacity: 1; transform: scale(1) translateY(0);
+  opacity: 1; transform: translateX(0);
   pointer-events: auto;
+}
+/* Tier accent on top border */
+#venue-card[data-tier="deal"]   { border-top-color: var(--deal-t); }
+#venue-card[data-tier="avg"]    { border-top-color: var(--avg-t); }
+#venue-card[data-tier="pricey"] { border-top-color: var(--exp-t); }
+/* Connector arrow — left side (card sits right of badge) */
+#venue-card[data-side="right"]::before,
+#venue-card[data-side="right"]::after {
+  content: ''; position: absolute; width: 0; height: 0; pointer-events: none;
+}
+#venue-card[data-side="right"]::before {
+  left: -7px; top: var(--card-arrow-y, 14px);
+  border: 6px solid transparent;
+  border-right: 7px solid rgba(0,0,0,0.10);
+}
+#venue-card[data-side="right"]::after {
+  left: -5px; top: calc(var(--card-arrow-y, 14px) + 1px);
+  border: 5px solid transparent;
+  border-right: 6px solid var(--s1);
+}
+/* Connector arrow — right side (card flipped left of badge) */
+#venue-card[data-side="left"]::before,
+#venue-card[data-side="left"]::after {
+  content: ''; position: absolute; width: 0; height: 0; pointer-events: none;
+}
+#venue-card[data-side="left"]::before {
+  right: -7px; left: auto; top: var(--card-arrow-y, 14px);
+  border: 6px solid transparent;
+  border-left: 7px solid rgba(0,0,0,0.10);
+}
+#venue-card[data-side="left"]::after {
+  right: -5px; left: auto; top: calc(var(--card-arrow-y, 14px) + 1px);
+  border: 5px solid transparent;
+  border-left: 6px solid var(--s1);
 }
 
 /* card text sizing */
@@ -851,9 +891,9 @@ input[type=range].sb-range::-moz-range-thumb {
     width: auto !important;
     max-height: 58vh;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    transform: translateY(12px) scale(0.98);
+    transform: translateY(12px);
   }
-  #venue-card.open { transform: translateY(0) scale(1); }
+  #venue-card.open { transform: translateY(0); }
 }
 
 .det-head {
@@ -1860,14 +1900,6 @@ function openDetail(idx) {
   if (!v) return;
   S.selIdx = idx;
 
-  if (S.map) {
-    S._progMove = true;
-    const targetZoom = Math.max(S.map.getZoom(), 17);
-    S.map.setView([v.lat, v.lng], targetZoom, { animate: true });
-    showResetBtn();
-    setTimeout(() => { S._progMove = false; }, 600);
-  }
-
   document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
   document.getElementById('mk-' + idx)?.classList.add('sel');
 
@@ -1882,42 +1914,76 @@ function openDetail(idx) {
   const card = document.getElementById('venue-card');
   card.classList.remove('open');
   card.innerHTML = buildDetHtml(v, pLabel, tierStr, catStr);
+  card.dataset.tier = cls(v.min_price, S.allVenues);
 
   if (window.innerWidth > 768) {
     card.style.visibility = 'hidden';
-    requestAnimationFrame(() => {
+    // Remove any stale listener from a previous openDetail call
+    if (S._cardListener) { S.map?.off('moveend', S._cardListener); S._cardListener = null; }
+    let shown = false;
+    const showCard = () => {
+      if (shown) return;
+      shown = true;
+      S._cardListener = null;
       positionCard(card, v.lat, v.lng);
       card.style.visibility = '';
       card.classList.add('open');
-    });
+    };
+    S._cardListener = showCard;
+    // Register BEFORE setView so we catch even synchronous moveend
+    if (S.map) S.map.once('moveend', showCard);
+    setTimeout(showCard, 650); // fallback if map doesn't need to move
   } else {
     card.style.cssText = '';
     requestAnimationFrame(() => card.classList.add('open'));
   }
+
+  if (S.map) {
+    S._progMove = true;
+    const targetZoom = Math.max(S.map.getZoom(), 17);
+    S.map.setView([v.lat, v.lng], targetZoom, { animate: true });
+    showResetBtn();
+    setTimeout(() => { S._progMove = false; }, 600);
+  }
 }
 
 function positionCard(card, lat, lng) {
-  const CARD_W = 300, CARD_H = 380, GAP = 14;
+  const BADGE_W = 48; // approx width of price badge
+  const BADGE_H = 16; // approx height of price badge
+  const GAP = 10;
   const pt = S.map.latLngToContainerPoint([lat, lng]);
   const mapWrap = document.getElementById('map-wrap');
   const rect = mapWrap.getBoundingClientRect();
 
-  // absolute position within viewport
-  const ax = rect.left + pt.x;
-  const ay = rect.top  + pt.y;
+  const CARD_W = card.offsetWidth  || 300;
+  const CARD_H = card.offsetHeight || 360;
 
-  let left = ax + GAP;
-  let top  = ay - CARD_H / 2;
+  // Badge top-left is at pt (iconAnchor=[0,0])
+  const bLeft = rect.left + pt.x;
+  const bTop  = rect.top  + pt.y;
 
-  // flip left if card goes off right edge
-  if (left + CARD_W > window.innerWidth - 12) left = ax - CARD_W - GAP;
-  // clamp vertically
-  top = Math.max(60, Math.min(top, window.innerHeight - CARD_H - 12));
+  // Place card to the right of the badge
+  let left = bLeft + BADGE_W + GAP;
+  let side = 'right';
 
-  card.style.left = left + 'px';
-  card.style.top  = top  + 'px';
+  if (left + CARD_W > window.innerWidth - 12) {
+    left = bLeft - CARD_W - GAP;
+    side = 'left';
+  }
+
+  // Align card top with badge top, slight upward offset
+  let top = bTop - 8;
+  top = Math.max(80, Math.min(top, window.innerHeight - CARD_H - 12));
+
+  card.style.left   = left + 'px';
+  card.style.top    = top  + 'px';
   card.style.bottom = 'auto';
   card.style.right  = 'auto';
+  card.dataset.side = side;
+
+  // Arrow points at badge center
+  const arrowY = Math.max(8, Math.min(bTop + BADGE_H / 2 - top - 6, CARD_H - 16));
+  card.style.setProperty('--card-arrow-y', arrowY + 'px');
 }
 
 function buildDetHtml(v, pLabel, tierStr, catStr) {
