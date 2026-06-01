@@ -522,6 +522,28 @@ input[type=range].sb-range::-moz-range-thumb {
 .pm-pricey{ background: #8b1a1a; }
 
 /* ═══════════════════════════════════════════════════════════
+   CATEGORY BAR
+═══════════════════════════════════════════════════════════ */
+#catbar {
+  height: 28px; flex-shrink: 0;
+  background: var(--s2); border-bottom: 1px solid var(--b0);
+  display: flex; align-items: stretch;
+  overflow-x: auto; scrollbar-width: none; z-index: 390;
+}
+#catbar::-webkit-scrollbar { display: none; }
+.catbtn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem; font-weight: 500;
+  letter-spacing: .10em; text-transform: uppercase; color: var(--t3);
+  padding: 0 14px; flex-shrink: 0; cursor: pointer;
+  border-bottom: 1.5px solid transparent;
+  transition: color .12s, border-color .12s;
+  white-space: nowrap;
+}
+.catbtn:hover { color: var(--t2); }
+.catbtn.active { color: var(--t1); border-bottom-color: var(--t1); }
+
+/* ═══════════════════════════════════════════════════════════
    RADIUS BAR
 ═══════════════════════════════════════════════════════════ */
 #rbar {
@@ -559,6 +581,50 @@ input[type=range].sb-range::-moz-range-thumb {
 .rb-btn.active { color: var(--t1); border-color: var(--b2); background: var(--s1); font-weight: 600; }
 .rb-radii { display: none; align-items: center; gap: 1px; }
 .rb-radii.visible { display: flex; }
+
+/* Location search in rbar */
+.rb-loc-wrap {
+  flex: 1; display: flex; align-items: center; gap: 6px;
+  padding: 0 8px; position: relative; min-width: 0;
+}
+.rb-loc-icon { color: var(--t3); font-size: 0.7rem; flex-shrink: 0; }
+.rb-loc-inp {
+  flex: 1; background: none; border: none; color: var(--t1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.65rem; min-width: 0; outline: none;
+}
+.rb-loc-inp::placeholder { color: var(--t3); font-weight: 300; }
+.rb-loc-clear {
+  color: var(--t3); font-size: 0.6rem; padding: 2px 4px;
+  opacity: 0; transition: opacity .12s; cursor: pointer; flex-shrink: 0;
+}
+.rb-loc-clear.visible { opacity: 1; }
+.rb-loc-dropdown {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+  background: var(--s1); border: 1px solid var(--b1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  z-index: 800; display: none; flex-direction: column;
+}
+.rb-loc-dropdown.show { display: flex; }
+.rb-loc-item {
+  padding: 9px 12px; font-size: 0.70rem; color: var(--t1);
+  cursor: pointer; border-bottom: 1px solid var(--b0);
+  transition: background .1s; line-height: 1.3;
+}
+.rb-loc-item:last-child { border-bottom: none; }
+.rb-loc-item:hover { background: var(--s2); }
+.rb-loc-item-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; color: var(--t3); margin-top: 2px; }
+
+/* Reset view button */
+.rb-reset {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t2); letter-spacing: .06em;
+  padding: 2px 8px; border: 1px solid var(--b1);
+  cursor: pointer; transition: all .12s; flex-shrink: 0;
+  display: none;
+}
+.rb-reset.visible { display: block; }
+.rb-reset:hover { color: var(--t1); border-color: var(--b2); background: var(--s2); }
 
 /* ═══════════════════════════════════════════════════════════
    VENUE CARD (floating modal — dynamic position)
@@ -854,21 +920,44 @@ input[type=range].sb-range::-moz-range-thumb {
     </div>
   </header>
 
+  <!-- CATEGORY BAR -->
+  <div id="catbar">
+    <button class="catbtn active" onclick="selectCategory(null)">All</button>
+    <button class="catbtn" onclick="selectCategory('cocktails')">Cocktails</button>
+    <button class="catbtn" onclick="selectCategory('beer')">Beer</button>
+    <button class="catbtn" onclick="selectCategory('wine')">Wine</button>
+    <button class="catbtn" onclick="selectCategory('coffee')">Coffee</button>
+    <button class="catbtn" onclick="selectCategory('soft')">Soft Drinks</button>
+  </div>
+
   <!-- FILTER BAR -->
   <nav id="fbar" role="tablist" aria-label="Product filter"></nav>
 
   <!-- RADIUS BAR -->
   <div id="rbar">
-    <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:6px;">≡</button>
+    <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:4px;">≡</button>
     <div class="rb-divider"></div>
+    <!-- Location search -->
+    <div class="rb-loc-wrap">
+      <span class="rb-loc-icon">◎</span>
+      <input type="text" id="loc-inp" class="rb-loc-inp" placeholder="Search area, zone, street…" autocomplete="off"
+        oninput="onLocInput(this.value)"
+        onfocus="onLocFocus()"
+        onblur="setTimeout(hideLocDropdown,160)">
+      <button class="rb-loc-clear" id="loc-clear" onclick="clearLocation()">✕</button>
+      <div id="loc-dropdown" class="rb-loc-dropdown"></div>
+    </div>
+    <div class="rb-divider"></div>
+    <!-- Radius -->
     <div class="rb-radii" id="rb-radii">
-      <button class="rb-btn" onclick="setRadius(300)">300m</button>
       <button class="rb-btn" onclick="setRadius(500)">500m</button>
       <button class="rb-btn" onclick="setRadius(1000)">1km</button>
       <button class="rb-btn" onclick="setRadius(2000)">2km</button>
       <button class="rb-btn" onclick="setRadius(5000)">5km</button>
-      <button class="rb-btn active" onclick="setRadius(null)">Tutti</button>
+      <button class="rb-btn active" onclick="setRadius(null)">All</button>
     </div>
+    <div class="rb-divider" id="reset-div" style="display:none;"></div>
+    <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset</button>
   </div>
 
   <!-- BODY -->
@@ -1044,13 +1133,53 @@ const S = {
   map:         null,
   sbOpen:      true,
   mobSheetUp:  false,
+  mapLocked:   false,          // Feature 2: lock map on manual move
+  searchCenter: null,          // Feature 1 & 3: { lat, lng, label }
+  zoneCoverage: {},            // Feature 6: Milan zone data
+  activeCategory: null,        // Feature 5
   geo: {
     lat:    null,
     lng:    null,
-    radius: null,   // metres, null = tutti
+    radius: null,
     marker: null,
   },
 };
+
+/* ──────────────────────────────────────────
+   CATEGORIES (Feature 5)
+─────────────────────────────────────────── */
+const CATEGORIES = {
+  cocktails: ['spritz','negroni','americano','gin_tonic','mojito','moscow_mule','margarita','daiquiri','custom_cocktail'],
+  beer:      ['beer_draft','beer_bottle','beer_heineken','beer_peroni','beer_moretti','beer_ipa','beer'],
+  wine:      ['wine_glass','prosecco_glass','wine_red','wine_white','wine'],
+  coffee:    ['espresso','cappuccino','caffe','macchiato','coffee'],
+  soft:      ['water','coca_cola','soft_drink','acqua'],
+};
+
+/* ──────────────────────────────────────────
+   MILAN ZONES (Feature 6)
+─────────────────────────────────────────── */
+const MILAN_ZONES = {
+  navigli:       { name: 'Navigli',       bounds: [[45.444, 9.155], [45.458, 9.180]] },
+  isola:         { name: 'Isola',         bounds: [[45.481, 9.182], [45.492, 9.200]] },
+  porta_venezia: { name: 'Porta Venezia', bounds: [[45.464, 9.202], [45.477, 9.218]] },
+  brera:         { name: 'Brera',         bounds: [[45.468, 9.183], [45.478, 9.196]] },
+  duomo:         { name: 'Duomo',         bounds: [[45.460, 9.185], [45.468, 9.198]] },
+  citylife:      { name: 'CityLife',      bounds: [[45.472, 9.143], [45.484, 9.165]] },
+  nolo:          { name: 'NoLo',          bounds: [[45.480, 9.196], [45.492, 9.215]] },
+  porta_romana:  { name: 'Porta Romana',  bounds: [[45.447, 9.190], [45.462, 9.208]] },
+  citta_studi:   { name: 'Città Studi',   bounds: [[45.465, 9.218], [45.477, 9.240]] },
+};
+
+function calcZoneCoverage() {
+  const result = {};
+  Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
+    const [[s,w],[n,e]] = zone.bounds;
+    const inZone = S.venues.filter(v => v.lat>=s && v.lat<=n && v.lng>=w && v.lng<=e);
+    result[key] = { name: zone.name, venues: inZone.length };
+  });
+  S.zoneCoverage = result;
+}
 
 /* ──────────────────────────────────────────
    PRODUCT META
@@ -1134,6 +1263,10 @@ function initMap() {
     subdomains: 'abcd', maxZoom: 19,
   }).addTo(S.map);
   L.control.zoom({ position: 'bottomright' }).addTo(S.map);
+
+  // Feature 2: lock map when user manually interacts
+  S.map.on('dragstart', () => { S.mapLocked = true; showResetBtn(); });
+  S.map.on('zoomstart', () => { if (!S._progMove) { S.mapLocked = true; showResetBtn(); } });
 }
 
 /* ──────────────────────────────────────────
@@ -1168,12 +1301,8 @@ function selectProduct(code) {
   const srch = document.getElementById('srch');
   if (srch && srch.value) { srch.value = ''; updateSearchClear(); }
 
-  // Mobile sheet header
-  const m = META[code] || { label: code };
-  document.getElementById('ms-title').textContent = m.label.toUpperCase();
-  document.getElementById('ms-sub').textContent = `${S.allVenues.length} venues · cheapest first`;
-
   // Update search placeholder
+  const m = META[code] || { label: code };
   srch.placeholder = `filter ${m.label.toLowerCase()} venues by name…`;
 
 
@@ -1237,7 +1366,13 @@ function render(venues) {
     bounds.push([v.lat, v.lng]);
   });
 
-  if (bounds.length) S.map.fitBounds(bounds, { padding: [52, 52], maxZoom: 15, minZoom: 13 });
+  if (bounds.length && !S.mapLocked) {
+    S._progMove = true;
+    S.map.fitBounds(bounds, { padding: [52, 52], maxZoom: 15, minZoom: 13 });
+    setTimeout(() => { S._progMove = false; }, 600);
+  }
+
+  calcZoneCoverage(); // Feature 6
 
   // Sidebar
   const sorted = [...venues]
@@ -1353,6 +1488,12 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
       <div class="det-item-p">${fmt(it.price)}</div>
     </div>`).join('');
 
+  // Feature 4: average price
+  const avg = v.items.length > 1
+    ? (v.items.reduce((s,i) => s + i.price, 0) / v.items.length)
+    : null;
+  const avgStr = avg ? `Avg ${fmt(avg)}` : '';
+
   const src = v.source_url
     ? `<a href="${v.source_url}" target="_blank" rel="noopener">source menu ↗</a>`
     : 'no source url';
@@ -1360,8 +1501,8 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
   return `
     <div class="det-head">
       <div class="det-toprow">
-        <span class="det-meta">${esc(tierStr + catStr)}</span>
-        <button class="det-close" onclick="closeDetail()">✕ close</button>
+        <span class="det-meta">${esc(catStr)}${avgStr ? ` · <b style="color:var(--t2)">${avgStr}</b>` : ''}</span>
+        <button class="det-close" onclick="closeDetail()">✕</button>
       </div>
       <div class="det-name">${esc(v.venue_name)}</div>
       <div class="det-cat">${esc(v.categories || '')}</div>
@@ -1397,6 +1538,124 @@ function closeDetail() {
   document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
   document.querySelectorAll('.sv').forEach(el => el.classList.remove('active'));
   S.selIdx = null;
+}
+
+/* ──────────────────────────────────────────
+   LOCATION SEARCH (Feature 1)
+─────────────────────────────────────────── */
+let _locTimer;
+function onLocInput(val) {
+  clearTimeout(_locTimer);
+  const clearBtn = document.getElementById('loc-clear');
+  if (clearBtn) clearBtn.classList.toggle('visible', val.length > 0);
+  if (!val.trim()) { hideLocDropdown(); return; }
+  _locTimer = setTimeout(() => fetchLocSuggestions(val), 350);
+}
+
+function onLocFocus() {
+  const val = document.getElementById('loc-inp').value;
+  if (val.trim().length > 1) fetchLocSuggestions(val);
+}
+
+async function fetchLocSuggestions(q) {
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q + ' Milan Italy')}&format=json&limit=5&addressdetails=1&accept-language=en`;
+    const r = await fetch(url, { headers: { 'Accept-Language': 'en' } });
+    const data = await r.json();
+    renderLocDropdown(data);
+  } catch(e) { hideLocDropdown(); }
+}
+
+function renderLocDropdown(results) {
+  const dd = document.getElementById('loc-dropdown');
+  if (!results.length) { hideLocDropdown(); return; }
+  dd.innerHTML = results.map((r, i) => {
+    const main = r.namedetails?.name || r.display_name.split(',')[0];
+    const sub  = r.display_name.split(',').slice(1, 3).join(',').trim();
+    return `<div class="rb-loc-item" onmousedown="selectLocation(${r.lat},${r.lon},'${esc(main)}')">
+      <div>${esc(main)}</div>
+      <div class="rb-loc-item-sub">${esc(sub)}</div>
+    </div>`;
+  }).join('');
+  dd.classList.add('show');
+}
+
+function selectLocation(lat, lng, label) {
+  S.searchCenter = { lat: parseFloat(lat), lng: parseFloat(lng), label };
+  document.getElementById('loc-inp').value = label;
+  document.getElementById('loc-clear').classList.add('visible');
+  hideLocDropdown();
+  document.getElementById('rb-radii').classList.add('visible');
+  // Default radius 1km, activate button
+  if (S.geo.radius === null) {
+    S.geo.radius = 1000;
+    document.querySelectorAll('.rb-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.rb-btn[onclick="setRadius(1000)"]')?.classList.add('active');
+  }
+  S._progMove = true;
+  S.map.setView([parseFloat(lat), parseFloat(lng)], 15, { animate: true });
+  setTimeout(() => { S._progMove = false; }, 800);
+  applyFilters();
+}
+
+function clearLocation() {
+  S.searchCenter = null;
+  document.getElementById('loc-inp').value = '';
+  document.getElementById('loc-clear').classList.remove('visible');
+  hideLocDropdown();
+  if (S.geo.lat === null) {
+    document.getElementById('rb-radii').classList.remove('visible');
+    S.geo.radius = null;
+  }
+  applyFilters();
+}
+
+function hideLocDropdown() {
+  document.getElementById('loc-dropdown')?.classList.remove('show');
+}
+
+function showResetBtn() {
+  document.getElementById('reset-view-btn')?.classList.add('visible');
+  document.getElementById('reset-div').style.display = '';
+}
+
+function resetMapView() {
+  S.mapLocked = false;
+  S._progMove = true;
+  document.getElementById('reset-view-btn')?.classList.remove('visible');
+  document.getElementById('reset-div').style.display = 'none';
+  render(S.venues);
+  setTimeout(() => { S._progMove = false; }, 800);
+}
+
+/* ──────────────────────────────────────────
+   CATEGORY FILTER (Feature 5)
+─────────────────────────────────────────── */
+function selectCategory(cat) {
+  S.activeCategory = cat;
+  document.querySelectorAll('.catbtn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Show/hide product tabs based on category
+  const fbar = document.getElementById('fbar');
+  if (!fbar) return;
+  fbar.querySelectorAll('.ftab').forEach(tab => {
+    const code = tab.id.replace('ft-', '');
+    const inCat = cat === null || (CATEGORIES[cat] || []).includes(code);
+    tab.style.display = inCat ? '' : 'none';
+  });
+
+  // If current product not in category, auto-select first visible
+  if (cat !== null && S.product) {
+    const inCat = (CATEGORIES[cat] || []).includes(S.product);
+    if (!inCat) {
+      const first = fbar.querySelector('.ftab:not([style*="none"])');
+      if (first) {
+        const code = first.id.replace('ft-', '');
+        selectProduct(code);
+      }
+    }
+  }
 }
 
 /* ──────────────────────────────────────────
@@ -1509,10 +1768,12 @@ function applyFilters() {
     (v.address || '').toLowerCase().includes(q) ||
     (v.categories || '').toLowerCase().includes(q));
 
-  // radius
-  if (S.geo.lat !== null && S.geo.radius !== null) {
-    venues = venues.filter(v =>
-      haversineM(S.geo.lat, S.geo.lng, v.lat, v.lng) <= S.geo.radius);
+  // radius — works with geo OR location search center
+  const rc = S.geo.lat !== null
+    ? { lat: S.geo.lat, lng: S.geo.lng }
+    : S.searchCenter;
+  if (rc && S.geo.radius !== null) {
+    venues = venues.filter(v => haversineM(rc.lat, rc.lng, v.lat, v.lng) <= S.geo.radius);
   }
 
   // price cap
