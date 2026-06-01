@@ -1,0 +1,87 @@
+﻿source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,categories,price_tier,rating,rating_count,phone,website,opening_hours,has_menu,menu_url,extraction_status,retrieved_at
+direct_website,https://www.radetzky.it/,Radetzky Café,https://www.radetzky.it/,,Milano,,,,,,,,https://www.radetzky.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://mulliganspub.it/,Mulligan's,https://mulliganspub.it/,,Milano,,,,,,,,https://mulliganspub.it/,,True,https://mulliganspub.it/uploads/attachments/Menu-Birre-alla-Spina.pdf,ok,2026-06-01T09:18:09Z
+direct_website,https://www.55milano.com/,55 Milano,https://www.55milano.com/,,Milano,,,,,,,,https://www.55milano.com/,,True,https://www.55milano.com/,ok,2026-06-01T09:18:09Z
+direct_website,https://www.ilgattopardomilano.com/,Il Gattopardo,https://www.ilgattopardomilano.com/,,Milano,,,,,,,,https://www.ilgattopardomilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.livingmilano.com/,Living,https://www.livingmilano.com/,,Milano,,,,,,,,https://www.livingmilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.barbiancomilano.com/,Bar Bianco,https://www.barbiancomilano.com/,,Milano,,,,,,,,https://www.barbiancomilano.com/,,True,https://www.barbiancomilano.com/wp-content/uploads/2020/06/MENU-BAR-GIORNO.pdf,ok,2026-06-01T09:18:09Z
+direct_website,https://www.gatemilano.it/,Gate,https://www.gatemilano.it/,,Milano,,,,,,,,https://www.gatemilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.11milano.it/,11 Clubroom,https://www.11milano.it/,,Milano,,,,,,,,https://www.11milano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.caffeletterariomilano.it/,Caffè Letterario,https://www.caffeletterariomilano.it/,,Milano,,,,,,,,https://www.caffeletterariomilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cantineisola.it/,Cantine Isola,https://www.cantineisola.it/,,Milano,,,,,,,,https://www.cantineisola.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.mag-cafe.it/,Mag Café,https://www.mag-cafe.it/,,Milano,,,,,,,,https://www.mag-cafe.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.ritamilano.it/,Rita,https://www.ritamilano.it/,,Milano,,,,,,,,https://www.ritamilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.elbrellin.com/,El Brellin,https://www.elbrellin.com/,,Milano,,,,,,,,https://www.elbrellin.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.thespiritmilano.it/,The Spirit,https://www.thespiritmilano.it/,,Milano,,,,,,,,https://www.thespiritmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.baladin.it/,Baladin Milano,https://www.baladin.it/,,Milano,,,,,,,,https://www.baladin.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.birrificiolambrate.com/,Birrificio Lambrate,https://www.birrificiolambrate.com/,,Milano,,,,,,,,https://www.birrificiolambrate.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.ostellobello.com/,Ostello Bello,https://www.ostellobello.com/,,Milano,,,,,,,,https://www.ostellobello.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.upcyclemilano.it/,Upcycle,https://www.upcyclemilano.it/,,Milano,,,,,,,,https://www.upcyclemilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.thedopingclub.it/,The Doping Club,https://www.thedopingclub.it/,,Milano,,,,,,,,https://www.thedopingclub.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cuoremilano.it/,Cuore,https://www.cuoremilano.it/,,Milano,,,,,,,,https://www.cuoremilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://scottduff.it/,Scott Duff,https://scottduff.it/,,Milano,45.479922,9.183269,,,,,,https://scottduff.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.bluesbikerspub.com,Blues Bikers Pub,http://www.bluesbikerspub.com,,Milano,45.446903,9.180598,,,,,,http://www.bluesbikerspub.com,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://drinkasi.webnode.it,DrinKasi,https://drinkasi.webnode.it,,Milano,45.450708,9.177949,,,,,,https://drinkasi.webnode.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.shatarpub.com,Shatar Pub,http://www.shatarpub.com,,Milano,45.472658,9.142974,,,,,,http://www.shatarpub.com,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.lostintown-milano.com/,Lost in Town,http://www.lostintown-milano.com/,,Milano,45.483937,9.164032,,,,,,http://www.lostintown-milano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.banshee.pub/,Banshee,http://www.banshee.pub/,,Milano,45.420405,9.258581,,,,,,http://www.banshee.pub/,,True,http://www.banshee.pub/cocktail,ok,2026-06-01T09:18:09Z
+direct_website,http://www.karmamilano.it,Karma,http://www.karmamilano.it,,Milano,45.433041,9.231159,,,,,,http://www.karmamilano.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.bluenotemilano.com/,Blue Note,https://www.bluenotemilano.com/,,Milano,45.48953,9.18885,,,,,,https://www.bluenotemilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.loolapaloosa.com/,LoolaPaloosa,http://www.loolapaloosa.com/,,Milano,45.482522,9.187188,,,,,,http://www.loolapaloosa.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cantinaconcordia.it/,Concordia Enoteca,https://www.cantinaconcordia.it/,,Milano,45.450753,9.170748,,,,,,https://www.cantinaconcordia.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.newmadison.it/,Madison Music Hall,http://www.newmadison.it/,,Milano,45.497512,9.137759,,,,,,http://www.newmadison.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.gintoneria.it/,La Gintoneria di Davide,http://www.gintoneria.it/,,Milano,45.504542,9.208824,,,,,,http://www.gintoneria.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.wallmilano.com/club/,The wall,https://www.wallmilano.com/club/,,Milano,45.487542,9.235798,,,,,,https://www.wallmilano.com/club/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.theclubmilano.it,The Club,https://www.theclubmilano.it,,Milano,45.477544,9.184145,,,,,,https://www.theclubmilano.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.pinetamilano.com/,Pineta Milano,https://www.pinetamilano.com/,,Milano,45.486189,9.173863,,,,,,https://www.pinetamilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.ilsecco.com/it/,Il Secco,http://www.ilsecco.com/it/,,Milano,45.45029,9.16971,,,,,,http://www.ilsecco.com/it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.thewhiteflag.it/,The White Flag,https://www.thewhiteflag.it/,,Milano,45.444632,9.210548,,,,,,https://www.thewhiteflag.it/,,True,https://www.thewhiteflag.it/menu,ok,2026-06-01T09:18:09Z
+direct_website,https://www.farmilygroup.com/locali/mag,Mag Cafè,https://www.farmilygroup.com/locali/mag,,Milano,45.451297,9.173367,,,,,,https://www.farmilygroup.com/locali/mag,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.quiarese.it,Qui Arese TechCafé,https://www.quiarese.it,,Milano,45.548446,9.078555,,,,,,https://www.quiarese.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://circlemilano.com/,Circle,https://circlemilano.com/,,Milano,45.453296,9.15958,,,,,,https://circlemilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://bibendumenoteca.wixsite.com/site-bibe/gallery,Bibendum Baladin,https://bibendumenoteca.wixsite.com/site-bibe/gallery,,Milano,45.471544,9.214523,,,,,,https://bibendumenoteca.wixsite.com/site-bibe/gallery,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.bedahouse.it/,Beda House,http://www.bedahouse.it/,,Milano,45.496554,9.192274,,,,,,http://www.bedahouse.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.limemilano.it/,Ligh Lime,https://www.limemilano.it/,,Milano,45.444454,9.216188,,,,,,https://www.limemilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.wavecocktailbar.it/,Wave Cocktail Bar,http://www.wavecocktailbar.it/,,Milano,45.459213,9.177438,,,,,,http://www.wavecocktailbar.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://tunnel-milano.it,Tunnel Club,http://tunnel-milano.it,,Milano,45.492225,9.209013,,,,,,http://tunnel-milano.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.ittolittos.it/,Ittolittos,https://www.ittolittos.it/,,Milano,45.440537,9.146093,,,,,,https://www.ittolittos.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.extasiadiscotopless.com/,Extasià,https://www.extasiadiscotopless.com/,,Milano,45.463496,9.198518,,,,,,https://www.extasiadiscotopless.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.district272.com/,District 272,http://www.district272.com/,,Milano,45.50759,9.245293,,,,,,http://www.district272.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.bobmilano.it/,Bob Milano,https://www.bobmilano.it/,,Milano,45.48925,9.189215,,,,,,https://www.bobmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cafegorille.it/,Cafè Gorille,https://www.cafegorille.it/,,Milano,45.485603,9.191606,,,,,,https://www.cafegorille.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.farmilygroup.com/locali/iter,Iter,https://www.farmilygroup.com/locali/iter,,Milano,45.451184,9.17444,,,,,,https://www.farmilygroup.com/locali/iter,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.voltclub.it/,Volt Club,https://www.voltclub.it/,,Milano,45.456889,9.184079,,,,,,https://www.voltclub.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://www.discotucano.it,Tucano,http://www.discotucano.it,,Milano,45.433185,9.202099,,,,,,http://www.discotucano.it,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,idroscalomilano.com,Punta dell'Est,idroscalomilano.com,,Milano,45.474515,9.293484,,,,,,idroscalomilano.com,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.spaziomicro.it/,Micrò,https://www.spaziomicro.it/,,Milano,45.430935,9.172998,,,,,,https://www.spaziomicro.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.bikoclub.net/,Circolo Arci Biko,https://www.bikoclub.net/,,Milano,45.442106,9.153805,,,,,,https://www.bikoclub.net/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.apollomilano.com/,Apollo,https://www.apollomilano.com/,,Milano,45.447323,9.174709,,,,,,https://www.apollomilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://gipsy.fun/,Gipsy,https://gipsy.fun/,,Milano,45.479535,9.237574,,,,,,https://gipsy.fun/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.10gradinord.com/,10gradinord,https://www.10gradinord.com/,,Milano,45.443958,9.15436,,,,,,https://www.10gradinord.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://chioscopome.com/,Chiosco Pomé,https://chioscopome.com/,,Milano,45.530726,9.043797,,,,,,https://chioscopome.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://barlorenfrau.eatbu.com/,Frau,https://barlorenfrau.eatbu.com/,,Milano,45.447171,9.127392,,,,,,https://barlorenfrau.eatbu.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://mathildacafe.eatbu.com,Mathilda Cafe,https://mathildacafe.eatbu.com,,Milano,45.488006,9.170636,,,,,,https://mathildacafe.eatbu.com,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.ugobar.it/,Ugo Cocktail Bar,https://www.ugobar.it/,,Milano,45.451921,9.17352,,,,,,https://www.ugobar.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.anarres.it/,Anarres,https://www.anarres.it/,,Milano,45.493012,9.220764,,,,,,https://www.anarres.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.thedomemilano.com/,The Dome,https://www.thedomemilano.com/,,Milano,45.463496,9.188386,,,,,,https://www.thedomemilano.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.ilsestoregno.it/,Il Sesto Regno,https://www.ilsestoregno.it/,,Milano,45.537877,9.244709,,,,,,https://www.ilsestoregno.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://bartaita.eatbu.com/,Bar Taita,https://bartaita.eatbu.com/,,Milano,45.472919,9.235192,,,,,,https://bartaita.eatbu.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://petazzi-7.eatbu.com/,Petazzi 7,https://petazzi-7.eatbu.com/,,Milano,45.536023,9.238165,,,,,,https://petazzi-7.eatbu.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://lumen20099.it/,Lumen,https://lumen20099.it/,,Milano,45.537566,9.237954,,,,,,https://lumen20099.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.larga8.com/,Larga 8,https://www.larga8.com/,,Milano,45.442441,9.179062,,,,,,https://www.larga8.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.magazzinigenerali.org/,Magazzini Generali,https://www.magazzinigenerali.org/,,Milano,45.444097,9.195262,,,,,,https://www.magazzinigenerali.org/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://puntello.org/place/Villa%20Vegan%20Occupata,Villa Occupata,https://puntello.org/place/Villa%20Vegan%20Occupata,,Milano,45.522571,9.157401,,,,,,https://puntello.org/place/Villa%20Vegan%20Occupata,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://dkrmilano.it/,DRK Milano,https://dkrmilano.it/,,Milano,45.497354,9.222136,,,,,,https://dkrmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://alcatrazmilano.it/,Alcatraz,https://alcatrazmilano.it/,,Milano,45.494495,9.182627,,,,,,https://alcatrazmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.piano-zero.com/,Piano Zero,https://www.piano-zero.com/,,Milano,45.513576,9.203169,,,,,,https://www.piano-zero.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://malpighi8.it/,8 Malpighi,https://malpighi8.it/,,Milano,45.474592,9.207634,,,,,,https://malpighi8.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://theviewmilano.it/,The View Milano,https://theviewmilano.it/,,Milano,45.464929,9.189593,,,,,,https://theviewmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.porterhousemilano.it/,Porter House Milano,https://www.porterhousemilano.it/,,Milano,45.444909,9.194829,,,,,,https://www.porterhousemilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cooperativaisemprevivi.it/,Attimi Bar & Gelateria,https://www.cooperativaisemprevivi.it/,,Milano,45.468879,9.156326,,,,,,https://www.cooperativaisemprevivi.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,http://cooperativalabriola.wix.com/briola-new#!chi-siamo,Labriola,http://cooperativalabriola.wix.com/briola-new#!chi-siamo,,Milano,45.498871,9.101908,,,,,,http://cooperativalabriola.wix.com/briola-new#!chi-siamo,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://sunstrac.it/,Sun Strac,https://sunstrac.it/,,Milano,45.46509,9.264555,,,,,,https://sunstrac.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.cascinamartesana.com/,Cascina Martesana,https://www.cascinamartesana.com/,,Milano,45.50342,9.229244,,,,,,https://www.cascinamartesana.com/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.lachiesetta.it/,La Chiesetta,https://www.lachiesetta.it/,,Milano,45.481699,9.172837,,,,,,https://www.lachiesetta.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://www.thebeachmilano.it/,The Beach Milano,https://www.thebeachmilano.it/,,Milano,45.470422,9.255218,,,,,,https://www.thebeachmilano.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://oldfashion.it/,Old Fashion,https://oldfashion.it/,,Milano,45.472853,9.173644,,,,,,https://oldfashion.it/,,False,,no_menu,2026-06-01T09:18:09Z
+direct_website,https://ilbardelcentroparco.it/,Il Bar del Centro Parco,https://ilbardelcentroparco.it/,,Milano,45.490396,9.287598,,,,,,https://ilbardelcentroparco.it/,,False,,no_menu,2026-06-01T09:18:09Z
