@@ -6,6 +6,63 @@
 
 ---
 
+## 2026-06-02 — Pietro S5 integration + libreria condivisa di normalizzazione
+
+### Input Pietro S5 (commit af15ec8 — già pushato)
+File consegnati:
+- `raw_sources/agent5_geocode_fixes.csv` — 19 venues con coordinate precise (Nominatim/WebSearch)
+- `raw_sources/agent5_quality_flags.csv` — 13 flag (4 EXCLUDE + 9 REVIEW) sui price points
+- `raw_sources/agent5_eatbu_discovered.csv` — 11 venues eatbu nuovi (backlog, prezzi via XHR)
+- `DATA_QUALITY_REPORT.md` — tassonomia FP + policy bande prezzo
+- `PIETRO_NEXT_STEPS.md` — backlog 3 priorità + bloccati
+- `scripts/quality_audit.py`, `quality_flags.py`, `geocode_fallback*.py`
+
+### CEO action: applicate al merge
+1. **Geocoding fixes** applicati ai raw_sources venues:
+   - 45 fix totali (alcuni venue duplicate in agent2/agent3/agent4)
+   - Venues mappa: 144 precise (era 133) + 9 fallback Duomo legit (Camparino, La Terrazza Aperol, ecc. — fisicamente in Duomo)
+2. **Regola MAXI** aggiunta a `clean_item_product()`:
+   - Tutti i cocktail con "maxi"/"caraffa"/"pitcher"/"brocca"/"litro"/"1L" nel nome → SKIP
+   - **90 items MAXI rimossi** (dominante SPRITZ NAVIGLI MILANO Campari/Spritz/Mojito MAXI €19)
+3. **eatbu discovered** lasciati come backlog (XHR scraping a sessione futura)
+
+### Libreria condivisa `scripts/normalization.py` (raccomandazione Pietro)
+**Problema**: ad ogni nuovo agent scraper, i falsi positivi noti vengono ricreati (americano caffè vs cocktail, Moretti birra vs Vittorio Moretti vino, prosecco glass vs bottiglia, MAXI multi-porzione).
+
+**Soluzione**: modulo condiviso importato da tutti gli scraper PRIMA di consegnare CSV:
+```python
+from scripts.normalization import clean_item_product, is_milan_or_unknown, validate_item, PRICE_RANGES
+```
+Le 14 regole di disambiguazione + bande prezzo + city filter sono ora in `normalization.py`, ri-utilizzabili. Il merge_pipeline.py importa la libreria (fallback a inline se manca).
+
+### Delta numeri
+| Metrica | Pre S5 integration | Post | Δ |
+|---|---|---|---|
+| Price points | 985 | **964** | -21 (90 MAXI rimossi, +69 recuperati da geocoding) |
+| Items totali | 5.626 | 5.605 | -21 |
+| Venues mappa precise | 133 | **144** | +11 |
+| Venues mappa fallback | 20 | 9 | -11 (geocoding fix funziona) |
+| Venues mappa totale | 153 | 153 | 0 |
+
+### Outliers residui (8) — TUTTI LEGIT
+Tutti già verificati come premium venues legit:
+- Morgante "Frenesia dei Navigli" €19, Barcollando €20, SPRITZ NAVIGLI Classici €20
+- LiQUIDO Rooftop Negroni Experience €25, La Terrazza Aperol Gin Tonic Selection €21
+- Oud Beersel Lambic 6Y €14 (craft beer artigianale)
+- Ceresio 7 / Oysteroom Caffè €4 (rooftop upscale)
+
+### Pietro raccomandazione strategica
+Quote: "libreria di normalizzazione CONDIVISA così tutti gli agent applicano lo stesso gate e non si ricreano i falsi positivi"
+
+**Implementato.** Tutti gli scraper futuri devono importare `scripts.normalization` e validare items con `validate_item()` prima di consegnare. Questa è ora best practice del progetto.
+
+### Venues ancora su fallback Duomo (9, tutte legit)
+BRAMA, Bistrot Pattari, Caffè Inn International Bistrot (dupe), Camparino in Galleria, FOD Save The Food Duomo, La Terrazza Aperol, Lab Milano, Morgantecocktail (vicolo privato), Terrazza Duomo 21.
+
+Sono FISICAMENTE in Duomo (eccetto BRAMA e Morgante = casi limite). Non sono FP, sono pin corretti su Piazza Duomo.
+
+---
+
 ## 2026-06-02 — Audit scrupoloso v2 + standardizzazione DB drink
 
 ### Trigger

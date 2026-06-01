@@ -212,13 +212,18 @@ def remap_mycia_items(path: Path) -> list[dict]:
 # MAIN MERGE
 # ─────────────────────────────────────────────
 
-def clean_item_product(item: dict) -> tuple[str, str]:
-    """
-    Audit/cleanup per item:
-    - Reclassifica/rimuove falsi positivi (coffee_americano, espresso_martini, prosecco_bottiglia, ecc)
-    - Filtra noise nei nomi
-    Returns: (corrected_product, reason_if_skipped) — se reason!=None, item DA SCARTARE
-    """
+# Import libreria normalizzazione CONDIVISA (vedi normalization.py)
+# Tutte le funzioni di disambiguazione/cleanup sono lì per essere riusate dagli agent scraper.
+try:
+    from normalization import clean_item_product, is_milan_or_unknown, PRICE_RANGES
+    SHARED_LIB = True
+    print(f"[merge] Loaded shared normalization library")
+except ImportError:
+    SHARED_LIB = False
+    print("[merge] WARNING: normalization.py not found, using inline fallback")
+
+# Le funzioni qui sotto sono fallback inline (se l'import sopra fallisce).
+def _clean_item_product_inline(item: dict) -> tuple:
     prod = (item.get("normalized_product","") or "").strip()
     name = (item.get("item_name","") or "")
     desc = (item.get("item_description","") or "")
@@ -265,6 +270,10 @@ def clean_item_product(item: dict) -> tuple[str, str]:
     if prod == 'margarita':
         if 'caraffa' in name_lower or 'pitcher' in name_lower or price > 30:
             return None, 'MARGARITA_CARAFFA'
+    # 1g-bis. FORMATO MAXI (multi-porzione) — applica a tutti i drink cocktail
+    if prod in ('spritz','negroni','americano','gin_tonic','mojito','moscow_mule','margarita','daiquiri','manhattan','custom_cocktail'):
+        if re.search(r'\bmaxi\b|\bcaraffa\b|\bpitcher\b|\bbrocca\b|\blitro\b|1\s*l(?:itro|t)?\b', name_lower):
+            return None, 'FORMAT_MAXI'
     # 1h. Spritz mismatch -> soft_drink/wine_glass
     if prod == 'spritz':
         # "Soft drinks coca cola..." → soft_drink
@@ -320,7 +329,12 @@ def clean_item_product(item: dict) -> tuple[str, str]:
     return prod, None  # OK, mantiene il prodotto (anche se invariato)
 
 
-def is_milan_or_unknown(addr: str) -> bool:
+# Fallback se shared lib non disponibile
+if not SHARED_LIB:
+    clean_item_product = _clean_item_product_inline
+
+
+def _is_milan_or_unknown_inline(addr: str) -> bool:
     """
     Filtro città: True se address è plausibilmente Milano o se non c'è CAP.
     False solo se address ha CAP NON-Milano esplicito (es. 47843 = Misano Adriatico).
@@ -335,6 +349,10 @@ def is_milan_or_unknown(addr: str) -> bool:
         if 20000 <= int(cap) <= 20999:
             return True
     return False  # CAP esplicitamente fuori 20xxx
+
+
+if not SHARED_LIB:
+    is_milan_or_unknown = _is_milan_or_unknown_inline
 
 
 def main():

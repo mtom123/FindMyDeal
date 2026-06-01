@@ -55,17 +55,31 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ---
 
-## 🍹 VERTICAL DRINK (Milano) — post audit scrupoloso v2
+## 🍹 VERTICAL DRINK (Milano) — post audit S5 + geocode fixes + shared lib
 
 | Metrica | Valore |
 |---|---|
 | **Venues totali nel DB** | **1.601** |
-| **Venues uniche sulla mappa** | **153** (133 precise + 20 fallback) |
-| **Items menu totali** | 5.626 |
-| **Price points geo+normalizzati** | **985** (post-audit cleanup) |
+| **Venues uniche sulla mappa** | **153** (**144 precise** + 9 fallback Duomo legit) |
+| **Items menu totali** | 5.605 |
+| **Price points geo+normalizzati** | **964** (post-audit + MAXI filter) |
 | **Venue-product pairs** | 687 |
 | **Prodotti coperti** | 22 |
-| **Quality** | 94% clean, 9 outliers residui = legit premium venues |
+| **Quality** | ~95% clean, 8 outliers residui = legit premium |
+
+### Pietro S5 contribs integrate
+- Geocoding fixes: 19 venues spostate dal fallback Duomo a coordinate Nominatim precise (Eatme&Go, Norin Caffè, Barcollando, Caffè Fernanda, Garden Caffè, Santeria Toscana, Caffè Inn, La Corte di Montenapoleone, Carico, The Growler, Victoriasclub, Tardispubmilano, Labirrofila, Floraetlabora, Lucaeandreabar, Armanisilos)
+- Quality flags (4 EXCLUDE + 9 REVIEW): regola MAXI added → 90 items MAXI rimossi
+- 11 venues eatbu nuovi scoperti (backlog, prezzi via XHR)
+
+### Libreria condivisa di normalizzazione
+Nuovo `scripts/normalization.py` con:
+- `PRICE_RANGES` (banda per prodotto)
+- `clean_item_product()` (14 regole reclassificazione/skip)
+- `is_milan_or_unknown()` (CAP filter)
+- `validate_item()` (full validation all-in-one)
+
+**Tutti gli agent scraper devono importarla** prima di scrivere CSV. Evita ricreazione FP a ogni sessione (raccomandazione Pietro).
 
 ### Pietro S4 deep-scan (commit 733925e)
 - 88 venues re-processate dalla lista CEO (1-3 items DB pre-merge)
