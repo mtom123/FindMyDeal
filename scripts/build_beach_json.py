@@ -65,8 +65,13 @@ with open(ITEMS_FILE, encoding="utf-8") as f:
 
 # ── Load venues ───────────────────────────────────────────────────
 venues_out = []
-regions_count = defaultdict(int)
 priced_count = 0
+# Per-region: total, priced, lat/lng bounds for the bbox polygon
+region_stats = defaultdict(lambda: {
+    "total": 0, "priced": 0,
+    "lat_min":  90, "lat_max": -90,
+    "lng_min": 180, "lng_max": -180,
+})
 
 def headline_price(items):
     """Min price of standard 2-lettini set, else min of all."""
@@ -130,8 +135,34 @@ with open(VENUES_FILE, encoding="utf-8") as f:
             if prices["other"]:
                 venue["items_other"] = sorted(prices["other"], key=lambda x: x["price"])[:4]
 
-        regions_count[r.get("region", "")] += 1
+        region = r.get("region", "") or "Altra"
+        rs = region_stats[region]
+        rs["total"]   += 1
+        if has_price: rs["priced"] += 1
+        rs["lat_min"]  = min(rs["lat_min"], lat)
+        rs["lat_max"]  = max(rs["lat_max"], lat)
+        rs["lng_min"]  = min(rs["lng_min"], lng)
+        rs["lng_max"]  = max(rs["lng_max"], lng)
         venues_out.append(venue)
+
+# Build regions list with bbox + coverage %
+regions_out = []
+for name, s in region_stats.items():
+    if s["total"] == 0: continue
+    # Headline price = median of region peak prices
+    region_prices_peak = [v["min_peak"] for v in venues_out
+                          if v.get("region") == name and v.get("min_peak") is not None]
+    region_prices_peak.sort()
+    median_peak = region_prices_peak[len(region_prices_peak)//2] if region_prices_peak else None
+    regions_out.append({
+        "name":      name,
+        "total":     s["total"],
+        "priced":    s["priced"],
+        "pct":       round(100 * s["priced"] / s["total"]) if s["total"] else 0,
+        "median_peak": median_peak,
+        "bbox":      [s["lat_min"], s["lng_min"], s["lat_max"], s["lng_max"]],
+    })
+regions_out.sort(key=lambda r: -r["total"])
 
 # ── Output ────────────────────────────────────────────────────────
 out = {
@@ -140,7 +171,7 @@ out = {
         "generated_at": "2026-06-01",
         "total_venues": len(venues_out),
         "total_priced": priced_count,
-        "regions": dict(sorted(regions_count.items(), key=lambda x: -x[1])),
+        "regions": regions_out,
     },
     "venues": venues_out,
 }

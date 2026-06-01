@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
   <style>
 /* ═══════════════════════════════════════════════════════════
    TOKENS — architectural light palette
@@ -1161,6 +1162,8 @@ input[type=range].sb-range::-moz-range-thumb {
 }
 .bseasbtn:hover { color: var(--t2); }
 .bseasbtn.active { color: var(--t1); border-bottom-color: var(--t1); }
+#b-toggle-unpriced.active,
+#b-toggle-regions.active { border-bottom-color: var(--deal-t); color: var(--deal-t); }
 .bseas-tag {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.52rem; color: inherit; opacity: 0.65;
@@ -1181,6 +1184,59 @@ input[type=range].sb-range::-moz-range-thumb {
   padding: 2px 6px; border: 1px solid var(--b1); line-height: 1.6;
   white-space: nowrap;
 }
+
+/* Marker cluster — match price marker visual language */
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: transparent !important;
+}
+.marker-cluster div {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; font-weight: 600;
+  color: #fff !important;
+  border: none; box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  padding: 4px 7px; line-height: 1;
+  background: var(--t1) !important;
+  width: auto !important; height: auto !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+.marker-cluster span {
+  line-height: 1;
+}
+.bcluster-deal   div { background: #1e6639 !important; }
+.bcluster-avg    div { background: #8a6400 !important; }
+.bcluster-pricey div { background: #8b1a1a !important; }
+.bcluster {
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Region zone label */
+.region-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  white-space: nowrap; pointer-events: none; user-select: none;
+  display: flex; align-items: center; gap: 5px;
+  text-shadow: 0 0 4px #fff, 0 0 8px #fff;
+  color: var(--deal-t);
+}
+.region-label .rcov {
+  font-size: 9px; background: var(--deal-t); color: #fff;
+  padding: 1px 4px; line-height: 1.4; text-shadow: none;
+}
+
+/* Beach unpriced marker — neutral dot */
+.pm.pm-empty {
+  background: transparent !important;
+  color: var(--t3) !important;
+  border: 1px dashed var(--b2);
+  font-size: 9px; padding: 2px 5px;
+  opacity: 0.75;
+  box-shadow: none;
+}
+.pm.pm-empty::after { display: none; }
 
 /* Peak/mid comparison block */
 .beach-season-compare {
@@ -1277,6 +1333,14 @@ input[type=range].sb-range::-moz-range-thumb {
     <div class="bseas-divider"></div>
     <button class="bseasbtn" id="bs-mid" onclick="selectBeachSeason('mid')">
       ◑ Bassa stagione <span class="bseas-tag">15–21 giugno</span>
+    </button>
+    <div class="bseas-divider"></div>
+    <button class="bseasbtn" id="b-toggle-unpriced" onclick="toggleBeachUnpriced()">
+      ○ Mostra senza prezzo
+    </button>
+    <div class="bseas-divider"></div>
+    <button class="bseasbtn" id="b-toggle-regions" onclick="toggleBeachRegions()">
+      ◻ Mostra regioni
     </button>
     <div class="bseas-note" id="bbar-note">caricamento…</div>
   </div>
@@ -1462,6 +1526,7 @@ input[type=range].sb-range::-moz-range-thumb {
 
 <!-- LEAFLET -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
 /* ──────────────────────────────────────────
@@ -2578,9 +2643,13 @@ function soon(f) {
 ══════════════════════════════════════════════════════════ */
 
 /* State additions for beach */
-S.vertical    = 'drinks';  // 'drinks' | 'balneari'
-S.beachData   = null;
-S.beachSeason = 'peak';    // 'peak' | 'mid'
+S.vertical          = 'drinks';  // 'drinks' | 'balneari'
+S.beachData         = null;
+S.beachSeason       = 'peak';    // 'peak' | 'mid'
+S.beachShowUnpriced = false;
+S.beachShowRegions  = false;
+S.beachClusterGroup = null;
+S.beachRegionLayers = [];
 
 /* ── Switch vertical ─────────────────────────────────────── */
 function selectVertical(v) {
@@ -2598,6 +2667,9 @@ function selectVertical(v) {
     catbar.classList.remove('hidden');
     fbar.classList.remove('hidden');
     bbar.classList.add('hidden');
+    // Clean up beach layers
+    if (S.beachClusterGroup) { S.map.removeLayer(S.beachClusterGroup); S.beachClusterGroup = null; }
+    S.beachRegionLayers.forEach(l => l.remove()); S.beachRegionLayers = [];
     // Restore drinks sidebar header
     document.querySelector('.sb-head-title').textContent = 'Nearby';
     document.querySelector('.sb-section-hdr-title').textContent = 'Best Deals';
@@ -2647,7 +2719,7 @@ async function loadBeachAndRender() {
     if (!r.ok) throw new Error(r.status);
     S.beachData = await r.json();
     if (note) note.textContent =
-      `${S.beachData.metadata.total_priced} prezzati · ${S.beachData.metadata.total_venues} totali`;
+      `${S.beachData.metadata.total_priced} prezzati · ${S.beachData.metadata.total_venues} totali · ${S.beachData.metadata.regions.length} regioni`;
   } catch(e) {
     if (note) note.textContent = 'errore caricamento dati';
     console.error('beach_data.json failed:', e);
@@ -2662,45 +2734,164 @@ function renderBeach() {
 
   const season = S.beachSeason;
 
-  // Only priced venues as markers (default)
-  const venues = S.beachData.venues.filter(v => v.has_price && v.lat && v.lng);
+  // Pick venues: priced always; unpriced only if toggle is on
+  const venues = S.beachData.venues.filter(v =>
+    v.lat && v.lng && (v.has_price || S.beachShowUnpriced));
   window.__V = venues;
 
-  // Percentile tiers based on displayed price
-  const prices = venues
+  // Percentile tiers based on priced venues only
+  const pricesForTier = venues
+    .filter(v => v.has_price)
     .map(v => (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price)
     .filter(p => p != null)
     .sort((a, b) => a - b);
-  const p33 = prices[Math.floor(prices.length * 0.33)] || 0;
-  const p67 = prices[Math.floor(prices.length * 0.67)] || 0;
+  const p33 = pricesForTier[Math.floor(pricesForTier.length * 0.33)] || 0;
+  const p67 = pricesForTier[Math.floor(pricesForTier.length * 0.67)] || 0;
   const beachCls = (price) => {
-    if (price == null) return 'avg';
+    if (price == null) return 'empty';
     if (price <= p33) return 'deal';
     if (price <= p67) return 'avg';
     return 'pricey';
   };
 
-  // Clear existing markers
+  // Remove old markers / cluster group
   S.markers.forEach(m => m.remove());
   S.markers = [];
+  if (S.beachClusterGroup) { S.map.removeLayer(S.beachClusterGroup); S.beachClusterGroup = null; }
+
+  // Create cluster group with custom icon based on majority tier
+  S.beachClusterGroup = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    spiderfyOnMaxZoom: true,
+    maxClusterRadius: (zoom) => zoom < 8 ? 80 : zoom < 10 ? 60 : zoom < 13 ? 45 : 30,
+    iconCreateFunction: (cluster) => {
+      const children = cluster.getAllChildMarkers();
+      const tiers = { deal:0, avg:0, pricey:0, empty:0 };
+      let priceSum = 0, priceN = 0;
+      children.forEach(m => {
+        const t = m._beachTier || 'empty';
+        tiers[t]++;
+        if (m._beachPrice != null) { priceSum += m._beachPrice; priceN++; }
+      });
+      // Dominant non-empty tier
+      const dom = ['deal','avg','pricey'].reduce((a,b) => tiers[a] >= tiers[b] ? a : b);
+      const avg = priceN > 0 ? Math.round(priceSum / priceN) : null;
+      const label = avg != null
+        ? `<span>€${avg} · ${children.length}</span>`
+        : `<span>${children.length}</span>`;
+      return L.divIcon({
+        html: `<div>${label}</div>`,
+        className: `marker-cluster bcluster bcluster-${dom}`,
+        iconSize: null,
+      });
+    },
+  });
 
   venues.forEach((v, i) => {
-    const displayPrice = (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price;
+    const displayPrice = v.has_price
+      ? (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price
+      : null;
     const c = beachCls(displayPrice);
-    const priceStr = displayPrice != null ? `€${Math.round(displayPrice)}` : '?';
+    const priceStr = displayPrice != null ? `€${Math.round(displayPrice)}` : '○';
 
     const icon = L.divIcon({
       html: `<div class="pm pm-${c}" id="mk-${i}">${priceStr}</div>`,
       className: '', iconSize: null, iconAnchor: [0, 0],
     });
     const marker = L.marker([v.lat, v.lng], { icon, zIndexOffset: i });
+    marker._beachTier  = c;
+    marker._beachPrice = displayPrice;
     marker.on('click', () => openBeachDetail(i));
-    marker.addTo(S.map);
+    S.beachClusterGroup.addLayer(marker);
     S.markers.push(marker);
   });
+  S.map.addLayer(S.beachClusterGroup);
+
+  // Regions overlay if toggle on
+  renderBeachRegions();
 
   // Sidebar
   renderBeachSidebar(venues, season, beachCls);
+}
+
+/* ── Region polygons (bbox per regione) ──────────────────── */
+function renderBeachRegions() {
+  // Clean old layers
+  S.beachRegionLayers.forEach(l => l.remove());
+  S.beachRegionLayers = [];
+  if (!S.beachShowRegions || !S.beachData || S.vertical !== 'balneari') return;
+
+  S.beachData.metadata.regions.forEach(r => {
+    if (r.total < 20) return; // skip tiny regions (e.g. lakes)
+    const [latMin, lngMin, latMax, lngMax] = r.bbox;
+    // Slight inset to avoid bordering rectangles overlapping
+    const dy = (latMax - latMin) * 0.02;
+    const dx = (lngMax - lngMin) * 0.02;
+    const coords = [
+      [latMin + dy, lngMin + dx],
+      [latMin + dy, lngMax - dx],
+      [latMax - dy, lngMax - dx],
+      [latMax - dy, lngMin + dx],
+    ];
+    const color = r.priced > 0 ? '#1e6639' : '#888880';
+    const poly = L.polygon(coords, {
+      color, weight: 1, dashArray: '4 4',
+      fill: true, fillColor: color, fillOpacity: 0.04,
+      interactive: true, bubblingMouseEvents: false,
+    }).addTo(S.map);
+
+    poly.on('click', (e) => {
+      L.DomEvent.stopPropagation(e);
+      const popup = `
+        <div class="zone-popup">
+          <div class="zone-popup-name">${esc(r.name)}</div>
+          <div class="zone-popup-stat">${r.priced}/${r.total} prezzati</div>
+          <div class="zone-popup-cov">${r.pct}% copertura</div>
+          ${r.median_peak ? `<div class="zone-popup-stat" style="margin-top:5px;">Mediana peak: €${r.median_peak}</div>` : ''}
+        </div>`;
+      L.popup({ closeButton: true, autoPan: true })
+        .setLatLng(e.latlng)
+        .setContent(popup)
+        .openOn(S.map);
+    });
+    poly.on('mouseover', () => poly.setStyle({ fillOpacity: 0.10, weight: 2 }));
+    poly.on('mouseout',  () => poly.setStyle({ fillOpacity: 0.04, weight: 1 }));
+
+    // Label at centroid
+    const cLat = (latMin + latMax) / 2;
+    const cLng = (lngMin + lngMax) / 2;
+    const labelHtml = r.priced > 0
+      ? `<div class="region-label">${esc(r.name)} <span class="rcov">${r.pct}%</span></div>`
+      : `<div class="region-label" style="color:var(--t3)">${esc(r.name)}</div>`;
+    const label = L.marker([cLat, cLng], {
+      icon: L.divIcon({ html: labelHtml, className: '', iconSize: null }),
+      interactive: false,
+      keyboard: false,
+    }).addTo(S.map);
+
+    S.beachRegionLayers.push(poly, label);
+  });
+}
+
+/* ── Toggles ─────────────────────────────────────────────── */
+function toggleBeachUnpriced() {
+  S.beachShowUnpriced = !S.beachShowUnpriced;
+  const b = document.getElementById('b-toggle-unpriced');
+  if (b) {
+    b.textContent = S.beachShowUnpriced ? '● Nasconde senza prezzo' : '○ Mostra senza prezzo';
+    b.classList.toggle('active', S.beachShowUnpriced);
+  }
+  renderBeach();
+}
+
+function toggleBeachRegions() {
+  S.beachShowRegions = !S.beachShowRegions;
+  const b = document.getElementById('b-toggle-regions');
+  if (b) {
+    b.textContent = S.beachShowRegions ? '◼ Nascondi regioni' : '◻ Mostra regioni';
+    b.classList.toggle('active', S.beachShowRegions);
+  }
+  renderBeachRegions();
 }
 
 /* ── Beach sidebar list ──────────────────────────────────── */
