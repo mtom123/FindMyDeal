@@ -1,6 +1,8 @@
 # Cache HTML/PDF scaricati dagli scraper (100MB+, non vanno in git)
 raw_data/
 raw_data_*/
+# S2X spiagge.it metadata cache (~29MB, re-generable da sitemap)
+raw_sources/.spiagge_cache/
 
 # Python
 __pycache__/

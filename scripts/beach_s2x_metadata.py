@@ -12,9 +12,21 @@ import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from datetime import datetime, timezone
 
 HEADERS = {"User-Agent": "SurPrice-Research/1.0 (research@surprice.it)"}
+
+# Shared session with connection pool (reuses TCP/TLS connections)
+SESSION = requests.Session()
+SESSION.headers.update(HEADERS)
+adapter = HTTPAdapter(
+    pool_connections=50, pool_maxsize=50,
+    max_retries=Retry(total=2, backoff_factor=1, status_forcelist=[502, 503, 504]),
+)
+SESSION.mount("https://", adapter)
+SESSION.mount("http://", adapter)
 INPUT = "raw_sources/beach_s2x_spiagge_url_list.csv"
 OUTPUT = "raw_sources/beach_s2x_spiagge_venues.csv"
 CACHE_DIR = "raw_sources/.spiagge_cache"
@@ -43,7 +55,7 @@ def extract_venue(url, vid):
         with open(cache_path, encoding="utf-8") as f:
             return json.load(f)
     try:
-        r = requests.get(url, headers=HEADERS, timeout=30)
+        r = SESSION.get(url, timeout=30)
         if r.status_code != 200:
             return {"status": r.status_code, "url": url, "vid": vid}
         html = r.text
@@ -153,17 +165,15 @@ def main():
     lock = threading.Lock()
     processed = [0]
     results = []
-    rate_sem = threading.Semaphore(1)
 
     def worker(row):
-        with rate_sem:
-            time.sleep(delay)
+        # Per-worker delay (no global serialization)
+        time.sleep(delay)
         res = extract_venue(row["spiagge_url"], row["spiagge_venue_id"])
         with lock:
             processed[0] += 1
-            if processed[0] % 50 == 0:
-                ok = sum(1 for r in results if r and r.get("status") == "ok")
-                print(f"  {processed[0]}/{len(urls)} | ok: {ok}", flush=True)
+            if processed[0] % 100 == 0:
+                print(f"  {processed[0]}/{len(urls)}", flush=True)
         return res
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
