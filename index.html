@@ -1154,7 +1154,7 @@ input[type=range].sb-range::-moz-range-thumb {
       <!-- FILTERS -->
       <div class="sb-filters">
         <div class="sb-filter-hdr">
-          <span class="sb-filter-hdr-lbl"></span>
+          <span class="sb-filter-hdr-lbl">Filters</span>
           <span class="sb-filter-reset" onclick="resetFilters()">Reset</span>
         </div>
         <div class="sb-filter-row">
@@ -1323,7 +1323,7 @@ const S = {
   searchCenter: null,
   zoneCoverage: {},
   activeCategory: null,
-  zoneBorders: false,   // false = hover only; true = permanent borders
+  zoneMode: 'hover',   // 'hover' | 'show' | 'off'
   geo: {
     lat:    null,
     lng:    null,
@@ -1410,17 +1410,28 @@ function calcZoneCoverage() {
 let _zoneLayers = [];
 let _activeZoneKey = null;
 
+const ZONE_MODES   = ['hover', 'show', 'off'];
+const ZONE_LABELS  = { hover: '◻ Show zones', show: '◼ Hide borders', off: '○ Enable zones' };
+
 function toggleZones() {
-  S.zoneBorders = !S.zoneBorders;
+  const idx = ZONE_MODES.indexOf(S.zoneMode);
+  S.zoneMode = ZONE_MODES[(idx + 1) % 3];
   const btn = document.getElementById('zones-btn');
-  if (btn) btn.textContent = S.zoneBorders ? '◼ Hide borders' : '◻ Show zones';
-  renderZones();
+  if (btn) btn.textContent = ZONE_LABELS[S.zoneMode];
+  if (S.zoneMode === 'off') {
+    _zoneLayers.forEach(l => l.remove());
+    _zoneLayers = [];
+    _activeZoneKey = null;
+    closeZoneCard();
+  } else {
+    renderZones();
+  }
 }
 
 function renderZones() {
   _zoneLayers.forEach(l => l.remove());
   _zoneLayers = [];
-  if (!S.map) return;
+  if (!S.map || S.zoneMode === 'off') return;
 
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
     const [[s,w],[n,e]] = zone.bounds;
@@ -1428,8 +1439,8 @@ function renderZones() {
     const isActive = _activeZoneKey === key;
     const hasCov = cov && cov.total > 0;
 
-    const baseWeight = S.zoneBorders ? 1 : 0;
-    const baseOpacity = S.zoneBorders ? 0.03 : 0.001;
+    const baseWeight  = S.zoneMode === 'show' ? 1 : 0;
+    const baseOpacity = S.zoneMode === 'show' ? 0.03 : 0.001;
     const color = hasCov ? '#1e6639' : '#888880';
 
     const rect = L.rectangle([[s,w],[n,e]], {
