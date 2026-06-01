@@ -1111,6 +1111,102 @@ input[type=range].sb-range::-moz-range-thumb {
   .mob-sheet, .mob-det-ov { display: none !important; }
   #sb-overlay { display: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   VERTICAL SELECTOR BAR
+═══════════════════════════════════════════════════════════ */
+#vbar {
+  height: 36px; flex-shrink: 0;
+  background: var(--t1);
+  display: flex; align-items: stretch; z-index: 460;
+}
+.vtab {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 20px; flex-shrink: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.64rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  border-bottom: 2px solid transparent;
+  cursor: pointer; white-space: nowrap;
+  transition: color .12s, border-color .12s;
+}
+.vtab:hover { color: rgba(255,255,255,0.75); }
+.vtab.active { color: #fff; border-bottom-color: rgba(255,255,255,0.7); }
+.vtab-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(255,255,255,0.35); flex-shrink: 0;
+  transition: background .12s;
+}
+.vtab.active .vtab-dot { background: #4db87a; }
+
+/* ═══════════════════════════════════════════════════════════
+   BEACH SEASON BAR
+═══════════════════════════════════════════════════════════ */
+#bbar {
+  height: var(--fbar-h); flex-shrink: 0;
+  background: var(--s1); border-bottom: 1px solid var(--b1);
+  display: flex; align-items: stretch;
+  overflow-x: auto; scrollbar-width: none; z-index: 400;
+}
+#bbar::-webkit-scrollbar { display: none; }
+.bseasbtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 16px; flex-shrink: 0;
+  font-size: 0.67rem; font-weight: 500; color: var(--t3);
+  border-bottom: 1.5px solid transparent;
+  cursor: pointer; white-space: nowrap;
+  transition: color .12s, border-color .12s;
+  letter-spacing: .03em;
+}
+.bseasbtn:hover { color: var(--t2); }
+.bseasbtn.active { color: var(--t1); border-bottom-color: var(--t1); }
+.bseas-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem; color: inherit; opacity: 0.65;
+}
+.bseas-divider {
+  width: 1px; height: 14px; background: var(--b1); align-self: center; flex-shrink: 0; margin: 0 8px;
+}
+.bseas-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem; color: var(--t3); letter-spacing: .05em; margin-left: auto; padding: 0 14px;
+  display: flex; align-items: center;
+}
+
+/* Beach amenity chip */
+.beach-chip {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t2);
+  padding: 2px 6px; border: 1px solid var(--b1); line-height: 1.6;
+  white-space: nowrap;
+}
+
+/* Peak/mid comparison block */
+.beach-season-compare {
+  display: flex; border: 1px solid var(--b1);
+  margin: 12px 16px; font-family: 'IBM Plex Mono', monospace;
+}
+.beach-season-slot {
+  flex: 1; padding: 9px 11px;
+}
+.beach-season-slot.active { background: var(--s3); }
+.beach-season-slot-lbl {
+  font-size: 0.46rem; color: var(--t3); letter-spacing: .10em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.beach-season-slot-price {
+  font-size: 0.82rem; font-weight: 600; color: var(--t1);
+}
+.beach-season-slot-date {
+  font-size: 0.44rem; color: var(--t3); margin-top: 2px;
+}
+.beach-season-sep { width: 1px; background: var(--b1); flex-shrink: 0; }
+.beach-savings {
+  padding: 8px 16px; margin-bottom: 0;
+  font-size: 0.65rem; color: var(--deal-t); font-weight: 500;
+  background: var(--deal-bg); border-bottom: 1px solid var(--b0);
+}
   </style>
 </head>
 <body>
@@ -1150,7 +1246,17 @@ input[type=range].sb-range::-moz-range-thumb {
     </div>
   </header>
 
-  <!-- CATEGORY BAR -->
+  <!-- VERTICAL SELECTOR -->
+  <div id="vbar">
+    <button class="vtab active" id="vt-drinks" onclick="selectVertical('drinks')">
+      <span class="vtab-dot"></span>Drinks
+    </button>
+    <button class="vtab" id="vt-balneari" onclick="selectVertical('balneari')">
+      <span class="vtab-dot"></span>Balneari ☀
+    </button>
+  </div>
+
+  <!-- CATEGORY BAR (drinks only) -->
   <div id="catbar">
     <button class="catbtn active" onclick="selectCategory(null)">All</button>
     <button class="catbtn" onclick="selectCategory('cocktails')">Cocktails</button>
@@ -1160,8 +1266,20 @@ input[type=range].sb-range::-moz-range-thumb {
     <button class="catbtn" onclick="selectCategory('soft')">Soft Drinks</button>
   </div>
 
-  <!-- FILTER BAR -->
+  <!-- FILTER BAR (drinks only) -->
   <nav id="fbar" role="tablist" aria-label="Product filter"></nav>
+
+  <!-- BEACH SEASON BAR (balneari only, hidden by default) -->
+  <div id="bbar" class="hidden">
+    <button class="bseasbtn active" id="bs-peak" onclick="selectBeachSeason('peak')">
+      ☀ Alta stagione <span class="bseas-tag">1–7 agosto</span>
+    </button>
+    <div class="bseas-divider"></div>
+    <button class="bseasbtn" id="bs-mid" onclick="selectBeachSeason('mid')">
+      ◑ Bassa stagione <span class="bseas-tag">15–21 giugno</span>
+    </button>
+    <div class="bseas-note" id="bbar-note">caricamento…</div>
+  </div>
 
   <!-- RADIUS BAR -->
   <div id="rbar">
@@ -2453,6 +2571,292 @@ function esc(s) {
 }
 function soon(f) {
   alert(`Phase 2 feature: ${f}\n\nThis will be available once the backend is connected.`);
+}
+
+/* ══════════════════════════════════════════════════════════
+   VERTICAL SYSTEM
+══════════════════════════════════════════════════════════ */
+
+/* State additions for beach */
+S.vertical    = 'drinks';  // 'drinks' | 'balneari'
+S.beachData   = null;
+S.beachSeason = 'peak';    // 'peak' | 'mid'
+
+/* ── Switch vertical ─────────────────────────────────────── */
+function selectVertical(v) {
+  if (S.vertical === v) return;
+  S.vertical = v;
+
+  document.querySelectorAll('.vtab').forEach(t => t.classList.remove('active'));
+  document.getElementById('vt-' + v)?.classList.add('active');
+
+  const catbar = document.getElementById('catbar');
+  const fbar   = document.getElementById('fbar');
+  const bbar   = document.getElementById('bbar');
+
+  if (v === 'drinks') {
+    catbar.classList.remove('hidden');
+    fbar.classList.remove('hidden');
+    bbar.classList.add('hidden');
+    // Restore drinks sidebar header
+    document.querySelector('.sb-head-title').textContent = 'Nearby';
+    document.querySelector('.sb-section-hdr-title').textContent = 'Best Deals';
+    document.querySelector('.sb-section-hdr-sub').textContent = 'Good prices near you';
+    document.querySelector('.sb-filters').style.display = '';
+    // Reset map to Milan and re-render current drinks product
+    closeDetail();
+    S.mapLocked = false;
+    S._progMove = true;
+    S.map.setView([45.464, 9.190], 13, { animate: true });
+    setTimeout(() => { S._progMove = false; }, 700);
+    render(S.venues);
+  } else {
+    catbar.classList.add('hidden');
+    fbar.classList.add('hidden');
+    bbar.classList.remove('hidden');
+    // Beach sidebar header
+    document.querySelector('.sb-head-title').textContent = 'Balneari';
+    document.querySelector('.sb-section-hdr-title').textContent = 'Prezzi più bassi';
+    document.querySelector('.sb-filters').style.display = 'none';
+    // Zoom out to Italy
+    closeDetail();
+    S.mapLocked = false;
+    S._progMove = true;
+    S.map.setView([42.5, 12.5], 6, { animate: true });
+    setTimeout(() => { S._progMove = false; }, 700);
+    // Load beach data (lazy)
+    loadBeachAndRender();
+  }
+}
+
+/* ── Beach season toggle ─────────────────────────────────── */
+function selectBeachSeason(s) {
+  S.beachSeason = s;
+  document.getElementById('bs-peak')?.classList.toggle('active', s === 'peak');
+  document.getElementById('bs-mid')?.classList.toggle('active', s === 'mid');
+  if (S.beachData) renderBeach();
+}
+
+/* ── Lazy-load beach JSON ────────────────────────────────── */
+async function loadBeachAndRender() {
+  const note = document.getElementById('bbar-note');
+  if (S.beachData) { renderBeach(); return; }
+  if (note) note.textContent = 'caricamento…';
+  try {
+    const r = await fetch('data/beach_data.json');
+    if (!r.ok) throw new Error(r.status);
+    S.beachData = await r.json();
+    if (note) note.textContent =
+      `${S.beachData.metadata.total_priced} prezzati · ${S.beachData.metadata.total_venues} totali`;
+  } catch(e) {
+    if (note) note.textContent = 'errore caricamento dati';
+    console.error('beach_data.json failed:', e);
+    return;
+  }
+  renderBeach();
+}
+
+/* ── Render beach markers + sidebar ─────────────────────── */
+function renderBeach() {
+  if (!S.beachData || S.vertical !== 'balneari') return;
+
+  const season = S.beachSeason;
+
+  // Only priced venues as markers (default)
+  const venues = S.beachData.venues.filter(v => v.has_price && v.lat && v.lng);
+  window.__V = venues;
+
+  // Percentile tiers based on displayed price
+  const prices = venues
+    .map(v => (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price)
+    .filter(p => p != null)
+    .sort((a, b) => a - b);
+  const p33 = prices[Math.floor(prices.length * 0.33)] || 0;
+  const p67 = prices[Math.floor(prices.length * 0.67)] || 0;
+  const beachCls = (price) => {
+    if (price == null) return 'avg';
+    if (price <= p33) return 'deal';
+    if (price <= p67) return 'avg';
+    return 'pricey';
+  };
+
+  // Clear existing markers
+  S.markers.forEach(m => m.remove());
+  S.markers = [];
+
+  venues.forEach((v, i) => {
+    const displayPrice = (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price;
+    const c = beachCls(displayPrice);
+    const priceStr = displayPrice != null ? `€${Math.round(displayPrice)}` : '?';
+
+    const icon = L.divIcon({
+      html: `<div class="pm pm-${c}" id="mk-${i}">${priceStr}</div>`,
+      className: '', iconSize: null, iconAnchor: [0, 0],
+    });
+    const marker = L.marker([v.lat, v.lng], { icon, zIndexOffset: i });
+    marker.on('click', () => openBeachDetail(i));
+    marker.addTo(S.map);
+    S.markers.push(marker);
+  });
+
+  // Sidebar
+  renderBeachSidebar(venues, season, beachCls);
+}
+
+/* ── Beach sidebar list ──────────────────────────────────── */
+function renderBeachSidebar(venues, season, beachCls) {
+  const sorted = [...venues]
+    .map((v, i) => ({ v, i }))
+    .sort((a, b) => {
+      const pa = (season === 'peak' ? a.v.min_peak : a.v.min_mid) || a.v.min_price || 9999;
+      const pb = (season === 'peak' ? b.v.min_peak : b.v.min_mid) || b.v.min_price || 9999;
+      return pa - pb;
+    });
+
+  const n = sorted.length;
+  document.getElementById('sb-cnt').textContent = `${n} stabilimenti`;
+  document.querySelector('.sb-section-hdr-sub').textContent =
+    season === 'peak' ? '1–7 agosto 2026' : '15–21 giugno 2026';
+
+  const listEl  = document.getElementById('sb-list');
+  const emptyEl = document.getElementById('sb-empty');
+  if (n === 0) { listEl.innerHTML = ''; emptyEl.style.display = 'flex'; return; }
+  emptyEl.style.display = 'none';
+
+  // Show top 150 (fast DOM, scrollable)
+  listEl.innerHTML = sorted.slice(0, 150).map(({ v, i }, rank) => {
+    const displayPrice = (season === 'peak' ? v.min_peak : v.min_mid) || v.min_price;
+    const c = beachCls(displayPrice);
+    const priceStr = displayPrice != null ? fmt(displayPrice) : '—';
+    const loc = [v.city, v.region].filter(Boolean).join(' · ');
+    return `<div class="sv" id="sv-${i}" onclick="openBeachDetail(${i})">
+      <span class="sv-rank">${String(rank + 1).padStart(2, '0')}</span>
+      <div class="sv-body">
+        <div class="sv-name">${esc(v.name)}</div>
+        <div class="sv-addr">${esc(loc)}</div>
+      </div>
+      <span class="sv-price ${c}">${priceStr}</span>
+    </div>`;
+  }).join('');
+}
+
+/* ── Beach detail card ───────────────────────────────────── */
+function openBeachDetail(idx) {
+  const v = window.__V[idx];
+  if (!v) return;
+  S.selIdx = idx;
+
+  document.querySelectorAll('.pm').forEach(el => el.classList.remove('sel'));
+  document.getElementById('mk-' + idx)?.classList.add('sel');
+  document.querySelectorAll('.sv').forEach(el => el.classList.remove('active'));
+  const row = document.getElementById('sv-' + idx);
+  if (row) { row.classList.add('active'); row.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+
+  const card = document.getElementById('venue-card');
+  card.classList.remove('open');
+  card.innerHTML = buildBeachDetHtml(v, S.beachSeason);
+
+  const displayPrice = (S.beachSeason === 'peak' ? v.min_peak : v.min_mid) || v.min_price;
+  const prices = window.__V.map(x => (S.beachSeason === 'peak' ? x.min_peak : x.min_mid) || x.min_price).filter(p => p != null).sort((a,b)=>a-b);
+  const p33 = prices[Math.floor(prices.length * 0.33)] || 0;
+  const p67 = prices[Math.floor(prices.length * 0.67)] || 0;
+  card.dataset.tier = displayPrice <= p33 ? 'deal' : displayPrice <= p67 ? 'avg' : 'pricey';
+
+  if (window.innerWidth > 768) {
+    card.style.visibility = 'hidden';
+    let shown = false;
+    const showCard = () => {
+      if (shown) return; shown = true;
+      S._cardListener = null;
+      positionCard(card, v.lat, v.lng);
+      card.style.visibility = '';
+      card.classList.add('open');
+    };
+    if (S._cardListener) { S.map?.off('moveend', S._cardListener); S._cardListener = null; }
+    S._cardListener = showCard;
+    S.map.once('moveend', showCard);
+    setTimeout(showCard, 650);
+  } else {
+    card.style.cssText = '';
+    requestAnimationFrame(() => card.classList.add('open'));
+  }
+
+  if (S.map) {
+    S._progMove = true;
+    const targetZoom = Math.max(S.map.getZoom(), 14); // beach: street not needed, zoom 14 = local area
+    S.map.setView([v.lat, v.lng], targetZoom, { animate: true });
+    showResetBtn();
+    setTimeout(() => { S._progMove = false; }, 600);
+  }
+}
+
+/* ── Beach HTML builder ──────────────────────────────────── */
+function buildBeachDetHtml(v, season) {
+  const items = (season === 'peak' ? v.items_peak : v.items_mid) || v.items_other || [];
+  const ptLabel = { per_week:'/sett', per_day:'/g', per_season:'/stag', per_month:'/mese', per_half_day:'/pom' };
+
+  const itemsHtml = items.map(it => `
+    <div class="det-item">
+      <div>
+        <div class="det-item-n">${esc(it.label || it.product)}</div>
+        ${it.staging ? `<div class="det-item-s">${esc(it.staging)}</div>` : ''}
+      </div>
+      <div class="det-item-p">€${it.price}${ptLabel[it.price_type] || ''}</div>
+    </div>`).join('');
+
+  const hasBoth = v.min_peak != null && v.min_mid != null;
+  const compareHtml = hasBoth ? `
+    <div class="beach-season-compare">
+      <div class="beach-season-slot${season === 'peak' ? ' active' : ''}">
+        <div class="beach-season-slot-lbl">Alta stagione</div>
+        <div class="beach-season-slot-price">€${v.min_peak}</div>
+        <div class="beach-season-slot-date">1–7 agosto 2026</div>
+      </div>
+      <div class="beach-season-sep"></div>
+      <div class="beach-season-slot${season === 'mid' ? ' active' : ''}">
+        <div class="beach-season-slot-lbl">Bassa stagione</div>
+        <div class="beach-season-slot-price">€${v.min_mid}</div>
+        <div class="beach-season-slot-date">15–21 giugno 2026</div>
+      </div>
+    </div>
+    ${v.min_peak > v.min_mid ? `<div class="beach-savings">↓ Risparmi €${Math.round(v.min_peak - v.min_mid)} in bassa stagione</div>` : ''}
+  ` : '';
+
+  const amenHtml = v.amenities?.length ? `
+    <div class="det-sec">
+      <div class="det-sec-lbl">Servizi</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;padding-top:2px;">
+        ${v.amenities.map(a => `<span class="beach-chip">${esc(a)}</span>`).join('')}
+      </div>
+    </div>` : '';
+
+  const bookingUrl = items[0]?.source_url || v.url || '';
+
+  return `
+    <div class="det-head">
+      <div class="det-toprow">
+        <span class="det-meta">${esc(v.region || '')}${v.city ? ' · ' + esc(v.city) : ''}</span>
+        <button class="det-close" onclick="closeDetail()">✕</button>
+      </div>
+      <div class="det-name">${esc(v.name)}</div>
+      <div class="det-cat">${esc(v.city)}${v.address ? ' — ' + esc(v.address) : ''}</div>
+    </div>
+    <div class="det-body">
+      ${compareHtml}
+      ${itemsHtml ? `<div class="det-sec">
+        <div class="det-sec-lbl">Prezzi — ${season === 'peak' ? '1–7 ago' : '15–21 giu'} 2026</div>
+        ${itemsHtml}
+      </div>` : ''}
+      ${amenHtml}
+      <div class="det-warn">
+        <b>Prezzi indicativi.</b> Verifica disponibilità prima di prenotare.
+        Solo 2 slot disponibili: agosto (peak) e giugno (mid).
+      </div>
+      <div class="det-actions">
+        ${bookingUrl ? `<a class="det-act primary" href="${bookingUrl}" target="_blank" rel="noopener">↗ Prenota su spiagge.it</a>` : ''}
+        ${v.url && v.url !== bookingUrl ? `<a class="det-act" href="${v.url}" target="_blank" rel="noopener">☀ Scheda stabilimento</a>` : ''}
+      </div>
+    </div>`;
 }
 
 /* ──────────────────────────────────────────
