@@ -1,0 +1,2465 @@
+﻿name,lat,lon,amenity,cuisine,website,phone,opening_hours,address
+Pogue Mahone's,45.4508118,9.2038694,pub,,,,,
+Victoria's,45.4910506,9.2390944,pub,,https://www.victoriasclub.it/,+39 02 36723167,,"Via Feltre, 20132, Milano"
+Radetzky Café,45.4784350,9.1850522,bar,,https://www.radetzky.it/,+39 02 6572645,,"Largo La Foppa 5, 20121, Milano"
+Scott Duff,45.4799222,9.1832687,pub,,https://scottduff.it/,+39 02 29002574,"Mo-Sa 16:30-02:00, Su 15:00-01:00","Via Alessandro Volta 13, 20121, Milano"
+The Old Fox Pub,45.4588109,9.1707677,pub,,,+39 02 8940 2622,,"Via Cesare da Sesto 21, 20123, Milano"
+Il gatto e la volpe,45.4949167,9.1981450,pub,,,,,
+Barstrò,45.4950751,9.1970870,cafe,,,,,
+Nordest,45.4892417,9.1888269,pub,,,+39 02 6900 1910,08:00 - 01:00,"Via Pietro Borsieri 35, 20159, Milano"
+Tempi moderni,45.5141993,9.2083420,pub,,,,Mo-Sa 06:00-20:00; Su 07:30-13:00,"Via Nicolò Fortiguerra 12, Milano"
+Bar Nilo,45.4887935,9.1943986,cafe,,http://www.barnilo.it/,,,"Via Ippolito Rosellini, 20124, Milano"
+Starbucks,45.4882021,9.1953454,cafe,coffee_shop,https://www.starbucks.co.uk/store-locator/59651-293868/milano-restelli,,Mo-Fr 07:30-18:30; Sa-Su 08:00-19:00,"Viale Francesco Restelli 5, 20124, Milano"
+Il Tombino,45.4609976,9.1528367,pub,,,,,
+Bar Da Vinci,45.4809461,9.2252976,cafe,,,,,
+Hop,45.4595392,9.2063699,pub,,,+39 02 39439821,,Viale Regina Margherita 16
+Archimede Caffè Tabacchi,45.4656535,9.2213141,cafe,,,,,
+Wizard,45.4504343,9.1692493,pub,,https://thewizardpub.wordpress.com/,,,"Ripa di Porta Ticinese 69, 20143, Milano"
+La Fontanella,45.4518037,9.1776743,pub,,,,Su-Tu 20:30-02:00; Fr-Sa 20:30-03:00,"Alzaia Naviglio Pavese 4n02, 20143, Milano"
+Bar Magenta,45.4656920,9.1756560,pub,italian,https://barmagenta.it/,+39028053808,Mo-Su 07:30-02:00,"Via Giosuè Carducci 13, 20123, Milano"
+Club Decò,45.4866881,9.1670869,bar,,,,,"Via San Galdino 5, 20154, Milano"
+Matricola,45.4757092,9.2233689,pub,,,,,
+Blanco Café,45.4502065,9.1513149,cafe,,https://www.blancocaffemilano.com/,,,"Via Leone Tolstoi 9, 20146, Milano"
+Gelsomina,45.4802145,9.2012320,cafe,,,+39 02 66713 696,,"Via Carlo Tenca 5, 20124, Milano"
+Sohos,45.4801747,9.2015922,pub,,,,,
+Outback café,45.4803007,9.2016606,pub,,,,,
+Bar Baldassarre,45.4818660,9.2036250,cafe,pizza;regional;chicken;italian,,,Mo-Su 07:00-01:30,"Via Ruggero Boscovich 22, 20124, Milano"
+Camarillo Brillo,45.4446001,9.1418269,pub,,https://camarillobrillo.business.site/,,,"Via Lodovico il Moro 83, 20143, Milano"
+Laumge Cafe,45.4469146,9.1612503,cafe,,,,,"Via Carlo D'Adda 13, 20143, Milano"
+Tin Whistle,45.4451996,9.1446995,pub,,https://www.facebook.com/tinwhistlemilano/,,,"Via Lodovico il Moro 55, 20143, Milano"
+Murphy's Pub,45.4696964,9.2280645,pub,,,,,
+Le Coq,45.4705090,9.2268801,pub,,,,,"Piazza Francesco Guardi 13, 20133, Milano"
+Frida,45.4887512,9.1871110,pub,,https://www.fridaisola.it/,+39 02 680260,"Mo-Fr 10:00-15:00,18:00-02:00; Sa 16:00-02:00; Su 12:00-01:00","Via Antonio Pollaiuolo 3, 20159, Milano"
+Smile,45.4603367,9.1551443,cafe,,,,,
+Washington 76,45.4590954,9.1545367,cafe,,,,,
+Mom,45.4587087,9.2061643,pub,,,,,
+Roxy Bar,45.4489424,9.1623861,cafe,,,,,"Ripa di Porta Ticinese 103, 20143, Milano"
+The Manhattan,45.4790873,9.1841339,pub,,,,,"Via Alessandro Volta 4, 20121, Milano"
+Mulligan's,45.4894039,9.1677301,pub,,https://mulliganspub.it/,+39 02 09974886,Mo-Sa 18:00-24:00; Tu-Su 24:00-01:00,"Via Giuseppe Govone 28, 20155"
+The Saints and the Scholars,45.4890802,9.1675217,pub,,https://www.thesaintspub.it/,,,
+Woodstock,45.4474586,9.1553746,pub,,https://www.qodeup.com/woodstock,,"Mo-Fr 12:00-15:00,18:00-01:30, Sa 18:00-02:00, Su 18:00-01:30","Via Lodovico il Moro 3, 20143, Milano"
+RT HOLL,45.4802593,9.1286846,pub,,,,,
+Blues Bikers Pub,45.4469190,9.1805453,pub,,https://www.bluesbikerspub.com/,,Tu-Su 19:00-02:00; Mo off,"Via Francesco Brioschi 7, 20136, Milano"
+Max's,45.4571871,9.1544296,cafe,,,,,"Via Giorgio Washington 88, 20146, Milano"
+Ebony,45.4861797,9.2266105,cafe,italian,,,,
+Union Club,45.4725467,9.2285930,bar,,,+39 02 70009543,Mo 08:00-02:00; Tu-Fr 10:30-02:00; Sa-Su 18:30-02:00; May-Sep: Su off,"Via Moretto Da Brescia 36, 20133, Milano"
+Bar Plaza,45.4727692,9.2295732,bar,,,+39 02 70002900,Mo-Su 06:30-22:00,"Via Moretto Da Brescia 31, 20133, Milano"
+Bar da Vinci,45.4486383,9.2030362,cafe,,,,,
+Urban Wave,45.4488021,9.1976118,bar,,,,,
+Art Rock Cafè,45.4489386,9.2023167,cafe,,https://artrockcafe.eatbu.com/,,,
+Next,45.4501406,9.2028227,bar,,,+39 02 32960094,,"Via Crema 7, 20135, Milano"
+Bar 2 Ruote,45.4392393,9.1553198,cafe,,,,,"Via Modica 1, 20143, Milano"
+Gocce di caffè,45.4420621,9.1550458,cafe,,,,,"Via Ambrogio Binda 25, 20143, Milano"
+Pucatè - Bubble Tea,45.4788704,9.2031626,cafe,coffee_shop;tea,https://www.facebook.com/pucatemilano/,+39 345 507 3339,Mo-Su 12:30-20:00,Via Felice Casati 23
+Pezzotti Bar,45.4423151,9.1832738,bar,,,,,"Via Giovanni Pezzotti 11, 20141, Milano"
+Bar Pezzotti,45.4393731,9.1830850,cafe,,,,,"Via Giovanni Pezzotti 46, 20141, Milano"
+Caffè 48,45.4439385,9.1823839,cafe,,,,,"Viale Tibaldi 48, 20141, Milano"
+Il Caffè,45.4453883,9.1822970,cafe,,,,,
+Bar Lord Byron,45.4388678,9.1836034,bar,,,+390236582100,,"Via Giovanni Pezzotti 55, 20141, Milano"
+Ecate,45.4418665,9.1809262,cafe,,https://www.ecatecaffelibreria.com/,,,"Via Pietro Pomponazzi 11, 20141, Milano"
+Niky Bar,45.4429313,9.1790582,cafe,,,,,"Via Giuseppe Meda 25, 20136, Milano"
+Dahlia Lab,45.4507226,9.1901777,bar,,,,,"Viale Bligny 24, 20136"
+Maravea,45.4512102,9.1895458,pub,,,,,
+Taxi Blues,45.4510442,9.1873344,bar,,,,,
+Bar Baffo,45.4663111,9.1282704,bar,,,,,
+Bar Plaza,45.4660495,9.1278170,bar,,,+390236530238,,
+Birrificio Lambrate,45.4857051,9.2315149,pub,,https://www.birrificiolambrate.com/,+39 02 70638678,"Mo 00:00-02:30; Tu 18:00-24:00; We-Su 00:00-02:30,18:00-24:00","Via Privata Adelchi 5, 20131, Milano"
+Al Confine,45.4564846,9.1707023,pub,,,,,"Viale Coni Zugna 59, 20144, Milano"
+Yguana,45.4589965,9.1824539,bar,,,+39 02 8940 4195,,"Via Papa Gregorio Quattordicesimo 16, 20123, Milano"
+Au Vieux Strasbourg,45.4736675,9.2342317,pub,barbecue;burger,,+39 02 70630062,Mo-Sa 07:00-02:00; Su 18:00-00:00,"Via Gaetano Strambio 29, 20133, Milano"
+Bricks,45.4489995,9.1775600,pub,,,+39 02 84080172,"Mo-Fr 12:00-14:30, 17:00-02:00, Sa-Su 17:00-03:00",
+Stalingrado,45.4867785,9.1602382,pub,,,,,
+Osteria delle Erbe,45.5146215,9.2111879,pub,,,,,
+Chiosco Bibite,45.5176338,9.1196459,cafe,,,,,
+Cafè Vigorelli,45.4828111,9.1584389,cafe,,,,,
+My Life Cafè,45.4834836,9.1613358,bar,,,,,"Corso Sempione 63, 20149, Milano"
+55 Milano,45.4859082,9.1604500,bar,,https://www.55milano.com/,+39 02 34936616,"Mo-Su 00:00-03:00,18:00-24:00","Via Piero della Francesca 55, 20154, Milano"
+Calice Bullona,45.4852926,9.1619326,bar,,,,,
+Il Gattopardo,45.4852331,9.1614442,nightclub,,https://www.ilgattopardomilano.com/,,,"Via Piero della Francesca 47, 20154, Milano"
+L'Angolo,45.4860412,9.1634378,bar,,,,,"Via Losanna 15, 20154, Milano"
+Il Caffè di Via Fauche',45.4850877,9.1651791,bar,,,,,
+Ritratto di Caffè,45.4839621,9.1633457,cafe,,,,,
+Express Cafè,45.4810212,9.1618768,cafe,,,,,
+Mister Bar,45.4808006,9.1613999,bar,,,,,"Via Domodossola 21, 20145, Milano"
+Millenium café,45.4807068,9.1604412,cafe,,,,,
+Sempione 49,45.4818260,9.1635061,cafe,,,,,
+Paradise Caffè,45.4872784,9.1614404,bar,,,,,
+Time Out,45.4864124,9.1590177,cafe,,,,,
+Riviera,45.4863254,9.1595877,bar,,,,,
+Flash Bar,45.4825026,9.1667512,cafe,,,,,
+Crazy Moon,45.5085673,9.1330956,bar,,,,,"Via Antonio Mambretti 24, 20157, Milano"
+Happy Hour,45.5169878,9.1203497,bar,,,+39023567193,,"Via Giovanni Battista Grassi 67, 20157, Milano"
+Mac 111,45.4974144,9.1528452,bar,,,,,
+Bar Castelli,45.4991590,9.1504076,cafe,,,,,
+Al 37,45.4871210,9.1620329,cafe,,,,,
+Malt,45.4871573,9.1671499,pub,,,+390233602855,,"Via Cenisio 37, 20154, Milano"
+Whisky Bar,45.4831171,9.1640946,pub,,,,,
+Bar Mauri,45.4836238,9.1657835,bar,,,,,
+Peter Pan Cafè,45.4995952,9.1492329,cafe,,,,,
+Bar Boschetti,45.5122972,9.1275499,bar,,,,,
+Frizzi & Lazzi,45.4455769,9.1783550,pub,sandwich,,+39028378228,Mo-Su 18:30-02:00,"Via Evangelista Torricelli 5, 20136, Milano"
+Largo's caffe,45.4807579,9.2364606,pub,,,+39 02 8417 5116,"Tu-Fr 07:00-02:00; Sa 06:00-15:00, 19:00-02:00; Su 08:00-23:00",Via Valvassori Peroni 61
+Bar Tiffany,45.4516696,9.1868555,cafe,,,,,
+Giodocet,45.4508039,9.1901641,cafe,,,,,
+Bar Bocconi,45.4507400,9.1906166,bar,,,,,
+Lino's Coffe,45.4509808,9.1895706,cafe,,,,,
+Venti 136,45.4515350,9.1874570,cafe,,,,,
+Green Mill,45.4482032,9.1867801,cafe,,,,,
+JJ's Corner,45.4811424,9.2352962,pub,,,+39 02 70600004,"Su-Th 17:30-01:00, Fr,Sa 17:30-02:00",
+Gelateria Delice,45.4710468,9.2287397,cafe,,,,,
+Barbarian's,45.4706960,9.2282944,pub,,,,,"Via Giovanni Briosi 9, 20133, Milano"
+Bar One,45.4592793,9.1924013,bar,,,+390258304472,,"Via Pantano 19, 20122, Milano"
+DrinKasi,45.4507082,9.1779486,pub,,https://drinkasi.webnode.it,,Mo-Su 18:00-02:00,"Via Ascanio Sforza 9, 20136"
+La Belle Alliance,45.4462528,9.1792204,pub,snack;burger,https://www.labellealliance.it,+39 02 9924 6410,Su-Th 18:00-01:00; Fr-Sa 17:00-02:00,"Via Evangelista Torricelli 1, 20136, Milano"
+Amore Sicilian Bakery,45.4716994,9.1670469,cafe,,,+39 02 84249579,,"Largo Quinto Alpini 7, 20123"
+Bhangrabar,45.4762187,9.1713186,pub,indian,https://bhangrabar.it/,+39 02 34934469,"Mo-Su 18:00-02:00; Dec 24,25,31 off","Corso Sempione 1, 20145, Milano"
+Deseo,45.4765344,9.1716956,bar,,https://www.deseomilano.com/,+39 02 315164,,"Piazza Sempione 8, 20145"
+Jazz Cafè,45.4772869,9.1707285,bar,,https://www.jazzcafe.it/,+39 02 33604039,,"Corso Sempione 8, 20154, Milano"
+Pils Pub,45.4773077,9.1746406,bar,,https://www.pilspub.com/,+39 02 34592858,,"Via Agostino Bertani 2, 20154, Milano"
+Carpe Diem Bar,45.4772324,9.1745466,cafe,,,,,
+Living,45.4763635,9.1731640,bar,,https://www.livingmilano.com/,,,"Piazza Sempione 2, 20154, Milano"
+Pandemus,45.4777967,9.1740196,cafe,,,,,
+Breezy Bar,45.5008453,9.1336806,cafe,,,,,
+Globe,45.4717734,9.1442582,bar,,,,,
+Granaio,45.4659229,9.1856596,cafe,,,+39 02 89092240,,"Via Dante 2n13, 20121, Milano"
+Chocolat,45.4676673,9.1740861,cafe,ice_cream,https://www.chocolatmilano.it/,+39 02 48100597,,"Via Giovanni Boccaccio 9n03, 20123, Milano"
+Vanilla,45.4901906,9.1508399,bar,,,,,"Viale Certosa 41, Milano"
+La bottega del caffe' (Marinella),45.4575857,9.1730117,pub,,,+390249531425,,"Via Cesare da Sesto 14, 20123, Milano"
+King's Pub,45.4513229,9.1776869,pub,,https://kingspub.it/,+39028361264,Mo-Fr 18:00-02:00; Sa 16:00-02:00; Su 12:00-02:00,"Alzaia Naviglio Pavese 8, 20143, Milano"
+La Rocchetta Caffe Bistrot​,45.4675119,9.1765180,cafe,,https://www.larocchettacaffe.it/,+390278623287,,"Via Giosuè Carducci 2, 20123, Milano"
+Teorema cafè,45.4535372,9.2147861,cafe,,,,,
+Gran Caffè Bonnet,45.4827112,9.1850579,cafe,,,,,"Via privata Nino Bonnet 11a, 20154, Milano"
+New Brand Cafè - Spritzeria - Bubble Tea,45.4768891,9.2252212,cafe,italian;bubble_tea,,+39 02 7063 3536,Mo-Fr 07:00-20:30; PH closed; Sa 17:00-21:00,"Via Giovanni Pascoli 55, 20133, Milano"
+feelgood,45.4620731,9.2198300,bar,,,,,
+Arcadia Caffe Self Service,45.4728226,9.1922018,cafe,,,,,"Via Fatebenefratelli 22, 20121, Milano"
+Bar Valdagno,45.4608183,9.1117495,cafe,,,,,"Via delle Forze Armate 212, 20152, Milano"
+Tabaccheria Amico Bar Alex,45.4639035,9.0924912,cafe,,,,,"Via Francesco Rismondo 56, 20153, Milano"
+J & M bar,45.4604615,9.1170718,cafe,,,,,"Via delle Forze Armate 179, 20152, Milano"
+Dada Bar,45.4613624,9.0903421,cafe,,https://www.facebook.com/dadabaggio/,,,"Via delle Forze Armate 410, 20152, Milano"
+Da Carlo,45.4608288,9.0937235,cafe,,,,,
+Bar Siena,45.4657404,9.1365998,cafe,,,,"Mo-Sa 06:30-20:30, Su 07:30-13:30","Piazzale Siena 2, 20146, Milano"
+happy bar,45.4602383,9.1121259,cafe,,,,,
+Cris Bar,45.4629009,9.0872921,cafe,,,,,
+Famil Bar,45.4625096,9.0870024,cafe,,,,,
+Bar Sorriso,45.4625474,9.1336860,cafe,,,,,
+Bar Torrefazione,45.4626175,9.1333419,cafe,,,,,
+Chicchi e Grappoli,45.4606751,9.0950499,cafe,,,,,
+Bar Max,45.4649689,9.0913924,cafe,,,,,
+My Coffee Bar,45.4609803,9.0942818,cafe,,,,,"Via Francesco Rismondo 2, 20152, Milano"
+Small Café,45.4938763,9.1848747,cafe,,,+39 02 6687620,,"Via Carlo Farini 71, Milano"
+Shatar Pub,45.4726581,9.1429735,pub,,http://www.shatarpub.com,+393662528078,,"Via Daniele Ricciarelli 8, 20148, Milano"
+Good Fellas,45.4690024,9.1847868,cafe,,,,,
+R113 Ripa's Drink,45.4485224,9.1604106,bar,,,,,"Ripa di Porta Ticinese 113, 20143, Milano"
+Albatros,45.4859466,9.2298942,bar,,,,,
+Caffè caviglia,45.4421086,9.2304175,cafe,,,,,
+Nowhere,45.4560079,9.1817790,cafe,,https://nowherecoffeeroasters.com,,"Tu-Fr 08:30-16:00; Sa,Su 09:00-16:00; Mo off","Via Vetere 14, 20123, Milano"
+Svapo web,45.5075977,9.2043976,cafe,,,,,
+Bar Dolomiti,45.5025497,9.2244785,bar,,,,,"Via Policarpo Petrocchi 34, 20127, Milano"
+Snoopy Bar 2,45.5033336,9.2241110,bar,,,,,"Via Dolomiti 11, 20127, Milano"
+ToTap Bar,45.4604309,9.1574839,bar,,,,,
+Caffè Milani,45.4783641,9.2028489,cafe,,,,,
+Flute bar Milano,45.4916738,9.1887287,bar,,,,,
+Lost in Town,45.4839367,9.1640319,bar,,http://www.lostintown-milano.com/,,,"Via Piero della Francesca 38, 20154, Milano"
+Perché no?,45.5235523,9.2118257,bar,,,,,
+Bar Dei Bossi,45.4677603,9.1870275,cafe,,,,,"Piazzetta Maurilio Bossi 4, Milano"
+Bar 2,45.4507477,9.1970381,bar,,,,,
+Bar Chicco,45.4434837,9.1390721,cafe,,,,,
+Bar Bianco,45.4735526,9.1775313,bar,,https://www.barbiancomilano.com/,+39 02 8699 2026,Mo-Su 09:00-22:00,"Viale Ibsen 4, 20121, Milano"
+Caffè Milano,45.4945545,9.2194549,cafe,,,,,
+Cheese,45.4591129,9.1821683,bar,,,,,
+20 - Twenty,45.4596949,9.1821790,bar,,,,,
+La Hora Feliz,45.4594315,9.1828120,bar,,,,,Via San Vito 5
+il Punto Dolce Salato,45.4858138,9.2375165,cafe,,,,Mo-Fr 06:00-19:00; Sa 07:00-18:30; Su 08:00-18:30,
+New York Lounge,45.4864207,9.2014242,bar,,,,,
+Bab-Al Yemen,45.4867231,9.2016010,bar,,,,,
+Caffè Petrarca,45.4852293,9.1990612,cafe,,,,,"Via Gustavo Fara 28, 20124, Milano"
+Carpe Diem,45.4358912,9.2402861,bar,,,,,
+Nuova Milano,45.4380288,9.2436236,pub,,,+39 02 5162 1588,"Tu-Th 11:00-14:30,18:00-01:00, Fr 11:00-14:30,18:00-02:00, Sa 11:00-14:30,17:00-02:00, Su 11:00-14:30,17:00-01:00","Via Bruno Cassinari 25, 20138, Milano"
+Caffè Mood,45.4369113,9.2418632,cafe,,,,,
+Caffè Cinquecento,45.5151171,9.2130089,bar,,,,Mo-Su 07:00-24:00,
+Pan cafè,45.5155043,9.2115605,bar,,,,Mo-Sa 06:30-21:00,"Viale Piero e Alberto Pirelli 14, 20126, Milano"
+3D Bar,45.5199890,9.1689718,bar,,,,,
+Astesani41,45.5198725,9.1695316,cafe,,,,,Via Alessandro Astesani 41
+Non solo caffè,45.5201239,9.1706593,cafe,,,,,Via Vincenzo da Seregno
+Petit bar,45.5207014,9.1709253,cafe,,,,,Via Vincenzo da Seregno
+Malù Bar,45.4392043,9.2162831,cafe,,,,,
+Bar Lisi,45.4387658,9.2161785,cafe,,,,,
+Bar Tabacchi,45.4389314,9.2161303,cafe,,,,,
+Bar William,45.4461760,9.1243435,bar,,,,,"Via Lorenteggio 238, 20147, Milano"
+Art Factory,45.4856666,9.2107020,cafe,,http://www.hc-artfactory.it/,+39 02 6694578,,"Viale Andrea Doria 17, 20124, Milano"
+Ciu's,45.4817660,9.2136004,bar,,,,,"Via Gaspare Spontini 6, 20131"
+Taveggia,45.4633048,9.1990533,cafe,,,,Mo-Fr 07:00-20:30; Sa 08:00-20:30; Su 08:00-15:00,
+Al Mio Bar,45.5286878,9.1631096,cafe,,,,,
+Birreria Stella,45.4685247,9.2262905,pub,,,,,
+Bar Basso,45.4767746,9.2175792,cafe,,http://www.barbasso.com/,+39 02 29400580,,"Via Plinio 39, 20129, Milano"
+Bar dei Sogni,45.4779670,9.2232547,cafe,,,,,
+Bar Sand,45.4696380,9.2299117,bar,,,,,Via Gaspare Aselli 7
+La liberazione,45.4633974,9.2303916,bar,,,+39 02 83641757,"Mo-Fr 12:00-15:00, 18:00-01:00; Sa 18:00-01:00","Via Lomellina 14, 20133, Milano"
+Bar Skuisito,45.4815406,9.2278238,cafe,,,+39 02 7063 8397,"Mo-Fr 12:00-15:00,19:00-23:00; Sa 19:00-24:00; Su off",
+Beverly,45.4807246,9.2243456,cafe,,,,"Mo-Fr 06:00-22:00; Sa,Su 06:30-22:00",
+Caffé Scaringi,45.4813601,9.2262137,cafe,,,,Th-Tu 07:00-20:00,
+CITRIX,45.4819786,9.2297844,cafe,,,,,
+Birrificio Lambrate,45.4796764,9.2344712,pub,burger;sandwich;sausage,http://birrificiolambrate.com,+39 02 8496 1890,"Mo-Fr 12:00-02:00, Sa 19:00-02:00; Su off","Via Camillo Golgi 60, 20133, Milano"
+Harp Pub Guinness,45.4772546,9.2255218,pub,,https://harppubguinness.eatbu.com,+39 02 36686194,"Mo-Fr 11:00-24:00; Sa 00:00-01:00, 18:00-24:00; Su 00:00-01:00","Piazza Leonardo da Vinci 10, 20133, Milano"
+Gran Galà,45.4708070,9.2299368,bar,,,+390270123848,Mo-Sa 07:00-24:00; Su 08:00-15:00,"Via Gaspare Aselli 25, 20133, Milano"
+Bar 4 Strade,45.5112697,9.2152238,cafe,italian;sandwich,,,,"Via Bernardo Rucellai 50, 20126, Milano"
+Caffè Carducci,45.4623963,9.1738321,cafe,,,+39028900440,Mo-Sa 06:30-20:00; Su off,"Via San Vittore 2, 20123, Milano"
+Queen's Bar Tabacchi,45.4624886,9.1735413,cafe,,https://www.queensbartabacchi.com/,+390289013944,Mo-Sa 06:00-20:00,"Via Giosuè Carducci 36, 20123, Milano"
+Settimio caffè e bistrot,45.4660172,9.1624720,cafe,,,,Mo-Fr 07:00-21:00; Sa 08:00-21:00; Su 09:00-21:00,"Largo Settimio Severo 1, 20144, Milano"
+Tabaccheria family café,45.4551759,9.2125108,cafe,,,+39 02 54116397,,Via Comelico 11
+Lo Sharman,45.4636865,9.1971216,cafe,,,+39 328 716 9702,,"Via Felice Cavallotti 17, 20122"
+Bar Brera,45.4723487,9.1874481,cafe,,,+39 02 877091,,"Via Brera 23, 20121"
+Jamaica,45.4725976,9.1875440,cafe,,,+39 02 876723,,Via Brera 32
+O' Connell Country Pub,45.4696795,9.1879449,pub,burger;snack,https://www.oconnellirishpubmilanobrera.it,+39 02 72094888,"Mo-Fr 17:00-02:00, Sa-Su 12:00-02:00","Via Brera 3, 20121, Milano"
+el BIRòCC,45.4691055,9.1881644,cafe,,,,,"Via Giuseppe Verdi 13, 20121, Milano"
+La Cararina,45.4733193,9.2315944,bar,,,,,"Via Gaetano Strambio 6, 20133"
+Cafè de Flore,45.4733193,9.2305899,bar,,,,,
+La Statale Café,45.4755528,9.2341070,cafe,,,,Mo-Fr 07:30-16:00,
+Toki Cafe,45.4825801,9.2297495,cafe,,,,,
+New York Bar,45.4818073,9.2321779,cafe,,,,,
+East End,45.4883457,9.2541880,pub,,,,,
+Non Solo Caffé,45.4827558,9.2297642,cafe,,,,,Via Teodosio 3
+Sugar,45.4499750,9.1673900,cafe,,,,,
+Grano & Caffè,45.4765424,9.2115667,cafe,,,,,
+Rita's Tikiroom,45.4504917,9.1695248,bar,,https://www.ritastikiroom.com/it/,+390283555017,Tu-Su 18:00-02:00; Mo off,"Ripa di Porta Ticinese 69, 20143, Milano"
+Tempio Caffè,45.4733904,9.1951551,cafe,,,,,
+Pasticceria Bastianello,45.4659463,9.1990518,cafe,,https://www.bastianello.com/,+39 02 76317065,,"Via Borgogna 5, 20122, Milano"
+Bar Durante,45.4897478,9.2237285,cafe,,,,,
+Cavallo,45.4874609,9.2200461,cafe,,,,,
+Bœucc,45.4755690,9.1941954,cafe,,,+39 02 7602 2880,"Mo-Fr 11:00-15:00,18:00-22:00; Sa-Su off","Largo Guido Donegani 3, 20121, Milano"
+Bar Leoncavallo,45.4903670,9.2247833,cafe,,,,,
+Acquarius,45.4867171,9.1983187,cafe,,,,,
+Mercurio,45.4868054,9.2185479,cafe,,,,,"Via Andrea Costa 3, 20131, Milano"
+Top Down Nightclub,45.4616524,9.1909810,nightclub,,,,,
+Mannini,45.4618904,9.1902001,cafe,,,,,
+Actors' Studio Cafe,45.4655298,9.1761146,cafe,,https://it-it.facebook.com/actorstudiocafe/,+390236586357,Mo-Th 09:00-00:00; Fr 09:00-01:00; Sa 21:00-02:00; Su off,"Via Terraggio 11, 20123, Milano"
+Traffic Lights,45.5000539,9.2210548,cafe,,,,,
+Gran Bar Tunisia,45.4796918,9.1998148,cafe,,,+39 02 6555254,,"Viale Tunisia 41, 20124, Milano"
+L'elisir,45.4826700,9.2352774,bar,,,,,
+Blender,45.4686909,9.2235692,pub,,,+39 02 7490200,Mo-Su 16:00-02:00,Piazzale Susa 7
+Brasserie Bruxelles,45.4787442,9.2167302,pub,burger;nachos;piadina,https://www.brasseriebruxelles.eu,,Mo-Su 17:00-02:00,"Viale Abruzzi 33, 20131, Milano"
+Bar tabacchi Jackpot,45.4601325,9.0968349,cafe,,,,,"Via delle Forze Armate 395, 20152, Milano"
+Bar Zurigo,45.4573809,9.1220797,cafe,,,,,"Via Angelo Inganni 103, 20147, Milano"
+Fashion Café,45.4732625,9.1876764,cafe,,,,,"Piazza San Marco 1, Milano"
+Radicana Caffè,45.4807597,9.2311465,bar,,,,,
+PuntoGrill,45.4857021,9.2376118,cafe,,,,Mo-Fr 06:30-19:30,
+Gran Caffè Visconteo,45.4640696,9.1884114,cafe,,,,,
+Bar Duomo,45.4646084,9.1884203,cafe,,,,,"Piazza del Duomo 17, 20121, Milano"
+La Belle Aurore,45.4719252,9.2145132,pub,,,,"Mo-Tu,Th 10:00-22:30; Fr-Sa 10:00-23:30; Su 10:00-22:00",
+Bar Five,45.4847626,9.2301415,bar,,,,,
+Bar Tavola Calda Lilly,45.4848721,9.2293464,cafe,,,,,
+Carpe Diem,45.4849512,9.2080145,cafe,,,+39 02 6698 8353,,"Via Mauro Macchi 44, 20124, Milano"
+Il Mago di Oz,45.4805943,9.2135529,cafe,,,,Mo-Su 06:00-13:00,
+Il caffé del tabaccaio,45.4815675,9.2442286,cafe,,,,,
+Gypsian Club,45.4793030,9.2469100,pub,,,,,"Piazza Vigili del Fuoco 7, 20134, Milano"
+Bar Flaminio,45.4801331,9.2425863,cafe,,,,,
+Il bancale,45.4805141,9.2341738,bar,,,,Mo-Fr 07:00-20:30; Sa 07:00-16:00,
+Bar Pino,45.4826606,9.2421140,cafe,italian,,,Mo-Sa 09:00-19:30,
+Chicco Caffè,45.4829537,9.2408275,cafe,,,,,
+Lily,45.4829291,9.2412731,bar,,,,,
+Speranza,45.4828082,9.2416557,cafe,,,,,
+Hernest Café,45.4850744,9.2315908,pub,,,,,"Via Vallazze 107, 20131, Milano"
+Acli,45.4817884,9.2425864,bar,,,,,
+Caffé del borgo,45.4840639,9.2423960,cafe,,,,,
+Marlé,45.4828095,9.2424900,cafe,regional,,,,
+Dolci Storie,45.5009774,9.1667199,cafe,coffee_shop;ice_cream;italian,,+39 02 3006 6598,"Su, Tu-Th 07:00-22:30; Fr-Sa 07:00-23:00","Via degli Imbriani 47-51, 20158"
+Solar Bar,45.4588929,9.1729422,cafe,,,,,"Via Ariberto 19, 20123, Milano"
+Lab Milano,45.4639962,9.2071548,bar,,,,,"Viale Premuda 7, Milano"
+Torrefazione,45.4550526,9.2158714,cafe,,,,,
+Vanilla Gelati Italiani,45.4646083,9.1936225,cafe,ice_cream,https://www.vanilla-gelati-italiani.it/,,,Piazzetta Pattari 2
+Bar della Crocetta,45.4564618,9.1953886,cafe,sandwich,,,,"Largo della Crocetta 1, 20122, Milano"
+Epoca Tango,45.4421048,9.1411402,nightclub,,,,,"Via privata Parenzo 7, 20143, Milano"
+Nuovo Millenio,45.4490502,9.2060582,cafe,,,,,
+Caffè Puro,45.4469857,9.2045027,cafe,,,,,
+JustCafé,45.4819393,9.2278879,pub,,,,,
+Disciplini Café e Tabacchi,45.4586416,9.1846777,cafe,,,,,
+Dream's Bar,45.5077170,9.2033775,cafe,,,,Mo-Su 06:00-22:30,"Via Salvatore Pianell 45, 20125, Milano"
+Rocket,45.4389004,9.1831120,nightclub,,,,,Via Giovanni Pezzotti 52
+Spiller,45.4911256,9.1859892,pub,,https://spillerbirrerie.it,,,
+Bar Lucia,45.5138687,9.1735052,cafe,,,,,
+Mama's,45.4419613,9.1211758,bar,,,,Mo-Fr 07:00-17:00; Sa 08:00-14:30,"Via Francesco Gonin 56, 20147, Milano"
+Isola Della Birra,45.4897114,9.1853194,pub,,https://www.isoladellabirra.com/,,,"Via Medardo Rosso 18, 20159, Milano"
+One Love Bar,45.4763130,9.2058479,cafe,,,,,
+Cafè Soleil,45.4961841,9.1336808,bar,,,,,
+Caffè della terra,45.4703948,9.2006484,cafe,,,,,
+Luca's Bar,45.4575138,9.1811174,bar,,,+390258100409,,"Corso di Porta Ticinese 51b, 20123, Milano"
+Machan Pub,45.4452943,9.2131972,bar,,,,,
+Bar Girasole Tabacchi,45.4443722,9.2146724,cafe,,,,,
+Lucky Bar Paninoteca,45.4439582,9.2155414,cafe,,,,,
+Karma,45.4330410,9.2311594,nightclub,,http://www.karmamilano.it,+39 346 383 1499;+39 339 409 0542,,"Via Fabio Massimo 36, 20139"
+Bar Morgagni,45.4788621,9.2134931,cafe,,,,,
+Tabbacbria,45.5011572,9.1013892,bar,,,,,
+Blanco,45.4766419,9.2113703,cafe,,http://www.blancomilano.it,+39 02 29405284,,"Via Giovanni Battista Morgagni 2, Milano"
+Bar Giardino,45.4303202,9.2036656,cafe,,,,,"Via Val di Sole 22, 20141, Milano"
+Ciapa Sü,45.4959452,9.2205157,cafe,,,,,
+Bar Bijoux,45.4955503,9.2197492,cafe,,,,,"Viale Monza, Milano"
+Milionario,45.4953615,9.2196908,cafe,,,,,"Viale Monza 76, Milano"
+Dito Divino,45.4652176,9.1840313,bar,,https://www.ditodivino.com/,+39 02 89096532,,"Via Gaetano Negri 8, 20123, Milano"
+Happy Bar,45.4960869,9.2075908,cafe,,,,,
+Cambridge,45.4676716,9.2230517,pub,,,,,
+Gate,45.4943778,9.1819083,nightclub,,https://www.gatemilano.it/,,,"Via Valtellina 21, 20159, Milano"
+Pico Brew Station,45.4451963,9.1766917,pub,sandwich,https://www.picobrew.it/,,"Su-Th 17:30-01:00, Fr,Sa 17:30-02:00","Via Ascanio Sforza 63, 20136, Milano"
+Roxanne,45.4514589,9.1781270,cafe,,,,,"Via Ascanio Sforza 3, 20136, Milano"
+Locanda da Vinci,45.4455537,9.1763043,pub,,,,,"Alzaia Naviglio Pavese 52, 20143, Milano"
+Meli,45.4453710,9.1767194,bar,,,,,"Via Ascanio Sforza 63, 20136, Milano"
+Bar Tabacchi SI & GA di Lupini Graziella,45.4489991,9.1771151,cafe,,,+39 02 36514963,,"Alzaia Naviglio Pavese 24, 20143, Milano"
+Ponte Vecchio Pub,45.4491641,9.1771374,pub,,,,,"Alzaia Naviglio Pavese 24, 20143, Milano"
+Maga Furla,45.5095876,9.2118674,pub,,,,"Su-Th 20:00-02:00, Fr,Sa 20:00-03:00","Via Roberto Cozzi 50, 20125, Milano"
+JamM,45.4847463,9.2158904,cafe,,,,,
+Samarcanda,45.4836754,9.2176338,bar,,,,,
+Spritz,45.4519849,9.1765944,bar,,https://www.leggimenu.it/menu/spritznaviglimilano,+390283390192,Mo-Su 18:00-02:00,"Ripa di Porta Ticinese 9, 20143, Milano"
+La Ringhiera,45.4520986,9.1772402,pub,,https://www.laringhierapub.it/,+390284193359,Mo-Su 15:30-02:00,"Ripa di Porta Ticinese 5, 20143, Milano"
+Momo,45.4517024,9.1753160,bar,,,+39 02 8357433,,"Ripa di Porta Ticinese 23, 20143, Milano"
+Bar Loreto Uno Tabacchi,45.4878678,9.2169986,cafe,,,,Mo-Su 06:00-00:00,
+Diana Pub,45.4536701,9.2155980,pub,,,,,"Viale Umbria 58, Milano"
+Caffè su e giù,45.4826478,9.1845526,cafe,,,,,"Via Tito Speri 7, 20154, Milano"
+Dreams Cafè,45.4837671,9.1826933,cafe,,,,,"Via Pietro Maroncelli 19, 20154, Milano"
+Tocqueville,45.4824121,9.1864777,nightclub,,http://www.tocqueville13.it/,+39 335 6819631,,"Via Alessio di Tocqueville 13, 20154, Milano"
+11 Clubroom,45.4824216,9.1868074,nightclub,,https://www.11milano.it/,+39 02 89281711,,"Via Alessio di Tocqueville 11, 20154, Milano"
+Bar Girasole,45.5109651,9.2028142,cafe,,,,,Viale Fulvio Testi
+Caipiroska,45.4925126,9.2293459,cafe,,,,,
+Bar latteria,45.4913481,9.2301084,cafe,,,,,
+Caffetteria,45.4412585,9.2220406,cafe,,,,,
+Massaua,45.4781452,9.2067147,cafe,,,,"Mo-Sa 08:00-17:00, 19:00-23:30","Via Alessandro Tadino 17, 20124, Milano"
+Meravigli Caffè,45.4658742,9.1828833,cafe,,,,,"Via Meravigli 12, 20123, Milano"
+Piccolo Bistrot,45.4830192,9.2341523,cafe,,,,Mo-Fr 07:00-20:00; Sa 07:00-13:00,"Via Antonio Grossich 29, 20131, Milano"
+Elisir Cafè,45.4823790,9.2341617,cafe,italian;sandwich;coffee_shop,,,,"Via Antonio Grossich 17, 20131, Milano"
+jackpot 2,45.4834108,9.2333944,cafe,,,,,
+Panificio Danelli,45.4854249,9.2333838,cafe,breakfast;pizza;sandwich,,+39 02 7060 0964,"Mo-We 07:00-14:00, 16:00-19:30; Th-Sa 07:00-14:00, 16:00-21:00","Piazza Pietro Gobetti 8, 20131, Milano"
+Lux Bar,45.4845614,9.2053064,cafe,,,+39 02 6692288,,"Piazza Luigi di Savoia 2, 20124, Milano"
+AnticCùccá,45.4657637,9.1803502,cafe,,,+39 02 72011044,,"Via San Giovanni sul Muro 18, 20121, Milano"
+Ravizza,45.4661960,9.1920765,cafe,,,+39 02 87072630,,"Via Ulrico Hoepli 3, 20121"
+GB Bar,45.4659808,9.1919867,cafe,,,,,
+Bar Punto di ristoro,45.4891994,9.2322816,cafe,,,,,
+Tatanka,45.4897073,9.2322090,bar,,,,We-Su 18:00-02:00,"Via Emilio Olivari 3, 20131, Milano"
+Bar Nadia,45.4893604,9.2316138,cafe,,,,,
+Easy Bar,45.4892212,9.2301115,cafe,,,,,
+La Siciliana dal 1956,45.4886880,9.2296635,cafe,,https://www.lasicilianadal1956.it/,+39 02 3966 4047,Mo off; Tu-Su 07:00-20:00,Via Teodosio 85
+Blue bar,45.4884538,9.2301118,cafe,,,,,
+B-Time Cafe,45.4856110,9.2348922,cafe,,,,,
+Classico,45.4826743,9.1864811,bar,,,,,"Via Alessio di Tocqueville 9, 20154, Milano"
+Galleria Meravigli Bistrot,45.4658238,9.1843323,cafe,,https://www.galleriameravigli.com/,+39 02 39831231,,"Via Meravigli 3, 20123, Milano"
+Just,45.4822475,9.1875427,cafe,,http://www.justcorsocomo.it/,,,"Corso Como 12, 20154, Milano"
+Spiller,45.4621982,9.1929566,bar,,https://www.spillerbirrerie.it/,+390238299987,,"Via Larga 8, 20122, Milano"
+Gran Caffè Cimmino,45.4629794,9.1944690,cafe,,,+39028051663,,"Via Larga 2, 20122, Milano"
+Pokerbar,45.4626250,9.1948008,cafe,,,,,"Piazza Santo Stefano 5, 20122, Milano"
+Barghilè,45.4979248,9.2082287,bar,,,,,
+L'incontro,45.4816531,9.1779801,cafe,,,,,"Via Paolo Sarpi 16, 20154, Milano"
+Il gusto,45.4824328,9.2302556,cafe,,,,,
+Bar Mercurio,45.4629383,9.1886235,cafe,,http://www.barmercurio.it/,+39 02 8056153,Mo-Sa 05:30-20:30,"Via Dogana 3, 20123, Milano"
+Caffé dell'Opera,45.4685246,9.1912806,cafe,,,,,"Via Alessandro Manzoni 12, 20121, Milano"
+Murphy's Law,45.4550132,9.1665851,pub,,,+39 02 8324 2151,Mo-Fr 12:00-02:00; Sa-Su 13:00-02:00,"Via Montevideo 3, 20144, Milano"
+Wood,45.4416301,9.2011103,cafe,,,,,
+Bar Settembrini,45.4832415,9.2073336,cafe,,,,,
+Cafè Tablè,45.4996980,9.2262160,cafe,,,+39 02 2896720,,"Via Adelaide Bono Cairoli 22, 20127, Milano"
+PS Cocktail & Beer,45.4507816,9.1775522,bar,,,+39 348 3148001,,
+Green Line,45.4499326,9.2053097,cafe,,,,,
+Caffè Spadari,45.4638786,9.1865269,cafe,,,,,"Via Cesare Cantù 7n01, 20123, Milano"
+Bricco Cafè,45.4841912,9.1872671,cafe,coffee_shop,,,Mo-Su 05:00-20:00,"Piazza Sigmund Freud 1, 20154, Milano"
+La casa dell'Habana,45.4591709,9.2136753,cafe,,,,,
+Bar Vitaminas,45.5029642,9.2273187,cafe,,,+39 02 678908,,"Via Policarpo Petrocchi, 20127, Milano"
+Emy bar,45.4982259,9.1844257,cafe,,,,,
+Bar Ristorante Caffetteria Montello,45.4806054,9.1810444,cafe,,,,,"Viale Montello 10, Milano"
+Al Panino Pub,45.4805218,9.1852205,pub,,,,"Tu-Th 09:00-03:00; Fr, Sa 09:00-04:00; Su 15:00-03:00; Mo 09:00-16:00","Viale Francesco Crispi 5, 20121, Milano"
+Metro Cubo,45.4800513,9.1863597,bar,,,,,"Corso Giuseppe Garibaldi 127, 20121, Milano"
+Da Orient,45.4807724,9.1810690,bar,,,,,"Viale Montello 8, 20154, Milano"
+Bar della Stazione,45.4871063,9.2032484,cafe,,,,,Via Giovanni Battista Sammartini 1
+Chiosco Da Pippo,45.4759840,9.1977576,cafe,,,,,
+Prince Cafe,45.4907784,9.1663998,cafe,,,,,
+La Corte,45.4489030,9.1696410,cafe,,,+39 02 8323284,,
+668 cafè,45.4984452,9.2299029,cafe,,,,,
+Bistrot Duomo,45.4635320,9.1897949,cafe,,,,,
+Bistrot Milano Centrale,45.4857538,9.2046767,cafe,,,,,
+Caffetteria Affori,45.5215396,9.1677002,cafe,,,,,"20161, Milano"
+Bar Liberty,45.4916617,9.1956374,cafe,,,,,
+Bar Memory,45.4910779,9.1955866,cafe,,,,,"Via Ippolito Rosellini 26, 20124, Milano"
+Bukowski Pub,45.4565505,9.1894413,bar,,,+39 02 58305955,,
+Good Morning Caffè,45.4556454,9.1875285,cafe,,,+39 392 1942594,,"Corso Italia 31, 20122, Milano"
+Il Caffè Ambrosiano,45.4887210,9.1912680,cafe,ice_cream,,,,"Piazzale Lagosta 4, 20159, Milano"
+Blu Bar,45.4745644,9.1401621,cafe,,,,,
+Scudo Cafè,45.5037844,9.1650880,cafe,,,,,"Via Giuseppe Candiani 98, 20158, Milano"
+Bar Principe,45.4606665,9.1864151,bar,,,+39 02 8692513,,
+My Chef Briciole Bar,45.4582382,9.1879179,bar,,,+39 02 89093943,Mo-Sa 07:00-21:00; Su 08:00-21:00,
+Nicol,45.4582773,9.1875099,bar,,http://www.nicol.it/,+39 02 804949,,"Corso Italia 14, 20122, Milano"
+Bar Isola,45.4866123,9.1904905,cafe,,,,,"Via Federico Confalonieri 9, 20124, Milano"
+Grezzo Raw Chocolate,45.4864655,9.1883675,cafe,,http://grezzorawchocolate.com,,,"Via Pastrengo 2, 20159, Milano"
+Regional Caffè,45.4874292,9.1932303,cafe,,,,,
+Orlando,45.4636423,9.2300088,bar,,,,,
+Paperoga,45.4648651,9.2300155,pub,,,,,
+Cristal Café,45.4625476,9.2281885,bar,,,,,
+RED la Feltrinelli,45.4836952,9.1899586,cafe,,https://www.lafeltrinelli.it/punto-vendita/milano/red-milano-porta-nuova/3502,+39 0265580153,"Mo-Fr 08:00-21:00; Sa 09:00-22:00; PH,Su 09:00-21:00","Piazza Gae Aulenti 3, 20154, Milano"
+Les Rouges,45.4533243,9.2089365,bar,,,,,
+Prestin,45.4783922,9.1849433,bar,,,,,"Largo La Foppa 5, 20121, Milano"
+Pandaneus,45.4784239,9.1847380,cafe,,https://www.pandenus.it/it/store/pandenus-largo-la-foppa-5/,+39 02 65560824,Mo-Su 07:00-24:00; Sa 08:00-24:00,"Largo La Foppa 5, 20121, Milano"
+Las Vegas,45.4690958,9.2242641,cafe,,,,,
+La Ciribiciaccola,45.4694659,9.2241394,cafe,ice_cream,,,We-Mo 07:00-08:00,Viale Romagna 10
+New Nature Café,45.4609950,9.2105817,cafe,,,+39 02 39843939,,Via Bezzecca 9
+Caffè del Principe,45.4830280,9.1949150,cafe,,,,,"Piazza Luigi Einaudi 24, 20124, Milano"
+Anche Ristorante Anche Bar,45.4866973,9.1867076,cafe,,https://anche.it/,,,"Via Carmagnola 5, 20159, Milano"
+Cosmos,45.4878086,9.1875517,bar,,,,,"Piazzale Carlo Archinto, 20159, Milano"
+Bar David,45.4505732,9.2123682,cafe,,,,,
+Navigli Craft Beer,45.4513467,9.1720430,pub,,,,,"Alzaia Naviglio Grande 44, 20144, Milano"
+Cusani Caffè,45.4685810,9.1837502,cafe,,,,,
+Bar Sassetti,45.4864645,9.1938834,cafe,,,,,"Via Filippo Sassetti 15, 20124, Milano"
+The Tipsy,45.4895739,9.1870151,bar,,,,,
+Floridita Cafè,45.4908158,9.1873379,cafe,,,,,"Via Alserio 19, 20159, Milano"
+Soleluna Cafè,45.4914110,9.1863829,cafe,,,,,"Via Cola Montano 40, 20159, Milano"
+Bar Gatto,45.4846091,9.2147361,bar,,,,Mo-Sa 07:00-02:00,
+I siciliani,45.4842201,9.2143341,cafe,,,,,
+Minuto Bauli,45.4629579,9.1867869,cafe,,https://www.minutobauli.it/,,,"Piazza Santa Maria Beltrade 2, 20123, Milano"
+Bar Brianza,45.4867118,9.2153348,cafe,,,,,
+Gaina café,45.4591258,9.1825646,bar,,,,,
+Meneghino Birreria,45.4697214,9.2265316,pub,,,,,"Via Pietro da Cortona 13, 20133, Milano"
+Samovar,45.4742024,9.2317368,bar,,,,,
+American Bar,45.4700746,9.2299154,bar,,,,,
+Niki Bar,45.4724531,9.2304599,bar,,,,,
+Tropical Island,45.4749091,9.2029646,bar,,,,,
+Siesta café,45.4839791,9.2149830,cafe,,,,,
+Girasole,45.4690862,9.2242047,bar,,,,,
+Café Étoile,45.4685792,9.2249544,bar,,,,,
+Fashion Rio Disco Village,45.4850248,9.1848900,nightclub,,,,,"Via Giuseppe Ferrari 10, 20154, Milano"
+B cafè,45.4835718,9.2149958,bar,,,,,Via Claudio Monteverdi 18
+Cafe al 20,45.4843216,9.2186760,bar,,,,,
+Java,45.4843581,9.2176997,bar,,,,,"Via Giuseppe Pecchio 8, 20131"
+Prima Luce,45.4868953,9.2165413,cafe,,,,,"Piazzale Loreto 9, 20127, Milano"
+Cin-Cin...Nato,45.4796974,9.2039419,cafe,,,,Mo-Sa 07:00-20:00,
+Golden Lion,45.4945005,9.1861975,bar,,,,,
+Balubà,45.4613781,9.2119063,bar,,https://www.balubabar.net/,,,"Via Carlo Foldi 1, 20135"
+L'aurora,45.4854660,9.2136252,cafe,,,,,
+Palm,45.4857933,9.2148499,cafe,,,,,
+Bar Fratelli Guido,45.5046684,9.1059824,bar,,https://www.facebook.com/barfratelli.guido,+39 02 3810 1762,,"Via Gallarate, Milano"
+Evolution,45.5016266,9.2285976,nightclub,,,,,
+Bar Millennio,45.4870094,9.2136181,cafe,,,,,
+Meneghino,45.4845945,9.1869800,cafe,,,,,"Piazza Sigmund Freud 1, 20154, Milano"
+Maramais,45.4820986,9.2341659,cafe,,http://www.maramaiscafe.it,+39 02 7063 0293,Mo-Sa 07:00-21:00,"Via Antonio Grossich 17, 20133, Milano"
+Gelato di Gaia,45.4760798,9.2240740,bar,,,,Mo-Fr 07:00-23:30; Sa 07:00-21:00,
+Bar Niky Trattoria,45.4802268,9.2213964,bar,,,,,
+Bar Arcobaleno,45.4843894,9.2166941,bar,,,,,
+Bar Lomellina,45.4671118,9.2303948,bar,,,,,
+Bar Caffe,45.5125840,9.1579586,bar,,,,,
+Bar Metro,45.4662155,9.1492585,bar,,,,,
+De Angeli,45.4665873,9.1506802,bar,,,,,
+Salty & Sweet,45.4510043,9.1457635,bar,,,,,
+Metissage Arci Milano,45.4855368,9.1892316,bar,,,,,
+Bar David,45.4920914,9.2160681,cafe,,,,,
+Blue Note,45.4895296,9.1888504,nightclub,,https://www.bluenotemilano.com/,+39 02 69016888,,"Via Pietro Borsieri 37, 20159, Milano"
+Bar Giada,45.4925602,9.1923021,cafe,,,,Mo-Sa 06:00-21:00; Su 07:00-21:00,
+Music Viga Bar,45.4819975,9.1897703,bar,,,,,"Via Francesco Viganò 4, 20124, Milano"
+Hollywood,45.4825948,9.1872054,nightclub,,https://www.discotecahollywood.com/,,,"Corso Como 15, 20154, Milano"
+LoolaPaloosa,45.4825218,9.1871885,nightclub,,http://www.loolapaloosa.com/,+39 02 6555693,,"Corso Como 15, 20154, Milano"
+Caffè Novecento,45.4819477,9.1871335,cafe,,https://www.novecentocaffe.it/,+39 02 36524233,07:00-02:00,"Corso Como 9, 20154, Milano"
+Corso Como 5 Lounge Bar,45.4815283,9.1870113,bar,,,,,"Corso Como 5, 20154, Milano"
+Giusti Modena,45.4812211,9.1869365,cafe,,,,,"Corso Como 3, 20154, Milano"
+Abbracci Bistrot,45.4512603,9.1711883,bar,,https://abbraccibistrot.com/,+39 02 84244310,,"Via Casale 7, 20144, Milano"
+Ca del Caffè,45.4344595,9.2366128,cafe,,,,,
+Concordia Enoteca,45.4507535,9.1707484,pub,,https://www.cantinaconcordia.it/,,,"Ripa di Porta Ticinese 61, 20143, Milano"
+Starbucks,45.4663193,9.1647175,cafe,coffee_shop,https://www.starbucks.com/store-locator/store/1023281/starbucks-vercelli-piazzale-francesco-baracca-10-milan-mi-20121-it,+390248024629,,"Piazzale Francesco Baracca 10, 20123, Milano"
+Torrefazione Vercelli,45.4666793,9.1597644,cafe,,,,,
+Carlino,45.4680451,9.1569154,cafe,,,,,
+Bar Affori,45.5171978,9.1712504,cafe,,,,Mo-Sa 07:30-20:00,
+Blues Canal,45.4515830,9.1708748,pub,,https://www.bluescanalmilano.com/,+39028360799,,"Via Casale 7, 20144, Milano"
+Sofa Café,45.4520262,9.1768297,bar,,,+390236589107,Su-Th 08:00-02:00; Sa-Su 08:00-03:00,"Ripa di Porta Ticinese 7, 20143, Milano"
+Straripa Bar,45.4517526,9.1755278,bar,,,+39 02 58118146,,"Ripa di Porta Ticinese 19, 20143, Milano"
+Twist on Classic,45.4518741,9.1761188,bar,,,,,"Ripa di Porta Ticinese 13, 20143, Milano"
+Toast to Coast,45.4724691,9.2267838,bar,breakfast;coffee_shop;sandwich;tea,,,,"Via Giuseppe Colombo 42, 20133, Milano"
+Bar Ego,45.4710817,9.2308856,cafe,,,,,
+Empório Garden,45.4879403,9.1623591,cafe,ice_cream;italian;coffee,,+390234932195,,"Via Cenisio 54, 20155, Milano"
+Oasis,45.5084785,9.1677580,cafe,,,,,
+Lukas,45.5090259,9.1723538,cafe,,,,Mo-Fr 07:00-17:00,
+Bar Arcobaleno,45.5102792,9.1760295,cafe,,,,Mo-Su 06:00-02:00,"Via privata Don Bartolomeo Grazioli 2, 20161, Milano"
+Majestic,45.4678570,9.1789125,cafe,,,,,"Foro Buonaparte 57, 20121, Milano"
+Caffè Teatro Foro Buonaparte,45.4677555,9.1800827,cafe,sandwich,http://www.caffeteatromilano.com/,,,"Foro Buonaparte 63, 20121, Milano"
+Gran Caffè al Foro,45.4678908,9.1809628,cafe,,,,,"Foro Buonaparte 67, 20121, Milano"
+Van Bol & Feste,45.4681595,9.1815997,cafe,,https://www.vanbolandfeste.it/,+39 02 89093182,,"Foro Buonaparte 71, 20121, Milano"
+Jupito Café,45.4762927,9.1841762,cafe,sandwich,,,,"Corso Giuseppe Garibaldi 70, 20121, Milano"
+Amico Bar Tabacchi,45.4903674,9.2300709,bar,,,,,
+Green Bar,45.4641755,9.1612932,cafe,,,,,"Via Giovanni Cantoni 12, 20144, Milano"
+Cafè del Pasco,45.4564591,9.2191463,bar,,,,,
+Moscow Mule Bar,45.4868595,9.2301145,bar,,https://www.moscow-mule.it,+393519057229,Tu-Sa 18:00-02:00,"Via Teodosio, 60 60, 20131, Milano"
+Barrio's Cafe,45.4322353,9.1494182,bar,,,,,
+Casa Giuditta,45.4694554,9.2220441,bar,,https://www.casagiudittamilano.it/,,,"Via Carlo Goldoni 86, 20133"
+Bar Bah,45.4890070,9.1872235,bar,kebab,,,,"Via Luigi Porro Lambertenghi, 20159, Milano"
+Chiringuito,45.4803853,9.1278585,pub,,,,,
+Paninoteca,45.4940087,9.1884114,bar,,,,,
+Exotica,45.4826179,9.1850085,nightclub,,,,,"Via privata Nino Bonnet 11, 20154, Milano"
+Bar del 106,45.4994863,9.2209167,cafe,,,,,"Viale Monza 106, 20127, Milano"
+Je suis Jambon,45.5148441,9.2122769,pub,,,,,"Piazza della Trivulziana 4a, Milano"
+Porko Puerko,45.4963655,9.2472847,bar,,,+39 331 415 0295,,"20134, Milano"
+Caffè Dante,45.4672480,9.1833312,cafe,,,,,"Via Dante 15n02, 20123, Milano"
+Café de Ville,45.4677062,9.1831217,cafe,,,,,"Via Dante 18n01, 20121, Milano"
+Matilde Bakery,45.4642616,9.1879131,cafe,,,,,"Via Orefici 4n01, 20123, Milano"
+Top Undici,45.4669837,9.1968593,cafe,,,,,"Corso Giacomo Matteotti 11, 20121, Milano"
+Starbucks,45.4656909,9.1985631,cafe,coffee_shop,,+39 02 76004506,,"Via Borgogna 2an06, 20122, Milano"
+Straf Bar,45.4652698,9.1912385,bar,,,+39 02 805081,,"Via San Raffaele 3, 20121, Milano"
+Alby,45.5287088,9.1717957,cafe,,,,,
+Emporio Armani Cafè,45.4704065,9.1924890,cafe,,,,,"Via Croce Rossa 2, 20121"
+Armani Privè,45.4708758,9.1929938,nightclub,,http://www.milan.armanihotels.com,,,"Via Alessandro Manzoni 31, 20121, Milano"
+Ikarus Cafè,45.4401711,9.1460760,cafe,yes,,,,"Via Francesco Olgiati 26, 20143, Milano"
+Eat&Go,45.4655149,9.1974160,cafe,,,,,
+Bar Madonnina,45.4647809,9.1935070,cafe,,,+39 02 86464947,,Piazzetta Pattari 1
+Le tre gazzelle,45.4652696,9.1951959,cafe,,,+39 02 76023826,,Corso Vittorio Emanuele Secondo 22
+Max Bar,45.4668754,9.1992030,cafe,,,,,"Corso Monforte 13, 20122, Milano"
+Caffè Rivoli,45.4666975,9.1987245,cafe,,,,,"Piazzetta Umberto Giordano 2, 20122, Milano"
+Antica cremeria San Paolo al corso,45.4659274,9.1961644,cafe,,,,,
+Bar Durini,45.4636504,9.1976183,cafe,,,,,
+Bar SI,45.4635413,9.1979385,cafe,,,,,
+Panini Durini,45.4654669,9.1983407,cafe,sandwich,http://www.paninidurini.it/,+39 02 76024237,,Via Durini 26
+Cassina Caffè,45.4642308,9.1979899,cafe,,,,,
+Fruteiro,45.4600610,9.1805173,cafe,fruit_drinking,http://www.fruteiro.it,+39 02 86995142,,"Via Cesare Correnti 2, 20123"
+Fruteiro,45.4720143,9.1830839,cafe,fruit_drinking,https://www.fruteiro.it/,+39 02 39660084,,"Via Rivoli 2, 20121, Milano"
+Bar Beltrade,45.4630385,9.1866809,cafe,,,,,
+Eatme&Go,45.4609462,9.1846860,cafe,coffee_shop,http://www.eatmeandgo.it,,,Via Torino 49
+Bar Freetime,45.4663848,9.1886832,cafe,,,,,"Via Santa Margherita 7, 20121, Milano"
+Santa Tecla,45.4627898,9.1928193,bar,,,,,"Via Santa Tecla 3, 20122, Milano"
+Meravigli 13,45.4656718,9.1819082,cafe,,,,,"Via Meravigli 13, 20123, Milano"
+Biffi,45.4835535,9.1811925,pub,,,,,"Via Ceresio 4, 20154, Milano"
+Ceresio 7,45.4835174,9.1803112,bar,,https://www.ceresio7.com/,+39 02 31039221,Mo-Su 12:30-01:00,"Via Ceresio 7, 20154, Milano"
+Vinyl,45.4877272,9.1875031,pub,,,+39 348 808 4916,,
+Papeete,45.4435172,9.1753230,bar,,,,,"Viale Liguria 50, 20143, Milano"
+Bar Belfanti,45.4440179,9.1732442,bar,,,,,"Piazza Serafino Belfanti 2, 20143, Milano"
+Argonne Café,45.4685409,9.2310905,bar,,,,,
+Falau Cafè,45.4720088,9.2322334,bar,,,,,
+Pan Caffè,45.4708022,9.2316010,bar,,,,,
+Peck,45.4634158,9.1871508,cafe,,,+39 02 8023161,,"Via Spadari 7n02, 20123, Milano"
+Basic Cafè,45.4813508,9.1898898,cafe,,,,,"Via Carlo De Cristoforis 12, 20124, Milano"
+Play Club,45.4808816,9.1895500,nightclub,,,,,"Viale Monte Grappa 14, 20124, Milano"
+Marco Polo Bar,45.4807066,9.1934987,cafe,,,,,"Via Marco Polo 6, 20124, Milano"
+Tipota Pub,45.4452431,9.1806654,pub,,https://www.tipota.net/,+39 02 835 7777,18:00-02:00,"Via Francesco Brioschi 32, Milano"
+Bar trattoria Devoti Domenico,45.4413436,9.1999007,cafe,,,+39 02 55212551,,Via Serio 2
+Bar Stella,45.4880355,9.1577588,cafe,,https://www.facebook.com/people/Tabacchi-Bar-Stella/100063135375150/,+393319991650,,"Piazza Firenze 4, 20154, Milano"
+Crystal Bar,45.4650409,9.1420418,cafe,,,,Mo-Su 06:30-18:00,
+Madison Music Hall,45.4975121,9.1377587,nightclub,,http://www.newmadison.it/,,,Via Giovanni da Udine 28
+Bar Atlantic,45.4829191,9.1896391,cafe,coffee_shop,,,,"Viale Luigi Sturzo 13, Milano"
+El café di Milano,45.4641332,9.1997849,cafe,,,,,
+Tom & Jerry Restaurant Bar,45.4997293,9.1387861,bar,,,,,"Via Ludovico di Breme 54n02, Milano"
+Ripamonti,45.4401776,9.1996745,cafe,,,,,
+Varesina Cafè,45.5020459,9.1401552,bar,,,,,Via Varesina 145
+Bar Trattoria Angela,45.5050356,9.1367365,bar,,,,,"Via Varesina 199, Milano"
+Bar Pit Stop,45.5024214,9.1384362,bar,,,,,"Viale Carlo Espinasse 137, 20121, Milano"
+Bar La Colonna,45.4868193,9.1887817,cafe,,,,,"Via Pietro Borsieri 14, 20159, Milano"
+Vintage Cafè,45.4892289,9.1916560,cafe,,,,,"Piazzale Lagosta 6, 20159, Milano"
+C House,45.4862814,9.1962750,cafe,,,,,
+Al Bar,45.4873334,9.1958412,cafe,,,,,
+eWork,45.4876482,9.1965519,cafe,,,,,
+DG Martini,45.4683065,9.1982980,cafe,,https://world.dolcegabbana.com/it/martini/,+39 02 76011154,Mo-Su 12:00-23:00,"Corso Venezia 15, 20121"
+Nidaba Theatre,45.4489777,9.1756484,pub,,http://www.nidaba.it/,+39 339 3477512,20:00-02:00,"Via Emilio Gola 12, 20143"
+Bar Bilancia,45.4943279,9.1463187,bar,,,,,Via Dario Niccodemi 6
+Mondo Bar,45.4982761,9.1441836,bar,,,,,Via Pier Francesco Mola 3
+Prima di Tutto,45.4979539,9.1415876,cafe,italian,,,,
+Il Doria,45.4761152,9.2184113,cafe,,,,,
+Pasticceria Ungaro,45.4822377,9.1991722,cafe,,,,,"Via Fabio Filzi 8, 20124, Milano"
+Pirelli 11 Caffè,45.4840452,9.2004616,cafe,,,,,"Via Giovanni Battista Pirelli 11, 20124, Milano"
+Berlino,45.4816918,9.1995837,cafe,,,,,"Via Vittor Pisani 11, 20124, Milano"
+Metropolis,45.4812224,9.1990908,bar,,,,,"Via Vittor Pisani 5, 20124, Milano"
+Bar tabacchi Arena,45.4551260,9.1788437,bar,,,+390258101077,,"Via Arena, 20123, Milano"
+Manuelina,45.4653895,9.1921443,cafe,pizza,http://www.manuelinafocacceria.it/,,,Via Santa Radegonda 3
+Le Magie,45.4710478,9.1599776,cafe,ice_cream,,,,"Largo Riccardo Zandonai 3, 20145, Milano"
+Rock'n'Roll Milano,45.4925338,9.2075644,pub,,,,,"Via Giuseppe Bruschetti 11, 20125, Milano"
+Sloan Square,45.4682266,9.1779021,bar,,http://www.sloansquare.it/,+39 02 89 09 50 64,,
+Caffe Letterario,45.4799730,9.1877900,cafe,,,,,"Piazza Venticinque Aprile 8, 20121, Milano"
+Cube,45.4783481,9.1880961,cafe,,,,,"Via Marsala 2, 20121, Milano"
+Bar White,45.4799586,9.1885403,cafe,,,,,"Bastioni di Porta Nuova 15n06, 20121, Milano"
+I Mas!,45.4519575,9.1764610,bar,,https://lnx.mas-milano.it/,+39 02 39624704,,Ripa di Porta Ticinese 11
+Manhattan,45.4519003,9.1762071,bar,,,,,"Ripa di Porta Ticinese 13, 20143, Milano"
+Bar Garden,45.4621239,9.2028326,cafe,,,,,"Corso di Porta Vittoria 28, 20122, Milano"
+Bar Granny,45.4782695,9.1826780,cafe,,,+39 02 29006558,,"Via della Moscova 66, Milano"
+Coffee Teslino,45.4779366,9.1826110,cafe,,https://teslino.it/,,,"Via della Moscova 51, 20121, Milano"
+Bar Capolinea 2,45.4292859,9.2565687,cafe,,,,,
+Petit Bistrot,45.4667296,9.1811296,cafe,,,,,"Via Giacomo Puccini 1, 20121, Milano"
+Sandy Bar,45.4667810,9.1489245,cafe,,,,,
+Fuel,45.4612573,9.1945338,cafe,bagel;breakfast;tea,,,,"Via Festa del Perdono 8, 20122, Milano"
+News cafè,45.4621596,9.1939585,cafe,,,,,
+Panfé,45.4576153,9.2058871,cafe,,,,,
+Bar Tabacchi Maciachini,45.4984047,9.1867872,cafe,,,,,
+Pinch,45.4507272,9.1706503,bar,,https://www.pinchmilano.com/,,,"Ripa di Porta Ticinese 63, 20143, Milano"
+Quadrell,45.4515820,9.1746283,bar,,,+39 02 45477841,,"Ripa di Porta Ticinese 33, 20143, Milano"
+Aroma Napoletano,45.4898844,9.1899392,cafe,coffee_shop;breakfast,https://aromanapoletanomilano.com/,,Mo-Sa 07:00-18:30; Su 08:00-18:30,Via Traù 2
+Feltre Bakery,45.4891821,9.2431350,cafe,coffee_shop;italian;cake,,,,
+Noir Cafè,45.4573991,9.1896767,cafe,,,+390239663595,,"Via Sant'Eufemia 17, 20122, Milano"
+Ai tre scalini,45.5101403,9.1964782,cafe,,,,,
+Il Cappuccino,45.4812020,9.2358622,cafe,,,,Mo-Sa 06:00-20:00; Su 07:00-20:00,
+Bar Hiwinet,45.4768538,9.2050301,cafe,,,,,
+Caffè Venezia,45.4767303,9.2056112,cafe,,,,,"Via Alessandro Tadino 8, 20124, Milano"
+New Bar,45.4561236,9.2378790,cafe,,,,,
+Trattoria La Belle Epoque,45.4622574,9.0888881,cafe,,,,,
+La Famiglia,45.4457064,9.2473085,cafe,,,,,
+Piccolo Caffè,45.4457461,9.2482093,cafe,,,,,
+el Tabacchè,45.4457248,9.2478262,cafe,,,,,
+City Bar,45.4456737,9.2469389,cafe,,,,,
+Marvin Bar,45.4456245,9.2455044,cafe,,,,,
+Florida Bar,45.4520299,9.2226039,cafe,,,,Mo-Su 07:00-21:00,
+Caffè Romagna,45.4745110,9.2234227,cafe,,,,,
+Mind the Step,45.4742999,9.2234256,pub,,,,,
+The Good Life,45.4892647,9.1831976,pub,,,,,"Via Carlo Farini 30, 20159, Milano"
+Opera 33,45.4896401,9.1830758,bar,,,,,"Via Carlo Farini 33, 20159, Milano"
+Choice Cafe,45.4893611,9.1854789,cafe,,,,,"Piazza Fidia 3, 20159, Milano"
+Vinthiages Cafè,45.4662652,9.2132644,cafe,,https://vinthiagescafe.com/,+390283425067,Mo-Sa 12:00-00:00,"Via Goffredo Mameli 8, 20129, Milano"
+Brother's bar,45.4941529,9.2061316,cafe,,,+39026706025,,"Via Melchiorre Gioia 133, 20125, Milano"
+Migjorn Cafè,45.4555779,9.1836017,cafe,,,,,
+Ottolina Cafè,45.4655863,9.1779475,cafe,,,,,"Via Nirone 2, 20143, Milano"
+Happy Bar,45.4658211,9.1775475,bar,,,,,"Corso Magenta 25, 20123, Milano"
+P14 Bicocca,45.5155703,9.2116047,bar,,https://pquattordici.weebly.com/,+39 02 2111 9189,,"Viale Piero e Alberto Pirelli 14, 20126, Milano"
+Batita,45.5142628,9.2124781,cafe,,,,Mo-Fr 07:30-21:00,
+Panta Rei,45.5143131,9.2123138,cafe,,,,,
+MEZCA,45.4772035,9.1699589,bar,mexican,https://www.mezca.it/,,Mo-Su 18:00-02:00,"Corso Sempione 7, 20145, Milano"
+Caffè' Sempione,45.4781820,9.1683270,cafe,,,,,
+Caffè in diretta,45.4787387,9.1675747,cafe,,,,,"Corso Sempione 23, Milano"
+La pidaseparsot,45.5142963,9.2123703,cafe,,www.lapidaseparsot.it,+39 342 3880889,,
+Banco,45.4512939,9.1718079,pub,,,+390289415868,,"Alzaia Naviglio Grande 46, 20144, Milano"
+Boombastic Cafè,45.4821435,9.1880415,bar,,,,,"Via Carlo De Cristoforis 2, 20124, Milano"
+Swinging Cafe,45.4783506,9.1885512,cafe,,,,,"Via Castelfidardo 3, 20121, Milano"
+Street coffee,45.4853437,9.2037025,cafe,,,,,
+Bar Fusina Di Crescente Nicola,45.4689413,9.2299208,bar,,https://www.barfusina.it/,,,"Piazza Andrea Fusina 1, 20133, Milano"
+Altro Bar,45.4409249,9.1814693,cafe,,,,,"Via Ruggero Bonghi 17, 20141, Milano"
+Selz,45.4802007,9.2192444,bar,,,,,
+Blackout Lounge Bar,45.4801964,9.2178457,bar,,,,,
+Stoppani,45.4752399,9.2136536,cafe,,,,,
+Fashion Bar,45.4803279,9.2026274,cafe,,,,,
+Cheri,45.4806518,9.2020128,cafe,,,+39 02 66983172,,
+Café GinRosa,45.4663059,9.1982739,cafe,,https://gin-rosa.it/,,,"Galleria San Babila 4b, 20122, Milano"
+Tazzulella,45.4714431,9.2303069,cafe,,,,,"Via Gaspare Aselli 24, 20133, Milano"
+Twain,45.4853489,9.2296963,bar,,,,,
+Madà,45.4316757,9.1536476,bar,,,,,"Via Agostino Depretis 3, 20142, Milano"
+Bar Voltri,45.4355955,9.1543597,cafe,,,,,
+Camelot,45.4366846,9.1547907,cafe,,,,,"Viale Famagosta 2, 20142, Milano"
+Beluga,45.4778425,9.1986056,bar,,,,,"Viale Vittorio Veneto 32, 20124, Milano"
+Bar Dogana,45.4906489,9.1815249,cafe,,,,,"Via Arnaldo da Brescia 10, 20159, Milano"
+Seitaly,45.4601001,9.1880088,cafe,breakfast;italian_pizza,https://www.seitaly.it/,+39 02 72095365,Mo-Su 07:30-00:00,"Corso Italia 6, 20122, Milano"
+Bar Sorriso,45.4949693,9.1428703,bar,,,,,"Via Gian Battista Casella 43, 20156, Milano"
+La buttiga beer room,45.4975736,9.2086831,pub,,https://www.labuttiga.it/,,Mo-Fr 17:00-02:00; Sa-Su 15:00-02:00,"Via Melchiorre Gioia 194, 20125"
+Bar Barbara,45.4821864,9.1812527,cafe,,,,,"Piazzale Antonio Baiamonti 1, 20154, Milano"
+Caffetteria Baiamonti,45.4826252,9.1817481,cafe,,,,,"Piazzale Antonio Baiamonti 4, 20154, Milano"
+Drago Verde,45.4823676,9.1811537,pub,,,,,"Piazzale Antonio Baiamonti 3, 20154, Milano"
+oTTo,45.4819680,9.1797339,cafe,,http://www.sarpiotto.com/,+39 02 83417249,Mo 18:30-02:00; Tu-Su 10:00-02:00,"Via Paolo Sarpi 10, 20154, Milano"
+S'LAB,45.4817219,9.1807871,cafe,chinese;japanese;juice,,+39 02 36535586,,"Via Paolo Sarpi 1, 20154, Milano"
+Chateau Dufan,45.4819237,9.1812401,cafe,chinese,https://www.chateaudufan.com/,+39 02 34534113,,"Via Paolo Sarpi 2, 20154, Milano"
+Jolly Bar,45.4817370,9.1793747,cafe,,,,,"Via Paolo Sarpi 12, 20154, Milano"
+Café Nord 2000,45.4684934,9.1747425,cafe,,,+390209969911,,"Piazzale Luigi Cadorna 14, 20123, Milano"
+L'angolo dell'aperitivo,45.4649462,9.2111247,cafe,,,,,
+Bar Tabacchi Udine,45.4911975,9.2364298,cafe,,,+39 02 26414577,,"Piazzale Udine, 20132, Milano"
+Caffè Corridoni,45.4634408,9.2034396,bar,,,,,
+Caffè delle Colonne,45.4670769,9.1971776,cafe,,,+39 0276021907,,"Corso Giacomo Matteotti 11, Milano"
+Bar Mida,45.4733055,9.2281378,cafe,italian,http://www.barmida.com/,+39 02 714428,7:00-20:00,"Via Sandro Botticelli 22, 20133, Milano"
+Noi Pilates e sala da tè,45.4800385,9.1831912,cafe,tea,,,,"Via Alessandro Volta 15, 20121, Milano"
+Pink Bar,45.4791472,9.1845374,cafe,,,,,"Via Varese 6, 20121, Milano"
+Zodiaco,45.4797299,9.1834134,cafe,,,,,"Via Alessandro Volta 11, 20121, Milano"
+Al Solito Posto,45.4802708,9.1830334,cafe,,,,,"Via Alessandro Volta 17, 20121, Milano"
+Melabevo,45.4800031,9.1834485,bar,,,,,"Via Alessandro Volta 14, 20121, Milano"
+the pure café,45.4802387,9.1832929,cafe,coffee_shop,,,Tu-We 08:00-24:00; Th-Sa 08:00-23:00; Su 09:00-23:00,"Via Alessandro Volta 16, 20121, Milano"
+Capolinea,45.5243047,9.1926569,cafe,,,,,
+Tardis,45.5238074,9.1925759,pub,burger,https://tardispubmilano.it,,,"Via Luigi Ornato 134, 20162"
+Caffé Piazza,45.4824400,9.2069341,cafe,,,,,
+Domm,45.4770997,9.1883639,cafe,,,,,"Via San Marco 23, 20121, Milano"
+Caffè Panzera,45.4771846,9.1879388,cafe,,,,,"Via Solferino 32, 20121, Milano"
+Bar Mondino 1994,45.4805209,9.1772716,cafe,,,+39 02 89052595,,"Via Giovanni Battista Niccolini, 20154, Milano"
+Patti bakery & bistrot,45.4687328,9.1763952,cafe,,https://pattibakery.com/store-milano-cadorna/,+39028900266,"Mo-Fr 07:00-20:00; Sa-Su,PH 09:00-19:00","Via Pietro Paleocapa 1, 20121, Milano"
+Ginza,45.4803810,9.1780912,cafe,,,,,
+Anna,45.4675747,9.2232568,bar,,,,,
+Bar Sesto,45.4735677,9.2180605,bar,,,,,
+Bar Pasticceria La Maison,45.4631340,9.2279989,bar,,,,,
+Caffe' Jesi,45.4664481,9.2317786,bar,,,,,
+Pavé,45.4791058,9.2026434,cafe,,https://www.pavemilano.com/,+39 02 94392259,"Mo,We-Su 08:00-19:00; Tu off","Via Felice Casati 27, 20124, Milano"
+Semplice,45.5031981,9.2216029,cafe,,,,,"Viale Monza 175, 20126, Milano"
+Bar Monte San Gabriele,45.5049099,9.2233175,cafe,,,,,"Via Monte San Gabriele 6, 20127, Milano"
+404,45.5046054,9.2224884,cafe,,,,Mo-Su 07:00-12:00,"Viale Monza 144, 20127, Milano"
+Bar Piazza,45.5058972,9.2243822,cafe,,,,,"Via Aristotele 13, 20128, Milano"
+Barrito,45.5053162,9.2222233,cafe,,,,,"Via Sant'Erlembaldo 1, 20126, Milano"
+Pandy e Mucca,45.4548459,9.2090882,bar,,,,,
+Picchio,45.4735746,9.2092768,bar,,,+39 02 29531433,,"Via Melzo 11, 20129, Milano"
+Nuit Cafè,45.4614769,9.2442360,cafe,coffee_shop,,,,"Viale Enrico Forlanini 50/7, Milano"
+XXI Secolo,45.4836918,9.1703718,bar,,,,,
+Lambiczoon,45.4541198,9.2133409,pub,burger,https://www.lambiczoon.com,+39 02 3653 4840,Mo-Th 18:00-01:00; Fr-Sa 18:00-02:00,"Via Friuli 46, 20135"
+Shot Cafe,45.4839253,9.1995100,cafe,,http://www.shotcafe.it/,+39 02 6700206,,"Via Giovanni Battista Pirelli 19, 20124, Milano"
+Bar Golf,45.4873740,9.1971057,cafe,,,,,"Via Luigi Galvani 21, 20124, Milano"
+Feel Bar,45.4838239,9.1987470,cafe,,,,,"Via Giovanni Battista Pirelli 19, 20124, Milano"
+Bar Fara,45.4824097,9.1979259,cafe,,,,,"Via Gustavo Fara 8, 20124, Milano"
+Kafana,45.4821355,9.1976110,cafe,,,,,"Via Gustavo Fara 5, 20124, Milano"
+Norin Caffè Bistrot,45.4851432,9.1987218,cafe,italian;italian_pizza,https://www.pizzeriabistronorin.com/,+390267071339,Mo-Fr 07:30-22:00,"Via Gustavo Fara 33, 20124, Milano"
+Sushimi,45.4839773,9.1980915,cafe,,,,,"Via Gustavo Fara 24, 20124, Milano"
+cafe Victum,45.4675567,9.2067904,cafe,,http://victum.it,,Tu-Su 07:00-20:00; Mo 07:00-22:00,
+Bar Alfa,45.4850057,9.2091950,cafe,,,,,"Viale Andrea Doria 14, 20124, Milano"
+Best Cafe,45.4856607,9.2087727,cafe,,,,,"Via Giovanni Battista Pergolesi 25, 20124, Milano"
+Mogamo,45.4850484,9.2088175,cafe,,https://www.mogamo.it/,+39 02 36528389,Mo-Fr 07:00-02:00; Sa 18:00-02:00,"Viale Andrea Doria 12, 20124, Milano"
+Waiting Bar,45.4857384,9.2093866,cafe,,,,,"Piazza Caiazzo 1, 20124, Milano"
+Retrò Cafe,45.5023648,9.2097743,cafe,,,,,"Via Pigello Portinari 1, 20125, Milano"
+Bar La Compagnia,45.5018878,9.2125059,cafe,,,,,"Piazza Greco 10, 20125, Milano"
+Caffè Mediterraneo,45.5070630,9.2076124,cafe,,,,,
+Greco Bar,45.5022878,9.2102872,cafe,,,,,"Via Pigello Portinari 1, 20125, Milano"
+La Gintoneria di Davide,45.5045417,9.2088243,bar,,http://www.gintoneria.it/,+39 392 0397315,,"Via Comune Antico 25, 20125, Milano"
+Pinocchio,45.5023376,9.2115748,cafe,,,,,"Piazza Greco 7, 20125, Milano"
+Bar Bonfadini,45.4448053,9.2462564,cafe,,,,,
+Picchio,45.4162350,9.1695363,cafe,,,,,"Via Gratosoglio 105, 20142, Milano"
+Ice Cream bar,45.4305012,9.1789147,cafe,,,,,
+Mediterraneo,45.4303459,9.1786184,cafe,,,,,
+Colibrì,45.4048133,9.1722182,cafe,,,,,
+Campoverde,45.4047184,9.1720582,cafe,,,,,
+Bar Capriccio,45.4114035,9.1722724,cafe,,,,,"Via Costantino Baroni 11, 20142, Milano"
+Bar Happy,45.4260975,9.2514483,cafe,,,+39 351 7464833,,"Via Rogoredo, 20138, Milano"
+Sella Cafè,45.4702680,9.1827764,cafe,,,,,"Via Quintino Sella 2, 20121, Milano"
+Cafè Rivoli,45.4720916,9.1830588,cafe,,,,,"Via Rivoli 2, 20121, Milano"
+Dolce e Amaro,45.4722379,9.1829881,cafe,,,,,"Via Rivoli 2, 20121, Milano"
+Movidas,45.4788473,9.1853912,bar,,,,,"Corso Giuseppe Garibaldi 111, 20121, Milano"
+Cantiere,45.4786894,9.1856855,pub,jamon,,,,"Corso Giuseppe Garibaldi 108, 20121, Milano"
+Caffetteria della Moscova,45.4775547,9.1858839,cafe,,,,,"Via della Moscova 46, 20121, Milano"
+Cimmino 104,45.4784932,9.1855145,bar,,,,,"Corso Giuseppe Garibaldi 104, 20121, Milano"
+Our Gin,45.4783522,9.1854064,cafe,,,,,"Corso Giuseppe Garibaldi 104, 20121, Milano"
+Panarello,45.4777552,9.1848880,cafe,,https://www.panarello.com/,+39 02 87141481,Mo-Su 08:00-19:30,"Via della Moscova 52, 20121, Milano"
+Coll Bubble Tea And Coffee,45.4800079,9.1863289,cafe,bubble_tea,,,,"Corso Giuseppe Garibaldi 127, 20121, Milano"
+Jet Lag,45.4582629,9.2482022,cafe,,,,,
+Déjà-vu,45.4569191,9.2421952,cafe,,,,,
+Mecenate 30,45.4553233,9.2443964,cafe,,,,,
+Gil Cafè,45.4544207,9.2456108,cafe,,,,,
+Crazy Cat Café,45.4809664,9.2034354,cafe,,https://www.crazycatcafe.it/,,Tu-Su 9:30-21:30,
+Caffè Liberty,45.4833861,9.2108987,cafe,,,,,"Via Saverio Mercadante 1, 20124, Milano"
+La Fenice,45.4835413,9.2100514,cafe,,,,,
+Pepe Nero,45.4826214,9.2092606,cafe,,,,,"Via Benedetto Marcello 91, 20124, Milano"
+Nico Quick Bite,45.4835033,9.2029388,cafe,,https://www.nicoquickbite.com/,+39 02 66987791,,"Via Napo Torriani 29, 20124, Milano"
+Caffè Panzera,45.4837772,9.2044247,cafe,,http://www.caffepanzera.it/,+39 02 6692647,07:00-23:30,
+Green Garden,45.4820550,9.2012082,cafe,,,,,"Via Alfredo Cappellini 10, 20124, Milano"
+Inside,45.4818085,9.2006897,bar,,,,,"Via Vittor Pisani 12a, 20124, Milano"
+Bar Espresso,45.4830356,9.2052446,cafe,,,,,"Via Vitruvio 43, 20124, Milano"
+Nice Cafè,45.4823746,9.2035057,cafe,,https://nicecafe.eatbu.com/,+393279736359,Mo-Su 07:00-02:00,"Via Roberto Lepetit 3, 20124, Milano"
+The Street Bar,45.4835505,9.2039140,cafe,,,+39 328 6619443,,"Via Antonio da Recanate 2, 20124, Milano"
+la Gintoneria,45.4825390,9.2031511,bar,,,,off,
+Caffè Napoli,45.4827010,9.2063502,cafe,,,+39 02 36505527,"Mo-Fr 07:00-19:00, Sa 07:30-19:00, Su 08:00-13:00","Via Vitruvio, 20124, Milano"
+Red Cafè,45.4767705,9.2040167,bar,,,+39 02 36798869,Mo-Th 08:00-02:00; Fr-Sa 08:00-03:00; Su 08:00-02:00,"Via Panfilo Castaldi 29, 20124, Milano"
+Amici,45.4618690,9.2111934,cafe,,,+39 389 4346714,,"Piazza Santa Maria del Suffragio 6;8, Milano"
+Tommy & Lucy,45.4841473,9.2229357,cafe,,,,,"Via Vallazze 26, 20131, Milano"
+Bar Giada,45.4889166,9.2133017,cafe,,,,,
+C&C Bar,45.4909355,9.2074306,bar,,,,,
+Lux Cafè,45.4859352,9.2262987,cafe,,,,,"Via Andre' Marie Ampere 87, 20131, Milano"
+Porpora,45.4861590,9.2245513,cafe,,,,,
+FRED,45.4862076,9.2318065,bar,,,,"Tu-Th 09:00-01:00; Mo 17:00-01:00; Fr, Sa 09:00-02:00; Su 09:00-00:00","Via Francesco Ingegnoli 2, 20131, Milano"
+Bar al posto giusto,45.4757111,9.2211456,bar,,,,,
+Iris,45.4767026,9.2079210,bar,,,,,
+Steven Hill Coffe,45.4620419,9.2096837,bar,,https://www.improntabirraia.com/,+39 02 3668 4747,Mo-Sa 07:00-19:00; Su 08:00-19:00,"Via Amatore Sciesa 1, 20135, Milano"
+DCafé,45.5012315,9.1972526,cafe,,,,,"Piazzale Istria 1, 20159, Milano"
+Carpe Diem,45.5018886,9.1998641,cafe,,,,,"Via Arbe 85, 20125, Milano"
+Bar Vega,45.5012221,9.1986867,bar,,,,,"Piazzale Istria 4, Milano"
+Blender Farini,45.4913093,9.1841357,bar,,,,,"Via Carlo Farini 48, 20159, Milano"
+Zhizun Pub,45.4914095,9.1847285,pub,,,,,"Via Alserio 3, 20159, Milano"
+150UP,45.4902529,9.1847278,bar,,https://150up.com/,+39 02 89452576,Mo-Sa 09:00-22:30,"Via Medardo Rosso 16, 20159, Milano"
+Tabit,45.5145362,9.2391024,bar,,,,,
+Capolinea Caffè,45.4568189,9.2235176,cafe,,,,,"Viale Molise 51, 20137, Milano"
+Bar Velasca,45.4601431,9.1911925,cafe,,,+39028052327,,"Via Pantano 2, 20122, Milano"
+Ice & Coffee,45.4603544,9.1907500,cafe,,,+390239563572,,"Via Pantano 2, 20122, Milano"
+Peter Bar,45.4606839,9.1916054,cafe,,,+390258303846,,"Via Larga 31, 20122, Milano"
+REF* - RE FOSCO,45.4568832,9.1930299,cafe,italian,,,Mo-Su 09:30-22:00,"Via San Calimero 7, 20122, Milano"
+Il Caffè della Terra di P.ta Romana,45.4563234,9.1950218,cafe,,https://caffeterra.com,+39 02 83480866,,"Corso di Porta Romana 80, 20122, Milano"
+Caffè Napoli Crocetta,45.4557150,9.1954801,cafe,,,,,
+Nettare dei Santi,45.4568089,9.1929895,cafe,,,,,"Via San Calimero 7, 20122, Milano"
+Break,45.4368963,9.1941273,cafe,,,,,
+Angelo Azzurro,45.4370953,9.1963011,cafe,,,,,
+Prog,45.4577567,9.2079204,pub,,,,,"Via Andrea Maffei 12, 20135, Milano"
+New Wood,45.4870646,9.1888333,bar,burger,,,,"Via Pietro Borsieri 14, 20124, Milano"
+Mind the GAP,45.4566460,9.2024271,pub,,,,,
+Afterline,45.4889658,9.2055739,bar,,http://www.afterline.it/,,,"Via Giovanni Battista Sammartini 25, 20125, Milano"
+Bar Fiamingo,45.4959235,9.2100769,cafe,,,,,"Via Gianfranco Zuretti 57, 20125, Milano"
+Bar Gluck,45.4909946,9.2073114,cafe,,,,,"Via Cristoforo Gluck 2, 20125, Milano"
+Club 23,45.4888849,9.2054880,bar,,,,,"Via Giovanni Battista Sammartini 23, 20125, Milano"
+Happy Days,45.4900080,9.2051566,cafe,,,,,"Via Ponte Seveso 33, 20125, Milano"
+Il Gatto e la Volpe,45.4898539,9.2049648,cafe,,,,,"Via Ponte Seveso 33, 20125, Milano"
+Sauna Metro club Milano Centrale,45.4892610,9.2055336,nightclub,,www.metroclubmilano.it,+39 02 66719089,Mo-Su 12:00-01:30,"Via Giovanni Schiaparelli 1, 20125, Milano"
+Queen Bar,45.4879552,9.2041460,cafe,,,,,"Via Giovanni Battista Sammartini 15, 20125, Milano"
+Ginger Cocktail Lab,45.4496651,9.1777067,bar,,https://www.gingercocktailab.it/,,Tu-Su 17:30-02:30,"Via Ascanio Sforza 21, 20136, Milano"
+Caffè Milanino,45.4906171,9.2368750,cafe,,,,,
+Peter Bar,45.4776378,9.1933440,bar,,,,,
+Bar Brambilla,45.4777102,9.1922349,bar,,,,,
+Covino Club Cafe,45.4773585,9.1921451,bar,,,,,
+Chiosco Manin,45.4756052,9.1972584,cafe,,,,,
+Bar Tiffany,45.5125477,9.2218154,cafe,,,,,"Via Bernardo Rucellai 12, 20126, Milano"
+Viel,45.5122096,9.2247873,cafe,,,,Th-Tu 08:00-20:00; We 15:00-20:00,"Viale Monza 222, 20128, Milano"
+Bar Lucania,45.4414918,9.2237729,bar,,,,,
+Gran caffè,45.4559603,9.1343807,cafe,,,,,"Via Arzaga 24, 20146, Milano"
+Ralph's,45.4578194,9.1807356,pub,,,+390287250438,,"Via Edmondo De Amicis 4, 20123, Milano"
+Prince,45.4371728,9.1836399,cafe,,,,,
+Jo's,45.4350305,9.1778198,cafe,,,,,
+La baia buia,45.4360744,9.1745907,cafe,,,,,
+Diaboliko,45.4337127,9.1740304,cafe,,,,,
+Bar del punt,45.4330365,9.1742941,cafe,,,,,
+Lisa bar,45.4338467,9.1779979,cafe,,,,,
+Bar Caffetteria Club Davide,45.4360368,9.1814263,cafe,,,,,"Via Francesco De Sanctis 50, 20141, Milano"
+Caffè del binari,45.4537231,9.1687408,cafe,,,,,"Via Tortona 3, 20144, Milano"
+Kairos café,45.4539722,9.1690946,cafe,italian,,+390236512487,,"Via Tortona 12, 20144, Milano"
+Caffè Mania,45.4500285,9.1405537,cafe,,,+39 347 3629181,Mo-Fr 06:30-21:00; Sa 07:00-18:00,"Largo Giovan Battista Scalabrini 2, 20146, Milano"
+Bar Cupido,45.4489000,9.1437494,bar,,,,,"Via Giambellino 79, 20146, Milano"
+Bar Jessica,45.4497500,9.1364153,cafe,,,,,"Via Lorenteggio 163, 20146, Milano"
+Bar Sincero,45.4484560,9.1392303,cafe,,,,,"Via dei Biancospini 1, 20146, Milano"
+Lina's Bar,45.4490599,9.1397575,cafe,,,,,
+Eleven Bar,45.4494612,9.1415724,cafe,,,,,"Via Curio Dentato 11, 20146, Milano"
+Astro Bar - Tabacchi,45.4514486,9.1416356,cafe,,,+39024238881,,"Via Lorenteggio 137, 20146, Milano"
+Bottega dei Pasticci,45.4527098,9.1445258,cafe,,,+39 02 474 427,Tu-Su 07:00-20:30,
+Va a ciapà il bar,45.4525632,9.1450887,cafe,,,,,"Via Lorenteggio 57, 20146, Milano"
+L'atelier del caffè,45.4532443,9.1471896,cafe,,,,,"Via Lorenteggio 41, 20146, Milano"
+Zero Due,45.4527997,9.1498348,bar,,,,,"Via Leone Tolstoi 47, 20146, Milano"
+Break Café Caffeteria Mokito,45.4520717,9.1506577,cafe,,,,,"Via Leone Tolstoi 24/1, 20146, Milano"
+La Fenice,45.4519778,9.1503070,cafe,,,,,"Via Leone Tolstoi 37, 20146, Milano"
+Panarello,45.4494752,9.1513241,cafe,,,,,
+Kimkameamea,45.4507738,9.1385725,cafe,,,,,
+Italian Dream,45.4501020,9.1365129,cafe,,,,,
+Bar Lory,45.4512556,9.1354818,cafe,,,,,"Via Francesco Primaticcio 34, 20146, Milano"
+Cris Bar,45.4971131,9.1310742,cafe,,,,,
+Coffee Brown,45.4972269,9.1316168,cafe,,,,,
+Madame Cafè,45.4936795,9.1805564,cafe,,,,,"Via dell'Aprica 10, 20158, Milano"
+Bar Azzurra,45.4922563,9.1841894,cafe,,,,Mo-Su 07:30-24:00,"Via Carlo Farini 55, 20159, Milano"
+Caffè Galli,45.4916024,9.1836932,cafe,,,,,"Via privata Dina Galli 2, 20159, Milano"
+Waiting Bar,45.4920241,9.1844035,bar,,,,,"Via Carlo Farini 52, 20159, Milano"
+Caffè Amore Bistrot,45.4934935,9.1827293,cafe,,,,,Via Valtellina
+Bar fortuna,45.5086066,9.2014342,cafe,,,,,
+Mono Bar,45.4763822,9.2039648,cafe,italian,,,Mo off; Tu 18:30-01:00; We-Th 18:30-01:30; Fr-Sa 18:30-02:00; Su 18:30-01:00,"Via Lecco 6b, 20124, Milano"
+Bar delle Ore,45.4629769,9.1934813,cafe,,,+39 02 860377,,"Via delle Ore 4, 20122, Milano"
+Bar Duomo,45.4638617,9.1932848,cafe,coffee_shop,,+39028057461,,"Via Carlo Maria Martini 1, 20122, Milano"
+Bar Sole,45.4619255,9.1908573,cafe,,,,,"Via Paolo da Cannobio 4, 20122, Milano"
+Ca'puccino,45.4621984,9.1904460,cafe,,https://www.ca-puccino.com/,+39 02 86882993,Mo-Su 07:30-23:00,"Piazza Armando Diaz 5, 20122, Milano"
+Caffè Napoli,45.4626412,9.1891509,cafe,,,,,"Via Gaetano Giardino 3, 20123, Milano"
+12oz Cofee Joint,45.4636035,9.1891221,cafe,dessert,https://www.12ozcj.com/,+39 02 49635212,"Mo-Th 07:30-22:30; Fr-Su,PH 07:30-23:00","Via Dogana 2, 20123, Milano"
+Porta d'Oro,45.4623498,9.1904357,nightclub,,http://www.portadoroclub.it/,+39 02 86998972,,"Piazza Armando Diaz 3, 20122, Milano"
+Shilling's,45.4619518,9.1908857,nightclub,,https://www.shillings.it/it/shillings,+39 02 8693554,,"Via Paolo da Cannobio 2, 20122, Milano"
+Venus Night Club,45.4626409,9.1894738,nightclub,,http://www.venusnightclub.it/,+39 02 89093816,,"Via Gaetano Giardino 1, 20122, Milano"
+La gelateria della Musica,45.4720659,9.2143198,cafe,ice_cream,,,Tu-Su 14:00-22:00,Via privata Giuseppe Abamonti 2
+Clorofilla,45.4827144,9.1865291,bar,,,,,
+Bar Turati,45.4739120,9.1950498,cafe,,,,,"Via Filippo Turati 8, 20121, Milano"
+Il baracchino,45.4731655,9.1960988,cafe,,,,,
+The wall,45.4875420,9.2357985,nightclub,,https://www.wallmilano.com/club/,,Mo-Fr 11:00-02:00; Sa-Su 09:00-01:00,"Via Plezzo 16, Milano"
+Caffé Sudan,45.4526547,9.1647919,bar,,,+39028392547,,"Via Bergognone da Fossano 47, 20144, Milano"
+Bar Armony,45.4873912,9.1688561,cafe,,,+3902314346,,"Via Fratelli Induno 28, 20154, Milano"
+GOOD TIME,45.4873170,9.1716938,bar,,,,,"Via Cenisio 7, 20154, Milano"
+Macondo cafè,45.5022627,9.1623083,bar,,,,,"Via Emilio Broglio 25, 20158, Milano"
+The Club,45.4775441,9.1841451,nightclub,,https://www.theclubmilano.it,+39 02 3653 4005,,
+Pineta Milano,45.4861894,9.1738635,nightclub,,https://www.pinetamilano.com/,,,"Via Messina 38, 20154, Milano"
+Morosini,45.4585645,9.2109433,cafe,,,,,
+NaBi,45.4563152,9.2121460,cafe,,,,,
+Cafè Chantal,45.4568836,9.2124538,cafe,,,,,
+Barbisa 1920,45.4521021,9.2054417,cafe,coffee_shop,https://barbisa-1920.eatbu.com,+39 025516935,,"Via Lodovico Muratori 11, 20135, Milano"
+Trapizzino,45.4519873,9.2030947,cafe,,,,,
+Bar Porta Romana,45.4512375,9.2042816,cafe,,,,,
+Caffeteria XXI Secolo,45.4519026,9.2031832,cafe,,,,,
+Bar Luce,45.4438095,9.2052904,cafe,,,,,
+Clarissa bar,45.4558218,9.2109286,cafe,,,,,
+Deus Café,45.4909146,9.1884416,cafe,coffee_shop,,,,
+Il Secco,45.4502902,9.1697096,bar,,https://www.ilsecco.com/it/,,,"Via Angelo Fumagalli 2, 20143, Milano"
+Millenium Cafè,45.4455930,9.2126575,cafe,,,,,
+The White Flag,45.4446317,9.2105485,pub,,https://www.thewhiteflag.it/,+39 340 176 7631,Mo-Su 17:30-02:00,"Via Brembo 7, 20139, Milano"
+Bar Primavera,45.4446634,9.2112247,cafe,,,,,
+Quel che c'è cafè,45.4428053,9.2056840,cafe,,,,,
+Golden Cafè,45.4678887,9.2045254,cafe,,,,,"Via Vivaio 2, 20122, Milano"
+Bar Salvini,45.4719810,9.2034672,cafe,,,,Mo-Sa 06:30-20:00,
+Caffè Duse,45.4716980,9.2035812,cafe,,,,,
+Caffè di via Vivaio,45.4699664,9.2038781,cafe,,,,,"Via Vivaio 20, 20122, Milano"
+Bar Bianco,45.4743781,9.2016733,bar,,https://www.barbiancomilano.com/,,,
+Tropical Bar,45.4516424,9.1750226,bar,,,,,"Ripa di Porta Ticinese 27, 20143, Milano"
+Ideal Bar,45.4954972,9.1890881,cafe,,,,,
+Il Posto Giusto,45.4952423,9.1900388,cafe,,,,,
+Bar Sbagliato,45.4888609,9.2100648,cafe,,,,,"Viale Brianza 33, Milano"
+Giglio Bar,45.4883293,9.2100846,bar,,,,,"Via Soperga 22, Milano"
+Bar L'Angolo,45.4891041,9.2105790,cafe,,,,,
+Birrificio Italiano,45.4883145,9.2089480,pub,,https://www.birrificio.it/it/birrificio-italiano-milano,+39 02 38310351,,"Via Ferrante Aporti 12, Milano"
+Mai dire bar,45.4873755,9.2098072,cafe,coffee_shop;breakfast,https://mai-dire-bar.eatbu.com/,+39 02 8287 5469,Mo-Fr 07:30-20:00 Sa 07:30 - 15:30 18:00 - 20:00,"Via Giovanni Pierluigi da Palestrina 32, Milano"
+The English Football Pub,45.4620417,9.1853897,pub,burger,,+39 02 864464,"Mo-Fr 12:00-15:00,17:00-02:00; Sa 13:00-02:00; Su 15:00-00:00","Via Valpetrosa 5, 20123, Milano"
+Illy,45.4832044,9.1902262,cafe,coffee_shop,,+39 02 65560331,Mo-Fr 07:30-21:00; Sa-Su 08:00-21:00,"Piazza Gae Aulenti 6, 20154, Milano"
+Caffè 19,45.4699531,9.1912081,cafe,,,,,"Via Monte di Pietà 19, 20121, Milano"
+Caffè Mozart,45.4684483,9.1907836,cafe,,,,,"Via Romagnosi 2, 20121, Milano"
+La Rocchetta,45.4688345,9.1763077,cafe,italian,https://www.larocchettacaffe.it/,+39 02 8056710,,"Via Pietro Paleocapa 1, 20121, Milano"
+Flamingo,45.4811792,9.1864351,bar,,,,,"Piazza Venticinque Aprile 7, 20154, Milano"
+Prince Cafè,45.4488278,9.1775196,cafe,,,,,
+La Cantinetta,45.4465790,9.1769872,bar,,,,,
+Il Birillo,45.4595706,9.2074251,cafe,,,,,
+Mom's,45.4584498,9.2074108,cafe,,,,,
+Caffè Moda Maffei,45.4581450,9.2081699,cafe,,,,,
+Cambusa 2.0,45.4585878,9.1492880,pub,,,+39 02 48951361,,"Piazzale Tripoli 7, 20146, Milano"
+Snoopy Bar,45.5205189,9.2254582,bar,,,+39 02 27006433,,Via privata Alfredo Soffredini 77
+Shaker Bubble Tea,45.4639021,9.1874322,cafe,tea,https://www.shakerbubbletea.it/,,,"Via Victor Hugo 1n04, 20123, Milano"
+Mag Cafè,45.4512973,9.1733671,bar,,https://www.farmilygroup.com/locali/mag,+39 02 3956 2875,Mo-Su 07:30-02:00,"Ripa di Porta Ticinese 43, 20143, Milano"
+Sweet Coffee Bar,45.4715009,9.1944372,cafe,,,,,"Via Alessandro Manzoni 42, 20121, Milano"
+12Oz,45.4748010,9.2058133,cafe,,,,Mo-Th 07:30-20:00; Fr-Su 07:30-21:00,
+San Gregorio,45.4778507,9.2077432,cafe,,,+39 02 2952 4182,,
+Bar Abruzzi,45.4796676,9.2173713,cafe,,,,,
+Glauco Petisserie,45.4793178,9.2167624,cafe,,,,Mo-Su 07:30-20:00,
+Made in Sicily,45.5073092,9.2038429,cafe,italian,,,"Mo-Sa 07:00-20:00, Su 08:00-18:00; PH off",Viale Sarca 73
+Bar Castello,45.4690339,9.1817914,cafe,italian,https://www.gelateriabarcastello.com/,+39 02 864038,,"Piazza Castello 2, 20121"
+DAU cafè milanese,45.4573048,9.1808294,cafe,,,,,"Via Edmondo De Amicis 1, 20123, Milano"
+Café Saint George,45.4609125,9.1839223,cafe,,,,,"Via Torino 56, 20123, Milano"
+Lucas Bar,45.5005226,9.2243735,cafe,,,,,
+Cool Morning,45.4433412,9.1788907,bar,,,,,"Viale Tibaldi 22, 20136, Milano"
+99 Bar,45.4816018,9.1794170,cafe,italian,,,,"Via Paolo Sarpi 11, 20154"
+Dru Bar Caffetteria,45.5007779,9.2224763,cafe,,,,,
+Bar 1970,45.4910510,9.2129322,cafe,,,,,
+Osteria Del Lazzaretta,45.4793153,9.2033289,cafe,,,,"Mo-Su 12:00-15:00,19:00-23:00",
+Penny Lane,45.4439920,9.1736678,cafe,,,,,"Via Antonio Lecchi 20, 20143, Milano"
+L'Angolo,45.4439745,9.1740259,bar,,,,,"Via Antonio Lecchi 19, 20143, Milano"
+Nuhar Cafè,45.4791012,9.2062464,bar,,,,,"Via Benedetto Marcello, 20124"
+Good Morn'ng,45.5150601,9.2126561,cafe,,,,,
+Losa Cafè,45.5078527,9.2234442,cafe,,,,"Mo-Sa 06:00-19:30; PH,Su off","Viale Monza 170, 20127, Milano"
+Brambilla's,45.4458836,9.1646575,cafe,,,,,"Via Carlo Torre 37, 20143, Milano"
+Bar Chèri,45.4653971,9.1893489,cafe,,,,,"Via Silvio Pellico 6n01, 20121, Milano"
+Beynac,45.4518202,9.1758496,bar,,,,,"Ripa di Porta Ticinese 17, 20143, Milano"
+Green bar,45.4370641,9.1646050,bar,,,,,"Viale Famagosta 50, 20142, Milano"
+Ripa's Cafe,45.4484648,9.1600758,cafe,,,,,"Ripa di Porta Ticinese 117, 20143, Milano"
+Diamond Cafe,45.4407246,9.1289110,cafe,,,,,"Via Lodovico il Moro 167, 20142, Milano"
+Covo di Matti,45.4484687,9.1623675,bar,,,,,"Via Eugenio Villoresi 6, 20143, Milano"
+Fonderie Milanesi,45.4507057,9.1842112,bar,,,,,
+TPR,45.4509532,9.1841512,bar,,,,,
+Officina Milano,45.4499066,9.1843997,bar,,,,,
+Caffè Olimpia,45.4689324,9.1827097,cafe,,,+39 02 8057251,,"Foro Buonaparte 76, 20121, Milano"
+Potafiori,45.4505478,9.1961374,cafe,,,+39 02 87065930,Mo-Sa 09:00-23:45,"Via Salasco 17, 20136, Milano"
+Al panino 900,45.4561697,9.1699158,cafe,,https://alpanino900.it/,+390287166673,,"Via Savona 2, 20144, Milano"
+Pitti Caffè,45.4701013,9.1654294,cafe,ice_cream;coffee_shop,,+39 02 48027256,,"Via Lorenzo Mascheroni 16, 20145, Milano"
+Fashion Cafe,45.5003611,9.1646555,cafe,,,,,
+Sushi Matsu Omakase,45.4767627,9.2094813,cafe,japanese,https://www.sushimatsuomakase.com/,,,"Via Alvise Cadamosto 7, 20129, Milano"
+Cream Lounge,45.4765597,9.1708611,bar,,,+39 02 45470355,,Via Giuseppe Francesco Piermarini 2
+Bar Tabacchi Martini,45.4576339,9.2200564,cafe,,,,,
+Bachelite cLab,45.4578902,9.2191425,bar,,,,,
+Gran Caffè,45.4578930,9.2187589,cafe,,,,,
+Bar Tabacchi,45.4559712,9.2192031,cafe,,,,Mo-Sa 06:00-21:00; Su 07:00-19:00,"Via Gaetano Strigelli, Milano"
+Caffetteria Ateneo,45.5148576,9.2080596,cafe,,,,,"Viale Sarca 163, 20126, Milano"
+Sarcafè,45.5178032,9.2097109,cafe,,,,,"Viale Sarca 199, Milano"
+Why Not,45.5170303,9.2092991,bar,,,,,"Viale Sarca 193, 20126, Milano"
+William's Caffè,45.4838801,9.2301470,cafe,,,+39 333 156 2806,,"Via Teodosio 14, 20131, Milano"
+Biffino Manzoni,45.4692013,9.1916788,bar,,,,,"Via Andegari 15, 20121, Milano"
+Rocket,45.4496605,9.1612594,nightclub,,,,,"Alzaia Naviglio Grande 98, 20144, Milano"
+Luca & Andrea,45.4515191,9.1728508,bar,,https://www.lucaeandreabar.it/,+39 02 58101142,,"Alzaia Naviglio Grande 34, 20144, Milano"
+il Bar di Marco,45.4799023,9.2086168,cafe,,,,,
+Silos cafe,45.4793153,9.2092965,cafe,,,,,
+The Friends,45.4801903,9.1934014,pub,,https://www.thefriendspubmilano.it,+39 02 2900 5315,"Mo-Sa 18:00-02:00, Su 12:00-02:00","Via Monte Santo 12, 20124"
+Richmond,45.4894381,9.2005690,bar,,,,,
+Calicantus,45.4705238,9.1790528,cafe,,https://www.calicantus.me/project/nullam-lobortis-lacus-2/,,Tu-Su 09:00-19:00,
+Art Cafe,45.4764876,9.1816804,cafe,,http://www.artcafemilano.it/,+39 02 36748220,Mo-Sa 07:00-24:00,"Via Legnano 26, 20121, Milano"
+La Guantanamera,45.4423573,9.1342284,bar,,,,,
+Ca'puccino,45.4744302,9.2066119,cafe,,,,,
+Cafè Clubino,45.4523616,9.1848349,bar,,,,,
+Bar Tucano,45.4715280,9.2136005,cafe,,,,,"Via Gustavo Modena 7, 20129, Milano"
+Caffetteria da Mustri,45.4431735,9.2645823,cafe,,,,,"Via Monte Oliveto 19, Milano"
+Café Taipy,45.4730397,9.1591744,cafe,,,,,
+Milionaire lounge bar,45.4800297,9.1998458,cafe,,,,,
+Churchill Caffè,45.4780827,9.2002111,cafe,,,,,"Via Panfilo Castaldi 9, 20124, Milano"
+Cibario takeaway,45.4866529,9.1909349,cafe,,,,,
+Luna Rossa,45.4671272,9.1859716,cafe,,http://www.lunarossa-ristorante.eu/,+39 02 874739,,"Via Broletto 26, Milano"
+L'Ultimo Metrò,45.4906297,9.2213617,cafe,,,,Mo-Tu 18:00-23:00; We-Sa 18:00-01:00; Su off,"Via Marco Aurelio 2, 20127, Milano"
+Impronta Birraia,45.4706518,9.2460207,pub,burger,https://www.improntabirraia.it,+39 02 37072071,"Mo-Fr 12:00-15:00,18:00-24:00; Sa 18:00-02:00; Su 12:00-24:00","Via Tucidide 56, 20134, Milano"
+Baobar,45.4760253,9.2150633,cafe,,,,,
+Bar dell'Angolo,45.4757638,9.2152363,cafe,,,,,
+Bar Trattoria 88,45.4709090,9.2142753,cafe,,,,,
+Bar Tucano,45.4708953,9.2136080,cafe,,,,,
+Caffè Teatro,45.4703989,9.2134188,cafe,,,,,
+Victory Cafè,45.4683472,9.2144964,cafe,,,,Mo-Sa 07:00-21:00,
+Trevesbar,45.4752505,9.1871918,cafe,,,,,"Largo Claudio Treves 2, 20121, Milano"
+Ai Tre Morsi,45.4657555,9.1764585,pub,,,+3902804758,,"Via Terraggio 1, 20123, Milano"
+I Panini della Befi,45.4648248,9.1942671,cafe,,,+39 02 76023321,,
+Amnesia,45.4630384,9.2404667,nightclub,,https://www.amnesiamilano.com,+39 02 70100702,,"Via Cavriana 7, 20134, Milano"
+Bamboobar,45.4704972,9.1929464,bar,,https://www.armanihotelmilano.com/it/bar-e-ristorante/armani-bamboo-bar/,,,Via Alessandro Manzoni 31
+Martesana,45.4959139,9.2030873,cafe,,,,,"Via Giovanni Cagliero 14a, 20125, Milano"
+L' Arabesque,45.4632471,9.1980321,cafe,,http://www.learabesque.net,+390276014825,Mo-Sa 07:00-22:00,"Largo Augusto 10, 20122"
+Dosso 18,45.4673516,9.1731163,cafe,,,+39 02 48004400,,"Via Caradosso 18, 20123, Milano"
+Green Bar,45.4994457,9.1508254,cafe,,,,,
+That's Milano,45.4932152,9.1882813,cafe,,,,,
+Mont Real Cafè,45.4522385,9.1788459,cafe,,,,,"Piazza Ventiquattro Maggio 12, 20123, Milano"
+Black Bull,45.4935031,9.1434607,pub,,,+39 02 33003073,,"Viale Certosa 89, Milano"
+Cafè Tabacchi Amelia,45.4501586,9.1797923,cafe,,,,,
+Il Sidro,45.4805228,9.2134165,bar,,,,Mo-Th 16:00-02:00,"Via Federico Ozanam 15, 20129, Milano"
+Il piccolo sogno,45.5098180,9.2052567,cafe,,,,Mo-Sa 07:30-19:30,
+Bar Le Betulle,45.5082116,9.2025574,cafe,,,,,"Via Salvatore Pianell 52, Milano"
+Bar Giardinetto,45.4998362,9.2117228,cafe,,,,,
+Bar Augusto,45.4954210,9.1763226,cafe,,,,,
+Bar Monica,45.4951389,9.1869008,cafe,,,,,
+Nocciolino & sapori,45.5067556,9.1679812,cafe,,,,,
+Grand Cafè & Tre Marie,45.5005273,9.1881034,cafe,,,,,
+calligaris,45.4745564,9.1945707,cafe,,,,,"Via Filippo Turati 7, 20121, Milano"
+Tom the ordinary market,45.4568172,9.1842867,bar,,https://theordinarymarket.com/,,"Mo-Th 12:00-15:00, 19:00-02:00; Fr 12:00-15:00, 19:00-03:00; Sa 18:30-03:00; Su off","Via della Chiusa 1, 20123, Milano"
+Il bar Milano,45.4649015,9.1918290,bar,,http://www.ilbarmilano.it/,+39 02 8852454,,
+KOKO,45.4608859,9.2071134,bar,,https://www.kokomilano.it/,,,"Viale Regina Margherita 20, 20122, Milano"
+Joy Bistrot & Cafe,45.4508258,9.1906187,cafe,,,,,
+Spago Bar,45.5023791,9.1537897,bar,,,+39 02 87396181,,"Via Raffaele Lambruschini 29, 20156, Milano"
+Café Etniko,45.4777017,9.1776717,pub,,,,,
+Bollani Milano 1930,45.4398938,9.1997154,bar,,,,,
+Bim Bum Bar,45.4397875,9.1997350,bar,,,,,
+Block,45.4823970,9.1865722,nightclub,,,,,"Via Alessio di Tocqueville 13, 20154, Milano"
+Birrificio artigianale La Buttiga,45.4810185,9.1702590,pub,,,,,"Via Paolo Sarpi 64, 20154, Milano"
+Ripamonti 130,45.4382422,9.2000786,pub,,https://www.ripamonti130.com,,,
+Ricos Bar Tabacchi,45.4915527,9.1477684,bar,,,,,
+Buffet Stazione Bovisa,45.5022486,9.1590208,cafe,,,,,
+Caffè Villa,45.5178100,9.2260564,cafe,,,,,"Viale Monza 319, 20126, Milano"
+Livraghi Bar,45.5162569,9.2241313,cafe,,,,,
+n'ombra de vin,45.4734593,9.1879937,bar,,https://www.nombradevin.it/,+39 02 6599650,,"Via San Marco 2, 20121, Milano"
+Bar tabacchi ricos,45.4915144,9.1478175,bar,,,+390284191749,,"Via Grosotto 1, 20149, Milano"
+Dream cafè,45.4913240,9.1475900,bar,,,+390239257156,Mo-Su 06:00-21:00,"Via Grosotto 3, 20149, Milano"
+La chicchera,45.4800728,9.1614845,cafe,,,,,
+Bar Atlantic,45.4431132,9.1971647,cafe,,,,Mo-Sa 07:30-20:00; Su 08:30-18:00,
+Lab Café,45.4533565,9.1388627,cafe,,,+39 02 4129 9114,,"Via Luigi Scrosati 9, 20146, Milano"
+Nik's & Co,45.4903659,9.2037822,pub,,https://niksandco.it/,,Mo-Sa 07:00-02:00,"Via Giovanni Schiaparelli 14, 20125, Milano"
+Circle,45.4532960,9.1595801,bar,,https://circlemilano.com/,+39 02 42293745,,"Via Enrico Stendhal 36, 20144"
+La Fortezza,45.4828231,9.1685376,cafe,,,,,
+Niro Meet Bar,45.4649211,9.1780286,cafe,,,+39 02 8909 2743,Mo-Fr 07:00-22:00; Sa-Su off,"Giardino Aristide Calderini 3, 20143, Milano"
+B21,45.4627485,9.2008284,cafe,,,,,"Via Cesare Battisti 23, 20122, Milano"
+Il Chicco Ricco,45.4633054,9.1996900,cafe,,,,,"Via Filippo Corridoni 1, 20122, Milano"
+Caffè Il Moro,45.4629864,9.2000425,cafe,,,,,"Via Cesare Battisti 13, 20122, Milano"
+Bar al Chiossetto,45.4629526,9.2011653,cafe,,,,,
+Bar Conservatorio,45.4656822,9.2047708,cafe,,,,,
+Family Cafè,45.4670777,9.2020243,cafe,,,,,"Corso Monforte 30, 20122, Milano"
+Boccascena Cafè,45.4660450,9.1778296,cafe,,https://www.facebook.com/boccascenacafe/,+393929243823,,"Corso Magenta 24, 20123, Milano"
+Caffecioccolata,45.4566896,9.1621426,bar,,,+39 02 3669 7573,,"Piazza Giovanni Antonio Bazzi 2, 20144, Milano"
+Bar Debby,45.4571913,9.1637018,bar,,,+3902435042,,"Via Valparaiso 7, 20144, Milano"
+Puccia's Brothers,45.4675966,9.1726923,cafe,puccia,https://www.pucciasbrothers.it,+39 02 66666361,Mo-Fr 07:00-20:00; Sa 08:00-20:00; Su off,"Piazza Virgilio 3, 20123, Milano"
+Bar Il Cenacolo,45.4675185,9.1703071,cafe,,,,,"Via Giovanni Boccaccio 33, 20123, Milano"
+Le Grazie,45.4656634,9.1704655,cafe,breakfast,https://www.facebook.com/people/BAR-LE-Grazie/100063685387719/,+390248011458,Mo-Su 07:00-20:00,"Corso Magenta 69, 20123, Milano"
+L'Alter Bar,45.4673026,9.1736899,cafe,,,+39024983916,,"Via Vincenzo Monti 15, 20123, Milano"
+Shed Bar,45.4687869,9.1717602,cafe,,,,,"Via Vincenzo Monti 27, 20123, Milano"
+Caffè Monti,45.4690716,9.1713073,cafe,,,,,
+NSUB,45.4996891,9.2238502,cafe,,,,,
+Caffè della piazzetta,45.4997300,9.2245066,cafe,,,,,"Via Matteo Maria Boiardo 35, 20127, Milano"
+Mambo Cafe,45.5162195,9.2464769,cafe,italian,,,,"Via Ugo La Malfa 2, 20128, Milano"
+Cape Town Cafe,45.4527054,9.1756724,pub,,http://capetowncafe.it,+39 02 89403053,Mo-Su 18:00-02:00,"Via Vigevano 3, 20144, Milano"
+Bar Lilla,45.4838562,9.1660949,cafe,,,,,"Via Poliziano 16, 20154, Milano"
+Bar Simpatia,45.4874111,9.1678626,bar,,,,,"Via Cenisio 25, 20154, Milano"
+Golden Lion,45.4873960,9.1682381,cafe,,,,,
+Milano Coffee Bar,45.4869125,9.1668643,bar,,,,,
+Bar Linea 84,45.4868874,9.1681684,cafe,,,,,
+El Gainatt de Milan,45.4757877,9.2241843,cafe,,,+39 346 6746259,"Mo-Th,Sa 07:00-20:30; Fr 07:00-21:30",
+Bar Mascagni,45.4424887,9.2196507,bar,,,+39 0236748025,,
+Spartacus,45.4594590,9.2077458,cafe,,,+39 02 49461747,,Via Spartaco 4
+Caffé Napoli,45.4780560,9.1842050,cafe,,,,,"Largo La Foppa 1, 20121"
+Sheraton Diana Majestic,45.4738083,9.2068075,bar,,,+39 02 20582081,,"Viale Piave 42, 20129"
+God Save the Food,45.4701363,9.1855008,cafe,,https://www.godsavethefood.it/ristoranti/brera/,+39 02 22229440,,"Piazza del Carmine 1, 20121, Milano"
+Pascucci,45.4654230,9.1977941,cafe,,,,,Corso Europa 2
+Rab,45.4477762,9.1796814,cafe,,,,,Corso San Gottardo 41
+Etta,45.4528931,9.1733332,bar,,,,Mo-Fr 17:00-01:00; Sa 17:00-02:00; Su off,"Via Vigevano 19, 20144, Milano"
+Baja Lounge Cafe,45.4613116,9.1416649,cafe,,,,,
+Bosco in città,45.4827681,9.0901734,bar,,,,,"Via Novara, 20153, Milano"
+Dolly Bar,45.4378687,9.1930012,cafe,,,,,
+Caffè del Corso,45.4402366,9.2232954,bar,,,,,
+Torrefazione Sant Teresita,45.4404357,9.2228076,bar,,,+39 02 534659,Mo-Sa 07:00-19:00,"Via Gamboloita 1, 20139, Milano"
+Ritmo,45.4518524,9.1760154,bar,,,,,"Ripa di Porta Ticinese 15, 20143, Milano"
+Bar Mirabello,45.4751859,9.1903347,cafe,,,,,"Piazza Carlo Mirabello 5, 20121, Milano"
+caffe Zanzibar,45.5203257,9.2267998,bar,,,,,
+Bar Flash,45.5206828,9.2248364,bar,,,,,
+Gran bar,45.5199378,9.2232173,bar,,,,,
+Luna Piena,45.5187702,9.2255917,cafe,,,,,
+Amadeus,45.5162316,9.2448619,cafe,,,,,"Via Adriano, 20128, Milano"
+Caffè Napoli,45.4680025,9.1784039,cafe,,,,Mo-Fr 07:00-18:00; Sa 08:00-17:00,"Foro Buonaparte 53, 20121, Milano"
+Il Magentino,45.4658204,9.1792649,cafe,,http://www.magentinomilano.it/,+39 02 84945372,,"Corso Magenta 14, 20123, Milano"
+Cafè Sawa,45.4449048,9.1550015,cafe,,,,,"Via Giacomo Watt 2, 20143, Milano"
+Pestalozzi 1,45.4474037,9.1551335,bar,,,,,
+Bar El Canton,45.4640587,9.1803646,cafe,,,,,"Via Morigi 15, 20123, Milano"
+Caffè Le Tre Vie,45.4606863,9.1796736,cafe,,,,,"Via del Torchio 7, 20123, Milano"
+Barcollando,45.4602435,9.1767986,cafe,,https://www.barcollandocafe.it/,,Mo-Sa 07:30-00:00; Su off,"Via Francesco Novati 6, 20123, Milano"
+Just Cafè,45.4602717,9.1771178,cafe,,,+390239831241,,"Via Francesco Novati 4, 20123, Milano"
+Portuga,45.4607374,9.1765505,cafe,,,,,"Via Lanzone 27, 20123, Milano"
+Crumb Snack & Cafe,45.4607740,9.1764070,cafe,,https://www.instagram.com/crumbsnackandcafe/,,,"Via Lanzone 22, 20123, Milano"
+Bibendum Baladin,45.4715438,9.2145233,biergarten,,https://bibendumenoteca.wixsite.com/site-bibe/gallery,+39 02 2953 1654,"Mo-Sa 12:00-15:00,18:00-24:00; Su 18:00-24:00; Mo-Su 00:00-02:00; PH closed",
+Lazy Tom's Cafe,45.4845050,9.1587613,cafe,,,,,"Via Leon Battista Alberti 8, 20149, Milano"
+Milano Cafè,45.4889638,9.2246747,cafe,,,,,
+Pattini,45.4823634,9.2124284,cafe,,,+39 02 29516010,,Corso Buenos Aires 55
+La Latteria,45.4524612,9.1600783,cafe,,,,,"Via Savona 59, 20144, Milano"
+Caffè del Sole,45.4595137,9.1654883,bar,,,+390248000827,,"Viale Coni Zugna 14, 20144, Milano"
+Marulli Cafè,45.4558821,9.1663914,bar,,,+390247761737,,"Via Montevideo 10, 20144, Milano"
+Vetra,45.4516780,9.1792744,pub,,https://vetra.beer/,+390296450794,,"Corso Luigi Manusardi 3, 20136, Milano"
+Babitonga Cafè,45.4813460,9.1846025,bar,,,,Mo-Fr 08:00-23:00; Sa 10:00-23:00; Su 10:00-21:00,
+Mama Africa,45.4870571,9.2117572,cafe,,,,,"Via Giulio e Corrado Venini 14, Milano"
+Cafè Empire,45.4888350,9.2110786,cafe,,,,,"Viale Brianza 28, Milano"
+Giorgia's Cafe,45.4881731,9.2114072,cafe,,,,,
+Ral8022,45.4523462,9.1734918,bar,,https://www.ralmilano.it/ral-cocktail-bar/,,,"Via Corsico 3, 20144, Milano"
+Bar Tabacchi Nazionali e Esteri,45.4980070,9.1954207,cafe,,,,,"Via Budua, 20159, Milano"
+Hernry's Cafè,45.4520877,9.1819995,pub,,,+39 02 837 3335,,"Viale Col di Lana 4, 20136, Milano"
+Cafè e caffè,45.5171042,9.2444001,cafe,,,,,"Via Adriano, 20128, Milano"
+Family Bar,45.5174641,9.2450264,cafe,,,+390226309333,,"Via Emilio Lussu 6, 20128, Milano"
+I love café,45.5122510,9.2275366,cafe,,,,,
+Orsonero Coffee,45.4777758,9.2112915,cafe,,,,Mo-Fr 08:00-17:00; Sa 09:00-17:00; Su 09:00-13:00,"Via Giuseppe Broggi 15, 20129, Milano"
+mugs & co.,45.4615841,9.2111592,cafe,,http://mugsandco.it,,Mo-Sa 07:00-19:00,Via Emilio Morosini 4
+type,45.4896812,9.1892852,cafe,,,,,"Via Pietro Borsieri 34, 20159"
+Mudec,45.4513992,9.1617638,bar,,,,,
+La Birrofila,45.4382102,9.1845842,pub,,https://labirrofila.com/,+39 02 3672 3336,,"Via privata Sant'Ampellio 14, 20141, Milano"
+Caffè Vergani,45.4841079,9.2138668,cafe,cake,https://www.panettonevergani.com,+39 02 4549 7606,,"Via Saverio Mercadante 17, 20124, Milano"
+Happy Cafè,45.4514494,9.1866412,bar,,http://www.happycafemilano.it,,,
+We Coffee,45.4611146,9.1861944,cafe,,,,,
+Nottingham Forest,45.4687208,9.2067074,bar,,http://www.nottingham-forest.com,+39 02 798311,Mo off; Tu-Sa 18:30-02:00; Su 18:00-01:00,"Viale Piave 1, 20129, Milano"
+Bar Tavola fredda,45.4985265,9.1944730,cafe,,,,,
+Birreria Okey,45.4984325,9.1935316,pub,,,,,"Largo Vulci 5, 20159, Milano"
+Bar Murat,45.4970685,9.1919679,cafe,,,,,
+Bar M40,45.4960269,9.1935343,cafe,,,,,"Viale Marche 40, 20159, Milano"
+Beda House,45.4965543,9.1922736,pub,,https://www.bedahouse.it/,+39 02 603282,19:30-02:00,"Via Gioacchino Murat 2, 20159, Milano"
+GustaMi,45.4630385,9.1886291,cafe,,,,,
+Krem,45.4660215,9.1950490,cafe,,,,,
+B Cafè,45.4626154,9.1834537,bar,,https://www.bfamilygroup.it/cafe-about/,+39 02 89093317,,"Via San Maurilio 20, 20123, Milano"
+Bar Dani,45.4840773,9.2411083,bar,,,,,
+Guido Gobino,45.4660816,9.1761548,cafe,,https://guidogobino.com/,+39 02 8057463,,"Corso Magenta 36, 20123, Milano"
+Caffè del Bollo,45.4632427,9.1843474,cafe,,,,,"Via del Bollo 2, 20123, Milano"
+Bar Santa Marta,45.4623600,9.1836315,cafe,,,,,
+Viky Bar,45.4642035,9.1829489,cafe,,,,,
+Il Gusto del Caffè,45.4647340,9.1818345,cafe,,,,,
+Caffè Sant'Orsola,45.4628961,9.1817178,cafe,,,,,"Via Sant'Orsola 5, 20123, Milano"
+Maria Vi,45.4655251,9.1782363,cafe,,,,,
+Chiara caffè,45.5013740,9.2243623,cafe,,,,Mo-Sa 06:00-19:00,
+Tutto St'orto,45.5145000,9.2120661,cafe,healty_food,,,,
+Victoria Cafè,45.5064757,9.1630237,cafe,,,,,"Via Giovanni Durando 39, 20158, Milano"
+Caffé Bistrot Mordi,45.4932264,9.1910318,cafe,,,,,
+Damm A Trà,45.4923265,9.1900263,cafe,,,,,
+Tascaro,45.4913356,9.1890551,bar,,,,,
+Tiffany,45.4947738,9.1916513,cafe,,,,,
+Bar Atlantic,45.4857972,9.1643009,cafe,,,,,
+Momus,45.4863520,9.1645530,cafe,,,,,
+Sporting Pub,45.5111924,9.2006239,pub,,,,,
+Turnè,45.4749023,9.2092435,bar,,,+39 02 3650 8515,"Mo-Th 18:30-01:00; Mo off; Fr, Sa 18:00-02:00",
+Big Eppol,45.4751264,9.2081155,bar,,,,,
+Bar Gioia,45.4898936,9.2010685,cafe,,,,,"Viale Sondrio 2, 20124, Milano"
+Rotani Caffe,45.4757463,9.2051837,cafe,,,,,
+Bar Olimpico,45.4774549,9.2090803,cafe,,,,,"Via Giovanni Omboni 3, 20129, Milano"
+Angelo,45.4760086,9.2087558,cafe,,,,,
+Bere Buona Birra,45.4480409,9.2052687,pub,,https://www.berebuonabirra.com/,+39 02 8739 4371,"We-Fr,Su,Mo 17:00-23:00; Sa 13:00-23:00; Tu off",
+U2,45.5250091,9.1746722,cafe,,,,,
+Leone rossonero,45.5088003,9.2363176,cafe,,,,,"Via Ponte Nuovo, 20128, Milano"
+Albarest,45.5075479,9.2368791,cafe,,,,,
+Bar Biancamano,45.4782031,9.1804879,cafe,,,,,
+Lacerba,45.4549287,9.1996038,bar,,,,,
+Gecko23,45.4445252,9.2079801,bar,,https://gecko23.it/,,,"Via Brembo 23, 20139"
+Dopotutto,45.4521028,9.2037944,bar,,,,,
+El Buscia,45.4517315,9.1963034,cafe,,,,,
+Bar Pontevecchio,45.5088422,9.2466015,cafe,,,+39 338 5489510,,"Via Padova, 20132, Milano"
+Bar Arcobaleno,45.5076601,9.2449935,cafe,,,,,"Via Padova, 20132, Milano"
+Bar Atai,45.5054307,9.2429346,cafe,,,,,
+Lavazza,45.4660320,9.1911091,cafe,coffee_shop,https://www.lavazza.it/it/chi-siamo/stores/flagshipstore.html,+39 342 8411682,,"Piazza San Fedele 2, 20121"
+Bar Tigullio,45.4541728,9.1490289,bar,,,,,"Via Lorenteggio 22, 20146, Milano"
+Vista Darsena,45.4531636,9.1767658,bar,,https://www.vistadarsena.it/,,Mo-Fr 10:00-00:00; Sa-Su 10:00-01:00,"Viale Gabriele d'Annunzio, 20123, Milano"
+Eppol Liquors $ Kitchen,45.4748734,9.2076783,bar,,https://www.eppolmilano.com/,,,"Via Marcello Malpighi 7, 20129"
+Cinc Food & Drinks,45.4717395,9.1858349,bar,,,,,"Via Marco Formentini 5, 20121, Milano"
+Bistrot 66,45.4813046,9.1667631,cafe,,,,"Mo-Th 12:00-15:00, 18:00-00:30; Fr 12:00-15:00, 18:00-02:30; Sa 18:00-02:30",
+Caffè ... ?,45.4823484,9.1661945,cafe,,,,,
+Bar Cristal,45.4828937,9.1692046,bar,,,,,Via Giulio Cesare Procaccini 44
+Savona 18 petit cafè,45.4552328,9.1674602,cafe,,,,Mo-Su 07:30-22:00,"Via Savona 18, 20144, Milano"
+Coffee Break,45.4645006,9.1424085,cafe,,,,Mo-Fr 07:00-19:30; Sa 07:00-17:00,
+Caffè del Vecchio Stadio,45.4780060,9.1799784,cafe,,,,,
+La Siesta,45.4780887,9.1767758,cafe,,,,,
+Casa del Caffè,45.4782993,9.1762018,cafe,,,,,
+'Na Tazuella 'E Cafe',45.4627779,9.1519960,cafe,,,,,"Via Sardegna 35, 20146, Milano"
+Bar Tabacchi - Ghirlandaio,45.4670636,9.1466554,cafe,,,,,"Piazza Domenico Ghirlandaio, 20146, Milano"
+Di Lanza Gilberto,45.4611093,9.1494972,cafe,,,,,"Viale Ergisto Bezzi 81, 20146, Milano"
+Harmony Cafè,45.4540639,9.1586739,cafe,,https://www.facebook.com/people/Harmony-Caf%C3%A8/100063561343193/,+390287287322,,"Via Andrea Solari 46, 20144, Milano"
+Portello Caffè,45.4906792,9.1459427,cafe,,,,,
+Illy Caffè,45.4685487,9.1944264,cafe,,,+39 02 83549386,,"Via Monte Napoleone 19, 20121"
+Civico 131,45.5028773,9.1615665,bar,,,,,"Via Giuseppe Candiani 131, 20158, Milano"
+Mint Garden Cafè Bistò,45.4781403,9.2051951,cafe,,,,,
+Chelo Cafè,45.4776686,9.1072266,cafe,,,,,
+Moko's Matcha,45.4759033,9.1937593,cafe,,,+39 02 35994159,,"Via della Moscova 7, 20121"
+Bar Sforza,45.4611738,9.1966544,cafe,,,,,"Via Francesco Sforza 14, 20122, Milano"
+Alpo's Cafè,45.4950878,9.2191735,cafe,,,,,
+Lido Bar,45.4941966,9.2196080,cafe,,,,,
+Mergan,45.4963024,9.2217001,cafe,,,,,
+Caffetteria Dante,45.4659123,9.1851003,cafe,,,,,"Via Dante 3n15, 20123, Milano"
+Barlafus Cafè,45.4678787,9.1832250,cafe,,https://www.barlafuscafe.it/,,,"Via Giuseppe Pozzone 5n02, 20121, Milano"
+Jumbo Cafè,45.4516060,9.1520949,bar,,,,,"Via Giambellino 9, 20146, Milano"
+Morna,45.4527629,9.1663116,bar,,https://www.facebook.com/people/Morna/100032074466214/,+393455895057,Mo-Fr 09:00-02:00; Sa 18:00-02:00; Su off,"Via Tortona 30/A, 20144, Milano"
+San Pietro Cafe,45.4756547,9.2065049,cafe,,,,,
+Ernani,45.4774761,9.2083678,cafe,,https://www.caffeernani.com/en/,,,
+Ofelé,45.4562653,9.1702005,cafe,coffee_shop;cake;breakfast,https://ofele.it/,+390249500096,Tu-Fr 08:00-18:00; Sa 10:00-18:00; Su 10:00-17:00,"Via Savona 2, 20144, Milano"
+Leonardo Bistrot,45.4657529,9.1691864,cafe,,,,,"Corso Magenta 78, 20123, Milano"
+Bar Anny,45.4639364,9.1731119,cafe,,,,,"Via Aristide De Togni 15, 20123, Milano"
+Bar Oasi,45.5005387,9.1978097,bar,,,,,"Viale Zara 132, Milano"
+Slowear Venezia,45.4749006,9.1870862,cafe,,,,,"Via Solferino 18, Milano"
+The Botanical Club,45.4511375,9.1614401,bar,,,,"Mo-Sa 12:30-15:00, 18:30-22:30; Su 12:30-15:00",
+Salumé & Café,45.4615883,9.1520224,cafe,,,+39 345 438 1650,,"Via del Fusaro 2, 20146, Milano"
+Cafè Stendhal,45.4520668,9.1597525,cafe,,,,,
+The Gallery Bar,45.4522582,9.1602112,pub,,https://thegallerybarmilano.com/,+39 02 84345136,Mo-Sa 18:00-01:00,"Via Enrico Stendhal 30, 20144, Milano"
+Goga,45.4668099,9.1835109,cafe,,,,,"Via Giorgio Giulini 2n03, 20123, Milano"
+Daniel e il Caffè,45.4610463,9.1727061,cafe,,,+390249436223,Mo-Sa 06:30-19:00; Su 07:00-12:00,"Via Olona 5, 20123, Milano"
+Caffè De Amicis,45.4615002,9.1732581,cafe,,,,Mo-Fr 07:00-20:00; Sa 07:00-14:30; Su 09:00-14:30,
+Bravo,45.4665260,9.1833083,cafe,,,,Mo-Fr 07:30-22:30; Sa 12:00-23:30; Su 12:00-22:30,"Via Giorgio Giulini 5n02, 20123, Milano"
+Monkey Cocktail Bar,45.4808111,9.2035409,cafe,,,+39 3202973647,,"Via Napo Torriani 5, Milano"
+Chip's bar,45.4581458,9.1718835,bar,,,+390289409115;+390284230646,,"Via Cesare da Sesto 15, 20123, Milano"
+Panarello,45.4674114,9.1582225,cafe,,https://www.panarello.com/,+39 02 43510309,Mo-Su 08:00-19:30,"Via Belfiore 10, 20145"
+So Natural,45.4594524,9.1705276,cafe,,https://www.itsonatural.it/,+39 02 39401034,Mo-Su 06:00-22:00,"Piazza Sant'Agostino 16, 20123, Milano"
+Caffè diamante,45.4601683,9.1713818,cafe,italian,,,,"Via Olona 12, 20123, Milano"
+Caffè Portioli,45.4604363,9.1695472,cafe,italian;sandwich,,+390248014136,,"Via Numa Pompilio 14, 20123, Milano"
+Garden Caffè,45.4593000,9.1683872,cafe,,https://www.leggimenu.it/menu/gardencaffe,+393662565681,,"Via Servio Tullio 4, 20123, Milano"
+Brew Pub Yankee,45.4550900,9.1553057,pub,,,,,
+Foppa,45.4567296,9.1569488,cafe,,,,,"Via Vincenzo Foppa 44, 20144, Milano"
+Nobilis Cafè,45.4564747,9.1986699,cafe,,,,,
+Rivoire,45.4718237,9.1861850,cafe,,,,,"Via Marco Formentini 9, Milano"
+Montmartre Cafe,45.4720024,9.1854742,cafe,,,,,"Via Fiori Chiari 26, 20121, Milano"
+Bar Rondò,45.4948096,9.2169499,bar,,,,,
+L'Incontro,45.4932979,9.2167193,cafe,,,,,
+Ci Vuole un Drink,45.4946761,9.2185083,cafe,,,,,
+Cellar Door,45.4954432,9.2174354,bar,,,,,"Via Giulio e Corrado Venini 86, Milano"
+Baia Disco Club,45.4966295,9.2175508,nightclub,,,,,"Via Ottavio Rinuccini 7, Milano"
+Bar Tabacchi Pettirosso,45.4960037,9.2174511,cafe,,,,,
+Salumeria del design,45.4901992,9.2226150,cafe,,,,"Tu-Th 18:30-00:30, Fr,Sa 18:30-01:30, Su 18:00-23:30","Via Cecilio Stazio 18, 20131, Milano"
+Panino Geb,45.4710492,9.2285436,bar,,,,,"Via Beato Angelico 25, 20133, Milano"
+Bar Bianco,45.4420209,9.2263810,cafe,,,,,
+Bar Rubin,45.4656614,9.1848654,cafe,,,,Mo-Sa 07:00-20:00,
+Fabrique,45.4521243,9.2522773,nightclub,,,+39 02 506 3008,,"Via Gaudenzio Fantoli 9, 20138, Milano"
+Lucia,45.5185017,9.1672147,cafe,,,,,
+El Peruchito,45.4927564,9.2214024,cafe,,,,,
+Rendez Vous,45.4909019,9.2199426,cafe,,,,Mo-Sa 06:30-20:00; Su 08:30-19:30,
+Bar Fortuna,45.4937454,9.2192164,cafe,,,,,
+Vecchia Tabaccheria Varisco,45.4930060,9.2201827,cafe,,,,"Mo-Sa 07:30-14:30,17:30-02:00",
+Caffè Napoli Exytus,45.4818951,9.1931748,cafe,,,,,"Piazza Alvar Aalto, Milano"
+Caffetteria della Darsena,45.4545955,9.1730905,cafe,,,,,"Viale Gorizia 6, 20144, Milano"
+Angolo Bar,45.4931776,9.2214024,cafe,,,,,
+Derby Bar,45.4527389,9.1701916,cafe,,,+390258101887,,"Via Vigevano 45, 20144, Milano"
+Cigar Cafè,45.4530118,9.1717869,cafe,,,+390236523380,Mo-Th 06:00-22:30; Fr-Sa 06:00-23:00; Su 07:00-22:30,"Via Vigevano 35, 20144, Milano"
+Bar Articoli,45.4996019,9.1249552,bar,,,,,
+Barba,45.4809398,9.2017671,cafe,,https://barbamilano.it/,+39 02 36515846,,"Via San Gregorio, 20124, Milano"
+Bomaki,45.4774673,9.1704837,bar,,,,"Mo-Su 12:30-14:30, 19:30-23:30","Corso Sempione 10, 20145"
+Now,45.4531123,9.1895855,cafe,,,,,
+La Terrazza Aperol,45.4649985,9.1903329,bar,italian,,+39 02 86331959,Su-Fr 11:00-23:00; Sa 11:00-25:00,"Via Ugo Foscolo 1, 20121"
+Pane e Cioccolato,45.4841485,9.2361723,cafe,,,+39 02 2360187,"Sa 07:00-15:00+; Mo-Fr 07:00-19:30+; PH,Su off","Piazza Enrico Bottini 4, Milano"
+Bar Cinque Stelle,45.4718483,9.1841364,cafe,,,,,"Via Pontaccio 23, 20121, Milano"
+Biffino,45.4678185,9.1895891,cafe,,,,,"Via Giuseppe Verdi 2, 20121, Milano"
+Ligh Lime,45.4444545,9.2161877,nightclub,,https://www.limemilano.it/,+39 348 1082533,,"Via Tullo Massarani 6, 20139, Milano"
+Malia,45.4591295,9.1287741,cafe,,https://www.maliamilano.com/,,,"Viale Legioni Romane 55, 20147, Milano"
+Calice di vino,45.4676625,9.2290207,bar,,,,,Viale Argonne 36
+La bottega del vino,45.4775549,9.1796184,bar,,,,,Piazza Lega Lombarda 1
+Vino al vino,45.4817091,9.2145453,bar,,,,"Tu-Fr 10:30-14:00, 16:30-23:30; Su-Mo 16:30-23:30; Sa 11:00-23:30",Via Gaspare Spontini 11
+Coffee&Shop Amadeus,45.4589030,9.1812779,bar,,,,,
+Caffè Scarlatti,45.4832689,9.2084976,bar,,,,,
+Café Kitsuné,45.4652278,9.1868100,cafe,,,,,Piazza Cordusio 2
+Cafè Monet,45.4727152,9.1896786,cafe,,,,,
+Kitsch Bar,45.4768004,9.1705397,bar,,,,,
+Parco Milano,45.4758732,9.1712800,bar,,,,,
+Mistral cafè,45.4489003,9.2070136,cafe,,,,,
+Copernico,45.4510836,9.1611506,bar,,,,,
+Mignon,45.4866782,9.2036231,cafe,,,,Mo-Su 06:30-20:00,"Piazza Duca d'Aosta 1, 20121, Milano"
+New Boston,45.4620985,9.2002237,cafe,,,,,
+KoRo cafè,45.4621380,9.1990878,cafe,,,,,"Corso di Porta Vittoria 14, 20122, Milano"
+Ghe post,45.4577131,9.1991320,cafe,,,,,
+Vizi e Sfizi,45.4577733,9.1995209,cafe,,,,,
+Colazione da Tiffany,45.4577827,9.1996846,cafe,,,,,
+Pavè Milano,45.4567569,9.1992675,cafe,breakfast;italian,https://www.pavemilano.com/,,Mo-Su 07:30-16:00,Via Alfonso Lamarmora 19
+La Dolce Vita,45.4566755,9.1999528,cafe,,,,,
+Brewfist pub,45.4463549,9.1777191,pub,,https://www.brewfistpub.it/,,"Tu-Th,Su 17:00-00:30, Fr,Sa 17:00-02:00; Mo off","Via Ettore Troilo 14, 20136, Milano"
+Cake l’HUB,45.4534384,9.1064803,bar,,,,"Mo-Fr 07:00-12:30, 14:00-19:30; Sa 08:00-19:00; Su 08:00-13:00","Via Luigi Mengoni 3, 20152"
+Bar Oratorio San Carlo,45.4698840,9.2368999,bar,,,,,
+Macha Pokè,45.4838080,9.1888905,cafe,poke,https://www.machacafe.it/,+39 02 62087231,Mo-Fr 08:00-22:00; Sa-Su 10:00-22:00,"Piazza Gae Aulenti 1, 20154, Milano"
+Illy,45.4649656,9.1918500,cafe,,,,,
+Lucky Bar,45.5233304,9.2069350,cafe,,,,,
+Gemini,45.5237864,9.2053289,cafe,,,,,
+Colorado Cafè,45.4540480,9.0794153,cafe,,,,,
+Caffè Letterario,45.4664991,9.1848354,cafe,,,,,
+Wave Cocktail Bar,45.4592132,9.1774385,bar,,http://www.wavecocktailbar.it/,+393803714058,Su-Mo 18:00-00:00; Tu-Th 18:00-01:00; Fr-Sa 18:00-02:00,"Via Edmondo De Amicis 28, 20123, Milano"
+Hygge,45.4584092,9.1765666,cafe,,https://www.hyggecorner.com/,+39393511028043,"Mo, We-Fr 09:00-15:30; Tu off; Sa-Su 10:00-16:00","Via Giuseppe Sapeto 3, 20123, Milano"
+Punto Caffè,45.4577842,9.1729618,cafe,,,,,"Via San Calocero 25, 20123, Milano"
+ApuliaMI,45.4865757,9.2384617,cafe,,,+39 02 215 4562,,"Via Bernardino Bellincione 1, 20132, Milano"
+Monastero di S. Maria,45.4166181,9.2360027,cafe,,,+39 02 5694007,,"Via Sant'Arialdo 102, 20139, Milano"
+The Banned,45.5159723,9.1733911,cafe,,,,,"Via Brusuglio 72, 20161, Milano"
+White Cafè,45.4754679,9.1846682,cafe,,,,,
+Tangram Cafè,45.4758619,9.1864141,cafe,,,,,"Via Statuto 2, 20121, Milano"
+Thun Caffè,45.4772179,9.1848814,cafe,,,,,
+Radio Rooftop Bar,45.4795681,9.1957242,bar,fine_dining,,,,Via Marco Polo 18
+Correggio,45.4780868,9.1626620,cafe,,,,,
+Old School,45.4780304,9.1626379,cafe,,,,,
+Malia,45.4779909,9.1613907,cafe,,,,,
+Il caffè ambrosiano,45.4781526,9.1617125,cafe,,,,,
+Happy Bar,45.4507045,9.2514516,cafe,italian,,+393277075535,"Mo-Fr 06:00-20:00, Sa 06:00-19:30","Via Mecenate 99, 20138, Milano"
+Quadronno,45.4543035,9.1956629,bar,,,,,
+Bar Zanoli,45.5157059,9.1714912,cafe,,,,,
+Al...bicocca Milano,45.5184792,9.2070355,cafe,,,,,"Via Goffredo da Bussero 1, 20162, Milano"
+Panzú,45.4910650,9.2066761,cafe,,,,Mo-Sa 06:00-20:00,Via Gianfranco Zuretti 2
+Zanzibar,45.5026269,9.1975294,bar,,,,Mo-Su 07:00-02:00,Via Latisana 4
+Bar de l'Oeuc,45.5158735,9.1724436,cafe,,,+390266220526,,"Via Alessandro Astesani 2, 20161, Milano"
+Pavè - Birra,45.4791943,9.2028058,pub,,https://www.pavemilano.com/en/birra/,,Mo-Su 17:30-01:30,
+rebelot,45.4852729,9.2342027,cafe,,,,,"Via Giovanni Bottesini 18, 20131, Milano"
+Erbert,45.4808441,9.1997935,cafe,,,,,Via Vittor Pisani 6
+Rainbow cafè,45.4762002,9.2051745,cafe,,,,,Via Alessandro Tadino 6
+Fòla,45.4931418,9.2169633,cafe,,https://www.folamilano.com/,+39 02 49713413,Mo closed; Tu-Fr 08:00-18:30; Sa 08:00-19:00; Su closed,"Via Luigi Varanini 12, 20127"
+Bar Morbegno,45.4927263,9.2165422,cafe,,,,,
+Bar Tender,45.4927959,9.2162579,cafe,,,,,
+Wine Bar Lidia,45.4910867,9.2160058,cafe,,,,,
+Bar Giulia,45.4911018,9.2166710,cafe,,,,,
+Bar I Pupari,45.4924537,9.2183930,cafe,,,,,
+Hug Milano,45.4943979,9.2163609,cafe,,https://hugmilano.com/,+39 389 8485296,,"Via Giulio e Corrado Venini 83, 20125, Milano"
+Bar Cialdini,45.5152749,9.1692933,bar,,,,,
+Pan Brioche,45.4857808,9.2056297,cafe,,,,,"Piazza Luigi di Savoia, 20125, Milano"
+Roxy Bar,45.5135975,9.1701407,bar,,,,,
+Bar Chopin,45.4252220,9.2045445,cafe,,,,,
+Caffè Novecento,45.4510483,9.1927775,cafe,,,,,"Viale Bligny 25, 20136, Milano"
+The Social Chupiteria,45.4508334,9.1932492,bar,,,,,
+Barbruto,45.4507330,9.1932558,pub,,,,,
+Dammi un nome Bar,45.4505135,9.1939118,bar,,,,,
+Vinodromo,45.4504034,9.1948699,bar,,,,,
+I Sapori Di Napoli,45.5055010,9.1975147,cafe,,,+39 02 642 0632,,Viale Giovanni Suzzani 12
+Gianni,45.5080722,9.1999079,cafe,,,,,
+el Ca' Granda,45.5071289,9.2005670,cafe,,,,,
+Jam Bistrò,45.5079992,9.1984642,cafe,,,,,
+Bar Luna,45.5089184,9.1998589,cafe,,,,,
+Avana,45.5057285,9.1976568,cafe,,,,,
+Bar da Giorgia,45.5007291,9.1988002,bar,,,,,
+Cheezy Weezy,45.5035302,9.1574207,cafe,,,,Mo-Fr 08:00-18:00+,"Via Raffaele Lambruschini 4, 20156, Milano"
+Tunnel Club,45.4922254,9.2090130,nightclub,,http://tunnel-milano.it,,,
+Bar Sotto Torchio,45.4604871,9.1806047,cafe,,,,,"Via del Torchio 8, 20123, Milano"
+Juice Bar,45.4335148,9.2385531,cafe,,,,,
+Bar Lucio,45.4391649,9.2287624,cafe,italian,,,Mo-Sa 08:00-16:00,
+Street coffe 12oz,45.4335200,9.2384674,cafe,,,,,
+Peter & Pan,45.4407829,9.2258823,cafe,,,,,
+New Self Service,45.4361996,9.2007519,cafe,,,,,
+Bar Kollo,45.4367710,9.2141126,cafe,,,,,
+Tipografia Alimentare,45.5037393,9.2241052,cafe,regional,https://tipografiaalimentare.it/,+39 02 83537868,"Mo,We-Su 12:30-14:30,18:00-23:00","Via Dolomiti 1, 20127, Milano"
+Meeting,45.4810489,9.1444498,bar,,,,,
+Champions Bar,45.4807442,9.1439885,cafe,,,,,
+City Life Cafe,45.4795895,9.1460270,bar,,,,,"Via Masaccio 18, 20149, Milano"
+Spiga D'Oro,45.5049957,9.2226014,cafe,,https://www.spiga-doro.it/,+39 02 87199385,"Mo-Fr 05:00-21:00, Su 05:00-12:00","Via Monte San Gabriele, 20127, Milano"
+Cafetheria Boccon Doc,45.4842447,9.2266202,cafe,,,,,
+Golden Lion,45.4844978,9.2200985,cafe,,,,,
+Café Midi,45.4783577,9.2067086,cafe,,,,,
+Café Gambriné,45.4799151,9.2075860,cafe,,,,,
+Tramé e té,45.4848510,9.1692939,bar,,,,,
+Basin,45.4878621,9.1644147,bar,,https://instagram.com/basinmilano?igshid=YmMyMTA2M2Y=,,,"Via Cenisio 42, 20154, Milano"
+Bar tabacchi Cenisio,45.4878630,9.1654511,cafe,,https://www.facebook.com/people/Bar-Tabacchi-Cenisio/100027689996195/,+39023451163,,"Via Cenisio 40, 20154, Milano"
+C'era una volta,45.4606786,9.1940240,cafe,,,,,
+Fuori Corso Spritz Bar,45.4606742,9.1938711,cafe,,,,,
+Grecales' ub,45.4607887,9.1941097,cafe,,,,,
+Ateneo Café,45.4605708,9.1937927,cafe,,,,,
+Bar Felice,45.4783686,9.1754962,bar,,,,,
+Pandenus,45.4776948,9.2062302,cafe,,https://www.pandenus.it/it/store/pandenus-via-tadino-15/,+39 02 29528016,"Mo 07:30-14:00; Tu,We 07:30-22:00; Th,Fr 07:30-23:00; Sa 08:00-23:00; Su 08:00-22:00","Via Alessandro Tadino 15, 20124"
+Memà,45.4771421,9.2048584,cafe,sicilian,https://www.memamilano.it,+39 02 92869193,Mo-Su 07:00-03:00,"Largo Fra Paolo Bellintani 2, 20124, Milano"
+Acafè,45.4685079,9.1755703,cafe,ice_cream;pizza;italian,,+39028053860,,"Piazzale Luigi Cadorna, 20123, Milano"
+12oz,45.4682960,9.1756823,cafe,coffee_shop,https://www.12ozcj.com/store-locator/,,Mo-Su 06:00-20:00,"Piazzale Luigi Cadorna 16, 20123, Milano"
+Bar Stellina,45.4683081,9.1757769,cafe,,,,,"Piazzale Luigi Cadorna 16, 20123, Milano"
+Cosmai Coffee Store,45.5065267,9.2230662,cafe,,,+39 02 36524980,,"Viale Monza 158, 20128, Milano"
+Bar Arici,45.5037049,9.2397658,cafe,,,+39 02 27207031,,"Via Padova 205, 20127, Milano"
+El Café de Milan,45.4816737,9.2367617,cafe,,,,,
+Bar Addis Abeba,45.4769660,9.2044808,cafe,,,,,
+New Caffè Italiano,45.4770396,9.2004522,cafe,,,,,
+Tavola Calda,45.4810643,9.2173478,cafe,,,,,
+Stranobar,45.4530580,9.2124913,pub,,,,,
+Il Caffettino,45.4723032,9.2009236,cafe,,,,,
+Cafè Pagano,45.4706688,9.1650143,cafe,,,,,
+River,45.4512498,9.1709353,bar,,,,Mo-Th 16:30-02:00; We-Su 16:30-03:00,"Via Casale, 20144, Milano"
+Paola Lorini,45.4367881,9.1989618,cafe,,,,,
+Bar All'Angolo,45.4820463,9.2209530,cafe,pastry;ice_cream;juice;sandwich,,+39 02 4548 8808,"Tu-Th 07:30-21:00; Fr,Sa 07:30-22:00; Su 08:00-21:00; Mo off","Viale Gran Sasso 27, 20131, Milano"
+LeccoMilano,45.4769187,9.2041387,bar,,https://www.leccomilano.it,+39 02 91639877,Mo-Fr 12:00-15:00; Mo-Su 18:00-02:00,"Via Lecco 5, Milano"
+Bar Gioia,45.4467083,9.1982487,cafe,,,,,
+BackDoor43,45.4513209,9.1734855,bar,,https://www.farmilygroup.com/locali/backdoor,,,"Ripa di Porta Ticinese 43, 20143, Milano"
+Metropolis,45.4679639,9.1609588,cafe,,,,,
+Rufus Bar,45.4678764,9.1643102,bar,,,,,
+Cafè Caterina,45.4679943,9.1639787,cafe,,,,,"Via Guido d'Arezzo 1, 20145, Milano"
+L'angolo del panino,45.4531367,9.1572226,cafe,,,+3902474546,,"Via Andrea Solari 41, 20144, Milano"
+Il Dongione - board game café,45.5028185,9.1652459,cafe,,,,,"Via Angelo Brofferio 2, 20158, Milano"
+Starbucks,45.4649292,9.1861957,cafe,coffee_shop,https://www.starbucksreserve.com/,+39 02 9197 0326,Mo-Su 07:00-22:00,"Piazza Cordusio 1, 20123, Milano"
+La Bila,45.4396449,9.1515203,cafe,,,,,"Via Santa Rita da Cascia 36, 20143, Milano"
+Ittolittos,45.4405374,9.1460934,pub,,https://www.ittolittos.it/,+39 02 8138061,Mo-Su 18:00-02:00,
+Bar degli Amici,45.4368018,9.2125303,cafe,,,,,
+Mille Foglie,45.4370288,9.1613404,cafe,,,,,"Viale Famagosta 38, 20142, Milano"
+Kappa's café,45.4317613,9.2438025,bar,,,,Mo-Sa 07:00-23:00; Su 07:00-22:00,
+Golden Bar,45.4852757,9.2358578,cafe,coffee_shop,,,,"Piazza Enrico Bottini 5, 20133, Milano"
+Coffe house,45.4308903,9.2459102,bar,,,,,
+Free Time's Cafe,45.4322025,9.2416401,bar,,,,,"Via Rogoredo, 20138, Milano"
+Caffè Paul,45.4372853,9.1793086,cafe,,,,,
+Dolce e salato,45.5185390,9.2070039,bar,,,,,
+Mullerdi Cavit,45.4805424,9.1668582,cafe,,,,,
+MIT Cafe,45.4763524,9.1711324,cafe,,,,,
+Maison Bretonne,45.4808858,9.1666552,cafe,,,,"Mo 10:00-15:00; Tu-Su 10:00-15:00,19:00-23:00",
+Salad Me Cafe,45.4798891,9.1679924,cafe,,,,,
+Tree experience,45.4336840,9.2332215,cafe,,,,,
+San Miguel,45.4591435,9.1810195,cafe,,,,,
+Sant Eufemia,45.4576209,9.1901256,bar,italian,,,Mo-Su 10:00-23:00,"Via Sant'Eufemia 4, 20122, Milano"
+FLOW,45.5148385,9.2128601,bar,,,,,"Viale dell'Innovazione, 20126, Milano"
+Bar Italia,45.4473755,9.2109148,bar,,,,Mo-Sa 06:30-20:00,
+Monica,45.4511674,9.2033350,bar,,,,,
+Caffe Napoli,45.4628201,9.1969473,cafe,,,,,"Largo Augusto 8, 20122, Milano"
+La puccieria,45.4827478,9.1816840,cafe,,,,,"Via Carlo Farini 2, 20154, Milano"
+Square Food,45.4656372,9.1940571,cafe,,,,,"Piazza del Liberty 8n05, 20121, Milano"
+Caffè Moda Plinio,45.4797136,9.2119101,cafe,,,,,
+El Murnè,45.4797399,9.2145038,cafe,,,,,
+Caffè La Piazzetta,45.4801951,9.2114702,cafe,,,,,
+Bollani,45.4365886,9.2003804,cafe,,,,,
+The Babylon,45.5130457,9.1606886,bar,,,+393348374391,Mo-We 10:00-16:00; Th-Fr 10:00-05:00; Sa-Su 18:00-05:00,"Via Ernesto Teodoro Moneta 81, 20161, Milano"
+Depot,45.4994109,9.2229911,bar,,https://www.depotmilano.com,+39 02 28970999,Mo-Th 22:00-03:00; Fr 22:00-04:00; Sa 22:00-05:00; Su 15:00-21:00,"Via Valtorta 19, 20127, Milano"
+Bistrot PolEATecnico,45.5054837,9.1652832,cafe,,,,Mo-Fr 08:00-19:30,
+Bar Il Liceo,45.4799826,9.1751558,cafe,,,,,
+Caffè Popolare,45.4787488,9.1768402,cafe,,,,,
+Elite,45.4372345,9.1829461,cafe,,,,,"Viale Giovanni da Cermenate 64, 20141, Milano"
+Salumeria dello Sport,45.4533484,9.1523113,bar,,,+39 0289766020,,"Piazza Napoli 30/2, 20146, Milano"
+Euro Jolly,45.4540456,9.1710753,bar,,https://jollybiliardi.it/,+39 02 58105075,Mo-Th 10:00-03:00; Fr-Sa 10:00-04:00; Su 14:00-02:00,"Corso Cristoforo Colombo 13, 20145, Milano"
+Dcl Cetty Jumpy,45.4381231,9.1534969,cafe,,,,,"Via Santa Rita da Cascia 72, 20143, Milano"
+Duomo dal 1952,45.4760846,9.1714008,cafe,,,,,
+Starbucks,45.4802096,9.1868160,cafe,coffee_shop,,+39 02 65560122,"Mo-Fr 07:30-20:00; Sa,Su 08:00-20:00","Corso Giuseppe Garibaldi 118, 20121, Milano"
+Extasià,45.4634962,9.1985178,nightclub,,https://www.extasiadiscotopless.com/,+39 02 76006679,,"Largo Augusto 7, 20122, Milano"
+Conny &…,45.5038828,9.1661869,cafe,burger,,,,
+Bausan Cafe,45.5025256,9.1657976,cafe,,,,Mo-Su 06:30-23:00,"Piazza Giovanni Bausan 8, 20158, Milano"
+Francesino,45.5019207,9.1665231,cafe,,,,Mo-Sa 06:30-20:00; Su 07:30-12:30,
+Bar Atlantic,45.4369781,9.1673842,cafe,,,,,
+Bar Messina,45.4816704,9.1757016,cafe,,,,,
+Ma Ma Xiang,45.4824706,9.1770092,cafe,chinese,,,,
+Pan Caffè Correnti,45.4597788,9.1803035,cafe,,,,,
+Bar Capricci,45.4899830,9.2334858,cafe,,,,,
+Bar Arcobaleno,45.4902434,9.2341872,cafe,,,,,
+District 272,45.5075896,9.2452930,nightclub,,https://www.district272.com/,+39 349 690 8519,,"Via Padova 272, 20132, Milano"
+Bar San Barnaba,45.4595700,9.1984159,cafe,,,,,
+Convertini,45.5108567,9.2484427,cafe,,,,,"Via San Mamete 12, 20128, Milano"
+Tavola Fredda Bar,45.5061242,9.2643339,cafe,,,,"Mo-Su,PH 12:00-14:00,18:00-20:00",
+Gran Moka,45.5030826,9.1934511,cafe,,,,,
+Bar Emgma,45.5272658,9.2090962,bar,,,,,"Viale Giovanni Suzzani 283, 20162, Milano"
+Bar Gerry,45.4619743,9.2031044,cafe,,,,,"Corso di Porta Vittoria 32, 20122, Milano"
+Bar Vittoria,45.4616150,9.2024848,cafe,,,,,
+La Legge dei Sapori,45.4612557,9.2025384,cafe,,,,,
+Moments Bar,45.4661524,9.1389593,cafe,,,,,
+Bar Derby,45.4664684,9.1394502,cafe,,,,,
+Piccolo Birrificio Brioschi,45.4402905,9.1815686,biergarten,,,,,"Via Francesco Brioschi 74, 20141, Milano"
+Le cinque delizie della Sicilia,45.4362644,9.2408491,cafe,,,,,"Via Bruno Cassinari, 20138, Milano"
+Bob Milano,45.4892502,9.1892150,bar,,https://www.bobmilano.it/,,,
+La Messicana,45.4878548,9.1914684,bar,pasta;sandwich;italian;coffee_shop,,,Mo-Sa 07:00-18:00,"Via Volturno 42, 20124"
+Posto Unico,45.4868098,9.1857326,bar,,,,,"Via Pastrengo 16, Milano"
+Alibi Music & Spirits,45.5062384,9.2246976,pub,,,,,"Via Aristotele 14, 20128, Milano"
+Bar Gusto,45.4623136,9.2235532,bar,,,,,
+Cafè Gorille,45.4856032,9.1916064,bar,,https://www.cafegorille.it/,+39 02 6887627,,"Via Gaetano De Castillia 20, 20124, Milano"
+Iter,45.4511838,9.1744400,bar,italian,https://www.farmilygroup.com/locali/iter,+39 348 7660636; +39 02 35999589,,"Via Mario Fusetti 1, 20143"
+Deja Vu,45.4619002,9.2220382,cafe,,,,,
+Morgante cocktail & soul,45.4522005,9.1749661,bar,,https://www.morgantecocktail.com/,+390235940879,Mo-Th 19:00-01:00; Fr-Sa 19:00-02:00; Su off,"Vicolo Lavandai 2a, 20144, Milano"
+Ungaro,45.4900299,9.2372516,cafe,,,,Tu-Su 10:00-20:00,"Via Ronchi 39, 20134"
+Volt Club,45.4568891,9.1840788,nightclub,,https://www.voltclub.it/,,,"Via Molino delle Armi 16, 20123, Milano"
+BeerShow,45.4890970,9.1892254,bar,,https://beershowmilano.wixsite.com,+39 338 19613 14,Su-Fr 18:00-02:00; Fr 12:00-02:00,
+Madera Milano,45.4813087,9.1689337,cafe,,,,,
+dolce & salato,45.4484814,9.1184924,cafe,,,,Mo-Fr 07:00-19:00; Sa 08:00-17:00,
+Green,45.4569739,9.1612174,bar,,,,,"Via Bernardino Lanino 2, 20144, Milano"
+Caffe TURR,45.4842261,9.1531194,cafe,,,,,
+Brooklyn Pub,45.4784141,9.1548910,pub,,,,,
+Poli District,45.4784005,9.2341169,cafe,,,,Mo-Fr 08:00-18:30,"Via Carlo Pascal, 20133, Milano"
+Bar Lisa,45.4332870,9.2013030,cafe,,,,,
+Tucano,45.4331854,9.2020989,nightclub,,http://www.discotucano.it,,,
+Ghe Pensi Mi,45.4928161,9.2165775,cafe,,,,,"Piazza Morbegno 2, 20125, Milano"
+Vineria Tut a Post,45.4705391,9.2276742,bar,,,,,
+Legend Club,45.5161589,9.1794377,nightclub,,http://www.legendclubmilano.com,,,"Viale Enrico Fermi 98, 20161, Milano"
+Caffè Inn,45.4521623,9.2031945,cafe,,https://caffe-inn-international-bistrot.eatbu.com/,,,"Piazzale Medaglie d'Oro 3, 20135"
+El barrettin,45.4492246,9.2001680,bar,,,,,
+Bar dell'angolo,45.4508312,9.1990256,bar,,,,,
+Madison,45.4507997,9.1993172,bar,,,,,
+Vecchi Tempi,45.4909035,9.2190382,cafe,,,,,"Via dei Transiti 25, Milano"
+Web Bar,45.4909772,9.2186132,cafe,,,,,
+Octopus,45.4440109,9.1521662,pub,,,+39 02 8912 6068,,"Via Giacomo Watt 18, 20143, Milano"
+Sui Generis,45.4763158,9.2040763,bar,,https://suigeneris.bar/,+39 02 49767551,Mo-Su 17:00-02:00,"Via Panfilo Castaldi 31, 20124, Milano"
+L'artista,45.4507467,9.2234070,bar,,,,,
+Vanity,45.4553591,9.2084574,cafe,,,,,
+Maxi,45.4366984,9.2162021,bar,,,,,
+Barona,45.4373769,9.1540692,bar,,,,,"Piazza Guglielmo Miani 4, 20143, Milano"
+Lucky bar,45.4890164,9.1873667,cafe,,,,,Via Luigi Porro Lambertenghi
+3/4,45.4889694,9.1873664,pub,,,,,Via Antonio Pollaiuolo
+Barrique Enoteca e Degustazione,45.4897386,9.1888848,bar,,,,,
+TUSA,45.4894346,9.1892294,bar,,,,,"Via Pietro Borsieri 32, 20159, Milano"
+Twenty-Five,45.4422374,9.1447497,bar,,,,"Mo-Sa 06:00-22:00, Su 06:00-13:00","Via Guglielmo Guintellino 25, 20143, Milano"
+Smartkook,45.4616882,9.1908673,cafe,,https://www.smartkook.it/,+39 02 36684727,Mo-Fr 07:00-21:00; Sa-Su off,"Via Flavio Baracchini 7, 20121, Milano"
+Coa cocktail bar,45.4760797,9.2033751,bar,,,,,"Via Lecco 3, 20124, Milano"
+Bar Torrefezione,45.4725859,9.1428760,bar,,,,,"Via Daniele Ricciarelli 8, 20148, Milano"
+Pan Caffè Porta Genova,45.4539407,9.1705063,cafe,,,,,"Piazzale Stazione Genova 2, 20144, Milano"
+Tutti Fritti,45.4586395,9.1809580,bar,,,+390289052541,"Mo-Fr 12:30-14:30, 18:00-02:00; Sa 12:30-15:00, 18:00-03:00; Su 12:30-15:00, 18:00-02:00","Corso di Porta Ticinese 18, 20123"
+Levante,45.4344490,9.2237501,cafe,,,,,
+Garden Café,45.4965805,9.1700460,cafe,,,+39 02 39490351,,"Viale Luigi Bodio, 20158, Milano"
+Foodie's,45.4760010,9.1949245,cafe,,,,,"Via Filippo Turati 26, 20121, Milano"
+Pasticceria Ranieri,45.4759386,9.1935497,cafe,,https://www.pasticceriaranieri.it/,+39 02 6595308,,
+Il Giò,45.4772461,9.1938516,bar,,,,,"Via Andrea Appiani 9, 20121, Milano"
+Micrò,45.4309346,9.1729978,bar,,https://www.spaziomicro.it/,,,
+Stoica Bar,45.4624311,9.1871470,cafe,,https://www.stoicabar.it/,,,"Via dell'Unione 1, 20122, Milano"
+Maga Cacao,45.4618144,9.1870151,cafe,,,+39 02 89094998,,"Via degli Arcimboldi 5, 20123"
+Bar Milano,45.4615491,9.1878211,cafe,,,,Mo-Sa 07:00-20:00,
+Circolo Arci Biko,45.4421057,9.1538049,nightclub,,https://www.bikoclub.net/,,,"Via Ettore Ponti 40, Milano"
+Colibrì,45.4615176,9.1958152,bar,,https://www.colibrimilano.it/,+393494016961,Mo 09:00-22:00; Tu-Fr 09:00-24:00; Sa 16:00-24:00; Su off,"Via Laghetto 9/11, 20122, Milano"
+Bellavia,45.4802320,9.1713157,cafe,,,+39 02 39527520,,"Via Pietro Moscati 20, 20154"
+Pandenus,45.4829814,9.1923714,cafe,,,,,"Piazza Gae Aulenti 12, 20154"
+Cafè Real,45.4620728,9.2142698,cafe,,,,,"Corso Ventidue Marzo 28, 20135, Milano"
+NoLoSo,45.4930036,9.2179133,bar,,,+39 331 4294088,"Mo-Su 19:00-24:00, We-Su 12:00-15:00","Via Luigi Varanini 5, Milano"
+PoP,45.4763444,9.2050817,bar,,http://www.pop-milano.it,+39 02 82873274,We-Su 18:00+,"Via Alessandro Tadino 5, 20124, Milano"
+Ricky Bar,45.4822675,9.1754428,cafe,,,,,
+No name,45.4655457,9.1654345,cafe,,,+390248007221,,"Viale di Porta Vercellina 2b, 20123, Milano"
+Todos a Cuba,45.4578445,9.1805083,bar,,,+39 02 8738 1420,Mo-Fr 07:00-02:00; Sa-Su 08:00-02:00,"Via Edmondo De Amicis 4, 20123, Milano"
+Bar Terzo Tempo,45.4581169,9.1544724,cafe,,,,,"Via Giorgio Washington 82, 20146, Milano"
+Boom,45.4631563,9.2244805,bar,,,,,
+Elite Cafe Tolstoi,45.4536949,9.1496909,bar,,,,,"Via Leone Tolstoi 56, 20146, Milano"
+Pasticceria Caffetteria Giorgia,45.4549610,9.1543201,cafe,,,,,"Via Giorgio Washington 104, 20146, Milano"
+Red Black,45.4595869,9.1569744,cafe,,,+390248513755,,
+The Boss Cafè,45.4578513,9.1558191,cafe,,,,,Piazzale Giovanni de Agostini
+Bar dei Grimani,45.4564412,9.1552490,cafe,,,,,"Via dei Grimani 1, 20144, Milano"
+Bar Pegasus,45.4562018,9.1598972,cafe,,,,,"Via Cola di Rienzo 10, 20144, Milano"
+Bar Arcobaleno,45.4467675,9.1652551,cafe,,,,,
+Apollo,45.4473231,9.1747092,nightclub,,https://www.apollomilano.com/,,,"Via Giosuè Borsi 9, 20143, Milano"
+Bar Cosmo,45.4633778,9.1638500,cafe,,https://bar-cosmo.business.site/,+39024989640,Mo-Fr 06:45-20:15; Sa 06:45-18:00; Su off,"Viale San Michele del Carso 20, 20144, Milano"
+Agua Sancta,45.4791336,9.1859040,bar,,https://www.aguasancta.it/,+39 02 36550 489,"Tu 12:00-24:00; We-Sa 00:00-02:00,12:00-24:00; Su 00:00-02:00, 18:00-24:00; Mo 00:00-02:00",
+La Iguana,45.4924071,9.2248323,cafe,,,,,"Via Padova 65, Milano"
+Milano Cafè,45.4830584,9.1699456,bar,,https://www.milanocafe.it,+39 02 33 14 667,Tu-Su 18:30-02:00,"Via Giulio Cesare Procaccini 37, 20154, Milano"
+Gipsy,45.4795351,9.2375744,bar,,https://gipsy.fun/,,Tu-Fr 09:00-02:30; Mo 11:00-19:00; Sa 10:00-02:30; Su 18:00-02:00,
+Grapes,45.4513689,9.1736721,bar,,,,,"Ripa di Porta Ticinese 39, 20143, Milano"
+Royal Cafe,45.4751789,9.2050515,cafe,,,,Tu-Th 08:00-21:30; Sa 08:00-23:00; Su 09:00-23:00,"Piazza Guglielmo Oberdan 3, 20129, Milano"
+La Taverna,45.4617482,9.2135623,cafe,italian_pizza;italian,,,"Mo-Su 12:00-14:30, 19:00-00:00",
+4 Stagioni,45.5059508,9.1775892,cafe,,,,,
+Jade Café,45.4624370,9.1926307,cafe,,jadecafe.it,+39 02 7209 5535,,"Via Palazzo Reale 5, 20122, Milano"
+UGO,45.4517532,9.1735891,bar,,https://www.ugobar.it/,,,Via Corsico 12
+Bar Van Gogh,45.4673538,9.1429893,cafe,,,,,
+Antonietta caffè,45.4764086,9.1443628,cafe,,,,,"Piazzale Fratelli Zavattari, 20149, Milano"
+Il Cafferino,45.4754000,9.1436825,cafe,,,,,"Viale Murillo 48, 20149, Milano"
+Ristoservice,45.4611958,9.1952252,cafe,,,,,"Via Festa del Perdono 3, Milano"
+Franci's Bar,45.4652439,9.1644320,cafe,,https://www.facebook.com/FrancisbarMilano/,+39024890512,Mo-Sa 07:00-20:00; Su off,"Viale San Michele del Carso 6, 20144, Milano"
+Alcazar Milano,45.4861879,9.1556742,bar,,,,We-Sa 20:00-00:00,
+Club Plastic,45.4381362,9.2061075,nightclub,,,,,
+Mr. Tea Bar,45.4567564,9.1680300,bar,,,,,"Via Andrea Solari 3, 20144, Milano"
+Filly,45.4563716,9.1655519,bar,,,+39024814843,,"Via Andrea Solari 4, 20144, Milano"
+Good Morning Cafè,45.4577169,9.1687326,cafe,,,+390249784996,Mo-Su 07:30-21:00,"Viale Coni Zugna 39, 20144, Milano"
+Mood Cafè,45.4572980,9.1683085,cafe,,,+39024816121,,"Via Andrea Solari 2, 20144, Milano"
+Bar dell'Università,45.4623694,9.1932946,cafe,,,,,
+Big Store de Milàn,45.4576569,9.1772517,bar,,https://www.facebook.com/pages/Big-Store-De-Milan/1823761261247304,+390282874614,Mo-Su 08:00-00:00,"Via Conca del Naviglio 10, 20123, Milano"
+Bar Calipso,45.4706161,9.1514558,cafe,,,,,
+Bar Tabacchi Ravizza,45.4689721,9.1502675,cafe,,https://www.facebook.com/people/Bar-tabacchi-Ravizza/100063953506209/,+39024817909,,"Via Carlo Ravizza 21, 20149, Milano"
+Buonarroti,45.4681520,9.1549963,cafe,,,,,
+Caffè Tenconi,45.4707139,9.1541138,cafe,,,,,
+Rigoni di Asiago,45.4687389,9.1550231,cafe,,,,,
+Smooth,45.4685282,9.1550070,cafe,,,,,
+Elegant coffee,45.4607897,9.1724227,cafe,italian,https://www.elegantcoffeemilano.com/,,Mo-Fr 07:30-18:00; Sa 08:30-15:00; Su off,"Via Olona 11, 20123, Milano"
+cafè Maria,45.5060577,9.1743567,bar,,,,Mo-Sa 07:00-21:00,
+bar sara,45.5054896,9.1756246,bar,,,,,
+On the road,45.4974640,9.1823319,cafe,,,,Mo-Su 06:00-02:00,"Viale Edoardo Jenner 16, 20159, Milano"
+al baretto,45.4985615,9.1818900,bar,,,,,
+rebelot,45.4989340,9.1814861,pub,,,,,
+sweet salty & cofee,45.5019704,9.1758542,cafe,,,,,
+An dì,45.5020730,9.1754510,bar,,,,,
+Da Cri,45.5028184,9.1764765,cafe,,,,,
+Sun Garden Bar,45.5038656,9.1764007,bar,,,,Mo-Su 06:30-21:00,
+Bar Felice,45.5046779,9.1758646,bar,,,,Mo-Su 06:00-22:00,
+Klondike Bar,45.4890635,9.2134657,cafe,,,,,
+Skandalo Lounge Bar,45.4891406,9.2135274,bar,,,,,"Via Giulio e Corrado Venini 31, Milano"
+The Swan,45.4867920,9.2164564,cafe,,,,,"Piazzale Loreto 9, 20127, Milano"
+Soho cafè,45.4488307,9.2195297,cafe,,,,,
+Bar Tabaccheria Da Sario,45.4491641,9.2185753,bar,,,+39 02 6206 8053,,"Via Tertulliano 35, 20137"
+Blue Angels,45.4504171,9.2203965,bar,,,,,
+Tiffany ,45.4522994,9.2211207,bar,,,,,
+Samuel,45.4522867,9.2195184,bar,,,,,
+Camperio Lounge Bar,45.4665945,9.1830736,cafe,,,,,
+Bar Magic Games,45.4861813,9.1292021,bar,,,+39023087535,,"Via Carlo Osma 5, 20151, Milano"
+Beeb Bar,45.4520863,9.1535960,bar,,,,,"Piazza Napoli 31, 20146, Milano"
+Art Cafe,45.4559200,9.1654600,cafe,,https://art-cafe-bar-milano.eatbu.com/?lang=it#,+393348673956,Mo-Sa 09:00-18:00; Su off,"Via Andrea Solari 19, 20144, Milano"
+Area Ristoro,45.4765440,9.2281991,cafe,,,,Mo-Fr 08:30-18:30,
+Caffè Ambrosiano,45.4628375,9.1717174,cafe,,,+390243998132,,"Via San Vittore 13, 20123, Milano"
+Foca Loca,45.4613253,9.1914582,nightclub,,,,,
+Atelier Cafe,45.4608832,9.1890764,cafe,,,,,
+Bowls,45.4611052,9.1897818,bar,,,,,
+Marco's,45.4627078,9.1727605,bar,,https://marco-s.it/,,Mo-Su 06:00-20:00,"Via San Vittore 6, 20123, Milano"
+Sofia,45.4521100,9.2161742,bar,,,,Mo-Sa 06:00-20:00; Su 07:00-20:00,
+Sweet Cafè,45.4573935,9.1691873,cafe,,,+39335245856,,"Viale Coni Zugna 43, 20144, Milano"
+Green Koala,45.4609200,9.1910112,cafe,,,,,
+Sant'Ambrogio Cafè,45.4645075,9.1754709,cafe,italian,http://www.barsantambrogio.it/,+390272010424,,"Via Terraggio 25, 20123, Milano"
+Divino caffè,45.4907236,9.2367346,cafe,,,+39 339 8777308,,"Piazzale Udine, 20132, Milano"
+Il Forno di Via Commenda,45.4572440,9.1991960,cafe,,http://www.ilfornodiviacommenda.com,,,
+Kubik,45.4571064,9.2051219,pub,,,,,"Viale Monte Nero 39, 20135, Milano"
+Why not? bistrot,45.5158108,9.2450554,cafe,,,,"Mo-Th 07:30-12:00, 16:00-23:00; Fr 07:30-12:00, 16:00-01:00; Sa 07:30-13:00, 16:00-23:00; Su off","Via Adriano 94, 20128, Milano"
+gogol&company,45.4497344,9.1507659,cafe,,https://www.gogolandcompany.com,+39 02 45470449,Mo 12:00-22:00; Tu-Su 09:00-22:00,
+Bar Famoso,45.4685760,9.1144907,cafe,,,,,"Via Pio II 3, 20153, Milano"
+La Dolce Fantasia,45.4887844,9.2032772,cafe,,,,,"Via Tonale 12, 20125, Milano"
+Nuovo Bar Centrale by Cova,45.4859279,9.2043257,cafe,,,,Mo-Su 05:00-22:00,"Piazza Duca d'Aosta 1, 20124, Milano"
+La Corte di Montenapoleone,45.4695089,9.1950255,cafe,,https://www.ilsalumaiodimontenapoleone.it/caf%C3%A9-bistrot-gallery,+39 02 76001123;+39 02 784650,Mo-Sa 08:00-22:00,"Via Santo Spirito 10, 20121, Milano"
+Orto Urbano,45.4630151,9.1888061,cafe,italian,,,,Via Cappellari
+City Bar,45.4816610,9.1464668,cafe,,,,,
+Bar Oscar,45.4861509,9.2421445,bar,,,,,"Via Rombon 40, 20132, Milano"
+Bar Sangiorgio,45.4759917,9.1666076,cafe,,,,,
+Bar Money,45.4721980,9.1497928,cafe,,,,,
+Caffetteria 2000,45.4956869,9.1471326,pub,,,,,
+D'Angolo,45.4736218,9.1479340,cafe,,,,,
+Monterosa Bar,45.4740563,9.1501790,cafe,,,,,
+Caffetteria Etros Lounge bar,45.4502754,9.2121623,cafe,coffee_shop;breakfast,,,,Viale Umbria 27
+SunEleven Rooftop,45.4645179,9.1953986,bar,,,+390276022882,,"Piazza Cesare Beccaria, 20122, Milano"
+Hollywood,45.4769358,9.1495031,cafe,,,,Mo-Sa 06:30-19:30,
+Caffetteria triennale,45.4723529,9.1742950,cafe,,,,Mo-Su 10:30-20:30,"Viale Emilio Alemagna 6, 20121"
+Terrazza Duomo 21,45.4649047,9.1895890,bar,,https://terrazzaduomo21.it,+39 02 4776 2548,,"Piazza del Duomo 21, 20121"
+bar,45.4904599,9.2217552,cafe,,,,,
+Luna Rossa,45.5057418,9.2285031,cafe,,,+39 02 25712827,,"Via Asiago, 20128, Milano"
+Bar Tabacchi Damiano Chiesa,45.4836533,9.1558460,cafe,,,,,
+Cartoon's Pub,45.4847912,9.1571958,pub,,,,,
+Big School Cafè,45.4830703,9.1563510,bar,,,,,
+Gran Bar,45.4256061,9.1551443,cafe,,,,,"Via Cascina Bianca 24, 20142, Milano"
+Simpaty Bar,45.4678286,9.1454810,bar,,,,,
+Caffè degli Artisti,45.4771465,9.2168219,cafe,,,,,
+588,45.4384300,9.1782538,cafe,,,,,
+Bar Solerico,45.4841476,9.2368902,cafe,,,,,
+Bar Bottini,45.4841150,9.2367268,cafe,,,,,
+Baraonda Cafè,45.4888049,9.1904847,cafe,,,,,
+Frère,45.4810924,9.1712995,bar,,,,"Tu-Th 18:30-01:00, Fr,Sa 18:30-02:00, Su 18:30-01:00",
+Marilyn Cafe,45.4334320,9.2386825,cafe,,,,,
+ConVito,45.4953565,9.1274640,cafe,,,,,
+Milano Cafè,45.4683890,9.1505438,cafe,,,,,
+Faschion cafè,45.4940664,9.1443083,cafe,,,,,
+Bodeguita del Medio,45.4522849,9.1820724,bar,,,,,"Viale Col di Lana 3, 20136"
+Cactus Joe,45.4509692,9.1702585,bar,,,,,"Alzaia Naviglio Grande 60, 20144, Milano"
+Rita & Cocktails,45.4504143,9.1698507,bar,,,,,"Via Angelo Fumagalli 1, 20143, Milano"
+bar la perla bianca,45.4783693,9.2042763,cafe,,,,,"Via Felice Casati 15, Milano"
+Panino Giusto,45.4857493,9.2036743,cafe,sandwich,,,,
+Juice Bar,45.4855232,9.2051408,cafe,,,,,
+Caffè Napoli,45.4854771,9.2043402,cafe,,,,,"Piazza Duca d'Aosta 1, 20124, Milano"
+Chiaravalle Bakery and Coffee,45.4161674,9.2405291,cafe,,,,,
+Bar Ros,45.4711281,9.1562621,bar,,,,,"Via Tiziano 5, Milano"
+Winelivery Bar Navigli,45.4520536,9.1704266,bar,,https://www.winelivery.com/it,+39 02 3858 3592,,"Via Casale 3a, 20144, Milano"
+Crazy Patrick’s,45.4584656,9.2460886,pub,,,,,
+Christian’s Bar,45.4569933,9.2428955,cafe,,,,,
+Golden Lion,45.4568396,9.2420762,cafe,,,,,
+Venillo,45.4654866,9.2299880,bar,,,,,
+Il malabar,45.4706816,9.1343348,cafe,,,+39 02 36537307,,"Via Matteo Civitali, 20148, Milano"
+Bl'u,45.4495357,9.1508719,cafe,,,,,
+Wall Street,45.4894515,9.2209213,cafe,,,,,"Via Padova, 20127, Milano"
+Suenos de Cocktail,45.4888376,9.2200721,cafe,,,,,
+Bambù club,45.4880133,9.2189227,nightclub,,,,,
+Dublini,45.4871020,9.2177745,cafe,,,+39 392 108 0686,Mo-Su 12:00-24:00,"Via Padova, 20131, Milano"
+Peter bar,45.5100433,9.2490345,cafe,,,,,"Via Padova 306, 20132, Milano"
+QQTEA,45.4811236,9.1734348,cafe,bubble_tea,,,Mo-Su 10:00-22:00,"Via Paolo Sarpi 47, Milano"
+Pick 'N Roll Sport Pub,45.4963756,9.1408983,pub,,,+390236571399,,"Via Pier Francesco Mola 39, 20156, Milano"
+Oro Nero,45.4665875,9.1759119,cafe,,,+393931009345,,"Via Giosuè Carducci 8, 20123, Milano"
+Milù,45.4267701,9.1710620,cafe,,,,,
+Viola,45.4267206,9.1729242,cafe,,,,,
+L'angolo del ritrovo,45.5112532,9.2499299,cafe,,,,,"Via San Mamete 19, 20128, Milano"
+Il caffè della terra,45.5074233,9.2474674,cafe,,,+39 393 1654386,Mo-Sa 07:30-18:00+,"Via privata Giuseppe Maria Giulietti, 20132, Milano"
+Hamilton Plaza,45.5051180,9.2469271,cafe,,,+39 349 8088423,,"Via Flumendosa 34, 20132, Milano"
+Daily Caffè,45.5048282,9.2462521,cafe,,,+39 02 25940240,Mo-Su 07:00-19:30,"Via Palmanova 155, 20132, Milano"
+Queen's bar,45.5073154,9.2366727,cafe,,,+39 02 27208056,,"Via Asiago 116, 20128, Milano"
+Caffineria,45.5064317,9.2373340,cafe,,https://www.caffineria-milano.it/,+39 02 49420043,,"Via Ponte Nuovo, 20128, Milano"
+Bar Caffé Ottolina,45.5056286,9.2374539,cafe,,,,,"Via Ponte Nuovo, 20128, Milano"
+Tri Malnatt,45.5079601,9.2458057,pub,,,+39 02 43419602,,"Via Padova 276, 20132, Milano"
+Bar Luca,45.5040137,9.2431414,cafe,,,,,"Via Angelo Emo, 20132, Milano"
+Bar Mora,45.5044920,9.2388644,cafe,,,,,"Via Cesare Arici, 20127, Milano"
+Bar Caraibi,45.5041958,9.2404236,cafe,,,,,"Via Padova, 20127, Milano"
+Dal Marchese Piperito,45.5043477,9.2409871,cafe,,,,,"Via Padova, 20132, Milano"
+Bar Living,45.5058060,9.2425737,cafe,,,,,"Via Melchiorre Cesarotti 2, 20127, Milano"
+Nuovo bar,45.5059850,9.2427907,cafe,,,,,"Via Padova, 20127, Milano"
+Cosmì,45.4400459,9.2419135,cafe,pastry;pizza,,,Mo-Su 07:00-19:00,"Via Eugenio Colorni 14, 20138, Milano"
+Chanelena,45.4925704,9.2329660,cafe,,,,,"Via Tolmezzo, 20132, Milano"
+Picchio,45.4919235,9.2343480,cafe,,,,,
+Bar Palmanova,45.5038995,9.2456541,cafe,,,+39 02 27202313,,"Via Palmanova, 20132, Milano"
+Caffè al 91,45.5006129,9.2413453,cafe,,,,,"Via Palmanova 91, 20132, Milano"
+Manco a Parigi,45.4989359,9.2391914,cafe,,,,,"Via Palmanova, 20132, Milano"
+Bar Bellini,45.5030616,9.2411352,cafe,,,+39 02 26308296,,"Via San Giovanni Battista de la Salle, 20132, Milano"
+Tyson,45.4624655,9.2148914,bar,,,,,
+Kubla Khan,45.4629101,9.2145142,cafe,,,,,
+Bar Celentano,45.5010486,9.2408377,cafe,,,+39 327 8547066,,"Via Madre Anna Eugenia Picco, 20132, Milano"
+Fluid cafè,45.4999628,9.2404141,cafe,,,+39 02 49796130,,"Viale Don Luigi Orione, 20132, Milano"
+Matrikola Cafè,45.5001337,9.2394201,cafe,,,+39 338 2451748,,"Viale Don Luigi Orione, 20132, Milano"
+Latte & vino,45.5004771,9.2388897,cafe,,,+39 327 5472473,,"Via Don Luigi Orione, 20132, Milano"
+Amiri,45.5021665,9.2399606,bar,,,,,"Via Padre Placido Riccardi, 20132, Milano"
+Luca's Bar,45.5023244,9.2401658,cafe,,,+39 339 8863189,,"Via Padre Placido Riccardi, 20132, Milano"
+Bar Saro,45.5033725,9.2415363,cafe,,,+39 351 5102393,,"Via privata Mondovì, 20132, Milano"
+El Mawal,45.4351359,9.2042908,nightclub,,,,,
+Bar Verde,45.5027802,9.2385593,cafe,,,,,"Via Padova 2, 20127, Milano"
+New Gallery,45.5019830,9.2375168,cafe,,,,Mo-Su 06:30-24:00,"Via Padova 177, 20127, Milano"
+Junction,45.4977043,9.1840950,cafe,,,,,
+Caffè Memory,45.4953050,9.1836396,cafe,,,,,
+Viale Corsica 12,45.4619819,9.2252307,cafe,,,+39 02 87396891,,"Viale Corsica 12, Milano"
+Triple Craft Beer Milano - Birreria Artigianale,45.4867669,9.1645321,pub,,,,,"Via Losanna 29, 20154, Milano"
+Bar Giulia,45.5015397,9.2369255,cafe,,,,Mo-Su 06:00-20:30,"Via Padova 173, 20127, Milano"
+Gold Finch,45.5012904,9.2365946,cafe,,,,,"Via Padova 167, 20127, Milano"
+Cosmai Caffè,45.5008773,9.2363774,cafe,,,,,
+Galaxy Cafè,45.5002276,9.2373956,cafe,,,+39 345 8526041,,"Via privata Derna, 20132, Milano"
+Bar Manu,45.4865243,9.2237745,cafe,,,+39 02 26829615,,"Viale Lombardia, 20131, Milano"
+Samori Caffè,45.4872339,9.2237643,cafe,,,,,"Viale Lombardia, 20131, Milano"
+Caffè Ottolina,45.5068424,9.2347326,cafe,,,,,
+Edone,45.4745284,9.2193446,cafe,,,,,
+Varann,45.4750130,9.2205845,cafe,,,,,
+747,45.4753312,9.2210951,nightclub,,,,,
+Civico 39,45.4908944,9.2228185,cafe,,,+39 334 9554456,,"Via Padova 39, 20127, Milano"
+I disperati,45.5056382,9.2339315,cafe,,,+39 02 27201052,,"Via Astico, 20128, Milano"
+Conca d'Oro,45.4892672,9.2210128,cafe,,,+39 02 2829156,,"Via Padova, 20131, Milano"
+Lord,45.4696498,9.2216154,bar,,,,,
+Villa,45.4709812,9.2223786,cafe,,,,,
+Rollpoint,45.4731234,9.2180956,cafe,,,,,
+N50Café,45.4715362,9.2218202,cafe,,,,,
+Oasi,45.4735426,9.2216362,cafe,,,,Mo-Fr 07:30-19:30; Sa 07:00-14:30; PH closed,
+Bar Banana Mama,45.4550719,9.1483541,cafe,,,,,"Via Raffaello Bertieri 2, 20146, Milano"
+Fame,45.4937245,9.2219161,cafe,,,,,
+Jessica Bar,45.4987837,9.2207527,cafe,,,,,
+Miss Peach,45.4645564,9.2082643,cafe,,,,,
+Cafezal,45.4642715,9.2076552,cafe,,,,Mo-Fr 08:30-18:00; Sa-Su 09:00-20:00,Viale Premuda 14
+Sandy Bar,45.4637052,9.2076607,cafe,,,,,
+Concept Caffè,45.4533592,9.2004287,cafe,,,,,
+Cafè Quieto,45.4781885,9.2153581,cafe,,,,,
+Cafe43,45.4909537,9.2179309,cafe,,,,,
+San Cafe,45.4862126,9.2183788,cafe,,,,,
+Tin,45.4918216,9.2137768,bar,,,,17:00-02:00,
+Karné,45.4945654,9.2104146,cafe,,,,,
+Artista Cafe,45.4912939,9.2128135,cafe,,,,,
+Bar Giada,45.4901383,9.2181333,cafe,,,,,
+Fantastico Bar,45.4928967,9.2159408,bar,,,,,
+Grandi,45.4618911,9.2214389,cafe,,,,,
+L'Angolo Gustoso,45.4532925,9.2146134,cafe,,,,,
+Café Verdi,45.4895429,9.2139096,cafe,,,,,
+Scaring,45.4907729,9.2183112,cafe,,,,,
+Twenty,45.4904187,9.2182142,cafe,,,,,
+Queen Bar,45.4855057,9.1582937,cafe,,,,,
+Chiosco,45.4810328,9.1065811,bar,,,,,Via Cascina Bellaria
+Caffè Fernanda,45.4721998,9.1882869,cafe,,https://www.caffefernanda.com/,,,"Via Brera 28, 20121"
+Trivè Time Marghera,45.4665471,9.1515180,cafe,,https://trivetime.it/,,"Su-Th 08:00-24:00, Fr-Sa 08:00-02:00","Via Marghera 47, 20149, Milano"
+Village Café,45.4511215,9.1724978,bar,,,,,"Ripa di Porta Ticinese 53, 20143, Milano"
+Miao Miao Bar,45.5055549,9.2333159,cafe,,,,,"Via privata Iglesias, 20128, Milano"
+Babila Bistro,45.4641289,9.2033678,bar,,https://www.babilahostel.it,,,"Via Conservatorio 2a, 20122, Milano"
+Bar La Sosta 70,45.4912479,9.2444753,cafe,,,,,"Via Feltre 70, 20134, Milano"
+Vapore 1928,45.4851363,9.1744420,cafe,,https://www.vapore1928.com/,+39 02 33100772,,"Via Messina 26, 20154, Milano"
+Bar Mondo,45.5069436,9.2298428,cafe,,,,,
+Bar Derna,45.4994575,9.2361647,cafe,,,+39 02 45391980,,"Via Benadir 13, 20132, Milano"
+Coffee Gem,45.4913503,9.2403649,cafe,,https://www.coffeegem.it/,+39 02 25137249,,"Via Feltre, 20132, Milano"
+Bestia,45.4830530,9.2301670,pub,,,,,
+7000 caffè,45.4850506,9.2304731,cafe,,,,,"Via Vallazze 99, 20131, Milano"
+Pretty Pub,45.4985086,9.2351290,cafe,,,,,"20132, Milano"
+Mambo cafè,45.4969564,9.2365855,cafe,,,+39 392 2436413,,"Via Palmanova, 20132, Milano"
+Awtar cafè,45.4966918,9.2362475,cafe,,,+39 327 4069138,,"Via Palmanova, 20132, Milano"
+I loft cafè,45.5106248,9.2316556,cafe,,,+39 02 27080836,,"Via Pompeo Mariani, 20128, Milano"
+Pancaffe spuntino,45.4987201,9.2335146,cafe,,,,,Via Padova
+Pane e Caffè,45.4978129,9.2338448,cafe,,,,,"Via privata Atene, 20132, Milano"
+Bar Fortuna,45.4980686,9.2349337,cafe,,,,,"Largo Tel Aviv, 20132, Milano"
+Lucky bar,45.4974835,9.2349251,cafe,,,,,"Via Bruno Cesana, 20132, Milano"
+La Versa 4,45.4962019,9.2350994,cafe,,,,,"Via Palmanova 59, 20132, Milano"
+Tamarindo,45.5184989,9.1669242,cafe,salvadoran,,,,"Via Giuseppe Taccioli 20, 20161, Milano"
+Dolphin,45.4867941,9.2177526,bar,,,,,"Via Padova, 20131, Milano"
+DecidiTu,45.4705287,9.2460696,cafe,,,,,Via Tucidide 56
+Toz Cafè,45.5179513,9.2472456,cafe,,,,,"Via Giuseppe Saragat, 20128, Milano"
+La rosa blu,45.4974397,9.2314930,cafe,,,,,"Via Padova, 20127, Milano"
+da Marco,45.4978666,9.2320559,cafe,,,,,"Via Padova, 20127, Milano"
+Starbucks,45.4857164,9.2057912,cafe,coffee_shop,https://www.starbucks.co.uk/store-locator/59234-293480/starbucks-centrale,+39 02 66712764,,"Piazza Luigi di Savoia 1, 20125, Milano"
+Pretty bar,45.4983036,9.2318623,cafe,,,,,"Via privata Scipione Piattoli, 20127, Milano"
+Torres,45.4965812,9.2303172,cafe,,,,,"Via Padova 109, 20127, Milano"
+Adriana,45.4963666,9.2300376,cafe,,,+39 02 83419085,,"Via Padova 97-99, 20127, Milano"
+Bastianello Columbus,45.4723380,9.1566394,cafe,,https://bastianellocolumbus.playfun.tv/scheda.asp?id_scheda=978,+390248080617,Mo-Fr 08:00-20:00; Sa 08:00-15:00; Su off,"Via Michelangelo Buonarroti 48, 20044, Milano"
+Metro Bar Amendola,45.4733937,9.1517893,bar,,,,Mo-Sa 07:00-21:00; Su off,"Piazza Giovanni Amendola 4, 20149, Milano"
+Yum Cha!,45.5086892,9.2429340,cafe,,,+39 02 2722 1398,Tu-Fr 12:30-23:00; Sa-Su 10:30-23:00,"Via privata Antonio Meucci, 20128, Milano"
+Stufanka,45.5061916,9.2256773,cafe,,,,,
+Mamusca,45.5022453,9.1753360,cafe,,https://www.mamusca.it/,,,"Via Bernardo Davanzati 2, 20158, Milano"
+Davide,45.4560790,9.2259044,cafe,,,,,
+Riviera,45.4683842,9.2158628,cafe,,,,,
+Giglio,45.4686050,9.2170022,cafe,,,,,
+Linx,45.4869804,9.2423707,cafe,,,,,
+Crash,45.4887825,9.2421188,cafe,,,,,
+Fiordiponti,45.4531994,9.2029837,cafe,,,,,
+Swami Café,45.4535306,9.2037025,pub,,,,"Mo-Fr 07:00-14:30,18:00-02:00, Sa,Su 18:00-02:00",
+Astoria,45.5025888,9.2474248,cafe,,,,,
+Pane bianco,45.5027958,9.2476916,cafe,,,+39 02 27209976,,"Via Civitavecchia, 20132, Milano"
+Bar Bodio,45.4975294,9.1688194,cafe,,,+39 02 39310790,,"Viale Luigi Bodio, 20158, Milano"
+Blues cafè,45.4970127,9.1700354,cafe,,,+39 02 82197892,,"Viale Luigi Bodio, 20158, Milano"
+Bk Café,45.4437479,9.1789344,cafe,,,,,
+Pub The Drouthy Duck,45.4373057,9.1520344,bar,,,,,"Viale Faenza 18, 20142, Milano"
+Stefano,45.4416984,9.1536071,cafe,,,,,"Via Ettore Ponti 43, 20143, Milano"
+Bar Fortuna,45.4444299,9.1548498,bar,,,,,"Via Giacomo Watt 1, 20143, Milano"
+10gradinord,45.4439583,9.1543603,pub,,https://www.10gradinord.com/,+39 3519088121,Tu-Su 18:00-24:00,"Via Giacomo Watt 5, 20143, Milano"
+Good Morning First,45.4903087,9.2237555,cafe,,,,,
+Bar Rotatoria,45.4910806,9.2234199,cafe,,,,,
+Christian Bar,45.4921684,9.2248402,cafe,,,,,
+La Rosa dei Venti,45.4808629,9.2019273,cafe,,,,,"Via San Gregorio, 20124, Milano"
+Merlino e Magò,45.4485442,9.1731000,pub,,,,,"Via Emilio Gola 31, 20143, Milano"
+Bontà senza glutine,45.4412220,9.1521134,cafe,,,,Mo 07:00-15:00; Tu-Fr 07:00-18:00; Sa 08:00-14:00; Su 08:00-13:00,"Via Ettore Ponti 53, 20143, Milano"
+Da lì a là,45.4419609,9.1546891,cafe,,,,,"Via Ettore Ponti 35, 20143, Milano"
+Todo Modo,45.5034138,9.1615285,cafe,,,,,
+Italy Cafè,45.4964016,9.1717638,cafe,,,,,
+bar paradiso,45.4523507,9.2089029,cafe,,,,,
+Golden Bar,45.5034496,9.1766658,cafe,,,,,
+Bar del Muretto,45.4741002,9.2240712,cafe,,,,,
+Spiller,45.4560565,9.1648287,pub,,https://www.spillerbirrerie.it/it/,+390209960506,,"Via Andrea Solari 6, 20144, Milano"
+Bar Atlantic,45.4444720,9.1630461,bar,,,,Mo-Sa 07:30-20:30; Su 08:00-20:00,
+Cilea,45.4973532,9.1062475,cafe,,,,,
+La Latteria,45.4965457,9.1216606,cafe,,,,,
+Rock Bar,45.4973703,9.1139400,cafe,,,,,
+Billy Bar,45.4978737,9.1129203,cafe,,,,,
+3B,45.4927330,9.1115404,cafe,,,,,
+Lorenzo,45.4535017,9.0850767,cafe,,,,,
+Palladio,45.4484846,9.1976706,cafe,,,,,
+Biscottino Officina dei Sapori,45.4425634,9.1724303,cafe,,https://biscottino-officina-dei-sapori.menu-world.com/,,,"Via Spezia 2, 20142, Milano"
+Pulp,45.4560121,9.2110845,pub,,,,,Via Cadore 48
+Let’s Feel Good,45.4620378,9.1489540,bar,,https://www.letsfeelgood.it/,,,
+Bottiglieria Popolare,45.4509756,9.1548066,bar,,,,,"Viale Carlo Troya 14, 20144, Milano"
+Dinchi Cafè,45.4505600,9.1556361,cafe,,,,,"Viale Carlo Troya 23, 20144, Milano"
+Bar Amici,45.5091549,9.2234422,bar,,,,Mo-Su 06:00-24:00,"Viale Monza, 20126, Milano"
+Dejavu,45.4476610,9.1767957,bar,,,,,"Via Giosuè Borsi 2, 20143, Milano"
+Bar Peter Pan,45.4674780,9.1664240,cafe,,,,,"Piazza della Conciliazione, 20123, Milano"
+Maison Cafè,45.4603801,9.1646648,cafe,,,+390248517540,Mo-Sa 07:00-22:00; Su off,"Viale Coni Zugna 3, 20144, Milano"
+Caffè Napoli,45.4526999,9.1758779,cafe,,https://www.caffenapoli.com/,,,"Via Vigevano 1, 20144, Milano"
+Barolino,45.4484439,9.1797540,cafe,,,,,
+Carico,45.4561022,9.1701578,bar,,https://www.carico.io/,,Mo 19:00-02:00; Tu off; We-Sa 19:00-02:00; Su 18:00-01:00,"Via Savona 1, 20144, Milano"
+Green Bar,45.4740810,9.1092615,cafe,,,,,
+Caffetteria Aurora,45.4414607,9.1404081,bar,,,,,"Via privata Parenzo 8, 20143, Milano"
+Terzo Tempo,45.4423769,9.1453878,pub,,,,,"Via San Giuseppe Cottolengo, Milano"
+Bar Simpaty,45.4539082,9.1547824,bar,,,,,"Piazza Napoli 9, 20146, Milano"
+Frau,45.4471707,9.1273921,bar,,https://barlorenfrau.eatbu.com/,,,
+Altura,45.4462916,9.1247200,cafe,,,,,"Via Lorenteggio 234, 20147, Milano"
+Bar Giggia,45.4477459,9.1302037,bar,,,,,"Via Lorenteggio 183, 20147, Milano"
+Mae Bar,45.4498679,9.1367653,bar,,,,,"Via Lorenteggio 163, 20146, Milano"
+Caffetteria Rocca,45.4429123,9.1548554,cafe,,,,,"Via Ambrogio Binda 16, 20143, Milano"
+café Binda,45.4409223,9.1549227,cafe,,,,,"Via Ambrogio Binda 45, 20143, Milano"
+PiperCafè,45.4939448,9.2268662,cafe,,,,,
+Milo caffè,45.4378210,9.1666673,cafe,,,,Mo-Fr 06:30-19:00; Sa 07:30-22:00,"Viale Famagosta 75, 20142, Milano"
+Café Bistrot 25,45.4374910,9.1582641,cafe,,,,,"Viale Famagosta 25, 20142, Milano"
+Caffé Famagosta,45.4374166,9.1558408,cafe,,,,,"Viale Famagosta 7, 20142, Milano"
+Bar Miani,45.4378989,9.1546378,bar,,,,,"Piazza Guglielmo Miani 2, 20143, Milano"
+Sirio caffé,45.4405703,9.1509160,bar,,,,,"Via Santa Rita da Cascia 23, 20143, Milano"
+Capitano,45.4491737,9.1775863,pub,,,,,
+Inzuppo,45.4491569,9.1775828,bar,breakfast,,,,
+Smmak Navigli,45.4493334,9.1776341,bar,,https://smmak-navigli.business.site/,,,
+Diapa5on,45.4494327,9.1776456,pub,,,,,
+Alambique,45.4506128,9.1779208,pub,,,,,
+Cobà,45.4484211,9.1773978,pub,,https://cobamilano.it/,,,
+Il panino d'oro,45.4618149,9.2349476,cafe,,,,,"Largo Gianni Rodari 2, 20133, Milano"
+Bar Rodari,45.4618996,9.2348617,bar,,,,,"Largo Gianni Rodari 2, 20133, Milano"
+Gesto,45.4736348,9.2077747,bar,,,+39 02 201006,,Via Giuseppe Sirtori 15
+Arena Piola,45.4799325,9.2210772,pub,pizza;regional;burger;italian,,+39 02 2701 6731,,Via Filippino Lippi 7
+Avenue Cafe,45.4370581,9.1619963,cafe,,,,,"Viale Famagosta 42, 20142, Milano"
+Culto Caffè,45.4848714,9.1873565,cafe,coffee_shop,,,,"Piazza Sigmund Freud 1, 20154, Milano"
+Zaini Milano,45.4709386,9.2065158,cafe,,https://www.zainimilano.com/it/locale/,+39 02 694914450,,"Viale Piave 17, 20129, Milano"
+Fantastic,45.4829414,9.2054179,cafe,,,+39 349 7937503,,"Via Vitruvio, 20124, Milano"
+Frankly Bubble Tea & Coffee,45.4842575,9.2143991,cafe,bubble_tea,,,,
+Molise,45.4537711,9.2243469,cafe,,,,,
+Bar d'Este,45.4521850,9.1944058,cafe,,,,,
+Il Caffè Ambrosiano,45.4675084,9.1554994,cafe,,,+390243510325,,"Via Michelangelo Buonarroti 8, 20145, Milano"
+Square Bar,45.4674101,9.1549670,bar,,,,,"Via Michelangelo Buonarroti 5, 20149, Milano"
+J. Blend,45.4535220,9.2248601,pub,,,,,
+Buena suerte,45.4790818,9.2105302,bar,,,,,
+Happy Bar,45.4560629,9.2236552,cafe,,,,,
+D’Angelo,45.4555398,9.2236545,cafe,,,,,
+Bar Art,45.4550130,9.2236622,cafe,,,,,
++39zerodue,45.4673353,9.1549660,cafe,italian,,,,"Via Michelangelo Buonarroti 3, 20149, Milano"
+Bar Alba,45.4617510,9.2073457,bar,,,,,
+Exit,45.4589341,9.1897564,cafe,,,,,
+Re Bolla,45.4643056,9.2280201,bar,,,,,"Via Luisa Battistotti Sassi, 20133, Milano"
+Dolce amaro caffè,45.4723275,9.2068075,cafe,,,,,
+La sera allo zoo,45.4752398,9.2076827,bar,,,,,Via Melzo
+Coll,45.4621241,9.2062113,cafe,bubble_tea,,,,
+Orsonero,45.4631489,9.2119633,cafe,,,,We-Su 09:00-17:00; Mo-Tu closed,
+Il caffè ambrosiano,45.4621006,9.2105740,cafe,,,,,
+PIBÄ,45.4627811,9.2116365,pub,,,,,
+SVaRè,45.4624386,9.2025111,cafe,,,,,"Corso di Porta Vittoria 27, 20122, Milano"
+Rose by Mary dispensa,45.4632751,9.1993733,cafe,,,,,
+Birrificio di Ringhiera,45.4257998,9.2517736,pub,,https://birrificiodiringhiera.com/,+39 02 80898575,,"Via Rogoredo, 20138, Milano"
+Golden Bar,45.4264570,9.2510581,cafe,,,+39 02 514381,,"Via Rogoredo, 20138, Milano"
+La battagliera,45.4963090,9.2368091,cafe,,http://www.labattagliera.it/,+39 339 8831604,,"Via Palmanova, 20132, Milano"
+MOBA,45.4764451,9.2249967,bar,japanese,,+39 02 45374430,,"Via Giovanni Pascoli 70/2, 20133, Milano"
+Bar argento,45.4906015,9.2040248,cafe,,,,,
+Baretto,45.4835011,9.2409463,bar,,,,,"Via Muzio Scevola 6, 20134, Milano"
+Motta,45.4853023,9.2053836,cafe,,,,,"Piazza Luigi di Savoia, 20124, Milano"
+LibrOsteria,45.4785428,9.1777230,bar,,,,,
+Bar Elena,45.4577066,9.1708412,bar,,,,,"Viale Papiniano 47, 20123, Milano"
+Dom's Caffè,45.5061237,9.2365620,bar,,,,Mo-Sa 06:30-21:00; Su 06:30-13:00,"Via Paolo Gerolamo Biumi 18, 20128, Milano"
+Ooops,45.4406747,9.2131987,pub,,,,Mo-Su 08:30-01:00,Piazza Geremia Bonomelli 9
+Nazca,45.4821760,9.2167541,cafe,,,,,"Viale Abruzzi, Milano"
+Bar degli Amici,45.4446957,9.1549788,cafe,,,,,"Via Giacomo Watt 2, 20143, Milano"
+Andy Bar Cafè,45.4945809,9.2357000,bar,,,,,"Via Carnia 31, 20132, Milano"
+Atipico caffè,45.4600368,9.1810113,cafe,,,+39 02 39526536,,Via Cesare Correnti 1
+Natura In Bistrò,45.4625804,9.1618875,bar,,https://www.facebook.com/NaturainBistro/,+390209959456,,"Via Paolo Giovio 28, 20144, Milano"
+Red Cassala,45.4448293,9.1637428,bar,,,,Mo-Sa 08:00-18:30,"Viale Cassala 45, 20143, Milano"
+Bar Biella,45.4383130,9.1550120,bar,,,,,"Via Biella 26, 20143, Milano"
+Senzanome,45.4815218,9.2055381,cafe,coffee_shop,,,,
+Dolce Kerstin,45.5227744,9.1900606,cafe,coffee_shop;danese,https://dolcekerstin.com/,,,"Via privata Carlo Innocenzo Frugoni 23, MIlano"
+Il lambrettino,45.4787881,9.2473345,bar,,,,,"Piazza Vigili del Fuoco 14, 20134, Milano"
+Atmosphere,45.4753421,9.2145439,pub,,,,,
+Bar Tabacchi Luce,45.4577257,9.1683216,cafe,,,,Mo-Sa 07:00-20:00; Su off,"Viale Coni Zugna 44, 20144, Milano"
+12oz,45.4898171,9.1270595,cafe,,,,Mo-Su 00:00-24:00,
+Terrazza Martini,45.4618633,9.1899962,bar,,https://www.martini.com/terrazza-martini/,,,"Piazza Armando Diaz 7, 20123"
+Norah was drunk,45.4862099,9.2332043,bar,,https://norah-was-drunk.mailchimpsites.com/,+39 02 8342 8246,Tu-Su 19:00-02:00,"Piazza Pietro Gobetti 169, 20131"
+cin cin bar,45.4811852,9.1742377,cafe,,,,,Via Paolo Sarpi 39
+Patchouli,45.4331204,9.2384328,cafe,,,+39 347 011 0885,,"Via Giovanni Battista Cassinis 76, 20139, Milano"
+Speedy,45.4809038,9.2231726,cafe,,,,,
+Bobino,45.4536005,9.1698498,bar,,https://bobino.it/,+393714085303,Mo off; Tu-Su 18:00-03:00,"Piazzale Stazione Genova 4, 20144, Milano"
+Bovisa Urban Garden,45.5027310,9.1641633,bar,,,,,"Via Emilio Broglio 3, 20158, Milano"
+Axel,45.4185934,9.1779328,cafe,,,,,"Via Fratelli Fraschini 6, 20142, Milano"
+Bar Tabacchi Il Moro,45.4443428,9.1406298,bar,,,,,"Via Lodovico il Moro 93, 20143, Milano"
+frankly,45.4859749,9.2047733,cafe,coffee_shop;tea,,,,
+Caffè Napoli,45.4680921,9.1761140,cafe,,,,,"Cadorna FN M1 M2, 20123, Milano"
+Bar New Deal,45.4637589,9.2047137,cafe,,,,,
+Vesta,45.4721055,9.1869678,bar,,,,,
+Cafè Charly,45.4491683,9.1639470,cafe,,,,,"Via Elia Lombardini 2, 20143, Milano"
+Brother's Bar,45.4443419,9.1666297,cafe,,,+39 02 89420937,,"Viale Cassala 61, 20143, Milano"
+Birtos,45.4437937,9.1775288,cafe,,,,,
+Bar Tibaldi,45.4452075,9.1865424,cafe,,,,,
+Pandaneus,45.4575647,9.1832549,cafe,,https://www.pandenus.it/it/store/pandenus-piazza-vetra-19-a/,,,
+Mathilda Cafe,45.4880060,9.1706360,bar,,https://mathildacafe.eatbu.com,+39 02 3310 5683,,"Via Cenisio 10, 20154, Milano"
+Sicilian,45.4702646,9.1865609,cafe,,https://www.sicilianbrera.com,+39 02 7200449,Tu-Th 10:30-18:30; Fr-Sa 11:00-21:00; Su 11:00-18:30; Mo off,"Via del Carmine 7, 20121"
+Ugo Cocktail Bar,45.4519214,9.1735202,bar,,https://www.ugobar.it/,+39 02 39811557,,"Via Corsico 12, 20144"
+Starbucks,45.4625343,9.1870272,cafe,coffee_shop,https://www.starbucks.co.uk/store-locator/69306-304368/milano-via-torino-21,,Mo-Su 07:30-20:00,"Via Torino 21, 20123, Milano"
+Black,45.4678332,9.1549813,cafe,,,,,"Via Marghera 2, 20149"
+Bistrot Italia,45.4553043,9.1873470,cafe,,,,,"Corso Italia 35, 20122, Milano"
+Bar Tabacchi Molino delle Armi,45.4566899,9.1834244,bar,,,+393338571815,,"Via Santa Croce 2, 20131, Milano"
+Bar Coffé Mokarabia,45.4898502,9.2053955,cafe,,,,,"Via Ponte Seveso 36, 20125, Milano"
+Cià... Birretta,45.4548850,9.1730030,pub,,,,Mo-Su 17:00-01:30,"Viale Gorizia 1, 20144, Milano"
+Q Club,45.4886677,9.2197104,nightclub,,,,Fr-Sa 24:00-05:00,"Via Padova 21, 20127, Milano"
+On The Road,45.4838989,9.1825680,bar,,,,,
+Prestin,45.4679292,9.1549832,cafe,,,,,Via Michelangelo Buonarroti 7
+Sally bar,45.4560493,9.1868039,bar,,,,,"Via Molino delle Armi 3, 20123, Milano"
+Unplug,45.4505401,9.2043575,pub,,,,Mo-Su 18:00-01:00,
+Bones Pub,45.4510526,9.1916567,pub,,,+39 02 45397940,,
+La stuzzicheria,45.4572882,9.1758271,cafe,,https://www.facebook.com/people/La-Stuzzicheria-Bar-Caffetteria/100047960991070/,+39028356446,,"Corso Genova 15n03, 20123, Milano"
+Caffè Napoli,45.4560172,9.1712861,cafe,,https://www.caffenapoli.com/,,Mo-Fr 07:00-18:00; Sa-Su 08:00-18:00,"Viale Coni Zugna 63, 20144, Milano"
+Explosion cafè pub & bar,45.4570019,9.1725606,cafe,,,+390258112089,,"Via Fabio Mangone 3, 20123, Milano"
+Bar al 57,45.4567934,9.1724045,bar,,,+390258114908,,"Viale Papiniano 57, 20123, Milano"
+Gran Caffé,45.4624489,9.2048866,cafe,,,,,
+Banco d'assaggio,45.4650003,9.2144722,bar,,,,,
+Enoteca naturale,45.4533988,9.1819841,bar,,https://enotecanaturale.it/,+39 335 8020382,Mo-Fr 17:30-23:00; Sa-Su 12:30-23:00,"Via Santa Croce 19, 20122"
+Flora Labora,45.4495103,9.1772192,cafe,,https://www.floraetlabora.it/,,"Tu, We 10:00-19:00; Th, Su 10:00-23:30; Fr, Sa 10:00-00:00","Alzaia Naviglio Pavese 20, 20143, Milano"
+La locanda del gatto rosso,45.4671748,9.1932777,cafe,,,,,"Piazza Filippo Meda 5, 20121, Milano"
+Pascucci,45.4841618,9.2018527,cafe,,,,"Mo-Fr 07:30-19:00; Sa,Su 08:00-19:00","Via Vittor Pisani 31, 20124"
+Mag La Pusterla,45.4587058,9.1782911,bar,,https://farmily.webflow.io/locali/mag-pusterla,+390249755094,,"Via Edmondo De Amicis 22, 20123, Milano"
+Scott Joplin,45.5160674,9.1886642,pub,,http://scottjoplin.it/,+39 339 3769284,,"Via Val di Ledro 11, 20162, Milano"
+Chez Nous,45.5159618,9.1886854,cafe,,,,,
+La Bottega del Colibrì,45.4813243,9.2024135,cafe,,,+39 02 8363 7915,,Via Carlo Tenca 19
+Caffè Napoli,45.4770092,9.1958612,cafe,,,,,
+Da Mario,45.4628983,9.1277966,cafe,,,,,
+Yogorino,45.4475656,9.1785846,bar,,,,Mo-Sa 07:00-19:30,"Via Pavia 6, 20136, Milano"
+VyTA,45.4857718,9.2044824,cafe,,,,,
+Pura Vida,45.4385275,9.2301759,nightclub,,,,,
+Il Miliardario,45.4385003,9.2277061,cafe,,,,,
+Selfie Bar,45.4388629,9.2269303,cafe,,,,,
+Garden Bar,45.4395428,9.2255777,cafe,,,,,
+Caffé Corvetto,45.4397795,9.2250601,cafe,,,,,
+Dolce Vita,45.4400162,9.2249323,cafe,,,,,
+Bar G. Tecle,45.5093185,9.1986246,cafe,,,,,
+Caffetteria di Bruno Manenti,45.5093625,9.1988585,cafe,,,,,
+Officinazero,45.4857428,9.2142910,bar,,,,,"Viale Andrea Doria 44, 20124, Milano"
+Bar Laura,45.4916551,9.2185526,cafe,,,,,
+Tel Chi,45.4558758,9.2101596,cafe,,,,,
+Il Salumaio di Montenapoleone,45.4696727,9.1946160,cafe,,https://www.ilsalumaiodimontenapoleone.it/,,,"Via Santo Spirito 10, 20121"
+Bar Nievo,45.4939700,9.1446337,bar,,,,,
+Caffè Luciano,45.4896474,9.1268048,cafe,,,,,
+Foresta woodbar,45.4596999,9.1818685,bar,,,,,Via Celestino Quarto 6
+Rebelot,45.4624894,9.1370098,bar,,,,,"Viale Pisa 47, 20146, Milano"
+4mat bistrot,45.4911901,9.1888467,cafe,,,,,"Via Genova Thaon Di Revel 5, 20129"
+Hardy,45.4685101,9.2226946,cafe,,,,,
+Mealthie,45.4622931,9.1676959,cafe,,https://www.mealthie.it/,,Mo-Su 08:00-22:30,"Via Gian Battista Vico 38, 20123, Milano"
+EL&N,45.4839219,9.1893532,cafe,coffee_shop,https://it.elnlondon.com/pages/gae-aulenti,,"Mo-Fr 08:00-22:00; Sa, Su 09:00-22:00; PH 09:00-22:00","Piazza Gae Aulenti, 20154"
+GustaMi,45.4705861,9.2008437,cafe,,,,,"Corso Venezia 41, 20121, Milano"
+Wanasah,45.4893306,9.1832587,cafe,,,,,
+La cantina del Maurone,45.4990774,9.1690531,cafe,,,,,
+Bar Italia,45.5058396,9.1791077,cafe,,,,,
+Pave - Gelati & Granite,45.4628960,9.2005335,cafe,,https://pavemilano.com,,Mo-Fr 13:00-19:30; Sa-Su 14:00-20:00,
+Tommy's Bar,45.4784584,9.1924105,cafe,,,,,
+Profumo Bakery,45.4814624,9.1928263,cafe,,https://profumobakery.com/,,,"Via Amerigo Vespucci 11, 20124, Milano"
+46,45.4783730,9.1924161,cafe,,,,,
+Gustavo,45.4549776,9.1615395,cafe,italian;burger;international;salad;sandwich,https://gustavo.qromo.it/,+390283649477,"Mo 08:00-15:00; Tu-Fr 08:00-15:00, 17:30-21:30; Sa-Su Mo 08:00-15:30","Via Andrea Solari 26, 20144, Milano"
+Harris Bar,45.4538592,9.1580855,bar,,https://www.harrisbarmilano.it/,+390242290276,,"Via Andrea Solari 50, 20144, Milano"
+I Beerbanti,45.4537331,9.1576930,pub,,,+390242297612,,"Via Andrea Solari 52, 20144, Milano"
+GEB,45.4922187,9.1886279,bar,,,,,
+Luma,45.4895698,9.1888911,bar,,,,,"Via Pietro Borsieri 39, 20159"
+Les amis,45.4549264,9.1613733,cafe,,https://www.lesamisinsolari.it/,+390209958492;+393492609661,,"Via Andrea Solari 30, 20144, Milano"
+Sun Strac,45.5252851,9.1904820,cafe,ice_cream,https://sunstrac.it/,,,"Via Luigi Ornato, 20162, Milano"
+Cafè Posilipo,45.4859870,9.2303392,bar,,,,Mo-Su 07:00-21:00,"Via Nicola Antonio Porpora 144, 20131, Milano"
+Gramm,45.4511779,9.1727932,bar,,,,,"Ripa di Porta Ticinese 49, 20143, Milano"
+Frankie's,45.4556077,9.1807627,cafe,sandwich;juice;salad,https://frankiesitalia.it/,+390291943289,,"Corso di Porta Ticinese 89, 20123, Milano"
+Anarres,45.4930125,9.2207644,bar,,https://www.anarres.it/,+39 340 687 0353; +39 02 0994 2972,"Mo-Fr 17:00-24:00, Sa,Su 10:00-24:00","Via Pietro Crespi 11, 20127"
+The Dome,45.4634964,9.1883863,bar,,https://www.thedomemilano.com/,,,"Via Giuseppe Mazzini 2, 20123"
+ZOG,45.4514151,9.1739607,cafe,,,+39 02 36526252,Mo-Su 08:00-02:00,"Via Filippo Argelati 2, 20143, Milano"
+Ciclocaffè,45.5070519,9.2528461,cafe,,https://ciclocaffe.it/,+39 379 251 4442,,Via Rizzoli 47
+Bar Snoopy,45.4496905,9.1377745,cafe,chinese;italian;coffee_shop,,,,"Via dei Tulipani 16, 20146, Milano"
+Bar Sporting,45.4675304,9.0850280,cafe,hawaiian;italian,,,,"Via Quinto Romano 70, Milano"
+Rabbit Hole Café,45.4617268,9.1881116,cafe,coffee_shop,https://rabbitholecafe.com,,Mo-Sa 8:00-21:00; Su 09:00-21:00,"Via Giuseppe Mazzini 20, 20123, Milano"
+La Medina - Pasticceria e sala da té,45.4882769,9.1605150,cafe,marocchina,,,,"Via Tolentino 1, 20154, Milano"
+Vertigo Osteria contemporanea e bar,45.4813325,9.1885154,cafe,,,,,
+Café restaurant,45.4966283,9.1759172,cafe,,,,,
+Pastis,45.4737802,9.1411096,bar,,,,,Piazza Monte Falterona 2
+Giardino,45.4572400,9.1903593,bar,,,+390258325260,,"Via San Senatore 16, 20122, Milano"
+[lù-po],45.4914798,9.1887262,bar,,,,,
+Bar 30 E Lode,45.4807451,9.2250841,cafe,,,+393389964167,Mo-Sa 06:00-21:00,"Piazzale Gabrio Piola, 20131, Milano"
+Bounty,45.4716754,9.1679398,cafe,,,,,
+Bar Alessandro,45.5010687,9.1899184,cafe,,,,,
+D'ire Bistrot,45.4656781,9.1592343,cafe,,,+39 02 84572986,,"Via Cimarosa 5, 20144"
+Pub24,45.4882628,9.1891046,pub,,,,,
+Caffetteria Morelli,45.4887119,9.1887718,cafe,,,,,
+Tondo Cafè,45.4316012,9.2446190,cafe,,,,,
+Lom Dopolavoro,45.4885695,9.1734649,bar,,,+39 327 069 8267,"Mo-Th,Su 18:30-24:00; Fr-Sa 18:30-02:00",
+Buatta Caffetteria,45.4940612,9.1528187,cafe,coffee_shop,,+39 388 9746 502,,"Via Masolino da Panicale 12, 20155, Milano"
+Apophis Club,45.4625856,9.1960482,nightclub,,https://www.apophisclub.com/,+39 342 573 2668,,"Via Carlo Giuseppe Merlo 3, 20122, Milano"
+Bar Queen,45.4695830,9.2241320,bar,,,,,
+Onest,45.4668833,9.2224427,cafe,,https://en.onestmilano.com/,,We-Fr 08:00-23:30; Sa-Su 09:00-23:30,Via Gerolamo Turroni 2
+Il gelato di Gigi,45.5012815,9.1954049,cafe,,,,"Mo, We-Fr 08:00-20:00; Sa-Su 09:00-20:00","Piazza Caserta 1, 20159"
+Luxy Club Milano,45.4794635,9.2095709,nightclub,,,,,
+Carpe Diem,45.4740231,9.1835987,cafe,,,,,
+Portico 84,45.4769050,9.1844278,cafe,,,,Mo-Su 07:30-00:00,
+Loste Cafè,45.4670146,9.2088411,cafe,,https://lostecafe.com,+39 02 4537 5475,Mo-Sa 08:00-17:00; Su 08:00-14:00,"Via Francesco Guicciardini 3, 20129, Milano"
+ToastEat,45.4054054,9.1618884,bar,,,,,"Viale Milanofiori, 20057, Assago"
+Tra le righe,45.4853340,9.2301404,cafe,,,,,
+12oz,45.4287650,9.2547478,cafe,coffee_shop;juice;donut;dessert,https://www.12ozcj.com/,,,
+MaJuDa,45.4270383,9.1785909,cafe,coffee_shop;deli,,+39 02 2416 4767,Mo-Sa 07:00-21:00,"Via dei Missaglia 13, 20142"
+Fuori Luogo,45.4929688,9.1852808,bar,,,,Tu-Th 08:00-23:30; Fr 08:00-01:30; Sa 10:00-01:30; Su 10:00-22:00,"Via Lepontina 12, 20159, Milano"
+Chocolat Cafè Milano,45.4659338,9.1515113,cafe,,https://www.chocolatcafemilano.it/,+39 02 64082714,Mo-Sa 07:00-20:00,"Via Sacco 5, 20146, Milano"
+Modà,45.4892546,9.1488265,cafe,,,,,
+Bar del 104,45.5036515,9.1644809,cafe,,,,,"Via Giuseppe Candiani 104, 20158, Milano"
+Bar Tabacchi Meeting,45.4970150,9.1815943,cafe,,,+39 02 608 0058,,"Viale Edoardo Jenner 23, 20159, Milano"
+Bar Taita,45.4729189,9.2351923,bar,,https://bartaita.eatbu.com/,+39 338 692 3799,Mo-Fr 06:00-19:30; Sa 06:00-14:30,"Largo Oreste Murani 2, 20133, Milano"
+Headbangers,45.4505975,9.2199534,pub,sandwich;burger;snack,https://headbangerspub.com,,Mo 20:00-01:00; Tu off; We-Th 20:00-02:00; Fr-Su 20:00-04:00; Su 20:00-01:00,"Via Tito Livio 33a, Milano"
+Prima classe,45.4646442,9.1890008,cafe,,,,,
+Una cosa,45.4546263,9.1789354,cafe,,https://www.unacosabistrot.it/,,"Mo off; Tu-Fr 08:30-15:00,18:00-00:00; Sa 08:30-00:00; Su 10:00-00:00","Via Scaldasole 7, 20123, Milano"
+La Lanterna,45.5088310,9.1969587,cafe,,,,,
+Simon's Bar,45.5080146,9.1949266,cafe,coffee_shop,,,,
+Cin cin,45.4795434,9.2104002,bar,,,,,
+Crisma,45.4794387,9.2096161,cafe,,,,,
+Bar Sesto,45.4668629,9.1457560,cafe,,,,,
+Passalacqua,45.4758560,9.1940247,cafe,,,,,
+Love Bar,45.4728292,9.2097254,bar,,,,,
+Ccafè Soleil,45.4568966,9.2018504,cafe,,,,,
+Drogheria Sociale,45.4909496,9.2154685,cafe,,https://www.drogheriasociale.com/,,Tu-Fr 07:30-19:30; Mo 07:30-12:30; Sa 08:00-19:30,Via Giulio e Corrado Venini 53
+Much More Cafe,45.4452783,9.1638486,cafe,,,,,"Via Carlo Torre 45, 20143, Milano"
+Rita caffetteria,45.5084057,9.1871325,cafe,,https://www.cirfood.com/it/ristorazione-commerciale/trova-locali/rita-niguarda,+39 02 6611 4426,Mo-Fr 07:30-16:00; Sa-Su closed; PH closed,"Piazza Ospedale Maggiore, 21026, Milano"
+Bottega caffè cacao,45.4624976,9.2007647,cafe,,,,,
+Leyla Food & Drink,45.4526855,9.2100717,bar,,,+39 328 705 3652,Mo-We 07:00-19:00; Th-Fr 07:00-21:30; Sa 08:00-14:30; Su off,"Via Sigieri 10, 20135, Milano"
+Pause,45.4804887,9.2122676,bar,,,,,
+Croque Monsieur,45.4908446,9.1838793,bar,breakfast,,+39 02 9924 7787,,via Carlo Farini 44
+Gallery Cafè,45.4980095,9.2368948,cafe,,,,Mo-Fr 07:00-20:00; Sa 08:00-20:00; Su 08:00-19:00,
+Castle Rock Cafè,45.5145719,9.1156161,pub,,,,,"Via privata Venezia Giulia 16, 20157, Milano"
+Ligera,45.4982575,9.2325500,pub,pizza;burger;italian,https://www.ligeramilano.it/,,,
+Sound,45.5115113,9.2093684,nightclub,,,,,
+Grand Cafè & Tre Marie,45.4717803,9.2064154,cafe,,,,,
+Il Baretto,45.4514792,9.1964230,cafe,,,,,
+Bar Cuore,45.4589261,9.1805832,bar,,,,,
+Raboucer,45.4588716,9.1803391,bar,,,,,
+B Locale,45.4805872,9.1718714,cafe,,,,,
+Marlà Pasicceria,45.4501909,9.2059599,cafe,pastry,https://www.marlapasticceria.it/,+39 02 36536410,Mo off; Tu-Fr 08:00-19:00; Sa-Su 08:30-19:00,"Corso Lodi 15, 20135"
+Felicetta Café & Bistrot,45.4721702,9.1677971,cafe,,https://felicetta.it/,,,"Largo Quinto Alpini 2, 20145, Milano"
+Torrefazione Moka Hodeidah,45.4823540,9.1671007,cafe,,,+39 02 342472,,"Via Piero della Francesca 8, 20154"
+Cafezal,45.4660477,9.1664574,cafe,coffee_shop,https://cafezal.it/,+39 02 4951 9174,,"Corso Magenta 96, 20123, Milano"
+Santeria Toscana 31,45.4456408,9.1883503,pub,,https://www.santeria.milano.it/toscana-31,+39 02 2219 9381,"Su-Mo 11:00-01:00, Tu-Th 11:00-02:00, Fr-Sa 11:00-03:00","Viale Toscana 31, 20136, Milano"
+Food & bar,45.4644201,9.2071111,bar,,,,,
+Red Coffee,45.4674986,9.2068347,bar,,,,,Viale Premuda
+Bar Mauro,45.4727362,9.2241462,cafe,,,,,
+Bar Azzurra,45.4911061,9.2055596,cafe,,,,,
+Tripstillery,45.4818748,9.1934494,bar,,,,,
+Blu Bar,45.4551029,9.1367998,cafe,,,+39 02 415 8385,,
+Mundial Break,45.4800342,9.2255556,cafe,,,,,Via Dino Compagni 2
+Elbarett,45.5072786,9.1981260,bar,,,,,
+Rizla,45.4575329,9.1807916,bar,,,,,"Corso di Porta Ticinese 38, 20123, Milano"
+Caffè Napoli,45.4593018,9.1810348,cafe,,https://www.caffenapoli.com/,,,
+Artefact,45.4560238,9.1816428,bar,,,,Mo-Su 16:30-03:00,"Via Vetere 14, 20123, Milano"
+Bistrot,45.5159631,9.2122972,cafe,,,,,
+A cup tea,45.4431461,9.2182477,cafe,bubble_tea,,,,
+Chiccotosto,45.5105871,9.1881480,cafe,,,,Mo-Sa 07:30-20:00; Su closed; PH closed,"Piazza Ospedale Maggiore 3, 21026, Milano"
+Rita caffetteria,45.5086140,9.1861574,cafe,,,,Mo-Fr 07:30-18:00; Sa-Su closed; PH closed,"Piazza Ospedale Maggiore, 21026, Milano"
+JamCafé,45.5108341,9.1872418,cafe,,,+39 02 6610 4713,Mo-Sa 06:00-16:00; Su closed; PH closed,"Piazza Ospedale Maggiore 3, 21062, Milano"
+Cioccolati Italiani,45.5108274,9.1872857,cafe,ice_cream,https://www.cioccolatitaliani.it/,,Mo-Su 07:30-16:00; PH closed,"Piazza Ospedale Maggiore 3, 21026, Milano"
+Le Jardin Bistrot,45.4615750,9.1850917,cafe,,https://lejardinbistrot.eatbu.com/,,,"Via San Maurilio 1n05, 20123, Milano"
+PANGU cocktail enoteca& musica,45.4895357,9.1892595,bar,,,,24/7 17:30-02:00,"Via Pietro Borsieri 32, 20159, Milano"
+Vogue bar,45.4569660,9.1836339,cafe,,,+390258313037,Mo-We 07:00-20:00; Th-Fr 07:00-02:00; Sa 21:00-03:00; Su off,"Via Fernanda Wittgens 12, 20131, Milano"
+Giacomo,45.4632066,9.1914879,cafe,coffee_shop;italian,https://giacomomilano.com/it/i-luoghi/caffe-letterari/giacomo-caffe-milano,+39 02 89096698,,"Piazza del Duomo 12, 20100, Milano"
+Bierfabrik,45.4802582,9.2125233,pub,,http://www.bierfabrik.it/,,"Mo-Th 17:30-01:00; Fr, Sa 17:30-02:00; Su 17:30-00:00",
+Bar Crisa,45.4593214,9.1465770,bar,,,+39 02 4895 8509,,"Viale Caterina da Forlì 7, 20146, Milano"
+Marla’Pasticceria,45.4503925,9.2063376,bar,,,,,Corso Lodi 15
+Marla’ Pasticceria,45.4504121,9.2063181,bar,,,,,"Corso Lodi 15, 20135"
+Bar Fratelli,45.5021464,9.2108050,cafe,,,,,
+Greco 39,45.4994007,9.2118591,cafe,,,,,
+Bar Cinzia,45.4859400,9.1537203,cafe,,,,,
+Miss Cake,45.4807183,9.1770569,cafe,bubble_tea,,,,
+Cantina Sarpi 1,45.4817393,9.1808963,bar,,,,,
+Mocano,45.4814520,9.1776377,cafe,bubble_tea,,,,
+Pangu,45.4816974,9.1804238,bar,,,,,
+La Darsena,45.4516695,9.1801878,bar,,,,,"Corso San Gottardo 3, 20136, Milano"
+The Roof Milano Bar & Restaurant,45.4608254,9.1886983,bar,,https://www.deicavaliericollection.com/en/the-roof/index,+39 02 88 57 900,,
+All Beer,45.4735826,9.1262369,pub,,,,Mo-Sa 17:00-02:00; Su 17:00-00:00,"Via Alfonso Capecelatro 75, 20148, Milano"
+Bootleg Pub,45.4639121,9.1604671,pub,,,+39 02 99247780,Mo-Su 18:00-02:00,"Via Coluccio Salutati 2, 20144, Milano"
+Icon Cafe,45.4857439,9.1629919,cafe,,,,,
+Cafè Madeira,45.4530440,9.2028792,bar,,,,Mo-Su 18:30-02:00,
+Rusty,45.4593984,9.2062637,bar,,,,,
+Coyote Ugly,45.4860050,9.2328541,cafe,,,,,
+Pasticceria Napoletana De Luca,45.4859923,9.2320575,cafe,,,,07.15/19.30,"Via Nicola Antonio Porpora 156, 20131, Milano"
+Bar Abreu,45.4638382,9.0870602,cafe,,,,,
+Backi Bar Caffetteria,45.4879052,9.1625547,cafe,,,,,
+Orange Spritz Bar,45.4756322,9.2046415,bar,,,,Tu-Sa 18:00-02:00,
+Teddy bar,45.4769940,9.2047593,bar,,,,,
+The Alley,45.4818328,9.1802440,cafe,bubble_tea,,,,
+MochiMochi,45.4817271,9.1792669,cafe,bubble_tea;mochi;tea,,,,"Via Paolo Sarpi 12, 20154"
+Et pourqoui pas?,45.4492642,9.2109653,bar,,,,,
+Shaker,45.4660912,9.1856417,cafe,,,,,
+Bottini,45.4579454,9.1805505,bar,,,,,
+Panda Tea,45.4564442,9.1806933,cafe,bubble_tea,,,,"Corso di Porta Ticinese 58, 20123, Milano"
+Jungle Fish,45.4834542,9.1752771,bar,,,,,
+Le Cafè,45.4385262,9.1785580,cafe,,,,,"Via Giuseppe Meda 53, 20141, Milano"
+Larga 8,45.4424407,9.1790624,pub,,https://www.larga8.com/,,,"Via Giuseppe Meda 29, 20141, Milano"
+Il Tulipano,45.4413283,9.1786233,cafe,,,,,"Via Giuseppe Meda 38, 20141, Milano"
+Lucy Bar,45.4405086,9.1787361,cafe,,,,,"Via Giuseppe Meda 43, 20141, Milano"
+Lankee,45.4823778,9.1760992,cafe,bubble_tea,,,,
+Good Time Cafe,45.4812055,9.1727082,cafe,,,,,
+Tassello del Sei,45.4462316,9.1965839,bar,,,,,
+Caffè Margherita,45.4461695,9.1951892,cafe,,,,,
+41 Wine Bar,45.4881445,9.1909717,bar,,,,,"Via Volturno 41, 20124, Milano"
+Bar Lambrate,45.4824417,9.2367215,cafe,,,,,
+Carta da Zucchero,45.4616663,9.0894044,cafe,,,,,
+Felix,45.4514280,9.1742263,bar,,,,,Via Filippo Argelati 1
+Ricomincio Da Tre,45.5149145,9.2058978,cafe,coffee_shop,,,,
+Sympathy,45.4659095,9.2271769,cafe,coffee_shop;snack,,,,"Via Francesco dall'Ongaro 3, 20133, Milano"
+Bar Piceno,45.4651823,9.2175976,cafe,,,,,
+Bar Family,45.5161327,9.1553239,bar,,,,,
+La Buttiga Franco's Room,45.4483611,9.1867107,pub,,https://www.labuttiga.it,+39 351 695 2833,,
+Bioch Milano,45.5204631,9.1694507,cafe,coffee_shop;dessert;cake;lunch,,+39 02 4775 1828,,"Via Alessandro Astesani 50, 20161, Milano"
+Beverly Food Drink,45.5137696,9.0980999,cafe,,,,,
+Caffè Pascucci,45.5131124,9.0983368,cafe,coffee_shop,,,,
+Leo Cafe,45.5132837,9.0986672,cafe,,,,,
+Bauli,45.5131574,9.0995307,cafe,,,,,
+Cioccolatitaliani,45.5128993,9.0997904,cafe,,,,,
+Dolcevita Bistrot,45.4904079,9.1880093,cafe,,https://dolcevitabistrot.it/,+39 02 39525210,Tu-Su 07:00-23:00; Mo 07:00-18:00,"Via Alserio 28, 20159"
+Magazzini Generali,45.4440969,9.1952615,nightclub,,https://www.magazzinigenerali.org/,+39025393948,,"Via Pietrasanta 16, 20141, Milano"
+Simpson,45.4951555,9.2288318,cafe,,,,,
+Saverio's Cafè,45.4875625,9.2173348,cafe,,,,,"Viale Monza 6, 20127, Milano"
+Blu & Bubbles,45.4933291,9.1881973,bar,,,,,
+Isola Bar,45.4892170,9.1872077,bar,,,,,
+Al 93,45.4494100,9.1647087,cafe,,,,,"Ripa di Porta Ticinese 93, 20143, Milano"
+Double Face Caffè,45.4488197,9.1617972,cafe,,,,,"Ripa di Porta Ticinese 107, 20143, Milano"
+Daisy American Garden,45.4498480,9.1678077,bar,,https://www.instagram.com/daisyamericangarden/,,,"Ripa di Porta Ticinese 79, 20143, Milano"
+Easy Beer,45.4498777,9.1679578,biergarten,,,,,"Ripa di Porta Ticinese 79, 20143, Milano"
+Steam Factory,45.4511630,9.1727163,bar,,,,,"Ripa di Porta Ticinese 51, 20143, Milano"
+Pasticceria Grecchi,45.4808385,9.2247040,cafe,,,,Tu-Su 06:00-21:00,
+Amaretto Caffé,45.4657959,9.1739419,cafe,,,+390297102024,,"Corso Magenta 50, 20123, Milano"
+Baltic bar,45.4645122,9.1812353,cafe,,,,,
+LUX Gourmet Social Club,45.4867976,9.2332199,bar,,,,,"Via Eugenio Carpi 5, 20131, Milano"
+Lino's coffee,45.4442958,9.1671829,cafe,,,,,"Viale Romolo 1, 20143, Milano"
+bArT,45.4809080,9.1886946,bar,,,,,
+DaTe Bistrot,45.4806746,9.1888549,cafe,,https://datebistrot.com/,+39 02 96114023,,"Viale Monte Grappa 7N02, 20124, Milano"
+Crema & Cioccolato,45.4540929,9.2178307,cafe,,,,,"Piazza Imperatore Tito 1, Milano"
+Caffè 19,45.5313717,9.1720075,cafe,,,,,"Via Pesaro 19, 20161"
+Simpaty,45.4776227,9.2428533,cafe,,,,,
+Villa Occupata,45.5225712,9.1574010,pub,,https://puntello.org/place/Villa%20Vegan%20Occupata,,Tu 14:00-19:00; We 21:00-00:00,"Via Alessandro Litta Modignani 66, 20161"
+Lido Liquor Bar,45.4565347,9.1732402,bar,,https://lidoliquorbar.it/,,Mo-Th 17:00-01:00; Fr-Sa 17:00-03:00; Su 17:00-00:00,"Piazzale Antonio Cantore 4n06, 20123, Milano"
+Noma29,45.4836120,9.1642225,pub,burger,https://www.noma29.it,+39 02 49457316,"Mo off; Tu-Fr 12:00-15:00, 19:00-24:00; Sa 19:00-24:00; Su off; ","Via Piero della Francesca 29, 20154, Milano"
+Martin Eat,45.4752207,9.2482484,cafe,,,,,
+Saloon of the Artists,45.4819652,9.1772746,pub,,,+39 02 33600311,,Via Giovanni Battista Niccolini 24
+Ultramarino,45.4742659,9.2093524,bar,tapas,https://www.instagram.com/ultramarino.bar/,,Tu-Su 18:00-00:00,"Via Lambro 9, 20129"
+DRK Milano,45.4973537,9.2221363,nightclub,,https://dkrmilano.it/,,,"Via Merano 18, 20127, Milano"
+Twin's,45.4660359,9.1954934,cafe,,http://twinscafe.it,+39 02 7691573,,"Via San Pietro all'Orto 7, 20121, Milano"
+Caffè Imprinting,45.4879132,9.1669557,cafe,,,,,
+Montalcino Caffè,45.4477537,9.1544595,cafe,,,,,"Via San Cristoforo 1, 20144, Milano"
+Specialty,45.4508345,9.1916870,cafe,,,,,
+Cafè Gatta,45.5056125,9.2639213,cafe,,,,Mo-Fr 06:30-19:00; Sa 07:00-19:00,
+Égalité,45.4775865,9.1703135,cafe,,https://www.egalitemilano.it/,,,
+Cafezal Specialty Coffee Roasters,45.4796579,9.2040437,cafe,breakfast;coffee_shop,https://cafezal.it/,,Mo-Fr 09:00-17:00; Sa-Su 09:00-18:00,Via San Gregorio 29A
+Caffè Rita,45.4861127,9.2194055,cafe,,,,,
+Incipit23 Bistrot Letterario,45.4889130,9.2293324,bar,,https://bistrot.incipit23.it/,+393783029659,,Via Casoretto 42
+Peter Bar,45.4902453,9.2350475,cafe,,,,,
+Bar Giada,45.4959978,9.2379034,cafe,,,,,
+Pizza And Food,45.4952099,9.2375734,pub,,https://www.pizzaandfoodmilano.it/,+390228900440,,Via Monfalcone 32
+Magnete bistrot,45.5177779,9.2431463,cafe,,,,Mo-Fr 07:45-21:00; Sa 07:45-15:30; Su off,"Via Adriano 107, 20128, Milano"
+La Conca social bar,45.4561559,9.1768937,cafe,,https://www.laconca.eu/,,,"Via Galeazzo Alessi 1, 20123, Milano"
+The Ghost Pub,45.4984974,9.1863419,pub,,https://ghostpub.it/,+39 02 6887874,"Mo-Th 12:00-15:00,18:00-25:30; 12:00-15:00,18:00-26:00; Sa 19:00-26:00; Su 19:00-25:00","Piazzale Carlo Maciachini 10, 20159"
+Bar Capriccio,45.4409727,9.2129653,cafe,,,,,
+Dalle 8,45.4814209,9.1854144,cafe,chinese,,,Mo-Su 08:00-18:00,
+Lino's,45.4479569,9.2119162,cafe,,,,,
+Gran Caffetteria,45.4606039,9.1452679,cafe,,,,Mo-Th 06:30-20:30; Fr 06:30-16:00; Sa 07:30-12:30,
+Touch Tea,45.4662494,9.1873599,cafe,bubble_tea,,,,
+Aurora,45.4602760,9.2094453,cafe,,,,,
+Broletto Cafe,45.4676692,9.1855206,cafe,,,,,
+Miao Ka,45.4811153,9.1811362,cafe,,,,,"Viale Montello 6n02, 20154, Milano"
+Dea Bar Caffè,45.4657780,9.1501260,cafe,,,,,
+MuroNero,45.4609630,9.1420759,bar,,,,Mo-Su 09:00-01:00,
+Bar Friends,45.5141120,9.1762165,bar,,,,"Mo-Su 09:00-13:00, 15:00-19:00",Via Chianciano 10
+Inzuppo,45.4566398,9.1699844,cafe,breakfast;coffee_shop,https://www.inzuppo.com/,,,"Viale Coni Zugna 52, 20144, Milano"
+La Isla,45.4613892,9.2142820,cafe,,,,,
+Caffè Unes,45.4844178,9.1570857,cafe,,,,,
+Dim Sum,45.4625230,9.2297137,bar,,,,,
+AgroRistoro,45.4657705,9.2408058,bar,,,,,
+Fiuri Milano - Flowers and Coffee,45.4891231,9.1860449,cafe,,,+39 345 766 5737,"Tu-Fr 08:00-12:00, 13:00-19:00; Sa 08:30-19:00; Su 08:30-13:00","Piazza Fidia, 20159"
+DaVittorio café Loius Vuitton,45.4672700,9.1965144,cafe,,,,,"Via Monte Napoleone 2, 20121"
+Eroica Caffè Milano,45.4775479,9.2045435,cafe,,,,,"Viale Tunisia 15, 20124"
+Tarallucci e vino,45.5005137,9.1925702,cafe,,,,,
+Sprizzeria,45.4627027,9.1720840,cafe,italian_pizza,,+39 3203551699,Mo-Sa 07:00-22:00; Su 08:00-22:00,"Via San Vittore 11, 20123, Milano"
+Eutopia,45.4804728,9.1829112,cafe,,,,,"Via Alessandro Volta 19, 20121, Milano"
+FAB,45.4515958,9.1747905,bar,,,,,"Ripa di Porta Ticinese 27, 20143, Milano"
+The Beach Milano,45.4704916,9.2552073,nightclub,,https://www.thebeachmilano.it/,+39 02 9455 7574,,"Via Arcangelo Corelli 62, 20134, Milano"
+Alcatraz,45.4944955,9.1826273,nightclub,,https://alcatrazmilano.it/,+39 02 69016352,,"Via Valtellina 25, 20159, Milano"
+Cosmai Café,45.4990351,9.1651998,cafe,,,,,
+Made in Sicily,45.4985237,9.1957205,cafe,,,,,
+Sisu,45.4560975,9.1751634,cafe,,https://sisumilano.it/,+390238293912,Mo-Su 08:00-21:00,"Via Gaudenzio Ferrari 1bn02, 20123, Milano"
+Gioia53,45.4877501,9.1985543,cafe,,,,,
+SapeMare,45.4865089,9.1880405,bar,,,,,
+The Seed,45.4613022,9.2079638,cafe,,https://www.theseed-milano.com/,,Mo-Fr 09:00-18:00; Su 11:00-17:00,"Viale Monte Nero 78, 20135, Milano"
+Bar Coffiamo,45.4542524,9.1985845,cafe,,,,,
+Bar Bollicine,45.5019119,9.2104100,bar,,,,,
+SAN Milano,45.4570836,9.1737563,bar,,,,Mo-Sa 18:00-02:00; Su off,"Via Cesare da Sesto 1, 20123, Milano"
+Funky,45.4515584,9.1745153,bar,,https://funky.eatbu.com/,,,"Ripa di Porta Ticinese 33, 20143, Milano"
+Bar Arca,45.4410993,9.1690891,bar,,https://www.arcamilano.eu/,,"Mo-Fr 08:00-15:00, Sa 18:00-24:00, Su 16:00-24:00","Via Rimini 38, 20142, Milano"
+Bar del Corso,45.4602829,9.1890194,cafe,sandwich,,+39 02 86451245,,"Corso di Porta Romana 1, 20122, Milano"
+Glitter Bar,45.4632019,9.1343339,cafe,,,+390240076621,,"Via delle Forze Armate 32, 20147, Milano"
+Antica Caffetteria,45.4395806,9.2254718,bar,,,,,
+El Sol Del Sur,45.4411608,9.2245294,bar,,,,,
+Caffè Sudan,45.4484709,9.2204568,cafe,,,,,
+Don't Tell Mama,45.4931672,9.2208805,bar,,,+39 331 443 1565,"Su, We-Th 19:00-02:00; Fr-Sa 19:00-03:00","Via Pietro Crespi 10, 20127"
+Armadi Silos Caffè,45.4516572,9.1646428,cafe,,https://www.armanisilos.com/plan-your-visit/cafe/,,"We, Fr, Su 11:00-19:00; Th, Sa 12:00-20:00;Mo,Tu ogf",
+Piano Zero,45.5135756,9.2031693,bar,,https://www.piano-zero.com/,,,"Viale Giovanni Suzzani 96/98, 20126, Milano"
+El Cicinin,45.4521951,9.1735887,bar,,,,18:00 - 02:00,"Via Corsico, 20144"
+Cafezal,45.5124620,9.2099580,cafe,coffee_shop,https://cafezal.it/,+39 022406777,Mo-Fr 08:00-16:00; Sa 09:00-15:00,"Viale Piero e Alberto Pirelli 10, 20126"
+Was coffee lab,45.4856503,9.2043405,cafe,,https://www.milanocentrale.it/bar-e-ristoranti/was-coffee-lab,,Mo-Su 11:00-22:00,"Piazza Duca d'Aosta 1, 20124, Milano"
+8 Malpighi,45.4745918,9.2076341,bar,regional,https://malpighi8.it/,+39 338 437 2574,"Fr 00:00-03:00,07:00-17:00,18:00-24:00; Sa 00:00-01:00,07:00-24:00; Su 00:00-03:00,09:00-24:00; Mo 00:00-01:00,07:00-24:00; Tu-Th 00:00-03:00,07:00-24:00",Via Marcello Malpighi 8
+The View Milano,45.4649289,9.1895928,bar,,https://theviewmilano.it/,+39 02 35991937,,"Piazza del Duomo 21, 20121"
+Equo caffè,45.4856882,9.1922173,cafe,,https://www.cafegorille.it/,+39 02 6887627,,"Via Gaetano De Castillia 24, 20124, Milano"
+Sandi bar,45.4609792,9.2079462,cafe,,,,,
+Caffè Napoli Exytus,45.4606705,9.2074996,cafe,,,,,
+Nespresso,45.4654890,9.1856487,cafe,coffee_shop,,,,"Via Dante 1n06, 20123, Milano"
+Biffi,45.4652457,9.1901352,cafe,,,,,"Galleria Vittorio Emanuele Secondo 2n09, 20121, Milano"
+Motta,45.4649550,9.1901349,cafe,,,,,"Galleria Vittorio Emanuele Secondo 2n03, 20121, Milano"
+Camparino in Galleria,45.4649201,9.1898776,bar,,https://www.camparino.com/,+39 02 86464435,,"Galleria Vittorio Emanuele Secondo 1n02, 20121, Milano"
+Il salotto di Milano,45.4661596,9.1901278,cafe,,,,,"Galleria Vittorio Emanuele Secondo 4n19, 20121, Milano"
+Shon Cafè,45.4166237,9.1777683,bar,,,,Mo-Sa 07:00-21:00; Su 08:00-21:00,"Via Ettore Bugatti 7, 20142, Milano"
+Pigato,45.4512782,9.1732990,bar,,,,,"Ripa di Porta Ticinese 45, 20143, Milano"
+Steven's Bar,45.4194922,9.1787750,bar,,,,,"Via Nicola Romeo 3, 20142, Milano"
+Lorantbar,45.4200492,9.1780025,bar,,,,,"Via Nicola Romeo 3, 20142, Milano"
+Disigu@l Caffè,45.4526129,9.2031092,cafe,,,,,
+TaxiBar,45.4884231,9.1575429,cafe,,,,,
+Bar Internazionale 2,45.4607934,9.1327525,bar,,,+39 02 4009 8328,,"Viale Legioni Romane 24, 20147, Milano"
+Black Bar,45.4609995,9.1327531,cafe,,,,,"Via Ludovico Cavaleri 1, 20147, Milano"
+Bar Vittorio,45.4739732,9.1605436,cafe,,,,,
+Pierre Cafè,45.4665881,9.1861843,cafe,,,,,
+Cookingarage Bistrot,45.5007919,9.1968722,cafe,,https://cookingarage.com/,+39 320 704 6927,,Via Ala 2
+Maffu’s,45.4556398,9.1478119,cafe,,,+390249601000,,"Via Giovanni Gioacchino Winckelmann 1, 20146, Milano"
+Officine Sbiellate,45.4499507,9.1858301,bar,,,,,
+Pangu,45.4816291,9.1797969,bar,,,,,Via Paolo Sarpi 9
+Bibo's Bar,45.4667019,9.2069112,bar,,,,,
+Bar California,45.4585358,9.1609180,cafe,,,,,"Via California 9, 20144, Milano"
+Porter House Milano,45.4449092,9.1948294,pub,,https://www.porterhousemilano.it/,+39 02 5523 0797,,
+Caffé Zara,45.5008923,9.1979898,cafe,,,,,
+Lucky Bar,45.4990403,9.1969723,cafe,,,,,
+Barlafüs Mangià e Bev,45.4986922,9.1936644,cafe,,,,,
+Il caffè della piazza,45.4590326,9.1600197,cafe,,,,,"Piazza Vesuvio 14, 20144, Milano"
+Bar Tabacchi Orsini,45.4617415,9.1356567,cafe,,,+39 02 5251 6181,,"Piazzale Giovanni delle Bande Nere 9, 20146, Milano"
+La nuova Capannina,45.4188105,9.1749451,bar,,,,,"Via Guido De Ruggiero 4, 20142, Milano"
+Nanabul Pancaffè,45.4926121,9.1901744,cafe,,,,,Via Lario 13
+First Cafè Bar Tabacchi,45.4916788,9.1896505,cafe,,,,,
+Booz,45.4896302,9.1892410,bar,,,,Tu-Su 17:00-02:00,
+Bugan coffe lab,45.4528474,9.1739036,cafe,coffee_shop,https://bugancoffeelab.com/,,,"Via Vigevano 15, 20144, Milano"
+Bar Graniteria Dal Siciliano,45.4884202,9.1913211,cafe,,,,,
+Le Bollicine,45.4787832,9.1924557,cafe,,,,,"Corso di Porta Nuova 52, 20121"
+Bar Menabrea,45.4968594,9.1857005,cafe,,,,,
+Caffe Tabacchi Milani,45.4936478,9.1847992,cafe,,,,,
+Bella Lì Cafè,45.5017117,9.1820096,cafe,,,,,
+Bar Farenheit,45.5013553,9.1888326,cafe,,,,,
+Di Qua,45.5011708,9.1837442,cafe,,,,,
+Jo Cafe,45.4875283,9.1886485,cafe,,,,,
+Cafe Penelope,45.4864495,9.1884659,cafe,,,,,
+Volvo Studio Cafe,45.4825274,9.1932419,cafe,,,,,
+Cups Ceramica & Bar,45.4813328,9.1766659,cafe,,,,,
+Bar Al 78,45.4575861,9.2161600,bar,,,,,
+Bar Murillo,45.4752508,9.1431891,bar,,,,,
+Gerusalemme,45.4838620,9.1663315,cafe,,,,,
+Taipy,45.4578119,9.1766085,cafe,,,,,"Corso Genova 7n02, 20123, Milano"
+Ge Ge,45.4888386,9.1934138,cafe,,,,,
+Caffè Napoli,45.4887561,9.1936473,cafe,,,,,
+Torrefazione Sempione,45.4307055,9.1785768,bar,,,,,
+Top Missori,45.4604574,9.1887635,cafe,,,,,
+Puro Milano,45.4881757,9.1890908,bar,,,,,
+Toldo Milano,45.4865860,9.1884990,cafe,,,,,
+Aroma Napoletano Casa Aroma,45.4899292,9.1898113,cafe,,,,,
+Lounge Bar,45.4621710,9.1873952,bar,,,,,
+Aroma Napoletano Casa Aroma,45.4899291,9.1898113,cafe,,,,,
+Lounge Bar,45.4621709,9.1873951,bar,,,,,
+Debbie's,45.4737895,9.1836349,cafe,,,,,
+Il Cigno Nero,45.4716101,9.1951178,cafe,,,,,"Via della Spiga 33, 20121, Milano"
+Bar Murat,45.4995960,9.1909184,cafe,,,,,
+Debbie's,45.4737894,9.1836348,cafe,breakfast;italian,,,,
+The Barber cocktail bar,45.4764462,9.2051730,bar,,,,Th-Su 18:00-03:00,Via Alessandro Tadino 5
+Fioraio Bianchi Caffè,45.4753236,9.1892528,cafe,,,+39 02 2901 4390,,"Via Montebello 7, 20121"
+Leila,45.4929161,9.2199647,bar,,,,Mo-Sa 08:00-00:00,Via Termopili 29
+Oscar della Tradizione,45.4603119,9.1294587,bar,,,,,"Via Francesco Primaticcio 182, 20147, Milano"
+Égalité,45.4738159,9.1840198,cafe,,,+39 02 4947 9421,,"Piazza San Simpliciano 7, 20145"
+Momenteeria,45.4622180,9.1734116,cafe,teahouse;tea;cookies;italian,https://www.momenteeria.it/,+39 02 365321185,Su-Mo off; Tu-Fr 08:00-19:00; Sa 09:00-20:00,"Via Giosuè Carducci 38, 20123, Milano"
+Rāma,45.4784022,9.1891497,bar,,,,,"Via San Marco 40, 20121, Milano"
+Caffè Gorizia,45.4549139,9.1725914,cafe,,,,,"Viale Gorizia 2, 20144, Milano"
+Bicchierino bar,45.4506254,9.1490715,bar,,,,,"Via Giambellino 39, 20146"
+Cascina Sant'Alberto,45.4668846,9.1654848,cafe,,http://www.cascinasantalberto.it/punti-vendita/,+390243998998,,"Piazzale Francesco Baracca 6, 20123, Milano"
+Bar Al Brivido,45.4631360,9.1292632,cafe,,,,,"Via delle Forze Armate 70, 20147, Milano"
+Bar tabacchi Gulli,45.4654722,9.1308649,cafe,,,+390248750443,,"Via Tommaso Gulli 54, 20147, Milano"
+SmokeONE,45.4809209,9.1854295,cafe,,https://somi.bar/,,,"Viale Francesco Crispi 4, 20121, Milano"
+Caffè del Corso,45.4561571,9.1741713,cafe,,,,,"Corso Genova 27n09, 20123, Milano"
+Da Boris il bar di Trenno,45.4925849,9.1011668,cafe,,,+390236561038,,"Via Fratelli Rizzardi 12, 20151, Milano"
+Dream's Bar,45.4510148,9.1492637,cafe,,,,,"Via Giambellino 34, 20146, Milano"
+12oz,45.4369684,9.1681534,cafe,coffee_shop,https://www.12ozcj.com/,,,
+Melò,45.4885877,9.1950191,cafe,breakfast;italian,https://www.instagram.com/melomilano/,+39 349 5875 195,Mo-Fr 07:00-15:30,"Via Pola 2, 20124"
+Barotto,45.4692100,9.1711649,bar,,,+390250308794,,"Via Vincenzo Monti 29, 20123, Milano"
+Metropoilitan Cafè,45.4526101,9.1452364,cafe,,,,,"Via Lorenteggio 57, 20146, Milano"
+Cafe Banlieue,45.4478032,9.1270989,cafe,,,,,
+Pancaffè Caffetteria,45.4502019,9.1378197,cafe,,,,,"Via Lorenteggio 157, 20146, Milano"
+Bar 157,45.4504295,9.1385206,cafe,,,,,"Via Lorenteggio 155, 20146, Milano"
+ADA Cocktail to go,45.4514067,9.1738907,bar,,,,,
+Il Padrino,45.4517884,9.1757053,bar,,,,,"Ripa di Porta Ticinese 17, 20143, Milano"
+Duoo,45.4528158,9.1743415,cafe,,,,Tu off; We-Mo 12:00-20:00,"Via Vigevano 13, 20144, Milano"
+Legends Bar,45.4493480,9.1644250,cafe,,,,,"Via Elia Lombardini 1, 20143, Milano"
+Monaco,45.4506955,9.1704901,bar,,,,,"Ripa di Porta Ticinese 63, 20143, Milano"
+ToRakini Cafè,45.4463289,9.1637603,cafe,,,,,"Via Eugenio Villoresi 28, 20143, Milano"
+Ciko's Bar,45.4450384,9.1634967,cafe,,,,,"Via Carlo Torre 45, 20143, Milano"
+Cassala,45.4451468,9.1636346,cafe,,,,,"Via Carlo Torre 45, 20143, Milano"
+RistoService,45.4570840,9.1912428,cafe,,,,,Via Santa Sofia 9
+Divino,45.4353180,9.1837833,cafe,,,,,
+Gran Bar,45.4337478,9.1835828,cafe,,,,,
+Mud Café,45.4321618,9.1775181,cafe,,,,,
+Savoia,45.4322858,9.1775252,cafe,,,,,
+Super Club,45.4504424,9.1635820,nightclub,,,,,"Via Tortona 27, 20144, Milano"
+Bar Caffetteria Mini Market,45.4422591,9.1335594,cafe,,,,,"Via Lodovico il Moro 135, 20142, Milano"
+The Corner,45.4473425,9.1547152,bar,,,,,"Via Giovanni Enrico Pestalozzi 2, 20143, Milano"
+Naviglio Grande,45.4409756,9.1296702,cafe,,,,,"Via Lodovico il Moro 159, 20142, Milano"
+Montegani,45.4371127,9.1780894,cafe,,,,,
+Lollocafé,45.4365488,9.1780084,cafe,,,,,
+Afterlove,45.4898400,9.1900588,bar,,,,,
+Il baretto,45.4455703,9.1282711,cafe,,,,,
+Quadrifoglio,45.4451415,9.1284707,pub,,,,,
+Fortuna,45.4354272,9.1782143,cafe,,,,,
+Barz'8,45.4413926,9.1512888,bar,,,,,"Via Ettore Ponti 58, 20143, Milano"
+Bar Daniel's,45.4960246,9.2026550,cafe,,,,,
+Bar Ospedale Fatebenefratelli,45.4791729,9.1917435,cafe,,,,,
+Vespa Cafe,45.4674147,9.1856108,cafe,,,,,
+Bixio,45.4722491,9.2086240,cafe,,,,,
+101 Caffè Fast Gourmet,45.4513226,9.1719425,cafe,,https://fastgourmet.101caffe.it/,,,"Alzaia Naviglio Grande 44, 20144, Milano"
+Sphera Locura,45.4513865,9.1722181,bar,,,,,"Alzaia Naviglio Grande 40, 20144, Milano"
+1847 Milano,45.4507403,9.1690897,bar,,,,,"Alzaia Naviglio Grande 70, 20144, Milano"
+La Piccola Fenice,45.4392705,9.1664906,cafe,,,,,
+Wave Cocktail Bar,45.4593337,9.1772421,bar,,http://wavecocktailbar.it/,+393803714058,,"Via Edmondo De Amicis 28, 20123, Milano"
+Bar degli amici,45.4368022,9.1583342,cafe,,,,,"Viale Famagosta 20, 20142, Milano"
+Bar Gelateria,45.5029216,9.1885570,cafe,,,,,
+Caffè Napoli,45.4678732,9.1556863,cafe,,https://www.caffenapoli.com/,,,"Piazza Riccardo Wagner 15, 20145, Milano"
+La Cantinetta,45.4934209,9.2191424,bar,,,+39 347 118 3117,"Tuesday-Friday: 8-13:00 + 16-00:00, Saturday 8-00:00, Monday 8-13:00","Viale Monza 54, 20127, Milano"
+The Walrus Pub,45.4529821,9.1721249,pub,,https://thewalruspub.it/,,,"Via Vigevano 33, 20144, Milano"
+Caffè Stay,45.4539582,9.1705315,cafe,,,,,"Piazzale Stazione Genova 2, 20144, Milano"
+Caffetteria del Corso,45.4547771,9.1721374,cafe,,,,,"Corso Cristoforo Colombo 5, 20144, Milano"
+Romy Cafe,45.4751891,9.1381481,cafe,,,+39 02 3652 5143,,
+Bar Chicken Ravioli,45.4871129,9.2031838,cafe,,,,,Piazza Quattro Novembre 2
+Golden Caffè,45.4484205,9.1466500,cafe,,,,,"Via Savona 127, 20144, Milano"
+Jack the brewer,45.4550129,9.1616612,pub,,,,,"Via Andrea Solari 26, 20144, Milano"
+Cafè Solari 72,45.4531161,9.1557801,cafe,,,,,"Via Andrea Solari 72, 20144, Milano"
+Aquarius Cafè,45.4576782,9.1609343,cafe,,,,,"Via Vincenzo Foppa 21, 20144, Milano"
+The Growler Milano,45.4579750,9.1621934,cafe,,https://thegrowlermilano.eatbu.com/,+390283555783,"Mo 08:00-15:30, 17:30-22:00; Tu-Fr 08:00-22:00; Sa 09:30-22:00; Su 17:30-22:00","Via del Caravaggio 12, 20144, Milano"
+Bar tabacchi la darsena,45.4526661,9.1761039,cafe,,,+39028321293,,"Via Vigevano 1, 20144, Milano"
+Baratie,45.4551636,9.1579888,bar,,https://baratie.it/,,,"Via Enrico Stendhal 49, 20144, Milano"
+Stendhal Cafe,45.4524213,9.1597662,cafe,,,,,"Via Enrico Stendhal 23, 20144, Milano"
+Bar Da Selina,45.4517426,9.1543595,cafe,,,,,"Viale Carlo Troya 8, 20144, Milano"
+Roxy Bar,45.4521456,9.1541234,cafe,,,,,"Viale Carlo Troya 2, 20144, Milano"
+Da Costa 13.9,45.4578843,9.1544712,cafe,,,,,"Via Giorgio Washington 82, 20146, Milano"
+Kape,45.4548007,9.1524718,cafe,,,,,
+Caffe meda 14,45.4448458,9.1790290,cafe,,,,,"Via Giuseppe Meda 14, 20136, Milano"
+Birra di Quartiere,45.4508085,9.1483606,pub,,,,,"Via Giambellino 42, 20146, Milano"
+Il Beerla,45.4512440,9.1865812,pub,,,,,
+T9 Coffee & Cocktails,45.4584359,9.1486756,bar,,,,,"Piazzale Tripoli 9, 20146, Milano"
+Miliardario bar,45.4839664,9.2160739,cafe,,,,,
+Ripamonti,45.4510549,9.1968748,bar,,,,,
+Bar luna,45.4708764,9.2127028,cafe,,,,,
+Pan Caffè,45.5007521,9.1670369,cafe,coffee_shop,,,,"Via Prestinari 6, 20158, Milano"
+Bus Cafè,45.4481508,9.1397514,cafe,,,,,
+Starking Bar,45.4482211,9.1373344,cafe,,,,,"Largo dei Gelsomini 2, 20146, Milano"
+Beis Cafè,45.4508200,9.2012547,cafe,,,,,
+Bar Chez Yvonne,45.4510189,9.2004148,cafe,,,,,
+Off/flavour,45.4428203,9.2124450,bar,,,,,
+Bar il girasole,45.4374459,9.2201914,cafe,,,,,
+Bar tabacchi why,45.4374310,9.2232614,cafe,,,,,
+Caffetteria tavola fredda,45.4383226,9.2238689,cafe,,,,,
+Bar Washington,45.4586936,9.1508911,cafe,,,,,"Via Roncaglia 35, 20146, Milano"
+Pirati e Poeti,45.4762101,9.2061066,bar,,,,,
+Buttiga,45.4471517,9.2077189,pub,barbecue;burger;hotdog;sandwich,https://www.labuttiga.it,,Sa-Su 18:00-01:00; Mo-Fr 12:00-01:00,"Viale Isonzo 10, 20135"
+Offside Sports Pub,45.4871547,9.1658013,pub,,https://www.offsidesportspub.it/,,18:00-02:00,"Via Losanna 46, 20154, Milano"
+Da Giacomo,45.4396007,9.2238393,biergarten,,,,Mo-Su 17:30-01:30,
+Attimi Bar & Gelateria,45.4688791,9.1563263,bar,,https://www.cooperativaisemprevivi.it/,+393292183263,"Mo-Fr 08:00-21:00; Sa 09:00-13:00, 15:00-21:00; Su 09:00-21:00","Piazza Riccardo Wagner 2, 20145"
+Bar Tabacchi Cosenz 54,45.5071079,9.1615376,cafe,,,,,"Via Enrico Cosenz 54, 20158, Milano"
+Bar La Creta,45.4549594,9.1221563,cafe,,https://barlacreta.it/,,,"Via del Passero, 20147, Milano"
+Matchatelier,45.4812404,9.1728451,cafe,japanese,,,Mo-Su 09:30-21:45,Via Paolo Sarpi 50
+Joie de vivre Bisrot,45.4586980,9.1320339,cafe,,,,,"Via Raimondo Montecuccoli 14, 20147, Milano"
+Pinta e Basta,45.4497502,9.2024211,pub,,,,,
+Bar Peter Pan,45.4492714,9.2040905,cafe,,,,,
+Kingston,45.4813376,9.1812013,bar,,,,,
+Bar Atlantic,45.5183652,9.2036892,cafe,,,,,"Viale Giovanni Suzzani 221, 20162, Milano"
+I Barbara,45.4816964,9.2266582,cafe,,,,,
+Bar 999,45.4442481,9.1789933,cafe,,,,,"Via Giuseppe Meda 18, 20136, Milano"
+Max Bar,45.4511254,9.2128328,cafe,,,,,
+Bar Aspass,45.4489546,9.2059759,cafe,,,,,
+New Gibson,45.4713885,9.2145168,bar,,,,,
+C&D,45.4699265,9.2145308,cafe,,,,,
+Lucky Star Karaoke,45.5154845,9.1724076,nightclub,,,+39 348 261 3029,,"Via Pellegrino Rossi 93, 20161"
+Bar Young,45.4699113,9.2149673,cafe,,,,,
+Gattò,45.4697300,9.2149793,bar,,,,,
+Myst,45.4839246,9.2345802,pub,,https://www.mystmilano.it/,,"Fr,Sa 17:00-01:00, Mo-Th 17:00-01:00; Su off",
+Alchimia,45.4460146,9.1807482,bar,,https://www.alchimia-milano.com/,,,"Via Francesco Brioschi 17, 20136, Milano"
+Bar Britannia,45.4858846,9.2186530,cafe,,,,,
+Openshop24,45.4623588,9.2242264,cafe,,,,24/7,
+Bar Oasi,45.4433199,9.1794081,cafe,,,,,
+Church81,45.4286006,9.1712448,bar,,https://www.church81.it/,,,"Via della Chiesa Rossa 81, 20142, Milano"
+Sale e Oglio,45.4404270,9.2184271,cafe,,,,Mo-Fr 06:30-20:00; Sa 06:00-15:00; Su off,
+City Bar,45.4401667,9.2221431,cafe,,,,,
+Casa Marrò,45.4416102,9.1739531,cafe,,,,,"Via Bordighera 17, 20142, Milano"
+Iron Birds,45.5197882,9.2266341,bar,,,,,
+Civico 39 Food & Drink,45.5058396,9.1633114,cafe,,,,,"Via Giovanni Durando 39, 20158, Milano"
+Chloe Cafè,45.4543950,9.2135564,cafe,,,,,
+Lambretta Café,45.4877542,9.2027436,cafe,,,,,
+AStare,45.4443149,9.2142946,pub,,,,,
+Torrefazione Vecchia Milano,45.4435389,9.2164701,cafe,,,,,
+40Sette,45.4466748,9.2116761,cafe,,,,,
+Liora,45.4469242,9.2112537,bar,,,,,
+Refeel,45.4507666,9.2009036,bar,,,,,
+Caffetteria Tarantini Tabaccheria,45.4348642,9.2197136,cafe,,,,,
+bar tabacchi,45.4993625,9.2362380,cafe,,,,,
+1925,45.4575915,9.2043919,cafe,,,,,
+Bar Firenze,45.4737171,9.2168903,bar,,,,,
+Meet Bar,45.4742522,9.2109295,cafe,,,,,
+Pigato,45.4743037,9.2095432,bar,,,,,
+Peacock,45.4743751,9.2098780,bar,,,,,
+Magutt,45.4743441,9.2096768,pub,,,,,
+Tarantè,45.4739529,9.2093083,cafe,,,,,
+Gusto Misto,45.4871021,9.1976695,bar,,,,,
+L'ora Del Caffè,45.4872145,9.1974773,cafe,,,,,
+Daisy,45.4967178,9.1858184,cafe,,,,,
+Amir,45.4912794,9.1970492,bar,,,,,
+Matilde Bakery,45.4643024,9.1878558,cafe,,https://matildebakery.shop/,,,"Passaggio degli Osii 2n01, 20123, Milano"
+Camelia's Yard,45.4767863,9.1968807,cafe,,,,,Via Iginio Ugo Tarchetti 2
+Coffee House,45.5195717,9.1701790,cafe,,,,,
+3D Bar,45.5200289,9.1689594,bar,,,,,
+B42 Urban Bistrot Lounge,45.4443948,9.1823948,bar,,,,,
+Bar Plaza,45.4405481,9.2238394,cafe,,,,,
+L'angolo del caffè,45.4442677,9.1792592,cafe,,,,,"Via Giuseppe Meda 15, 20136, Milano"
+Bar Cascina Gobba,45.5112535,9.2604137,cafe,,,,,
+tramezzino,45.4852472,9.2037330,cafe,,,,,
+Chabaidao,45.4815338,9.1787568,cafe,bubble_tea,,,,
+Jesi,45.4815518,9.1770619,cafe,,,,,
+Chabaidao,45.4811945,9.1743555,cafe,bubble_tea,,,,
+PolyGram,45.4812153,9.1751669,bar,,,,,
+Café Il Sogno,45.4657597,9.1452083,cafe,,,,,"Via Antonio Tolomeo Trivulzio 14, 20146, Milano"
+Ai confini del gusto,45.4621140,9.1944060,cafe,,,,,
+Rossi Caffè,45.5070987,9.1782967,cafe,,,,,
+Fox Bar,45.4476584,9.2090889,cafe,,,,,
+Auditorium caffe,45.4470031,9.1793844,cafe,,,,,
+Sensi,45.4560230,9.1815357,bar,,,,,
+Kape Bar,45.4877298,9.2301203,bar,,,,Mo-Fr 07:00-23:00; Sa 08:00-23:00,
+Jet Cafè,45.4711152,9.2365597,bar,,,,,
+Caffetteria Tabacchi Sant'Ambrogio,45.4708633,9.2375124,cafe,,,,,
+Cafè Sport,45.4507394,9.2250234,cafe,,,,,
+Chiosco Giò,45.4713414,9.1742146,bar,,,,,
+12oz coffee joint,45.5216584,9.1677581,cafe,,https://www.12ozcj.com/store-locator/#store-locator,,Mo-Sa 07:00-19:00; Su off,"Via Alessandro Astesani, 20161, Milano"
+Club Diamante,45.4813992,9.1752048,bar,,,,,Via Paolo Sarpi 38
+Bar Italico,45.5131593,9.2143951,cafe,,,,Mo-Fr 06:30-19:00; Sa 07:00-15:00,
+BellaMilano,45.4514697,9.2075125,bar,,,,,
+Happy Bar,45.4803735,9.1686100,cafe,,,,,
+Piasù,45.4673680,9.1650796,bar,,,,,
+Bistrot Caffè Vintage,45.4943845,9.1252323,cafe,,,,,
+Velvet Food&Drink,45.4403119,9.1880381,bar,,,,,
+Da Sonia e Paola,45.4476100,9.1807950,bar,,,,,
+Eroica caffè,45.4476639,9.1811559,cafe,,,,,
+Sorsi e Sorrisi,45.4475737,9.1801610,bar,,,,,
+Vintage cafè,45.4472233,9.1797420,cafe,,,,,
+Ora Zero Bistrot,45.4467221,9.1796263,cafe,,,,,
+Bar del Dipartimento di Fisica,45.4765230,9.2310229,cafe,pizza;italian;sandwich;ice_cream,,,Mo-Fr 08:00-17:00,Via Giovanni Celoria 16
+Bar Piccolo,45.4719747,9.1824413,bar,,,,10:00-22:00,
+Justme Milano,45.4731271,9.1729480,nightclub,,http://milano.cavalliclub.com/,+39 02 311817,19:30-05:00,Viale Guglielmo Shakespeare
+Art Cafe,45.4727971,9.2313558,cafe,,,,,
+Pan Caffè,45.4844463,9.2281118,cafe,,,,,
+Barrio,45.4545326,9.2178241,cafe,,,,,
+Chez Nous,45.4491207,9.2028364,cafe,,,,,
+Il Nemico,45.4490881,9.2049216,bar,,,,Mo-Sa 18:00-01:00,
+La bottega delle cialde,45.4602426,9.1120408,cafe,,,,,Via delle Forze Armate 197
+Bistrot milano,45.4668792,9.1836789,cafe,,,,,"Via Dante 21, Milano"
+El Cafè de Milan,45.4482632,9.2090513,cafe,,,,,
+Cacciamani,45.4523777,9.2432249,pub,sandwich;italian;salad,,,,
+Spitfire,45.4727628,9.2241091,cafe,,,,,
+Cheers Pub,45.4886807,9.2254331,pub,,,,Mo-Su 18:00-02:00,
+Padova 10 Cafè,45.4870890,9.2181789,cafe,,,,,
+Lucky Bar,45.4842777,9.2159575,cafe,,,,,
+Bar Stop,45.4850090,9.2107979,cafe,,,,,
+Bar Lucy's Tabaccheria,45.4626607,9.2077748,cafe,,,,,
+Armonia Cafè,45.4676718,9.2288096,cafe,,,,,
+Bar Casoretto,45.4889432,9.2258617,cafe,,,,,
+Draft?,45.4897321,9.2368848,bar,,,,,
+Tommy Hilfiger Café,45.4741478,9.2056959,cafe,,,,,
+Bar e Direzione Oratorio,45.4405355,9.1488237,cafe,,,+39 02 816793,,
+EG Group - Milano Palatino,45.4763212,9.1311822,cafe,,,,,
+Los Locos,45.4770041,9.1103410,bar,,,,,
+Labriola,45.4988707,9.1019080,bar,,http://cooperativalabriola.wix.com/briola-new#!chi-siamo,+39 02 3538519,,
+Poldo,45.4799098,9.1897115,cafe,,,,,
+Abbadesse,45.4903409,9.1964540,cafe,,,,,
+Se.Rist,45.4996658,9.2310609,cafe,,,,,
+Jolly Student Food,45.4798424,9.2265250,cafe,,,,Mo-Sa 07:00-20:00,"Via Andrea Maria Ampère, 20131, Milano"
+Sun Strac,45.4650897,9.2645554,bar,,https://sunstrac.it/,,,
+Colorado,45.5002839,9.1299778,pub,,,,,
+Amaranta Club,45.4192195,9.1749650,nightclub,,,,,
+Cascina Martesana,45.5034198,9.2292443,pub,,https://www.cascinamartesana.com/,+39 389 5820695,"Aug: Mo-Fr 18:00-01:00, Aug: Sa,Su 11:00-01:00",
+Drive'in,45.5019267,9.1975659,cafe,burger,,,Mo-Sa 07:45-02:00,
+Incas,45.4870757,9.2035373,cafe,,,,,
+La Chiesetta,45.4816985,9.1728365,pub,,https://www.lachiesetta.it/,+39 339 7969095,Mo-Sa 18:00-02:00,
+GUD,45.4768789,9.2144156,cafe,regional,,,,
+Birrificio La Ribalta,45.5069709,9.1731961,pub,,https://www.birrificiolaribalta.com/,+39 348 524 9651,,
+Chiosco Mentana,45.4617568,9.1817996,cafe,,,,,
+Old Fashion,45.4728525,9.1736435,nightclub,,https://oldfashion.it/,+39 02 8056231,,"Viale Luigi Camoens, 20121, Milano"
+Motta,45.4649223,9.1902520,cafe,,,,,
+Circolo ex Combattenti e Reduci,45.4817226,9.1817177,bar,,,,,
+Coso Milano,45.4707166,9.2280079,cafe,,,,,"Via Beato Angelico 20, 20133, Milano"
+Il vagone,45.4980716,9.2586984,bar,,,,,
+Locanda alla mano,45.4722725,9.1786003,cafe,,,,,
+Bistro Cortile,45.4525747,9.1637813,bar,,,,"Mo-Fr 08:30-12:00; Sa,Su 10:00-12:00",
+My Chef,45.4451844,9.0735646,cafe,italian;regional,,,,
+Chef Express,45.4457984,9.0750756,cafe,italian;regional,,,,
+Tranvai,45.4974878,9.2103123,cafe,burger;sandwich,,,,
+L'altro,45.5259257,9.2140873,cafe,,,,,
+Kiosk,45.4493884,9.1903344,cafe,,,,,
+Gianni Saporito,45.4660775,9.1548782,bar,,,,,
+Luca Loco,45.4600587,9.1492913,bar,,,,,
