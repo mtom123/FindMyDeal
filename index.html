@@ -642,28 +642,47 @@ input[type=range].sb-range::-moz-range-thumb {
 /* ═══════════════════════════════════════════════════════════
    PRICE MARKERS
 ═══════════════════════════════════════════════════════════ */
+/* Default: drinks — rectangular pill with dot anchor */
 .pm {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; font-weight: 700;
-  min-width: 32px; height: 32px;
-  padding: 0 7px; line-height: 32px;
-  border: 2px solid #fff;
-  border-radius: 999px;
-  white-space: nowrap;
-  cursor: pointer; letter-spacing: 0;
+  font-size: 10px; font-weight: 600;
+  padding: 3px 6px; line-height: 1;
+  border: none; white-space: nowrap;
+  cursor: pointer; letter-spacing: .03em;
   transition: transform .10s, box-shadow .10s;
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-block;
   color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.32), 0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.22);
   position: relative;
-  text-align: center;
 }
-.pm:hover  { transform: scale(1.12) translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.35); z-index: 100; }
-.pm.sel    { transform: scale(1.18) translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.40); z-index: 200; }
+.pm::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px;
+  background: #111; border-radius: 50%;
+}
+.pm:hover  { transform: scale(1.10) translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.28); }
+.pm.sel    { transform: scale(1.14) translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.32); }
 
 .pm-deal   { background: #1e6639; }
 .pm-avg    { background: #8a6400; }
 .pm-pricey { background: #8b1a1a; }
+
+/* Beach variant: circular */
+.pm.pm-beach {
+  font-size: 10px; font-weight: 700;
+  min-width: 32px; height: 32px;
+  padding: 0 7px; line-height: 28px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.32), 0 0 0 1px rgba(0,0,0,0.05);
+  letter-spacing: 0;
+}
+.pm.pm-beach::after { display: none; }
+.pm.pm-beach:hover  { transform: scale(1.12) translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.35); z-index: 100; }
+.pm.pm-beach.sel    { transform: scale(1.18) translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.40); z-index: 200; }
 
 /* ═══════════════════════════════════════════════════════════
    CATEGORY BAR
@@ -1251,17 +1270,17 @@ input[type=range].sb-range::-moz-range-thumb {
 }
 
 /* Beach unpriced marker — neutral but visible circle */
-.pm.pm-empty {
+.pm.pm-beach.pm-empty {
   background: #b8b6ad !important;
   color: #fff !important;
   border: 2px solid #fff;
   min-width: 22px; height: 22px;
-  padding: 0; line-height: 22px;
+  padding: 0; line-height: 18px;
   font-size: 11px; font-weight: 700;
   opacity: 1;
   box-shadow: 0 2px 5px rgba(0,0,0,0.22);
 }
-.pm.pm-empty:hover { background: #8a8780 !important; }
+.pm.pm-beach.pm-empty:hover { background: #8a8780 !important; }
 
 /* Peak/mid comparison block */
 .beach-season-compare {
@@ -2902,7 +2921,7 @@ function renderBeach() {
     const priceStr = displayPrice != null ? `€${Math.round(displayPrice)}` : '?';
 
     const icon = L.divIcon({
-      html: `<div class="pm pm-${c}" id="mk-${i}">${priceStr}</div>`,
+      html: `<div class="pm pm-beach pm-${c}" id="mk-${i}">${priceStr}</div>`,
       className: '', iconSize: null, iconAnchor: [16, 16],
     });
     const marker = L.marker([v.lat, v.lng], { icon, zIndexOffset: i });
