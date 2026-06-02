@@ -1,6 +1,39 @@
-# Stato corrente del dataset — aggiornato 02/06/2026 (Pietro S4 + Peppe Phase3)
+# Stato corrente del dataset — aggiornato 02/06/2026 (Pietro S4 + Peppe Phase3 + Barber S1 kickoff)
 
-> **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia).
+> **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia), **barber** (Italia — S1 in partenza).
+
+---
+
+## ✂️ VERTICAL BARBER (Peppe S1 — in partenza)
+
+| Metrica | Valore |
+|---|---|
+| **Status** | S1 kickoff — prompt pronto, dati da raccogliere |
+| **Venues** | 0 (target S1: ≥ 5.000 Treatwell) |
+| **Items prezzati** | 0 (target S1: ≥ 200 Milano sample) |
+| **Provider mappati** | 0 (target: Treatwell, Uala, Fresha, Booksy) |
+
+### Sorgenti pianificate
+- **Treatwell** (priority 1): SSR, sitemap disponibile, prezzi anon-accessibili, ~15-25k venue IT
+- **Uala** (priority 2): Next.js SSR/ISR, ~8-12k venue IT
+- **Fresha** (priority 3): sitemap, prezzi parzialmente accessibili, ~5-8k venue IT
+- **Booksy** (priority 4): discovery only (prezzi dietro login), ~10-15k venue IT
+- **OSM** (fallback): `amenity=hairdresser` — noisy, solo gap coverage
+
+### Vocabolario
+- 23 `normalized_product` codes in `scripts/normalization.py` → `BARBER_PRODUCTS`
+- Price ranges realistic Milano → `BARBER_PRICE_RANGES`
+- Quality gate → `validate_barber_item()`
+- Category → `barber_category`: `barber / salon_donna / unisex / kids`
+
+### Frontend
+- Marker: esagonale (CSS clip-path), viola `#3d2b8a`
+- Toggle sidebar: 3° chip "Barbieri"
+- Feed: `barber_data.json` (da costruire post-S1)
+
+### File
+- Prompt Peppe: `PROMPT_PEPPE_BARBIERI_S1.md`
+- Output raw: `raw_sources/barber_s1_*`
 
 ---
 

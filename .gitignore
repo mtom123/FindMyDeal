@@ -38,3 +38,18 @@ demo_map_reference.html
 _probe_apis.py
 _test_parse.py
 raw_sources/.phase3_cache/
+
+# Barber S1 — large raw items CSVs (>100MB, regenerable from scrapers)
+raw_sources/barber_s1_menu_items.csv
+raw_sources/barber_s1_master_items.csv
+raw_sources/barber_unified_items.csv
+raw_sources/barber_s1_fresha_italy_urls_all.txt
+
+# Extraction logs
+barber_s1_treatwell.log
+barber_s1_fresha.log
+
+# macOS Finder duplicates
+* 2.html
+* 2.json
+* 2.csv

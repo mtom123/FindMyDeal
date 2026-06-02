@@ -1,5 +1,6 @@
 """
 SurPrice normalization library — quality gate condivisa.
+Vertical supportati: drink (Milano), beach (Italia), barber (Italia).
 
 USO IN AGENT SCRAPER (PRIMA di consegnare CSV):
     from scripts.normalization import clean_item_product, is_milan_or_unknown, PRICE_RANGES
@@ -57,8 +58,79 @@ PRICE_RANGES = {
     'water':             (0.5, 5.0),
 }
 
-# Vocabolario chiuso normalized_product
+# Vocabolario chiuso normalized_product — DRINK
 VALID_PRODUCTS = set(PRICE_RANGES.keys()) | {''}
+
+# ─────────────────────────────────────────────
+# BARBER PRICE RANGES (EUR, realistic Italia — benchmark Milano)
+# 23 servizi vocabolario chiuso
+# ─────────────────────────────────────────────
+BARBER_PRICE_RANGES = {
+    # Taglio
+    'haircut_man':            (8.0,   70.0),
+    'haircut_woman':          (15.0, 140.0),
+    'haircut_child':          (7.0,   40.0),
+    # Barba
+    'beard_trim':             (7.0,   45.0),
+    'beard_shave':            (12.0,  70.0),
+    'beard_color':            (12.0,  65.0),
+    # Colore capelli
+    'hair_color':             (35.0, 220.0),
+    'hair_highlight':         (45.0, 280.0),
+    'hair_bleach':            (55.0, 320.0),
+    'hair_toning':            (18.0, 110.0),
+    # Styling / trattamento
+    'hair_wash_blowdry':      (12.0,  90.0),
+    'hair_blowdry':           (8.0,   65.0),
+    'hair_treatment':         (12.0,  90.0),
+    'hair_perm':              (55.0, 220.0),
+    'hair_straightening':     (70.0, 420.0),
+    'hair_extensions':       (150.0, 1100.0),
+    'hair_updo':              (35.0, 220.0),
+    # Viso / sopracciglia
+    'eyebrow_trim':           (6.0,   35.0),
+    'face_scrub':             (12.0,  65.0),
+    'face_mask':              (12.0,  55.0),
+    # Pacchetti combo
+    'package_cut_beard':      (18.0,  95.0),
+    'package_color_cut':      (55.0, 320.0),
+    'package_full_treatment': (40.0, 200.0),
+}
+
+BARBER_PRODUCTS = set(BARBER_PRICE_RANGES.keys()) | {''}
+
+# Vocabolario category barber (campo `barber_category` nei venues)
+BARBER_CATEGORIES = {'barber', 'salon_donna', 'unisex', 'kids'}
+
+
+def is_barber_price_in_range(product: str, price: float) -> bool:
+    """True se prezzo dentro banda realistic per servizio barber/hair."""
+    if product not in BARBER_PRICE_RANGES:
+        return True
+    lo, hi = BARBER_PRICE_RANGES[product]
+    return lo <= price <= hi
+
+
+def validate_barber_item(item: dict) -> tuple:
+    """
+    Validazione item vertical barber.
+    Returns: (is_valid, item_or_None, reason)
+    """
+    prod = (item.get('normalized_product', '') or '').strip()
+    if prod and prod not in BARBER_PRODUCTS:
+        return False, None, f'UNKNOWN_BARBER_PRODUCT:{prod}'
+    try:
+        price = float(item.get('normalized_price_eur', 0) or 0)
+    except Exception:
+        price = 0
+    if prod and not is_barber_price_in_range(prod, price):
+        return False, None, f'BARBER_PRICE_OUT_OF_RANGE_{prod}:{price}'
+    name = (item.get('item_name', '') or '')
+    if not name or len(name) < 2:
+        return False, None, 'BARBER_ITEM_NAME_EMPTY'
+    if len(name) > 200:
+        return False, None, 'BARBER_ITEM_NAME_TOO_LONG'
+    return True, item, None
 
 # Cities non-Milan note (per quick check, ma il main check è CAP)
 NON_MILAN_CITIES = [
