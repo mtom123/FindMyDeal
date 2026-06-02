@@ -1,0 +1,99 @@
+﻿venue_name,source_venue_id,old_lat,old_lng,new_lat,new_lng,confidence,method
+I Mas!,b767c8017247,,,45.464200,9.190000,fallback,duomo_centro
++39zerodue Ristorante Bistrot Milano,c64cdb34a6a1,,,45.464200,9.190000,fallback,duomo_centro
+Guzzo,1191104b166b,,,45.464200,9.190000,fallback,duomo_centro
+PRESTIGE,4236344fd081,,,45.464200,9.190000,fallback,duomo_centro
+Vesper Milano,9363a501aa70,,,45.464200,9.190000,fallback,duomo_centro
+Pub / Birreria SPRITZ NAVIGLI MILANO,b23688701b48,,,45.451833,9.176753,web_addr,jsonld_geo_menu
+Rob de Matt,426c75404b8a,,,45.464200,9.190000,fallback,duomo_centro
+Joy's,4be762855fb9,,,45.493503,9.143461,precise,nominatim_address
+Notredame,bad97043696f,,,45.487626,9.187505,precise,nominatim_address
+Trentase',9a8674dfd986,,,45.477981,9.101524,precise,nominatim_address
+Bello & Buono,d20afb57462b,,,45.450933,9.198288,precise,nominatim_address
+Andrea's Bistrot de Milan,f8caabdbe6eb,,,45.454217,9.179931,precise,nominatim_address
+Bomaki Porta Romana - Milano,ddfe6a1ac7d0,,,45.464200,9.190000,fallback,duomo_centro
+Papilla Milano,ed8281eae5e9,,,45.452409,9.179463,web_addr,jsonld_geo_website
+Refeel Milano,4d9724eceeea,,,45.464200,9.190000,fallback,duomo_centro
+21 House of Stories Città Studi,d3e3b608c40e,,,45.478310,9.220386,web_addr,jsonld_geo_website
+Annarè Milano,a73546803be8,,,45.464200,9.190000,fallback,duomo_centro
+Benvenuto Family Restaurant - Milano,384d27aea5a6,,,45.457717,9.183772,precise,nominatim_address
+Ca' Pelletti - Milano,e7bd2821b40a,,,45.436360,9.165334,web_addr,jsonld_geo_website
+Cantine Milano,9874bb4cc400,,,45.490009,9.190339,precise,nominatim_address
+Chunk Milano,5ede65d54648,,,45.451055,9.172131,precise,nominatim_address
+Don Vincè- Vincenzo Capuano Milano,95ecb4ffb0e3,,,45.482611,9.175659,web_addr,jsonld_geo_website
+Frades Milano,9090f4e94c19,,,45.461727,9.188112,precise,nominatim_address
+La Stradina Milano,7a69c7377f45,,,45.496877,9.185253,web_addr,jsonld_geo_website
+Löwengrube Milano,7638dc241e51,,,45.455903,9.205749,web_addr,jsonld_geo_website
+Mabuhay Restaurant Tibaldi Milan - Filipino Japanese Cuisine,a99b7d21a166,,,45.443385,9.177060,web_addr,jsonld_geo_website
+Mammina Milano,3ae5ec422404,,,45.476541,9.170820,web_addr,jsonld_geo_website
+Mimì Milano,e540010ab222,,,45.458475,9.207418,web_addr,jsonld_geo_website
+Old Wild West - Milano Sempione,8f6c3151f0a3,,,45.482337,9.164326,precise,nominatim_address
+Pace - Piazza Roma a Milano,753c30a86a64,,,45.459538,9.154478,web_addr,jsonld_geo_website
+PALENQUERA MILANO,6278b18c101a,,,45.453118,9.152397,web_addr,jsonld_geo_website
+Panigacci Milano Bistrot,283ae666b550,,,45.460880,9.213866,precise,nominatim_address
+Piperita Milano,4f9d7ccdfdb1,,,45.461025,9.181464,web_addr,jsonld_geo_website
+Rossopomodoro Milano Bicocca,d35b72edd95e,,,45.522087,9.215615,web_addr,jsonld_geo_website
+Rossopomodoro Milano Centrale Nuovo,eedc073c36f0,,,45.484110,9.204217,web_addr,jsonld_geo_website
+Sidhe Milano Bistrot Culturale,41fc263a511e,,,45.460605,9.079992,web_addr,jsonld_geo_website
+Mantra Milano,0959d2a0ebf5,,,45.464200,9.190000,fallback,duomo_centro
+E' TUTTA N'ATA STORIA,32581290668e,,,45.464200,9.190000,fallback,duomo_centro
+Binario 1,29b6b7edbc07,,,45.464200,9.190000,fallback,duomo_centro
+The Good Wine,958a1464c660,,,45.464200,9.190000,fallback,duomo_centro
+THANK'S,d36114c5905e,,,45.464200,9.190000,fallback,duomo_centro
+La Cucina del Beccari,972613849062,,,45.464200,9.190000,fallback,duomo_centro
+Radici Cocktails & Beer,bf34f460627d,,,45.464200,9.190000,fallback,duomo_centro
+Bar e Pizzeria,d2f6b4ba7602,,,45.464200,9.190000,fallback,duomo_centro
+Caffè Centrale,daa183981b70,,,45.464200,9.190000,fallback,duomo_centro
+DIMORA SOVRANA,5b44a714b43b,,,45.464200,9.190000,fallback,duomo_centro
+Mascolo,ce6255c45302,,,45.464200,9.190000,fallback,duomo_centro
+Dk33,eff6e05f7f8c,,,45.464200,9.190000,fallback,duomo_centro
+Lounge / Leggi il Menu Digitale di Garibaldi Lounge,98923665130c,,,45.464200,9.190000,fallback,duomo_centro
+Salotto 23,8672c8e2417b,,,45.464200,9.190000,fallback,duomo_centro
+OxTop21,734ac10e83af,,,45.464200,9.190000,fallback,duomo_centro
+creed drink e food,365d62dbbdf7,,,45.464200,9.190000,fallback,duomo_centro
+MENUDUGITALE 404,1996fd4820ba,,,45.464200,9.190000,fallback,duomo_centro
+Enjoy,c23752e702f8,,,45.464200,9.190000,fallback,duomo_centro
+Double,0fc877088817,,,45.464200,9.190000,fallback,duomo_centro
+Brasita's Milano,9f9db6843820,,,45.501261,9.120744,precise,nominatim_address
+ROSSO DI SERA,e96500b7b726,,,45.464200,9.190000,fallback,duomo_centro
+"Cantiere delle Birre (coperto € 1,00)",caa52c99b309,,,45.464200,9.190000,fallback,duomo_centro
+Birreria Ristorante al Giardino,2180f6d0671d,,,45.464200,9.190000,fallback,duomo_centro
+Classe 88,fe1d1dda5618,,,45.464200,9.190000,fallback,duomo_centro
+Bar Roma,c4b996d0f80d,,,45.536871,9.236083,precise,nominatim_address
+Bar Al Caffè,0783af92f546,,,45.464200,9.190000,fallback,duomo_centro
+Botanical Bar,d6620bc20ed5,,,45.464200,9.190000,fallback,duomo_centro
+Golden Bar,9b3ff270a1d2,,,45.464200,9.190000,fallback,duomo_centro
+OASI BAR,ad0b027bfc80,,,45.464200,9.190000,fallback,duomo_centro
+Birreria Terzo Tempo,beb007b89e1e,,,45.464200,9.190000,fallback,duomo_centro
+Pub La Grotta,b5e16e6c7db9,,,45.464200,9.190000,fallback,duomo_centro
+CROSSING'S PUB,6bef0750cd48,,,45.464200,9.190000,fallback,duomo_centro
+Ou Mbare Pub,f23b3903700a,,,45.464200,9.190000,fallback,duomo_centro
+Soul Pub,dc7b41b6219f,,,45.464200,9.190000,fallback,duomo_centro
+Crossroad Pub,b5857ca056e8,,,45.464200,9.190000,fallback,duomo_centro
+MenuDigitale / / Leggi il Menu Digitale di,3298c3df6e5b,,,45.464200,9.190000,fallback,duomo_centro
+BoccaDiSelva 1550M,8e3c92e1ab32,,,45.464200,9.190000,fallback,duomo_centro
+Officina del Gusto,9d583cf2b0ff,,,45.464200,9.190000,fallback,duomo_centro
+La Scogliera,53aeb5ad1996,,,45.464200,9.190000,fallback,duomo_centro
+U-Tub Torino,8dfff6ce169c,,,45.464200,9.190000,fallback,duomo_centro
+L’ISOLA DELLE TENTAZIONI,dcea705a3fc7,,,45.464200,9.190000,fallback,duomo_centro
+MCGiggi,edfb1d25dcb8,,,45.464200,9.190000,fallback,duomo_centro
+Cantiere del Gusto,6e841c99a513,,,45.464200,9.190000,fallback,duomo_centro
+Pescheria il Timone,90630f222099,,,45.464200,9.190000,fallback,duomo_centro
+Tomato,058200497a5d,,,45.464200,9.190000,fallback,duomo_centro
+GOLASECCA SEGRATE,1192a693752b,,,45.464200,9.190000,fallback,duomo_centro
+Lievit’amo,630cd5411448,,,45.464200,9.190000,fallback,duomo_centro
+Mamalu Bistrot,0d92f9c3de57,,,45.464200,9.190000,fallback,duomo_centro
+In Piazzetta,d790a1fdf70d,,,45.464200,9.190000,fallback,duomo_centro
+Caffè Letterario,e575bb8ef661,,,45.464200,9.190000,fallback,duomo_centro
+Cantine Isola,3df1882dee4b,,,45.464200,9.190000,fallback,duomo_centro
+Mag Café,da8dbba564ac,,,45.464200,9.190000,fallback,duomo_centro
+Rita,4269ce5783a8,,,45.464200,9.190000,fallback,duomo_centro
+The Spirit,85a9cf47f8d4,,,45.464200,9.190000,fallback,duomo_centro
+Baladin Milano,9d97fbee3e9b,,,45.464200,9.190000,fallback,duomo_centro
+Ostello Bello,4dc5e20bae58,,,45.464200,9.190000,fallback,duomo_centro
+Upcycle,1e9a6652ec9c,,,45.464200,9.190000,fallback,duomo_centro
+The Doping Club,6c2d256e39c8,,,45.464200,9.190000,fallback,duomo_centro
+Cuore,6f94a27518f8,,,45.464200,9.190000,fallback,duomo_centro
+Harp Pub,cb7f303c7a5b,,,45.464200,9.190000,fallback,duomo_centro
+Harp Pub Rhum,bc6fd564b27d,,,45.464200,9.190000,fallback,duomo_centro
+Banshee Pub,ec086f9d3555,,,45.464200,9.190000,fallback,duomo_centro

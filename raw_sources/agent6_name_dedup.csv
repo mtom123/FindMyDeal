@@ -1,0 +1,44 @@
+﻿canonical_name,all_variants,canonical_source_venue_id,dupe_count,target_classification
+Burgez,Burgez,e658077cf605,3,NO_TARGET
+This is not a Sushi Bar,This is not a Sushi Bar,1b15b397ad10,3,AMBIGUOUS_TO_REVIEW
+Victoria's,Victoria's | Victoriasclub,d57727c3a20b,3,NO_TARGET
+Spiller,Spiller,549e90c37d8f,3,TARGET
+Starbucks,Starbucks,c984d8a0e3b2,3,AMBIGUOUS_TO_REVIEW
+Abbracci Bistrot,Abbracci Bistrot,3ac7f87b5a89,2,TARGET
+Agua Sancta,Agua Sancta,f79d81590e1c,2,TARGET
+Antico Ristorante Boeucc,Antico Ristorante | Antico Ristorante Boeucc,f6a9271b51c3,2,NO_TARGET
+Bar Mercurio,Bar Mercurio,978b59603585,2,NO_TARGET
+Barba,Barba,3ad45f12b329,2,TARGET
+Blue Note Milano,Blue Note Milano | Blue Note,f3339f82ca36,2,TARGET
+Blues Canal,Blues Canal,a0c86c108e73,2,TARGET
+Bob Milano,Bob Milano,37f11c63d9cf,2,TARGET
+Carpe Diem,Carpe Diem | Carpe diem,7a3fdacaec0e,2,TARGET
+El Carnicero - Spartaco,El Carnicero | El Carnicero - Spartaco,a6a6fa808bef,2,NO_TARGET
+Giardino di Giada,Giardino di Giada | Giardino,b39ba5fd9875,2,NO_TARGET
+Hug Milano,Hug Milano | HUG Milano,fb6d7dae9c1e,2,TARGET
+Il Carpaccio Milano,Il Carpaccio | Il Carpaccio Milano,ca15e3a94d9a,2,NO_TARGET
+Lambiczoon,Lambiczoon,497bd4ecb276,2,TARGET
+Like a Pita,Like a Pita,ab8b0ee68c38,2,NO_TARGET
+Mama Burger - Agnello,Mama Burger | Mama Burger - Agnello,47526d3754f9,2,NO_TARGET
+MAMAstrEAT,MAMAstrEAT | MamaStreat,1844cc01195a,2,NO_TARGET
+Naturalmente Gelato,NATURALMENTE | Naturalmente Gelato,c35044f03e87,2,TARGET
+Nik's & co,Nik's & co | Nik's & Co,d80fa404a361,2,TARGET
+Paninoteca Unione,Paninoteca Unione | Paninoteca,45577ffd58c3,2,AMBIGUOUS_TO_REVIEW
+Pizza And Food,Pizza And Food,4c1731be330b,2,NO_TARGET
+Pizzikotto,Pizzikotto,c7d775747dea,2,NO_TARGET
+Radetzky Café,Radetzky Cafe | Radetzky Café,ace1ff600e84,2,TARGET
+Sushi Kòboo / Ticinese,Sushi Kòboo / Ticinese | Sushi Kòboo | Ticinese | Sushi-Kòboo,f9abe1af63e4,2,NO_TARGET
+Tàscaro,Tàscaro | Tascaro,82a550de5573,2,NO_TARGET
+I Mas!,I Mas!,017ddecc3623,2,TARGET
+Sun Strac,Sun Strac,63d4df6edf37,2,TARGET
+Santeria Toscana 31,Santeria Toscana 31,4d2c6bde0503,2,NO_TARGET
+Blues Bikers Pub,Blues Bikers Pub,0928f1b5f5ef,2,TARGET
+La Gintoneria di Davide,La Gintoneria di Davide | la Gintoneria,f934e9fd077b,2,TARGET
+Il Secco,Il Secco,1ac1b8c9ca2f,2,TARGET
+Mag Cafè,Mag Cafè | Mag Café,d5a749f5109c,2,TARGET
+Ripamonti 130,Ripamonti 130 | Ripamonti,a432b7542827,2,TARGET
+Wave Cocktail Bar,Wave Cocktail Bar,62508ed6010d,2,TARGET
+The Beach Milano,The Beach Milano,f82be634d129,2,TARGET
+La Rocchetta Caffe Bistrot,La Rocchetta Caffe Bistrot | La Rocchetta,2e0cb030349f,2,TARGET
+Sant'Ambrogio Cafè,Sant'Ambrogio Cafè | Sant'Ambrogio,4a657446f50d,2,TARGET
+Bar Centrale 1968,Bar Centrale | Bar Centrale 1968,5d70e9475c96,2,TARGET
