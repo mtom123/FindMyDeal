@@ -6,6 +6,32 @@
 
 ---
 
+## 2026-06-02 — CEO gym S1 pricing: 36 prezzi estratti · repo cleanup · prompts Pietro S9 + Peppe barbieri
+
+### Gym pricing S1 (CEO, sessione odierna)
+- **Scoperta critica**: FitPrime pivotata B2B → tutti i prezzi consumer eliminati. 1.605 venue senza fonte.
+- **Chain scraping** (`gym_s1_chains.py`): McFit 34.90/49.90€, FitActive 9.90/19.90€, Gympass 8 piani 9.99-164.99€ → 12 prezzi
+- **Website scraping** (`gym_s1_websites.py`, 150 campione): 24 prezzi da siti diretti. Min 4.90€ (Fit Express), avg 34.43€, max 49.90€
+- **ClassPass**: Cloudflare block. Richiede account + stealth. Script pronto (`gym_s1_classpass.py`), da riprovare con sessione manuale.
+- **Google Maps reviews**: selettori obsoleti, 0 risultati. Da riscrivere con updated selectors.
+- **Pietro S9**: assegnato full run websites su 3.095 venue. Script pronto, lui esegue e riporta.
+
+### Repo cleanup
+- 25 file obsoleti (prompt completati + report storici) → `archive/`
+- `AGENTS.md` riscritto: regole git chiare, spiegazione "Merge branch main", naming convention
+- `CLAUDE.md` aggiornato: identifica ruolo → leggi file giusto
+- `AGENTS_STATE.md`: sezione gym aggiunta con numeri aggiornati
+
+### Regola introdotta oggi
+**"Merge branch main"** nei commit di Peppe = problema. Causa: `git pull` senza `--rebase` quando ci sono divergenze. Fix: `git config --global pull.rebase true` oppure usare branch separati per ogni feature (che è la prassi corretta per Peppe che fa frontend).
+
+### Prossimi step immediati
+1. Peppe: frontend barbieri (`PROMPT_PEPPE_BARBIERI_S1.md` + `barber_s1_REPORT_PEPPE.md`)
+2. Pietro: S9 gym websites full run (`PROMPT_PIETRO_S9.md`)
+3. CEO: Supabase setup crowdsourcing gym (`SUPABASE_SETUP_TONIGHT.md`)
+
+---
+
 ## 2026-06-03 LATE NIGHT — Pietro S8 (6 città) + CEO gym FitPrime → 12.648 totali
 
 ### Pietro S8 chiusa (commit b66829b + e628ab2)

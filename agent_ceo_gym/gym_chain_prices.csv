@@ -1,0 +1,13 @@
+chain,url,price,price_type,context,source
+McFit,https://www.mcfit.com/it/abbonamento/,34.9,mensile,"in tutta Europa. &nbsp; SPECIALE MAGGIO 10 € /mese* anziché  €34,90 Allenati i primi 2 mesi a soli 10€/mese*! E l'abbonamento è",html_text
+McFit,https://www.mcfit.com/it/abbonamento/,49.9,mensile,"giorno dello stesso mese (Periodo Mensile) | Quota mensile  €49,90 o 54,90€ a seconda del prezzo mensile a regime in vigore ne",html_text
+FitActive,https://www.fitactive.it/,9.9,mensile,"ssere accessibile a TUTTI! A soli 1 €9,90 al mese avrai la possibilità&nbsp; di allenarti in tutti i",html_text
+FitActive,https://www.fitactive.it/Home/Iscriviti,19.9,mensile,"paypal:hover { color: #f7941d; } Abbonamento Online annuale  €19,90* / mese + € 79,00 quota di iscrizione vitalizia Fitness ill",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,9.99,mensile,"infinite attività per il tuo benessere. I DIPENDENTI PAGANO  €9,99 /mese Verifica idoneità Le opzioni più amate nel piano Star",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,19.99,mensile,"la tua routine e scopri nuovi workout. I DIPENDENTI PAGANO  €19,99 /mese Verifica idoneità Le opzioni più amate nel piano Basi",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,36.99,mensile,"n opzioni extra di fitness e benessere. I DIPENDENTI PAGANO  €36,99 /mese Verifica idoneità Le opzioni più amate nel piano Silv",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,59.99,mensile,"itness, benessere, corsi e allenamenti. I DIPENDENTI PAGANO  €59,99 /mese Verifica idoneità Le opzioni più amate nel piano Gold",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,79.99,mensile,"a offerte extra di fitness e benessere. I DIPENDENTI PAGANO  €79,99 /mese Verifica idoneità Le opzioni più amate nel piano Gold",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,94.99,mensile,"ere con le opzioni premium del network. I DIPENDENTI PAGANO  €94,99 /mese Verifica idoneità Le opzioni più amate nel piano Plat",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,119.99,mensile,"a offerte extra di fitness e benessere I DIPENDENTI PAGANO  €119,99 /mese Verifica idoneità Le opzioni più amate nel piano Plat",html_text
+Gympass,https://gympass.com/it-it/plans-pricing/,164.99,mensile,"eglio di Wellhub con l'accesso premium. I DIPENDENTI PAGANO  €164,99 /mese Verifica idoneità Le opzioni più amate nel piano Diam",html_text

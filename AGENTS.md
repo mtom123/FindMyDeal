@@ -1,157 +1,247 @@
-# Agent Onboarding — FoodPrice Milano
+# SurPrice — Agent Onboarding
 
-> **LEGGI QUESTO FILE PER PRIMO** se sei un nuovo agente Claude su questo repo.
-
-## 📚 Ordine di lettura per onboarding (5 minuti)
-
-1. **`AGENTS.md`** (questo) — ruoli, workflow, regole base
-2. **`AGENTS_STATE.md`** — cosa è già fatto, cosa serve. NON duplicare lavoro!
-3. **`CHANGELOG.md`** — STORIA decisioni e ragionamenti del progetto. Capisci il PERCHÉ.
-4. **`raw_sources/README.md`** — scheda d'identità di ogni file CSV
-5. **`scripts/SCHEMA_AGENTI.md`** — formato CSV obbligatorio (solo per scraper)
-
-Se sei frontend dev, leggi anche **`BRIEF_PEPPE.md`**.
+> **LEGGI QUESTO FILE PER PRIMO.** Poi `AGENTS_STATE.md`. Poi il tuo prompt specifico.
+> Tempo di lettura: 8 minuti. Non skippare.
 
 ---
 
-## 🎯 Cos'è il progetto
+## Cos'è il progetto
 
-**FoodPrice Milano** — mappa interattiva dei prezzi drink nei bar di Milano.
+**SurPrice** — aggregatore prezzi neutro per servizi italiani.
 Sito live: https://mtom123.github.io/FindMyDeal/
+Repo: https://github.com/mtom123/FindMyDeal
 
-Fase attuale: raccolta dati distribuita tra più collaboratori + un orchestratore.
-
----
-
-## 👥 Chi fa cosa
-
-| Ruolo | Nome | Compito |
-|---|---|---|
-| **CEO / Orchestratore** | Claude (Motti) | Coordina, fa merge, gestisce schema dati, aggiorna sito |
-| **Agente Scraper 1** | Pietro | Scraping siti diretti, PDF, eatbu, qodeup, sources nuove |
-| **Agente Scraper 2** | (vario) | leggimenu, menudigitale, qromo, mycia |
-| **Frontend Dev** | Peppe | Implementa il sito (Leaflet + JS vanilla) |
-
-Tu sei probabilmente **uno scraper agent** o **il CEO**. Identifica il tuo ruolo dal prompt che ti hanno dato.
+Verticals attivi: **Drink** (Milano) · **Beach** (Italia) · **Barber** (Italia) · **Gym** (Italia, in corso)
 
 ---
 
-## 📁 Struttura del repo
+## Chi fa cosa
+
+| Ruolo | Chi | Compito attuale |
+|-------|-----|-----------------|
+| **CEO / Orchestratore** | Motti (Claude) | Merge authority, qualità dati, commit finali, orchestrazione |
+| **Scraper Agent** | Pietro | Scraping dati — drink, gym websites |
+| **Frontend Dev** | Peppe | Implementa verticali sul sito — ora: barbieri |
+
+**Se sei un agente Claude appena avviato**: identifica il tuo ruolo dal prompt iniziale che ti è stato dato. Se non è chiaro, sei il CEO.
+
+---
+
+## Struttura repo (root = quello che vedi su GitHub)
 
 ```
-FindMyDeal/
-├── index.html                  ← sito live (Peppe)
-├── prices_data.json            ← feed dati sito (rigenerato dal merge)
+/                           ← ROOT ATTIVO (file correnti)
+├── AGENTS.md               ← QUESTO FILE
+├── AGENTS_STATE.md         ← stato corrente di tutti i verticals
+├── CEO_HANDOFF_PROMPT.md   ← context completo per nuovo agent CEO
+├── CHANGELOG.md            ← storia decisioni (capisci il PERCHÉ)
+├── CLAUDE.md               ← entry point Claude Code
+├── COLLABORATORI.md        ← onboarding umani
+├── README.md               ← presentazione pubblica
 │
-├── AGENTS.md                   ← QUESTO FILE — onboarding agenti
-├── BRIEF_PEPPE.md              ← brief per il frontend
-├── COLLABORATORI.md            ← guida git workflow
-├── README.md                   ← presentazione pubblica
+├── PROMPT_PIETRO_S9.md     ← task attivo Pietro
+├── PROMPT_PEPPE_BARBIERI_S1.md  ← task attivo Peppe
+├── PROMPT_PEPPE_GYM_FRONTEND_BRIEF.md  ← prossimo task Peppe (dopo barbieri)
+├── barber_s1_REPORT_PEPPE.md    ← spec tecnica frontend barbieri
+├── barber_s1_REPORT_CEO.md      ← report CEO barber S1
+├── beach_phase3_REPORT.md       ← report beach (reference)
+├── DATA_ACCESS_BEACH.md         ← reference dati beach
+├── DATA_QUALITY_REPORT.md       ← metriche qualità
+├── SUPABASE_SETUP_TONIGHT.md    ← schema SQL crowdsourcing gym
 │
-├── raw_sources/                ← INPUT degli scraper
-│   ├── mycia_*.csv             ← completo (648 venues)
-│   ├── leggimenu_*.csv         ← completo (35 venues Milano, 4.214 items)
-│   ├── menudigitale_*.csv      ← completo (2 venues Milano)
-│   ├── qromo_*.csv             ← solo venues, no items (robots.txt)
-│   ├── direct_*.csv / scraper_*.csv / agent2_*.csv  ← sessioni Pietro
-│   ├── pdf_*.csv / pdf_googledork_*.csv  ← menu PDF
-│   ├── web_extracted_*.csv     ← Startpage→sito→menu (Peppe)
-│   └── comune_osm_venues.csv   ← 4.649 venues geo base (Comune Milano)
+├── data/                   ← OUTPUT dati (NON modificare a mano)
+│   ├── barber_data.json    ← feed frontend barbieri (16MB)
+│   └── ...
 │
-├── data/                       ← OUTPUT unificato dal merge (NON modificare)
-│   ├── unified_venues.csv      ← 1.558 venues deduplicate
-│   ├── unified_menu_items.csv  ← 5.361 items normalizzati
-│   └── unified_prices.csv      ← 829 price points geo+normalizzati
+├── raw_sources/            ← INPUT scraper (drop zone)
+│   └── ...
 │
-└── scripts/                    ← TOOLS
-    ├── SCHEMA_AGENTI.md        ← spec CSV OBBLIGATORIA
-    ├── merge_pipeline.py       ← orchestratore (solo CEO esegue)
-    ├── mycia_scraper.py        ← reference scraper
-    ├── osm_direct_scraper.py
-    ├── build_outputs.py
-    └── PROMPT_PER_AGENTI_SCRAPER.md
+├── scripts/                ← script Python
+│   ├── SCHEMA_AGENTI.md    ← formato CSV obbligatorio
+│   ├── normalization.py    ← libreria normalizzazione condivisa
+│   └── ...
+│
+├── agent_ceo_gym/          ← script + dati vertial gym
+│   ├── gym_master_italia.csv
+│   ├── gym_chain_prices.csv
+│   ├── gym_s1_chains.py
+│   ├── gym_s1_websites.py
+│   └── ...
+│
+└── archive/                ← prompt e report completati (tieni per context, non modificare)
 ```
 
 ---
 
-## 🔄 Workflow standard
+## Workflow Git — REGOLE OBBLIGATORIE
 
-### Sei uno SCRAPER agent?
+### Problema comune: "Merge branch 'main'"
+Se vedi questo nei tuoi commit, stai sbagliando. Succede quando fai `git pull` dopo un `git commit` con divergenze remote. **Soluzione:**
 
-```
-1. git pull origin main                     # aggiornati prima di iniziare
-2. Leggi scripts/SCHEMA_AGENTI.md           # formato CSV obbligatorio
-3. Leggi AGENTS_STATE.md                    # vedi cosa è già stato fatto
-4. Lavora sul tuo scraper in locale         # NON modificare data/ o prices_data.json
-5. Output: raw_sources/{tua_fonte}_venues.csv + raw_sources/{tua_fonte}_menu_items.csv
-6. git add raw_sources/{tua_fonte}_*.csv
-   git commit -m "data: {fonte} — N venues, M items"
-   git push origin main
-7. AVVISA IL CEO — lui fa merge + push aggiornato
+```bash
+# CONFIGURA UNA VOLTA SOLA (ogni macchina):
+git config --global pull.rebase true
+
+# oppure ogni volta che fai pull:
+git pull --rebase origin main
 ```
 
-### Sei il CEO?
+Con `pull.rebase true`, invece di creare un merge commit, git riapplica i tuoi commit sopra quelli remoti → storia pulita.
 
-```
-1. git pull
-2. Verifica raw_sources/ per nuovi file
-3. Quality check (filtra junk: image URLs, false positives, non-Milan venues)
-4. python scripts/merge_pipeline.py
-5. Verifica merge_report.txt e numeri unified_prices.csv
-6. git add data/ prices_data.json + eventuali fix in raw_sources/
-7. git commit + push
+### Workflow scraper (Pietro)
+
+```bash
+git pull --rebase origin main          # SEMPRE prima di iniziare
+# ... lavora ...
+git add raw_sources/{fonte}_*.csv
+git add agent_ceo_gym/gym_*.csv        # per task gym
+git commit -m "data: S9 gym — X venue prezzate, website direct"
+git push origin main
+# poi avvisa il CEO
 ```
 
-### Sei il FRONTEND dev (Peppe)?
+### Workflow frontend (Peppe)
 
+```bash
+git pull --rebase origin main          # SEMPRE prima di iniziare
+git checkout -b feat/barber-frontend   # USA SEMPRE UN BRANCH
+# ... lavora ...
+git add barber.html scripts/... data/...
+git commit -m "feat: barber frontend — mappa base + marker esagonali"
+git push origin feat/barber-frontend
+# apri PR su GitHub → CEO fa review e merge
 ```
-1. git pull
-2. Lavora su index.html / CSS / JS
-3. NON toccare prices_data.json (rigenerato dal merge)
-4. git add index.html + asset
-5. git commit + push → sito live in 60s
+
+**Peppe: usa SEMPRE un feature branch. Non committare direttamente su main.**
+I PR permettono al CEO di fare review prima che i tuoi cambiamenti vadano live.
+
+### Workflow CEO
+
+```bash
+git pull --rebase origin main
+# ... merge, aggiorna AGENTS_STATE.md, CHANGELOG.md ...
+git add -A
+git commit -m "ceo: [descrizione chiara]"
+git push origin main
 ```
 
 ---
 
-## ⛔ Cosa NON fare MAI
+## Regole su file e commit — NON CREARE CASINO
 
-- ❌ Non modificare `data/unified_*.csv` a mano (output del merge)
-- ❌ Non modificare `prices_data.json` a mano (rigenerato dal merge)
-- ❌ Non duplicare lavoro già fatto (vedi `AGENTS_STATE.md` per lo stato)
-- ❌ Non inventare dati — se non hai un prezzo, lascia `normalized_price_eur=0` e `confidence=low`
-- ❌ Non bypassare robots.txt (qromo /API è VIETATO, niente Wolt/Glovo senza Playwright)
-- ❌ Non scrappare senza rate limiting (minimo 1.5s tra requests)
-- ❌ Non pushare cache di pagine scaricate (sono in `.gitignore`: `raw_data/`)
+### Naming dei file
+
+| Tipo | Pattern | Esempio |
+|------|---------|---------|
+| Prompt per agente | `PROMPT_{NOME}_{VERTICAL}_{SESSION}.md` | `PROMPT_PIETRO_GYM_S9.md` |
+| Report CEO | `{vertical}_REPORT_CEO.md` | `gym_s1_REPORT_CEO.md` |
+| Report per Peppe | `{vertical}_REPORT_PEPPE.md` | `barber_s1_REPORT_PEPPE.md` |
+| Script scraping | `{vertical}_s{N}_{cosa}.py` | `gym_s1_websites.py` |
+| Dati raw | `raw_sources/{vertical}_{fonte}_{tipo}.csv` | `raw_sources/barber_s1_treatwell_venues.csv` |
+| Dati master | `{vertical}_master_{scope}.csv` | `gym_master_italia.csv` |
+
+### Cosa NON committare
+
+```
+❌ File di debug/test temporanei (check_urls.py, test_*.py)
+❌ File di log (.txt, .log) a meno che non siano report finali
+❌ Dump HTML/JSON intermedi (fitprime_dump/, api_dump/)
+❌ __pycache__/, .env, chiavi API
+❌ File CSV intermedi non consolidati
+```
+
+### Cosa committare
+
+```
+✅ Script finiti e funzionanti
+✅ CSV di output consolidati (master, prices)
+✅ Prompt e brief per il team
+✅ Report CEO dei risultati
+✅ Aggiornamenti a AGENTS_STATE.md e CHANGELOG.md
+```
+
+### Granularità dei commit
+
+**Un commit = un lavoro logico compiuto.**
+
+```bash
+# BUONO:
+git commit -m "data: S9 gym — 340 venue prezzate da 3095 siti web"
+git commit -m "feat: barber frontend — mappa base, marker esagonali funzionanti"
+git commit -m "ceo: gym S1 pricing scripts + 12 prezzi catene"
+
+# CATTIVO:
+git commit -m "update"
+git commit -m "fix"
+git commit -m "vari cambiamenti"
+git commit -m "Merge branch 'main' of https://github.com/..."  ← vedi sopra
+```
 
 ---
 
-## ⚠️ Errori comuni degli agenti precedenti
+## Regole dati — NON MODIFICARE OUTPUT A MANO
 
-1. **Confondere `extraction_status=filtered_out` con "da scrappare"** → quei venues NON sono target (ristoranti, pizzerie). Non rifarli.
-2. **Scrappare URL di immagini (.jpg/.png/.webp)** come fossero pagine menu → produce junk
-3. **Normalizzare `americano` su "rovere americano" (whiskey)** → false positive contesto
-4. **Geocodare venues senza verifica** → finiscono su Milano centro stacked
-5. **Mandare 12.000 items "nazionali"** senza filtrare per Milano → 99% non utilizzabile
+| File | Chi lo modifica | Come |
+|------|----------------|------|
+| `data/unified_*.csv` | Solo merge_pipeline.py | `python scripts/merge_pipeline.py` |
+| `data/barber_data.json` | Solo script consolidamento | `python scripts/barber_s1_consolidate.py` |
+| `prices_data.json` | Solo build script | `python scripts/build_outputs.py` |
+| `raw_sources/*.csv` | Gli scraper agent | Drop zone: deposita e avvisa CEO |
+| `agent_ceo_gym/*.csv` | Script gym o CEO | Non editare manualmente |
 
----
-
-## 🔗 Link utili
-
-- **Sito live**: https://mtom123.github.io/FindMyDeal/
-- **Repo**: https://github.com/mtom123/FindMyDeal
-- **Schema CSV**: `scripts/SCHEMA_AGENTI.md`
-- **Stato dataset**: `AGENTS_STATE.md`
-- **Storico decisioni**: `CHANGELOG.md`
-- **Identità file raw_sources**: `raw_sources/README.md`
-- **Brief frontend**: `BRIEF_PEPPE.md`
+**Se trovi un errore nei dati**: segnalalo al CEO con issue GitHub. Non correggere il file direttamente.
 
 ---
 
-## 📞 Quando bloccato
+## Errori da non ripetere
 
-1. Apri Issue su GitHub (`Bug` o `Question` label)
-2. Tag @CEO nella issue
-3. Continua con altro task nel frattempo
+1. **Peppe committa direttamente su main** → merge conflict + storia sporca. Usa branch.
+2. **"Merge branch 'main'"** nei commit → usa `git pull --rebase` o configura `pull.rebase true`.
+3. **Creare mille file markdown** per ogni sessione → usa CHANGELOG.md per i ragionamenti, non file separati.
+4. **Pushare dump HTML/JSON** da Playwright → sono in .gitignore, tienili fuori.
+5. **Duplicare scraping già fatto** → leggi AGENTS_STATE.md prima di iniziare.
+6. **Non avvisare il CEO** dopo aver pushato dati → il CEO non sa che ci sono nuovi raw_sources da mergiare.
 
-Buon lavoro! 🍹
+---
+
+## Come aggiornare lo stato del progetto
+
+Dopo ogni sessione di lavoro significativa:
+1. Aggiorna `AGENTS_STATE.md` con i nuovi numeri
+2. Aggiorna `CHANGELOG.md` con il ragionamento
+3. Aggiorna `CEO_HANDOFF_PROMPT.md` se cambia lo stato globale
+
+**Non creare nuovi file markdown per ogni sessione** — accumulate diventano rumore.
+L'eccezione: prompt specifici (`PROMPT_PIETRO_S9.md`) e report CEO (`gym_s1_REPORT_CEO.md`) — questi hanno senso.
+
+---
+
+## Quick reference per agenti
+
+```
+Sono Pietro (scraper):
+  → Leggi PROMPT_PIETRO_S9.md
+  → Leggi AGENTS_STATE.md per non duplicare
+  → Scrivi in raw_sources/ o agent_ceo_gym/
+  → Commit + avvisa CEO
+
+Sono Peppe (frontend):
+  → Leggi PROMPT_PEPPE_BARBIERI_S1.md + barber_s1_REPORT_PEPPE.md
+  → Crea branch feat/barber-frontend
+  → PR al CEO prima del merge
+
+Sono CEO:
+  → Leggi CEO_HANDOFF_PROMPT.md
+  → Stato attuale in AGENTS_STATE.md
+  → Merge authority su tutto
+```
+
+---
+
+## Link rapidi
+
+- Sito live: https://mtom123.github.io/FindMyDeal/
+- Repo: https://github.com/mtom123/FindMyDeal
+- Schema CSV: `scripts/SCHEMA_AGENTI.md`
+- Stato verticals: `AGENTS_STATE.md`
+- Storia decisioni: `CHANGELOG.md`

@@ -1,4 +1,4 @@
-# Stato corrente del dataset — aggiornato 03/06/2026 (multi-vertical + multi-city expansion)
+# Stato corrente del dataset — aggiornato 02/06/2026 (CEO gym S1 pricing + barber S1 complete)
 
 > **SurPrice** = multi-vertical price intelligence. **Brand UNICO** multi-vertical (decisione 03/06).
 
@@ -9,7 +9,7 @@
 | 🍹 **drink** | Pietro (scraper) | Milano done, **S7 + S8 chiuse (6.036 venues nuovi su 6 città)** | Milano + Roma 2.254 + Napoli 719 + Torino 1.298 + Firenze 714 + Bologna 750 + Venezia 306 |
 | 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
 | 💈 **barber** | CEO (S1 done) | **S1 chiusa: 12.019 venue, 10.709 prezzate (89%)** | Italia (21 regioni) |
-| 💪 **gym** | Utente diretto + CEO bootstrap | **12.648 venues Italia** (OSM + FitPrime + Anytime + GetFit) | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 |
+| 💪 **gym** | CEO (pricing S1) + Pietro (S9 in corso) | **12.648 venues** · **36 prezzi estratti** (catene + siti web) — 0 prezzi prima di oggi | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 |
 
 ## Architettura multi-vertical
 
@@ -251,6 +251,51 @@ Pre-merge agent4: 924 → post-merge + cleanup: **939** (+15 netti).
 | **web_extracted** (Peppe sera) | 505 | 441 | ✅ COMPLETO | nome→Startpage→sito ufficiale→menu. Hit rate 6.7% (34/505) |
 | **pdf_googledork** (Peppe sera) | 7 | 81 | ✅ COMPLETO | PDF dai siti diretti già noti. Multi-colonna parsing |
 | **comune_osm** (Peppe sera) | 4.649 | 0 | ✅ BASE GEO | Open data Comune Milano × OSM. Solo venues+geo, NO prezzi. Usare per discovery |
+
+---
+
+## 💪 VERTICAL GYM (S1 pricing avviato 02/06/2026)
+
+| Metrica | Valore |
+|---|---|
+| **Venues mappate** | **12.648** (OSM 11.034 · FitPrime-legacy 1.605 · GetFit 8 · Anytime 1) |
+| **Venues prezzate** | **0 prima di oggi → 36 oggi** |
+| **Prezzi catene (gym_chain_prices.csv)** | **12** (McFit · FitActive · Gympass) |
+| **Prezzi siti diretti (gym_website_prices.csv)** | **24** (150 palestre campionate) |
+| **Copertura stimata full run** | 300-500 venues (3.095 con sito web) |
+
+### Prezzi catene estratti (02/06/2026)
+| Chain | Tipo | Prezzo | Metodo |
+|-------|------|--------|--------|
+| McFit | mensile base | 34.90€ | __NEXT_DATA__ |
+| McFit | mensile premium | 49.90€ | __NEXT_DATA__ |
+| FitActive | mensile entry | 9.90€ | HTML direct |
+| FitActive | mensile standard | 19.90€ | HTML direct |
+| Gympass | 8 piani B2B | 9.99→164.99€ | HTML direct |
+
+### Prezzi siti diretti (150 campione)
+- Min: **4.90€/mese** (Fit Express Roma)
+- Max: **49.90€/mese** (McFit varie città)
+- Media: **34.43€/mese**
+- Palestre uniche prezzate: 10/150 (6.7% hit rate)
+
+### Scoperte chiave
+- **FitPrime è diventata B2B** → prezzi consumer eliminati, 1.605 venue senza fonte diretta
+- **ClassPass**: Cloudflare block, richiede account + cookies manuali
+- **Siti web diretti**: hit rate ~7% ma scala a 3.095 venue disponibili
+
+### Script (agent_ceo_gym/)
+| Script | Stato | Output |
+|--------|-------|--------|
+| `gym_s1_chains.py` | ✅ | gym_chain_prices.csv (12 prezzi) |
+| `gym_s1_websites.py` | ✅ 150/3095 | gym_website_prices.csv (24 prezzi) |
+| `gym_s1_classpass.py` | ⚠️ CF block | da rifare con account |
+| `gym_s1_reviews_miner.py` | ⚠️ selettori rotti | da fixare |
+
+### Task attivi
+- **Pietro S9**: full run `gym_s1_websites.py` su 3.095 venue (vedi `PROMPT_PIETRO_S9.md`)
+- **CEO**: Supabase setup per crowdsourcing (vedi `SUPABASE_SETUP_TONIGHT.md`)
+- **Peppe**: frontend barbieri prima, gym dopo prezzi disponibili
 
 ---
 
