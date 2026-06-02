@@ -168,6 +168,23 @@ Rate **2–5 s/req**, stop+log su 403 ripetuti, **salva incrementale + resumable
 
 ## STEP 7 — METADATA ENRICHMENT (bounded, no overwrite)
 
+### 7.1 — OPENING HOURS ⭐ OBBLIGATORIO per TUTTI i venues
+**Requisito CEO: ogni venue in output DEVE avere un `opening_hours` valorizzato** — orario reale dove disponibile, altrimenti una **fascia oraria indicativa per `venue_type`**. Nessun venue con `opening_hours` vuoto.
+
+Cascata (priorità):
+1. **OSM `opening_hours`** — **re-query Overpass includendo il tag `opening_hours`** (la `osm_milano_drink_overpass.csv` attuale non lo contiene): `node/way["amenity"~"^(bar|pub|cafe|nightclub|biergarten)$"](area Milano); out center tags;`. Join per geo/nome → adotta l'orario reale OSM (formato spec OSM, es. `Mo-Su 07:00-20:00`).
+2. **TheFork JSON-LD** `openingHours` dove presente.
+3. **Fallback `typical_by_type`** (fascia indicativa realistica Milano) per chi resta senza orario reale:
+   ```
+   cafe          Mo-Su 07:00-20:00      cocktail_bar  Mo-Su 18:00-02:00
+   pub           Mo-Su 17:00-02:00      wine_bar      Mo-Su 17:00-00:00
+   aperitivo_bar Mo-Su 17:00-22:00      bistro        Mo-Su 12:00-00:00
+   craft_beer    Mo-Su 17:00-01:00      rooftop       Mo-Su 18:00-01:00
+   hotel_bar     Mo-Su 11:00-00:00      unknown       Mo-Su 08:00-22:00
+   ```
+Traccia la provenienza in **`opening_hours_source ∈ {osm, thefork, typical_by_type}`** così il frontend mostra "orario indicativo" per i typical. **Mai inventare un orario reale**: la fascia è dichiaratamente tipica.
+
+### 7.2 — Altri campi (no overwrite)
 - **website/phone**: dai campi OSM Overpass (gratis, già nel file) → riempi i vuoti dei canonical matchati.
 - **address**: già presente (Comune) o reverse-geocode (Nominatim, 1.2 s) solo per i pochi senza address ma con geo reale; **sanitizza CAP non-20xxx e mojibake** con le funzioni agent6.
 - **NON** scrapare prezzi (fuori scope). **NON** sovrascrivere dati esistenti.
@@ -183,9 +200,9 @@ source_platform, source_venue_id, venue_name, venue_url, address, city,
 latitude, longitude, categories, price_tier, rating, rating_count,
 phone, website, opening_hours, has_menu, menu_url, extraction_status, retrieved_at,
 venue_type, target_classification, has_price, geocoding_confidence,
-all_names, nil_quartiere, name_source, source_provenance
+all_names, nil_quartiere, name_source, source_provenance, opening_hours_source
 ```
-`has_price=False` per tutti. Solo **TARGET + AMBIGUOUS_TO_REVIEW** (no NO_TARGET).
+`has_price=False` per tutti. `opening_hours` **sempre valorizzato** (vedi 7.1). Solo **TARGET + AMBIGUOUS_TO_REVIEW** (no NO_TARGET).
 
 ### File 2 — `raw_sources/agent7_dedup_map.csv`
 `canonical_name, all_variants, geo_key, source_provenance, cluster_size, dropped_reason`
@@ -213,6 +230,7 @@ Per ogni venue in output:
 - `not is_junk_name(venue_name)`.
 - nome pulito (no HTML/URL/pipe; mojibake riparato; CAP `.0` rimosso).
 - **placeholder-only name** (`[bar non identificato]` senza recovery) → ammesso **solo** se ha geo+address validi, marcato `name_source=placeholder` per UI ("Bar in Via X" generico). Altrimenti scarta.
+- **`opening_hours` NON vuoto** (reale OSM/thefork o `typical_by_type`) — requisito CEO, vedi 7.1.
 - Ogni cluster = **1 sola riga canonical**.
 
 ```python
@@ -247,7 +265,8 @@ def quality_gate(v, in_db_norm, in_db_geo):
 | Doppioni vs DB evitati | tutti (0 venue già in DB nell'output) |
 | venue_type | ≥ 8/9 tipi reali rappresentati |
 | Copertura NIL quartiere | tutti i NIL con ≥3 venues, ≥70 NIL |
-| website/phone aggiunti da OSM | ≥ 800 / ≥ 700 |
+| **opening_hours coverage** ⭐ OBBLIGATORIO | **100%** (reale OSM/thefork o typical_by_type) |
+| website/phone aggiunti da OSM | realistico: ceiling ~350/~410 in OSM drink (no restaurant), ~120/~260 dopo dedup+DB |
 | **TheFork discovery** (metadata Milano, no prezzi) — OBBLIGATORIO | ≥ 100 venues |
 
 ---
