@@ -6,6 +6,68 @@
 
 ---
 
+## 2026-06-03 NOTTE — CEO scraper bestiale GYM → 11.043 palestre Italia
+
+### Trigger
+Utente: "parti a bomba palestre, scraping ossessivo vincente". Deepseek aveva suggerito FitPrime + ClassPass + catene ufficiali + CiaoPalestra + Google Places.
+
+### Esecuzione (8 fronti paralleli, ~50 min)
+
+| Source | Esito | Yield |
+|---|---|---|
+| **OSM Overpass Italia** (amenity=gym/leisure=fitness_centre) | ✅ | **11.140 venues** |
+| **Anytime Fitness IT** (`/club_db-sitemap.xml` + JSON-LD) | ✅ | 77 sedi complete |
+| **GetFit** (`/club-sitemap.xml`) | ✅ | 8 sedi Milano |
+| Virgin Active `/clubs` | 🟡 | HTML raw, no API |
+| McFit, FitPrime API discovery (16 endpoint) | ❌ | tutti chiusi |
+| ClassPass | ❌ | Cloudflare anti-bot |
+| CiaoPalestra, 20vventi | ❌ | DNS dead |
+| CKAN Milano palestre | ❌ | categoria non separata |
+
+### 🏆 OUTPUT — `raw_sources/gym_master_italia.csv` (11.043 venues)
+
+| Source | Count |
+|---|---|
+| OSM Overpass | 10.958 |
+| Anytime sito | 77 |
+| GetFit sito | 8 |
+
+### Top città (auto-detect via bbox)
+Roma 333 · Milano 330 · Torino 168 · Bologna 105 · Firenze 69 · Napoli 54 · Pescara 45 · Modena 36 · Monza 34 · Alessandria 31
+
+### Top brand catene mapped (15)
+CrossFit 72 · FitActive 47 · Virgin Active 31 · Anytime Fitness 28 · McFit 28 · GetFit 13 · Fit Express 11 · Palestre Italiane 8 · ICON 8 · FITINN 3 · Mrs. Sporty 3 · MaxiFit 3 · Curves 2 · Skyfitness 2 · Bodystreet 2
+
+### venue_type distribution (9 tipi)
+gym 9.250 · climbing_gym 800 · pool 418 · yoga_studio 168 · wellness_center 111 · crossfit_box 83 · martial_arts 82 · pilates_studio 65 · boxing_gym 58
+
+### Onestà sui prezzi
+**0 prezzi gym estratti**. Tutte le catene NON espongono listini online ("vieni in club"). Crowdsourcing path obbligatorio.
+
+### Tecniche tecniche aperte per futuro
+1. **OSM Overpass `amenity=gym`** = base universal Italia 11K venues (replicabile per ogni vertical Italia)
+2. **Sitemap dedicato `/<entity>_db-sitemap.xml`** = pattern catene (Anytime usa, altri probabilmente analoghi)
+3. **JSON-LD `HealthClub`/`GymOrFitnessCenter`** strutturato nei siti catena = metadata pronto
+
+### File prodotti
+- `raw_sources/gym_master_italia.csv` (11.043 venues — frontend-ready)
+- `raw_sources/osm_gym_italia_raw.csv` (11.140 OSM raw)
+- `raw_sources/gym_anytime_italia.csv` (77 Anytime)
+- `raw_sources/gym_getfit_milano.csv` (8 GetFit)
+- `NIGHT_GYM_RESEARCH.md` (report tecnico completo)
+
+### Stato finale SurPrice (multi-vertical)
+| Vertical | Venues | Prezzi |
+|---|---|---|
+| Drink Milano | 153 + 3.172 = 3.325 | 964 |
+| Beach Italia | 13.646 / 1.731 prezzati | 3.443 |
+| **Gym Italia (NEW)** | **11.043** | 0 (paywalled) |
+| Barbieri | Peppe S1 in lancio | TBD |
+
+**Totale**: ~28.000 venues SurPrice Italia.
+
+---
+
 ## 2026-06-03 SERA — Strategic pivot: multi-vertical + multi-city expansion
 
 ### Decisione CEO/Utente (call odierna)

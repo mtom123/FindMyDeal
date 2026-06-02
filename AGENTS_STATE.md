@@ -9,7 +9,7 @@
 | 🍹 **drink** | Pietro (scraper) | Milano done, **S7 Milano discovery in corso**, S8 = espansione 6 città IT (pending) | Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia |
 | 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
 | 💈 **barber** | Peppe (vertical owner) | S1 in lancio (nuovo) | Milano prima, poi Italia |
-| 💪 **gym** | Utente diretto | In planning (S1 futuro) | Milano prima |
+| 💪 **gym** | Utente diretto + CEO bootstrap | **CEO night discovery 11.043 venues Italia done**, utente prende lead next | Italia 7+ città (Roma 333, Milano 330, Torino 168, Bologna 105, Firenze 69, Napoli 54, ...) |
 
 ## Architettura multi-vertical
 
