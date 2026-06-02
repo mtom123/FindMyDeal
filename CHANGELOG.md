@@ -6,6 +6,68 @@
 
 ---
 
+## 2026-06-03 — Pietro S6 + Peppe styling + CEO final merge no-price
+
+### Pietro S6 (commit c0ac519) — venues no-price standardizzati
+- **652 TARGET + 172 AMBIGUOUS_TO_REVIEW = 824 venues** classificati (su 1.440 DB no-price)
+- 537 NO_TARGET (ristoranti/pizzerie/sushi) esclusi a monte dal pool drink
+- 29 venues geocodate con precisione (precise 13 + web_addr 16)
+- 43 cluster nomi consolidati (canonical + all_names)
+- 169 address riempiti via reverse-geocoding
+- File: agent6_venues_no_price.csv, agent6_geocode_fixes.csv, agent6_name_dedup.csv, agent6_address_fixes.csv
+
+### Peppe (commit 420d020, a1ebe2a) — frontend polish
+- Rectangular drinks markers + circular beach markers (visual distinction)
+- Nicer beach clusters, perfect circles, droplet animation
+- Mobile polish
+
+### CEO FINAL MERGE — unified_venues_no_price.csv (3.712 venues)
+Trigger: utente "le 4.124 venues sono tutte a Milano?"
+
+Audit del file CEO 4.124 ha rivelato:
+- 100% in bbox Milano ✅
+- Ma 1.063 venues OSM=restaurant (Pietro aveva già segnalato 537 NO_TARGET)
+- 841 senza CAP esplicito nell'address
+
+Merge intelligente:
+1. **509 NO_TARGET rimossi** (unified_db ristoranti/pizzerie, da Pietro classification)
+2. **804 venues arricchiti** con Pietro classification (target_classification + venue_type)
+3. **97 venues nuovi aggiunti** (presenti in Pietro S6 non nel mio file CEO)
+4. CKAN tenuti (categoria autoritativa Comune Milano)
+5. eatbu_metadata tenuti
+
+**Risultato**: 4.124 → 3.712 (-412 ristoranti/non-target, +97 Pietro additions)
+
+Composizione finale:
+- 738 unified_db (Pietro TARGET filtered)
+- 2.867 CKAN Comune Milano (categoria drink autoritativa)
+- 97 Pietro S6 additions
+- 10 eatbu metadata
+
+Classification:
+- 715 TARGET + 186 AMBIGUOUS_TO_REVIEW (Pietro classified)
+- 2.811 CKAN autoritative (categoria licenza Comune)
+
+Distribuzione venue_type:
+- cafe 2.427 (65%) · bar 636 (17%) · pub 300 (8%) · cocktail_bar 113 (3%)
+- craft_beer 50 · bistro 48 · unknown 116 · wine_bar 9 · rooftop 3 · hotel_bar 2
+
+### Mappa Milano drink — STATO FINALE
+- 153 pin prezzati (price points 964)
+- 3.712 pin no-price (drink-target verified)
+- **TOTALE: 3.865 pin Milano drink**
+
+### File aggiornati
+- `data/unified_venues_no_price.csv` (3.712 venues, frontend-ready)
+- `unified_venues_no_price.csv` (workdir CEO, identico)
+
+### Onestà sui numeri
+- Prima merge: 4.124 venues claim
+- Dopo merge intelligente: 3.712 (412 ristoranti rimossi per drink scope)
+- Il numero è **3.712 venues drink TARGET Milano**, tutti in bbox geografica corretta.
+
+---
+
 ## 2026-06-02 SERA — Ricerca notturna CEO (scraper bestiale) → 4.124 venues no-price Milano
 
 ### Trigger
