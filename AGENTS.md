@@ -75,45 +75,28 @@ Verticals attivi: **Drink** (Milano) · **Beach** (Italia) · **Barber** (Italia
 
 ## Workflow Git — REGOLE OBBLIGATORIE
 
-### Problema comune: "Merge branch 'main'"
-Se vedi questo nei tuoi commit, stai sbagliando. Succede quando fai `git pull` dopo un `git commit` con divergenze remote. **Soluzione:**
+### Setup una volta sola (su ogni macchina del team)
 
 ```bash
-# CONFIGURA UNA VOLTA SOLA (ogni macchina):
 git config --global pull.rebase true
-
-# oppure ogni volta che fai pull:
-git pull --rebase origin main
 ```
 
-Con `pull.rebase true`, invece di creare un merge commit, git riapplica i tuoi commit sopra quelli remoti → storia pulita.
+Questo è tutto. Tutti lavorano su `main` direttamente — CEO, Pietro, Peppe — senza branch.
 
-### Workflow scraper (Pietro)
+### Perché "Merge branch 'main'" succede (e come evitarlo)
+
+Succede quando fai `git commit` in locale e poi fai `git pull` mentre ci sono nuovi commit remoti. Git vede due storie divergenti e crea un merge commit automatico. Con `pull.rebase true` invece riapplica i tuoi commit sopra quelli remoti → storia pulita, nessun merge commit.
+
+### Workflow per tutti (CEO, Pietro, Peppe)
 
 ```bash
-git pull --rebase origin main          # SEMPRE prima di iniziare
+git pull --rebase origin main     # SEMPRE prima di iniziare
 # ... lavora ...
-git add raw_sources/{fonte}_*.csv
-git add agent_ceo_gym/gym_*.csv        # per task gym
-git commit -m "data: S9 gym — X venue prezzate, website direct"
+git add <file specifici>
+git commit -m "tipo: descrizione chiara"
 git push origin main
-# poi avvisa il CEO
+# avvisa il CEO se hai pushato dati da mergiare
 ```
-
-### Workflow frontend (Peppe)
-
-```bash
-git pull --rebase origin main          # SEMPRE prima di iniziare
-git checkout -b feat/barber-frontend   # USA SEMPRE UN BRANCH
-# ... lavora ...
-git add barber.html scripts/... data/...
-git commit -m "feat: barber frontend — mappa base + marker esagonali"
-git push origin feat/barber-frontend
-# apri PR su GitHub → CEO fa review e merge
-```
-
-**Peppe: usa SEMPRE un feature branch. Non committare direttamente su main.**
-I PR permettono al CEO di fare review prima che i tuoi cambiamenti vadano live.
 
 ### Workflow CEO
 
