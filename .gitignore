@@ -53,3 +53,7 @@ barber_s1_fresha.log
 * 2.html
 * 2.json
 * 2.csv
+
+# Local data backups
+data/*.bak
+data/*.bak2

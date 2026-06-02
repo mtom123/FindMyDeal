@@ -214,23 +214,25 @@ a { color: inherit; text-decoration: none; }
 /* ═══════════════════════════════════════════════════════════
    FILTER BAR
 ═══════════════════════════════════════════════════════════ */
+/* Products row (Spritz/Negroni…) — small mono uppercase, like haircut service bar */
 #fbar {
-  height: var(--fbar-h); flex-shrink: 0;
-  background: var(--s1); border-bottom: 1px solid var(--b1);
+  height: 28px; flex-shrink: 0;
+  background: var(--s2); border-bottom: 1px solid var(--b0);
   display: flex; align-items: stretch;
   overflow-x: auto; overflow-y: hidden;
-  scrollbar-width: none; z-index: 400;
+  scrollbar-width: none; z-index: 390;
 }
 #fbar::-webkit-scrollbar { display: none; }
 
 .ftab {
-  display: flex; align-items: center; gap: 5px;
+  display: flex; align-items: center; gap: 6px;
   padding: 0 14px; flex-shrink: 0;
-  font-size: 0.68rem; font-weight: 500; color: var(--t3);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem; font-weight: 500; color: var(--t3);
   border-bottom: 1.5px solid transparent;
   cursor: pointer; white-space: nowrap;
   transition: color .12s, border-color .12s;
-  letter-spacing: .02em; text-transform: uppercase;
+  letter-spacing: .08em; text-transform: uppercase;
 }
 .ftab:hover { color: var(--t2); }
 .ftab.active {
@@ -239,7 +241,7 @@ a { color: inherit; text-decoration: none; }
 }
 .ftab-n {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.56rem; color: var(--t3);
+  font-size: 0.50rem; color: var(--t3); opacity: .75;
   transition: color .12s;
 }
 .ftab.active .ftab-n { color: var(--t2); }
@@ -814,18 +816,19 @@ input[type=range].sb-range::-moz-range-thumb {
 /* ═══════════════════════════════════════════════════════════
    CATEGORY BAR
 ═══════════════════════════════════════════════════════════ */
+/* Categories row (Tutti/Cocktail…) — big tabs, like haircut gender bar */
 #catbar {
-  height: 28px; flex-shrink: 0;
-  background: var(--s2); border-bottom: 1px solid var(--b0);
+  height: var(--fbar-h); flex-shrink: 0;
+  background: var(--s1); border-bottom: 1px solid var(--b1);
   display: flex; align-items: stretch;
   overflow-x: auto; scrollbar-width: none; z-index: 390;
 }
 #catbar::-webkit-scrollbar { display: none; }
 .catbtn {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.52rem; font-weight: 500;
-  letter-spacing: .10em; text-transform: uppercase; color: var(--t3);
-  padding: 0 14px; flex-shrink: 0; cursor: pointer;
+  display: flex; align-items: center;
+  font-size: 0.67rem; font-weight: 500;
+  letter-spacing: .03em; color: var(--t3);
+  padding: 0 16px; flex-shrink: 0; cursor: pointer;
   border-bottom: 1.5px solid transparent;
   transition: color .12s, border-color .12s;
   white-space: nowrap;
@@ -1564,6 +1567,158 @@ input[type=range].sb-range::-moz-range-thumb {
   font-size: 0.65rem; color: var(--deal-t); font-weight: 500;
   background: var(--deal-bg); border-bottom: 1px solid var(--b0);
 }
+
+/* ═══ COMMUNITY CONTRIBUTION SECTION ══════════════════════ */
+.comm-sec {
+  padding: 12px 16px; border-bottom: 1px solid var(--b0);
+  background: var(--s2);
+}
+.comm-sec-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.46rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--t3); margin-bottom: 9px;
+}
+.comm-rate-lbl {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.62rem; font-weight: 300;
+  color: var(--t3); letter-spacing: .01em;
+  margin-bottom: 6px; font-style: italic;
+}
+.comm-stars { display: flex; align-items: center; gap: 2px; margin-bottom: 9px; }
+.comm-star {
+  font-size: 1.05rem; cursor: pointer;
+  color: var(--b2); transition: color .08s, transform .08s;
+  line-height: 1; user-select: none;
+}
+.comm-star.on, .comm-star:hover { color: #c98a00; }
+.comm-star:hover { transform: scale(1.18); }
+.comm-star-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem; color: var(--t3); margin-left: 5px; letter-spacing: .06em;
+}
+.comm-actions { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
+.comm-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; letter-spacing: .05em;
+  padding: 4px 8px; border: 1px solid var(--b1);
+  color: var(--t2); cursor: pointer;
+  transition: all .12s; background: var(--s1); flex-shrink: 0;
+}
+.comm-btn:hover { background: var(--s3); color: var(--t1); border-color: var(--b2); }
+.comm-btn.done { color: var(--deal-t); border-color: var(--deal-b); background: var(--deal-bg); cursor: default; }
+.comm-btn.warn { color: var(--exp-t); border-color: var(--exp-b); background: var(--exp-bg); cursor: default; }
+.comm-status {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem; color: var(--t3); letter-spacing: .04em; line-height: 1.5; min-height: 1em;
+}
+.comm-cta {
+  font-size: 0.58rem; color: var(--t3); margin-top: 7px;
+  line-height: 1.55; border-top: 1px solid var(--b0); padding-top: 7px;
+}
+.comm-upload-inp { display: none; }
+/* Inside det-head — no background, top separator */
+.det-head .comm-sec {
+  background: transparent; border-bottom: none;
+  border-top: 1px solid var(--b0);
+  padding: 10px 0 2px; margin-top: 8px;
+}
+.det-head .comm-sec .comm-sec-lbl { display: none; }
+/* Inside np-popup */
+.np-popup .comm-sec {
+  background: transparent; border-bottom: 1px solid var(--b0);
+  padding: 8px 0 10px; margin-bottom: 8px;
+}
+.np-popup .comm-sec .comm-sec-lbl { display: none; }
+
+/* ═══ HAIRCUT VERTICAL ═════════════════════════════════════ */
+/* Rectangular marker — same visual language as drinks .pm */
+.pm.pm-barber {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  padding: 3px 7px; line-height: 1;
+  border: 1px solid #fff; border-radius: 3px;
+  color: #fff; white-space: nowrap; letter-spacing: -.01em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.28);
+  display: inline-block; cursor: pointer;
+  transition: transform .10s, box-shadow .10s;
+}
+.pm.pm-barber::after { display: none; }
+.pm.pm-barber:hover  { transform: scale(1.12) translateY(-1px); z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.34); }
+.pm.pm-barber.sel    { transform: scale(1.20) translateY(-2px); z-index: 200; box-shadow: 0 5px 15px rgba(0,0,0,0.38); }
+.pm.pm-barber.deal   { background: #1e6639; }
+.pm.pm-barber.avg    { background: #8a6400; }
+.pm.pm-barber.exp    { background: #8b1a1a; }
+.pm.pm-barber.np     {
+  background: #b8b6ad; width: 13px; height: 13px;
+  padding: 0; border: 1.5px solid #fff; border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+}
+.pm.pm-barber.np:hover { background: #8a8780; }
+/* Cluster — circular, same as beach (avg price + count) */
+.marker-cluster.bcluster-barber-deal div { background: #1e6639 !important; }
+.marker-cluster.bcluster-barber-avg  div { background: #8a6400 !important; }
+.marker-cluster.bcluster-barber-exp  div { background: #8b1a1a !important; }
+.bcluster-barber-deal, .bcluster-barber-avg, .bcluster-barber-exp {
+  display: flex; align-items: center; justify-content: center;
+}
+/* Gender bar — mirrors beach season bar (#bbar / .bseasbtn) */
+#bgenderbar {
+  height: var(--fbar-h); flex-shrink: 0;
+  background: var(--s1); border-bottom: 1px solid var(--b1);
+  display: flex; align-items: stretch; overflow-x: auto;
+  scrollbar-width: none; z-index: 400;
+}
+#bgenderbar::-webkit-scrollbar { display: none; }
+.bgchip {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 16px; flex-shrink: 0;
+  font-size: 0.67rem; font-weight: 500; color: var(--t3);
+  border-bottom: 1.5px solid transparent;
+  cursor: pointer; white-space: nowrap;
+  transition: color .12s, border-color .12s; letter-spacing: .03em;
+  background: none; border-top: none; border-left: none; border-right: none;
+}
+.bgchip:hover { color: var(--t2); }
+.bgchip.active { color: var(--t1); border-bottom-color: var(--t1); }
+/* Service bar — mirrors beach category bar (#bcatbar / .bcatbtn) */
+#bservicebar {
+  height: 28px; flex-shrink: 0;
+  background: var(--s2); border-bottom: 1px solid var(--b0);
+  display: flex; align-items: stretch;
+  overflow-x: auto; scrollbar-width: none; z-index: 391;
+}
+#bservicebar::-webkit-scrollbar { display: none; }
+.bsvcbtn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--t3);
+  padding: 0 14px; flex-shrink: 0; cursor: pointer;
+  border-bottom: 1.5px solid transparent;
+  transition: color .12s, border-color .12s; white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+  background: none; border-top: none; border-left: none; border-right: none;
+}
+.bsvcbtn:hover { color: var(--t2); }
+.bsvcbtn.active { color: var(--t1); border-bottom-color: var(--t1); }
+.bsvcbtn-n { font-size: 0.50rem; color: var(--t3); opacity: .75; }
+.barber-city-chips {
+  padding: 10px 14px 12px; display: flex; flex-wrap: wrap; gap: 4px;
+  border-bottom: 1px solid var(--b0);
+}
+.barber-city-chip {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t2);
+  padding: 3px 7px; border: 1px solid var(--b1);
+  cursor: pointer; transition: all .12s; white-space: nowrap;
+}
+.barber-city-chip:hover { background: var(--s3); color: var(--t1); border-color: var(--b2); }
+.barber-city-n { color: var(--t3); margin-left: 3px; }
+.barber-cta-hint {
+  padding: 14px 18px 10px; font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem; color: var(--t3); letter-spacing: .06em;
+  line-height: 1.6; border-bottom: 1px solid var(--b0);
+}
   </style>
 </head>
 <body>
@@ -1616,6 +1771,9 @@ input[type=range].sb-range::-moz-range-thumb {
     <button class="vtab" id="vt-balneari" onclick="selectVertical('balneari')">
       <span class="vtab-dot"></span><span data-i18n="balneari">Beach</span> ☀
     </button>
+    <button class="vtab" id="vt-barbieri" onclick="selectVertical('barbieri')">
+      <span class="vtab-dot"></span><span data-i18n="barbieri">Haircut</span> ✂
+    </button>
   </div>
 
   <!-- CATEGORY BAR (drinks only) -->
@@ -1640,12 +1798,22 @@ input[type=range].sb-range::-moz-range-thumb {
     <button class="bseasbtn" id="bs-mid" onclick="selectBeachSeason('mid')">
       ◑ <span data-i18n="low_season">Low season</span> <span class="bseas-tag" data-i18n="june_dates">15–21 June</span>
     </button>
-    <div class="bseas-divider"></div>
-    <button class="bseasbtn" id="b-toggle-unpriced" onclick="toggleBeachUnpriced()" data-i18n="show_unpriced">○ Show without price</button>
   </div>
 
   <!-- BEACH CATEGORY BAR (balneari only, hidden by default) -->
   <div id="bcatbar" class="hidden"></div>
+
+  <!-- HAIRCUT GENDER BAR -->
+  <div id="bgenderbar" class="hidden">
+    <button class="bgchip active" data-gender="man" onclick="selectBarberGender('man')" data-i18n="barber_men">Men</button>
+    <div class="bseas-divider"></div>
+    <button class="bgchip" data-gender="woman" onclick="selectBarberGender('woman')" data-i18n="barber_women">Women</button>
+    <div class="bseas-divider"></div>
+    <button class="bgchip" data-gender="child" onclick="selectBarberGender('child')" data-i18n="barber_kids">Kids</button>
+  </div>
+
+  <!-- BARBER SERVICE BAR -->
+  <div id="bservicebar" class="hidden"></div>
 
   <!-- RADIUS BAR -->
   <div id="rbar">
@@ -1653,7 +1821,7 @@ input[type=range].sb-range::-moz-range-thumb {
     <div class="rb-divider"></div>
     <button class="rb-reset" id="zones-btn" onclick="toggleZones()" style="display:block;" data-i18n="show_zones">◻ Show zones</button>
     <div class="rb-divider"></div>
-    <button class="rb-reset" id="nodp-btn" onclick="toggleDrinkNoPrice()" style="display:block;" data-i18n="all_milan_bars">○ All Milan bars</button>
+    <button class="rb-reset" id="nodp-btn" onclick="toggleNoPrice()" style="display:block;">○ Show without price</button>
     <div class="rb-divider" id="reset-div" style="display:none;"></div>
     <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()" data-i18n="reset_view">↺ Reset view</button>
   </div>
@@ -1831,6 +1999,8 @@ input[type=range].sb-range::-moz-range-thumb {
 <!-- LEAFLET -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<!-- EXIFR — EXIF reader for community photo uploads -->
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/lite.umd.js"></script>
 
 <script>
 /* ──────────────────────────────────────────
@@ -1857,6 +2027,9 @@ const I18N = {
     show_regions: '◻ Show regions', hide_regions: '◼ Hide regions',
     all_milan_bars: '○ All Milan bars',
     hide_milan_bars: '● Hide Milan bars',
+    np_show: '○ Show {n} without price',
+    np_hide: '● Hide {n} without price',
+    np_n_drinks: 'venues', np_n_beach: 'venues', np_n_barber: 'salons',
     reset_view: '↺ Reset view',
     // Sidebar drinks
     nearby: 'Nearby', best_deals: 'Best Deals',
@@ -1873,7 +2046,7 @@ const I18N = {
     // Sidebar beach
     beach_title: 'Beach', stats: 'Statistics',
     italy_view: 'Italy', regional_view: 'Regional view', local_view: 'Local',
-    median: 'Median', mean: 'Mean',
+    median: 'Median', mean: 'Mean', deals_kw: 'deals',
     with_price: 'With price', without_price: 'Without price',
     venues_in_view: 'venues in view',
     no_priced_in_view: 'No prices in view',
@@ -1958,6 +2131,36 @@ const I18N = {
     zc_venues_in_zone: 'venues in zone',
     zc_no_venues: 'No venues for current product',
     zc_total_bars: 'total bars',
+    // Community
+    comm_rate_lbl: 'Worth the price?',
+    comm_confirm_price: '✓ Price OK',
+    comm_report_price: '✗ Wrong price',
+    comm_report_prices: 'Add prices',
+    comm_upload_photo: '↑ Photo',
+    comm_upload_menu: '↑ Menu photo',
+    comm_already_rated: '★ Rated',
+    comm_price_confirmed: '✓ Confirmed',
+    comm_price_reported: '✗ Reported',
+    comm_prices_reported: '✓ Reported',
+    comm_uploaded: '↑ Uploaded',
+    comm_pending: 'Pending review.',
+    comm_loc_verified: 'Location verified. Pending review.',
+    comm_no_exif: 'Upload received. Pending verification.',
+    comm_duplicate: 'Similar image detected. Pending review.',
+    comm_create_profile: 'Create a profile to save your contributions and earn rewards.',
+    // Barber
+    barbieri: 'Haircut',
+    barber_men: 'Men', barber_women: 'Women', barber_kids: 'Kids',
+    barber_all_services: 'All services',
+    barber_salons: 'salons',
+    barber_priced: 'priced',
+    barber_median: 'median',
+    barber_nat_median: 'nat. median',
+    barber_other_services: 'Other services',
+    barber_select_hint: '← Select gender and service to see prices',
+    barber_no_prices: 'Prices not available.',
+    barber_no_prices_msg: 'Help us by reporting prices.',
+    barber_select_service: '← Select a service to see prices',
   },
   it: {
     drinks: 'Drink', balneari: 'Balneari',
@@ -1975,6 +2178,9 @@ const I18N = {
     show_regions: '◻ Mostra regioni', hide_regions: '◼ Nascondi regioni',
     all_milan_bars: '○ Tutti i bar Milano',
     hide_milan_bars: '● Nascondi bar Milano',
+    np_show: '○ Mostra {n} senza prezzo',
+    np_hide: '● Nascondi {n} senza prezzo',
+    np_n_drinks: 'locali', np_n_beach: 'stabilimenti', np_n_barber: 'saloni',
     reset_view: '↺ Reimposta vista',
     nearby: 'Vicino a te', best_deals: 'Migliori offerte',
     nearby_sub: 'Prezzi convenienti vicini',
@@ -1988,7 +2194,7 @@ const I18N = {
     off: 'Off',
     beach_title: 'Balneari', stats: 'Statistiche',
     italy_view: 'Italia', regional_view: 'Vista regionale', local_view: 'Locale',
-    median: 'Mediana', mean: 'Media',
+    median: 'Mediana', mean: 'Media', deals_kw: 'offerte',
     with_price: 'Con prezzo', without_price: 'Senza prezzo',
     venues_in_view: 'stabilimenti in vista',
     no_priced_in_view: 'Nessun prezzo in vista',
@@ -2064,6 +2270,36 @@ const I18N = {
     zc_venues_in_zone: 'locali in zona',
     zc_no_venues: 'Nessun locale per il prodotto selezionato',
     zc_total_bars: 'bar totali',
+    // Community
+    comm_rate_lbl: 'Vale quanto costa?',
+    comm_confirm_price: '✓ Prezzo OK',
+    comm_report_price: '✗ Prezzo errato',
+    comm_report_prices: 'Segnala prezzi',
+    comm_upload_photo: '↑ Foto',
+    comm_upload_menu: '↑ Foto menu',
+    comm_already_rated: '★ Valutato',
+    comm_price_confirmed: '✓ Confermato',
+    comm_price_reported: '✗ Segnalato',
+    comm_prices_reported: '✓ Segnalato',
+    comm_uploaded: '↑ Caricato',
+    comm_pending: 'In attesa di revisione.',
+    comm_loc_verified: 'Posizione verificata. In attesa di revisione.',
+    comm_no_exif: 'Upload ricevuto. Verifica in corso.',
+    comm_duplicate: 'Immagine simile rilevata. In attesa di revisione.',
+    comm_create_profile: 'Crea un profilo per salvare i tuoi contributi e guadagnare premi.',
+    // Barber
+    barbieri: 'Haircut',
+    barber_men: 'Uomo', barber_women: 'Donna', barber_kids: 'Bambino',
+    barber_all_services: 'Tutti i servizi',
+    barber_salons: 'saloni',
+    barber_priced: 'prezzati',
+    barber_median: 'mediana',
+    barber_nat_median: 'mediana naz.',
+    barber_other_services: 'Altri servizi',
+    barber_select_hint: '← Seleziona genere e servizio per vedere i prezzi',
+    barber_no_prices: 'Prezzi non disponibili.',
+    barber_no_prices_msg: 'Aiutaci segnalando i prezzi.',
+    barber_select_service: '← Seleziona un servizio per vedere i prezzi',
   },
 };
 function t(key, vars) {
@@ -2091,6 +2327,10 @@ function setLang(lang) {
   // Re-render dynamic UI
   if (S.vertical === 'drinks') {
     if (S.venues) render(S.venues);
+  } else if (S.vertical === 'barbieri' && S.barberData) {
+    buildBarberServiceBar();
+    renderBarberSidebar();
+    renderBarber();
   } else if (S.beachData) {
     buildBeachCategoryBar();
     renderBeach();
@@ -2100,19 +2340,14 @@ function setLang(lang) {
   if (zb) {
     if (S.vertical === 'balneari') {
       zb.textContent = S.beachShowRegions ? t('hide_regions') : t('show_regions');
+    } else if (S.vertical === 'barbieri') {
+      zb.textContent = S.barberShowRegions ? t('hide_regions') : t('show_regions');
     } else {
       zb.textContent = t(S.zoneMode === 'show' ? 'hide_borders' :
                           S.zoneMode === 'off'  ? 'enable_zones' : 'show_zones');
     }
   }
-  const npBtn = document.getElementById('nodp-btn');
-  if (npBtn) {
-    npBtn.textContent = S.drinkNoPriceShow
-      ? `● ${t('hide_milan_bars')}${S.drinkNoPrice ? ' ('+S.drinkNoPrice.length+')' : ''}`
-      : t('all_milan_bars');
-  }
-  const ubBtn = document.getElementById('b-toggle-unpriced');
-  if (ubBtn) ubBtn.textContent = S.beachShowUnpriced ? t('hide_unpriced') : t('show_unpriced');
+  syncNoPriceBtn();
   const peakBtn = document.getElementById('bs-peak');
   if (peakBtn) peakBtn.innerHTML = `☀ ${t('high_season')} <span class="bseas-tag">${t('august_dates')}</span>`;
   const midBtn = document.getElementById('bs-mid');
@@ -2150,6 +2385,15 @@ const S = {
     radius: null,
     marker: null,
   },
+  // Haircut vertical
+  barberData:        null,
+  barberGender:      'man',  // 'man' | 'woman' | 'child' (always set)
+  barberCategory:    null,   // 'haircut_man' | ... (auto-picked)
+  barberCluster:     null,
+  barberShowRegions: false,
+  barberRegionLayers: [],
+  barberShowNoPrice: false,
+  barberNoPriceCluster: null,
 };
 
 /* ──────────────────────────────────────────
@@ -2301,6 +2545,10 @@ function toggleZones() {
     toggleBeachRegions();
     return;
   }
+  if (S.vertical === 'barbieri') {
+    toggleBarberRegions();
+    return;
+  }
   const idx = ZONE_MODES.indexOf(S.zoneMode);
   S.zoneMode = ZONE_MODES[(idx + 1) % 3];
   const btn = document.getElementById('zones-btn');
@@ -2318,7 +2566,8 @@ function toggleZones() {
 function renderZones() {
   _zoneLayers.forEach(l => l.remove());
   _zoneLayers = [];
-  if (!S.map || S.zoneMode === 'off') return;
+  // Milan hover-zones belong to the drinks vertical only
+  if (!S.map || S.zoneMode === 'off' || S.vertical !== 'drinks') return;
 
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
     const cov = S.zoneCoverage[key];
@@ -2600,19 +2849,38 @@ async function loadDrinkNoPrice() {
   return S.drinkNoPrice;
 }
 
+/* Unified "show without price" — dispatch + label by vertical */
+function noPriceLabel() {
+  const nounKey = S.vertical === 'drinks' ? 'np_n_drinks'
+                : S.vertical === 'balneari' ? 'np_n_beach' : 'np_n_barber';
+  const on = S.vertical === 'drinks' ? S.drinkNoPriceShow
+           : S.vertical === 'balneari' ? S.beachShowUnpriced : S.barberShowNoPrice;
+  return t(on ? 'np_hide' : 'np_show', { n: t(nounKey) });
+}
+function syncNoPriceBtn() {
+  const btn = document.getElementById('nodp-btn');
+  if (!btn) return;
+  const on = S.vertical === 'drinks' ? S.drinkNoPriceShow
+           : S.vertical === 'balneari' ? S.beachShowUnpriced : S.barberShowNoPrice;
+  btn.textContent = noPriceLabel();
+  btn.classList.toggle('on', !!on);
+}
+function toggleNoPrice() {
+  if (S.vertical === 'drinks')   return toggleDrinkNoPrice();
+  if (S.vertical === 'balneari') return toggleBeachUnpriced();
+  if (S.vertical === 'barbieri') return toggleBarberNoPrice();
+}
+
 async function toggleDrinkNoPrice() {
   if (S.vertical !== 'drinks') return;
   S.drinkNoPriceShow = !S.drinkNoPriceShow;
   const btn = document.getElementById('nodp-btn');
-  if (btn) {
-    btn.textContent = S.drinkNoPriceShow ? '● Nascondi bar Milano' : '○ Tutti i bar Milano';
-    btn.classList.toggle('on', S.drinkNoPriceShow);
-  }
+  syncNoPriceBtn();
   if (S.drinkNoPriceShow) {
     // Spinner state
     if (btn) btn.textContent = '⋯ ' + (S.lang === 'it' ? 'caricamento…' : 'loading…');
     const data = await loadDrinkNoPrice();
-    if (btn) btn.textContent = `● ${t('hide_milan_bars')} (${data.length})`;
+    syncNoPriceBtn();
     renderDrinkNoPrice();
     // Update zone coverage with the new venue pool
     calcZoneCoverage();
@@ -2678,11 +2946,11 @@ function openDrinkNoPricePopup(v, marker) {
   const html = `
     <div class="np-popup">
       <div class="np-popup-name">🍸 ${esc(v.venue_name || 'Locale')}</div>
+      ${buildCommHtml(slugId(v.venue_name || 'locale'), v.lat, v.lng, false)}
       <div class="np-popup-type">${esc(typeLbl)}</div>
       ${addrShort ? `<div class="np-popup-row"><span class="np-popup-row-icon">📍</span><span>${esc(addrShort)}</span></div>` : ''}
       ${quartiereHtml}
       <div class="np-popup-noprice">${t('price_unavailable')}</div>
-      <button class="np-popup-cta" onclick="drinkNoPriceContribute('${safeName}')">${t('contribute')}</button>
       ${linksHtml}
       <div class="np-popup-src">${t('source_lbl')} ${esc(v.source || '—')}</div>
     </div>`;
@@ -2694,6 +2962,555 @@ function openDrinkNoPricePopup(v, marker) {
 
 function drinkNoPriceContribute(name) {
   alert(t('contribute_alert', { name }));
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COMMUNITY — contribution store + photo upload
+══════════════════════════════════════════════════════════════ */
+const ContribStore = {
+  _key: 'surprice_contribs_v1', _hkey: 'surprice_phashes_v1',
+  _get() { try { return JSON.parse(localStorage.getItem(this._key) || '{}'); } catch(e) { return {}; } },
+  _set(d) { try { localStorage.setItem(this._key, JSON.stringify(d)); } catch(e) {} },
+  _session() {
+    let s; try { s = sessionStorage.getItem('surprice_sid'); } catch(e) {}
+    if (!s) { s = Math.random().toString(36).slice(2) + Date.now().toString(36); try { sessionStorage.setItem('surprice_sid', s); } catch(e) {} }
+    return s;
+  },
+  has(vid, type) { const d = this._get(); return !!(d[vid]?.[type]); },
+  add(vid, type, payload = {}) {
+    const d = this._get();
+    if (!d[vid]) d[vid] = {};
+    const entry = {
+      contribution_id: typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2),
+      venue_id: vid, user_id: null, session_id: this._session(),
+      contribution_type: type, status: 'pending',
+      created_at: new Date().toISOString(), ...payload,
+    };
+    d[vid][type] = entry; this._set(d); return entry;
+  },
+  getPhashes() { try { return JSON.parse(localStorage.getItem(this._hkey) || '[]'); } catch(e) { return []; } },
+  savePhash(hash, vid) {
+    const list = this.getPhashes();
+    list.push({ hash, venue_id: vid, created_at: new Date().toISOString() });
+    try { localStorage.setItem(this._hkey, JSON.stringify(list)); } catch(e) {}
+  },
+};
+
+function slugId(name) {
+  return (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
+}
+function haversineM(lat1, lng1, lat2, lng2) {
+  const R = 6371000, r = Math.PI / 180;
+  const dLat = (lat2-lat1)*r, dLng = (lng2-lng1)*r;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+async function computePhash(file) {
+  return new Promise(resolve => {
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      try {
+        const S2 = 8, cv = document.createElement('canvas');
+        cv.width = cv.height = S2;
+        const ctx = cv.getContext('2d'); ctx.drawImage(img, 0, 0, S2, S2);
+        const px = ctx.getImageData(0, 0, S2, S2).data;
+        const gray = Array.from({length: S2*S2}, (_, i) => .299*px[i*4]+.587*px[i*4+1]+.114*px[i*4+2]);
+        const mean = gray.reduce((s,v) => s+v, 0) / gray.length;
+        resolve(gray.map(v => v >= mean ? '1' : '0').join(''));
+      } catch(e) { resolve(null); }
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
+    img.src = url;
+  });
+}
+function phashSim(a, b) {
+  if (!a || !b || a.length !== b.length) return 0;
+  let n = 0; for (let i = 0; i < a.length; i++) if (a[i] === b[i]) n++;
+  return n / a.length;
+}
+
+function buildCommHtml(venueId, venueLat, venueLng, hasPrices, hideUpload) {
+  const rated = ContribStore.has(venueId, 'rating');
+  const confirmed = ContribStore.has(venueId, 'confirm_price');
+  const reported = ContribStore.has(venueId, 'report_price');
+  const pricesRep = ContribStore.has(venueId, 'report_prices');
+  const uploaded = ContribStore.has(venueId, 'upload_menu');
+
+  const starsHtml = rated
+    ? `<div class="comm-stars">${[1,2,3,4,5].map(() => '<span class="comm-star on">★</span>').join('')}<span class="comm-star-lbl">${t('comm_already_rated')}</span></div>`
+    : `<div class="comm-stars" id="cstars-${venueId}">${[1,2,3,4,5].map(i =>
+        `<span class="comm-star" onmouseenter="commHover('${venueId}',${i})" onmouseleave="commOut('${venueId}')" onclick="commRate('${venueId}',${i})">☆</span>`
+      ).join('')}<span class="comm-star-lbl" id="cstar-lbl-${venueId}"></span></div>`;
+
+  const ub = uploaded ? `<button class="comm-btn done">${t('comm_uploaded')}</button>`
+                      : `<button class="comm-btn" onclick="commTriggerUpload('${venueId}')">${hasPrices?t('comm_upload_photo'):t('comm_upload_menu')}</button>`;
+  let btns;
+  if (hasPrices) {
+    const cb = confirmed ? `<button class="comm-btn done">${t('comm_price_confirmed')}</button>` : `<button class="comm-btn" onclick="commConfirm('${venueId}')">${t('comm_confirm_price')}</button>`;
+    const rb = reported  ? `<button class="comm-btn warn">${t('comm_price_reported')}</button>`   : `<button class="comm-btn" onclick="commReport('${venueId}')">${t('comm_report_price')}</button>`;
+    btns = cb + rb + (hideUpload ? '' : ub);
+  } else {
+    const pb = pricesRep ? `<button class="comm-btn done">${t('comm_prices_reported')}</button>` : `<button class="comm-btn" onclick="commReportPrices('${venueId}')">${t('comm_report_prices')}</button>`;
+    btns = pb + (hideUpload ? '' : ub);
+  }
+
+  return `<div class="comm-sec">
+    <div class="comm-sec-lbl">Community</div>
+    <div class="comm-rate-lbl">${t('comm_rate_lbl')}</div>
+    ${starsHtml}
+    <div class="comm-actions">${btns}</div>
+    <div class="comm-status" id="cstatus-${venueId}"></div>
+    <input type="file" accept="image/*" capture="environment" class="comm-upload-inp" id="cinp-${venueId}" onchange="handlePhotoUpload(this,'${venueId}',${venueLat},${venueLng})">
+    <div class="comm-cta" id="ccta-${venueId}" style="display:none;">${t('comm_create_profile')}</div>
+  </div>`;
+}
+
+function commHover(vid, n) { document.getElementById('cstars-'+vid)?.querySelectorAll('.comm-star').forEach((s,i) => { s.textContent = i<n?'★':'☆'; s.classList.toggle('on',i<n); }); }
+function commOut(vid)       { document.getElementById('cstars-'+vid)?.querySelectorAll('.comm-star').forEach(s => { s.textContent='☆'; s.classList.remove('on'); }); }
+function commRate(vid, n) {
+  ContribStore.add(vid, 'rating', { rating: n });
+  const el = document.getElementById('cstars-'+vid);
+  if (el) { el.querySelectorAll('.comm-star').forEach((s,i) => { s.textContent=i<n?'★':'☆'; s.classList.toggle('on',i<n); s.style.cursor='default'; s.onmouseenter=s.onmouseleave=s.onclick=null; }); }
+  const lbl = document.getElementById('cstar-lbl-'+vid); if (lbl) lbl.textContent = t('comm_already_rated');
+  _commFeedback(vid, t('comm_pending'));
+}
+function commConfirm(vid) {
+  if (ContribStore.has(vid,'confirm_price')) return;
+  ContribStore.add(vid,'confirm_price');
+  _commSwap(`[onclick="commConfirm('${vid}')"]`,'done',t('comm_price_confirmed'));
+  _commFeedback(vid, t('comm_pending'));
+}
+function commReport(vid) {
+  if (ContribStore.has(vid,'report_price')) return;
+  ContribStore.add(vid,'report_price');
+  _commSwap(`[onclick="commReport('${vid}')"]`,'warn',t('comm_price_reported'));
+  _commFeedback(vid, t('comm_pending'));
+}
+function commReportPrices(vid) {
+  if (ContribStore.has(vid,'report_prices')) return;
+  ContribStore.add(vid,'report_prices');
+  _commSwap(`[onclick="commReportPrices('${vid}')"]`,'done',t('comm_prices_reported'));
+  _commFeedback(vid, t('comm_pending'));
+}
+function commTriggerUpload(vid) { document.getElementById('cinp-'+vid)?.click(); }
+function _commSwap(sel, cls, label) {
+  const btn = document.querySelector(sel);
+  if (btn) { btn.className = 'comm-btn '+cls; btn.textContent = label; btn.onclick = null; }
+}
+function _commFeedback(vid, msg) {
+  const st = document.getElementById('cstatus-'+vid); if (st) st.textContent = msg;
+  const cta = document.getElementById('ccta-'+vid); if (cta) cta.style.display = '';
+}
+
+async function handlePhotoUpload(input, vid, vLat, vLng) {
+  const file = input.files[0]; if (!file) return;
+  input.value = '';
+  const st = document.getElementById('cstatus-'+vid); if (st) st.textContent = '…';
+  let score = 0.5, statusMsg = t('comm_no_exif');
+  const notes = [];
+  const upload = {
+    upload_id: typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2),
+    venue_id:vid, contribution_id:null, image_url:null,
+    exif_lat:null,exif_lng:null,exif_timestamp:null,
+    distance_from_venue_meters:null, location_match:false,
+    duplicate_score:null, ai_suspicion_score:null, manipulation_suspicion_score:null,
+    confidence_score:0.5, extracted_text:null, extracted_products:null, extracted_prices:null,
+    verification_notes:null, status:'pending', created_at:new Date().toISOString(),
+  };
+  // EXIF
+  try {
+    const exif = await exifr.parse(file, { gps:true, exif:true });
+    if (exif) {
+      if (exif.latitude!=null && exif.longitude!=null) {
+        upload.exif_lat=exif.latitude; upload.exif_lng=exif.longitude;
+        const dist = haversineM(vLat,vLng,exif.latitude,exif.longitude);
+        upload.distance_from_venue_meters=Math.round(dist);
+        if (dist<=500) { upload.location_match=true; score+=0.25; statusMsg=t('comm_loc_verified'); }
+        else { notes.push('gps_mismatch'); score-=0.05; }
+      } else { score-=0.05; }
+      const ts = exif.DateTimeOriginal||exif.CreateDate||exif.ModifyDate;
+      if (ts) { upload.exif_timestamp=ts instanceof Date?ts.toISOString():String(ts); score += Date.now()-new Date(ts).getTime() < 365*24*3600*1000 ? 0.10 : -0.05; }
+      else { score-=0.05; }
+    } else { score-=0.05; }
+  } catch(e) { score-=0.05; }
+  // Perceptual hash
+  try {
+    const hash = await computePhash(file);
+    if (hash) {
+      const best = ContribStore.getPhashes().reduce((mx,e) => Math.max(mx,phashSim(hash,e.hash)), 0);
+      upload.duplicate_score=best;
+      if (best>0.95) { upload.status='suspicious'; notes.push('near_duplicate'); score-=0.30; statusMsg=t('comm_duplicate'); }
+      else if (best>0.85) { notes.push('possible_duplicate'); score-=0.10; }
+      ContribStore.savePhash(hash, vid);
+    }
+  } catch(e) {}
+  upload.confidence_score = Math.max(0,Math.min(1,score));
+  upload.verification_notes = notes.join(',')||null;
+  const contrib = ContribStore.add(vid,'upload_menu',{upload});
+  upload.contribution_id = contrib.contribution_id;
+  _commSwap(`[onclick="commTriggerUpload('${vid}')"]`,'done',t('comm_uploaded'));
+  _commFeedback(vid, statusMsg);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BARBER VERTICAL
+══════════════════════════════════════════════════════════════ */
+/* Curated service order per gender — primary services first, niche/tiny ones dropped.
+   Excludes negligible categories (beard_color n=17, hair_bleach n=8, hair_wash_blowdry n=7). */
+const BARBER_SERVICE_ORDER = [
+  // taglio (primary)
+  'haircut_man', 'haircut_woman', 'haircut_child',
+  // barba (men)
+  'beard_trim', 'beard_shave', 'package_cut_beard',
+  // colore
+  'hair_color', 'hair_highlight', 'hair_toning',
+  // styling
+  'hair_blowdry', 'hair_updo', 'hair_straightening', 'hair_perm',
+  // trattamenti / extra
+  'hair_treatment', 'hair_extensions',
+  'package_color_cut', 'package_full_treatment',
+  'eyebrow_trim',
+];
+const BARBER_MIN_COUNT = 80;  // drop services offered by too few salons to be meaningful
+
+async function loadBarberAndRender() {
+  if (S.barberData) { buildBarberServiceBar(); renderBarberSidebar(); renderBarber(); return; }
+  document.querySelector('.sb-head-title').textContent = S.lang==='it'?'Caricamento…':'Loading…';
+  try {
+    const r = await fetch('data/barber_data.json');
+    if (!r.ok) throw new Error(r.status);
+    S.barberData = await r.json();
+  } catch(e) { console.error('barber_data.json failed:', e); return; }
+  buildBarberServiceBar();
+  renderBarberSidebar();
+  renderBarber();
+}
+
+/* Active, curated services for the current gender (ordered, count-filtered). */
+function barberActiveServices() {
+  if (!S.barberData) return [];
+  const gender = S.barberGender;
+  const out = [];
+  BARBER_SERVICE_ORDER.forEach(code => {
+    const cat = S.barberData.metadata.categories.find(c => c.code === code);
+    if (!cat || !cat.gender.includes(gender)) return;
+    const count = S.barberData.venues.filter(v =>
+      v.genders.includes(gender) && v.prices && v.prices[code]).length;
+    if (count >= BARBER_MIN_COUNT) out.push({ ...cat, _count: count });
+  });
+  return out;
+}
+
+function buildBarberServiceBar() {
+  if (!S.barberData) return;
+  const el = document.getElementById('bservicebar'); if (!el) return;
+  const cats = barberActiveServices();
+  // Always keep a valid selected service
+  if (!S.barberCategory || !cats.find(c => c.code === S.barberCategory)) {
+    S.barberCategory = cats[0]?.code || null;
+  }
+  el.innerHTML = cats.map(c =>
+    `<button class="bsvcbtn ${S.barberCategory===c.code?'active':''}" onclick="selectBarberCategory('${c.code}')">${esc(c.label)} <span class="bsvcbtn-n">${c._count}</span></button>`
+  ).join('');
+}
+
+function selectBarberGender(gender) {
+  if (!gender) return;
+  S.barberGender = gender;
+  S.barberCategory = null;  // re-pick top service for this gender
+  document.querySelectorAll('.bgchip').forEach(c => c.classList.toggle('active', c.dataset.gender === gender));
+  buildBarberServiceBar(); renderBarberSidebar(); renderBarber();
+}
+
+function selectBarberCategory(code) {
+  if (!code) return;
+  S.barberCategory = code;
+  buildBarberServiceBar(); renderBarberSidebar(); renderBarber();
+}
+
+function barberRegionMedian(regionName, code) {
+  if (!S.barberData||!code) return null;
+  const reg = S.barberData.metadata.regions.find(r => r.name===regionName);
+  if (reg?.median_prices?.[code]!=null) return reg.median_prices[code];
+  return S.barberData.metadata.categories.find(c => c.code===code)?.median || null;
+}
+
+function barberTier(price, regionName, code) {
+  const med = barberRegionMedian(regionName, code);
+  if (!med) return 'avg';
+  if (price <= med*0.85) return 'deal';
+  if (price <= med*1.15) return 'avg';
+  return 'exp';
+}
+
+function fmtB(p) {
+  if (p >= 1000) return '€' + (p/1000).toFixed(1) + 'k';
+  return '€' + Math.round(p);
+}
+
+function renderBarber() {
+  if (!S.barberData || S.vertical!=='barbieri') return;
+  // Clear any leftover drink price markers
+  S.markers.forEach(m => m.remove()); S.markers = [];
+  if (S.barberCluster) { S.map.removeLayer(S.barberCluster); S.barberCluster=null; }
+  const cluster = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 55,
+    iconCreateFunction: cl => {
+      const ms = cl.getAllChildMarkers();
+      const prices = ms.map(m => m._bp).filter(p => p!=null);
+      const avg = prices.length ? prices.reduce((s,p)=>s+p,0)/prices.length : null;
+      const tiers = ms.map(m=>m._bt).filter(Boolean);
+      const dom = tiers.length ? (['deal','avg','exp'].find(t => tiers.filter(x=>x===t).length >= tiers.length*0.5)||'avg') : 'avg';
+      return L.divIcon({
+        html: `<div><span class="bc-p">${avg?fmtB(avg):ms.length}</span><span class="bc-n">${ms.length}</span></div>`,
+        className: `marker-cluster bcluster bcluster-barber-${dom}`, iconSize: null,
+      });
+    },
+  });
+  window.__BV = [];
+  const code = S.barberCategory, gender = S.barberGender;
+  if (!code) { S.barberCluster=cluster; S.map.addLayer(cluster); return; }
+  // Radius center (geolocation or location search) + price cap from sidebar filters
+  const rc = S.geo.lat !== null ? { lat: S.geo.lat, lng: S.geo.lng } : S.searchCenter;
+  // Only salons that have the SELECTED service priced for the SELECTED gender.
+  // Always show prices[code].min — never a generic min_price (avoids mixing services).
+  S.barberData.venues.forEach(v => {
+    if (!v.lat || !v.lng) return;
+    if (!v.genders.includes(gender)) return;
+    if (!v.prices || !v.prices[code]) return;
+    const price = v.prices[code].min;
+    if (price == null) return;
+    if (F.maxPrice < 999 && price > F.maxPrice) return;
+    if (rc && S.geo.radius !== null && haversineM(rc.lat, rc.lng, v.lat, v.lng) > S.geo.radius) return;
+    const tier = barberTier(price, v.region, code);
+    if (F.dealsOnly && tier !== 'deal') return;
+    const idx = window.__BV.length; window.__BV.push(v);
+    const html = `<div class="pm pm-barber ${tier}" id="bmk-${idx}" onclick="openBarberDetail(${idx})">${fmtB(price)}</div>`;
+    const marker = L.marker([v.lat,v.lng], { icon: L.divIcon({html, className:'', iconSize:null, iconAnchor:[0,0]}) });
+    marker._bp=price; marker._bt=tier;
+    cluster.addLayer(marker);
+  });
+  S.barberCluster=cluster; S.map.addLayer(cluster);
+  renderBarberNoPrice();
+}
+
+/* Grey markers for salons (matching gender) with NO price data at all */
+function renderBarberNoPrice() {
+  if (S.barberNoPriceCluster) { S.map.removeLayer(S.barberNoPriceCluster); S.barberNoPriceCluster = null; }
+  if (!S.barberShowNoPrice || !S.barberData || S.vertical !== 'barbieri') return;
+  const gender = S.barberGender;
+  const rc = S.geo.lat !== null ? { lat: S.geo.lat, lng: S.geo.lng } : S.searchCenter;
+  const cluster = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: (z) => z < 11 ? 60 : 40,
+    iconCreateFunction: cl => L.divIcon({
+      html: `<div><span class="dc-n">${cl.getChildCount()}</span><span class="dc-l">${t('np_n_barber')}</span></div>`,
+      className: 'marker-cluster dcluster', iconSize: null,
+    }),
+  });
+  S.barberData.venues.forEach(v => {
+    if (!v.lat || !v.lng) return;
+    if (v.has_price) return;  // has some price → not a "no price" salon
+    // no-price salons usually have empty genders (derived from prices) → show for any gender
+    if (v.genders.length && !v.genders.includes(gender)) return;
+    if (rc && S.geo.radius !== null && haversineM(rc.lat, rc.lng, v.lat, v.lng) > S.geo.radius) return;
+    const idx = window.__BV.length; window.__BV.push(v);
+    const html = `<div class="pm pm-barber np" id="bmk-${idx}" onclick="openBarberDetail(${idx})"></div>`;
+    cluster.addLayer(L.marker([v.lat,v.lng], { icon: L.divIcon({html, className:'', iconSize:null, iconAnchor:[0,0]}) }));
+  });
+  S.barberNoPriceCluster = cluster; S.map.addLayer(cluster);
+}
+
+function toggleBarberNoPrice() {
+  if (S.vertical !== 'barbieri') return;
+  S.barberShowNoPrice = !S.barberShowNoPrice;
+  syncNoPriceBtn();
+  renderBarberNoPrice();
+}
+
+function renderBarberSidebar() {
+  if (!S.barberData) return;
+  const code=S.barberCategory, gender=S.barberGender;
+  const catMeta = code ? S.barberData.metadata.categories.find(c=>c.code===code) : null;
+  const catLabel = catMeta?.label || '—';
+  const genderLbl = { man:t('barber_men'), woman:t('barber_women'), child:t('barber_kids') }[gender] || '';
+  // Salons offering the selected service for the selected gender, restricted to the visible viewport
+  const bounds = S.map?.getBounds();
+  const inView = S.barberData.venues.filter(v =>
+    v.genders.includes(gender) && code && v.prices && v.prices[code] &&
+    v.lat && v.lng && (!bounds || bounds.contains([v.lat, v.lng])));
+  const prices = inView.map(v => v.prices[code].min).filter(p => p != null).sort((a,b) => a-b);
+  const nv = prices.length;
+  const median = nv ? prices[Math.floor(nv/2)] : null;
+  const mean   = nv ? Math.round(prices.reduce((a,b)=>a+b,0)/nv) : null;
+  const min    = nv ? prices[0] : null;
+  const max    = nv ? prices[nv-1] : null;
+
+  document.querySelector('.sb-head-title').textContent = t('barbieri');
+  document.querySelector('.sb-section-hdr-title').textContent = catLabel;
+  document.querySelector('.sb-section-hdr-sub').textContent = `${inView.length} ${t('barber_salons')}`;
+  document.getElementById('sb-cnt').textContent = `${inView.length} ${t('barber_salons')}`;
+
+  const regions = S.barberData.metadata.regions.filter(r=>r.name!=='Altro'&&r.name!=='Sconosciuta');
+  const regHtml = regions.map(r => {
+    const med = code&&r.median_prices?.[code]!=null ? r.median_prices[code] : null;
+    const safe = r.name.replace(/'/g,"\\'");
+    return `<div class="beach-reg-item" onclick="zoomToBarberRegion('${safe}')">
+      <div class="beach-reg-l"><div class="beach-reg-name">${esc(r.name)}</div><div class="beach-reg-meta">${r.priced}/${r.total} ${t('barber_priced')}</div></div>
+      <div class="beach-reg-r">${med!=null?`<span class="beach-reg-p">€${med}</span><span class="beach-reg-pu">${t('barber_median')}</span>`:'<span class="beach-reg-pu">—</span>'}</div>
+    </div>`;
+  }).join('');
+  const cityHtml = `<div class="barber-city-chips">${S.barberData.metadata.top_cities.slice(0,12).map(c=>`<span class="barber-city-chip" onclick="zoomToBarberCity('${esc(c.name).replace(/'/g,"\\'")}')">${esc(c.name)}<span class="barber-city-n">${c.total}</span></span>`).join('')}</div>`;
+
+  const statsHtml = nv ? `
+    <div class="beach-stats">
+      <div class="beach-stats-mode">${esc(genderLbl)}</div>
+      <div class="beach-stats-title">${esc(catLabel)}</div>
+      <div class="beach-stats-grid">
+        <div class="beach-stat"><div class="beach-stat-v">€${median}</div><div class="beach-stat-l">${t('median')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">€${mean}</div><div class="beach-stat-l">${t('mean')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${inView.length}</div><div class="beach-stat-l">${t('barber_salons')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">€${catMeta?.median ?? '—'}</div><div class="beach-stat-l">${t('barber_nat_median')}</div></div>
+      </div>
+      <div class="beach-stats-range"><span>€${min}</span><div class="beach-stats-range-bar"></div><span>€${max}</span></div>
+    </div>` : `
+    <div class="beach-stats">
+      <div class="beach-stats-mode">${esc(genderLbl)} · ${esc(catLabel)}</div>
+      <div class="beach-stats-title">${t('no_priced_in_view')}</div>
+      <div class="beach-stats-mode" style="margin-top:8px;">${t('pan_zoom_msg')}</div>
+    </div>`;
+
+  document.getElementById('sb-list').innerHTML = statsHtml + regHtml + cityHtml;
+  document.getElementById('sb-empty').style.display='none';
+}
+
+function zoomToBarberRegion(name) {
+  if (!S.barberData) return;
+  const vs = S.barberData.venues.filter(v=>v.region===name&&v.lat&&v.lng);
+  if (!vs.length) return;
+  const lats=vs.map(v=>v.lat), lngs=vs.map(v=>v.lng);
+  S.map.fitBounds([[Math.min(...lats)-.1,Math.min(...lngs)-.1],[Math.max(...lats)+.1,Math.max(...lngs)+.1]],{animate:true});
+  showResetBtn();
+}
+
+function zoomToBarberCity(name) {
+  if (!S.barberData) return;
+  const vs = S.barberData.venues.filter(v=>v.city===name&&v.lat&&v.lng);
+  if (!vs.length) return;
+  const lats=vs.map(v=>v.lat), lngs=vs.map(v=>v.lng);
+  S.map.setView([(Math.max(...lats)+Math.min(...lats))/2,(Math.max(...lngs)+Math.min(...lngs))/2],13,{animate:true});
+  showResetBtn();
+}
+
+/* Region overlay — same logic/pattern as beach (toggleBeachRegions/renderBeachRegions) */
+function toggleBarberRegions() {
+  S.barberShowRegions = !S.barberShowRegions;
+  const b = document.getElementById('zones-btn');
+  if (b) b.textContent = S.barberShowRegions ? t('hide_regions') : t('show_regions');
+  renderBarberRegions();
+}
+
+async function renderBarberRegions() {
+  S.barberRegionLayers.forEach(l => l.remove());
+  S.barberRegionLayers = [];
+  if (!S.barberShowRegions || !S.barberData || S.vertical !== 'barbieri') return;
+
+  const gj = await loadBeachGeojson();  // shared italy_regions.geojson
+  const code = S.barberCategory;
+  const statsByName = {};
+  S.barberData.metadata.regions.forEach(r => { statsByName[r.name] = r; });
+  const normalize = (s) => (s || '').toLowerCase().trim().replace(/[/].*/, '')
+    .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e').replace(/[ìí]/g,'i').replace(/[òó]/g,'o').replace(/[ù]/g,'u');
+
+  gj.features.forEach(feat => {
+    const name = feat.properties.name;
+    let st = statsByName[name];
+    if (!st) { const n = normalize(name); for (const k of Object.keys(statsByName)) if (normalize(k)===n) { st = statsByName[k]; break; } }
+    const hasCov = st && st.priced > 0;
+    const color = hasCov ? '#1e6639' : '#888880';
+    const layer = L.geoJSON(feat, {
+      style: { color, weight: 1, dashArray: '4 4', fill: true, fillColor: color, fillOpacity: hasCov ? 0.05 : 0.025, interactive: true, bubblingMouseEvents: false },
+    });
+    layer.eachLayer(l => {
+      l.on('click', (e) => {
+        L.DomEvent.stopPropagation(e);
+        const med = code && st?.median_prices?.[code] != null ? st.median_prices[code] : null;
+        const safeName = name.replace(/'/g, "\\'");
+        const popup = `<div class="zone-popup">
+          <div class="zone-popup-name">${esc(name)}</div>
+          <div class="zone-popup-stat">${st?.priced||0}/${st?.total||0} ${t('barber_salons')} ${t('barber_priced')}</div>
+          ${med!=null?`<div class="zone-popup-cov">€${med} ${t('barber_median')}</div>`:''}
+          <button onclick="zoomToBarberRegion('${safeName}'); S.map.closePopup();" style="margin-top:8px;width:100%;padding:6px;background:var(--t1);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:none;">${t('explore_region')}</button>
+        </div>`;
+        L.popup({ closeButton: true, maxWidth: 220 }).setLatLng(e.latlng).setContent(popup).openOn(S.map);
+      });
+    });
+    layer.addTo(S.map);
+    S.barberRegionLayers.push(layer);
+  });
+}
+
+function openBarberDetail(idx) {
+  const v = window.__BV?.[idx]; if (!v) return;
+  const card = document.getElementById('venue-card');
+  card.classList.remove('open');
+  card.innerHTML = buildBarberDetHtml(v, S.barberCategory);
+  card.dataset.tier = S.barberCategory&&v.prices?.[S.barberCategory] ? barberTier(v.prices[S.barberCategory].min,v.region,S.barberCategory) : 'avg';
+  if (window.innerWidth>768) {
+    card.style.visibility='hidden';
+    let shown=false;
+    const show=()=>{ if(shown)return; shown=true; S._cardListener=null; positionCard(card,v.lat,v.lng); card.style.visibility=''; card.classList.add('open'); };
+    if (S._cardListener) { S.map?.off('moveend',S._cardListener); S._cardListener=null; }
+    S._cardListener=show; S.map.once('moveend',show); setTimeout(show,650);
+  } else { card.style.cssText=''; requestAnimationFrame(()=>card.classList.add('open')); }
+  if (S.map) {
+    S._progMove=true;
+    S.map.setView([v.lat,v.lng],Math.max(S.map.getZoom(),15),{animate:true});
+    showResetBtn(); setTimeout(()=>{ S._progMove=false; },600);
+  }
+}
+
+function buildBarberDetHtml(v, selCode) {
+  const gLabels = { man: S.lang==='it'?'Uomo':'Man', woman: S.lang==='it'?'Donna':'Woman', child: S.lang==='it'?'Bambino':'Child' };
+  const gBadges = (v.genders||[]).map(g=>gLabels[g]||g).join(' · ');
+  const src = (v.source_platforms||'').split(',').map(s=>s.trim()).filter(Boolean).join(' · ');
+  const ratingStr = v.rating ? `★ ${v.rating}${v.rating_count?` (${v.rating_count})`:''} · ${esc(src)}` : esc(src);
+  const selData = selCode && v.prices?.[selCode];
+  const tierColors = { deal:'var(--deal-t)', avg:'var(--avg-t)', exp:'var(--exp-t)' };
+
+  const selHtml = selData ? (() => {
+    const tc = tierColors[barberTier(selData.min,v.region,selCode)];
+    return `<div class="det-sec" style="background:var(--s3);">
+      <div class="det-sec-lbl" style="color:${tc};">${esc(selData.label)} ↓</div>
+      ${selData.items.slice(0,5).map(it=>`<div class="det-item"><div class="det-item-n">${esc(it.name)}</div><div class="det-item-p" style="color:${tc};">€${it.price}</div></div>`).join('')}
+    </div>`;
+  })() : '';
+
+  const otherEntries = Object.entries(v.prices||{})
+    .filter(([c]) => c !== selCode && BARBER_SERVICE_ORDER.includes(c))
+    .sort(([,a],[,b]) => a.min - b.min);
+  const otherHtml = otherEntries.length
+    ? `<div class="det-sec"><div class="det-sec-lbl">${t('barber_other_services')}</div>
+       ${otherEntries.map(([c,p])=>`<div class="det-item" style="cursor:pointer;" onclick="selectBarberCategory('${c}')"><div class="det-item-n">${esc(p.label)}</div><div class="det-item-p" style="font-size:0.78rem;">€${p.min}</div></div>`).join('')}
+       </div>` : '';
+
+  const bookHtml = v.url ? `<div class="det-actions"><a class="det-act primary" href="${esc(v.url)}" target="_blank" rel="noopener">↗ ${esc(src||'Book')}</a></div>` : '';
+
+  return `
+    <div class="det-head">
+      <div class="det-toprow"><span class="det-meta">${esc(gBadges)}</span><button class="det-close" onclick="closeDetail()">✕</button></div>
+      <div class="det-name">${esc(v.name)}</div>
+      <div class="det-cat">${esc(v.city)}${v.address?' — '+esc(v.address):''}</div>
+      <div class="det-addr" style="font-size:0.62rem;color:var(--t3);margin-top:2px;">${ratingStr}</div>
+      ${buildCommHtml(slugId(v.id||v.name),v.lat,v.lng,true,true)}
+    </div>
+    <div class="det-body">
+      ${!v.has_price?`<div class="det-warn" style="background:var(--ochre-d);border-color:var(--ochre-b);"><b>${t('barber_no_prices')}</b> ${t('barber_no_prices_msg')}</div>`:''}
+      ${selHtml || (!v.has_price?'':`<div class="det-warn" style="font-size:0.62rem;">${t('barber_select_service')}</div>`)}
+      ${otherHtml}${bookHtml}
+    </div>`;
 }
 
 /* ──────────────────────────────────────────
@@ -2766,6 +3583,8 @@ function initMap() {
   // Beach sidebar refreshes on every pan/zoom end (zoom-adaptive)
   S.map.on('moveend', () => {
     if (S.vertical === 'balneari' && S.beachData) renderBeachSidebarFromState();
+    else if (S.vertical === 'barbieri' && S.barberData) renderBarberSidebar();
+    else if (S.vertical === 'drinks') renderDrinkSidebar();
   });
   // Zones always visible on load (hover-only mode)
   renderZones();
@@ -2847,6 +3666,33 @@ function fmt(p) {
 ─────────────────────────────────────────── */
 window.__V = [];
 
+/* Summary stats card for the drinks sidebar (mirrors beach/haircut) */
+function buildDrinkStats(venues) {
+  const prices = venues.map(v => v.min_price).filter(p => p != null).sort((a,b) => a-b);
+  if (!prices.length) return '';
+  const n = prices.length;
+  const median = n % 2 ? prices[(n-1)/2] : (prices[n/2-1] + prices[n/2]) / 2;
+  const min = prices[0], max = prices[n-1];
+  const deals = venues.filter(v => cls(v.min_price, S.allVenues) === 'deal').length;
+  const pLabel = META[S.product]?.label || '';
+  return `
+    <div class="beach-stats">
+      <div class="beach-stats-mode">Milano · Drink</div>
+      <div class="beach-stats-title">${esc(pLabel)}</div>
+      <div class="beach-stats-grid">
+        <div class="beach-stat"><div class="beach-stat-v">${n}</div><div class="beach-stat-l">${t('places')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${fmt(median)}</div><div class="beach-stat-l">${t('median')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${fmt(min)}</div><div class="beach-stat-l">min</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${fmt(max)}</div><div class="beach-stat-l">max</div></div>
+      </div>
+      <div class="beach-stats-range">
+        <span>${fmt(min)}</span>
+        <div class="beach-stats-range-bar"></div>
+        <span>${deals} ${t('deals_kw')}</span>
+      </div>
+    </div>`;
+}
+
 function render(venues) {
   // Clear markers
   S.markers.forEach(m => m.remove());
@@ -2878,23 +3724,32 @@ function render(venues) {
   calcZoneCoverage();
   renderZones();
 
-  // Sidebar
-  const sorted = [...venues]
-    .map((v, i) => ({ v, i }))
-    .sort((a, b) => a.v.min_price - b.v.min_price);
+  // Sidebar (dynamic — recomputed from the visible viewport)
+  renderDrinkSidebar();
+}
 
-  const n = venues.length;
+/* Drinks sidebar — stats + list computed from venues in the current viewport */
+function renderDrinkSidebar() {
+  if (S.vertical !== 'drinks') return;
+  const venues = window.__V || [];
+  const bounds = S.map?.getBounds();
+  const inView = venues
+    .map((v, i) => ({ v, i }))
+    .filter(o => o.v.lat && o.v.lng && (!bounds || bounds.contains([o.v.lat, o.v.lng])));
+  const sorted = [...inView].sort((a, b) => a.v.min_price - b.v.min_price);
+
+  const n = inView.length;
   document.getElementById('sb-cnt').textContent = `${n} ${n === 1 ? t('place') : t('places')}`;
 
   const listEl  = document.getElementById('sb-list');
   const emptyEl = document.getElementById('sb-empty');
 
-  if (venues.length === 0) {
+  if (n === 0) {
     listEl.innerHTML = '';
     emptyEl.style.display = 'flex';
   } else {
     emptyEl.style.display = 'none';
-    listEl.innerHTML = sorted.map(({ v, i }, rank) => {
+    listEl.innerHTML = buildDrinkStats(inView.map(o => o.v)) + sorted.map(({ v, i }, rank) => {
       const c = cls(v.min_price, S.allVenues);
       const num = String(rank + 1).padStart(2, '0');
       const addr = (v.address || '').replace(', Milano', '').replace(', Milan', '').replace(', Metropolitan City of Milan, Italy', '');
@@ -3043,6 +3898,7 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
       <div class="det-name">${esc(v.venue_name)}</div>
       <div class="det-cat">${esc(v.categories || '')}</div>
       <div class="det-addr">📍 ${esc(v.address || '—')}</div>
+      ${buildCommHtml(slugId(v.venue_name), v.lat, v.lng, true)}
     </div>
     <div class="det-body">
       <div class="det-sec">
@@ -3051,17 +3907,6 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
       </div>
       <div class="det-warn">
         <b>${t('experimental')}</b> ${t('experimental_msg')}
-      </div>
-      <div class="det-actions">
-        <button class="det-act primary" onclick="soon(t('report_price'))">
-          ${t('report_price')}
-        </button>
-        <button class="det-act" onclick="soon(t('upload_menu'))">
-          ${t('upload_menu')}
-        </button>
-        <button class="det-act" onclick="soon(t('suggest_correction'))">
-          ${t('suggest_correction')}
-        </button>
       </div>
       <div class="det-src">${src}</div>
     </div>`;
@@ -3094,7 +3939,7 @@ function resetMapView() {
   document.getElementById('reset-div').style.display = 'none';
   closeDetail();
 
-  if (S.vertical === 'balneari') {
+  if (S.vertical === 'balneari' || S.vertical === 'barbieri') {
     // Reset to Italy view
     S.map.setView([42.5, 12.5], 6, { animate: true });
   } else {
@@ -3418,6 +4263,12 @@ function applyFilters() {
     renderBeach();
     return;
   }
+  // Haircut vertical filters within renderBarber (price + radius)
+  if (S.vertical === 'barbieri') {
+    closeDetail();
+    renderBarber();
+    return;
+  }
   let venues = S.allVenues;
 
   // search
@@ -3581,29 +4432,44 @@ S.drinkNoPriceTypeFilter = null; // future: subset by venue_type
 /* ── Switch vertical ─────────────────────────────────────── */
 function selectVertical(v) {
   if (S.vertical === v) return;
+  const prev = S.vertical;
   S.vertical = v;
 
   document.querySelectorAll('.vtab').forEach(t => t.classList.remove('active'));
   document.getElementById('vt-' + v)?.classList.add('active');
 
-  const catbar = document.getElementById('catbar');
-  const fbar   = document.getElementById('fbar');
-  const bbar   = document.getElementById('bbar');
+  const catbar     = document.getElementById('catbar');
+  const fbar       = document.getElementById('fbar');
+  const bbar       = document.getElementById('bbar');
+  const bcatbar    = document.getElementById('bcatbar');
+  const bgenderbar = document.getElementById('bgenderbar');
+  const bservicebar= document.getElementById('bservicebar');
+  const zonesBtn   = document.getElementById('zones-btn');
 
-  const bcatbar = document.getElementById('bcatbar');
-  const zonesBtn = document.getElementById('zones-btn');
+  // Clean up haircut layers + region overlay when leaving barbieri
+  if (prev === 'barbieri' && v !== 'barbieri') {
+    if (S.barberCluster) { S.map.removeLayer(S.barberCluster); S.barberCluster = null; }
+    if (S.barberNoPriceCluster) { S.map.removeLayer(S.barberNoPriceCluster); S.barberNoPriceCluster = null; }
+    S.barberRegionLayers.forEach(l => l.remove()); S.barberRegionLayers = [];
+    S.barberShowRegions = false;
+    S.barberShowNoPrice = false;
+    window.__BV = [];
+  }
 
   if (v === 'drinks') {
     catbar.classList.remove('hidden');
     fbar.classList.remove('hidden');
     bbar.classList.add('hidden');
     bcatbar.classList.add('hidden');
+    bgenderbar.classList.add('hidden');
+    bservicebar.classList.add('hidden');
     // Clean up beach layers
     if (S.beachClusterGroup) { S.map.removeLayer(S.beachClusterGroup); S.beachClusterGroup = null; }
     S.beachRegionLayers.forEach(l => l.remove()); S.beachRegionLayers = [];
-    // Show drink no-price toggle button
+    // Show unified no-price toggle button
     const nodpBtn = document.getElementById('nodp-btn');
     if (nodpBtn) nodpBtn.style.display = 'block';
+    syncNoPriceBtn();
     // Restore last state of drink no-price layer
     if (S.drinkNoPriceShow && S.drinkNoPrice) renderDrinkNoPrice();
     // Restore drinks sidebar header
@@ -3630,16 +4496,19 @@ function selectVertical(v) {
     S.map.setView([45.464, 9.190], 13, { animate: true });
     setTimeout(() => { S._progMove = false; }, 700);
     render(S.venues);
-  } else {
+  } else if (v === 'balneari') {
     catbar.classList.add('hidden');
     fbar.classList.add('hidden');
     bbar.classList.remove('hidden');
     bcatbar.classList.remove('hidden');
+    bgenderbar.classList.add('hidden');
+    bservicebar.classList.add('hidden');
     // Clean up drinks zones + drink no-price layer (beach should be untouched)
     _zoneLayers.forEach(l => l.remove()); _zoneLayers = [];
     if (S.drinkNoPriceCluster) { S.map.removeLayer(S.drinkNoPriceCluster); S.drinkNoPriceCluster = null; }
     const nodpBtn = document.getElementById('nodp-btn');
-    if (nodpBtn) nodpBtn.style.display = 'none';
+    if (nodpBtn) nodpBtn.style.display = 'block';
+    syncNoPriceBtn();
     // Beach sidebar header
     document.querySelector('.sb-head-title').textContent = t('beach_title');
     document.querySelector('.sb-section-hdr-title').textContent = t('stats');
@@ -3659,6 +4528,8 @@ function selectVertical(v) {
     // Set zones button label for Italy mode
     if (zonesBtn) zonesBtn.textContent = S.beachShowRegions ? '◼ Nascondi regioni' : '◻ Mostra regioni';
     // Zoom out to Italy
+    bgenderbar.classList.add('hidden');
+    bservicebar.classList.add('hidden');
     closeDetail();
     S.mapLocked = false;
     S._progMove = true;
@@ -3666,6 +4537,46 @@ function selectVertical(v) {
     setTimeout(() => { S._progMove = false; }, 700);
     // Load beach data (lazy)
     loadBeachAndRender();
+  } else {
+    // barbieri (Haircut)
+    catbar.classList.add('hidden');
+    fbar.classList.add('hidden');
+    bbar.classList.add('hidden');
+    bcatbar.classList.add('hidden');
+    bgenderbar.classList.remove('hidden');
+    bservicebar.classList.remove('hidden');
+    // Clean up drink/beach layers
+    _zoneLayers.forEach(l => l.remove()); _zoneLayers = [];
+    if (S.drinkNoPriceCluster) { S.map.removeLayer(S.drinkNoPriceCluster); S.drinkNoPriceCluster = null; }
+    if (S.beachClusterGroup)   { S.map.removeLayer(S.beachClusterGroup);   S.beachClusterGroup = null; }
+    S.beachRegionLayers.forEach(l => l.remove()); S.beachRegionLayers = [];
+    const nodpBtnB = document.getElementById('nodp-btn'); if (nodpBtnB) nodpBtnB.style.display = 'block';
+    // Default gender always set; sync chips
+    if (!S.barberGender) S.barberGender = 'man';
+    document.querySelectorAll('.bgchip').forEach(c => c.classList.toggle('active', c.dataset.gender === S.barberGender));
+    S.barberShowRegions = false;
+    S.barberShowNoPrice = false;
+    if (zonesBtn) zonesBtn.textContent = t('show_regions');
+    syncNoPriceBtn();
+    // Price range + search radius filters (haircut scale: €0–150)
+    document.querySelector('.sb-filters').style.display = '';
+    const bslider = document.getElementById('pr-slider');
+    if (bslider) {
+      bslider.min = 0; bslider.max = 150; bslider.step = 5; bslider.value = 150;
+      document.getElementById('pr-min').textContent = '€0';
+      document.getElementById('pr-max').textContent = '€150+';
+    }
+    F.maxPrice = 999;
+    F.dealsOnly = false;
+    document.getElementById('deals-toggle')?.classList.remove('on');
+    const srchInpC = document.getElementById('srch');
+    if (srchInpC) srchInpC.placeholder = S.lang === 'it' ? 'Cerca saloni, città, regioni…' : 'Search salons, cities, regions…';
+    closeDetail();
+    S.mapLocked = false;
+    S._progMove = true;
+    S.map.setView([42.5, 12.5], 6, { animate: true });
+    setTimeout(() => { S._progMove = false; }, 700);
+    loadBarberAndRender();
   }
 }
 
@@ -3955,11 +4866,7 @@ async function renderBeachRegions() {
 /* ── Toggles ─────────────────────────────────────────────── */
 function toggleBeachUnpriced() {
   S.beachShowUnpriced = !S.beachShowUnpriced;
-  const b = document.getElementById('b-toggle-unpriced');
-  if (b) {
-    b.textContent = S.beachShowUnpriced ? '● Nasconde senza prezzo' : '○ Mostra senza prezzo';
-    b.classList.toggle('active', S.beachShowUnpriced);
-  }
+  syncNoPriceBtn();
   renderBeach();
 }
 
@@ -4053,8 +4960,8 @@ function renderBeachSidebar(venues, season, beachCls) {
 
   const statsHtml = prices.length ? `
     <div class="beach-stats">
-      <div class="beach-stats-mode">${mode} · ${esc(catLbl)} · ${seasLbl}</div>
-      <div class="beach-stats-title">${esc(title)}</div>
+      <div class="beach-stats-mode">${seasLbl}</div>
+      <div class="beach-stats-title">${esc(catLbl)}</div>
       <div class="beach-stats-grid">
         <div class="beach-stat"><div class="beach-stat-v">€${median}</div><div class="beach-stat-l">${t('median')}</div></div>
         <div class="beach-stat"><div class="beach-stat-v">€${mean}</div><div class="beach-stat-l">${t('mean')}</div></div>
@@ -4068,7 +4975,7 @@ function renderBeachSidebar(venues, season, beachCls) {
       </div>
     </div>` : `
     <div class="beach-stats">
-      <div class="beach-stats-mode">${mode}</div>
+      <div class="beach-stats-mode">${seasLbl}</div>
       <div class="beach-stats-title">${t('no_priced_in_view')}</div>
       <div class="beach-stats-mode" style="margin-top:8px;">${t('pan_zoom_msg')}</div>
     </div>`;
@@ -4319,6 +5226,7 @@ function buildBeachDetHtml(v, season) {
       </div>
       <div class="det-name">${esc(v.name)}</div>
       <div class="det-cat">${esc(v.city)}${v.address ? ' — ' + esc(v.address) : ''}</div>
+      ${buildCommHtml(slugId(v.name), v.lat, v.lng, v.has_price)}
     </div>
     <div class="det-body">
       ${noPriceMsg}
