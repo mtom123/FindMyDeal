@@ -1951,6 +1951,13 @@ const I18N = {
     establishments: 'establishments',
     // Misc
     soon_prefix: 'Phase 2 feature: ', soon_suffix: '\n\nThis will be available once the backend is connected.',
+    // Zone card
+    zc_coverage: 'Coverage',
+    zc_complete: 'Complete',
+    zc_avg_price: 'Avg {p} price',
+    zc_venues_in_zone: 'venues in zone',
+    zc_no_venues: 'No venues for current product',
+    zc_total_bars: 'total bars',
   },
   it: {
     drinks: 'Drink', balneari: 'Balneari',
@@ -2051,6 +2058,12 @@ const I18N = {
     cat_shower: 'Doccia',
     establishments: 'stabilimenti',
     soon_prefix: 'Funzione Fase 2: ', soon_suffix: '\n\nSarà disponibile una volta connesso il backend.',
+    zc_coverage: 'Copertura',
+    zc_complete: 'Completo',
+    zc_avg_price: 'Prezzo medio {p}',
+    zc_venues_in_zone: 'locali in zona',
+    zc_no_venues: 'Nessun locale per il prodotto selezionato',
+    zc_total_bars: 'bar totali',
   },
 };
 function t(key, vars) {
@@ -2158,42 +2171,76 @@ const CATEGORIES = {
   Lat: 45.430 | 45.451 | 45.461 | 45.470 | 45.479 | 45.484 | 45.495 | 45.500 | 45.515
   Lng: 9.136  | 9.152  | 9.165  | 9.175  | 9.183  | 9.205  | 9.222  | 9.242  | 9.262
 */
+/*
+  Lat grid: 39 | 42 | 44 | 45.430 | 45.451 | 45.461 | 45.470 | 45.479 | 45.484 | 45.495 | 45.500 | 45.515 | 45.55
+  Lng grid: 9.04 | 9.09 | 9.115 | 9.136 | 9.152 | 9.165 | 9.183 | 9.205 | 9.222 | 9.242 | 9.262 | 9.285
+  ~45 zones covering all Milano + first ring of comuni
+*/
 const MILAN_ZONES = {
-  // ─── FAR SOUTH ────────────────────────────────────────────────────────────
-  vigentino:    { name:'Vigentino',    coords:[[45.430,9.175],[45.451,9.175],[45.451,9.205],[45.430,9.205]] },
+  // ─── WEST OUTSKIRTS (lng 9.04–9.136) ─────────────────────────────────────
+  trenno_quarto:   { name:'Trenno / Quarto Oggiaro', coords:[[45.479,9.04],[45.520,9.04],[45.520,9.115],[45.479,9.115]] },
+  baggio:          { name:'Baggio',          coords:[[45.440,9.04],[45.479,9.04],[45.479,9.115],[45.440,9.115]] },
+  bisceglie:       { name:'Bisceglie / Lorenteggio', coords:[[45.440,9.115],[45.470,9.115],[45.470,9.136],[45.440,9.136]] },
+  san_siro:        { name:'San Siro',        coords:[[45.470,9.115],[45.495,9.115],[45.495,9.136],[45.470,9.136]] },
 
-  // ─── SOUTH ROW  (lat 45.451–45.461) ──────────────────────────────────────
-  tortona:      { name:'Tortona',      coords:[[45.451,9.152],[45.461,9.152],[45.461,9.164],[45.457,9.174],[45.451,9.174]] },
-  navigli:      { name:'Navigli',      coords:[[45.444,9.158],[45.451,9.158],[45.451,9.174],[45.461,9.174],[45.461,9.182],[45.455,9.182],[45.447,9.174]] },
-  ticinese:     { name:'Ticinese',     coords:[[45.451,9.183],[45.461,9.183],[45.461,9.204],[45.451,9.204]] },
-  porta_romana: { name:'Porta Romana', coords:[[45.451,9.205],[45.461,9.205],[45.461,9.221],[45.451,9.221]] },
+  // ─── SW QUADRANT (lat 45.394–45.451) ─────────────────────────────────────
+  rozzano:         { name:'Rozzano / Quinto Sole', coords:[[45.394,9.136],[45.430,9.136],[45.430,9.175],[45.394,9.175]] },
+  barona:          { name:'Barona',          coords:[[45.430,9.136],[45.451,9.136],[45.451,9.175],[45.430,9.175]] },
+  ronchetto:       { name:'Ronchetto sul Naviglio', coords:[[45.430,9.115],[45.451,9.115],[45.451,9.136],[45.430,9.136]] },
 
-  // ─── CENTRE ROW  (lat 45.461–45.470) ─────────────────────────────────────
-  sempione:     { name:'Sempione',     coords:[[45.461,9.152],[45.470,9.152],[45.470,9.164],[45.461,9.164]] },
-  brera_s:      { name:'Magenta',       coords:[[45.461,9.165],[45.470,9.165],[45.470,9.182],[45.461,9.182]] },
-  duomo:        { name:'Duomo',        coords:[[45.461,9.183],[45.470,9.183],[45.470,9.204],[45.461,9.204]] },
-  porta_venezia:{ name:'Porta Venezia',coords:[[45.461,9.205],[45.470,9.205],[45.470,9.221],[45.461,9.221]] },
-  citta_studi:  { name:'Città Studi',  coords:[[45.461,9.222],[45.476,9.222],[45.476,9.241],[45.461,9.241]] },
-  lambrate:     { name:'Lambrate',     coords:[[45.461,9.242],[45.487,9.242],[45.487,9.261],[45.461,9.261]] },
+  // ─── SOUTH ──────────────────────────────────────────────────────────────
+  vigentino:       { name:'Vigentino',       coords:[[45.394,9.175],[45.430,9.175],[45.430,9.205],[45.394,9.205]] },
+  chiaravalle:     { name:'Chiaravalle / Corvetto', coords:[[45.394,9.205],[45.430,9.205],[45.430,9.242],[45.394,9.242]] },
 
-  // ─── NORTH ROW  (lat 45.470–45.479) ─────────────────────────────────────
-  citylife:     { name:'CityLife',     coords:[[45.470,9.136],[45.479,9.136],[45.479,9.151],[45.470,9.151]] },
-  sempione_n:   { name:'Sempione N',   coords:[[45.470,9.152],[45.479,9.152],[45.479,9.164],[45.470,9.164]] },
-  sarpi:        { name:'Sarpi',        coords:[[45.470,9.165],[45.479,9.165],[45.479,9.182],[45.470,9.182]] },
-  brera:        { name:'Brera',        coords:[[45.470,9.183],[45.479,9.183],[45.479,9.204],[45.470,9.204]] },
-  loreto:       { name:'Loreto',       coords:[[45.470,9.205],[45.484,9.205],[45.484,9.221],[45.470,9.221]] },
+  // ─── SOUTH ROW (lat 45.430–45.451) ───────────────────────────────────────
+  giambellino:     { name:'Giambellino',     coords:[[45.440,9.136],[45.451,9.136],[45.451,9.152],[45.440,9.152]] },
+  navigli_s:       { name:'Naviglio Pavese', coords:[[45.430,9.152],[45.451,9.152],[45.451,9.175],[45.430,9.175]] },
+  porta_romana_s:  { name:'Porta Romana sud', coords:[[45.430,9.205],[45.451,9.205],[45.451,9.225],[45.430,9.225]] },
+  rogoredo:        { name:'Rogoredo',        coords:[[45.430,9.225],[45.460,9.225],[45.460,9.265],[45.430,9.265]] },
 
-  // ─── UPPER ROW  (lat 45.479–45.484) ─────────────────────────────────────
-  garibaldi:    { name:'Garibaldi',    coords:[[45.479,9.165],[45.484,9.165],[45.484,9.204],[45.479,9.204]] },
+  // ─── SOUTH ROW (lat 45.451–45.461) ───────────────────────────────────────
+  tortona:         { name:'Tortona / Solari', coords:[[45.451,9.136],[45.461,9.136],[45.461,9.164],[45.451,9.164]] },
+  navigli:         { name:'Navigli',         coords:[[45.444,9.164],[45.451,9.164],[45.451,9.183],[45.461,9.183],[45.461,9.175],[45.461,9.164]] },
+  ticinese:        { name:'Ticinese',        coords:[[45.451,9.164],[45.461,9.164],[45.461,9.183],[45.451,9.183]] },
+  crocetta:        { name:'Crocetta',        coords:[[45.451,9.183],[45.461,9.183],[45.461,9.205],[45.451,9.205]] },
+  porta_romana:    { name:'Porta Romana',    coords:[[45.451,9.205],[45.461,9.205],[45.461,9.225],[45.451,9.225]] },
 
-  // ─── TOP ROW  (lat 45.484–45.495) ────────────────────────────────────────
-  isola:        { name:'Isola',        coords:[[45.484,9.165],[45.495,9.165],[45.495,9.204],[45.484,9.204]] },
-  nolo:         { name:'NoLo',         coords:[[45.484,9.205],[45.495,9.205],[45.495,9.221],[45.484,9.221]] },
-  turro:        { name:'Turro',        coords:[[45.484,9.222],[45.495,9.222],[45.495,9.235],[45.484,9.235]] },
+  // ─── CENTRE ROW (lat 45.461–45.470) ──────────────────────────────────────
+  sempione:        { name:'Sempione',        coords:[[45.461,9.136],[45.470,9.136],[45.470,9.165],[45.461,9.165]] },
+  magenta:         { name:'Magenta',         coords:[[45.461,9.165],[45.470,9.165],[45.470,9.183],[45.461,9.183]] },
+  duomo:           { name:'Duomo',           coords:[[45.461,9.183],[45.470,9.183],[45.470,9.205],[45.461,9.205]] },
+  porta_venezia:   { name:'Porta Venezia',   coords:[[45.461,9.205],[45.470,9.205],[45.470,9.225],[45.461,9.225]] },
+  citta_studi:     { name:'Città Studi',     coords:[[45.461,9.225],[45.476,9.225],[45.476,9.245],[45.461,9.245]] },
+  lambrate:        { name:'Lambrate',        coords:[[45.461,9.245],[45.487,9.245],[45.487,9.285],[45.461,9.285]] },
 
-  // ─── FAR NORTH ────────────────────────────────────────────────────────────
-  bovisa:       { name:'Bovisa',       coords:[[45.500,9.152],[45.514,9.152],[45.514,9.174],[45.500,9.174]] },
-  affori:       { name:'Affori',       coords:[[45.500,9.175],[45.521,9.175],[45.521,9.195],[45.500,9.195]] },
+  // ─── NORTH ROW (lat 45.470–45.479) ───────────────────────────────────────
+  citylife:        { name:'CityLife',        coords:[[45.470,9.136],[45.479,9.136],[45.479,9.151],[45.470,9.151]] },
+  sempione_n:      { name:'Sempione Nord',   coords:[[45.470,9.151],[45.479,9.151],[45.479,9.165],[45.470,9.165]] },
+  sarpi:           { name:'Sarpi / Chinatown', coords:[[45.470,9.165],[45.479,9.165],[45.479,9.183],[45.470,9.183]] },
+  brera:           { name:'Brera',           coords:[[45.470,9.183],[45.479,9.183],[45.479,9.205],[45.470,9.205]] },
+  loreto:          { name:'Loreto',          coords:[[45.470,9.205],[45.484,9.205],[45.484,9.225],[45.470,9.225]] },
+
+  // ─── UPPER ROW (lat 45.479–45.484) ───────────────────────────────────────
+  portello:        { name:'Portello / Fiera', coords:[[45.479,9.136],[45.484,9.136],[45.484,9.165],[45.479,9.165]] },
+  garibaldi:       { name:'Garibaldi',       coords:[[45.479,9.165],[45.484,9.165],[45.484,9.205],[45.479,9.205]] },
+
+  // ─── TOP ROW (lat 45.484–45.495) ─────────────────────────────────────────
+  monumentale:     { name:'Monumentale',     coords:[[45.484,9.136],[45.495,9.136],[45.495,9.165],[45.484,9.165]] },
+  isola:           { name:'Isola',           coords:[[45.484,9.165],[45.495,9.165],[45.495,9.205],[45.484,9.205]] },
+  nolo:            { name:'NoLo',            coords:[[45.484,9.205],[45.495,9.205],[45.495,9.225],[45.484,9.225]] },
+  turro:           { name:'Turro / Crescenzago', coords:[[45.484,9.225],[45.500,9.225],[45.500,9.260],[45.484,9.260]] },
+
+  // ─── NORTH RING (lat 45.495–45.515) ──────────────────────────────────────
+  villapizzone:    { name:'Villapizzone',    coords:[[45.495,9.136],[45.510,9.136],[45.510,9.165],[45.495,9.165]] },
+  dergano:         { name:'Dergano / Maciachini', coords:[[45.495,9.165],[45.510,9.165],[45.510,9.195],[45.495,9.195]] },
+  niguarda:        { name:'Niguarda',        coords:[[45.495,9.195],[45.520,9.195],[45.520,9.225],[45.495,9.225]] },
+
+  // ─── FAR NORTH (lat 45.500+) ─────────────────────────────────────────────
+  bovisa:          { name:'Bovisa',          coords:[[45.510,9.136],[45.530,9.136],[45.530,9.180],[45.510,9.180]] },
+  affori:          { name:'Affori / Bruzzano', coords:[[45.510,9.180],[45.555,9.180],[45.555,9.225],[45.510,9.225]] },
+
+  // ─── FAR EAST (lng 9.260+) ───────────────────────────────────────────────
+  cimiano:         { name:'Cimiano / Adriano', coords:[[45.487,9.245],[45.510,9.245],[45.510,9.295],[45.487,9.295]] },
 };
 
 /* Point-in-polygon (ray casting) */
@@ -2217,27 +2264,26 @@ function polyCentroid(coords) {
 
 function calcZoneCoverage() {
   if (!S.data) return;
-  const allUnique = new Map();
+  // 1. Collect priced (drink) venues — deduped — and apply coherence filter
+  const priced = new Map();
   Object.values(S.data).forEach(prod => {
     (prod.venues || []).forEach(v => {
-      const nameKey = (v.venue_name || '').toLowerCase().trim().replace(/\s+/g,'');
-      const coordKey = `${v.lat.toFixed(3)},${v.lng.toFixed(3)}`;
-      const key = nameKey || coordKey;
-      if (!allUnique.has(key)) {
-        allUnique.set(key, { lat: v.lat, lng: v.lng, hasPrice: !!(v.items && v.items.length > 0) });
-      } else if (v.items && v.items.length > 0) {
-        allUnique.get(key).hasPrice = true;
-      }
+      if (!isDrinkVenue(v.venue_name, '', v.categories || '')) return;
+      const key = `${v.lat.toFixed(4)},${v.lng.toFixed(4)}`;
+      if (!priced.has(key)) priced.set(key, { lat: v.lat, lng: v.lng });
     });
   });
-  const allVenuesList = Array.from(allUnique.values());
+  // 2. Collect no-price venues if loaded (already filtered by loadDrinkNoPrice)
+  const unpriced = (S.drinkNoPrice || []).map(v => ({ lat: v.lat, lng: v.lng }));
+
   const result = {};
   Object.entries(MILAN_ZONES).forEach(([key, zone]) => {
-    const inZone    = allVenuesList.filter(v => pip(v.lat, v.lng, zone.coords));
-    const withPrice = inZone.filter(v => v.hasPrice);
-    const total     = inZone.length;
-    const pct       = total > 0 ? Math.round((withPrice.length / total) * 100) : 0;
-    result[key] = { name: zone.name, total, withPrice: withPrice.length, pct };
+    const inP = Array.from(priced.values()).filter(v => pip(v.lat, v.lng, zone.coords));
+    const inU = unpriced.filter(v => pip(v.lat, v.lng, zone.coords));
+    const total = inP.length + inU.length;
+    const withPrice = inP.length;
+    const pct = total > 0 ? Math.round((withPrice / total) * 100) : 0;
+    result[key] = { name: zone.name, total, withPrice, venues: total, pct };
   });
   S.zoneCoverage = result;
 }
@@ -2354,30 +2400,30 @@ function openZonePopup(key, zone, cov, rect) {
       <div class="zc-stats">
         <div class="zc-stat">
           <span class="zc-stat-v">${withPrice}/${total}</span>
-          <span class="zc-stat-l">Coverage</span>
+          <span class="zc-stat-l">${t('zc_coverage')}</span>
         </div>
         <div class="zc-stat">
           <span class="zc-stat-v" style="color:var(--deal-t)">${pct}%</span>
-          <span class="zc-stat-l">Complete</span>
+          <span class="zc-stat-l">${t('zc_complete')}</span>
         </div>
         <div class="zc-stat">
-          <span class="zc-stat-v">${zoneVenues.length}</span>
-          <span class="zc-stat-l">${pLabel} venues</span>
+          <span class="zc-stat-v">${total}</span>
+          <span class="zc-stat-l">${t('zc_total_bars')}</span>
         </div>
       </div>
     </div>
     ${avgPrice !== null ? `
     <div class="zc-avg">
-      <span class="zc-avg-lbl">Avg ${pLabel} price</span>
+      <span class="zc-avg-lbl">${t('zc_avg_price', { p: pLabel })}</span>
       <span class="zc-avg-val">${fmt(avgPrice)}</span>
     </div>` : ''}
     ${venueRows.length ? `
     <div class="zc-toggle" id="zc-toggle-${key}" onclick="toggleZcList('${key}')">
-      <span class="zc-toggle-lbl">${sortedVenues.length} venues in zone</span>
+      <span class="zc-toggle-lbl">${sortedVenues.length} ${t('zc_venues_in_zone')}</span>
       <span class="zc-toggle-icon">↓</span>
     </div>
     <div class="zc-list" id="zc-list-${key}">${venueRows}</div>
-    ` : `<div style="padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--t3);">No venues for current product</div>`}
+    ` : `<div style="padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--t3);">${t('zc_no_venues')}</div>`}
   `;
 
   if (window.innerWidth > 768) {
@@ -2448,6 +2494,37 @@ const META = {
 };
 
 /* ──────────────────────────────────────────
+   DRINK COHERENCE FILTER
+   Removes non-drink venues (sushi, pizzeria, gelateria, restaurants,
+   bakeries…) that polluted the dataset. Applied to BOTH priced + no-price.
+─────────────────────────────────────────── */
+const NON_DRINK_KEYWORDS = [
+  // restaurants / cuisines
+  'sushi', 'pizzeria', 'pizza ', 'pizza d', 'pizza al ', 'cambiopizza', 'pizz&',
+  'ristorante', 'restaurant', 'trattoria', 'osteria',
+  'gelat', 'gelateria',
+  'pasticceria', 'pasticce', 'panetteria', 'panineria', 'panini ',
+  'rosticceria', 'tavola calda', 'tavola fredda',
+  'cinese', 'china ', 'chinese', 'thai ', 'japanese', 'giappon', 'sashimi',
+  'noodle', 'wok ', 'pho ', 'indian', 'curry', 'samosa', 'kebab',
+  'fusion ', 'sushi bar',
+  'gnocco', 'rosti',
+  'tabaccheria', 'tabacchi',
+  // hotels (excluded unless explicitly "hotel bar" type)
+];
+// Allow-list: even if name contains a "sushi" reference, keep it if it's
+// explicitly NOT a sushi place (e.g. "This is not a Sushi Bar")
+const NON_DRINK_ALLOWLIST = ['this is not a sushi', 'sushi club bar'];
+
+function isDrinkVenue(name, type, categories) {
+  if (!name) return false;
+  const n = (name + ' ' + (categories || '')).toLowerCase();
+  for (const ok of NON_DRINK_ALLOWLIST) if (n.includes(ok)) return true;
+  for (const kw of NON_DRINK_KEYWORDS) if (n.includes(kw)) return false;
+  return true;
+}
+
+/* ──────────────────────────────────────────
    DRINK NO-PRICE LAYER
 ─────────────────────────────────────────── */
 const VENUE_TYPE_LABELS = {
@@ -2514,7 +2591,8 @@ async function loadDrinkNoPrice() {
         lat: parseFloat(row.latitude),
         lng: parseFloat(row.longitude),
       }))
-      .filter(v => !isNaN(v.lat) && !isNaN(v.lng));
+      .filter(v => !isNaN(v.lat) && !isNaN(v.lng))
+      .filter(v => isDrinkVenue(v.venue_name, v.venue_type, ''));
   } catch(e) {
     console.error('unified_venues_no_price.csv failed:', e);
     S.drinkNoPrice = [];
@@ -2532,15 +2610,20 @@ async function toggleDrinkNoPrice() {
   }
   if (S.drinkNoPriceShow) {
     // Spinner state
-    if (btn) btn.textContent = '⋯ caricamento…';
+    if (btn) btn.textContent = '⋯ ' + (S.lang === 'it' ? 'caricamento…' : 'loading…');
     const data = await loadDrinkNoPrice();
-    if (btn) btn.textContent = `● Nascondi bar Milano (${data.length})`;
+    if (btn) btn.textContent = `● ${t('hide_milan_bars')} (${data.length})`;
     renderDrinkNoPrice();
+    // Update zone coverage with the new venue pool
+    calcZoneCoverage();
+    if (S.zoneMode !== 'off') renderZones();
   } else {
     if (S.drinkNoPriceCluster) {
       S.map.removeLayer(S.drinkNoPriceCluster);
       S.drinkNoPriceCluster = null;
     }
+    calcZoneCoverage();
+    if (S.zoneMode !== 'off') renderZones();
   }
 }
 
@@ -2709,7 +2792,8 @@ function selectProduct(code) {
   if (!S.data?.[code]) return;
   S.product = code;
   S.selIdx  = null;
-  S.allVenues = S.data[code].venues;
+  S.allVenues = S.data[code].venues.filter(v =>
+    isDrinkVenue(v.venue_name, '', v.categories || ''));
   S.venues    = S.allVenues;
 
   // Filter tabs
