@@ -142,13 +142,11 @@ Cluster per `geo_key` con tolleranza: due venues entro **~30–40 m E norm_name 
 - **Metadata**: union → website/phone da OSM, `nil_quartiere` da CKAN, `categories` license, `amenity`.
 - `all_names` = tutte le varianti con `|`; `source_provenance` = sorgenti unite.
 
-### 5c. Dedup vs DB esistente (ESCLUDI, non duplicare)
-Scarta ogni venue che è **già**:
-- in `unified_prices.csv` (ha prezzo → già sulla mappa);
-- in `agent6_venues_no_price.csv` (già consegnato in S6 — match per norm_name **e** geo_key);
-- nel master CEO `data/unified_venues_no_price.csv` (per evitare doppioni col suo pipeline).
+### 5c. Relazione col DB esistente (ESCLUDI vs SUPERSEDE — distinzione critica)
+- **ESCLUDI** (sono già coperti, NON rimetterli): venues in `unified_prices.csv` (hanno prezzo, già sulla mappa) e in `agent6_venues_no_price.csv` (già standardizzati da S6 — match per norm_name **e** geo_key).
+- **SUPERSEDE, NON escludere**: il master CEO `data/unified_venues_no_price.csv` contiene **2.867 venues CKAN grezzi** (senza target_classification, dedup o nome recuperato). Questi sono **proprio l'oggetto di S7**: vanno **processati e migliorati**, non scartati. L'output `agent7_*` è la versione pulita che il CEO userà per **sostituire/aggiornare** quelle righe grezze nel suo master. → **NON usare `unified_venues_no_price.csv` come filtro di esclusione.** Riporta l'overlap (quanti agent7 corrispondono a righe grezze del master) così il CEO sa cosa rimpiazzare.
 
-Riporta il **dedup ratio**: righe grezze in ingresso → cluster unici → net-new dopo esclusione DB.
+Riporta il **dedup ratio**: righe grezze in ingresso (≈13.700) → cluster unici cross-source → output finale (dopo esclusione dei soli priced + agent6). Il "net-new" è inteso **rispetto al DB reale** (prezzi + agent6), non rispetto all'assorbimento grezzo CKAN del master CEO.
 
 ---
 
@@ -198,7 +196,7 @@ all_names, nil_quartiere, name_source, source_provenance
 ## STEP 9 — QUALITY GATE (mandatory, inline)
 
 Per ogni venue in output:
-- ❌ NON già in DB (priced / agent6 / unified_venues_no_price) — per norm_name **e** geo_key.
+- ❌ NON già in DB **reale** (priced `unified_prices` / `agent6_venues_no_price`) — per norm_name **e** geo_key. (NB: `unified_venues_no_price.csv` del CEO si **supersede**, non si esclude — vedi 5c.)
 - `is_milan_or_unknown(address) == True`.
 - lat/lon dentro `MILAN_BBOX` (45.39–45.54, 9.04–9.28).
 - `target_classification ∈ {TARGET, AMBIGUOUS_TO_REVIEW}` (no NO_TARGET).
@@ -234,7 +232,7 @@ def quality_gate(v, in_db_norm, in_db_geo):
 | Metrica | Target |
 |---|---|
 | Nomi commerciali recuperati (cross-ref OSM) | ≥ 1.000 |
-| Venues TARGET classificate (con venue_type) | ≥ 2.000 net-new |
+| Venues TARGET classificate (con venue_type), net-new vs DB reale (prezzi+agent6) | ≥ 2.000 |
 | **Dedup ratio** documentato (grezzi → cluster → net-new) | obbligatorio |
 | Doppioni vs DB evitati | tutti (0 venue già in DB nell'output) |
 | venue_type | ≥ 8/9 tipi reali rappresentati |
