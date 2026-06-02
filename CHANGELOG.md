@@ -36,8 +36,12 @@ scripts/
 └── build_<vertical>_json.py      ← per ogni vertical
 ```
 
-### Prompts S7+ pushati
-- `PROMPT_PIETRO_S7.md` riscritto: drink TOP 6 città Italia (era solo Milano discovery)
+### Prompts S7/S8 pushati (corretti: S7 Pietro in corso preservato)
+- `PROMPT_PIETRO_S7.md` MANTENUTO ORIGINALE (Milano discovery, in corso da Pietro):
+  - Discovery comune/CKAN/OSM Milano → set drink classificato + deduplicato
+  - Cross-ref geo (≤35m) per name recovery
+  - Target: 2.500 venues puliti dal bacino discovery
+- `PROMPT_PIETRO_S8.md` NUOVO: drink TOP 6 città Italia (parte dopo S7)
   - CKAN/Overpass/eatbu pattern replicato per Roma/Napoli/Torino/Firenze/Bologna/Venezia
   - Estensione `normalization.py` con CITY_BBOX, CITY_CAP_RANGES, is_in_city()
   - Target aggregato: 20.000 venues + 2.000 price points Italia

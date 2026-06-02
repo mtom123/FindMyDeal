@@ -1,362 +1,322 @@
-# Prompt Pietro — Sessione S7: Espansione Drink TOP 6 città Italia (03/06/2026)
+# Prompt Pietro — Sessione S7: Discovery comune/CKAN/OSM → set drink Milano classificato & deduplicato (02/06/2026)
 
-> **CAMBIO DI ROTTA CEO/Utente** (call odierna): il progetto SurPrice si espande dal solo Milano a **6 città principali Italia**. Tu sei l'unico scraper drink. Replica il playbook Milano per 5 nuove città.
+> **OBIETTIVO STRATEGICO**
+> Trasformare il bacino di **discovery open-data** (~13.700 righe grezze in 3 file: comune_osm + CKAN Comune Milano + OSM Overpass) in **un set TARGET drink Milano pulito**: con **nome commerciale recuperato**, **classificato** (TARGET/NO_TARGET/AMBIGUOUS), **tipizzato** (venue_type), **arricchito** (website/phone da OSM) e soprattutto **DEDUPLICATO** — cross-source *e* contro il DB esistente.
 >
-> **Target**: 6 città totali, ognuna con stesso pattern dati che hai costruito per Milano (DB + no-price layer + price points).
+> Il risultato alimenta il layer "Prezzo non disponibile — Contribuisci" del frontend, con filtro per quartiere (NIL). **Quality > quantity**: meglio 2.500 venues puliti e non-doppi che 13.000 grezzi pieni di duplicati e ristoranti.
+
+S7 è la naturale prosecuzione di S6 (che ha standardizzato i 1.441 no-price **già nel DB**). S7 lavora i venues di discovery **NON ancora nel DB**, lasciati esplicitamente fuori da S6.
 
 ---
 
-## CITTÀ TARGET (in ordine priorità)
+## CONTESTO E NUMERI
 
-| # | Città | CAP range | Stima venues drink target |
-|---|---|---|---|
-| 0 | Milano (già fatto) | 20100-20162 | 153 prezzati + 3.712 no-price |
-| 1 | **Roma** | 00100-00199 | ~6.000-8.000 |
-| 2 | **Napoli** | 80100-80147 | ~2.500-3.500 |
-| 3 | **Torino** | 10100-10156 | ~2.000-3.000 |
-| 4 | **Firenze** | 50100-50145 | ~1.500-2.500 |
-| 5 | **Bologna** | 40100-40141 | ~1.500-2.500 |
-| 6 | **Venezia** | 30100-30176 | ~1.000-1.500 |
+### I tre file di discovery (in `raw_sources/`)
 
-**Stima totale aggregato**: ~20.000 venues drink Italia + ~3.000-5.000 price points raccoglibili.
+| File | Righe | Nome commerciale | Geo | Website/Phone | Note |
+|---|---:|---|---|---|---|
+| `ckan_milano_drink_venues_no_price.csv` | **3.804** | ✅ 3.803 con nome reale | ✅ preciso + CAP + NIL | ❌ | **Gold source**: CKAN ufficiale `dati.comune.milano.it`, già con `venue_type` + `nil_quartiere` + campi `_osm_*` |
+| `comune_osm_venues.csv` | **4.649** | ⚠️ **3.270 = `[bar non identificato]`** | ✅ preciso | ❌ | Versione più vecchia, in gran parte placeholder. Utile solo per i ~1.379 nominati non in CKAN |
+| `osm_milano_drink_overpass.csv` | **5.229** | ✅ 5.229 con nome | ✅ preciso | ✅ **1.477 website + 1.382 phone** | OSM raw: `name,lat,lon,amenity,cuisine,website,phone`. Porta i metadati che a CKAN mancano |
 
----
+### Composizione OSM Overpass per `amenity`
+`restaurant 2.805` (→ **NO_TARGET**) · `cafe 1.580` · `bar 606` · `pub 183` · `nightclub 55` (→ **TARGET ~2.424**)
 
-## NUOVA ARCHITETTURA — MULTI-CITY
+### CKAN `venue_type` già presente (license-derived, da rivalidare)
+`cafe 2.620 · bar 848 · pub 317 · cocktail_bar 19`
 
-### Schema CSV esteso (CRITICO — modifica `SCHEMA_AGENTI.md`)
+### Overlap (perché la dedup è il cuore di S7)
+- **2.845 / 3.804** venues CKAN hanno un venue OSM Overpass entro ~30 m → name-recovery + dedup ad alto potenziale.
+- comune_osm e CKAN derivano dalla **stessa anagrafica licenze Comune** → fortissima sovrapposizione (es. *Piazza Bandiera 13* = `[bar non identificato]` in comune_osm ma **`Altrè`** in CKAN, stesse coordinate).
+- Tutti e tre vanno deduplicati anche **contro il DB**: 161 venues prezzati + 824 no-price già consegnati da S6 (`agent6_venues_no_price.csv`) + il master CEO `data/unified_venues_no_price.csv` (4.124).
 
-Tutti i tuoi CSV output ora richiedono **`city`** come campo OBBLIGATORIO:
-
-```csv
-source_platform,source_venue_id,venue_name,venue_url,address,city,latitude,longitude,...
-```
-
-`city` ∈ {`Milano`, `Roma`, `Napoli`, `Torino`, `Firenze`, `Bologna`, `Venezia`}.
-
-### Naming files raw_sources
-
-Prefisso per città + sessione:
-```
-raw_sources/
-├── agent7_milano_*.csv      # se aggiorni Milano
-├── agent7_roma_*.csv         # nuova città
-├── agent7_napoli_*.csv
-├── agent7_torino_*.csv
-├── agent7_firenze_*.csv
-├── agent7_bologna_*.csv
-└── agent7_venezia_*.csv
-```
+### Riferimento: ricerca notturna CEO
+`NIGHT_RESEARCH_REPORT.md` definisce l'hand-off per Pietro S7:
+1. **CKAN cross-ref OSM Overpass** per recuperare il nome commerciale (yield atteso 1.000–1.500).
+2. **Cluster CKAN + DB** per dedup nominale.
+3. (Opzionale) **TheFork metadata bulk** via `curl_cffi` `impersonate='safari17_2_ios'` (bypass Datadome 403, solo metadata, no prezzi).
 
 ---
 
-## PLAYBOOK PER CITTÀ (replica Milano)
+## SETUP (macOS — ignora path Windows e prefisso `website/`)
 
-Per ogni città dei 6 target, applica questo workflow:
-
-### A) Discovery anagrafica venues (open data città)
-
-**Strategia per ogni città** — cerca dataset CKAN/open data comunale + OSM:
-
-| Città | Open data | CKAN endpoint | Note |
-|---|---|---|---|
-| Roma | dati.comune.roma.it | CKAN attivo | Cerca "esercizi commerciali", "pubblici esercizi" |
-| Torino | aperto.comune.torino.it | CKAN attivo | "attivita commerciali" |
-| Napoli | dati.comune.napoli.it | CKAN parziale | Spesso solo PDF, fallback OSM |
-| Firenze | opendata.comune.fi.it | CKAN attivo | Categoria "esercizi pubblici" |
-| Bologna | dati.comune.bologna.it | CKAN attivo | Forte open data culture |
-| Venezia | dati.comune.venezia.it | CKAN attivo | Cerca "pubblici esercizi" |
-
-**Workflow per ogni città**:
-```python
-# 1. CKAN package_search per "esercizi pubblici" / "attivita commerciali"
-# 2. Filter su categoria bar/caffè/pub/wine bar (analogo a Milano f/e/g/h/i/j)
-# 3. Estrai venues con geo + addr + CAP città-specifico
-
-# 4. OSM Overpass query per amenity=bar/pub/cafe/nightclub area="Roma"
-# 5. Cross-ref CKAN ↔ OSM (geo 50m) per nomi commerciali
-# 6. Filter via bbox città (vedi sotto)
+```bash
+cd ~/Desktop/FindMyDeal_clone
+git pull --rebase origin main
 ```
 
-### B) Bbox per città (filter quality)
-
-Da inserire nel `normalization.py` extension:
-
-```python
-CITY_BBOX = {
-    'Milano':  (45.39, 45.54, 9.04, 9.28),
-    'Roma':    (41.78, 42.00, 12.35, 12.65),
-    'Napoli':  (40.78, 40.92, 14.15, 14.35),
-    'Torino':  (45.00, 45.13, 7.55, 7.78),
-    'Firenze': (43.72, 43.83, 11.18, 11.32),
-    'Bologna': (44.43, 44.55, 11.25, 11.42),
-    'Venezia': (45.40, 45.47, 12.30, 12.40),
-}
-
-def is_in_city(lat, lon, city):
-    if city not in CITY_BBOX:
-        return False
-    lat_min, lat_max, lon_min, lon_max = CITY_BBOX[city]
-    return lat_min <= lat <= lat_max and lon_min <= lon <= lon_max
-```
-
-### C) Discovery prezzi/menu (per ogni città)
-
-**Riusa le tecniche provate**:
-
-| Tecnica | Source | Status |
-|---|---|---|
-| **leggimenu.it slug brute-force** | leggimenu | ✅ provata Milano S3, replicabile |
-| **mycia.it sitemap per città** | mycia | ✅ provata Milano S0 |
-| **eatbu.com sitemap nazionale** | eatbu | ✅ già fatto Italy-wide, filtra per CAP città |
-| **TheFork via Wayback** | thefork | ✅ provata Milano S4 |
-| **TheFork live `curl_cffi safari17_2_ios`** | thefork | ✅ NUOVA (CEO night) — bypass 403, metadata only |
-| **PDF dish.co via venue website Google dork** | direct_website | ✅ provata pdf_googledork |
-| **menudigitale.it filter città** | menudigitale | ✅ già scaricato Italy-wide |
-| **OSM Overpass bar/pub/cafe** | OSM | ✅ già usato Milano |
-
-**Replica per Roma/Napoli/Torino/Firenze/Bologna/Venezia**:
+**OBBLIGATORIO leggere/riusare (NON duplicare logica):**
+- `AGENTS.md`, `AGENTS_STATE.md`, `scripts/SCHEMA_AGENTI.md`
+- `scripts/normalization.py` → `is_milan_or_unknown`, `PRICE_RANGES`
+- `scripts/agent6_standardize.py` → **riusa così com'è**: `classify_venue`, `detect_venue_type`, `norm_name`, `clean_display_name`, `is_junk_name`, `sanitize_milan_address`, `fix_mojibake`, `MILAN_BBOX`, `DUOMO`
+- `NIGHT_RESEARCH_REPORT.md` (tecniche + hand-off)
 
 ```python
-# Eatbu: stesso sitemap già scaricato, filter CAP per città
-import csv
-city_caps = {
-    'Roma':    range(100, 200),
-    'Napoli':  range(80100, 80148),
-    # ...
-}
-# Per ogni venue eatbu con postcode in city_caps[X] → tag city=X
+import sys; sys.path.insert(0, 'scripts')
+from normalization import is_milan_or_unknown
+from agent6_standardize import (classify_venue, detect_venue_type, norm_name,
+    clean_display_name, is_junk_name, sanitize_milan_address, fix_mojibake, MILAN_BBOX)
 ```
 
-```python
-# Leggimenu slug brute-force: stesso codice S3 ma con città target
-slugs = generate_slugs(venue_names_from_OSM[city])
-# fetch leggimenu.it/menu/<slug>
-# Quality gate: address contiene città + CAP city range
-```
-
-### D) Quality gates per città (INLINE)
-
-Per ogni venue/item, applica filtro:
-1. `is_in_city(lat, lon, city)` deve essere True
-2. CAP in address deve match `city_caps[city]`
-3. Tutte le altre regole `clean_item_product()` da `normalization.py`
+Output dir: `raw_sources/` · Prefisso file: `agent7_*` · Script: `scripts/agent7_*.py`
 
 ---
 
-## ESTENSIONE LIBRERIA CONDIVISA (deliverable secondario)
+## STEP 1 — INVENTORY & SOURCE RECONCILIATION
 
-**Estendi `scripts/normalization.py`** aggiungendo:
+Carica i 3 file + il DB. Stabilisci per ogni sorgente: schema, n. righe, % con nome reale, % con geo in bbox, % con website/phone. Stampa una tabella di riconciliazione. Identifica i campi-chiave per il merge:
+- geo (lat/lon) — presente ovunque, **chiave primaria di dedup**
+- nome commerciale — presente in OSM + CKAN, assente in comune_osm placeholder
+- `nil_quartiere` (solo CKAN) — da propagare al canonical
+- `amenity`/`cuisine` (solo OSM) — segnale di classificazione
+- `categories` license (CKAN/comune) — segnale di classificazione
 
-```python
-# Aggiungi a normalization.py
-CITY_BBOX = { ... }  # vedi sopra
-CITY_CAP_RANGES = {
-    'Milano':  range(20100, 20163),
-    'Roma':    range(100, 200),  # 00100-00199
-    'Napoli':  range(80100, 80148),
-    'Torino':  range(10100, 10157),
-    'Firenze': range(50100, 50146),
-    'Bologna': range(40100, 40142),
-    'Venezia': range(30100, 30177),
-}
+---
 
-def is_in_city(lat, lon, city): ...
-def detect_city_from_cap(cap_str): ...  # ritorna nome città dal CAP
-def is_address_in_city(addr, city): ...
+## STEP 2 — NAME RECOVERY (cross-ref geografico OSM Overpass)
+
+Per ogni venue **senza nome commerciale** (placeholder `[bar non identificato]`, o `venue_name` = indirizzo/licenziatario), cerca il venue OSM Overpass più vicino:
+
+```
+match se distanza(haversine) ≤ 35 m  AND  amenity OSM ∈ {bar,pub,cafe,nightclub}  (no restaurant)
+→ adotta il name OSM come nome commerciale
 ```
 
-E `is_milan_or_unknown()` rinomina in `is_target_city_or_unknown(addr, cities=ALL)`.
+- Se più OSM nel raggio → prendi il più vicino con amenity drink.
+- Registra `name_source ∈ {osm_overpass, ckan, comune_license, placeholder}` per provenance.
+- **Yield atteso**: 1.000–1.500 nomi recuperati (CEO stima). Riporta il numero reale.
 
-**Commit separato `lib: normalization.py extension multi-city`** PRIMA di iniziare il scraping.
+> ⚠️ I nomi CKAN/comune possono essere **ragione sociale del licenziatario** (persona/azienda), non l'insegna. Se il nome OSM è disponibile, **preferiscilo**. Se nessun nome reale è recuperabile e resta solo un placeholder → marcare `name_source=placeholder` (gestito nel quality gate, Step 7).
+
+---
+
+## STEP 3 — TARGET CLASSIFICATION (riusa + estendi)
+
+Priorità dei segnali (dal più forte al più debole):
+
+1. **OSM `amenity`** (segnale fortissimo):
+   - `restaurant` → **NO_TARGET** (salvo nome con keyword bar/cocktail forte)
+   - `bar`, `pub`, `cafe`, `nightclub` → **TARGET**
+2. **`categories` license Comune** → mappa drink:
+   ```python
+   DRINK_LICENSE = {
+     'f - bar caffè e simili','e - bar gastronomici e simili',
+     'g - bar pasticceria, bar gelateria','h - wine bar, birreria, pub enoteche',
+     'i - disco bar, america bar','j - discoteche, sale da ballo',
+   }
+   ```
+   Categorie ristorazione (`a - ristorante`, `b - …`) → NO_TARGET.
+3. **`classify_venue(nome, categories)`** di agent6 (fallback su nome+keyword).
+
+Regola di combinazione: amenity `restaurant` **batte** una license bar generica (i locali con licenza "bar" ma amenity OSM "restaurant" sono ristoranti). In caso di conflitto reale → `AMBIGUOUS_TO_REVIEW`.
+
+**Attenzione**: la licenza Comune "Bar caffè e simili" è larghissima e include attività che NON sono bar drink (es. tabaccherie con caffè, edicole-bar). Filtra aggressivo i NO_TARGET; nel dubbio AMBIGUOUS, mai TARGET assertito.
+
+---
+
+## STEP 4 — venue_type (riusa + mappe sorgente)
+
+1. `detect_venue_type(nome, categories)` di agent6 (categories-aware).
+2. Override/refine con OSM `amenity`: `pub`→pub, `nightclub`→cocktail_bar, `cafe`→cafe, `bar`→cafe (default IT).
+3. Mappa license Comune → tipo (come `DRINK_LICENSE` sopra, es. `h - wine bar…`→wine_bar/pub, `i - disco bar`→cocktail_bar).
+4. `cuisine` OSM se utile (es. `cuisine=coffee_shop`→cafe).
+
+Obiettivo: minimizzare `unknown`, rappresentare il più possibile i 9 tipi.
+
+---
+
+## STEP 5 — DEDUP CROSS-SOURCE + vs DB ⭐ (il cuore di S7)
+
+**Doppia dedup obbligatoria.** I 3 file si sovrappongono pesantemente fra loro e col DB.
+
+### 5a. Geo-fingerprint (chiave primaria)
+```python
+def geo_key(lat, lon):
+    return (round(float(lat), 4), round(float(lon), 4))   # ~11 m
+```
+Cluster per `geo_key` con tolleranza: due venues entro **~30–40 m E norm_name simile (o uno placeholder)** = stesso locale. Usa anche `SequenceMatcher` sui norm_name per i borderline. **Non** fondere due insegne diverse alla stessa via (es. civici condivisi) → richiedi name-match o placeholder.
+
+### 5b. Canonical per cluster
+- **Nome**: OSM commercial > CKAN named > comune license-holder > placeholder (usa `formality_score`/`clean_display_name` di agent6).
+- **Geo**: la più precisa (preferisci OSM/CKAN concordi).
+- **Metadata**: union → website/phone da OSM, `nil_quartiere` da CKAN, `categories` license, `amenity`.
+- `all_names` = tutte le varianti con `|`; `source_provenance` = sorgenti unite.
+
+### 5c. Relazione col DB esistente (ESCLUDI vs SUPERSEDE — distinzione critica)
+- **ESCLUDI** (sono già coperti, NON rimetterli): venues in `unified_prices.csv` (hanno prezzo, già sulla mappa) e in `agent6_venues_no_price.csv` (già standardizzati da S6 — match per norm_name **e** geo_key).
+- **SUPERSEDE, NON escludere**: il master CEO `data/unified_venues_no_price.csv` contiene **2.867 venues CKAN grezzi** (senza target_classification, dedup o nome recuperato). Questi sono **proprio l'oggetto di S7**: vanno **processati e migliorati**, non scartati. L'output `agent7_*` è la versione pulita che il CEO userà per **sostituire/aggiornare** quelle righe grezze nel suo master. → **NON usare `unified_venues_no_price.csv` come filtro di esclusione.** Riporta l'overlap (quanti agent7 corrispondono a righe grezze del master) così il CEO sa cosa rimpiazzare.
+
+Riporta il **dedup ratio**: righe grezze in ingresso (≈13.700) → cluster unici cross-source → output finale (dopo esclusione dei soli priced + agent6). Il "net-new" è inteso **rispetto al DB reale** (prezzi + agent6), non rispetto all'assorbimento grezzo CKAN del master CEO.
+
+---
+
+## STEP 6 — Discovery TheFork massiva (OBBLIGATORIO)
+
+Discovery **a tappeto** dei venues TheFork Milano (metadata, NO prezzi). `curl_cffi` con `impersonate='safari17_2_ios'` bypassa Datadome 403 (vedi NIGHT_RESEARCH; chrome/edge → 403). `pip install curl_cffi` se mancante.
+
+**Discovery URL (multi-canale, esaustivo — non fermarsi al primo che funziona):**
+1. `sitemap.xml` / sitemap index di thefork.it e thefork.com → filtra URL `/restaurant/...` con città Milano.
+2. Pagine listing/search Milano **paginate** (es. `thefork.it/citta/milano-*`, per quartiere/cucina) → estrai link `/restaurant/{slug}-r{id}`.
+3. **Wayback CDX** (`matchType=prefix` su `/restaurant/`) come integrazione (agent4 ne prese 77).
+4. Cross-ref: per i venues TARGET già noti senza fonte TheFork, prova a costruire/verificare lo slug.
+
+**Per ogni venue**: fetch SSR con `safari17_2_ios`, estrai JSON-LD `Restaurant` (name, address, geo, rating, telephone). **NESSUN prezzo** (menu via Apollo/JS lazy — confermato NIGHT_RESEARCH). Filtra Milano (bbox + CAP), poi passa dallo **stesso** classify (Step 3) + venue_type (Step 4) + dedup (Step 5).
+
+Rate **2–5 s/req**, stop+log su 403 ripetuti, **salva incrementale + resumable**, cache HTML in dir gitignored (`raw_data/` o `.agent7_thefork_cache/`). Confluisce in `agent7_venues_no_price.csv` con `source_platform=thefork`, `name_source=thefork`.
+
+---
+
+## STEP 7 — METADATA ENRICHMENT (bounded, no overwrite)
+
+### 7.1 — OPENING HOURS ⭐ OBBLIGATORIO per TUTTI i venues
+**Requisito CEO: ogni venue in output DEVE avere un `opening_hours` valorizzato** — orario reale dove disponibile, altrimenti una **fascia oraria indicativa per `venue_type`**. Nessun venue con `opening_hours` vuoto.
+
+Cascata (priorità):
+1. **OSM `opening_hours`** — **re-query Overpass includendo il tag `opening_hours`** (la `osm_milano_drink_overpass.csv` attuale non lo contiene): `node/way["amenity"~"^(bar|pub|cafe|nightclub|biergarten)$"](area Milano); out center tags;`. Join per geo/nome → adotta l'orario reale OSM (formato spec OSM, es. `Mo-Su 07:00-20:00`).
+2. **TheFork JSON-LD** `openingHours` dove presente.
+3. **Fallback `typical_by_type`** (fascia indicativa realistica Milano) per chi resta senza orario reale:
+   ```
+   cafe          Mo-Su 07:00-20:00      cocktail_bar  Mo-Su 18:00-02:00
+   pub           Mo-Su 17:00-02:00      wine_bar      Mo-Su 17:00-00:00
+   aperitivo_bar Mo-Su 17:00-22:00      bistro        Mo-Su 12:00-00:00
+   craft_beer    Mo-Su 17:00-01:00      rooftop       Mo-Su 18:00-01:00
+   hotel_bar     Mo-Su 11:00-00:00      unknown       Mo-Su 08:00-22:00
+   ```
+Traccia la provenienza in **`opening_hours_source ∈ {osm, thefork, typical_by_type}`** così il frontend mostra "orario indicativo" per i typical. **Mai inventare un orario reale**: la fascia è dichiaratamente tipica.
+
+### 7.2 — Altri campi (no overwrite)
+- **website/phone**: dai campi OSM Overpass (gratis, già nel file) → riempi i vuoti dei canonical matchati.
+- **address**: già presente (Comune) o reverse-geocode (Nominatim, 1.2 s) solo per i pochi senza address ma con geo reale; **sanitizza CAP non-20xxx e mojibake** con le funzioni agent6.
+- **NON** scrapare prezzi (fuori scope). **NON** sovrascrivere dati esistenti.
+
+---
+
+## STEP 8 — OUTPUT
+
+### File 1 — `raw_sources/agent7_venues_no_price.csv`
+Schema esteso (compatibile agent6 + campi discovery):
+```
+source_platform, source_venue_id, venue_name, venue_url, address, city,
+latitude, longitude, categories, price_tier, rating, rating_count,
+phone, website, opening_hours, has_menu, menu_url, extraction_status, retrieved_at,
+venue_type, target_classification, has_price, geocoding_confidence,
+all_names, nil_quartiere, name_source, source_provenance, opening_hours_source
+```
+`has_price=False` per tutti. `opening_hours` **sempre valorizzato** (vedi 7.1). Solo **TARGET + AMBIGUOUS_TO_REVIEW** (no NO_TARGET).
+
+### File 2 — `raw_sources/agent7_dedup_map.csv`
+`canonical_name, all_variants, geo_key, source_provenance, cluster_size, dropped_reason`
+(traccia cosa è stato fuso e cosa scartato come già-in-DB).
+
+### File 3 — `agent7_REPORT.md`
+- Riconciliazione 3 sorgenti (righe in → cluster → net-new).
+- Nomi commerciali recuperati (cross-ref OSM).
+- TARGET / NO_TARGET / AMBIGUOUS.
+- Distribuzione venue_type.
+- **Dedup ratio** cross-source + vs DB (numero di doppioni evitati).
+- Copertura NIL quartiere + CAP.
+- Coverage website/phone aggiunti.
+- Issues residui / TODO.
+
+---
+
+## STEP 9 — QUALITY GATE (mandatory, inline)
+
+Per ogni venue in output:
+- ❌ NON già in DB **reale** (priced `unified_prices` / `agent6_venues_no_price`) — per norm_name **e** geo_key. (NB: `unified_venues_no_price.csv` del CEO si **supersede**, non si esclude — vedi 5c.)
+- `is_milan_or_unknown(address) == True`.
+- lat/lon dentro `MILAN_BBOX` (45.39–45.54, 9.04–9.28).
+- `target_classification ∈ {TARGET, AMBIGUOUS_TO_REVIEW}` (no NO_TARGET).
+- `not is_junk_name(venue_name)`.
+- nome pulito (no HTML/URL/pipe; mojibake riparato; CAP `.0` rimosso).
+- **placeholder-only name** (`[bar non identificato]` senza recovery) → ammesso **solo** se ha geo+address validi, marcato `name_source=placeholder` per UI ("Bar in Via X" generico). Altrimenti scarta.
+- **`opening_hours` NON vuoto** (reale OSM/thefork o `typical_by_type`) — requisito CEO, vedi 7.1.
+- Ogni cluster = **1 sola riga canonical**.
+
+```python
+def quality_gate(v, in_db_norm, in_db_geo):
+    if norm_name(v['venue_name']) in in_db_norm or v['geo_key'] in in_db_geo:
+        return False, 'ALREADY_IN_DB'
+    if not is_milan_or_unknown(v.get('address','')): return False, 'NON_MILAN_CAP'
+    # ... bbox, NO_TARGET, junk, placeholder ...
+    return True, None
+```
+
+---
+
+## RATE LIMITS
+
+| Servizio | Rate |
+|---|---|
+| OSM Overpass | **già scaricato** (file locale) — niente nuove chiamate |
+| Nominatim (reverse, solo gap) | 1.2 s/req, bbox Milano |
+| curl_cffi TheFork (opzionale) | 2–5 s/req, stop su 403 |
+| Website fetch (se serve) | 2 s/GET |
 
 ---
 
 ## TARGET MISURABILI S7
 
-### Per ogni nuova città (Roma, Napoli, Torino, Firenze, Bologna, Venezia)
-
-| Metrica | Target minimo | Target ottimo |
-|---|---|---|
-| Venues master discovery | 1.000 | 5.000 |
-| Venues con geo precisa | 80% | 95% |
-| Venues con nome commerciale | 60% | 90% |
-| Price points estratti | 50 | 300 |
-| Venue-product pairs | 30 | 200 |
-
-### Aggregato 6 nuove città
-
 | Metrica | Target |
 |---|---|
-| Venues master Italia (incl. Milano) | ≥ 20.000 |
-| Price points Italia (incl. Milano 964) | ≥ 2.000 |
-| Pin sulla mappa (priced+no-price) | ≥ 18.000 |
+| Nomi commerciali recuperati (cross-ref OSM) | ≥ 1.000 |
+| Venues TARGET classificate (con venue_type), net-new vs DB reale (prezzi+agent6) | ≥ 2.000 |
+| **Dedup ratio** documentato (grezzi → cluster → net-new) | obbligatorio |
+| Doppioni vs DB evitati | tutti (0 venue già in DB nell'output) |
+| venue_type | ≥ 8/9 tipi reali rappresentati |
+| Copertura NIL quartiere | tutti i NIL con ≥3 venues, ≥70 NIL |
+| **opening_hours coverage** ⭐ OBBLIGATORIO | **100%** (reale OSM/thefork o typical_by_type) |
+| website/phone aggiunti da OSM | realistico: ceiling ~350/~410 in OSM drink (no restaurant), ~120/~260 dopo dedup+DB |
+| **TheFork discovery** (metadata Milano, no prezzi) — OBBLIGATORIO | ≥ 100 venues |
 
 ---
 
-## SETUP
+## ERRORI DA NON RIPETERE (lesson learned)
 
-```bash
-cd ~/percorso/SurPrice
-git pull origin main
-```
-
-**OBBLIGATORIO leggere**:
-- `AGENTS.md`, `AGENTS_STATE.md`, `CHANGELOG.md` (3 voci 03/06)
-- `scripts/normalization.py` (libreria condivisa — estendi qui)
-- `scripts/SCHEMA_AGENTI.md` (schema CSV — sarà esteso da CEO con `city`)
-- `scripts/agent6_standardize.py` (logica classify/detect riusabile)
-- `NIGHT_RESEARCH_REPORT.md` (CKAN + OSM Overpass + curl_cffi)
-
-Working dir: `raw_sources/` · Prefisso: `agent7_<city>_*` · Script: `scripts/agent7_*.py`
-
----
-
-## STEP OPERATIVI
-
-### Step 1 — Estensione `normalization.py` (1 commit dedicato)
-Aggiungi `CITY_BBOX`, `CITY_CAP_RANGES`, `is_in_city()`, `is_address_in_city()`.
-Push immediato. CEO + Peppe useranno questa estensione.
-
-### Step 2 — Discovery anagrafica per Roma (la più grande, prima)
-- CKAN dati.comune.roma.it
-- OSM Overpass Roma bar/pub/cafe
-- Cross-ref + dedup
-- Output: `raw_sources/agent7_roma_venues_no_price.csv`
-
-### Step 3 — Discovery prezzi Roma (riusa tecniche Milano)
-- eatbu sitemap filter Roma
-- leggimenu slug brute-force Roma
-- mycia sitemap Roma
-- TheFork via Wayback Roma
-- PDF dish.co
-- Output: `raw_sources/agent7_roma_menu_items.csv` + `agent7_roma_venues.csv`
-
-### Step 4-7 — Replica per Napoli, Torino, Firenze, Bologna, Venezia
-Stesso pattern. Una città alla volta. Commit + push per ogni città chiusa (commit chirurgici, no batch monstre).
-
-### Step 8 — Report finale
-`agent7_REPORT.md` con tabella per città: venues, price points, quality gate stats.
-
----
-
-## QUALITY GATES (USA SHARED LIB, NON RICREARE)
-
-```python
-from normalization import (
-    clean_item_product, validate_item, PRICE_RANGES,
-    is_in_city, is_address_in_city  # ← nuove S7
-)
-
-# Per ogni item
-is_valid, item, reason = validate_item(item)
-if not is_valid:
-    continue
-# Per ogni venue
-if not is_in_city(lat, lon, city):
-    continue
-```
-
-Pattern noti coperti da shared lib (NON ricreare):
-- americano cocktail vs caffè
-- beer_moretti vs Vittorio Moretti Franciacorta
-- prosecco_glass vs bottiglia
-- MAXI/caraffa multi-porzione
-- Item name HTML noise
-- Range prezzi realistic Italian bar
-
----
-
-## RATE LIMITS (importanti)
-
-| Servizio | Rate |
-|---|---|
-| Nominatim | 1.2s/req (TOS hard) |
-| Overpass API | query grosse OK ma rate-limited (1 query / 5 min consigliato) |
-| leggimenu.it | 1.5s/req |
-| mycia.it | 2s/req |
-| eatbu.com | 2s/req |
-| CKAN API città | 1s/req |
-| Wayback Machine | 2s/req, HTTP 429 → sleep 300s |
-| TheFork curl_cffi | 3-5s/req, max 50 venues/sessione |
+- ❌ **NON duplicare venues già nel DB** (priced 161 + agent6 824 + unified_venues_no_price 4.124) — dedup per norm_name **E** geo_key.
+- ❌ **NON tenere placeholder `[bar non identificato]`** senza geo+address o senza recovery nome.
+- ❌ **NON includere ristoranti** (OSM amenity=restaurant 2.805) — sono NO_TARGET.
+- ❌ **NON fidarsi della sola license Comune** ("Bar caffè" è larga) — incrocia con amenity OSM.
+- ❌ **NON saltare la geo-fingerprint dedup** — le 3 sorgenti si sovrappongono al ~75%.
+- ❌ **NON bypassare `normalization.py` / `agent6_standardize.py`** — riusa, non riscrivere.
+- ❌ **NON scrapare prezzi** (Playwright/IP residenziale richiesti — fuori scope).
 
 ---
 
 ## CONSEGNA
 
-Commit chirurgici per città:
 ```bash
+cd ~/Desktop/FindMyDeal_clone
 git pull --rebase origin main
-git add raw_sources/agent7_roma_*.csv scripts/agent7_roma_*.py
-git commit -m "data: S7 Roma — N venues discovery, M items prezzi"
+git add raw_sources/agent7_*.csv agent7_REPORT.md scripts/agent7_*.py
+git commit -m "data: S7 discovery comune/CKAN/OSM — N venues TARGET net-new, M nomi recuperati, dedup ratio X"
 git push origin main
 ```
+**NON toccare**: `data/unified_*.csv`, `data/unified_venues_no_price.csv`, `prices_data.json`, `index.html`, vertical beach. (Il CEO integra `agent7_*` nel suo master.)
 
-Avvisa CEO ad ogni città chiusa. Il CEO farà merge incrementale (un `merge_pipeline_drink.py` multi-city).
-
----
-
-## ERRORI DA NON RIPETERE
-
-1. ❌ **City missing**: ogni riga DEVE avere `city` correttamente popolato. Niente Milano default.
-2. ❌ **Bbox bypassed**: usa `is_in_city()`, non solo CAP (alcuni CAP overlap zone limitrofe).
-3. ❌ **Brute-force senza filter città**: lezione S3 (leggimenu pesco Italia intera). Filter inline.
-4. ❌ **Schema parziale**: usa SEMPRE schema completo SCHEMA_AGENTI.md.
-5. ❌ **Dedup cross-city saltata**: stesso brand a Roma e Milano = 2 entries diverse, NON dedup.
-6. ❌ **Library duplicate**: importa da `normalization.py`, NON riscrivere quality gate.
+### Report sintetico per CEO
+- N venues TARGET net-new (per venue_type) + N nomi commerciali recuperati.
+- Dedup ratio (grezzi → cluster → net-new) e doppioni vs DB evitati.
+- Copertura NIL quartiere + website/phone aggiunti.
+- Issues residui / decisioni che servono al CEO.
 
 ---
 
-## BACKLOG OPZIONALE (se hai tempo extra)
+## USE CASE FRONTEND
 
-- TheFork bulk metadata Italia con `curl_cffi safari17_2_ios` (tutte 6 città)
-- Quandoo.it scoperta nuovo URL pattern (era 404 in CEO night, ri-tentare)
-- Foursquare/Swarm API free tier per metadata
+I venues TARGET no-price diventano pin "Prezzo non disponibile — Contribuisci", **filtrabili per quartiere (NIL)**. Con i nomi commerciali recuperati (non più "[bar non identificato]") e website/phone da OSM, il popup è informativo da subito:
 
----
-
-## ARCHITETTURA POST-S7 (per orientarti)
-
-Il CEO trasformerà `merge_pipeline.py` in **multi-city + multi-vertical**:
-- `scripts/merge_pipeline_drink.py` (legge tutti i `*_venues.csv` + `*_menu_items.csv` con `city` field, produce `data/unified_*_drink_<city>.csv` per ogni città)
-- `scripts/merge_pipeline_beach.py` (vertical separato)
-- `scripts/merge_pipeline_barbieri.py` (Peppe lancia vertical barbieri)
-- `scripts/merge_pipeline_palestre.py` (utente lancia vertical palestre)
-
-Tu non devi scrivere questi merge. Devi solo consegnare CSV con `city` corretto.
+> 🍸 **Altrè** · Cafe · Piazza Bandiera 13 · Brera
+> Prezzo non disponibile — *Contribuisci per primo* · ☎ tel · 🌐 sito
 
 ---
 
-## TEMPO STIMATO
+## BACKLOG NON SCOPE S7
 
-| Step | Ore |
-|---|---|
-| Step 1 (lib extension) | 1 |
-| Step 2-3 Roma (discovery + prezzi) | 8-10 |
-| Step 4 Napoli | 4-6 |
-| Step 5 Torino | 4-6 |
-| Step 6 Firenze | 3-5 |
-| Step 7 Bologna | 3-5 |
-| Step 8 Venezia | 2-3 |
-| Step 8 Report | 1 |
-| **Totale** | **26-37 ore** (3-4 sessioni Pietro distribuite) |
+- ❌ Prezzi nuovi (richiedono Playwright + IP residenziale — TheFork/Glovo live).
+- ❌ Vertical beach.
+- ❌ UI frontend (è Peppe).
+- ❌ `data/unified_*.csv` e `data/unified_venues_no_price.csv` (territorio CEO).
+- ❌ Discovery Quandoo/Michelin (URL changed — richiede nuove tecniche, vedi NIGHT_RESEARCH).
 
-Se serve, prioritizza Roma + Napoli (le 2 più grandi) per primo deliverable. Le altre 4 città sono S7.2 / S8.
-
----
-
-## DECISIONI STRATEGICHE PRESE (per il tuo briefing)
-
-Pietro: oggi (03/06/2026) c'è stata call utente con team. Decisione:
-1. **SurPrice si espande a 6 città** (Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia)
-2. **Tu sei lo scraper drink Italia-wide** — il vertical anchor
-3. **Peppe entra in vertical Barbieri** (nuovo vertical SurPrice)
-4. **Utente entra in vertical Palestre** (terzo nuovo vertical)
-5. **Crowdsourcing Supabase** sera oggi con utente (CEO setup)
-6. **Spin-off**: NO. SurPrice resta brand unico multi-vertical (decisione CEO).
-
-Il tuo lavoro (S7 drink Italia) è il **fondamento del brand**: drink è il vertical anchor, le altre 6 città replicano e validano il modello Milano. **Quality > quantity sempre**.
-
----
-
-Buon lavoro Pietro. **L'obiettivo è 6 nuove città Italia con stesso rigore di Milano. Il framework esiste, va solo replicato.**
+Buon lavoro Pietro. L'obiettivo è il **bacino discovery del Comune trasformato in venues drink puliti, nominati e non-doppi** — la base "no price yet" più grande e autorevole della mappa, pronta per il crowdsourcing.

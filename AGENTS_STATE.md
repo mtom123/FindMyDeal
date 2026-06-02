@@ -6,7 +6,7 @@
 
 | Vertical | Owner | Stato | Città target |
 |---|---|---|---|
-| 🍹 **drink** | Pietro (scraper) | Milano done, espansione 6 città IT | Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia |
+| 🍹 **drink** | Pietro (scraper) | Milano done, **S7 Milano discovery in corso**, S8 = espansione 6 città IT (pending) | Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia |
 | 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
 | 💈 **barber** | Peppe (vertical owner) | S1 in lancio (nuovo) | Milano prima, poi Italia |
 | 💪 **gym** | Utente diretto | In planning (S1 futuro) | Milano prima |
