@@ -6,6 +6,86 @@
 
 ---
 
+## 2026-06-02 SERA — Ricerca notturna CEO (scraper bestiale) → 4.124 venues no-price Milano
+
+### Trigger
+Utente: "metti i panni dello scraper, esplora nuove vie, parti in autonomia, cracca le barriere".
+
+### Esplorazione su 9 fronti
+| # | Target | Esito |
+|---|---|---|
+| 1 | TheFork prezzi live (curl_cffi TLS impersonate) | 🟡 bypass 403 con safari17_2_ios, ma menu via JS lazy |
+| 2 | eatbu 11 venues Pietro S5 (XHR reverse) | 🟡 metadata only, 0 prezzi |
+| 3 | Yelp.it cocktail bar Milano | ❌ no prezzi |
+| 4 | Quandoo.it | ❌ HTTP 404 (URL changed) |
+| 5 | Michelin Guide Italia | ❌ HTTP 404 |
+| 6 | Glovo Wayback bulk | ❌ solo 4 venues su 13 zone |
+| 7 | Glovo live | ❌ SSR vuoto, Vue.js XHR |
+| 8 | **CKAN Comune Milano API** | ✅ **3.804 venues nuove** |
+| 9 | **OSM Overpass amenity bar/pub/cafe** | ✅ **5.229 OSM venues con nome commerciale Milano** |
+
+### 🏆 WIN principale — CKAN + OSM cross-ref
+Scoperto API ufficiale `dati.comune.milano.it/api/3/action/package_search`:
+- Dataset `ds58_economia_pubblici_esercizi_in_piano` → 9.417 esercizi
+- Filter drink-target (categorie f/e/g/h/i/j) → 3.840 venues TARGET
+- Post-dedup vs unified_venues drink → **3.804 NON ancora nel DB**
+
+Cross-ref OSM Overpass (5.229 venues con nome commerciale Milano):
+- Match geo ≤50m → 2.970 / 3.804 = **78% match rate**
+- 2.970 venues CKAN ora hanno nome commerciale reale (era "Bar Via X N")
+
+### Build pipeline
+`scripts/build_no_price_map.py` produce `data/unified_venues_no_price.csv`:
+- 1.247 dal DB unified (no-price subset, geo, bbox Milano)
+- 2.867 da CKAN enriched (matched OSM, filtrati "Bar VIA X" placeholders)
+- 10 da eatbu agent_ceo metadata
+- Dedup nome+geo round(3) → 948 dupes rimossi
+- **Output finale: 4.124 venues no-price**
+
+### Frontend impact
+Mappa Milano drink: **153 prezzati + 4.124 no-price = 4.277 pin totali** (+2.696% vs solo 153).
+
+Peppe ha già implementato `unpriced toggle` (commit 4463c2a). File `data/unified_venues_no_price.csv` pronto per essere consumato direttamente.
+
+### Tecniche tecniche aperte per Pietro futuro
+1. **curl_cffi `safari17_2_ios`** = unlock TheFork SSR (HTTP 200). Usabile per discovery massiva metadata TheFork Milano.
+2. **OSM Overpass amenity query Milano** = base universal per cross-ref nomi commerciali (Pietro l'usava per beach, ora replicato per drink).
+3. **CKAN API package_search** = pattern replicabile per ALTRE città (Roma, Firenze, Torino se hanno dataset open analoghi).
+
+### Strade chiuse documentate (no re-tentare senza nuove tecniche)
+- Glovo live/Wayback (residenziale + Playwright)
+- TheFork prezzi menu (Apollo GraphQL XHR, no SSR)
+- Quandoo / Michelin (URL routing changed, ri-investigare)
+- Yelp.it (prezzi non esposti)
+
+### Numeri delta
+| Metrica | Pre-notte | Post-notte | Δ |
+|---|---|---|---|
+| Venues drink mappa Milano | 153 | **4.277** | **+4.124 (+2.696%)** |
+| Price points | 964 | 964 | 0 (barriere reali residue) |
+| Venues totali DB unified | 1.601 | 1.601 | 0 (no merge nuovi, solo layer no-price) |
+| Fonti integrate | 23 | 26 | +3 (CKAN + OSM Overpass + eatbu_ceo) |
+
+### Onestà finale
+- ✅ Venues mappa: **+4.124** (passa da 153 a 4.277, +2.696%)
+- ❌ Price points: **+0** (le barriere TheFork/Glovo/JustEat live richiedono infrastruttura proxy residenziali + Playwright headful, fuori scope autonomo)
+
+### File prodotti
+- `unified_venues_no_price.csv` (workdir CEO)
+- `data/unified_venues_no_price.csv` (frontend-ready)
+- `raw_sources/ckan_milano_drink_venues_no_price.csv` (3.804 venues CKAN enriched)
+- `raw_sources/osm_milano_drink_overpass.csv` (5.229 OSM venues base)
+- `raw_sources/agent_ceo_eatbu_metadata.csv` (11 venues eatbu)
+- `scripts/build_no_price_map.py` (pipeline build)
+- `NIGHT_RESEARCH_REPORT.md` (report tecnico completo)
+
+### Per CEO domani mattina
+1. Decisione strategica: ora il bridge crowdsourcing è CRITICO (4.124 inviti naturali).
+2. Pietro S6 in corso può integrare il file no-price come base partenza.
+3. Peppe può attivare unpriced toggle layer puntando a `data/unified_venues_no_price.csv`.
+
+---
+
 ## 2026-06-02 — Pietro S5 integration + libreria condivisa di normalizzazione
 
 ### Input Pietro S5 (commit af15ec8 — già pushato)
