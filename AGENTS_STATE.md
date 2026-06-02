@@ -6,10 +6,10 @@
 
 | Vertical | Owner | Stato | Città target |
 |---|---|---|---|
-| 🍹 **drink** | Pietro (scraper) | Milano done, **S7 Milano discovery in corso**, S8 = espansione 6 città IT (pending) | Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia |
+| 🍹 **drink** | Pietro (scraper) | Milano done, **S7 + S8 chiuse (6.036 venues nuovi su 6 città)** | Milano + Roma 2.254 + Napoli 719 + Torino 1.298 + Firenze 714 + Bologna 750 + Venezia 306 |
 | 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
 | 💈 **barber** | Peppe (vertical owner) | S1 in lancio (nuovo) | Milano prima, poi Italia |
-| 💪 **gym** | Utente diretto + CEO bootstrap | **CEO night discovery 11.043 venues Italia done**, utente prende lead next | Italia 7+ città (Roma 333, Milano 330, Torino 168, Bologna 105, Firenze 69, Napoli 54, ...) |
+| 💪 **gym** | Utente diretto + CEO bootstrap | **12.648 venues Italia** (OSM + FitPrime + Anytime + GetFit) | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 |
 
 ## Architettura multi-vertical
 

@@ -6,6 +6,50 @@
 
 ---
 
+## 2026-06-03 LATE NIGHT — Pietro S8 (6 città) + CEO gym FitPrime → 12.648 totali
+
+### Pietro S8 chiusa (commit b66829b + e628ab2)
+- Roma: 2.254 venues drink discovery (OSM)
+- Napoli: 719 venues
+- Torino: 1.298 venues
+- Firenze: 714 venues
+- Bologna: 750 venues
+- Venezia: 306 venues
+- **TOTALE: 6.036 venues nuovi 6 città Italia, 100% opening_hours, 9/9 venue_type**
+- File: `raw_sources/agent7_<city>_venues_no_price.csv`
+
+### CEO gym FitPrime integration
+- FitPrime web app `/it/palestre/<city>` parsato per 10 città
+- Reverse engineering Next.js RSC payload (multi-escape JSON)
+- Pattern `id+coords+address+name` → 1.715 venues unici estratti
+- Tutte le città: Milano 508 · Roma 505 · Torino 192 · Napoli 158 · Bologna 128 · Firenze 71 · Padova 66 · Genova 60 · Venezia 48 · Palermo 22
+- Prezzi: paywalled (FitPrime Pay credits model) → crowdsourcing path
+
+### Stato gym master TOTALE
+| Source | Count |
+|---|---|
+| OSM Overpass Italia | 11.034 |
+| FitPrime web | 1.605 (dedup vs OSM) |
+| GetFit | 8 |
+| Anytime Fitness | 1 |
+| **TOTALE** | **12.648 palestre Italia** |
+
+### Top città gym (post FitPrime merge)
+Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 · Pescara 45
+
+### Stato SurPrice totale (multi-vertical, end of day 03/06)
+| Vertical | Venues | Prezzi |
+|---|---|---|
+| Drink Milano | 3.325 | 964 |
+| Drink 6 città IT (S7+S8) | +6.036 discovery | 0 |
+| Beach Italia | 13.646 / 1.731 prezzati | 3.443 |
+| Gym Italia | **12.648** | 0 (paywalled) |
+| Barbieri | Peppe S1 pending | TBD |
+
+**TOTALE aggregato: ~35.700 venues SurPrice Italia.**
+
+---
+
 ## 2026-06-03 NOTTE — CEO scraper bestiale GYM → 11.043 palestre Italia
 
 ### Trigger
