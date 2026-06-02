@@ -150,9 +150,19 @@ Riporta il **dedup ratio**: righe grezze in ingresso (≈13.700) → cluster uni
 
 ---
 
-## STEP 6 — (SECONDARIO/opzionale) Discovery TheFork metadata
+## STEP 6 — Discovery TheFork massiva (OBBLIGATORIO)
 
-Solo se tempo/valore lo giustificano. `curl_cffi` con `impersonate='safari17_2_ios'` bypassa Datadome 403 (vedi NIGHT_RESEARCH). Estrai **solo metadata** (JSON-LD: name, address, geo, rating) — NESSUN prezzo (menu via JS lazy). Aggiungi i venues Milano non già presenti, passando dallo stesso classify+dedup. `pip install curl_cffi` se mancante. Rate 2–5 s/req, stop su 403.
+Discovery **a tappeto** dei venues TheFork Milano (metadata, NO prezzi). `curl_cffi` con `impersonate='safari17_2_ios'` bypassa Datadome 403 (vedi NIGHT_RESEARCH; chrome/edge → 403). `pip install curl_cffi` se mancante.
+
+**Discovery URL (multi-canale, esaustivo — non fermarsi al primo che funziona):**
+1. `sitemap.xml` / sitemap index di thefork.it e thefork.com → filtra URL `/restaurant/...` con città Milano.
+2. Pagine listing/search Milano **paginate** (es. `thefork.it/citta/milano-*`, per quartiere/cucina) → estrai link `/restaurant/{slug}-r{id}`.
+3. **Wayback CDX** (`matchType=prefix` su `/restaurant/`) come integrazione (agent4 ne prese 77).
+4. Cross-ref: per i venues TARGET già noti senza fonte TheFork, prova a costruire/verificare lo slug.
+
+**Per ogni venue**: fetch SSR con `safari17_2_ios`, estrai JSON-LD `Restaurant` (name, address, geo, rating, telephone). **NESSUN prezzo** (menu via Apollo/JS lazy — confermato NIGHT_RESEARCH). Filtra Milano (bbox + CAP), poi passa dallo **stesso** classify (Step 3) + venue_type (Step 4) + dedup (Step 5).
+
+Rate **2–5 s/req**, stop+log su 403 ripetuti, **salva incrementale + resumable**, cache HTML in dir gitignored (`raw_data/` o `.agent7_thefork_cache/`). Confluisce in `agent7_venues_no_price.csv` con `source_platform=thefork`, `name_source=thefork`.
 
 ---
 
@@ -238,6 +248,7 @@ def quality_gate(v, in_db_norm, in_db_geo):
 | venue_type | ≥ 8/9 tipi reali rappresentati |
 | Copertura NIL quartiere | tutti i NIL con ≥3 venues, ≥70 NIL |
 | website/phone aggiunti da OSM | ≥ 800 / ≥ 700 |
+| **TheFork discovery** (metadata Milano, no prezzi) — OBBLIGATORIO | ≥ 100 venues |
 
 ---
 
