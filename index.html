@@ -2453,54 +2453,109 @@ function resetMapView() {
 async function fetchSrchSuggestions(q) {
   const dd = document.getElementById('srch-dropdown');
   const sections = [];
+  const lq = q.toLowerCase();
 
-  // 1. Zone matches
-  const zoneMatches = Object.entries(MILAN_ZONES).filter(([k, z]) =>
-    z.name.toLowerCase().includes(q.toLowerCase()));
-  if (zoneMatches.length) {
-    sections.push(`<div class="srch-dd-section">Zones</div>`);
-    zoneMatches.forEach(([k, z]) => {
-      const cov = S.zoneCoverage[k];
-      sections.push(`<div class="srch-dd-item" onmousedown="selectZoneFromSearch('${k}')">
-        <span>${z.name}</span>
-        <span class="srch-dd-tag">${cov?.venues || 0} venues</span>
-      </div>`);
-    });
-  }
+  if (S.vertical === 'balneari') {
+    // ─── Balneari mode ───
+    // 1. Regions
+    const regMatches = (S.beachData?.metadata?.regions || [])
+      .filter(r => r.name.toLowerCase().includes(lq));
+    if (regMatches.length) {
+      sections.push(`<div class="srch-dd-section">Regioni</div>`);
+      regMatches.slice(0, 5).forEach(r => {
+        const safe = r.name.replace(/'/g, "\\'");
+        sections.push(`<div class="srch-dd-item" onmousedown="zoomToBeachRegion('${safe}'); hideSrchDropdown(); document.getElementById('srch').value='${safe}'; updateSearchClear();">
+          <span>${esc(r.name)}</span>
+          <span class="srch-dd-tag">${r.priced}/${r.total} prezzati</span>
+        </div>`);
+      });
+    }
 
-  // 2. Venue name matches (show top 5)
-  const vMatches = S.allVenues
-    .filter(v => v.venue_name.toLowerCase().includes(q.toLowerCase()))
-    .slice(0, 5);
-  if (vMatches.length) {
-    sections.push(`<div class="srch-dd-section">Venues</div>`);
-    vMatches.forEach(v => {
-      sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.venue_name)}')">
-        <span>${esc(v.venue_name)}</span>
-        <span class="srch-dd-tag">${fmt(v.min_price)}</span>
-      </div>`);
-    });
-  }
+    // 2. Beach venues by name (top 6)
+    const vMatches = (S.beachData?.venues || [])
+      .filter(v => v.name && v.name.toLowerCase().includes(lq))
+      .slice(0, 6);
+    if (vMatches.length) {
+      sections.push(`<div class="srch-dd-section">Stabilimenti</div>`);
+      vMatches.forEach(v => {
+        const priceStr = v.has_price && v.min_price != null ? `€${Math.round(v.min_price)}` : '—';
+        sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.name).replace(/'/g, "\\'")}')">
+          <span>${esc(v.name)} <span style="color:var(--t3);font-size:0.9em;">· ${esc(v.city || '')}</span></span>
+          <span class="srch-dd-tag">${priceStr}</span>
+        </div>`);
+      });
+    }
 
-  // 3. Nominatim — always fetch for any query > 2 chars (streets, addresses, areas)
-  if (q.length > 2) {
-    try {
-      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+', Milan')}&format=json&limit=5&addressdetails=1&accept-language=en&countrycodes=it`;
-      const res = await fetch(url);
-      const data = await res.json();
-      if (data.length) {
-        sections.push(`<div class="srch-dd-section">Streets & places</div>`);
-        data.forEach(r => {
-          const parts = r.display_name.split(',');
-          const main = parts[0].trim();
-          const sub  = parts.slice(1,3).join(',').trim();
-          sections.push(`<div class="srch-dd-item" onmousedown="selectGeoFromSearch(${r.lat},${r.lon},'${esc(main)}')">
-            <div>${esc(main)}</div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);margin-top:1px;">${esc(sub)}</div>
-          </div>`);
-        });
-      }
-    } catch(e) {}
+    // 3. Nominatim for Italian cities/streets
+    if (q.length > 2) {
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=6&addressdetails=1&accept-language=it&countrycodes=it`;
+        const res  = await fetch(url);
+        const data = await res.json();
+        if (data.length) {
+          sections.push(`<div class="srch-dd-section">Località in Italia</div>`);
+          data.forEach(r => {
+            const parts = r.display_name.split(',');
+            const main = parts[0].trim();
+            const sub  = parts.slice(1, 3).join(',').trim();
+            sections.push(`<div class="srch-dd-item" onmousedown="selectGeoFromSearch(${r.lat},${r.lon},'${esc(main).replace(/'/g, "\\'")}')">
+              <div>${esc(main)}</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);margin-top:1px;">${esc(sub)}</div>
+            </div>`);
+          });
+        }
+      } catch(e) {}
+    }
+  } else {
+    // ─── Drinks mode ───
+    // 1. Milan zone matches
+    const zoneMatches = Object.entries(MILAN_ZONES).filter(([k, z]) =>
+      z.name.toLowerCase().includes(lq));
+    if (zoneMatches.length) {
+      sections.push(`<div class="srch-dd-section">Zones</div>`);
+      zoneMatches.forEach(([k, z]) => {
+        const cov = S.zoneCoverage[k];
+        sections.push(`<div class="srch-dd-item" onmousedown="selectZoneFromSearch('${k}')">
+          <span>${z.name}</span>
+          <span class="srch-dd-tag">${cov?.venues || 0} venues</span>
+        </div>`);
+      });
+    }
+
+    // 2. Drink venues (top 5)
+    const vMatches = S.allVenues
+      .filter(v => v.venue_name.toLowerCase().includes(lq))
+      .slice(0, 5);
+    if (vMatches.length) {
+      sections.push(`<div class="srch-dd-section">Venues</div>`);
+      vMatches.forEach(v => {
+        sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.venue_name).replace(/'/g, "\\'")}')">
+          <span>${esc(v.venue_name)}</span>
+          <span class="srch-dd-tag">${fmt(v.min_price)}</span>
+        </div>`);
+      });
+    }
+
+    // 3. Nominatim around Milan
+    if (q.length > 2) {
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+', Milan')}&format=json&limit=5&addressdetails=1&accept-language=en&countrycodes=it`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (data.length) {
+          sections.push(`<div class="srch-dd-section">Streets & places</div>`);
+          data.forEach(r => {
+            const parts = r.display_name.split(',');
+            const main = parts[0].trim();
+            const sub  = parts.slice(1,3).join(',').trim();
+            sections.push(`<div class="srch-dd-item" onmousedown="selectGeoFromSearch(${r.lat},${r.lon},'${esc(main).replace(/'/g, "\\'")}')">
+              <div>${esc(main)}</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--t3);margin-top:1px;">${esc(sub)}</div>
+            </div>`);
+          });
+        }
+      } catch(e) {}
+    }
   }
 
   if (sections.length) {
@@ -2531,8 +2586,9 @@ function selectVenueFromSearch(lat, lng, name) {
   updateSearchClear();
   hideSrchDropdown();
   S._progMove = true;
-  S.map.setView([lat, lng], 16, { animate: true });
-  
+  const z = S.vertical === 'balneari' ? 15 : 16;
+  S.map.setView([lat, lng], z, { animate: true });
+
   setTimeout(() => { S._progMove = false; showResetBtn(); }, 800);
   applyFilters();
 }
@@ -2887,6 +2943,8 @@ function selectVertical(v) {
     document.querySelector('.sb-section-hdr-title').textContent = 'Best Deals';
     document.querySelector('.sb-section-hdr-sub').textContent = 'Good prices near you';
     document.querySelector('.sb-filters').style.display = '';
+    const srchInp = document.getElementById('srch');
+    if (srchInp) srchInp.placeholder = 'Search venues, zones, streets…';
     // Restore zones button for Milan
     if (zonesBtn) zonesBtn.textContent = ZONE_LABELS[S.zoneMode];
     // Restore price slider for drinks (€0–30)
@@ -2925,6 +2983,8 @@ function selectVertical(v) {
     F.maxPrice = 999;
     document.getElementById('deals-toggle')?.classList.remove('on');
     F.dealsOnly = false;
+    const srchInpB = document.getElementById('srch');
+    if (srchInpB) srchInpB.placeholder = 'Cerca stabilimenti, città, regioni…';
     // Set zones button label for Italy mode
     if (zonesBtn) zonesBtn.textContent = S.beachShowRegions ? '◼ Nascondi regioni' : '◻ Mostra regioni';
     // Zoom out to Italy
@@ -3139,7 +3199,7 @@ function renderBeach() {
   renderBeachRegions();
 
   // Sidebar
-  renderBeachSidebar(venues, season, beachCls);
+  renderBeachSidebar(venues, S.beachSeason, beachCls);
 }
 
 /* ── Region polygons (REAL boundaries from GeoJSON) ──────── */
@@ -3197,12 +3257,19 @@ async function renderBeachRegions() {
         const priced = st?.priced || 0;
         const pct = st?.pct || 0;
         const med = st?.median_peak;
+        const safeName = name.replace(/'/g, "\\'");
         const popup = `
           <div class="zone-popup">
             <div class="zone-popup-name">${esc(name)}</div>
             <div class="zone-popup-stat">${priced}/${total} stabilimenti prezzati</div>
             <div class="zone-popup-cov">${pct}% copertura</div>
             ${med ? `<div class="zone-popup-stat" style="margin-top:5px;">Mediana alta stagione: €${med}</div>` : ''}
+            <button onclick="zoomToBeachRegion('${safeName}'); S.map.closePopup();"
+                    style="margin-top:10px;width:100%;padding:6px 10px;font-family:'IBM Plex Mono',monospace;
+                           font-size:0.58rem;letter-spacing:.08em;text-transform:uppercase;
+                           background:var(--t1);color:#fff;border:none;cursor:pointer;">
+              Esplora regione →
+            </button>
           </div>`;
         L.popup({ closeButton: true, autoPan: true })
           .setLatLng(e.latlng).setContent(popup).openOn(S.map);
@@ -3255,10 +3322,16 @@ function renderBeachSidebar(venues, season, beachCls) {
   const seasLbl = season === 'peak' ? '1–7 agosto 2026' : '15–21 giugno 2026';
   const catLbl  = S.beachData?.metadata.categories.find(c => c.code === S.beachCategory)?.label || '';
 
-  // Restrict to venues currently in viewport
-  const inView = S.map ? venues.filter(v => S.map.getBounds().contains([v.lat, v.lng])) : venues;
-  const priced = inView.filter(v => v.has_price && beachPriceOf(v) != null);
+  // Restrict to venues currently in viewport — ALL beach venues (not just rendered ones)
+  // so we can show real "senza prezzo" count for the current category
+  const bounds = S.map?.getBounds();
+  const allInView = (S.beachData?.venues || []).filter(v =>
+    v.lat && v.lng && (!bounds || bounds.contains([v.lat, v.lng])));
+  const priced = allInView.filter(v => v.has_price && v.prices && v.prices[S.beachCategory] && beachPriceOf(v) != null);
+  const unpricedCount = allInView.length - priced.length;
   const prices = priced.map(beachPriceOf).filter(p => p != null).sort((a, b) => a - b);
+  // For region/local title we use priced only
+  const inView = allInView;
 
   cntEl.textContent = `${inView.length} stabilimenti in vista`;
 
@@ -3305,8 +3378,8 @@ function renderBeachSidebar(venues, season, beachCls) {
       <div class="beach-stats-grid">
         <div class="beach-stat"><div class="beach-stat-v">€${median}</div><div class="beach-stat-l">Mediana</div></div>
         <div class="beach-stat"><div class="beach-stat-v">€${mean}</div><div class="beach-stat-l">Media</div></div>
-        <div class="beach-stat"><div class="beach-stat-v">${priced.length}</div><div class="beach-stat-l">Prezzati</div></div>
-        <div class="beach-stat"><div class="beach-stat-v">${inView.length - priced.length}</div><div class="beach-stat-l">Senza prezzo</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${priced.length}</div><div class="beach-stat-l">Con prezzo</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${unpricedCount}</div><div class="beach-stat-l">Senza prezzo</div></div>
       </div>
       <div class="beach-stats-range">
         <span>€${min}</span>
@@ -3331,37 +3404,43 @@ function renderBeachSidebar(venues, season, beachCls) {
   if (!isLocal) {
     // Aggregate by region for the visible area
     const byReg = {};
-    priced.forEach(v => {
+    // Count ALL visible venues per region (priced + unpriced)
+    allInView.forEach(v => {
       const r = v.region || 'Altra';
       if (!byReg[r]) byReg[r] = { name: r, prices: [], total: 0 };
-      byReg[r].prices.push(beachPriceOf(v));
       byReg[r].total++;
     });
-    // Also count unpriced venues per region for "total" badge
-    inView.forEach(v => {
+    // Collect prices for the priced subset
+    priced.forEach(v => {
       const r = v.region || 'Altra';
-      if (!byReg[r]) byReg[r] = { name: r, prices: [], total: 0 };
-      else if (!v.has_price || beachPriceOf(v) == null) byReg[r].total++;
+      if (byReg[r]) byReg[r].prices.push(beachPriceOf(v));
     });
     const aggregates = Object.values(byReg)
-      .filter(r => r.prices.length > 0)
+      .filter(r => r.total >= 3) // skip tiny lists
       .map(r => {
         r.prices.sort((a,b) => a-b);
-        r.median = r.prices[Math.floor(r.prices.length / 2)];
+        r.median = r.prices.length ? r.prices[Math.floor(r.prices.length / 2)] : null;
         return r;
       })
-      .sort((a, b) => a.median - b.median);
+      .sort((a, b) => {
+        // Priced regions first (sorted by median), then unpriced by total
+        if (a.median == null && b.median == null) return b.total - a.total;
+        if (a.median == null) return 1;
+        if (b.median == null) return -1;
+        return a.median - b.median;
+      });
 
     if (aggregates.length) {
       restHtml = aggregates.map(r => `
         <div class="beach-reg-item" onclick="zoomToBeachRegion('${esc(r.name).replace(/'/g, "\\'")}')">
           <div class="beach-reg-l">
             <div class="beach-reg-name">${esc(r.name)}</div>
-            <div class="beach-reg-meta">${r.prices.length}/${r.total} prezzati</div>
+            <div class="beach-reg-meta">${r.prices.length}/${r.total} con prezzo</div>
           </div>
           <div class="beach-reg-r">
-            <span class="beach-reg-p">€${r.median}</span>
-            <span class="beach-reg-pu">med</span>
+            ${r.median != null
+              ? `<span class="beach-reg-p">€${r.median}</span><span class="beach-reg-pu">med</span>`
+              : `<span class="beach-reg-pu" style="color:var(--t3)">—</span>`}
           </div>
         </div>`).join('');
     }
