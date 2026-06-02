@@ -191,6 +191,26 @@ a { color: inherit; text-decoration: none; }
 .tb-action:hover { color: var(--t1); background: var(--s3); border-color: var(--b1); }
 .tb-action.on { color: var(--ochre); background: var(--ochre-d); border-color: var(--ochre-b); }
 
+/* Language toggle */
+.lang-switch {
+  display: flex; align-items: center; gap: 0;
+  border: 1px solid var(--b1);
+  margin: 0 6px 0 4px;
+  height: 24px; flex-shrink: 0;
+}
+.lang-btn {
+  padding: 0 8px; height: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--t3); cursor: pointer;
+  transition: color .12s, background .12s;
+  display: flex; align-items: center;
+}
+.lang-btn:hover { color: var(--t1); }
+.lang-btn.active { color: var(--t1); background: var(--s3); }
+.lang-btn + .lang-btn { border-left: 1px solid var(--b1); }
+
 /* ═══════════════════════════════════════════════════════════
    FILTER BAR
 ═══════════════════════════════════════════════════════════ */
@@ -669,6 +689,105 @@ input[type=range].sb-range::-moz-range-thumb {
 .pm-avg    { background: #8a6400; }
 .pm-pricey { background: #8b1a1a; }
 
+/* Drink no-price rectangular marker — grey, no price, consistent with rectangles */
+.pm.pm-nodp {
+  background: #a8a69b;
+  color: #fff;
+  font-size: 8.5px;
+  letter-spacing: .08em;
+  padding: 3px 7px;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+.pm.pm-nodp.pm-premium { background: #6a685e; opacity: 1; }
+.pm.pm-nodp::after { background: #444; }
+.pm.pm-nodp:hover  { opacity: 1; }
+
+/* Drink no-price cluster — grey rectangular pill */
+.marker-cluster.dcluster div {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  color: #fff !important;
+  border: 1.5px solid #fff;
+  padding: 3px 8px !important;
+  line-height: 1.2;
+  background: #6a685e !important;
+  width: auto !important; height: auto !important;
+  border-radius: 2px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+.marker-cluster.dcluster .dc-n {
+  font-size: 11px;
+  letter-spacing: -.01em;
+}
+.marker-cluster.dcluster .dc-l {
+  font-size: 7px;
+  opacity: 0.75;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* No-price drink popup */
+.np-popup { padding: 14px 16px; min-width: 220px; max-width: 270px; }
+.np-popup-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 700; color: var(--t1);
+  letter-spacing: -.01em; margin-bottom: 3px;
+}
+.np-popup-type {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem; color: var(--t3);
+  letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.np-popup-row {
+  font-size: 0.68rem; color: var(--t2);
+  line-height: 1.4; margin-bottom: 5px;
+  display: flex; gap: 6px; align-items: flex-start;
+}
+.np-popup-row-icon { color: var(--t3); flex-shrink: 0; }
+.np-popup-noprice {
+  margin-top: 10px; padding: 9px 11px;
+  background: rgba(138,96,0,0.06);
+  border: 1px solid rgba(138,96,0,0.18);
+  font-size: 0.68rem; color: var(--ochre);
+  text-align: center; letter-spacing: .02em;
+}
+.np-popup-cta {
+  margin-top: 10px;
+  width: 100%; padding: 9px 12px;
+  background: var(--t1); color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+  cursor: pointer; border: none;
+  transition: background .12s;
+}
+.np-popup-cta:hover { background: #2a2a28; }
+.np-popup-links {
+  display: flex; gap: 6px; margin-top: 10px;
+}
+.np-popup-link {
+  flex: 1; padding: 7px 10px;
+  border: 1px solid var(--b1);
+  color: var(--t2); text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem; letter-spacing: .04em;
+  text-decoration: none; transition: all .12s;
+}
+.np-popup-link:hover { background: var(--s3); color: var(--t1); }
+.np-popup-src {
+  margin-top: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.50rem; color: var(--t3);
+  letter-spacing: .08em; text-transform: uppercase;
+  text-align: right;
+}
+
 /* Beach variant: perfectly circular bubble */
 .pm.pm-beach {
   font-size: 9.5px; font-weight: 700;
@@ -835,6 +954,7 @@ input[type=range].sb-range::-moz-range-thumb {
 }
 .rb-reset.visible { display: block; }
 .rb-reset:hover { color: var(--t1); border-color: var(--b2); background: var(--s2); }
+.rb-reset.on { color: var(--t1); border-color: var(--t1); background: var(--s3); font-weight: 600; }
 
 /* ═══════════════════════════════════════════════════════════
    VENUE CARD (floating modal — dynamic position)
@@ -1472,13 +1592,18 @@ input[type=range].sb-range::-moz-range-thumb {
       <span class="tb-search-icon">⌕</span>
       <input type="text" id="srch" class="tb-search-inp"
         placeholder="Search venues, zones, streets…"
+        data-i18n-placeholder="search_drinks"
         autocomplete="off"
         onblur="setTimeout(hideSrchDropdown,160)">
       <button class="tb-search-clear" id="srch-clear" onclick="clearSearch()">✕</button>
       <div id="srch-dropdown"></div>
     </div>
     <div class="tb-actions">
-      <button class="rb-geo" id="rb-geo-btn" onclick="activateGeo()" style="margin:0;border:none;padding:0 14px;height:100%;font-size:0.57rem;">📍 Use location</button>
+      <button class="rb-geo" id="rb-geo-btn" onclick="activateGeo()" style="margin:0;border:none;padding:0 14px;height:100%;font-size:0.57rem;"><span class="emoji">📍</span> <span data-i18n="use_location">Use location</span></button>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
+      </div>
       <button class="tb-action" id="info-btn" title="About · Data · Stack" onclick="toggleInfo()">ⓘ</button>
     </div>
   </header>
@@ -1486,21 +1611,21 @@ input[type=range].sb-range::-moz-range-thumb {
   <!-- VERTICAL SELECTOR -->
   <div id="vbar">
     <button class="vtab active" id="vt-drinks" onclick="selectVertical('drinks')">
-      <span class="vtab-dot"></span>Drinks
+      <span class="vtab-dot"></span><span data-i18n="drinks">Drinks</span>
     </button>
     <button class="vtab" id="vt-balneari" onclick="selectVertical('balneari')">
-      <span class="vtab-dot"></span>Balneari ☀
+      <span class="vtab-dot"></span><span data-i18n="balneari">Beach</span> ☀
     </button>
   </div>
 
   <!-- CATEGORY BAR (drinks only) -->
   <div id="catbar">
-    <button class="catbtn active" onclick="selectCategory(null)">All</button>
-    <button class="catbtn" onclick="selectCategory('cocktails')">Cocktails</button>
-    <button class="catbtn" onclick="selectCategory('beer')">Beer</button>
-    <button class="catbtn" onclick="selectCategory('wine')">Wine</button>
-    <button class="catbtn" onclick="selectCategory('coffee')">Coffee</button>
-    <button class="catbtn" onclick="selectCategory('soft')">Soft Drinks</button>
+    <button class="catbtn active" onclick="selectCategory(null)" data-i18n="cat_all">All</button>
+    <button class="catbtn" onclick="selectCategory('cocktails')" data-i18n="cat_cocktails">Cocktails</button>
+    <button class="catbtn" onclick="selectCategory('beer')" data-i18n="cat_beer">Beer</button>
+    <button class="catbtn" onclick="selectCategory('wine')" data-i18n="cat_wine">Wine</button>
+    <button class="catbtn" onclick="selectCategory('coffee')" data-i18n="cat_coffee">Coffee</button>
+    <button class="catbtn" onclick="selectCategory('soft')" data-i18n="cat_soft">Soft Drinks</button>
   </div>
 
   <!-- FILTER BAR (drinks only) -->
@@ -1509,17 +1634,14 @@ input[type=range].sb-range::-moz-range-thumb {
   <!-- BEACH SEASON BAR (balneari only, hidden by default) -->
   <div id="bbar" class="hidden">
     <button class="bseasbtn active" id="bs-peak" onclick="selectBeachSeason('peak')">
-      ☀ Alta stagione <span class="bseas-tag">1–7 agosto</span>
+      ☀ <span data-i18n="high_season">High season</span> <span class="bseas-tag" data-i18n="august_dates">1–7 August</span>
     </button>
     <div class="bseas-divider"></div>
     <button class="bseasbtn" id="bs-mid" onclick="selectBeachSeason('mid')">
-      ◑ Bassa stagione <span class="bseas-tag">15–21 giugno</span>
+      ◑ <span data-i18n="low_season">Low season</span> <span class="bseas-tag" data-i18n="june_dates">15–21 June</span>
     </button>
     <div class="bseas-divider"></div>
-    <button class="bseasbtn" id="b-toggle-unpriced" onclick="toggleBeachUnpriced()">
-      ○ Mostra senza prezzo
-    </button>
-    <div class="bseas-note" id="bbar-note">caricamento…</div>
+    <button class="bseasbtn" id="b-toggle-unpriced" onclick="toggleBeachUnpriced()" data-i18n="show_unpriced">○ Show without price</button>
   </div>
 
   <!-- BEACH CATEGORY BAR (balneari only, hidden by default) -->
@@ -1529,9 +1651,11 @@ input[type=range].sb-range::-moz-range-thumb {
   <div id="rbar">
     <button class="tb-action" id="sb-toggle" title="Toggle venue list" onclick="toggleSidebar()" style="width:32px;height:24px;flex-shrink:0;margin-right:4px;">≡</button>
     <div class="rb-divider"></div>
-    <button class="rb-reset" id="zones-btn" onclick="toggleZones()" style="display:block;">◻ Show zones</button>
+    <button class="rb-reset" id="zones-btn" onclick="toggleZones()" style="display:block;" data-i18n="show_zones">◻ Show zones</button>
+    <div class="rb-divider"></div>
+    <button class="rb-reset" id="nodp-btn" onclick="toggleDrinkNoPrice()" style="display:block;" data-i18n="all_milan_bars">○ All Milan bars</button>
     <div class="rb-divider" id="reset-div" style="display:none;"></div>
-    <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()">↺ Reset view</button>
+    <button class="rb-reset" id="reset-view-btn" onclick="resetMapView()" data-i18n="reset_view">↺ Reset view</button>
   </div>
 
   <!-- BODY -->
@@ -1540,27 +1664,27 @@ input[type=range].sb-range::-moz-range-thumb {
     <!-- SIDEBAR -->
     <aside id="sidebar">
       <div class="sb-head">
-        <div class="sb-head-title">Nearby</div>
+        <div class="sb-head-title" data-i18n="nearby">Nearby</div>
         <div class="sb-head-sub" id="sb-cnt">— places</div>
       </div>
       <div class="sb-section-hdr">
-        <div class="sb-section-hdr-title">Best Deals</div>
-        <div class="sb-section-hdr-sub">Good prices near you</div>
+        <div class="sb-section-hdr-title" data-i18n="best_deals">Best Deals</div>
+        <div class="sb-section-hdr-sub" data-i18n="nearby_sub">Good prices near you</div>
       </div>
       <div class="sb-list" id="sb-list"></div>
       <div class="sb-empty" id="sb-empty">
-        <div class="sb-empty-mark">— no results —</div>
-        <div class="sb-empty-txt">No venues match<br>your search.</div>
+        <div class="sb-empty-mark" data-i18n="no_results">— no results —</div>
+        <div class="sb-empty-txt" data-i18n-html="no_match">No venues match<br>your search.</div>
       </div>
 
       <!-- FILTERS -->
       <div class="sb-filters">
         <div class="sb-filter-hdr">
-          <span class="sb-filter-hdr-lbl">Filters</span>
-          <span class="sb-filter-reset" onclick="resetFilters()">Reset</span>
+          <span class="sb-filter-hdr-lbl" data-i18n="filters">Filters</span>
+          <span class="sb-filter-reset" onclick="resetFilters()" data-i18n="reset">Reset</span>
         </div>
         <div class="sb-filter-row">
-          <span class="sb-filter-lbl">Price Range</span>
+          <span class="sb-filter-lbl" data-i18n="price_range">Price Range</span>
           <div class="sb-slider-wrap">
             <span class="sb-slider-lbl" id="pr-min">€0</span>
             <input type="range" class="sb-range" id="pr-slider" min="0" max="30" value="30" step="1" oninput="onPriceSlider(this.value)">
@@ -1569,21 +1693,21 @@ input[type=range].sb-range::-moz-range-thumb {
         </div>
         <div class="sb-filter-row">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-            <span class="sb-filter-lbl">Search radius</span>
-            <span class="sb-slider-lbl" id="radius-val">Off</span>
+            <span class="sb-filter-lbl" data-i18n="search_radius">Search radius</span>
+            <span class="sb-slider-lbl" id="radius-val" data-i18n="off">Off</span>
           </div>
           <div class="sb-slider-wrap">
-            <span class="sb-slider-lbl">Off</span>
+            <span class="sb-slider-lbl" data-i18n="off">Off</span>
             <input type="range" class="sb-range" id="radius-slider" min="0" max="10000" value="0" step="100" oninput="onRadiusSlider(this.value)">
             <span class="sb-slider-lbl">10km</span>
           </div>
         </div>
         <div class="sb-toggle-row">
-          <span class="sb-toggle-lbl">Show only deals</span>
+          <span class="sb-toggle-lbl" data-i18n="show_only_deals">Show only deals</span>
           <div class="sb-toggle" id="deals-toggle" onclick="toggleDeals()"></div>
         </div>
         <div class="sb-hide-btn" onclick="toggleSidebar()">
-          <span>Hide panel</span>
+          <span data-i18n="hide_panel">Hide panel</span>
           <span>‹</span>
         </div>
       </div>
@@ -1627,34 +1751,34 @@ input[type=range].sb-range::-moz-range-thumb {
 
     <div class="inf-hdr">
       <span class="inf-hdr-title">Surprice</span>
-      <button class="inf-hdr-close" onclick="toggleInfo()">close ✕</button>
+      <button class="inf-hdr-close" onclick="toggleInfo()" data-i18n="close">close ✕</button>
     </div>
 
     <div class="inf-sec">
-      <div class="inf-sec-lbl">What this is</div>
-      <p class="inf-p">A price transparency tool for nightlife in Milan. Search a drink — see every bar that serves it, ranked from cheapest to most expensive.</p>
-      <p class="inf-p" style="margin-top:8px;color:var(--t3);">Not a social app. Not a nightlife guide. A civic utility for informed consumer choice.</p>
+      <div class="inf-sec-lbl" data-i18n="info_what">What this is</div>
+      <p class="inf-p" data-i18n="info_what_msg">A price transparency tool for nightlife in Milan. Search a drink — see every bar that serves it, ranked from cheapest to most expensive.</p>
+      <p class="inf-p" style="margin-top:8px;color:var(--t3);" data-i18n="info_what_sub">Not a social app. Not a nightlife guide. A civic utility for informed consumer choice.</p>
     </div>
 
     <div class="inf-sec">
-      <div class="inf-sec-lbl">Coverage</div>
+      <div class="inf-sec-lbl" data-i18n="info_coverage">Coverage</div>
       <div class="inf-stat-grid">
-        <div class="inf-stat"><div class="inf-stat-n">79</div><div class="inf-stat-l">Venues</div></div>
-        <div class="inf-stat"><div class="inf-stat-n">14</div><div class="inf-stat-l">Drinks</div></div>
-        <div class="inf-stat"><div class="inf-stat-n" id="inf-pts">—</div><div class="inf-stat-l">Price pts</div></div>
-        <div class="inf-stat"><div class="inf-stat-n">€1–28</div><div class="inf-stat-l">Price range</div></div>
+        <div class="inf-stat"><div class="inf-stat-n">79</div><div class="inf-stat-l" data-i18n="venues_kw">Venues</div></div>
+        <div class="inf-stat"><div class="inf-stat-n">14</div><div class="inf-stat-l" data-i18n="drinks_kw">Drinks</div></div>
+        <div class="inf-stat"><div class="inf-stat-n" id="inf-pts">—</div><div class="inf-stat-l" data-i18n="price_pts">Price pts</div></div>
+        <div class="inf-stat"><div class="inf-stat-n">€1–28</div><div class="inf-stat-l" data-i18n="price_range_kw">Price range</div></div>
       </div>
     </div>
 
     <div class="inf-sec">
-      <div class="inf-sec-lbl">Data transparency</div>
+      <div class="inf-sec-lbl" data-i18n="info_transparency">Data transparency</div>
       <div class="inf-warn">
-        <b>Experimental.</b> Prices scraped from online menus — not live POS data. Coverage is partial. Accuracy improves over time. Always confirm at the bar before ordering. Last verified dates vary by venue.
+        <b data-i18n="experimental">Experimental.</b> <span data-i18n="info_transp_msg">Prices scraped from online menus — not live POS data. Coverage is partial. Accuracy improves over time. Always confirm at the bar before ordering. Last verified dates vary by venue.</span>
       </div>
     </div>
 
     <div class="inf-sec">
-      <div class="inf-sec-lbl">Stack — Phase 1</div>
+      <div class="inf-sec-lbl" data-i18n="info_stack">Stack — Phase 1</div>
       <table class="inf-table">
         <tr><td class="inf-td-k">frontend</td><td class="inf-td-v">Vanilla JS · Leaflet</td></tr>
         <tr><td class="inf-td-k">map</td><td class="inf-td-v">OSM · CartoDB Dark</td></tr>
@@ -1664,24 +1788,24 @@ input[type=range].sb-range::-moz-range-thumb {
     </div>
 
     <div class="inf-sec">
-      <div class="inf-sec-lbl">Roadmap</div>
+      <div class="inf-sec-lbl" data-i18n="info_roadmap">Roadmap</div>
       <div class="inf-phase">
         <div class="inf-phase-row">
           <span class="inf-phase-tag">phase 1</span>
-          <span class="inf-phase-desc">Static JSON, vanilla frontend, manual data — validating the concept.</span>
+          <span class="inf-phase-desc" data-i18n="info_phase_1">Static JSON, vanilla frontend, manual data — validating the concept.</span>
         </div>
         <div class="inf-phase-row">
           <span class="inf-phase-tag">phase 2</span>
-          <span class="inf-phase-desc">Supabase + Postgres. venues, menu_items, price_observations. User submissions.</span>
+          <span class="inf-phase-desc" data-i18n="info_phase_2">Supabase + Postgres. venues, menu_items, price_observations. User submissions.</span>
         </div>
         <div class="inf-phase-row">
           <span class="inf-phase-tag">phase 3</span>
-          <span class="inf-phase-desc">Menu photo uploads, confidence scoring, community verification, admin review.</span>
+          <span class="inf-phase-desc" data-i18n="info_phase_3">Menu photo uploads, confidence scoring, community verification, admin review.</span>
         </div>
       </div>
     </div>
 
-    <div class="inf-footer">
+    <div class="inf-footer" data-i18n-html="info_footer">
       MVP prototype · Milan 2025 · Data from online menus.<br>
       Prices are indicative — verify before ordering.
     </div>
@@ -1710,9 +1834,289 @@ input[type=range].sb-range::-moz-range-thumb {
 
 <script>
 /* ──────────────────────────────────────────
+   I18N
+─────────────────────────────────────────── */
+const I18N = {
+  en: {
+    // Top nav
+    drinks: 'Drinks', balneari: 'Beach',
+    use_location: 'Use location', locating: 'Locating…', location_active: 'Location active',
+    search_drinks: 'Search venues, zones, streets…',
+    search_balneari: 'Search venues, cities, regions…',
+    // Categories drinks
+    cat_all: 'All', cat_cocktails: 'Cocktails', cat_beer: 'Beer',
+    cat_wine: 'Wine', cat_coffee: 'Coffee', cat_soft: 'Soft Drinks',
+    // Beach season bar
+    high_season: 'High season', low_season: 'Low season',
+    august_dates: '1–7 August', june_dates: '15–21 June',
+    show_unpriced: '○ Show without price',
+    hide_unpriced: '● Hide without price',
+    // Rbar buttons
+    show_zones: '◻ Show zones', hide_borders: '◼ Hide borders',
+    enable_zones: '○ Enable zones',
+    show_regions: '◻ Show regions', hide_regions: '◼ Hide regions',
+    all_milan_bars: '○ All Milan bars',
+    hide_milan_bars: '● Hide Milan bars',
+    reset_view: '↺ Reset view',
+    // Sidebar drinks
+    nearby: 'Nearby', best_deals: 'Best Deals',
+    nearby_sub: 'Good prices near you',
+    places: 'places', place: 'place',
+    no_results: '— no results —',
+    no_match: 'No venues match\nyour search.',
+    // Sidebar filters
+    filters: 'Filters', reset: 'Reset',
+    price_range: 'Price Range', search_radius: 'Search radius',
+    show_only_deals: 'Show only deals',
+    hide_panel: 'Hide panel',
+    off: 'Off',
+    // Sidebar beach
+    beach_title: 'Beach', stats: 'Statistics',
+    italy_view: 'Italy', regional_view: 'Regional view', local_view: 'Local',
+    median: 'Median', mean: 'Mean',
+    with_price: 'With price', without_price: 'Without price',
+    venues_in_view: 'venues in view',
+    no_priced_in_view: 'No prices in view',
+    pan_zoom_msg: 'Zoom or pan the map',
+    italy_subtitle: 'national view', regional_subtitle: 'regional aggregates',
+    with_price_short: 'with price',
+    // Detail card
+    avg: 'Avg', menu_items: 'menu items',
+    experimental: 'Experimental data.',
+    experimental_msg: 'Prices sourced from online menus. Verify at the bar before ordering.',
+    report_price: '↑ Report updated price',
+    upload_menu: '◉ Upload menu photo',
+    suggest_correction: '✎ Suggest correction',
+    source_menu: 'source menu ↗',
+    no_source: 'no source url',
+    // Beach detail card
+    no_prices_collected: 'Prices not yet collected.',
+    no_prices_msg: 'This venue is in the database but we have no published prices yet. Help us by reporting them.',
+    other_categories: 'Other categories available',
+    services: 'Services',
+    high_season_short: 'High season', low_season_short: 'Low season',
+    savings_prefix: '↓ Save €', savings_suffix: ' in low season',
+    book_spiagge: '↗ Book on spiagge.it',
+    venue_sheet: '☀ Venue details',
+    beach_indicative: 'Indicative prices.',
+    beach_verify: 'Check availability before booking.',
+    // Drink no-price popup
+    price_unavailable: '💰 Price not available',
+    contribute: 'Contribute a price',
+    contribute_alert: 'Coming soon!\n\nYou\'ll be able to submit the price of "{name}" and contribute to the database.\n\nIn the meantime, email us prices.',
+    source_lbl: 'source:',
+    // Region popup
+    priced_venues: 'priced',
+    coverage: '% coverage',
+    high_season_median: 'High season median:',
+    explore_region: 'Explore region →',
+    // Search sections
+    sec_zones: 'Zones', sec_venues: 'Venues',
+    sec_streets: 'Streets & places',
+    sec_regions: 'Regions', sec_balneari_venues: 'Beach venues',
+    sec_italian_places: 'Italian places',
+    venues_count: 'venues',
+    // Info panel
+    about: 'About', close: 'close ✕',
+    info_what: 'What this is',
+    info_what_msg: 'A price transparency tool for nightlife in Milan. Search a drink — see every bar that serves it, ranked from cheapest to most expensive.',
+    info_what_sub: 'Not a social app. Not a nightlife guide. A civic utility for informed consumer choice.',
+    info_coverage: 'Coverage',
+    venues_kw: 'Venues', drinks_kw: 'Drinks', price_pts: 'Price pts', price_range_kw: 'Price range',
+    info_transparency: 'Data transparency',
+    info_transp_msg: 'Experimental. Prices scraped from online menus — not live POS data. Coverage is partial. Accuracy improves over time. Always confirm at the bar before ordering. Last verified dates vary by venue.',
+    info_stack: 'Stack — Phase 1',
+    info_roadmap: 'Roadmap',
+    info_phase_1: 'Static JSON, vanilla frontend, manual data — validating the concept.',
+    info_phase_2: 'Supabase + Postgres. venues, menu_items, price_observations. User submissions.',
+    info_phase_3: 'Menu photo uploads, confidence scoring, community verification, admin review.',
+    info_footer: 'MVP prototype · Milan 2025 · Data from online menus.<br>Prices are indicative — verify before ordering.',
+    // Beach categories (UI labels)
+    cat_set_2lettini: 'Umbrella + 2 sunbeds',
+    cat_set_1lettino: 'Umbrella + 1 sunbed',
+    cat_umbrella_std: 'Umbrella',
+    cat_umbrella_first: 'First row umbrella',
+    cat_umbrella_prem: 'Premium umbrella',
+    cat_sunbed: 'Sunbed',
+    cat_chair: 'Chair',
+    cat_cabin_day: 'Cabin',
+    cat_cabin_season: 'Seasonal cabin',
+    cat_subscription_week: 'Weekly pass',
+    cat_subscription_month: 'Monthly pass',
+    cat_subscription_season: 'Seasonal pass',
+    cat_entry_fee: 'Entry fee',
+    cat_minimum_spend: 'Minimum spend',
+    cat_parking: 'Parking',
+    cat_shower: 'Shower',
+    establishments: 'establishments',
+    // Misc
+    soon_prefix: 'Phase 2 feature: ', soon_suffix: '\n\nThis will be available once the backend is connected.',
+  },
+  it: {
+    drinks: 'Drink', balneari: 'Balneari',
+    use_location: 'Usa posizione', locating: 'Geolocalizzo…', location_active: 'Posizione attiva',
+    search_drinks: 'Cerca locali, zone, vie…',
+    search_balneari: 'Cerca stabilimenti, città, regioni…',
+    cat_all: 'Tutti', cat_cocktails: 'Cocktail', cat_beer: 'Birra',
+    cat_wine: 'Vino', cat_coffee: 'Caffè', cat_soft: 'Analcolici',
+    high_season: 'Alta stagione', low_season: 'Bassa stagione',
+    august_dates: '1–7 agosto', june_dates: '15–21 giugno',
+    show_unpriced: '○ Mostra senza prezzo',
+    hide_unpriced: '● Nascondi senza prezzo',
+    show_zones: '◻ Mostra zone', hide_borders: '◼ Nascondi bordi',
+    enable_zones: '○ Attiva zone',
+    show_regions: '◻ Mostra regioni', hide_regions: '◼ Nascondi regioni',
+    all_milan_bars: '○ Tutti i bar Milano',
+    hide_milan_bars: '● Nascondi bar Milano',
+    reset_view: '↺ Reimposta vista',
+    nearby: 'Vicino a te', best_deals: 'Migliori offerte',
+    nearby_sub: 'Prezzi convenienti vicini',
+    places: 'locali', place: 'locale',
+    no_results: '— nessun risultato —',
+    no_match: 'Nessun locale\ncorrisponde.',
+    filters: 'Filtri', reset: 'Reset',
+    price_range: 'Fascia prezzo', search_radius: 'Raggio ricerca',
+    show_only_deals: 'Solo offerte',
+    hide_panel: 'Nascondi pannello',
+    off: 'Off',
+    beach_title: 'Balneari', stats: 'Statistiche',
+    italy_view: 'Italia', regional_view: 'Vista regionale', local_view: 'Locale',
+    median: 'Mediana', mean: 'Media',
+    with_price: 'Con prezzo', without_price: 'Senza prezzo',
+    venues_in_view: 'stabilimenti in vista',
+    no_priced_in_view: 'Nessun prezzo in vista',
+    pan_zoom_msg: 'Zooma o sposta la mappa',
+    italy_subtitle: 'vista nazionale', regional_subtitle: 'aggregati per regione',
+    with_price_short: 'con prezzo',
+    avg: 'Media', menu_items: 'voci menù',
+    experimental: 'Dati sperimentali.',
+    experimental_msg: 'Prezzi raccolti da menu online. Verifica al bar prima di ordinare.',
+    report_price: '↑ Segnala prezzo aggiornato',
+    upload_menu: '◉ Carica foto menù',
+    suggest_correction: '✎ Suggerisci correzione',
+    source_menu: 'menù sorgente ↗',
+    no_source: 'nessuna fonte url',
+    no_prices_collected: 'Prezzi non ancora raccolti.',
+    no_prices_msg: 'Questo stabilimento è nel database ma non abbiamo ancora i prezzi pubblicati online. Aiutaci segnalandolo.',
+    other_categories: 'Altre categorie disponibili',
+    services: 'Servizi',
+    high_season_short: 'Alta stagione', low_season_short: 'Bassa stagione',
+    savings_prefix: '↓ Risparmi €', savings_suffix: ' in bassa stagione',
+    book_spiagge: '↗ Prenota su spiagge.it',
+    venue_sheet: '☀ Scheda stabilimento',
+    beach_indicative: 'Prezzi indicativi.',
+    beach_verify: 'Verifica disponibilità prima di prenotare.',
+    price_unavailable: '💰 Prezzo non disponibile',
+    contribute: 'Contribuisci con un prezzo',
+    contribute_alert: 'Funzione in arrivo!\n\nPresto potrai inviare il prezzo di "{name}" e contribuire al database.\n\nNel frattempo, segnala via email.',
+    source_lbl: 'fonte:',
+    priced_venues: 'prezzati',
+    coverage: '% copertura',
+    high_season_median: 'Mediana alta stagione:',
+    explore_region: 'Esplora regione →',
+    sec_zones: 'Zone', sec_venues: 'Locali',
+    sec_streets: 'Vie e luoghi',
+    sec_regions: 'Regioni', sec_balneari_venues: 'Stabilimenti',
+    sec_italian_places: 'Località in Italia',
+    venues_count: 'locali',
+    about: 'Info', close: 'chiudi ✕',
+    info_what: 'Cos\'è',
+    info_what_msg: 'Uno strumento di trasparenza prezzi per la vita notturna a Milano. Cerca un drink — vedi ogni bar che lo serve, dal più economico al più caro.',
+    info_what_sub: 'Non un\'app social. Non una guida nightlife. Un\'utilità civica per scelte di consumo informate.',
+    info_coverage: 'Copertura',
+    venues_kw: 'Locali', drinks_kw: 'Drink', price_pts: 'Prezzi', price_range_kw: 'Range prezzi',
+    info_transparency: 'Trasparenza dati',
+    info_transp_msg: 'Sperimentale. Prezzi estratti da menu online — non dati live POS. Copertura parziale. Accuratezza migliora nel tempo. Conferma sempre al bar prima di ordinare.',
+    info_stack: 'Stack — Fase 1',
+    info_roadmap: 'Roadmap',
+    info_phase_1: 'JSON statico, frontend vanilla, dati manuali — validare il concept.',
+    info_phase_2: 'Supabase + Postgres. venues, menu_items, price_observations. Contributi utenti.',
+    info_phase_3: 'Upload foto menù, confidence scoring, verifica community, revisione admin.',
+    info_footer: 'Prototipo MVP · Milano 2025 · Dati da menu online.<br>I prezzi sono indicativi — verifica prima di ordinare.',
+    cat_set_2lettini: 'Ombrellone + 2 lettini',
+    cat_set_1lettino: 'Ombrellone + 1 lettino',
+    cat_umbrella_std: 'Ombrellone',
+    cat_umbrella_first: 'Ombrellone prima fila',
+    cat_umbrella_prem: 'Ombrellone premium',
+    cat_sunbed: 'Lettino',
+    cat_chair: 'Sedia / sdraio',
+    cat_cabin_day: 'Cabina',
+    cat_cabin_season: 'Cabina stagionale',
+    cat_subscription_week: 'Abb. settimanale',
+    cat_subscription_month: 'Abb. mensile',
+    cat_subscription_season: 'Abb. stagionale',
+    cat_entry_fee: 'Ingresso',
+    cat_minimum_spend: 'Consumazione minima',
+    cat_parking: 'Parcheggio',
+    cat_shower: 'Doccia',
+    establishments: 'stabilimenti',
+    soon_prefix: 'Funzione Fase 2: ', soon_suffix: '\n\nSarà disponibile una volta connesso il backend.',
+  },
+};
+function t(key, vars) {
+  let s = (I18N[S.lang] && I18N[S.lang][key]) || I18N.en[key] || key;
+  if (vars) Object.keys(vars).forEach(k => { s = s.replace(`{${k}}`, vars[k]); });
+  return s;
+}
+function setLang(lang) {
+  if (lang !== 'en' && lang !== 'it') return;
+  S.lang = lang;
+  try { localStorage.setItem('surprice_lang', lang); } catch(e) {}
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    el.innerHTML = t(el.dataset.i18nHtml);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.placeholder = t(el.dataset.i18nPlaceholder);
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  // Re-render dynamic UI
+  if (S.vertical === 'drinks') {
+    if (S.venues) render(S.venues);
+  } else if (S.beachData) {
+    buildBeachCategoryBar();
+    renderBeach();
+  }
+  // Update zones button label
+  const zb = document.getElementById('zones-btn');
+  if (zb) {
+    if (S.vertical === 'balneari') {
+      zb.textContent = S.beachShowRegions ? t('hide_regions') : t('show_regions');
+    } else {
+      zb.textContent = t(S.zoneMode === 'show' ? 'hide_borders' :
+                          S.zoneMode === 'off'  ? 'enable_zones' : 'show_zones');
+    }
+  }
+  const npBtn = document.getElementById('nodp-btn');
+  if (npBtn) {
+    npBtn.textContent = S.drinkNoPriceShow
+      ? `● ${t('hide_milan_bars')}${S.drinkNoPrice ? ' ('+S.drinkNoPrice.length+')' : ''}`
+      : t('all_milan_bars');
+  }
+  const ubBtn = document.getElementById('b-toggle-unpriced');
+  if (ubBtn) ubBtn.textContent = S.beachShowUnpriced ? t('hide_unpriced') : t('show_unpriced');
+  const peakBtn = document.getElementById('bs-peak');
+  if (peakBtn) peakBtn.innerHTML = `☀ ${t('high_season')} <span class="bseas-tag">${t('august_dates')}</span>`;
+  const midBtn = document.getElementById('bs-mid');
+  if (midBtn) midBtn.innerHTML = `◑ ${t('low_season')} <span class="bseas-tag">${t('june_dates')}</span>`;
+  const resetBtn = document.getElementById('reset-view-btn');
+  if (resetBtn) resetBtn.textContent = t('reset_view');
+  const useLocBtn = document.getElementById('rb-geo-btn');
+  if (useLocBtn && !useLocBtn.classList.contains('active') && !useLocBtn.classList.contains('loading')) {
+    useLocBtn.textContent = `📍 ${t('use_location')}`;
+  }
+}
+
+/* ──────────────────────────────────────────
    STATE
 ─────────────────────────────────────────── */
 const S = {
+  lang:        (typeof localStorage !== 'undefined' && localStorage.getItem('surprice_lang')) || 'en',
   data:        null,
   product:     null,
   allVenues:   [],
@@ -2044,6 +2448,172 @@ const META = {
 };
 
 /* ──────────────────────────────────────────
+   DRINK NO-PRICE LAYER
+─────────────────────────────────────────── */
+const VENUE_TYPE_LABELS = {
+  cafe:         'Caffè',
+  bar:          'Bar',
+  pub:          'Pub',
+  cocktail_bar: 'Cocktail bar',
+  craft_beer:   'Craft beer',
+  bistro:       'Bistrot',
+  wine_bar:     'Wine bar',
+  rooftop:      'Rooftop',
+  hotel_bar:    'Hotel bar',
+  unknown:      'Locale',
+};
+const PREMIUM_TYPES = new Set(['cocktail_bar', 'craft_beer', 'rooftop', 'wine_bar', 'hotel_bar']);
+
+/* Minimal CSV parser handling quoted fields with commas */
+function parseCSV(text) {
+  const lines = text.split(/\r?\n/);
+  if (!lines.length) return [];
+  // Strip BOM
+  if (lines[0].charCodeAt(0) === 0xFEFF) lines[0] = lines[0].slice(1);
+  const headers = parseCSVLine(lines[0]);
+  const out = [];
+  for (let i = 1; i < lines.length; i++) {
+    if (!lines[i].trim()) continue;
+    const cells = parseCSVLine(lines[i]);
+    const obj = {};
+    headers.forEach((h, idx) => { obj[h] = cells[idx] || ''; });
+    out.push(obj);
+  }
+  return out;
+}
+function parseCSVLine(line) {
+  const cells = [];
+  let cur = '', inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (inQ) {
+      if (c === '"' && line[i+1] === '"') { cur += '"'; i++; }
+      else if (c === '"') { inQ = false; }
+      else cur += c;
+    } else {
+      if (c === '"') inQ = true;
+      else if (c === ',') { cells.push(cur); cur = ''; }
+      else cur += c;
+    }
+  }
+  cells.push(cur);
+  return cells;
+}
+
+async function loadDrinkNoPrice() {
+  if (S.drinkNoPrice) return S.drinkNoPrice;
+  try {
+    const r = await fetch('data/unified_venues_no_price.csv');
+    if (!r.ok) throw new Error(r.status);
+    const text = await r.text();
+    const rows = parseCSV(text);
+    // Coerce lat/lng to floats and drop invalid
+    S.drinkNoPrice = rows
+      .map(row => ({
+        ...row,
+        lat: parseFloat(row.latitude),
+        lng: parseFloat(row.longitude),
+      }))
+      .filter(v => !isNaN(v.lat) && !isNaN(v.lng));
+  } catch(e) {
+    console.error('unified_venues_no_price.csv failed:', e);
+    S.drinkNoPrice = [];
+  }
+  return S.drinkNoPrice;
+}
+
+async function toggleDrinkNoPrice() {
+  if (S.vertical !== 'drinks') return;
+  S.drinkNoPriceShow = !S.drinkNoPriceShow;
+  const btn = document.getElementById('nodp-btn');
+  if (btn) {
+    btn.textContent = S.drinkNoPriceShow ? '● Nascondi bar Milano' : '○ Tutti i bar Milano';
+    btn.classList.toggle('on', S.drinkNoPriceShow);
+  }
+  if (S.drinkNoPriceShow) {
+    // Spinner state
+    if (btn) btn.textContent = '⋯ caricamento…';
+    const data = await loadDrinkNoPrice();
+    if (btn) btn.textContent = `● Nascondi bar Milano (${data.length})`;
+    renderDrinkNoPrice();
+  } else {
+    if (S.drinkNoPriceCluster) {
+      S.map.removeLayer(S.drinkNoPriceCluster);
+      S.drinkNoPriceCluster = null;
+    }
+  }
+}
+
+function renderDrinkNoPrice() {
+  if (!S.drinkNoPrice || !S.drinkNoPriceShow || S.vertical !== 'drinks') return;
+  // Remove existing layer first
+  if (S.drinkNoPriceCluster) {
+    S.map.removeLayer(S.drinkNoPriceCluster);
+    S.drinkNoPriceCluster = null;
+  }
+
+  // Cluster group for performance
+  S.drinkNoPriceCluster = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    spiderfyOnMaxZoom: true,
+    disableClusteringAtZoom: 15,
+    maxClusterRadius: (zoom) => zoom < 12 ? 70 : zoom < 14 ? 45 : 30,
+    iconCreateFunction: (cluster) => {
+      const n = cluster.getChildCount();
+      return L.divIcon({
+        html: `<div><span class="dc-n">${n}</span><span class="dc-l">bar</span></div>`,
+        className: 'marker-cluster dcluster',
+        iconSize: null,
+      });
+    },
+  });
+
+  S.drinkNoPrice.forEach(v => {
+    const isPremium = PREMIUM_TYPES.has(v.venue_type);
+    const icon = L.divIcon({
+      html: `<div class="pm pm-nodp${isPremium ? ' pm-premium' : ''}">${esc((VENUE_TYPE_LABELS[v.venue_type] || 'Bar').slice(0,4))}</div>`,
+      className: '', iconSize: null, iconAnchor: [0, 0],
+    });
+    const marker = L.marker([v.lat, v.lng], { icon, zIndexOffset: 0 });
+    marker.on('click', () => openDrinkNoPricePopup(v, marker));
+    S.drinkNoPriceCluster.addLayer(marker);
+  });
+
+  S.map.addLayer(S.drinkNoPriceCluster);
+}
+
+function openDrinkNoPricePopup(v, marker) {
+  const typeLbl = VENUE_TYPE_LABELS[v.venue_type] || v.venue_type || 'Locale';
+  const addrShort = (v.address || '').replace(', Italia', '').replace(', MI', '');
+  const phone = v.phone ? `<a class="np-popup-link" href="tel:${esc(v.phone)}">📞 ${esc(v.phone)}</a>` : '';
+  const website = v.website ? `<a class="np-popup-link" href="${esc(v.website)}" target="_blank" rel="noopener">🌐 sito</a>` : '';
+  const linksHtml = (phone || website) ? `<div class="np-popup-links">${phone}${website}</div>` : '';
+  const quartiereHtml = v.nil_quartiere
+    ? `<div class="np-popup-row"><span class="np-popup-row-icon">🏘️</span><span>${esc(v.nil_quartiere)}</span></div>` : '';
+  const safeName = esc(v.venue_name || 'Locale').replace(/'/g, "\\'");
+
+  const html = `
+    <div class="np-popup">
+      <div class="np-popup-name">🍸 ${esc(v.venue_name || 'Locale')}</div>
+      <div class="np-popup-type">${esc(typeLbl)}</div>
+      ${addrShort ? `<div class="np-popup-row"><span class="np-popup-row-icon">📍</span><span>${esc(addrShort)}</span></div>` : ''}
+      ${quartiereHtml}
+      <div class="np-popup-noprice">${t('price_unavailable')}</div>
+      <button class="np-popup-cta" onclick="drinkNoPriceContribute('${safeName}')">${t('contribute')}</button>
+      ${linksHtml}
+      <div class="np-popup-src">${t('source_lbl')} ${esc(v.source || '—')}</div>
+    </div>`;
+  L.popup({ closeButton: true, autoPan: true, maxWidth: 300 })
+    .setLatLng([v.lat, v.lng])
+    .setContent(html)
+    .openOn(S.map);
+}
+
+function drinkNoPriceContribute(name) {
+  alert(t('contribute_alert', { name }));
+}
+
+/* ──────────────────────────────────────────
    BOOT
 ─────────────────────────────────────────── */
 async function init() {
@@ -2076,6 +2646,8 @@ async function init() {
   setupSearch();
   setupKeyboard();
   setupGeo();
+  // Apply initial language to all UI
+  setLang(S.lang);
 
   // Fade out loader, show app
   const ld = document.getElementById('loader');
@@ -2228,7 +2800,7 @@ function render(venues) {
     .sort((a, b) => a.v.min_price - b.v.min_price);
 
   const n = venues.length;
-  document.getElementById('sb-cnt').textContent = `${n} ${n === 1 ? 'place' : 'places'}`;
+  document.getElementById('sb-cnt').textContent = `${n} ${n === 1 ? t('place') : t('places')}`;
 
   const listEl  = document.getElementById('sb-list');
   const emptyEl = document.getElementById('sb-empty');
@@ -2372,11 +2944,11 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
   const avg = v.items.length > 1
     ? (v.items.reduce((s,i) => s + i.price, 0) / v.items.length)
     : null;
-  const avgStr = avg ? `Avg ${fmt(avg)}` : '';
+  const avgStr = avg ? `${t('avg')} ${fmt(avg)}` : '';
 
   const src = v.source_url
-    ? `<a href="${v.source_url}" target="_blank" rel="noopener">source menu ↗</a>`
-    : 'no source url';
+    ? `<a href="${v.source_url}" target="_blank" rel="noopener">${t('source_menu')}</a>`
+    : t('no_source');
 
   return `
     <div class="det-head">
@@ -2390,22 +2962,21 @@ function buildDetHtml(v, pLabel, tierStr, catStr) {
     </div>
     <div class="det-body">
       <div class="det-sec">
-        <div class="det-sec-lbl">${pLabel} — menu items</div>
+        <div class="det-sec-lbl">${pLabel} — ${t('menu_items')}</div>
         ${items}
       </div>
       <div class="det-warn">
-        <b>Experimental data.</b> Prices sourced from online menus.
-        Verify at the bar before ordering.
+        <b>${t('experimental')}</b> ${t('experimental_msg')}
       </div>
       <div class="det-actions">
-        <button class="det-act primary" onclick="soon('Report updated price')">
-          ↑ Report updated price
+        <button class="det-act primary" onclick="soon(t('report_price'))">
+          ${t('report_price')}
         </button>
-        <button class="det-act" onclick="soon('Upload menu photo')">
-          ◉ Upload menu photo
+        <button class="det-act" onclick="soon(t('upload_menu'))">
+          ${t('upload_menu')}
         </button>
-        <button class="det-act" onclick="soon('Suggest correction')">
-          ✎ Suggest correction
+        <button class="det-act" onclick="soon(t('suggest_correction'))">
+          ${t('suggest_correction')}
         </button>
       </div>
       <div class="det-src">${src}</div>
@@ -2461,12 +3032,12 @@ async function fetchSrchSuggestions(q) {
     const regMatches = (S.beachData?.metadata?.regions || [])
       .filter(r => r.name.toLowerCase().includes(lq));
     if (regMatches.length) {
-      sections.push(`<div class="srch-dd-section">Regioni</div>`);
+      sections.push(`<div class="srch-dd-section">${t('sec_regions')}</div>`);
       regMatches.slice(0, 5).forEach(r => {
         const safe = r.name.replace(/'/g, "\\'");
         sections.push(`<div class="srch-dd-item" onmousedown="zoomToBeachRegion('${safe}'); hideSrchDropdown(); document.getElementById('srch').value='${safe}'; updateSearchClear();">
           <span>${esc(r.name)}</span>
-          <span class="srch-dd-tag">${r.priced}/${r.total} prezzati</span>
+          <span class="srch-dd-tag">${r.priced}/${r.total} ${t('priced_venues')}</span>
         </div>`);
       });
     }
@@ -2476,7 +3047,7 @@ async function fetchSrchSuggestions(q) {
       .filter(v => v.name && v.name.toLowerCase().includes(lq))
       .slice(0, 6);
     if (vMatches.length) {
-      sections.push(`<div class="srch-dd-section">Stabilimenti</div>`);
+      sections.push(`<div class="srch-dd-section">${t('sec_balneari_venues')}</div>`);
       vMatches.forEach(v => {
         const priceStr = v.has_price && v.min_price != null ? `€${Math.round(v.min_price)}` : '—';
         sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.name).replace(/'/g, "\\'")}')">
@@ -2493,7 +3064,7 @@ async function fetchSrchSuggestions(q) {
         const res  = await fetch(url);
         const data = await res.json();
         if (data.length) {
-          sections.push(`<div class="srch-dd-section">Località in Italia</div>`);
+          sections.push(`<div class="srch-dd-section">${t('sec_italian_places')}</div>`);
           data.forEach(r => {
             const parts = r.display_name.split(',');
             const main = parts[0].trim();
@@ -2512,12 +3083,12 @@ async function fetchSrchSuggestions(q) {
     const zoneMatches = Object.entries(MILAN_ZONES).filter(([k, z]) =>
       z.name.toLowerCase().includes(lq));
     if (zoneMatches.length) {
-      sections.push(`<div class="srch-dd-section">Zones</div>`);
+      sections.push(`<div class="srch-dd-section">${t('sec_zones')}</div>`);
       zoneMatches.forEach(([k, z]) => {
         const cov = S.zoneCoverage[k];
         sections.push(`<div class="srch-dd-item" onmousedown="selectZoneFromSearch('${k}')">
           <span>${z.name}</span>
-          <span class="srch-dd-tag">${cov?.venues || 0} venues</span>
+          <span class="srch-dd-tag">${cov?.venues || 0} ${t('venues_count')}</span>
         </div>`);
       });
     }
@@ -2527,7 +3098,7 @@ async function fetchSrchSuggestions(q) {
       .filter(v => v.venue_name.toLowerCase().includes(lq))
       .slice(0, 5);
     if (vMatches.length) {
-      sections.push(`<div class="srch-dd-section">Venues</div>`);
+      sections.push(`<div class="srch-dd-section">${t('sec_venues')}</div>`);
       vMatches.forEach(v => {
         sections.push(`<div class="srch-dd-item" onmousedown="selectVenueFromSearch(${v.lat},${v.lng},'${esc(v.venue_name).replace(/'/g, "\\'")}')">
           <span>${esc(v.venue_name)}</span>
@@ -2543,7 +3114,7 @@ async function fetchSrchSuggestions(q) {
         const res = await fetch(url);
         const data = await res.json();
         if (data.length) {
-          sections.push(`<div class="srch-dd-section">Streets & places</div>`);
+          sections.push(`<div class="srch-dd-section">${t('sec_streets')}</div>`);
           data.forEach(r => {
             const parts = r.display_name.split(',');
             const main = parts[0].trim();
@@ -2613,7 +3184,7 @@ function onRadiusSlider(val) {
   S.geo.radius = v === 0 ? null : v;
   const lbl = document.getElementById('radius-val');
   if (lbl) {
-    if (v === 0) lbl.textContent = 'Off';
+    if (v === 0) lbl.textContent = t('off');
     else if (v < 1000) lbl.textContent = `${v}m`;
     else lbl.textContent = `${(v/1000).toFixed(1).replace('.0','')}km`;
   }
@@ -2676,7 +3247,7 @@ function resetFilters() {
   document.getElementById('pr-max').textContent = '€30+';
   document.getElementById('deals-toggle').classList.remove('on');
   const rs = document.getElementById('radius-slider'); if (rs) rs.value = 0;
-  const rv = document.getElementById('radius-val'); if (rv) rv.textContent = 'Off';
+  const rv = document.getElementById('radius-val'); if (rv) rv.textContent = t('off');
   applyFilters();
 }
 
@@ -2703,7 +3274,7 @@ function activateGeo() {
     return;
   }
   btn.classList.add('loading');
-  btn.textContent = '⏳ Locating…';
+  btn.textContent = `⏳ ${t('locating')}`;
   navigator.geolocation.getCurrentPosition(
     pos => {
       S.geo.lat = pos.coords.latitude;
@@ -2711,7 +3282,7 @@ function activateGeo() {
       S.geo.radius = 1000;
       btn.classList.remove('loading');
       btn.classList.add('active');
-      btn.textContent = '📍 Location active';
+      btn.textContent = `📍 ${t('location_active')}`;
 
       if (S.geo.marker) S.geo.marker.remove();
       S.geo.marker = L.circleMarker([S.geo.lat, S.geo.lng], {
@@ -2728,8 +3299,10 @@ function activateGeo() {
     },
     err => {
       btn.classList.remove('loading');
-      btn.textContent = '📍 Use location';
-      alert('Could not get your location. Check browser permissions.');
+      btn.textContent = `📍 ${t('use_location')}`;
+      alert(S.lang === 'it'
+        ? 'Impossibile rilevare la posizione. Controlla i permessi del browser.'
+        : 'Could not get your location. Check browser permissions.');
     },
     { timeout: 8000 }
   );
@@ -2896,7 +3469,7 @@ function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function soon(f) {
-  alert(`Phase 2 feature: ${f}\n\nThis will be available once the backend is connected.`);
+  alert(`${t('soon_prefix')}${f}${t('soon_suffix')}`);
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -2914,6 +3487,12 @@ S.beachShowRegions  = false;
 S.beachClusterGroup = null;
 S.beachRegionLayers = [];
 S.beachActiveRegion = null;
+
+/* Drink no-price layer state */
+S.drinkNoPrice         = null;   // Array of parsed CSV venues (lazy-loaded)
+S.drinkNoPriceShow     = false;
+S.drinkNoPriceCluster  = null;
+S.drinkNoPriceTypeFilter = null; // future: subset by venue_type
 
 /* ── Switch vertical ─────────────────────────────────────── */
 function selectVertical(v) {
@@ -2938,13 +3517,18 @@ function selectVertical(v) {
     // Clean up beach layers
     if (S.beachClusterGroup) { S.map.removeLayer(S.beachClusterGroup); S.beachClusterGroup = null; }
     S.beachRegionLayers.forEach(l => l.remove()); S.beachRegionLayers = [];
+    // Show drink no-price toggle button
+    const nodpBtn = document.getElementById('nodp-btn');
+    if (nodpBtn) nodpBtn.style.display = 'block';
+    // Restore last state of drink no-price layer
+    if (S.drinkNoPriceShow && S.drinkNoPrice) renderDrinkNoPrice();
     // Restore drinks sidebar header
-    document.querySelector('.sb-head-title').textContent = 'Nearby';
-    document.querySelector('.sb-section-hdr-title').textContent = 'Best Deals';
-    document.querySelector('.sb-section-hdr-sub').textContent = 'Good prices near you';
+    document.querySelector('.sb-head-title').textContent = t('nearby');
+    document.querySelector('.sb-section-hdr-title').textContent = t('best_deals');
+    document.querySelector('.sb-section-hdr-sub').textContent = t('nearby_sub');
     document.querySelector('.sb-filters').style.display = '';
     const srchInp = document.getElementById('srch');
-    if (srchInp) srchInp.placeholder = 'Search venues, zones, streets…';
+    if (srchInp) srchInp.placeholder = t('search_drinks');
     // Restore zones button for Milan
     if (zonesBtn) zonesBtn.textContent = ZONE_LABELS[S.zoneMode];
     // Restore price slider for drinks (€0–30)
@@ -2967,11 +3551,14 @@ function selectVertical(v) {
     fbar.classList.add('hidden');
     bbar.classList.remove('hidden');
     bcatbar.classList.remove('hidden');
-    // Clean up drinks zones
+    // Clean up drinks zones + drink no-price layer (beach should be untouched)
     _zoneLayers.forEach(l => l.remove()); _zoneLayers = [];
+    if (S.drinkNoPriceCluster) { S.map.removeLayer(S.drinkNoPriceCluster); S.drinkNoPriceCluster = null; }
+    const nodpBtn = document.getElementById('nodp-btn');
+    if (nodpBtn) nodpBtn.style.display = 'none';
     // Beach sidebar header
-    document.querySelector('.sb-head-title').textContent = 'Balneari';
-    document.querySelector('.sb-section-hdr-title').textContent = 'Statistiche';
+    document.querySelector('.sb-head-title').textContent = t('beach_title');
+    document.querySelector('.sb-section-hdr-title').textContent = t('stats');
     document.querySelector('.sb-filters').style.display = '';
     // Adjust price slider for beach price range
     const slider = document.getElementById('pr-slider');
@@ -2984,7 +3571,7 @@ function selectVertical(v) {
     document.getElementById('deals-toggle')?.classList.remove('on');
     F.dealsOnly = false;
     const srchInpB = document.getElementById('srch');
-    if (srchInpB) srchInpB.placeholder = 'Cerca stabilimenti, città, regioni…';
+    if (srchInpB) srchInpB.placeholder = t('search_balneari');
     // Set zones button label for Italy mode
     if (zonesBtn) zonesBtn.textContent = S.beachShowRegions ? '◼ Nascondi regioni' : '◻ Mostra regioni';
     // Zoom out to Italy
@@ -3008,30 +3595,17 @@ function selectBeachSeason(s) {
 
 /* ── Lazy-load beach JSON ────────────────────────────────── */
 async function loadBeachAndRender() {
-  const note = document.getElementById('bbar-note');
   if (S.beachData) { buildBeachCategoryBar(); renderBeach(); return; }
-  if (note) note.textContent = 'caricamento…';
   try {
     const r = await fetch('data/beach_data.json');
     if (!r.ok) throw new Error(r.status);
     S.beachData = await r.json();
   } catch(e) {
-    if (note) note.textContent = 'errore caricamento dati';
     console.error('beach_data.json failed:', e);
     return;
   }
   buildBeachCategoryBar();
-  updateBcountNote();
   renderBeach();
-}
-
-function updateBcountNote() {
-  const note = document.getElementById('bbar-note');
-  if (!note || !S.beachData) return;
-  const cat = S.beachCategory;
-  const n   = S.beachData.venues.filter(v => v.has_price && v.prices && v.prices[cat]).length;
-  const lbl = S.beachData.metadata.categories.find(c => c.code === cat)?.label || cat;
-  note.textContent = `${n} con ${lbl} · ${S.beachData.metadata.total_venues} totali`;
 }
 
 /* ── Build category bar ─────────────────────────────────── */
@@ -3053,7 +3627,7 @@ function buildBeachCategoryBar() {
   el.innerHTML = cats.map(c => `
     <button class="bcatbtn${c.code === S.beachCategory ? ' active' : ''}"
             onclick="selectBeachCategory('${c.code}')">
-      ${esc(c.label)}<span class="bcatbtn-n">${counts[c.code]}</span>
+      ${esc(beachCatLabel(c.code))}<span class="bcatbtn-n">${counts[c.code]}</span>
     </button>`).join('');
 }
 
@@ -3063,7 +3637,6 @@ function selectBeachCategory(code) {
   document.querySelectorAll('.bcatbtn').forEach(b => {
     if (b.getAttribute('onclick')?.includes(`'${code}'`)) b.classList.add('active');
   });
-  updateBcountNote();
   closeDetail();
   renderBeach();
 }
@@ -3261,14 +3834,14 @@ async function renderBeachRegions() {
         const popup = `
           <div class="zone-popup">
             <div class="zone-popup-name">${esc(name)}</div>
-            <div class="zone-popup-stat">${priced}/${total} stabilimenti prezzati</div>
-            <div class="zone-popup-cov">${pct}% copertura</div>
-            ${med ? `<div class="zone-popup-stat" style="margin-top:5px;">Mediana alta stagione: €${med}</div>` : ''}
+            <div class="zone-popup-stat">${priced}/${total} ${t('establishments')} ${t('priced_venues')}</div>
+            <div class="zone-popup-cov">${pct}${t('coverage')}</div>
+            ${med ? `<div class="zone-popup-stat" style="margin-top:5px;">${t('high_season_median')} €${med}</div>` : ''}
             <button onclick="zoomToBeachRegion('${safeName}'); S.map.closePopup();"
                     style="margin-top:10px;width:100%;padding:6px 10px;font-family:'IBM Plex Mono',monospace;
                            font-size:0.58rem;letter-spacing:.08em;text-transform:uppercase;
                            background:var(--t1);color:#fff;border:none;cursor:pointer;">
-              Esplora regione →
+              ${t('explore_region')}
             </button>
           </div>`;
         L.popup({ closeButton: true, autoPan: true })
@@ -3313,14 +3886,38 @@ function toggleBeachRegions() {
   renderBeachRegions();
 }
 
+/* Beach product code → i18n key */
+const BEACH_CAT_I18N_KEYS = {
+  beach_set_2lettini_ombrellone: 'cat_set_2lettini',
+  beach_set_1lettino_ombrellone: 'cat_set_1lettino',
+  beach_umbrella_standard:       'cat_umbrella_std',
+  beach_umbrella_first_row:      'cat_umbrella_first',
+  beach_umbrella_premium:        'cat_umbrella_prem',
+  beach_sunbed:                  'cat_sunbed',
+  beach_chair:                   'cat_chair',
+  beach_cabin_day:               'cat_cabin_day',
+  beach_cabin_season:            'cat_cabin_season',
+  beach_subscription_week:       'cat_subscription_week',
+  beach_subscription_month:      'cat_subscription_month',
+  beach_subscription_season:     'cat_subscription_season',
+  beach_entry_fee:               'cat_entry_fee',
+  beach_minimum_spend:           'cat_minimum_spend',
+  beach_parking:                 'cat_parking',
+  beach_shower:                  'cat_shower',
+};
+function beachCatLabel(code) {
+  const key = BEACH_CAT_I18N_KEYS[code];
+  return key ? t(key) : (S.beachData?.metadata.categories.find(c => c.code === code)?.label || code);
+}
+
 /* ── Beach sidebar list (zoom-adaptive) ──────────────────── */
 function renderBeachSidebar(venues, season, beachCls) {
   const listEl  = document.getElementById('sb-list');
   const emptyEl = document.getElementById('sb-empty');
   const cntEl   = document.getElementById('sb-cnt');
   const subEl   = document.querySelector('.sb-section-hdr-sub');
-  const seasLbl = season === 'peak' ? '1–7 agosto 2026' : '15–21 giugno 2026';
-  const catLbl  = S.beachData?.metadata.categories.find(c => c.code === S.beachCategory)?.label || '';
+  const seasLbl = season === 'peak' ? `${t('august_dates')} 2026` : `${t('june_dates')} 2026`;
+  const catLbl  = beachCatLabel(S.beachCategory);
 
   // Restrict to venues currently in viewport — ALL beach venues (not just rendered ones)
   // so we can show real "senza prezzo" count for the current category
@@ -3333,7 +3930,7 @@ function renderBeachSidebar(venues, season, beachCls) {
   // For region/local title we use priced only
   const inView = allInView;
 
-  cntEl.textContent = `${inView.length} stabilimenti in vista`;
+  cntEl.textContent = `${inView.length} ${t('venues_in_view')}`;
 
   const zoom = S.map?.getZoom() ?? 6;
   // <8 = Italia, 8-11 = regione/macro, >=12 = locale
@@ -3346,28 +3943,27 @@ function renderBeachSidebar(venues, season, beachCls) {
   const min    = prices.length ? prices[0]                       : null;
   const max    = prices.length ? prices[prices.length - 1]       : null;
 
-  const mode = !isLocal && !isRegional ? 'Italia'
-             : isRegional             ? 'Vista regionale'
-             :                          'Locale';
+  const mode = !isLocal && !isRegional ? t('italy_view')
+             : isRegional             ? t('regional_view')
+             :                          t('local_view');
 
   // Pick a label for the area
-  let title = 'Italia';
+  let title = t('italy_view');
   if (priced.length) {
     if (isLocal) {
       const cityCount = {};
       priced.forEach(v => { cityCount[v.city] = (cityCount[v.city]||0)+1; });
       const topCity = Object.entries(cityCount).sort((a,b) => b[1] - a[1])[0]?.[0];
-      title = topCity || 'Area selezionata';
+      title = topCity || t('local_view');
     } else if (isRegional) {
       const regCount = {};
       priced.forEach(v => { regCount[v.region] = (regCount[v.region]||0)+1; });
       const regs = Object.entries(regCount).sort((a,b) => b[1] - a[1]);
-      // If 1 region dominates (>70% of priced), use it; else "Centro-Nord", etc.
       const top = regs[0];
       if (top && top[1] / priced.length > 0.7) title = top[0];
-      else title = regs.length === 1 ? top[0] : `${regs.length} regioni`;
+      else title = regs.length === 1 ? top[0] : `${regs.length} ${S.lang === 'it' ? 'regioni' : 'regions'}`;
     } else {
-      title = 'Italia';
+      title = t('italy_view');
     }
   }
 
@@ -3376,10 +3972,10 @@ function renderBeachSidebar(venues, season, beachCls) {
       <div class="beach-stats-mode">${mode} · ${esc(catLbl)} · ${seasLbl}</div>
       <div class="beach-stats-title">${esc(title)}</div>
       <div class="beach-stats-grid">
-        <div class="beach-stat"><div class="beach-stat-v">€${median}</div><div class="beach-stat-l">Mediana</div></div>
-        <div class="beach-stat"><div class="beach-stat-v">€${mean}</div><div class="beach-stat-l">Media</div></div>
-        <div class="beach-stat"><div class="beach-stat-v">${priced.length}</div><div class="beach-stat-l">Con prezzo</div></div>
-        <div class="beach-stat"><div class="beach-stat-v">${unpricedCount}</div><div class="beach-stat-l">Senza prezzo</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">€${median}</div><div class="beach-stat-l">${t('median')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">€${mean}</div><div class="beach-stat-l">${t('mean')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${priced.length}</div><div class="beach-stat-l">${t('with_price')}</div></div>
+        <div class="beach-stat"><div class="beach-stat-v">${unpricedCount}</div><div class="beach-stat-l">${t('without_price')}</div></div>
       </div>
       <div class="beach-stats-range">
         <span>€${min}</span>
@@ -3389,15 +3985,15 @@ function renderBeachSidebar(venues, season, beachCls) {
     </div>` : `
     <div class="beach-stats">
       <div class="beach-stats-mode">${mode}</div>
-      <div class="beach-stats-title">Nessun prezzo in vista</div>
-      <div class="beach-stats-mode" style="margin-top:8px;">Zooma o sposta la mappa</div>
+      <div class="beach-stats-title">${t('no_priced_in_view')}</div>
+      <div class="beach-stats-mode" style="margin-top:8px;">${t('pan_zoom_msg')}</div>
     </div>`;
 
   subEl.textContent = isLocal
-    ? `${seasLbl} · ${priced.length} con prezzo`
+    ? `${seasLbl} · ${priced.length} ${t('with_price_short')}`
     : isRegional
-    ? `${seasLbl} · aggregati per regione`
-    : `${seasLbl} · vista nazionale`;
+    ? `${seasLbl} · ${t('regional_subtitle')}`
+    : `${seasLbl} · ${t('italy_subtitle')}`;
 
   // ── Build either regional aggregates OR venue list ──
   let restHtml = '';
@@ -3435,7 +4031,7 @@ function renderBeachSidebar(venues, season, beachCls) {
         <div class="beach-reg-item" onclick="zoomToBeachRegion('${esc(r.name).replace(/'/g, "\\'")}')">
           <div class="beach-reg-l">
             <div class="beach-reg-name">${esc(r.name)}</div>
-            <div class="beach-reg-meta">${r.prices.length}/${r.total} con prezzo</div>
+            <div class="beach-reg-meta">${r.prices.length}/${r.total} ${t('with_price_short')}</div>
           </div>
           <div class="beach-reg-r">
             ${r.median != null
@@ -3555,8 +4151,10 @@ function openBeachDetail(idx) {
 
 /* ── Beach HTML builder ──────────────────────────────────── */
 function buildBeachDetHtml(v, season) {
-  const ptLabel = { per_week:'/sett', per_day:'/g', per_season:'/stag', per_month:'/mese', per_half_day:'/pom' };
-  const catLabel = S.beachData?.metadata.categories.find(c => c.code === S.beachCategory)?.label || S.beachCategory;
+  const ptLabel = S.lang === 'it'
+    ? { per_week:'/sett', per_day:'/g', per_season:'/stag', per_month:'/mese', per_half_day:'/pom' }
+    : { per_week:'/wk',   per_day:'/d', per_season:'/seas', per_month:'/mo',   per_half_day:'/pm' };
+  const catLabel = beachCatLabel(S.beachCategory);
   const catPrices = v.prices?.[S.beachCategory];
 
   // Aggregate items across ALL categories for "Altri prezzi" section
@@ -3579,18 +4177,18 @@ function buildBeachDetHtml(v, season) {
   const compareHtml = hasBoth ? `
     <div class="beach-season-compare">
       <div class="beach-season-slot${season === 'peak' ? ' active' : ''}">
-        <div class="beach-season-slot-lbl">Alta stagione</div>
+        <div class="beach-season-slot-lbl">${t('high_season')}</div>
         <div class="beach-season-slot-price">€${peak}</div>
-        <div class="beach-season-slot-date">1–7 agosto 2026</div>
+        <div class="beach-season-slot-date">${t('august_dates')} 2026</div>
       </div>
       <div class="beach-season-sep"></div>
       <div class="beach-season-slot${season === 'mid' ? ' active' : ''}">
-        <div class="beach-season-slot-lbl">Bassa stagione</div>
+        <div class="beach-season-slot-lbl">${t('low_season')}</div>
         <div class="beach-season-slot-price">€${mid}</div>
-        <div class="beach-season-slot-date">15–21 giugno 2026</div>
+        <div class="beach-season-slot-date">${t('june_dates')} 2026</div>
       </div>
     </div>
-    ${peak > mid ? `<div class="beach-savings">↓ Risparmi €${Math.round(peak - mid)} in bassa stagione</div>` : ''}
+    ${peak > mid ? `<div class="beach-savings">${t('savings_prefix')}${Math.round(peak - mid)}${t('savings_suffix')}</div>` : ''}
   ` : '';
 
   // Other categories available for this venue
@@ -3600,9 +4198,9 @@ function buildBeachDetHtml(v, season) {
     if (others.length) {
       otherCatsHtml = `
         <div class="det-sec">
-          <div class="det-sec-lbl">Altre categorie disponibili</div>
+          <div class="det-sec-lbl">${t('other_categories')}</div>
           ${others.map(([code, p]) => {
-            const label = S.beachData.metadata.categories.find(c => c.code === code)?.label || code;
+            const label = beachCatLabel(code);
             const pr = (season === 'peak' ? p.peak : p.mid) ?? p.peak ?? p.mid;
             return `<div class="det-item" style="cursor:pointer;" onclick="selectBeachCategory('${code}')">
               <div class="det-item-n">${esc(label)}</div>
@@ -3615,7 +4213,7 @@ function buildBeachDetHtml(v, season) {
 
   const amenHtml = v.amenities?.length ? `
     <div class="det-sec">
-      <div class="det-sec-lbl">Servizi</div>
+      <div class="det-sec-lbl">${t('services')}</div>
       <div style="display:flex;flex-wrap:wrap;gap:4px;padding-top:2px;">
         ${v.amenities.map(a => `<span class="beach-chip">${esc(a)}</span>`).join('')}
       </div>
@@ -3625,8 +4223,7 @@ function buildBeachDetHtml(v, season) {
   const noPriceMsg = !v.has_price ? `
     <div class="det-sec">
       <div class="det-warn" style="background:var(--ochre-d); border-color:var(--ochre-b);">
-        <b>Prezzi non ancora raccolti.</b> Questo stabilimento è nel database ma non
-        abbiamo ancora i prezzi pubblicati online. Aiutaci segnalandolo.
+        <b>${t('no_prices_collected')}</b> ${t('no_prices_msg')}
       </div>
     </div>` : '';
 
@@ -3643,17 +4240,17 @@ function buildBeachDetHtml(v, season) {
       ${noPriceMsg}
       ${compareHtml}
       ${itemsHtml ? `<div class="det-sec">
-        <div class="det-sec-lbl">${esc(catLabel)} — ${season === 'peak' ? '1–7 ago' : '15–21 giu'} 2026</div>
+        <div class="det-sec-lbl">${esc(catLabel)} — ${season === 'peak' ? t('august_dates') : t('june_dates')} 2026</div>
         ${itemsHtml}
       </div>` : ''}
       ${otherCatsHtml}
       ${amenHtml}
       ${v.has_price ? `<div class="det-warn">
-        <b>Prezzi indicativi.</b> Verifica disponibilità prima di prenotare.
+        <b>${t('beach_indicative')}</b> ${t('beach_verify')}
       </div>` : ''}
       <div class="det-actions">
-        ${bookingUrl ? `<a class="det-act primary" href="${bookingUrl}" target="_blank" rel="noopener">↗ Prenota su spiagge.it</a>` : ''}
-        ${v.url && v.url !== bookingUrl ? `<a class="det-act" href="${v.url}" target="_blank" rel="noopener">☀ Scheda stabilimento</a>` : ''}
+        ${bookingUrl ? `<a class="det-act primary" href="${bookingUrl}" target="_blank" rel="noopener">${t('book_spiagge')}</a>` : ''}
+        ${v.url && v.url !== bookingUrl ? `<a class="det-act" href="${v.url}" target="_blank" rel="noopener">${t('venue_sheet')}</a>` : ''}
       </div>
     </div>`;
 }
