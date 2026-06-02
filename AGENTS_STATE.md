@@ -55,13 +55,13 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 
 ---
 
-## 🍹 VERTICAL DRINK (Milano) — post ricerca notturna CEO
+## 🍹 VERTICAL DRINK (Milano) — post merge CEO + Pietro S6
 
 | Metrica | Valore |
 |---|---|
-| **Venues TOTALI sulla mappa Milano** | **4.277** (153 prezzati + 4.124 no-price) |
+| **Venues TOTALI sulla mappa Milano** | **3.865** (153 prezzati + 3.712 no-price filtered) |
 | Venues prezzati (con price points) | 153 |
-| Venues no-price (NUOVO LAYER frontend) | 4.124 |
+| Venues no-price drink TARGET (filtered) | 3.712 |
 | Venues totali nel DB unified | 1.601 |
 | Items menu totali | 5.605 |
 | Price points geo+normalizzati | 964 |
@@ -69,21 +69,28 @@ Emilia-Romagna 898 | Toscana 811 | Liguria 757 | Lazio 582 | Campania 529 | Pugl
 | Prodotti coperti | 22 |
 | Quality price points | ~95% clean |
 
-### Nuovo layer: unified_venues_no_price.csv
-**4.124 venues** Milano senza prezzo pronti per il frontend come pin "Prezzo non disponibile — Contribuisci".
+### Layer no-price (FINAL merge CEO + Pietro S6)
+**3.712 venues** Milano TARGET drink (post filter NO_TARGET).
 
 Composizione:
-- 1.247 dal DB esistente (mycia, direct_website, web_extract, ecc — già scraped ma senza menu items estratti)
-- 2.867 da **CKAN Comune Milano** (NUOVA fonte autoritativa) cross-ref OSM Overpass per nomi commerciali (78% match)
-- 10 da eatbu metadata (Pietro S5 discovered)
+- 738 dal DB esistente (TARGET filtered da Pietro S6: 509 ristoranti/pizzerie esclusi)
+- 2.867 da **CKAN Comune Milano** (autoritativo, già drink-target per categoria licenza)
+- 10 da eatbu metadata
+- 97 da Pietro S6 (venues classified TARGET non già nel mio file)
+
+Classification:
+- 715 TARGET (Pietro classified)
+- 186 AMBIGUOUS_TO_REVIEW
+- 2.811 da CKAN (drink-target per categoria autoritativa Comune Milano)
 
 Distribuzione venue_type:
-- cafe: 2.003 (49%)
-- bar: 636 (15%)
-- pub: 214 (5%)
-- cocktail_bar: 14 (0.3%)
+- cafe: 2.427 (65%)
+- bar: 636 (17%)
+- pub: 300 (8%)
+- cocktail_bar: 113 (3%)
+- craft_beer: 50 + bistro: 48 + altri: 138
 
-Top quartieri (NIL): Duomo 222 · Buenos Aires-Porta Venezia 215 · Brera 142 · Sarpi 108 · XXII Marzo 100.
+Tutti verified in bbox Milano (45.39-45.54, 9.04-9.28).
 
 ### Nuove fonti integrate (sessione notturna CEO)
 - `raw_sources/ckan_milano_drink_venues_no_price.csv` — 3.804 venues CKAN enriched OSM
