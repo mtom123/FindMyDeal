@@ -79,28 +79,31 @@ Leggi nell'ordine:
 NON chiedere all'utente cosa fare prima di averli letti.
 
 ═══════════════════════════════════════════════════════════════════
-NUMERI ATTUALI (02/06/2026 sera)
+NUMERI ATTUALI (03/06/2026 fine giornata)
 ═══════════════════════════════════════════════════════════════════
 
-🍹 DRINK MILANO
-- Venues totali DB: 1.601
-- Venues SULLA MAPPA: 153 (144 precise + 9 fallback Duomo legit)
-- Items menu totali: 5.605
-- Price points: 964 (post audit completo)
-- Venue-product pairs: 687
-- Prodotti coperti: 22
-- Quality: ~95% clean (8 outliers residui = premium legit)
-- Venues SENZA prezzo: 1.441 (sono in S6 Pietro standardization)
+🍹 DRINK
+- Milano: 153 prezzati + 3.172 no-price = 3.325 pin · 964 price points · 22 prodotti
+- Roma 2.254 · Napoli 719 · Torino 1.298 · Firenze 714 · Bologna 750 · Venezia 306 (S7+S8 discovery, no prezzi)
+- TOTALE: ~9.400 venues drink Italia
 
 🏖️ BEACH ITALIA
 - Master venues: 13.646 (9.252 OSM + 4.394 spiagge.it new)
 - Coordinate geo: 99%
 - Con booking_provider: 6.203 (spiagge.it dominant)
 - Con amenities: 4.127 (vocab chiuso schema.org)
-- Price items: 3.443 (Phase 3 chiusa)
-- Venues prezzate: 1.731 (12.7%)
-- 99.3% high confidence
-- Sud Italia: 524 venues prezzate (era 5 in S2)
+- Price items: 3.443 (Phase 3 chiusa) · 1.731 venues prezzate · 99.3% high conf
+
+💪 GYM ITALIA (NUOVO)
+- Master venues: 12.648 (OSM 11.034 + FitPrime 1.605 + GetFit/Anytime ~10)
+- Top città: Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206
+- Brand mappati: 15 catene (CrossFit, FitActive, Virgin Active, Anytime, McFit, GetFit, FitPrime...)
+- Prezzi: 0 (paywalled — modello "vieni in club", crowdsourcing path obbligatorio)
+
+💈 BARBIERI
+- Peppe S1 in lancio (vedi PROMPT_PEPPE_BARBIERI_S1.md)
+
+TOTALE aggregato SurPrice: ~35.700 venues Italia.
 
 ═══════════════════════════════════════════════════════════════════
 TEAM
@@ -233,23 +236,20 @@ PROMPT AGENTI ATTIVI (status sessioni)
 ═══════════════════════════════════════════════════════════════════
 
 PIETRO:
-- ✅ S1, S2 (notturna), S3 (brute-force leggimenu)
-- ✅ S4 (deep-scan menu, 88 venues, +236 items)
-- ✅ S5 (audit qualità, geocoding fixes, libreria condivisa raccomandata)
-- 🟡 S6 IN CORSO: PROMPT_PIETRO_S6.md — standardizzazione 1.441 venues
-       drink Milano senza prezzo. Output atteso: agent6_venues_no_price.csv
-       (TARGET classificate, geocodate, deduplicate, categorizzate per
-       venue_type). Vedi PROMPT_PIETRO_S6.md per dettagli.
+- ✅ S1-S6: Milano drink full discovery + audit + standardize
+- ✅ S7: Milano discovery comune/CKAN/OSM (2.428 venues classified)
+- ✅ S8: 6 città Italia drink (Roma 2.254 + Napoli 719 + Torino 1.298 + Firenze 714 + Bologna 750 + Venezia 306 = 6.036 venues nuovi)
+- 🟢 PROSSIMO: prezzi multi-città (replica leggimenu/eatbu/mycia/TheFork curl_cffi per 6 nuove città)
 
 PEPPE:
-- ✅ Frontend drink Milano: zones polygons, venue cards, zoom street
-- ✅ Beach S1 (master list OSM 9.252)
-- ✅ Beach S2 + S2X (spiagge.it 6.693 venues metadata)
-- ✅ Beach Phase 3 (prezzi 3.443 items via SSR breakthrough)
-- ✅ Frontend Balneari Italia (vertical toggle, region polygons,
-       circular markers, sub-categories, unpriced toggle, region zones,
-       zoom clustering)
-- 🟢 PROSSIMO: aspetta decisione CEO (vedi PIANO ESPANSIONE sotto)
+- ✅ Frontend drink Milano: zones, venue cards, zoom, no-price toggle, i18n EN/IT
+- ✅ Beach S1+S2+S2X+Phase 3: 13.646 venues, 3.443 prezzi (SSR breakthrough spiagge.it)
+- ✅ Frontend Balneari: region polygons, circular markers, sub-categories, unpriced toggle
+- 🟡 S+1 IN LANCIO: vertical Barbieri/Parrucchieri (PROMPT_PEPPE_BARBIERI_S1.md)
+
+UTENTE/CEO:
+- ✅ Vertical Gym Italia bootstrap: 12.648 venues master (OSM Overpass + FitPrime + GetFit + Anytime)
+- 🟢 PROSSIMO: setup Supabase crowdsourcing (prezzi gym/barbieri/drink multi-città via user submission)
 
 ═══════════════════════════════════════════════════════════════════
 PIANO ESPANSIONE STRATEGICO (DECISIONE PENDING)

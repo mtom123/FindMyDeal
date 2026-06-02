@@ -1,39 +1,81 @@
-# Stato corrente del dataset — aggiornato 02/06/2026 (Pietro S4 + Peppe Phase3 + Barber S1 kickoff)
+# Stato corrente del dataset — aggiornato 03/06/2026 (multi-vertical + multi-city expansion)
 
-> **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia), **barber** (Italia — S1 in partenza).
+> **SurPrice** = multi-vertical price intelligence. **Brand UNICO** multi-vertical (decisione 03/06).
+
+## Vertical attivi (3) + città target (7)
+
+| Vertical | Owner | Stato | Città target |
+|---|---|---|---|
+| 🍹 **drink** | Pietro (scraper) | Milano done, **S7 + S8 chiuse (6.036 venues nuovi su 6 città)** | Milano + Roma 2.254 + Napoli 719 + Torino 1.298 + Firenze 714 + Bologna 750 + Venezia 306 |
+| 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
+| 💈 **barber** | CEO (S1 done) | **S1 chiusa: 12.019 venue, 10.709 prezzate (89%)** | Italia (21 regioni) |
+| 💪 **gym** | Utente diretto + CEO bootstrap | **12.648 venues Italia** (OSM + FitPrime + Anytime + GetFit) | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 |
+
+## Architettura multi-vertical
+
+```
+data/
+├── prices_data.json              (drink Milano, esistente)
+├── beach_data.json               (beach Italia, esistente)
+├── barber_data.json              (barbieri, Peppe S1 in corso)
+├── gym_data.json                 (palestre, utente futuro)
+├── unified_venues_no_price.csv   (drink, 3.712 venues)
+└── (future: unified_venues_no_price_<vertical>.csv)
+
+scripts/
+├── normalization.py              (LIBRERIA CONDIVISA, multi-vertical)
+├── merge_pipeline_drink.py       (CEO refactor da merge_pipeline.py)
+├── merge_pipeline_beach.py       (CEO new)
+├── merge_pipeline_barber.py      (CEO new per barbieri)
+├── merge_pipeline_gym.py         (CEO new per palestre)
+└── build_<vertical>_json.py      (frontend feed per ogni vertical)
+```
+
+## Schema CSV — campi NUOVI obbligatori (03/06)
+- `city` ∈ {Milano, Roma, Napoli, Torino, Firenze, Bologna, Venezia}
+- `vertical` ∈ {drink, beach, barber, gym}
 
 ---
 
-## ✂️ VERTICAL BARBER (Peppe S1 — in partenza)
+## 💈 VERTICAL BARBER (S1 chiusa 02/06/2026)
 
 | Metrica | Valore |
 |---|---|
-| **Status** | S1 kickoff — prompt pronto, dati da raccogliere |
-| **Venues** | 0 (target S1: ≥ 5.000 Treatwell) |
-| **Items prezzati** | 0 (target S1: ≥ 200 Milano sample) |
-| **Provider mappati** | 0 (target: Treatwell, Uala, Fresha, Booksy) |
+| **Venue unificate (TW+FR, dedup)** | **12.019** |
+| **Venue prezzate** | **10.709 (89%)** — copertura record SurPrice |
+| **Items normalizzati totali** | ~395.000 |
+| **Items prezzati** | ~390.000 (99%) |
+| **Regioni coperte** | 21 (tutte le italiane) |
+| **Servizi normalizzati** | 23 (vocabolario chiuso) |
+| **Tempo run totale** | ~3 ore |
 
-### Sorgenti pianificate
-- **Treatwell** (priority 1): SSR, sitemap disponibile, prezzi anon-accessibili, ~15-25k venue IT
-- **Uala** (priority 2): Next.js SSR/ISR, ~8-12k venue IT
-- **Fresha** (priority 3): sitemap, prezzi parzialmente accessibili, ~5-8k venue IT
-- **Booksy** (priority 4): discovery only (prezzi dietro login), ~10-15k venue IT
-- **OSM** (fallback): `amenity=hairdresser` — noisy, solo gap coverage
+### Sorgenti
+- **Treatwell** (primary): 11.331 venue barber/hair su 20.185 totali. SSR + window.__state__ JSON. 142 min run.
+- **Fresha** (secondary): 840 venue Italia su 1.151 /a/ (geo bbox filter). NEXT_DATA → location.services. 12 min run.
+- **Uala** SKIP: dominio acquisito da Treatwell (redirect 302), già incluso.
+- **Booksy** SKIP: prezzi dietro login, basso ROI.
 
-### Vocabolario
-- 23 `normalized_product` codes in `scripts/normalization.py` → `BARBER_PRODUCTS`
-- Price ranges realistic Milano → `BARBER_PRICE_RANGES`
-- Quality gate → `validate_barber_item()`
-- Category → `barber_category`: `barber / salon_donna / unisex / kids`
+### Top città
+Sconosciuta 1.373 (geo OK, no city) · Roma 1.007 · Milano 660 · Torino 195 · Napoli 132 · Bologna 70 · Firenze 68 · Verona 67
 
-### Frontend
-- Marker: esagonale (CSS clip-path), viola `#3d2b8a`
-- Toggle sidebar: 3° chip "Barbieri"
-- Feed: `barber_data.json` (da costruire post-S1)
+### Top servizi (italia, mediana €)
+Taglio Uomo 7.936 venue €15 · Trattamento 6.692 €35 · Piega 3.970 €18 · Sopracciglia 3.676 €10 · Colore Capelli 3.587 €44 · Taglio Donna 3.055 €25 · Mèches 2.230 €70 · Rifilatura Barba 1.805 €12 · Acconciatura 1.746 €50 · Stiratura 1.512 €140
 
-### File
-- Prompt Peppe: `PROMPT_PEPPE_BARBIERI_S1.md`
-- Output raw: `raw_sources/barber_s1_*`
+### File chiave
+- scripts/barber_s1_treatwell.py — scraper Treatwell (4 thread, __state__ extraction)
+- scripts/barber_s1_fresha.py — scraper Fresha (NEXT_DATA)
+- scripts/barber_s1_consolidate.py — merge + dedup geo ≤80m + JSON feed
+- data/barber_data.json — frontend feed (16 MB), filtri 2-livelli gender→servizio
+- raw_sources/barber_unified_venues.csv — master 12.019 venue
+
+### Report
+- barber_s1_REPORT_CEO.md — executive summary, decisioni architetturali, debito tecnico
+- barber_s1_REPORT_PEPPE.md — schema feed, marker CSS hexagon viola, sidebar replica beach
+
+### Debito tecnico (S2)
+- 1.373 venue senza city (reverse geocoding needed)
+- 95% venue marcate "unisex" — classification più rigorosa
+- Cross-source price validation TW↔FR (~150 venue overlap)
 
 ---
 

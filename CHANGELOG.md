@@ -6,6 +6,183 @@
 
 ---
 
+## 2026-06-03 LATE NIGHT — Pietro S8 (6 città) + CEO gym FitPrime → 12.648 totali
+
+### Pietro S8 chiusa (commit b66829b + e628ab2)
+- Roma: 2.254 venues drink discovery (OSM)
+- Napoli: 719 venues
+- Torino: 1.298 venues
+- Firenze: 714 venues
+- Bologna: 750 venues
+- Venezia: 306 venues
+- **TOTALE: 6.036 venues nuovi 6 città Italia, 100% opening_hours, 9/9 venue_type**
+- File: `raw_sources/agent7_<city>_venues_no_price.csv`
+
+### CEO gym FitPrime integration
+- FitPrime web app `/it/palestre/<city>` parsato per 10 città
+- Reverse engineering Next.js RSC payload (multi-escape JSON)
+- Pattern `id+coords+address+name` → 1.715 venues unici estratti
+- Tutte le città: Milano 508 · Roma 505 · Torino 192 · Napoli 158 · Bologna 128 · Firenze 71 · Padova 66 · Genova 60 · Venezia 48 · Palermo 22
+- Prezzi: paywalled (FitPrime Pay credits model) → crowdsourcing path
+
+### Stato gym master TOTALE
+| Source | Count |
+|---|---|
+| OSM Overpass Italia | 11.034 |
+| FitPrime web | 1.605 (dedup vs OSM) |
+| GetFit | 8 |
+| Anytime Fitness | 1 |
+| **TOTALE** | **12.648 palestre Italia** |
+
+### Top città gym (post FitPrime merge)
+Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 · Pescara 45
+
+### Stato SurPrice totale (multi-vertical, end of day 03/06)
+| Vertical | Venues | Prezzi |
+|---|---|---|
+| Drink Milano | 3.325 | 964 |
+| Drink 6 città IT (S7+S8) | +6.036 discovery | 0 |
+| Beach Italia | 13.646 / 1.731 prezzati | 3.443 |
+| Gym Italia | **12.648** | 0 (paywalled) |
+| Barbieri | Peppe S1 pending | TBD |
+
+**TOTALE aggregato: ~35.700 venues SurPrice Italia.**
+
+---
+
+## 2026-06-03 NOTTE — CEO scraper bestiale GYM → 11.043 palestre Italia
+
+### Trigger
+Utente: "parti a bomba palestre, scraping ossessivo vincente". Deepseek aveva suggerito FitPrime + ClassPass + catene ufficiali + CiaoPalestra + Google Places.
+
+### Esecuzione (8 fronti paralleli, ~50 min)
+
+| Source | Esito | Yield |
+|---|---|---|
+| **OSM Overpass Italia** (amenity=gym/leisure=fitness_centre) | ✅ | **11.140 venues** |
+| **Anytime Fitness IT** (`/club_db-sitemap.xml` + JSON-LD) | ✅ | 77 sedi complete |
+| **GetFit** (`/club-sitemap.xml`) | ✅ | 8 sedi Milano |
+| Virgin Active `/clubs` | 🟡 | HTML raw, no API |
+| McFit, FitPrime API discovery (16 endpoint) | ❌ | tutti chiusi |
+| ClassPass | ❌ | Cloudflare anti-bot |
+| CiaoPalestra, 20vventi | ❌ | DNS dead |
+| CKAN Milano palestre | ❌ | categoria non separata |
+
+### 🏆 OUTPUT — `raw_sources/gym_master_italia.csv` (11.043 venues)
+
+| Source | Count |
+|---|---|
+| OSM Overpass | 10.958 |
+| Anytime sito | 77 |
+| GetFit sito | 8 |
+
+### Top città (auto-detect via bbox)
+Roma 333 · Milano 330 · Torino 168 · Bologna 105 · Firenze 69 · Napoli 54 · Pescara 45 · Modena 36 · Monza 34 · Alessandria 31
+
+### Top brand catene mapped (15)
+CrossFit 72 · FitActive 47 · Virgin Active 31 · Anytime Fitness 28 · McFit 28 · GetFit 13 · Fit Express 11 · Palestre Italiane 8 · ICON 8 · FITINN 3 · Mrs. Sporty 3 · MaxiFit 3 · Curves 2 · Skyfitness 2 · Bodystreet 2
+
+### venue_type distribution (9 tipi)
+gym 9.250 · climbing_gym 800 · pool 418 · yoga_studio 168 · wellness_center 111 · crossfit_box 83 · martial_arts 82 · pilates_studio 65 · boxing_gym 58
+
+### Onestà sui prezzi
+**0 prezzi gym estratti**. Tutte le catene NON espongono listini online ("vieni in club"). Crowdsourcing path obbligatorio.
+
+### Tecniche tecniche aperte per futuro
+1. **OSM Overpass `amenity=gym`** = base universal Italia 11K venues (replicabile per ogni vertical Italia)
+2. **Sitemap dedicato `/<entity>_db-sitemap.xml`** = pattern catene (Anytime usa, altri probabilmente analoghi)
+3. **JSON-LD `HealthClub`/`GymOrFitnessCenter`** strutturato nei siti catena = metadata pronto
+
+### File prodotti
+- `raw_sources/gym_master_italia.csv` (11.043 venues — frontend-ready)
+- `raw_sources/osm_gym_italia_raw.csv` (11.140 OSM raw)
+- `raw_sources/gym_anytime_italia.csv` (77 Anytime)
+- `raw_sources/gym_getfit_milano.csv` (8 GetFit)
+- `NIGHT_GYM_RESEARCH.md` (report tecnico completo)
+
+### Stato finale SurPrice (multi-vertical)
+| Vertical | Venues | Prezzi |
+|---|---|---|
+| Drink Milano | 153 + 3.172 = 3.325 | 964 |
+| Beach Italia | 13.646 / 1.731 prezzati | 3.443 |
+| **Gym Italia (NEW)** | **11.043** | 0 (paywalled) |
+| Barbieri | Peppe S1 in lancio | TBD |
+
+**Totale**: ~28.000 venues SurPrice Italia.
+
+---
+
+## 2026-06-03 SERA — Strategic pivot: multi-vertical + multi-city expansion
+
+### Decisione CEO/Utente (call odierna)
+1. **SurPrice resta brand UNICO** multi-vertical (no spin-off)
+2. **Drink espande a 6 città Italia** (oltre Milano): Roma, Napoli, Torino, Firenze, Bologna, Venezia
+3. **3 vertical paralleli** con owner dedicati:
+   - 🍹 Drink → Pietro (scraper Italia)
+   - 💈 Barbieri/Parrucchieri → Peppe (vertical owner, lancio S1)
+   - 💪 Palestre/Fitness → Utente diretto
+4. **Crowdsourcing Supabase** setup sera (CEO + utente)
+5. **Architettura multi-vertical** con merge_pipeline separati per categoria
+
+### Schema CSV esteso (BREAKING per scraper)
+2 nuovi campi obbligatori:
+- `city` ∈ {Milano, Roma, Napoli, Torino, Firenze, Bologna, Venezia}
+- `vertical` ∈ {drink, beach, barber, gym}
+
+File `scripts/SCHEMA_AGENTI.md` aggiornato.
+
+### Architettura multi-vertical pianificata
+```
+scripts/
+├── normalization.py              ← libreria condivisa, ESTENDERE multi-vertical
+├── merge_pipeline_drink.py       ← refactor da merge_pipeline.py (Pietro)
+├── merge_pipeline_beach.py       ← nuovo
+├── merge_pipeline_barber.py      ← nuovo (Peppe S1 input)
+├── merge_pipeline_gym.py         ← nuovo (utente input)
+└── build_<vertical>_json.py      ← per ogni vertical
+```
+
+### Prompts S7/S8 pushati (corretti: S7 Pietro in corso preservato)
+- `PROMPT_PIETRO_S7.md` MANTENUTO ORIGINALE (Milano discovery, in corso da Pietro):
+  - Discovery comune/CKAN/OSM Milano → set drink classificato + deduplicato
+  - Cross-ref geo (≤35m) per name recovery
+  - Target: 2.500 venues puliti dal bacino discovery
+- `PROMPT_PIETRO_S8.md` NUOVO: drink TOP 6 città Italia (parte dopo S7)
+  - CKAN/Overpass/eatbu pattern replicato per Roma/Napoli/Torino/Firenze/Bologna/Venezia
+  - Estensione `normalization.py` con CITY_BBOX, CITY_CAP_RANGES, is_in_city()
+  - Target aggregato: 20.000 venues + 2.000 price points Italia
+- `PROMPT_PEPPE_BARBIERI_S1.md` nuovo: lancio vertical Barbieri Milano
+  - OSM Overpass + CKAN Comune Milano (~3.500 saloni stimati)
+  - Provider discovery: Treatwell, Booksy, Fresha, Wellry
+  - Sample 20-30 venues prezzi
+  - Vocabolario chiuso 23 servizi barbieri/parrucchieri
+  - Price ranges realistic Milano (haircut €10-150, color €40-300, ...)
+  - Frontend integration toggle vertical 3rd
+
+### Peppe commit precedenti integrati
+- `2ce40af` feat: drink no-price layer + i18n EN/IT + UI polish ✅
+- `dc4aa4f` feat: expand Milan zones (21→41), coherence filter, real coverage %
+- `eef0588` feat(balneari): zoom-adaptive sidebar with stats + filters
+- `90e9952` fix(balneari): sidebar reactivity + unpriced count + search Italy-wide
+
+### Stato verticali (post pivot)
+| Vertical | Stato | Owner |
+|---|---|---|
+| Drink Milano | 153 prezzati + 3.712 no-price live | Pietro/CEO |
+| Drink 6 altre città | S7 in lancio | Pietro |
+| Beach Italia | 3.443 items / 1.731 venues prezzate live | Peppe (polish) |
+| Barbieri | S1 in lancio | Peppe |
+| Palestre | Planning | Utente |
+
+### Backlog CEO (sera)
+1. Refactor `merge_pipeline.py` → `merge_pipeline_drink.py` multi-city
+2. Crea `merge_pipeline_barber.py` + `merge_pipeline_gym.py` template
+3. Estende `normalization.py` con CITY_BBOX + BARBER_PRODUCTS + GYM_PRODUCTS
+4. Setup Supabase crowdsourcing (con utente)
+5. Aggiorna README/CLAUDE.md con multi-vertical scope
+
+---
+
 ## 2026-06-03 — Pietro S6 + Peppe styling + CEO final merge no-price
 
 ### Pietro S6 (commit c0ac519) — venues no-price standardizzati

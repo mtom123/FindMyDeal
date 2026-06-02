@@ -3,6 +3,12 @@
 > **OBBLIGATORIO**: ogni agente deve produrre CSV in questo formato esatto.
 > Il merge pipeline lo leggerà automaticamente. Campo sbagliato = riga scartata.
 
+> **AGGIORNAMENTO 03/06/2026** — SurPrice multi-city + multi-vertical:
+> - 2 nuovi campi OBBLIGATORI: `city` + `vertical`
+> - `city` ∈ {`Milano`, `Roma`, `Napoli`, `Torino`, `Firenze`, `Bologna`, `Venezia`}
+> - `vertical` ∈ {`drink`, `beach`, `barber`, `gym`}
+> - Filename: usare prefisso `<vertical>_<city>_<source>_*.csv` quando città specifica.
+
 ---
 
 ## File da consegnare
@@ -28,7 +34,8 @@ Esempi: `thefork_venues.csv`, `glovo_menu_items.csv`, `leggimenu_venues.csv`
 | `venue_name` | string | ✅ | `Bar Magenta` |
 | `venue_url` | string | ✅ | URL della pagina venue sulla piattaforma |
 | `address` | string | ✅ | `Via Carducci 13, Milano` |
-| `city` | string | ✅ | `Milano` |
+| `city` | string | ✅ | `Milano` / `Roma` / `Napoli` / `Torino` / `Firenze` / `Bologna` / `Venezia` |
+| `vertical` | string | ✅ | `drink` / `beach` / `barber` / `gym` (NUOVO 03/06) |
 | `latitude` | float | se disponibile | `45.4654` |
 | `longitude` | float | se disponibile | `9.1859` |
 | `categories` | string | se disponibile | `Bar; Pub; Cocktail Bar` (separato da `;`) |
