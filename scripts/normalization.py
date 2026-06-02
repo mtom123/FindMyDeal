@@ -22,12 +22,75 @@ USO NEL MERGE_PIPELINE (CEO):
 
 PHILOSOPHY:
 - Inline gate > post-hoc cleanup (lezione S3 → S4/S5)
-- Vocabolario chiuso normalized_product (22 codici)
-- Banda prezzo per prodotto (realistic Milano)
+- Vocabolario chiuso normalized_product (22 codici drink, 23 barber, X gym)
+- Banda prezzo per prodotto (realistic Milano per categoria)
 - Pattern noise filter HTML scraping
 - Disambiguazione brand (Moretti birra vs Vittorio Moretti vino)
+
+MULTI-VERTICAL (03/06):
+- vertical ∈ {drink, beach, barber, gym}
+- city ∈ {Milano, Roma, Napoli, Torino, Firenze, Bologna, Venezia}
+- CITY_BBOX, CITY_CAP_RANGES per geo-fence
 """
 import re
+
+# ─────────────────────────────────────────────
+# CITY GEO-FENCE (multi-city expansion 03/06)
+# ─────────────────────────────────────────────
+CITY_BBOX = {
+    'Milano':  (45.39, 45.54, 9.04, 9.28),
+    'Roma':    (41.78, 42.00, 12.35, 12.65),
+    'Napoli':  (40.78, 40.92, 14.15, 14.35),
+    'Torino':  (45.00, 45.13, 7.55, 7.78),
+    'Firenze': (43.72, 43.83, 11.18, 11.32),
+    'Bologna': (44.43, 44.55, 11.25, 11.42),
+    'Venezia': (45.40, 45.47, 12.30, 12.40),
+}
+
+CITY_CAP_RANGES = {
+    'Milano':  (20100, 20162),
+    'Roma':    (100,   199),
+    'Napoli':  (80100, 80147),
+    'Torino':  (10100, 10156),
+    'Firenze': (50100, 50145),
+    'Bologna': (40100, 40141),
+    'Venezia': (30100, 30176),
+}
+
+
+def is_in_city(lat, lon, city):
+    """True se le coordinate sono nella bbox della città target."""
+    if city not in CITY_BBOX:
+        return False
+    try:
+        lat = float(lat); lon = float(lon)
+    except:
+        return False
+    lat_min, lat_max, lon_min, lon_max = CITY_BBOX[city]
+    return lat_min <= lat <= lat_max and lon_min <= lon <= lon_max
+
+
+def detect_city_from_cap(addr):
+    """Estrae CAP da address e ritorna città target o None."""
+    if not addr:
+        return None
+    caps = re.findall(r'\b(\d{5})\b', addr)
+    for cap_str in caps:
+        cap = int(cap_str)
+        for city, (lo, hi) in CITY_CAP_RANGES.items():
+            if lo <= cap <= hi:
+                return city
+    return None
+
+
+def is_address_in_city(addr, city):
+    """True se address ha CAP della città target o è vuoto."""
+    if not addr:
+        return True  # unknown, accetto
+    detected = detect_city_from_cap(addr)
+    if detected is None:
+        return True  # no CAP, accetto
+    return detected == city
 
 # ─────────────────────────────────────────────
 # PRICE RANGES (banda min/max per prodotto, EUR Milano realistic)
@@ -230,3 +293,144 @@ def validate_item(item: dict) -> tuple:
     if corrected_prod and not is_price_in_range(corrected_prod, price):
         return False, None, f'PRICE_OUT_OF_RANGE_{corrected_prod}'
     return True, item, None
+
+
+# ═══════════════════════════════════════════════════════════════════
+# VERTICAL BARBER/PARRUCCHIERI (S1 Peppe 03/06)
+# ═══════════════════════════════════════════════════════════════════
+
+BARBER_PRODUCTS = {
+    'haircut_men':        'Taglio uomo',
+    'haircut_women':      'Taglio donna',
+    'haircut_kids':       'Taglio bambino',
+    'beard_trim':         'Regolazione barba',
+    'shave_traditional':  'Rasatura tradizionale',
+    'wash_blow':          'Lavaggio + piega',
+    'color_full':         'Colore completo',
+    'color_roots':        'Ritocco radici',
+    'highlights':         'Colpi di sole / meches',
+    'balayage':           'Balayage',
+    'perm':               'Permanente',
+    'straightening':      'Stiratura',
+    'extension':          'Extensions',
+    'wedding_styling':    'Acconciatura sposa',
+    'nail_manicure':      'Manicure',
+    'nail_pedicure':      'Pedicure',
+    'nail_gel':           'Gel/Semipermanente',
+    'eyebrow_design':     'Design sopracciglia',
+    'eyebrow_lamination': 'Laminazione sopracciglia',
+    'facial_treatment':   'Trattamento viso',
+    'wax_partial':        'Cera parziale',
+    'wax_full':           'Cera totale',
+    'massage':            'Massaggio',
+}
+
+BARBER_PRICE_RANGES = {
+    'haircut_men':        (10.0, 60.0),
+    'haircut_women':      (20.0, 150.0),
+    'haircut_kids':       (8.0, 30.0),
+    'beard_trim':         (5.0, 30.0),
+    'shave_traditional':  (15.0, 50.0),
+    'wash_blow':          (15.0, 80.0),
+    'color_full':         (40.0, 250.0),
+    'color_roots':        (25.0, 120.0),
+    'highlights':         (50.0, 300.0),
+    'balayage':           (80.0, 400.0),
+    'perm':               (30.0, 200.0),
+    'straightening':      (30.0, 200.0),
+    'nail_manicure':      (10.0, 60.0),
+    'nail_pedicure':      (15.0, 80.0),
+    'nail_gel':           (20.0, 80.0),
+    'eyebrow_design':     (5.0, 40.0),
+    'eyebrow_lamination': (30.0, 100.0),
+    'facial_treatment':   (30.0, 150.0),
+    'wax_partial':        (10.0, 50.0),
+    'wax_full':           (30.0, 120.0),
+    'massage':            (40.0, 150.0),
+}
+
+BARBER_VENUE_TYPES = ['barber', 'hairdresser', 'unisex_salon', 'beauty_salon',
+                      'nail_salon', 'spa', 'massage_studio']
+
+
+# ═══════════════════════════════════════════════════════════════════
+# VERTICAL GYM/PALESTRE (utente direct, S1 futuro)
+# ═══════════════════════════════════════════════════════════════════
+
+GYM_PRODUCTS = {
+    'membership_day':         'Ingresso singolo',
+    'membership_week':        'Abbonamento settimanale',
+    'membership_month':       'Abbonamento mensile',
+    'membership_quarter':     'Abbonamento trimestrale',
+    'membership_semester':    'Abbonamento semestrale',
+    'membership_year':        'Abbonamento annuale',
+    'membership_corporate':   'Pacchetto aziendale',
+    'personal_trainer_1h':    'Personal trainer (1h)',
+    'personal_trainer_pack':  'PT pacchetto (10 sessioni)',
+    'class_drop_in':          'Lezione singola (drop-in)',
+    'class_pack_10':          'Pacchetto 10 lezioni',
+    'crossfit_month':         'CrossFit mensile',
+    'pilates_month':          'Pilates mensile',
+    'yoga_month':             'Yoga mensile',
+    'spinning_month':         'Spinning mensile',
+    'pool_access':            'Accesso piscina',
+    'sauna_access':           'Sauna/SPA',
+    'subscription_fee':       'Iscrizione una tantum',
+    'kids_membership':        'Abbonamento bambini',
+}
+
+GYM_PRICE_RANGES = {
+    'membership_day':         (5.0, 50.0),
+    'membership_week':        (15.0, 100.0),
+    'membership_month':       (30.0, 250.0),
+    'membership_quarter':     (80.0, 600.0),
+    'membership_semester':    (150.0, 1000.0),
+    'membership_year':        (250.0, 2500.0),
+    'personal_trainer_1h':    (30.0, 120.0),
+    'personal_trainer_pack':  (200.0, 1000.0),
+    'class_drop_in':          (8.0, 40.0),
+    'class_pack_10':          (60.0, 300.0),
+    'crossfit_month':         (60.0, 200.0),
+    'pilates_month':          (60.0, 250.0),
+    'yoga_month':             (40.0, 200.0),
+    'spinning_month':         (40.0, 150.0),
+    'pool_access':            (5.0, 30.0),
+    'sauna_access':           (10.0, 50.0),
+    'subscription_fee':       (20.0, 200.0),
+}
+
+GYM_VENUE_TYPES = ['gym', 'crossfit_box', 'yoga_studio', 'pilates_studio',
+                   'pool', 'martial_arts', 'climbing_gym', 'boxing_gym',
+                   'fitness_center', 'wellness_center']
+
+
+# ═══════════════════════════════════════════════════════════════════
+# VERTICAL ROUTING — Lookup price ranges per vertical
+# ═══════════════════════════════════════════════════════════════════
+
+VERTICAL_PRICE_RANGES = {
+    'drink':  PRICE_RANGES,           # drink (already defined above)
+    'barber': BARBER_PRICE_RANGES,
+    'gym':    GYM_PRICE_RANGES,
+    # 'beach': BEACH_PRICE_RANGES,  # beach ranges restano in beach pipeline
+}
+
+VERTICAL_PRODUCTS = {
+    'drink':  list(PRICE_RANGES.keys()),
+    'barber': list(BARBER_PRICE_RANGES.keys()),
+    'gym':    list(GYM_PRICE_RANGES.keys()),
+}
+
+
+def is_price_in_range_vertical(vertical: str, product: str, price: float) -> bool:
+    """Range check per qualsiasi vertical."""
+    ranges = VERTICAL_PRICE_RANGES.get(vertical, {})
+    if product not in ranges:
+        return True
+    lo, hi = ranges[product]
+    return lo <= price <= hi
+
+
+def get_valid_products(vertical: str) -> list:
+    """Returns vocabolario chiuso per vertical."""
+    return VERTICAL_PRODUCTS.get(vertical, [])

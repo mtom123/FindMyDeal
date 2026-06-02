@@ -6,6 +6,73 @@
 
 ---
 
+## 2026-06-03 SERA — Strategic pivot: multi-vertical + multi-city expansion
+
+### Decisione CEO/Utente (call odierna)
+1. **SurPrice resta brand UNICO** multi-vertical (no spin-off)
+2. **Drink espande a 6 città Italia** (oltre Milano): Roma, Napoli, Torino, Firenze, Bologna, Venezia
+3. **3 vertical paralleli** con owner dedicati:
+   - 🍹 Drink → Pietro (scraper Italia)
+   - 💈 Barbieri/Parrucchieri → Peppe (vertical owner, lancio S1)
+   - 💪 Palestre/Fitness → Utente diretto
+4. **Crowdsourcing Supabase** setup sera (CEO + utente)
+5. **Architettura multi-vertical** con merge_pipeline separati per categoria
+
+### Schema CSV esteso (BREAKING per scraper)
+2 nuovi campi obbligatori:
+- `city` ∈ {Milano, Roma, Napoli, Torino, Firenze, Bologna, Venezia}
+- `vertical` ∈ {drink, beach, barber, gym}
+
+File `scripts/SCHEMA_AGENTI.md` aggiornato.
+
+### Architettura multi-vertical pianificata
+```
+scripts/
+├── normalization.py              ← libreria condivisa, ESTENDERE multi-vertical
+├── merge_pipeline_drink.py       ← refactor da merge_pipeline.py (Pietro)
+├── merge_pipeline_beach.py       ← nuovo
+├── merge_pipeline_barber.py      ← nuovo (Peppe S1 input)
+├── merge_pipeline_gym.py         ← nuovo (utente input)
+└── build_<vertical>_json.py      ← per ogni vertical
+```
+
+### Prompts S7+ pushati
+- `PROMPT_PIETRO_S7.md` riscritto: drink TOP 6 città Italia (era solo Milano discovery)
+  - CKAN/Overpass/eatbu pattern replicato per Roma/Napoli/Torino/Firenze/Bologna/Venezia
+  - Estensione `normalization.py` con CITY_BBOX, CITY_CAP_RANGES, is_in_city()
+  - Target aggregato: 20.000 venues + 2.000 price points Italia
+- `PROMPT_PEPPE_BARBIERI_S1.md` nuovo: lancio vertical Barbieri Milano
+  - OSM Overpass + CKAN Comune Milano (~3.500 saloni stimati)
+  - Provider discovery: Treatwell, Booksy, Fresha, Wellry
+  - Sample 20-30 venues prezzi
+  - Vocabolario chiuso 23 servizi barbieri/parrucchieri
+  - Price ranges realistic Milano (haircut €10-150, color €40-300, ...)
+  - Frontend integration toggle vertical 3rd
+
+### Peppe commit precedenti integrati
+- `2ce40af` feat: drink no-price layer + i18n EN/IT + UI polish ✅
+- `dc4aa4f` feat: expand Milan zones (21→41), coherence filter, real coverage %
+- `eef0588` feat(balneari): zoom-adaptive sidebar with stats + filters
+- `90e9952` fix(balneari): sidebar reactivity + unpriced count + search Italy-wide
+
+### Stato verticali (post pivot)
+| Vertical | Stato | Owner |
+|---|---|---|
+| Drink Milano | 153 prezzati + 3.712 no-price live | Pietro/CEO |
+| Drink 6 altre città | S7 in lancio | Pietro |
+| Beach Italia | 3.443 items / 1.731 venues prezzate live | Peppe (polish) |
+| Barbieri | S1 in lancio | Peppe |
+| Palestre | Planning | Utente |
+
+### Backlog CEO (sera)
+1. Refactor `merge_pipeline.py` → `merge_pipeline_drink.py` multi-city
+2. Crea `merge_pipeline_barber.py` + `merge_pipeline_gym.py` template
+3. Estende `normalization.py` con CITY_BBOX + BARBER_PRODUCTS + GYM_PRODUCTS
+4. Setup Supabase crowdsourcing (con utente)
+5. Aggiorna README/CLAUDE.md con multi-vertical scope
+
+---
+
 ## 2026-06-03 — Pietro S6 + Peppe styling + CEO final merge no-price
 
 ### Pietro S6 (commit c0ac519) — venues no-price standardizzati

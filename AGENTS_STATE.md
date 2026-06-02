@@ -1,6 +1,39 @@
-# Stato corrente del dataset — aggiornato 02/06/2026 (Pietro S4 + Peppe Phase3)
+# Stato corrente del dataset — aggiornato 03/06/2026 (multi-vertical + multi-city expansion)
 
-> **SurPrice** = multi-vertical price intelligence. Vertical attivi: **drink** (Milano), **beach** (Italia).
+> **SurPrice** = multi-vertical price intelligence. **Brand UNICO** multi-vertical (decisione 03/06).
+
+## Vertical attivi (3) + città target (7)
+
+| Vertical | Owner | Stato | Città target |
+|---|---|---|---|
+| 🍹 **drink** | Pietro (scraper) | Milano done, espansione 6 città IT | Milano + Roma + Napoli + Torino + Firenze + Bologna + Venezia |
+| 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
+| 💈 **barber** | Peppe (vertical owner) | S1 in lancio (nuovo) | Milano prima, poi Italia |
+| 💪 **gym** | Utente diretto | In planning (S1 futuro) | Milano prima |
+
+## Architettura multi-vertical
+
+```
+data/
+├── prices_data.json              (drink Milano, esistente)
+├── beach_data.json               (beach Italia, esistente)
+├── barber_data.json              (barbieri, Peppe S1 in corso)
+├── gym_data.json                 (palestre, utente futuro)
+├── unified_venues_no_price.csv   (drink, 3.712 venues)
+└── (future: unified_venues_no_price_<vertical>.csv)
+
+scripts/
+├── normalization.py              (LIBRERIA CONDIVISA, multi-vertical)
+├── merge_pipeline_drink.py       (CEO refactor da merge_pipeline.py)
+├── merge_pipeline_beach.py       (CEO new)
+├── merge_pipeline_barber.py      (CEO new per barbieri)
+├── merge_pipeline_gym.py         (CEO new per palestre)
+└── build_<vertical>_json.py      (frontend feed per ogni vertical)
+```
+
+## Schema CSV — campi NUOVI obbligatori (03/06)
+- `city` ∈ {Milano, Roma, Napoli, Torino, Firenze, Bologna, Venezia}
+- `vertical` ∈ {drink, beach, barber, gym}
 
 ---
 
