@@ -1120,8 +1120,8 @@
         "price_tier": "",
         "categories": "",
         "sources": [
-          "direct_website",
-          "eatbu"
+          "eatbu",
+          "direct_website"
         ],
         "items": [
           {
