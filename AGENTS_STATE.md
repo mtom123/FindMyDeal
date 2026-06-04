@@ -1,4 +1,4 @@
-# Stato corrente del dataset — aggiornato 02/06/2026 (CEO gym S1 pricing + barber S1 complete)
+# Stato corrente del dataset — aggiornato 04/06/2026 (Peppe haircut vertical live + Supabase up)
 
 > **SurPrice** = multi-vertical price intelligence. **Brand UNICO** multi-vertical (decisione 03/06).
 
@@ -8,8 +8,8 @@
 |---|---|---|---|
 | 🍹 **drink** | Pietro (scraper) | Milano done, **S7 + S8 chiuse (6.036 venues nuovi su 6 città)** | Milano + Roma 2.254 + Napoli 719 + Torino 1.298 + Firenze 714 + Bologna 750 + Venezia 306 |
 | 🏖️ **beach** | Peppe (frontend live) | Phase 3 chiusa, polish in corso | Italia (17 regioni costiere) |
-| 💈 **barber** | CEO (S1 done) | **S1 chiusa: 12.019 venue, 10.709 prezzate (89%)** | Italia (21 regioni) |
-| 💪 **gym** | CEO (pricing S1) + Pietro (S9 in corso) | **12.648 venues** · **36 prezzi estratti** (catene + siti web) — 0 prezzi prima di oggi | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 · Firenze 137 · Genova 64 · Venezia 54 |
+| 💈 **barber** | Peppe (frontend LIVE 02/06) | **Haircut vertical LIVE** · 6.112 venue reali (pulite da 12k) · 5.230 prezzate (85%) · community layer attivo | Italia (21 regioni) |
+| 💪 **gym** | CEO + Pietro (S9 pending) | **12.648 venues su Supabase** · 36 prezzi · Pietro S9 non ancora fatto | Milano 805 · Roma 787 · Torino 351 · Bologna 228 · Napoli 206 |
 
 ## Architettura multi-vertical
 
@@ -37,17 +37,26 @@ scripts/
 
 ---
 
-## 💈 VERTICAL BARBER (S1 chiusa 02/06/2026)
+## 💈 VERTICAL BARBER (S1 scraping 02/06 · Frontend LIVE 02/06 · Cleaning 02/06)
 
 | Metrica | Valore |
 |---|---|
-| **Venue unificate (TW+FR, dedup)** | **12.019** |
-| **Venue prezzate** | **10.709 (89%)** — copertura record SurPrice |
-| **Items normalizzati totali** | ~395.000 |
-| **Items prezzati** | ~390.000 (99%) |
-| **Regioni coperte** | 21 (tutte le italiane) |
-| **Servizi normalizzati** | 23 (vocabolario chiuso) |
-| **Tempo run totale** | ~3 ore |
+| **Venue raw (TW+FR, dedup)** | 12.019 (pre-cleaning) |
+| **Venue post-cleaning** | **6.112** — purgate nail salon / centri estetici / non-hair |
+| **Venue prezzate (post-clean)** | **5.230 (85%)** |
+| **Regioni coperte** | 21 (tutte le italiane, assegnate via point-in-polygon) |
+| **Servizi nel vocabolario** | 20 (reclassificati da nomi item reali) |
+| **Frontend** | **LIVE** — marker rettangolari viola, cluster colore, filtri genere→servizio |
+| **Community layer** | **LIVE + Supabase** — rating ⭐, confirm/report prezzo, foto upload (EXIF + pHash) |
+
+### Nota cleaning (Peppe barber_reclassify.py — 02/06)
+- 12k → 6.1k: rimossi nail salon, estetica, laser, massaggi, trucco, solarium
+- Reclassificazione item reali: separa piega/taglio/colore, scarta non-capelli
+- Assegnazione regioni mancanti via point-in-polygon su italy_regions.geojson
+- 95% venue "unisex" → ora classificate per gender dai codici servizio
+
+### Top categorie (post-cleaning)
+haircut_man 4.440 venue (med €20) · hair_blowdry 3.956 (med €18.50) · hair_color 3.264 (med €40) · hair_treatment 2.412 (med €25) · hair_highlight 2.345 (med €70)
 
 ### Sorgenti
 - **Treatwell** (primary): 11.331 venue barber/hair su 20.185 totali. SSR + window.__state__ JSON. 142 min run.
@@ -254,15 +263,16 @@ Pre-merge agent4: 924 → post-merge + cleanup: **939** (+15 netti).
 
 ---
 
-## 💪 VERTICAL GYM (S1 pricing avviato 02/06/2026)
+## 💪 VERTICAL GYM (S1 pricing 02/06 · Supabase LIVE 04/06)
 
 | Metrica | Valore |
 |---|---|
-| **Venues mappate** | **12.648** (OSM 11.034 · FitPrime-legacy 1.605 · GetFit 8 · Anytime 1) |
-| **Venues prezzate** | **0 prima di oggi → 36 oggi** |
-| **Prezzi catene (gym_chain_prices.csv)** | **12** (McFit · FitActive · Gympass) |
-| **Prezzi siti diretti (gym_website_prices.csv)** | **24** (150 palestre campionate) |
-| **Copertura stimata full run** | 300-500 venues (3.095 con sito web) |
+| **Venues su Supabase** | **12.648** (OSM 11.034 · FitPrime-legacy 1.605 · GetFit 8 · Anytime 1) |
+| **Prezzi su Supabase** | **36** (12 catene high-conf + 24 siti web medium-conf) |
+| **Supabase URL** | https://nslunmlqvsregbkuzrii.supabase.co |
+| **Tabelle** | gyms · gym_prices · community_contributions · view gym_price_summary |
+| **Storage** | bucket menu-photos (public, 5MB limit, jpg/png/webp/heic) |
+| **Pietro S9** | ⏳ PENDING — full run gym_s1_websites.py 3.095 venue |
 
 ### Prezzi catene estratti (02/06/2026)
 | Chain | Tipo | Prezzo | Metodo |

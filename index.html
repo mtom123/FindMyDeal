@@ -2001,8 +2001,22 @@ input[type=range].sb-range::-moz-range-thumb {
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <!-- EXIFR — EXIF reader for community photo uploads -->
 <script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/lite.umd.js"></script>
+<!-- SUPABASE — community contributions + gym prices backend -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+/* ──────────────────────────────────────────
+   SUPABASE CLIENT (anon key — public safe)
+─────────────────────────────────────────── */
+const _SB = (() => {
+  try {
+    return supabase.createClient(
+      'https://nslunmlqvsregbkuzrii.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zbHVubWxxdnNyZWdia3V6cmlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NjI3MzgsImV4cCI6MjA5NjEzODczOH0.Z7HIe0iGqHVuKecxjchcVHohWTTtD484iIB5IPYV2aA'
+    );
+  } catch(e) { console.warn('Supabase init failed', e); return null; }
+})();
+
 /* ──────────────────────────────────────────
    I18N
 ─────────────────────────────────────────── */
@@ -2986,7 +3000,22 @@ const ContribStore = {
       contribution_type: type, status: 'pending',
       created_at: new Date().toISOString(), ...payload,
     };
-    d[vid][type] = entry; this._set(d); return entry;
+    d[vid][type] = entry; this._set(d);
+    // Persist to Supabase (fire and forget — non blocca la UI)
+    if (_SB) {
+      const vertical = (window.S && window.S.vertical) || 'unknown';
+      _SB.from('community_contributions').insert({
+        contribution_id:   entry.contribution_id,
+        venue_id:          vid,
+        vertical:          vertical,
+        contribution_type: type,
+        session_id:        entry.session_id,
+        rating:            (payload && payload.rating != null) ? payload.rating : null,
+        status:            'pending',
+        created_at:        entry.created_at,
+      }).then(() => {}).catch(() => {});
+    }
+    return entry;
   },
   getPhashes() { try { return JSON.parse(localStorage.getItem(this._hkey) || '[]'); } catch(e) { return []; } },
   savePhash(hash, vid) {
@@ -3147,8 +3176,41 @@ async function handlePhotoUpload(input, vid, vLat, vLng) {
   } catch(e) {}
   upload.confidence_score = Math.max(0,Math.min(1,score));
   upload.verification_notes = notes.join(',')||null;
+
+  // Upload immagine su Supabase Storage (se disponibile)
+  if (_SB && upload.status !== 'suspicious') {
+    try {
+      const ext = file.name.split('.').pop() || 'jpg';
+      const path = `${vid}/${upload.upload_id}.${ext}`;
+      const { data: storData, error: storErr } = await _SB.storage
+        .from('menu-photos').upload(path, file, { contentType: file.type, upsert: false });
+      if (!storErr && storData) {
+        const { data: urlData } = _SB.storage.from('menu-photos').getPublicUrl(path);
+        upload.image_url = urlData?.publicUrl || null;
+      }
+    } catch(e) {}
+  }
+
   const contrib = ContribStore.add(vid,'upload_menu',{upload});
   upload.contribution_id = contrib.contribution_id;
+
+  // Aggiorna riga Supabase con i dettagli del photo upload
+  if (_SB && contrib.contribution_id) {
+    _SB.from('community_contributions').update({
+      upload_id:                    upload.upload_id,
+      image_url:                    upload.image_url,
+      exif_lat:                     upload.exif_lat,
+      exif_lng:                     upload.exif_lng,
+      exif_timestamp:               upload.exif_timestamp,
+      distance_from_venue_meters:   upload.distance_from_venue_meters,
+      location_match:               upload.location_match,
+      duplicate_score:              upload.duplicate_score,
+      confidence_score:             upload.confidence_score,
+      verification_notes:           upload.verification_notes,
+      status:                       upload.status,
+    }).eq('contribution_id', contrib.contribution_id).then(() => {}).catch(() => {});
+  }
+
   _commSwap(`[onclick="commTriggerUpload('${vid}')"]`,'done',t('comm_uploaded'));
   _commFeedback(vid, statusMsg);
 }
