@@ -13,14 +13,25 @@ Output: agent_ceo_gym/gym_website_prices.csv
 
 import asyncio, csv, json, os, re, sys, time
 from playwright.async_api import async_playwright
-import anthropic
+try:
+    import anthropic
+except ImportError:
+    anthropic = None  # regex fallback (vedi prompt S9: "regex fallback comunque funziona")
 
 if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 OUT_DIR = os.path.dirname(__file__)
 MASTER_CSV = os.path.join(OUT_DIR, 'gym_master_italia.csv')
+if not os.path.exists(MASTER_CSV):  # in questo repo il master è in raw_sources/
+    MASTER_CSV = os.path.join(OUT_DIR, '..', 'raw_sources', 'gym_master_italia.csv')
 OUT_CSV = os.path.join(OUT_DIR, 'gym_website_prices.csv')
+PROGRESS = os.path.join(OUT_DIR, 'gym_s9_progress.json')  # resume: gym già processati
+MAX_SECONDS = 1700  # soft-limit: esci pulito (~28 min) prima del kill background (~34 min)
+
+
+def gym_key(g):
+    return g.get('source_venue_id') or g.get('venue_url') or g.get('venue_name', '')
 
 # Suffissi da provare dopo l'URL base
 PRICE_PATHS = [
@@ -29,7 +40,10 @@ PRICE_PATHS = [
     '/pricing', '/plans', '/rates', '/cost',
 ]
 
-anthropic_client = anthropic.Anthropic()
+try:
+    anthropic_client = anthropic.Anthropic() if anthropic else None
+except Exception:
+    anthropic_client = None  # no API key → confirm_with_llm cade su regex fallback
 
 # ── Regex extractor ────────────────────────────────────────────────────────────
 
@@ -74,6 +88,11 @@ async def confirm_with_llm(prices: list[dict], gym_name: str, url: str) -> list[
     """Usa Claude Haiku per filtrare i prezzi plausibili e aggiungi confidenza."""
     if not prices:
         return []
+
+    if anthropic_client is None:   # nessun anthropic/API key → regex fallback (confidenza media)
+        for p in prices:
+            p['confidenza'] = 'media'
+        return prices
 
     prompt = f"""Palestra: {gym_name}
 URL: {url}
@@ -131,13 +150,15 @@ async def scrape_gym_website(page, venue: dict) -> list[dict]:
     # URL da provare: URL originale + path prezzi
     urls_to_try = [base_url] + [domain + path for path in PRICE_PATHS]
 
-    for url in urls_to_try[:6]:  # max 6 URL per palestra
+    for idx, url in enumerate(urls_to_try[:6]):  # max 6 URL per palestra
         try:
             resp = await page.goto(url, wait_until='domcontentloaded', timeout=15000)
             if not resp or resp.status >= 400:
+                if idx == 0:
+                    break  # base URL morto → dominio defunct, salta i 5 price-path (hit-rate-neutral)
                 continue
 
-            await asyncio.sleep(1.5)
+            await asyncio.sleep(1.5)  # config CEO (hit rate ~16%)
             content = await page.content()
 
             # Rimuovi script/style/HTML
@@ -153,6 +174,8 @@ async def scrape_gym_website(page, venue: dict) -> list[dict]:
 
         except Exception as e:
             err = str(e)[:60]
+            if idx == 0:
+                break  # base URL timeout/errore → salta dominio (no prezzi su domini morti)
             if 'Timeout' not in err:
                 print(f"    ERR {url[:50]}: {err}")
 
@@ -174,6 +197,15 @@ async def scrape_gym_website(page, venue: dict) -> list[dict]:
 
 
 async def main():
+    # Sharding: python gym_s1_websites.py <shard_k> <shard_n> → processa gyms[k::n] in parallelo
+    global OUT_CSV, PROGRESS
+    shard_k = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+    shard_n = int(sys.argv[2]) if len(sys.argv) > 2 else 1
+    if shard_n > 1:
+        OUT_CSV = os.path.join(OUT_DIR, f'gym_website_prices_s{shard_k}.csv')
+        PROGRESS = os.path.join(OUT_DIR, f'gym_s9_progress_s{shard_k}.json')
+        print(f"SHARD {shard_k}/{shard_n} → {os.path.basename(OUT_CSV)}")
+
     # Carica palestre con sito web
     gyms_with_url = []
     with open(MASTER_CSV, newline='', encoding='utf-8') as f:
@@ -190,10 +222,29 @@ async def main():
     others = [g for g in gyms_with_url if g not in priority]
     gyms = priority + others
     print(f"  Top città: {len(priority)}, altre: {len(others)}")
-    print(f"  Processando prime 150...")
-    gyms = gyms[:150]
+    print(f"  Processando full run...")
+    gyms = gyms[:3095]
+    if shard_n > 1:
+        gyms = gyms[shard_k::shard_n]
+        print(f"  SHARD {shard_k}/{shard_n}: {len(gyms)} gym in questo shard")
 
+    # ── RESUME: salta i gym già processati, conserva i prezzi già salvati ──
+    done_ids = set()
+    if os.path.exists(PROGRESS):
+        try: done_ids = set(json.load(open(PROGRESS)))
+        except Exception: done_ids = set()
     results = []
+    if os.path.exists(OUT_CSV):
+        try:
+            for row in csv.DictReader(open(OUT_CSV, encoding='utf-8')):
+                results.append(row)
+                if row.get('gym_id'): done_ids.add(row['gym_id'])
+        except Exception: pass
+    todo = [g for g in gyms if gym_key(g) not in done_ids]
+    print(f"  RESUME: {len(done_ids)} gym già fatti, {len(todo)} da processare (di {len(gyms)})")
+    start_t = time.time()
+    if not todo:
+        print("  Tutti i gym già processati — niente da fare."); _save(results); return
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -207,12 +258,12 @@ async def main():
         )
         page = await ctx.new_page()
 
-        for i, gym in enumerate(gyms):
+        for i, gym in enumerate(todo):
             name = gym.get('venue_name', 'Unknown')
             city = gym.get('city', '')
             url = gym.get('venue_url', '')
 
-            print(f"\n[{i+1}/{len(gyms)}] {name[:50]} ({city})")
+            print(f"\n[{i+1}/{len(todo)}] {name[:50]} ({city})")
 
             prices = await scrape_gym_website(page, gym)
             if prices:
@@ -232,10 +283,18 @@ async def main():
                     })
                 print(f"  >> {len(prices)} prezzi trovati!")
 
-            # Salva ogni 20
-            if (i + 1) % 20 == 0 and results:
+            done_ids.add(gym_key(gym))
+
+            # Checkpoint frequente (perde al max 10 gym se killed)
+            if (i + 1) % 10 == 0:
                 _save(results)
-                print(f"\n  [checkpoint] {len(results)} prezzi totali\n")
+                json.dump(list(done_ids), open(PROGRESS, 'w'))
+                print(f"\n  [checkpoint] {len(results)} prezzi | {len(done_ids)} gym fatti\n")
+
+            # Soft-timeout: esci pulito prima del kill background, riprendi al prossimo run
+            if time.time() - start_t > MAX_SECONDS:
+                print(f"\n  SOFT-TIMEOUT {MAX_SECONDS}s → salvo e esco (resume al prossimo lancio)\n")
+                break
 
             await asyncio.sleep(1)
 
@@ -248,12 +307,18 @@ async def main():
     if results:
         by_type = {}
         for r in results:
-            by_type.setdefault(r['price_type'], []).append(r['price'])
+            try: by_type.setdefault(r['price_type'], []).append(float(r['price']))
+            except (ValueError, TypeError): pass
         for t, prices in by_type.items():
+            if not prices: continue
             avg = sum(prices) / len(prices)
             print(f"  [{t}] n={len(prices)} min={min(prices):.2f} max={max(prices):.2f} avg={avg:.2f}")
 
     _save(results)
+    json.dump(list(done_ids), open(PROGRESS, 'w'))
+    remaining = len(todo) - sum(1 for g in todo if gym_key(g) in done_ids)
+    print(f"\nRESUME-STATE: {len(done_ids)} gym fatti. "
+          f"{'COMPLETO ✓' if remaining == 0 else f'{remaining} rimasti → rilancia per continuare'}")
 
 
 def _save(results):
